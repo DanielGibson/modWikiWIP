@@ -1,0 +1,579 @@
+DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex,follow" />
+<meta name="keywords" content="Scripting,AI scripting,Data types,Declarations,GUI scripting,GUIs,Level scripting,SCRIPT (file format),Script events,Script events (Doom 3),Script events (Quake 4)" />
+<link rel="shortcut icon" href="/web/20070729231630im_/http://modwiki.net/favicon.ico" />
+<link title="Creative Commons" type="application/rdf+xml" href="/w/index.php?title=Scripting&amp;action=creativecommons" rel="meta" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<title>Scripting - modwiki</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20070729231630cs_/http://modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/web/20070729231630cs_/http://modwiki.net/w/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/w/skins/monobook/IE70Fixes.css?1";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
+		<script type="text/javascript" src="/web/20070729231630js_/http://modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20070729231630js_/http://modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/web/20070729231630cs_/http://modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231630cs_/http://modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231630cs_/http://modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns-0 ltr">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app10.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/modwiki.net\/w\/index.php?title=Scripting&diff=prev&oldid=6150";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "29";
+var displayMonth = "Jul";
+var displayYear = "2007";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://modwiki.net/w/index.php?title=Scripting&amp;diff=prev&amp;oldid=6150" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20070729231630" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jun
+                       
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 23:16:30 Jul 29, 2007">JUL</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Aug
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_prv_off.png" alt="Previous capture" width="14" height="16" border="0" />
+                       
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 23:16:30 Jul 29, 2007">29</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2006
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 23:16:30 Jul 29, 2007">2007</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2008
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20070729231630*/http://modwiki.net/w/index.php?title=Scripting&amp;diff=prev&amp;oldid=6150" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>1 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">29 Jul 07 - 29 Jul 07</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:6:000000100000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000_2014:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">Scripting</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From modwiki</h3>
+			<div id="contentSub">(Difference between revisions)</div>
+									<div id="jump-to-nav">Jump to: <a href="/web/20070729231630/http://modwiki.net/w/index.php?title=Scripting&amp;diff=prev&amp;oldid=6150#column-one">navigation</a>, <a href="/web/20070729231630/http://modwiki.net/w/index.php?title=Scripting&amp;diff=prev&amp;oldid=6150#searchInput">search</a></div>			<!-- start content -->
+			
+			<table border='0' width='98%' cellpadding='0' cellspacing='4' class='diff'>
+			<tr>
+				<td colspan='2' width='50%' align='center' class='diff-otitle'><strong><a href='/web/20070729231630/http://modwiki.net/w/index.php?title=Scripting&amp;oldid=6144'>Revision as of 01:02, 8 April 2006</a></strong><br /><a href="/web/20070729231630/http://modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a>  (<a href="/web/20070729231630/http://modwiki.net/wiki/User_talk:Kamikazee" title="User talk:Kamikazee">Talk</a> | <a href="/web/20070729231630/http://modwiki.net/w/index.php?title=Special:Contributions&amp;target=Kamikazee" title="Special:Contributions">contribs</a>)<br /> <span class='comment'>(Moved scripting definitions here and added a quick reference for scrypt syntax)</span><br /><a href="/web/20070729231630/http://modwiki.net/w/index.php?title=Scripting&amp;diff=prev&amp;oldid=6144" title="Scripting" id="differences-prevlink">? Previous diff</a></td>
+				<td colspan='2' width='50%' align='center' class='diff-ntitle'><strong><a href='/web/20070729231630/http://modwiki.net/w/index.php?title=Scripting&amp;oldid=6150'>Revision as of 15:10, 8 April 2006</a></strong><br /><a href="/web/20070729231630/http://modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a>  (<a href="/web/20070729231630/http://modwiki.net/wiki/User_talk:Kamikazee" title="User talk:Kamikazee">Talk</a> | <a href="/web/20070729231630/http://modwiki.net/w/index.php?title=Special:Contributions&amp;target=Kamikazee" title="Special:Contributions">contribs</a>) <br /> <span class='comment'>(Script page cleaned up, syntax now finally hosted in SCRIPT (file format))</span><br /><a href="/web/20070729231630/http://modwiki.net/w/index.php?title=Scripting&amp;diff=next&amp;oldid=6150" title="Scripting" id="differences-nextlink">Next diff →</a></td>
+			</tr>
+			<tr><td colspan="2" align="left"><strong>Line 1:</strong></td>
+<td colspan="2" align="left"><strong>Line 1:</strong></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>{{Referencebox | title=<span class="diffchange">Doom 3</span></td><td>+</td><td class='diff-addedline'>{{Referencebox | title=<span class="diffchange">Scripting</span></td></tr>
+<tr><td> </td><td class='diff-context'>| contents=</td><td> </td><td class='diff-context'>| contents=</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>* [[SCRIPT (file format)]]</td></tr>
+<tr><td> </td><td class='diff-context'>*[[Script events (Doom 3)]]</td><td> </td><td class='diff-context'>*[[Script events (Doom 3)]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&lt;br&gt;</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&lt;p style=&quot;font-size: 17px; line-height: 0.9&quot;&gt;'''Quake 4 quick reference'''&lt;/p&gt;</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&lt;hr&gt;</td><td colspan="2">&nbsp;</td></tr>
+<tr><td> </td><td class='diff-context'>*[[Script events (Quake 4)]]</td><td> </td><td class='diff-context'>*[[Script events (Quake 4)]]</td></tr>
+<tr><td> </td><td class='diff-context'>}}</td><td> </td><td class='diff-context'>}}</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>=<span class="diffchange">Different Forms</span>=</td><td>+</td><td class='diff-addedline'>=<span class="diffchange">=Overview=</span>=</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">The various forms </span>of <span class="diffchange">scripting in Doom 3 are:</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">Scripting is a specific domain of programming. It focuses more on specifying ''what'' should be done ''instead of how''. Mostly read by a script parser instead </span>of <span class="diffchange">being compiled to bytecode.</span></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">*[[Level scripting]] - Used for scripting events in levels.</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">On </span>the <span class="diffchange">Doom 3 engine, it is used to allow mappers or modders to change behaviour without recompiling </span>the <span class="diffchange">bytecode, only a map restart is needed to parse the script again</span>.</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">*[[Weapon scripting]] - Used for defining </span>the <span class="diffchange">behavior of weapons.</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">*[[AI scripting]] - Used for defining </span>the <span class="diffchange">behavior of entities</span>.</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">*[[GUI scripting]] - Used for defining the behavior and appearance of game [[GUIs]]</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Check out the seperate topics </span>to <span class="diffchange">get more specific info or read on for the general info</span>.</td><td>+</td><td class='diff-addedline'><span class="diffchange">==Definitions==</span></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'><span class="diffchange">These definitions are related </span>to <span class="diffchange">scripting</span>.</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>=Definitions=</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>There are some basic terms people mostly talk about and can get you confused if you are new to all this:</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'></td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>; Scripting : Specific domain of 'programming in general', focuses more on specifying ''what'' should be done ''instead of how''.</td><td colspan="2">&nbsp;</td></tr>
+<tr><td> </td><td class='diff-context'>; Script parser : The program reading a script file, here it is the Doom 3 engine.</td><td> </td><td class='diff-context'>; Script parser : The program reading a script file, here it is the Doom 3 engine.</td></tr>
+<tr><td> </td><td class='diff-context'>; Syntax : The rules defining a scripting language.</td><td> </td><td class='diff-context'>; Syntax : The rules defining a scripting language.</td></tr>
+<tr><td colspan="2" align="left"><strong>Line 32:</strong></td>
+<td colspan="2" align="left"><strong>Line 24:</strong></td></tr>
+<tr><td> </td><td class='diff-context'>; Return type : Defines the  data type of the return value, must be given when defining a function</td><td> </td><td class='diff-context'>; Return type : Defines the  data type of the return value, must be given when defining a function</td></tr>
+<tr><td> </td><td class='diff-context'>; Object : An instance of a class in the gamecode. Some of these can be referenced from the script.</td><td> </td><td class='diff-context'>; Object : An instance of a class in the gamecode. Some of these can be referenced from the script.</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>; Event : Allso called [[Script events|script event]], these are the <span class="diffchange">things necessary for working with objects</span>.</td><td>+</td><td class='diff-addedline'>; Event : Allso called [[Script events|script event]], these are the <span class="diffchange">instructions you can ask an object to do</span>.</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">That's all so far, most </span>are <span class="diffchange">redundant anyway.</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">==Different fields==</span></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'><span class="diffchange">The various forms of scripting in Doom 3 </span>are<span class="diffchange">:</span></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">=Syntax=</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">*[[Level scripting]] - Used </span>for scripting <span class="diffchange">events in levels</span>.</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'><span class="diffchange">*</span>[[<span class="diffchange">Weapon scripting</span>]] <span class="diffchange">- Used </span>for <span class="diffchange">defining </span>the <span class="diffchange">behavior </span>of <span class="diffchange">weapons</span>.</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">This should be a quick reference </span>for scripting <span class="diffchange">constructs</span>. <span class="diffchange">If you are new, read </span>[[<span class="diffchange">Scripting basics</span>]] for <span class="diffchange">more text and examples.</span></td><td>+</td><td class='diff-addedline'>*<span class="diffchange">[[AI scripting]] - Used </span>for <span class="diffchange">defining </span>the <span class="diffchange">behavior </span>of <span class="diffchange">entities</span>.</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'>*[<span class="diffchange">[GUI scripting</span>]<span class="diffchange">] - Used for defining </span>the <span class="diffchange">behavior </span>and <span class="diffchange">appearance of game </span>[<span class="diffchange">[GUIs]</span>]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">==General Syntax==</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">The following is a list of special characters and general syntax information.</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; $ : Precedes all direct entity references. Informs </span>the <span class="diffchange">engine that the following is an entity reference.</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; &lt;nowiki&gt;;&lt;/nowiki&gt; : Follows all commands. More than one command may exist on a single line. Informs the engine that the following is the end </span>of <span class="diffchange">a command</span>.</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; // : Single line comment. Declares the text from this point to the end of the line a comment and is not executed. Can also be used to null out a line of code for debugging.</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; /</span>* <span class="diffchange">and */ : Comment. Declares the text from /* to */ a comment and the text contained therein is not executed. Can also be used to null out a portion of code </span>for <span class="diffchange">debugging.</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; { and } : Script block. These show </span>the <span class="diffchange">start and end points </span>of <span class="diffchange">a group of commands. See the more complex structures further down</span>.</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; ( and ) : Group. Used to fix operator precedence or grouping conditional expressions.</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">==Operators==</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">===Simple Operators===</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; = : Assignment</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; + : Add</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; - : Subtract</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; </span>* <span class="diffchange">: Multiply</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; / : Divide</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; % : Modulo / Remainder</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; ++ : Add 1 / Increment</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; -- : Subtract 1 / Decrement</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">===Conditional Operators===</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; == : Equals</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; &gt;= : Greater or Equal</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; &lt;= : Lesser or Equal</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; &amp;&amp; : And</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; || : Or</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; !  : Not</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">===Bit Operators===</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; &amp; : Bitwise And</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; | : Bitwise Or</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; ~ : Bitwise XOr (?)</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">===Special Assignment Operators===</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; += : Add and Assign</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; -= : Subtract and Assign</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; *= : Multiply and Assign</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; /= : Divide and Assign</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">: %= : Calculate Remainder and Assign</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; &amp;= : Bitwise And and Assign</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; |= : Bitwise Or and Assign</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">==Special Structures==</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; if ( </span>[<span class="diffchange">condition</span>] <span class="diffchange">) {</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; } : Checks if </span>the <span class="diffchange">condition is true, if so it executes the code block between { </span>and <span class="diffchange">} after the condition.</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; if ( </span>[<span class="diffchange">condition</span>] <span class="diffchange">) { </span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; } else {</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; } : Check if the condition is true, if so execute the code block just behind the condition. If not, execute the code block after the else keyword.</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; while ( [condition ] ) {</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">Check out </span>the <span class="diffchange">seperate topics to get more specific info</span>.</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; } : Execute </span>the <span class="diffchange">code block behind the condition for as long as the condition is true</span>.</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; for ( </span>[<span class="diffchange">start code]; </span>[<span class="diffchange">condition</span>]<span class="diffchange">; </span>[<span class="diffchange">loop code</span>] <span class="diffchange">) {</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">==Syntax==</span></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">; } : When the structure is entered</span>, <span class="diffchange">the </span>[<span class="diffchange">start code</span>] <span class="diffchange">will be executed. Then the condition will be checked. At the end of the code block, the </span>[<span class="diffchange">loop code</span>] <span class="diffchange">is executed. After this, the condition is checked again and the loop will go on for as long as the condition is true</span>.</td><td>+</td><td class='diff-addedline'><span class="diffchange">See the </span>[[<span class="diffchange">SCRIPT (file format)|.SCRIPT format</span>]<span class="diffchange">] reference or read more about [</span>[<span class="diffchange">Scripting basics|scripting basics</span>]<span class="diffchange">] if you want more examples and basic info.</span></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'><span class="diffchange">If you want to start immediately</span>, <span class="diffchange">you can read some tutorials on [</span>[<span class="diffchange">Tutorial list#Level scripting|level scripting</span>]<span class="diffchange">] or </span>[<span class="diffchange">[Tutorials list#GUI scripting|GUI scripting]</span>].</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>=Related=</td><td>+</td><td class='diff-addedline'><span class="diffchange">=</span>=Related<span class="diffchange">=</span>=</td></tr>
+<tr><td> </td><td class='diff-context'>See also the editing of declarations, which is not exactly a part of scripting but an important part of editing for Doom 3 engine.</td><td> </td><td class='diff-context'>See also the editing of declarations, which is not exactly a part of scripting but an important part of editing for Doom 3 engine.</td></tr>
+<tr><td> </td><td class='diff-context'>*[[Declarations]] - Declarations that define the properties and behavior of game content</td><td> </td><td class='diff-context'>*[[Declarations]] - Declarations that define the properties and behavior of game content</td></tr>
+<tr><td> </td><td class='diff-context'> </td><td> </td><td class='diff-context'> </td></tr>
+<tr><td> </td><td class='diff-context'>[[Category:Scripting]]</td><td> </td><td class='diff-context'>[[Category:Scripting]]</td></tr>
+
+			</table>
+		<hr /><h2>Revision as of 15:10, 8 April 2006</h2>
+<div align="left" style="float:right; font-size: 17px;background: #FFFFEE; padding: 5px; border: 1px solid #000000; padding-left: 15px; padding-right: 15px; margin-left: 15px; margin-right: 15px; padding-bottom: 15px; width: 400px;">
+<div align="right" style="font-size: 10px; text-align=right;"><a href="/web/20070729231630/http://modwiki.net/wiki/Help:Reference_box" title="Help:Reference box">What's this?</a></div>
+<div><b>Scripting quick reference</b></div>
+<hr /><span style="font-size: 14px">
+<ul><li> <a href="/web/20070729231630/http://modwiki.net/wiki/SCRIPT_%28file_format%29" title="SCRIPT (file format)">SCRIPT (file format)</a>
+</li><li><a href="/web/20070729231630/http://modwiki.net/wiki/Script_events_%28Doom_3%29" title="Script events (Doom 3)">Script events (Doom 3)</a>
+</li><li><a href="/web/20070729231630/http://modwiki.net/wiki/Script_events_%28Quake_4%29" title="Script events (Quake 4)">Script events (Quake 4)</a> 
+</li></ul>
+</span></div>
+<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class='toclevel-1'><a href="/web/20070729231630/http://modwiki.net/w/index.php?title=Scripting&amp;diff=prev&amp;oldid=6150#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231630/http://modwiki.net/w/index.php?title=Scripting&amp;diff=prev&amp;oldid=6150#Definitions"><span class="tocnumber">2</span> <span class="toctext">Definitions</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231630/http://modwiki.net/w/index.php?title=Scripting&amp;diff=prev&amp;oldid=6150#Different_fields"><span class="tocnumber">3</span> <span class="toctext">Different fields</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231630/http://modwiki.net/w/index.php?title=Scripting&amp;diff=prev&amp;oldid=6150#Syntax"><span class="tocnumber">4</span> <span class="toctext">Syntax</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231630/http://modwiki.net/w/index.php?title=Scripting&amp;diff=prev&amp;oldid=6150#Related"><span class="tocnumber">5</span> <span class="toctext">Related</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="Overview"></a><h2>Overview</h2>
+<p>Scripting is a specific domain of programming. It focuses more on specifying <i>what</i> should be done <i>instead of how</i>. Mostly read by a script parser instead of being compiled to bytecode.
+</p><p>On the Doom 3 engine, it is used to allow mappers or modders to change behaviour without recompiling the bytecode, only a map restart is needed to parse the script again.
+</p>
+<a name="Definitions"></a><h2>Definitions</h2>
+<p>These definitions are related to scripting.
+</p>
+<dl><dt> Script parser&nbsp;</dt><dd> The program reading a script file, here it is the Doom 3 engine.
+</dd><dt> Syntax&nbsp;</dt><dd> The rules defining a scripting language.
+</dd><dt> Keyword&nbsp;</dt><dd> Special word, reserved by the language to mark the start of a language construct.
+</dd><dt> Operator&nbsp;</dt><dd> Special symbol, reserved by the language to show what operation should be done.
+</dd><dt> Variable&nbsp;</dt><dd> A variable can be thought of as a named container used to store a value. It can only be of one <a href="/web/20070729231630/http://modwiki.net/wiki/Data_types" title="Data types">data type</a> at a time
+</dd><dt> Data type&nbsp;</dt><dd> See <a href="/web/20070729231630/http://modwiki.net/wiki/Data_types" title="Data types">Data types</a>
+</dd><dt> Function or method&nbsp;</dt><dd> A function is a structure to group commands so they can be reused later in the script. It is allso possible to give it a return type and value.
+</dd><dt> Return value&nbsp;</dt><dd> Once a function has finished it's commands, it can <i>return</i> a result.
+</dd><dt> Return type&nbsp;</dt><dd> Defines the  data type of the return value, must be given when defining a function
+</dd><dt> Object&nbsp;</dt><dd> An instance of a class in the gamecode. Some of these can be referenced from the script.
+</dd><dt> Event&nbsp;</dt><dd> Allso called <a href="/web/20070729231630/http://modwiki.net/wiki/Script_events" title="Script events">script event</a>, these are the instructions you can ask an object to do.
+</dd></dl>
+<a name="Different_fields"></a><h2>Different fields</h2>
+<p>The various forms of scripting in Doom 3 are:
+</p>
+<ul><li><a href="/web/20070729231630/http://modwiki.net/wiki/Level_scripting" title="Level scripting">Level scripting</a> - Used for scripting events in levels.
+</li><li><a href="/web/20070729231630/http://modwiki.net/wiki/Weapon_scripting" title="Weapon scripting">Weapon scripting</a> - Used for defining the behavior of weapons.
+</li><li><a href="/web/20070729231630/http://modwiki.net/wiki/AI_scripting" title="AI scripting">AI scripting</a> - Used for defining the behavior of entities.
+</li><li><a href="/web/20070729231630/http://modwiki.net/wiki/GUI_scripting" title="GUI scripting">GUI scripting</a> - Used for defining the behavior and appearance of game <a href="/web/20070729231630/http://modwiki.net/wiki/GUIs" title="GUIs">GUIs</a>
+</li></ul>
+<p>Check out the seperate topics to get more specific info.
+</p>
+<a name="Syntax"></a><h2>Syntax</h2>
+<p>See the <a href="/web/20070729231630/http://modwiki.net/wiki/SCRIPT_%28file_format%29" title="SCRIPT (file format)">.SCRIPT format</a> reference or read more about <a href="/web/20070729231630/http://modwiki.net/wiki/Scripting_basics" title="Scripting basics">scripting basics</a> if you want more examples and basic info.
+If you want to start immediately, you can read some tutorials on <a href="/web/20070729231630/http://modwiki.net/wiki/Tutorial_list#Level_scripting" title="Tutorial list">level scripting</a> or <a href="/web/20070729231630/http://modwiki.net/w/index.php?title=Tutorials_list&amp;action=edit" class="new" title="Tutorials list">GUI scripting</a>.
+</p>
+<a name="Related"></a><h2>Related</h2>
+<p>See also the editing of declarations, which is not exactly a part of scripting but an important part of editing for Doom 3 engine.
+</p>
+<ul><li><a href="/web/20070729231630/http://modwiki.net/wiki/Declarations" title="Declarations">Declarations</a> - Declarations that define the properties and behavior of game content
+</li></ul>
+<div class="printfooter">
+Retrieved from "<a href="/web/20070729231630/http://modwiki.net/wiki/Scripting">http://modwiki.net/wiki/Scripting</a>"</div>
+			<div id="catlinks"><p class='catlinks'><a href="/web/20070729231630/http://modwiki.net/w/index.php?title=Special:Categories&amp;article=Scripting" title="Special:Categories">Category</a>: <span dir='ltr'><a href="/web/20070729231630/http://modwiki.net/wiki/Category:Scripting" title="Category:Scripting">Scripting</a></span><br /><hr /><a href="/web/20070729231630/http://modwiki.net/wiki/Category:Modwiki" title="Category:Modwiki">Modwiki</a> &gt; <a href="/web/20070729231630/http://modwiki.net/wiki/Category:Scripting" title="Category:Scripting">Scripting</a></p></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="/web/20070729231630/http://modwiki.net/wiki/Scripting">Article</a></li>
+				 <li id="ca-talk"><a href="/web/20070729231630/http://modwiki.net/wiki/Talk:Scripting">Discussion</a></li>
+				 <li id="ca-edit"><a href="/web/20070729231630/http://modwiki.net/w/index.php?title=Scripting&amp;action=edit&amp;oldid=6150">Edit</a></li>
+				 <li id="ca-history"><a href="/web/20070729231630/http://modwiki.net/w/index.php?title=Scripting&amp;action=history">History</a></li>
+		</ul>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/web/20070729231630/http://modwiki.net/w/index.php?title=Special:Userlogin&amp;returnto=Scripting">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/web/20070729231630im_/http://modwiki.net/wiki/upload/wiki.png);" href="/web/20070729231630/http://modwiki.net/wiki/Main_Page" title="Main Page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class='portlet' id='p-Main'>
+		<h5>Main</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/web/20070729231630/http://modwiki.net/wiki/Main_Page">Main Page</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 4'>
+		<h5>id Tech 4</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Doom-3"><a href="/web/20070729231630/http://modwiki.net/wiki/Doom_3">Doom 3</a></li>
+				<li id="n-Quake-4"><a href="/web/20070729231630/http://modwiki.net/wiki/Quake_4">Quake 4</a></li>
+				<li id="n-Prey"><a href="/web/20070729231630/http://modwiki.net/wiki/Prey">Prey</a></li>
+				<li id="n-ETQW"><a href="/web/20070729231630/http://modwiki.net/wiki/Enemy_Territory:_Quake_Wars">ETQW</a></li>
+				<li id="n-RTCW-2"><a href="/web/20070729231630/http://modwiki.net/wiki/Return_to_Castle_Wolfenstein_2">RTCW 2</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 5'>
+		<h5>id Tech 5</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Rage"><a href="/web/20070729231630/http://modwiki.net/wiki/Rage">Rage</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Quick Links'>
+		<h5>Quick Links</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Console"><a href="/web/20070729231630/http://modwiki.net/wiki/Console">Console</a></li>
+				<li id="n-Script-Events"><a href="/web/20070729231630/http://modwiki.net/wiki/Scripting">Script Events</a></li>
+				<li id="n-Material-Keywords"><a href="/web/20070729231630/http://modwiki.net/wiki/Material_%28decl%29">Material Keywords</a></li>
+				<li id="n-Modification-List"><a href="/web/20070729231630/http://modwiki.net/wiki/Modlist">Modification List</a></li>
+				<li id="n-Tutorial-List"><a href="/web/20070729231630/http://modwiki.net/wiki/Tutorial_list">Tutorial List</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Wiki'>
+		<h5>Wiki</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Open-tasks"><a href="/web/20070729231630/http://modwiki.net/wiki/modwiki:Open_tasks">Open tasks</a></li>
+				<li id="n-recentchanges"><a href="/web/20070729231630/http://modwiki.net/wiki/Special:Recentchanges">Recent changes</a></li>
+				<li id="n-Style-guide"><a href="/web/20070729231630/http://modwiki.net/wiki/modwiki:Style_guide">Style guide</a></li>
+				<li id="n-help"><a href="/web/20070729231630/http://modwiki.net/wiki/Help:Contents">Help</a></li>
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/web/20070729231630/http://modwiki.net/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" value="Search" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/web/20070729231630/http://modwiki.net/wiki/Special:Whatlinkshere/Scripting">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/web/20070729231630/http://modwiki.net/wiki/Special:Recentchangeslinked/Scripting">Related changes</a></li>
+<li id="t-upload"><a href="/web/20070729231630/http://modwiki.net/wiki/Special:Upload">Upload file</a></li>
+<li id="t-specialpages"><a href="/web/20070729231630/http://modwiki.net/wiki/Special:Specialpages">Special pages</a></li>
+				<li id="t-print"><a href="/web/20070729231630/http://modwiki.net/w/index.php?title=Scripting&amp;diff=prev&amp;oldid=6150&amp;printable=yes">Printable version</a></li>				<li id="t-ispermalink">Permanent link</li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="/web/20070729231630/http://www.mediawiki.org/"><img src="/web/20070729231630im_/http://modwiki.net/w/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="/web/20070729231630/http://www.gnu.org/copyleft/fdl.html"><img src="/web/20070729231630im_/http://modwiki.net/w/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+				<li id="privacy"><a href="/web/20070729231630/http://modwiki.net/wiki/modwiki:Privacy_policy" title="modwiki:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="/web/20070729231630/http://modwiki.net/wiki/modwiki:About" title="modwiki:About">About modwiki</a></li>
+				<li id="disclaimer"><a href="/web/20070729231630/http://modwiki.net/wiki/modwiki:General_disclaimer" title="modwiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+	<script type="text/javascript"> if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+<!-- Served by h982484 in 0.31 secs. -->
+</body></html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 23:16:30 Jul 29, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 2:43:14 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,528 @@
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Level scripting,How to add a construction objective,SCRIPT (file format),Script events,Script object,Scripting basics,Level scripting,Reference box" />
+<link rel="shortcut icon" href="/web/20121023051346im_/http://www.modwiki.net/favicon.ico" />
+<link title="Creative Commons" type="application/rdf+xml" href="/w/index.php?title=Level_scripting&amp;action=creativecommons" rel="meta" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<title>Level scripting - modwiki</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20121023051346cs_/http://www.modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/web/20121023051346cs_/http://www.modwiki.net/w/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/w/skins/monobook/IE70Fixes.css?1";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
+		<script type="text/javascript" src="/web/20121023051346js_/http://www.modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20121023051346js_/http://www.modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/web/20121023051346cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20121023051346cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20121023051346cs_/http://www.modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns-0 ltr">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app10.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/www.modwiki.net\/wiki\/Level_scripting";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "23";
+var displayMonth = "Oct";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://www.modwiki.net/wiki/Level_scripting" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20121023051346" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120922035545/http://www.modwiki.net/wiki/Level_scripting" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="22 Sep 2012"><strong>SEP</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 5:13:46 Oct 23, 2012">OCT</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20121205054547/http://www.modwiki.net/wiki/Level_scripting" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="5 Dec 2012"><strong>DEC</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120922035545/http://www.modwiki.net/wiki/Level_scripting" title="3:55:45 Sep 22, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 5:13:46 Oct 23, 2012">23</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20121205054547/http://www.modwiki.net/wiki/Level_scripting" title="5:45:47 Dec 5, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110907003414/http://www.modwiki.net/wiki/Level_scripting" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="7 Sep 2011"><strong>2011</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 5:13:46 Oct 23, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2013
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20121023051346*/http://www.modwiki.net/wiki/Level_scripting" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>27 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">29 Jul 07 - 11 May 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000100100_2008:-1:100020000000_2009:-1:000000000211_2010:-1:111100000000_2011:-1:000000001000_2012:9:000111111101_2013:-1:111110000000_2014:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">Level scripting</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From modwiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="/web/20121023051346/http://www.modwiki.net/wiki/Level_scripting#column-one">navigation</a>, <a href="/web/20121023051346/http://www.modwiki.net/wiki/Level_scripting#searchInput">search</a></div>			<!-- start content -->
+			<div class="boilerplate metadata" id="attention" style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa;">
+<p><b>This page is in urgent need of attention because: <i>Unfinished sections</i></b>
+</p><p>If you disagree with this, please explain why on <a href="/web/20121023051346/http://www.modwiki.net/wiki/Talk:Level_scripting" title="Talk:Level scripting">its talk page</a>. 
+</p>
+</div>
+<div><a href="/web/20121023051346/http://www.modwiki.net/wiki/Image:Etqwsquare_25.png" class="image" title="Image:Etqwsquare_25.png"><img src="/web/20121023051346im_/http://www.modwiki.net/w/images/7/7e/Etqwsquare_25.png" alt="Image:Etqwsquare_25.png" width="25" height="25" longdesc="/wiki/Image:Etqwsquare_25.png" /></a> <b>Note:</b> Enemy Territory: Quake Wars only: <dl><dd><i>ETQW uses a script object for it's map script. See <a href="/web/20121023051346/http://www.modwiki.net/wiki/Script_object" title="Script object">script object</a>, <a href="/web/20121023051346/http://www.modwiki.net/wiki/How_to_add_a_construction_objective" title="How to add a construction objective">this tutorial</a>, or the splash damage wiki [<a href="/web/20121023051346/http://wiki.splashdamage.com/index.php/Barebones_Map_script" class='external autonumber' title="http://wiki.splashdamage.com/index.php/Barebones_Map_script">[1]</a>].</i></dd></dl></div>
+<p>Level scripting refers to scripting that is parsed during a level runtime. Level scripting is a very powerful tool used to control various entities within a level. If you have played through Doom 3 you will have undoubtedly noticed the complex machinery with various moving parts, lights, and effects. Machines like this are just one example of level scripting. Listing all of the various examples of level scripts would be next to impossible as the power of level scripting is virtually endless. This section is dedicated to an overview of the syntax and power of level scripts.
+</p>
+<div align="left" style="float:right; font-size: 17px;background: #FFFFEE; padding: 5px; border: 1px solid #000000; padding-left: 15px; padding-right: 15px; margin-left: 15px; margin-right: 15px; padding-bottom: 15px; width: 400px;">
+<div align="right" style="font-size: 10px; text-align=right;"><a href="/web/20121023051346/http://www.modwiki.net/wiki/Help:Reference_box" title="Help:Reference box">What's this?</a></div>
+<div><b>Scripting quick reference</b></div>
+<hr /><span style="font-size: 14px">
+<ul><li><a href="/web/20121023051346/http://www.modwiki.net/wiki/Script_events" title="Script events">Script events</a> 
+</li></ul>
+</span></div>
+<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class='toclevel-1'><a href="/web/20121023051346/http://www.modwiki.net/wiki/Level_scripting#Creating_the_.SCRIPT_File"><span class="tocnumber">1</span> <span class="toctext">Creating the .SCRIPT File</span></a></li>
+<li class='toclevel-1'><a href="/web/20121023051346/http://www.modwiki.net/wiki/Level_scripting#The_Basics"><span class="tocnumber">2</span> <span class="toctext">The Basics</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20121023051346/http://www.modwiki.net/wiki/Level_scripting#General_Syntax"><span class="tocnumber">2.1</span> <span class="toctext">General Syntax</span></a></li>
+<li class='toclevel-2'><a href="/web/20121023051346/http://www.modwiki.net/wiki/Level_scripting#Example"><span class="tocnumber">2.2</span> <span class="toctext">Example</span></a></li>
+<li class='toclevel-2'><a href="/web/20121023051346/http://www.modwiki.net/wiki/Level_scripting#A_Note_on_Variables_and_Functions"><span class="tocnumber">2.3</span> <span class="toctext">A Note on Variables and Functions</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="/web/20121023051346/http://www.modwiki.net/wiki/Level_scripting#How_to_Interact_With_Level_Scripts"><span class="tocnumber">3</span> <span class="toctext">How to Interact With Level Scripts</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20121023051346/http://www.modwiki.net/wiki/Level_scripting#Triggers_in_the_Level"><span class="tocnumber">3.1</span> <span class="toctext">Triggers in the Level</span></a></li>
+<li class='toclevel-2'><a href="/web/20121023051346/http://www.modwiki.net/wiki/Level_scripting#GUIs"><span class="tocnumber">3.2</span> <span class="toctext">GUIs</span></a>
+<ul>
+<li class='toclevel-3'><a href="/web/20121023051346/http://www.modwiki.net/wiki/Level_scripting#Example_2"><span class="tocnumber">3.2.1</span> <span class="toctext">Example</span></a></li>
+<li class='toclevel-3'><a href="/web/20121023051346/http://www.modwiki.net/wiki/Level_scripting#Notes"><span class="tocnumber">3.2.2</span> <span class="toctext">Notes</span></a></li>
+</ul>
+</li>
+<li class='toclevel-2'><a href="/web/20121023051346/http://www.modwiki.net/wiki/Level_scripting#The_main.28.29_Function"><span class="tocnumber">3.3</span> <span class="toctext">The main() Function</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="/web/20121023051346/http://www.modwiki.net/wiki/Level_scripting#Extended_Examples"><span class="tocnumber">4</span> <span class="toctext">Extended Examples</span></a></li>
+<li class='toclevel-1'><a href="/web/20121023051346/http://www.modwiki.net/wiki/Level_scripting#Hacking_Around_Limitations"><span class="tocnumber">5</span> <span class="toctext">Hacking Around Limitations</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121023051346/http://www.modwiki.net/w/index.php?title=Level_scripting&amp;action=edit&amp;section=1" title="Edit section: Creating the .SCRIPT File">edit</a>]</div><a name="Creating_the_.SCRIPT_File"></a><h2>Creating the .SCRIPT File</h2>
+<p>It is important to first understand where the engine looks for the script. Level scripts should be placed in the map folder where the map is. The script file must be named exactly the same as the map file with a .SCRIPT file format instead of .MAP.
+</p>
+<ul><li> Locate the map - it will most likely reside in Doom3\base\maps\
+</li><li> Find yourmap.map (where "yourmap" is the actual name of the map)
+</li><li> Create a file named yourmap.script (where "yourmap" is the actual name of the map)
+</li><li> Edit this .script file with your favorite script editor to begin level scripting.
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121023051346/http://www.modwiki.net/w/index.php?title=Level_scripting&amp;action=edit&amp;section=2" title="Edit section: The Basics">edit</a>]</div><a name="The_Basics"></a><h2>The Basics</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121023051346/http://www.modwiki.net/w/index.php?title=Level_scripting&amp;action=edit&amp;section=3" title="Edit section: General Syntax">edit</a>]</div><a name="General_Syntax"></a><h3>General Syntax</h3>
+<p>Level scripting syntax follows a similar syntax to that of C or JavaScript language. Refer to the <a href="/web/20121023051346/http://www.modwiki.net/wiki/SCRIPT_%28file_format%29" title="SCRIPT (file format)">SCRIPT file format</a> article for a basic overview of syntax and the <a href="/web/20121023051346/http://www.modwiki.net/wiki/Scripting_basics" title="Scripting basics">Scripting_basics</a> article for beginning scripting tutorials. 
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121023051346/http://www.modwiki.net/w/index.php?title=Level_scripting&amp;action=edit&amp;section=4" title="Edit section: Example">edit</a>]</div><a name="Example"></a><h3>Example</h3>
+<p>Here is an example of a simple level script:
+</p>
+<pre><span style="color: #0000ff;">void</span> setup_objects<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>  <span style="color: #000000;">&#123;</span>
+    <span style="color: #000055;">$fanblade</span>.<span style="color: #ff0000;">bind</span><span style="color: #000000;">&#40;</span><span style="color: #000055;">$rotator</span><span style="color: #000000;">&#41;</span>;
+<span style="color: #000000;">&#125;</span>
+&nbsp;
+&nbsp;
+<span style="color: #0000ff;">void</span> main<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>  <span style="color: #000000;">&#123;</span>
+    setup_objects<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>;
+<span style="color: #000000;">&#125;</span></pre>
+<p><br />
+With a basic understanding of scripting syntax, the above script breaks down as follows:
+</p>
+<ul><li> We are first declaring a new function called setup_objects. The void indicates the type of variable the function will return -- in this case nothing. 
+</li><li> We are referencing the entity called "fanblade" and telling it to bind itself to an entity called "rotator".
+</li><li> We then move onto the main function, which will tell the function setup_objects to run on level load.
+</li></ul>
+<p><br />
+It is important to note a few things in level scripting:
+</p>
+<ol><li> The main() function is always called when a level loads.
+</li><li> You must declare any functions and/or global variables before you attempt to call them with main().
+</li></ol>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121023051346/http://www.modwiki.net/w/index.php?title=Level_scripting&amp;action=edit&amp;section=5" title="Edit section: A Note on Variables and Functions">edit</a>]</div><a name="A_Note_on_Variables_and_Functions"></a><h3>A Note on Variables and Functions</h3>
+<p>Level scripts work with variables and functions as described in the <a href="/web/20121023051346/http://www.modwiki.net/wiki/SCRIPT_%28file_format%29" title="SCRIPT (file format)">SCRIPT_(file_format)</a> article and the <a href="/web/20121023051346/http://www.modwiki.net/wiki/Scripting_basics" title="Scripting basics">Scripting_basics</a> article.
+</p><p><br />
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121023051346/http://www.modwiki.net/w/index.php?title=Level_scripting&amp;action=edit&amp;section=6" title="Edit section: How to Interact With Level Scripts">edit</a>]</div><a name="How_to_Interact_With_Level_Scripts"></a><h2>How to Interact With Level Scripts</h2>
+<p>Level scripts are nothing unless we can interact with them as a player in the level. There are 3 primary ways to accomplish level-to-script interaction.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121023051346/http://www.modwiki.net/w/index.php?title=Level_scripting&amp;action=edit&amp;section=7" title="Edit section: Triggers in the Level">edit</a>]</div><a name="Triggers_in_the_Level"></a><h3>Triggers in the Level</h3>
+<p>Every trigger (apart from trigger_fade and trigger_hurt) has a built in key/val pair for calling script functions. 
+The key/val is - call:script_function. 
+</p><p>In the editor, double click on the call keyword within the entity dialog and fill in the name of the script function you wish to call. When the trigger is triggered the it will call that function. The function must be declared in the .script file before attempting this.
+</p><p>Note: You cannot pass arguments to a script function using a trigger. This is an unfortunate limitation - see <a href="/web/20121023051346/http://www.modwiki.net/wiki/Level_scripting#hacking_around_limitations" title="">hacking around limitations</a> for more details.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121023051346/http://www.modwiki.net/w/index.php?title=Level_scripting&amp;action=edit&amp;section=8" title="Edit section: GUIs">edit</a>]</div><a name="GUIs"></a><h3>GUIs</h3>
+<p>In-game GUIs can function very much like triggers placed in the map. To call a script from a GUI first you must attach a GUI to a model or entity that supports a GUI display. Depending upon how the GUI was built, you must use a gui_parm with the name of a script function to call. Most GUIs will list which gui_parm is attached to which button.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121023051346/http://www.modwiki.net/w/index.php?title=Level_scripting&amp;action=edit&amp;section=9" title="Edit section: Example">edit</a>]</div><a name="Example_2"></a><h4>Example</h4>
+<p>In the Doom 3 editor reference the gui guis/monorail/lower_klaxxon.gui. 
+</p><p>Notice the comment on the gui:"runs the script in gui_parm6"
+</p><p>This means that on the entity that contains the GUI if you input a key/val of gui_parm6:myscript, the myscript function will be called whenever the GUI is clicked.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121023051346/http://www.modwiki.net/w/index.php?title=Level_scripting&amp;action=edit&amp;section=10" title="Edit section: Notes">edit</a>]</div><a name="Notes"></a><h4>Notes</h4>
+<p>GUIs are a different animal when it comes to scripting. GUI Scripting is beyond the scope of this article. While different buttons within a GUI can be made to call specific script functions, it is heavily dependent upon the type of GUI in use. You must refer to comments associated with a GUI to understand which gui_parms will call scripts. Later on it may be necessary to write a custom GUI to handle specific needs within a map. While GUIs come in all designs and functions the basic principle that a gui_parm must be used to call a script function remains true.
+</p><p>With that said, note that every GUI will be different and as such this article cannot provide enough examples for each GUI, the level creator must use his judgment and will to determine how each GUI will interact.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121023051346/http://www.modwiki.net/w/index.php?title=Level_scripting&amp;action=edit&amp;section=11" title="Edit section: The main() Function">edit</a>]</div><a name="The_main.28.29_Function"></a><h3>The main() Function</h3>
+<p>Lastly, as stated in the example, the main function may be used to call functions upon map load.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121023051346/http://www.modwiki.net/w/index.php?title=Level_scripting&amp;action=edit&amp;section=12" title="Edit section: Extended Examples">edit</a>]</div><a name="Extended_Examples"></a><h2>Extended Examples</h2>
+<p>Examples needed
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121023051346/http://www.modwiki.net/w/index.php?title=Level_scripting&amp;action=edit&amp;section=13" title="Edit section: Hacking Around Limitations">edit</a>]</div><a name="Hacking_Around_Limitations"></a><h2>Hacking Around Limitations</h2>
+<p>To be created...
+</p><p>follows along the lines of:
+</p>
+<pre>&nbsp;
+<span style="color: #0000ff;">void</span> setArea<span style="color: #000000;">&#40;</span><span style="color: #0000ff;">entity</span> ent<span style="color: #000000;">&#41;</span>
+<span style="color: #000000;">&#123;</span>
+    area = ent.<span style="color: #ff0000;">getFloatKey</span><span style="color: #000000;">&#40;</span><span style="color: #666666;">"area"</span><span style="color: #000000;">&#41;</span>;
+&nbsp;
+    <span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">println</span><span style="color: #000000;">&#40;</span><span style="color: #666666;">"Area: "</span> + area<span style="color: #000000;">&#41;</span>;
+<span style="color: #000000;">&#125;</span></pre>
+<p><br />
+</p>
+<div class="boilerplate metadata" id="stub"><i>This article is a <a href="/web/20121023051346/http://en.wikipedia.org/wiki/Perfect_stub_article" class='external text' title="http://en.wikipedia.org/wiki/Perfect_stub_article">stub</a>. You can help us by <span class="plainlinks"><a href="/web/20121023051346/http://www.modwiki.net/w/index.php?title=Level_scripting&amp;action=edit" class='external text' title="http://www.modwiki.net/w/index.php?title=Level_scripting&amp;action=edit">expanding it</a></span>.</i> </div>
+<div class="printfooter">
+Retrieved from "<a href="/web/20121023051346/http://www.modwiki.net/wiki/Level_scripting">http://www.modwiki.net/wiki/Level_scripting</a>"</div>
+			<div id="catlinks"><p class='catlinks'><a href="/web/20121023051346/http://www.modwiki.net/w/index.php?title=Special:Categories&amp;article=Level_scripting" title="Special:Categories">Categories</a>: <span dir='ltr'><a href="/web/20121023051346/http://www.modwiki.net/wiki/Category:Urgent_attention_needed" title="Category:Urgent attention needed">Urgent attention needed</a></span> | <span dir='ltr'><a href="/web/20121023051346/http://www.modwiki.net/wiki/Category:Stub" title="Category:Stub">Stub</a></span><br /><hr /><a href="/web/20121023051346/http://www.modwiki.net/wiki/Category:Utility_categories" title="Category:Utility categories">Utility categories</a> &gt; <a href="/web/20121023051346/http://www.modwiki.net/wiki/Category:Stub" title="Category:Stub">Stub</a><br />
+<a href="/web/20121023051346/http://www.modwiki.net/wiki/Category:Utility_categories" title="Category:Utility categories">Utility categories</a> &gt; <a href="/web/20121023051346/http://www.modwiki.net/wiki/Category:Urgent_attention_needed" title="Category:Urgent attention needed">Urgent attention needed</a></p></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="/web/20121023051346/http://www.modwiki.net/wiki/Level_scripting">Article</a></li>
+				 <li id="ca-talk"><a href="/web/20121023051346/http://www.modwiki.net/wiki/Talk:Level_scripting">Discussion</a></li>
+				 <li id="ca-edit"><a href="/web/20121023051346/http://www.modwiki.net/w/index.php?title=Level_scripting&amp;action=edit">Edit</a></li>
+				 <li id="ca-history"><a href="/web/20121023051346/http://www.modwiki.net/w/index.php?title=Level_scripting&amp;action=history">History</a></li>
+		</ul>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/web/20121023051346/http://www.modwiki.net/w/index.php?title=Special:Userlogin&amp;returnto=Level_scripting">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/web/20121023051346im_/http://www.modwiki.net/wiki/upload/wiki.png);" href="/web/20121023051346/http://www.modwiki.net/wiki/Main_Page" title="Main Page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class='portlet' id='p-Main'>
+		<h5>Main</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/web/20121023051346/http://www.modwiki.net/wiki/Main_Page">Main Page</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 4'>
+		<h5>id Tech 4</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Doom-3"><a href="/web/20121023051346/http://www.modwiki.net/wiki/Doom_3">Doom 3</a></li>
+				<li id="n-Quake-4"><a href="/web/20121023051346/http://www.modwiki.net/wiki/Quake_4">Quake 4</a></li>
+				<li id="n-Prey"><a href="/web/20121023051346/http://www.modwiki.net/wiki/Prey">Prey</a></li>
+				<li id="n-ETQW"><a href="/web/20121023051346/http://www.modwiki.net/wiki/Enemy_Territory:_Quake_Wars">ETQW</a></li>
+				<li id="n-Wolfenstein"><a href="/web/20121023051346/http://www.modwiki.net/wiki/Wolfenstein">Wolfenstein</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 5'>
+		<h5>id Tech 5</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Rage"><a href="/web/20121023051346/http://www.modwiki.net/wiki/Rage">Rage</a></li>
+				<li id="n-Doom-4"><a href="/web/20121023051346/http://www.modwiki.net/wiki/Doom_4">Doom 4</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Quick Links'>
+		<h5>Quick Links</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Console"><a href="/web/20121023051346/http://www.modwiki.net/wiki/Console">Console</a></li>
+				<li id="n-Script-Events"><a href="/web/20121023051346/http://www.modwiki.net/wiki/Scripting">Script Events</a></li>
+				<li id="n-Material-Keywords"><a href="/web/20121023051346/http://www.modwiki.net/wiki/Material_%28decl%29">Material Keywords</a></li>
+				<li id="n-Modification-List"><a href="/web/20121023051346/http://www.modwiki.net/wiki/Modlist">Modification List</a></li>
+				<li id="n-Tutorial-List"><a href="/web/20121023051346/http://www.modwiki.net/wiki/Tutorial_list">Tutorial List</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Wiki'>
+		<h5>Wiki</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Open-tasks"><a href="/web/20121023051346/http://www.modwiki.net/wiki/modwiki:Open_tasks">Open tasks</a></li>
+				<li id="n-recentchanges"><a href="/web/20121023051346/http://www.modwiki.net/wiki/Special:Recentchanges">Recent changes</a></li>
+				<li id="n-Style-guide"><a href="/web/20121023051346/http://www.modwiki.net/wiki/modwiki:Style_guide">Style guide</a></li>
+				<li id="n-help"><a href="/web/20121023051346/http://www.modwiki.net/wiki/Help:Contents">Help</a></li>
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/web/20121023051346/http://www.modwiki.net/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" value="Search" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/web/20121023051346/http://www.modwiki.net/wiki/Special:Whatlinkshere/Level_scripting">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/web/20121023051346/http://www.modwiki.net/wiki/Special:Recentchangeslinked/Level_scripting">Related changes</a></li>
+<li id="t-upload"><a href="/web/20121023051346/http://www.modwiki.net/wiki/Special:Upload">Upload file</a></li>
+<li id="t-specialpages"><a href="/web/20121023051346/http://www.modwiki.net/wiki/Special:Specialpages">Special pages</a></li>
+				<li id="t-print"><a href="/web/20121023051346/http://www.modwiki.net/w/index.php?title=Level_scripting&amp;printable=yes">Printable version</a></li>				<li id="t-permalink"><a href="/web/20121023051346/http://www.modwiki.net/w/index.php?title=Level_scripting&amp;oldid=43577">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="/web/20121023051346/http://www.mediawiki.org/"><img src="/web/20121023051346im_/http://www.modwiki.net/w/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="/web/20121023051346/http://www.gnu.org/copyleft/fdl.html"><img src="/web/20121023051346im_/http://www.modwiki.net/w/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+				<li id="lastmod"> This page was last modified 19:07, 15 March 2012.</li>
+				<li id="copyright">Content is available under <a href="/web/20121023051346/http://www.gnu.org/copyleft/fdl.html" class='external ' title="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.2</a>.</li>
+				<li id="privacy"><a href="/web/20121023051346/http://www.modwiki.net/wiki/modwiki:Privacy_policy" title="modwiki:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="/web/20121023051346/http://www.modwiki.net/wiki/modwiki:About" title="modwiki:About">About modwiki</a></li>
+				<li id="disclaimer"><a href="/web/20121023051346/http://www.modwiki.net/wiki/modwiki:General_disclaimer" title="modwiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+	<script type="text/javascript"> if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+<!-- Served by h982484 in 8.77 secs. -->
+</body></html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 5:13:46 Oct 23, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 4:07:11 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

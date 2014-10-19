@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="http://modwiki.net/w/skins/common/feed.css"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>modwiki - Recent changes [en]</title>
+		<link>http://modwiki.net/wiki/Special:Recentchanges</link>
+		<description>Track the most recent changes to the wiki on this page.</description>
+		<language>en</language>
+		<generator>MediaWiki 1.6.8</generator>
+		<lastBuildDate>Tue, 26 Feb 2008 20:08:41 GMT</lastBuildDate>
+		<item>
+			<title>Modeldef (decl)</title>
+			<link>http://modwiki.net/wiki/Modeldef_%28decl%29</link>
+			<description>&lt;p&gt;Added prevent_idle_override&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;New page&lt;/b&gt;&lt;/p&gt;&lt;div&gt;Model declarations define parameters for the engine to take into account when dealing with a specific animated model.&lt;br /&gt;
+&lt;br /&gt;
+==Syntax==&lt;br /&gt;
+&lt;br /&gt;
+ model [name] {&lt;br /&gt;
+  [keywords]&lt;br /&gt;
+  [animation declarations]&lt;br /&gt;
+ }&lt;br /&gt;
+&lt;br /&gt;
+Model declarations begin with a header which consists of model followed by the ''name'' of the model declaration.&lt;br /&gt;
+&lt;br /&gt;
+The header is followed by the body of the declaration which is enclosed in curly brackets.&lt;br /&gt;
+&lt;br /&gt;
+The body is composed of several ''keywords'' and is followed by one or more ''animation declarations''.&lt;br /&gt;
+&lt;br /&gt;
+===Keywords===&lt;br /&gt;
+&lt;br /&gt;
+{| class=&amp;quot;mwstyle&amp;quot;&lt;br /&gt;
+! Keyword &amp;amp; Usage !! Description&lt;br /&gt;
+|-&lt;br /&gt;
+| style=&amp;quot;font-family: monospace;&amp;quot; | '''anim''' ''name file [{...}]'' || A declarations that assigns a name to the specified md5anim and allows for the declaration of frame events enclosed in curly brackets.&lt;br /&gt;
+|-&lt;br /&gt;
+| style=&amp;quot;font-family: monospace;&amp;quot; | '''channel''' ''name (joints)'' || Defines an animation channel or isolated region of the skeleton. Channels allow a character's legs to move independently of their torso.&lt;br /&gt;
+|-&lt;br /&gt;
+| style=&amp;quot;font-family: monospace;&amp;quot; | '''inherit''' ''name'' || Inherits properties from specified model declaration.&lt;br /&gt;
+|-&lt;br /&gt;
+| style=&amp;quot;font-family: monospace;&amp;quot; | '''mesh''' ''file'' || The md5model to use.&lt;br /&gt;
+|-&lt;br /&gt;
+| style=&amp;quot;font-family: monospace;&amp;quot; | '''offset''' ''x, y, z'' || Offsets the model from it's origin.&lt;br /&gt;
+|-&lt;br /&gt;
+| style=&amp;quot;font-family: monospace;&amp;quot; | '''skin''' ''name'' || Default skin to apply. Can b

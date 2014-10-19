@@ -1,0 +1,454 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex,follow" />
+<meta name="keywords" content="Special:Recentchanges" />
+<link rel="shortcut icon" href="/web/20071005212444im_/http://www.modwiki.net/favicon.ico" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+<link rel='alternate' type='application/rss+xml' title='RSS 2.0' href='/w/index.php?title=Special:Recentchanges&amp;feed=rss' />
+<link rel='alternate' type='application/atom+xml' title='Atom 0.3' href='/w/index.php?title=Special:Recentchanges&amp;feed=atom' />
+		<title>Recent changes - modwiki</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20071005212444cs_/http://www.modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/web/20071005212444cs_/http://www.modwiki.net/w/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/w/skins/monobook/IE70Fixes.css?1";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
+		<script type="text/javascript" src="/web/20071005212444js_/http://www.modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20071005212444js_/http://www.modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/web/20071005212444cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20071005212444cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20071005212444cs_/http://www.modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns--1 ltr">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app16.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/www.modwiki.net\/wiki\/Special:Recentchanges";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "5";
+var displayMonth = "Oct";
+var displayYear = "2007";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://www.modwiki.net/wiki/Special:Recentchanges" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20071005212444" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20070729231805/http://modwiki.net/wiki/Special:Recentchanges" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="29 Jul 2007"><strong>JUL</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 21:24:44 Oct 5, 2007">OCT</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20071210135354/http://www.modwiki.net/wiki/Special:Recentchanges" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="10 Dec 2007"><strong>DEC</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20071002105609/http://www.modwiki.net/wiki/Special:Recentchanges" title="10:56:09 Oct 2, 2007" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 21:24:44 Oct 5, 2007">5</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20071007060213/http://www.modwiki.net/wiki/Special:Recentchanges" title="6:02:13 Oct 7, 2007" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20060724025056/http://www.modwiki.net/wiki/Special:Recentchanges" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="24 Jul 2006"><strong>2006</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 21:24:44 Oct 5, 2007">2007</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20090101140855/http://www.modwiki.net/wiki/Special:Recentchanges" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="1 Jan 2009"><strong>2009</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20071005212444*/http://www.modwiki.net/wiki/Special:Recentchanges" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>67 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">8 May 06 - 31 Dec 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000010100000_2007:9:010010102401_2008:-1:020111001000_2009:-1:101010101010_2010:-1:101010101010_2011:-1:101221001010_2012:-1:221112111211_2013:-1:111111111111_2014:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">Recent changes</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From modwiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="/web/20071005212444/http://www.modwiki.net/wiki/Special:Recentchanges#column-one">navigation</a>, <a href="/web/20071005212444/http://www.modwiki.net/wiki/Special:Recentchanges#searchInput">search</a></div>			<!-- start content -->
+			<p>Track the most recent changes to the wiki on this page.
+</p><div class="rcoptions">Below are the last <strong>50</strong> changes in the last <strong>7</strong> days, as of $3.<br />Show last <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Recentchanges&amp;limit=50" title="Special:Recentchanges">50</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Recentchanges&amp;limit=100" title="Special:Recentchanges">100</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Recentchanges&amp;limit=250" title="Special:Recentchanges">250</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Recentchanges&amp;limit=500" title="Special:Recentchanges">500</a> changes in last <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Recentchanges&amp;days=1" title="Special:Recentchanges">1</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Recentchanges&amp;days=3" title="Special:Recentchanges">3</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Recentchanges&amp;days=7" title="Special:Recentchanges">7</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Recentchanges&amp;days=14" title="Special:Recentchanges">14</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Recentchanges&amp;days=30" title="Special:Recentchanges">30</a> days<br /><a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Recentchanges&amp;hideminor=1" title="Special:Recentchanges">Hide</a> minor edits | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Recentchanges&amp;hidebots=0" title="Special:Recentchanges">Show</a> bots | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Recentchanges&amp;hideanons=1" title="Special:Recentchanges">Hide</a> anonymous users | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Recentchanges&amp;hideliu=1" title="Special:Recentchanges">Hide</a> logged-in users | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Recentchanges&amp;hidepatrolled=1" title="Special:Recentchanges">Hide</a> patrolled edits | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Recentchanges&amp;hidemyself=1" title="Special:Recentchanges">Hide</a> my edits<br />Show new changes starting from <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Recentchanges&amp;from=20071005213543" title="Special:Recentchanges">21:35, 5 October 2007</a>
+<div class='namespacesettings'><form method='get' action='/web/20071005212444/http://www.modwiki.net/w/index.php'>
+<input type="hidden" name="title" value="Special:Recentchanges" />
+<div id='nsselect' class='recentchanges'>
+	<label for='namespace'>Namespace:</label>
+	<select id='namespace' name='namespace' class='namespaceselector'>
+	<option value="" selected="selected">all</option><option value="0">(Main)</option><option value="1">Talk</option><option value="2">User</option><option value="3">User talk</option><option value="4">modwiki</option><option value="5">modwiki talk</option><option value="6">Image</option><option value="7">Image talk</option><option value="8">MediaWiki</option><option value="9">MediaWiki talk</option><option value="10">Template</option><option value="11">Template talk</option><option value="12">Help</option><option value="13">Help talk</option><option value="14">Category</option><option value="15">Category talk</option>
+</select>
+<input type="submit" value="Go" />
+<input type='checkbox' name='invert' value='1' id='nsinvert' /> <label for='nsinvert'>Invert selection</label>
+</div></form></div></div>
+<h4>4 October 2007</h4>
+<ul class="special"><li>(<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Monster_zombie_fat_%28entity%29&amp;curid=3916&amp;diff=7937&amp;oldid=7926" title="Monster zombie fat (entity)"  tabindex="1">diff</a>) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Monster_zombie_fat_%28entity%29&amp;curid=3916&amp;action=history" title="Monster zombie fat (entity)">hist</a>) . .    <a href="/web/20071005212444/http://www.modwiki.net/wiki/Monster_zombie_fat_%28entity%29" title="Monster zombie fat (entity)">Monster zombie fat (entity)</a>; 12:52 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Kamikazee" title="User talk:Kamikazee">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Kamikazee" title="Special:Contributions">contribs</a>) <span class='comment'>(Trying bot template)</span></li>
+<li>(diff) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Category:Auto-generated&amp;curid=3926&amp;action=history" title="Category:Auto-generated">hist</a>) . .  <span class="newpage">N</span>  <a href="/web/20071005212444/http://www.modwiki.net/wiki/Category:Auto-generated" title="Category:Auto-generated">Category:Auto-generated</a>; 12:50 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Kamikazee" title="User talk:Kamikazee">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Kamikazee" title="Special:Contributions">contribs</a>) <span class='comment'>(Initial version, theoretical description)</span></li>
+<li>(<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Template:Bot&amp;curid=3925&amp;diff=7935&amp;oldid=7934" title="Template:Bot"  tabindex="3">diff</a>) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Template:Bot&amp;curid=3925&amp;action=history" title="Template:Bot">hist</a>) . .    <a href="/web/20071005212444/http://www.modwiki.net/wiki/Template:Bot" title="Template:Bot">Template:Bot</a>; 12:47 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Kamikazee" title="User talk:Kamikazee">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Kamikazee" title="Special:Contributions">contribs</a>) <span class='comment'>(Info, template doesn't need to be in auto-generated category)</span></li>
+<li>(diff) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Template:Bot&amp;curid=3925&amp;action=history" title="Template:Bot">hist</a>) . .  <span class="newpage">N</span>  <a href="/web/20071005212444/http://www.modwiki.net/wiki/Template:Bot" title="Template:Bot">Template:Bot</a>; 12:40 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Kamikazee" title="User talk:Kamikazee">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Kamikazee" title="Special:Contributions">contribs</a>) <span class='comment'>(Initial version)</span></li>
+<li>(<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Template:Stub&amp;curid=935&amp;diff=7933&amp;oldid=7243" title="Template:Stub"  tabindex="5">diff</a>) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Template:Stub&amp;curid=935&amp;action=history" title="Template:Stub">hist</a>) . .  <span class="minor">m</span>  <a href="/web/20071005212444/http://www.modwiki.net/wiki/Template:Stub" title="Template:Stub">Template:Stub</a>; 12:38 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Kamikazee" title="User talk:Kamikazee">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Kamikazee" title="Special:Contributions">contribs</a>) <span class='comment'>(Removed link icons)</span></li>
+<li>(diff) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=User:PyBot&amp;curid=3924&amp;action=history" title="User:PyBot">hist</a>) . .  <span class="newpage">N</span>  <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:PyBot" title="User:PyBot">User:PyBot</a>; 05:37 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Rich" title="User:Rich">Rich</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Rich" title="User talk:Rich">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Rich" title="Special:Contributions">contribs</a>) <span class='comment'>(usage, configuration, and source code)</span></li>
+</ul>
+<h4>3 October 2007</h4>
+<ul class="special"><li>(<a href="/web/20071005212444/http://www.modwiki.net/wiki/Special:Log/rights" title="Special:Log/rights">Bureaucrat log</a>); 11:36 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Iceheart" title="User:Iceheart">Iceheart</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Iceheart" title="User talk:Iceheart">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Iceheart" title="Special:Contributions">contribs</a>) <span class='comment'>(Changed group membership for User:PyBot from  to bot)</span></li>
+<li>(diff) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Aas_types_%28entity%29&amp;curid=3923&amp;action=history" title="Aas types (entity)">hist</a>) . .  <span class="newpage">N</span>  <a href="/web/20071005212444/http://www.modwiki.net/wiki/Aas_types_%28entity%29" title="Aas types (entity)">Aas types (entity)</a>; 09:33 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:PyBot" title="User:PyBot">PyBot</a> (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=User_talk:PyBot&amp;action=edit" class="new" title="User talk:PyBot">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=PyBot" title="Special:Contributions">contribs</a>) <span class='comment'>(Added Article)</span></li>
+<li>(<a href="/web/20071005212444/http://www.modwiki.net/wiki/Special:Log/delete" title="Special:Log/delete">Deletion log</a>); 09:04 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Rich" title="User:Rich">Rich</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Rich" title="User talk:Rich">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Rich" title="Special:Contributions">contribs</a>) <span class='comment'>(deleted &quot;<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Monster_demon_imp&amp;action=edit" class="new" title="Monster demon imp">Monster demon imp</a>&quot;: Need to account for article name)</span></li>
+<li>(<a href="/web/20071005212444/http://www.modwiki.net/wiki/Special:Log/delete" title="Special:Log/delete">Deletion log</a>); 08:56 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Rich" title="User:Rich">Rich</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Rich" title="User talk:Rich">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Rich" title="Special:Contributions">contribs</a>) <span class='comment'>(deleted &quot;<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=PyBotTest&amp;action=edit" class="new" title="PyBotTest">PyBotTest</a>&quot;: Tested and works.)</span></li>
+<li>(<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Scale_%28Image_program_function%29&amp;curid=1714&amp;diff=7928&amp;oldid=3248" title="Scale (Image program function)"  tabindex="11">diff</a>) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Scale_%28Image_program_function%29&amp;curid=1714&amp;action=history" title="Scale (Image program function)">hist</a>) . .    <a href="/web/20071005212444/http://www.modwiki.net/wiki/Scale_%28Image_program_function%29" title="Scale (Image program function)">Scale (Image program function)</a>; 08:29 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Kamikazee" title="User talk:Kamikazee">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Kamikazee" title="Special:Contributions">contribs</a>) <span class='comment'>(Example was incorrect)</span></li>
+<li>(<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Bumpmap_%28Material_global_keyword%29&amp;curid=1178&amp;diff=7927&amp;oldid=4075" title="Bumpmap (Material global keyword)"  tabindex="12">diff</a>) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Bumpmap_%28Material_global_keyword%29&amp;curid=1178&amp;action=history" title="Bumpmap (Material global keyword)">hist</a>) . .    <a href="/web/20071005212444/http://www.modwiki.net/wiki/Bumpmap_%28Material_global_keyword%29" title="Bumpmap (Material global keyword)">Bumpmap (Material global keyword)</a>; 08:23 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Kamikazee" title="User talk:Kamikazee">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Kamikazee" title="Special:Contributions">contribs</a>) <span class='comment'>(Pointed link to right section)</span></li>
+<li>(<a href="/web/20071005212444/http://www.modwiki.net/wiki/Special:Log/rights" title="Special:Log/rights">Bureaucrat log</a>); 07:15 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Rich" title="User:Rich">Rich</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Rich" title="User talk:Rich">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Rich" title="Special:Contributions">contribs</a>) <span class='comment'>(Changed group membership for User:PyBot from bot to)</span></li>
+<li>(<a href="/web/20071005212444/http://www.modwiki.net/wiki/Special:Log/rights" title="Special:Log/rights">Bureaucrat log</a>); 07:13 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Rich" title="User:Rich">Rich</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Rich" title="User talk:Rich">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Rich" title="Special:Contributions">contribs</a>) <span class='comment'>(Changed group membership for User:PyBot from  to bot)</span></li>
+<li>(<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Monster_zombie_fat_%28entity%29&amp;curid=3916&amp;diff=7926&amp;oldid=7906" title="Monster zombie fat (entity)"  tabindex="15">diff</a>) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Monster_zombie_fat_%28entity%29&amp;curid=3916&amp;action=history" title="Monster zombie fat (entity)">hist</a>) . .    <a href="/web/20071005212444/http://www.modwiki.net/wiki/Monster_zombie_fat_%28entity%29" title="Monster zombie fat (entity)">Monster zombie fat (entity)</a>; 01:28 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Rich" title="User:Rich">Rich</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Rich" title="User talk:Rich">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Rich" title="Special:Contributions">contribs</a>) <span class='comment'>(Testing results again)</span></li>
+</ul>
+<h4>2 October 2007</h4>
+<ul class="special"><li>(<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=PK4_%28file_format%29&amp;curid=1063&amp;diff=7925&amp;oldid=7924" title="PK4 (file format)"  tabindex="16">diff</a>) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=PK4_%28file_format%29&amp;curid=1063&amp;action=history" title="PK4 (file format)">hist</a>) . .  <span class="minor">m</span>  <a href="/web/20071005212444/http://www.modwiki.net/wiki/PK4_%28file_format%29" title="PK4 (file format)">PK4 (file format)</a>; 08:22 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Rich" title="User:Rich">Rich</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Rich" title="User talk:Rich">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Rich" title="Special:Contributions">contribs</a>) <span class='comment'>(idTech 4)</span></li>
+<li>(<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=PK4_%28file_format%29&amp;curid=1063&amp;diff=7924&amp;oldid=4675" title="PK4 (file format)"  tabindex="17">diff</a>) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=PK4_%28file_format%29&amp;curid=1063&amp;action=history" title="PK4 (file format)">hist</a>) . .    <a href="/web/20071005212444/http://www.modwiki.net/wiki/PK4_%28file_format%29" title="PK4 (file format)">PK4 (file format)</a>; 08:09 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Kamikazee" title="User talk:Kamikazee">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Kamikazee" title="Special:Contributions">contribs</a>) <span class='comment'>(Language, Better compression -&gt; for distribution only)</span></li>
+</ul>
+<h4>29 September 2007</h4>
+<ul class="special"><li>(<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Script_events_%28ETQW%29&amp;curid=3920&amp;diff=7923&amp;oldid=7922" title="Script events (ETQW)"  tabindex="18">diff</a>) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Script_events_%28ETQW%29&amp;curid=3920&amp;action=history" title="Script events (ETQW)">hist</a>) . .  <span class="minor">m</span>  <a href="/web/20071005212444/http://www.modwiki.net/wiki/Script_events_%28ETQW%29" title="Script events (ETQW)">Script events (ETQW)</a>; 23:10 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Kamikazee" title="User talk:Kamikazee">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Kamikazee" title="Special:Contributions">contribs</a>) <span class='comment'>(<span class="autocomment"><a href="/web/20071005212444/http://www.modwiki.net/wiki/Script_events_%28ETQW%29#Atmosphere_Events" title="Script events (ETQW)">→</a>Atmosphere Events -</span> Section malfunction)</span></li>
+<li>(diff) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Script_events_%28ETQW%29&amp;curid=3920&amp;action=history" title="Script events (ETQW)">hist</a>) . .  <span class="newpage">N</span>  <a href="/web/20071005212444/http://www.modwiki.net/wiki/Script_events_%28ETQW%29" title="Script events (ETQW)">Script events (ETQW)</a>; 22:56 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Kamikazee" title="User talk:Kamikazee">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Kamikazee" title="Special:Contributions">contribs</a>) <span class='comment'>(Taken from version 1.1)</span></li>
+<li>(<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Enemy_Territory:_Quake_Wars&amp;curid=2179&amp;diff=7921&amp;oldid=7920" title="Enemy Territory: Quake Wars"  tabindex="20">diff</a>) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Enemy_Territory:_Quake_Wars&amp;curid=2179&amp;action=history" title="Enemy Territory: Quake Wars">hist</a>) . .  <span class="minor">m</span>  <a href="/web/20071005212444/http://www.modwiki.net/wiki/Enemy_Territory:_Quake_Wars" title="Enemy Territory: Quake Wars">Enemy Territory: Quake Wars</a>; 09:04 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Kamikazee" title="User talk:Kamikazee">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Kamikazee" title="Special:Contributions">contribs</a>) <span class='comment'>(Changed color of engine info section to yellow)</span></li>
+</ul>
+<h4>28 September 2007</h4>
+<ul class="special"><li>(<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Enemy_Territory:_Quake_Wars&amp;curid=2179&amp;diff=7920&amp;oldid=7916" title="Enemy Territory: Quake Wars"  tabindex="21">diff</a>) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Enemy_Territory:_Quake_Wars&amp;curid=2179&amp;action=history" title="Enemy Territory: Quake Wars">hist</a>) . .    <a href="/web/20071005212444/http://www.modwiki.net/wiki/Enemy_Territory:_Quake_Wars" title="Enemy Territory: Quake Wars">Enemy Territory: Quake Wars</a>; 23:40 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Mordenkainen" title="User:Mordenkainen">Mordenkainen</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Mordenkainen" title="User talk:Mordenkainen">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Mordenkainen" title="Special:Contributions">contribs</a>) <span class='comment'>(id Tech-isation, reworded engine summary, added more features, replaced demo storage requirements with retail version's)</span></li>
+<li>(<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Data_types&amp;curid=3341&amp;diff=7919&amp;oldid=7656" title="Data types"  tabindex="22">diff</a>) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Data_types&amp;curid=3341&amp;action=history" title="Data types">hist</a>) . .    <a href="/web/20071005212444/http://www.modwiki.net/wiki/Data_types" title="Data types">Data types</a>; 14:41 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Kamikazee" title="User talk:Kamikazee">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Kamikazee" title="Special:Contributions">contribs</a>) <span class='comment'>(<span class="autocomment"><a href="/web/20071005212444/http://www.modwiki.net/wiki/Data_types#Special_types" title="Data types">→</a>Special types</span>)</span></li>
+<li>(<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Scripting&amp;curid=994&amp;diff=7918&amp;oldid=7917" title="Scripting"  tabindex="23">diff</a>) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Scripting&amp;curid=994&amp;action=history" title="Scripting">hist</a>) . .    <a href="/web/20071005212444/http://www.modwiki.net/wiki/Scripting" title="Scripting">Scripting</a>; 13:30 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Kamikazee" title="User talk:Kamikazee">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Kamikazee" title="Special:Contributions">contribs</a>) <span class='comment'>(Made referencebox smaller)</span></li>
+<li>(<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Scripting&amp;curid=994&amp;diff=7917&amp;oldid=7343" title="Scripting"  tabindex="24">diff</a>) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Scripting&amp;curid=994&amp;action=history" title="Scripting">hist</a>) . .    <a href="/web/20071005212444/http://www.modwiki.net/wiki/Scripting" title="Scripting">Scripting</a>; 13:26 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Kamikazee" title="User talk:Kamikazee">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Kamikazee" title="Special:Contributions">contribs</a>) <span class='comment'>(Added ET:QW script events)</span></li>
+<li>(<a href="/web/20071005212444/http://www.modwiki.net/wiki/Special:Log/delete" title="Special:Log/delete">Deletion log</a>); 12:41 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Kamikazee" title="User talk:Kamikazee">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Kamikazee" title="Special:Contributions">contribs</a>) <span class='comment'>(deleted &quot;<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Commands_%28Enemy_Territory:_Quake_Wars%29&amp;action=edit" class="new" title="Commands (Enemy Territory: Quake Wars)">Commands (Enemy Territory: Quake Wars)</a>&quot;: Was a new redirect, moved content to <a href="/web/20071005212444/http://www.modwiki.net/wiki/Commands_%28ETQW%29" title="Commands (ETQW)">Commands (ETQW)</a>)</span></li>
+<li>(<a href="/web/20071005212444/http://www.modwiki.net/wiki/Special:Log/delete" title="Special:Log/delete">Deletion log</a>); 12:40 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Kamikazee" title="User talk:Kamikazee">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Kamikazee" title="Special:Contributions">contribs</a>) <span class='comment'>(deleted &quot;<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=CVars_%28Enemy_Territory:_Quake_Wars%29&amp;action=edit" class="new" title="CVars (Enemy Territory: Quake Wars)">CVars (Enemy Territory: Quake Wars)</a>&quot;: Existing page at <a href="/web/20071005212444/http://www.modwiki.net/wiki/CVars_%28ETQW%29" title="CVars (ETQW)">CVars (ETQW)</a>)</span></li>
+<li>(<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Enemy_Territory:_Quake_Wars&amp;curid=2179&amp;diff=7916&amp;oldid=7915" title="Enemy Territory: Quake Wars"  tabindex="27">diff</a>) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Enemy_Territory:_Quake_Wars&amp;curid=2179&amp;action=history" title="Enemy Territory: Quake Wars">hist</a>) . .    <a href="/web/20071005212444/http://www.modwiki.net/wiki/Enemy_Territory:_Quake_Wars" title="Enemy Territory: Quake Wars">Enemy Territory: Quake Wars</a>; 12:39 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Kamikazee" title="User talk:Kamikazee">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Kamikazee" title="Special:Contributions">contribs</a>) <span class='comment'>(Changed game icon to smaller version)</span></li>
+<li>(<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Enemy_Territory:_Quake_Wars&amp;curid=2179&amp;diff=7915&amp;oldid=7910" title="Enemy Territory: Quake Wars"  tabindex="28">diff</a>) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Enemy_Territory:_Quake_Wars&amp;curid=2179&amp;action=history" title="Enemy Territory: Quake Wars">hist</a>) . .    <a href="/web/20071005212444/http://www.modwiki.net/wiki/Enemy_Territory:_Quake_Wars" title="Enemy Territory: Quake Wars">Enemy Territory: Quake Wars</a>; 12:37 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Kamikazee" title="User talk:Kamikazee">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Kamikazee" title="Special:Contributions">contribs</a>) <span class='comment'>(Changed links: &quot;ETQW&quot; suffix far easier than full name)</span></li>
+<li>(<a href="/web/20071005212444/http://www.modwiki.net/wiki/Special:Log/move" title="Special:Log/move">Move log</a>); 12:35 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Kamikazee" title="User talk:Kamikazee">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Kamikazee" title="Special:Contributions">contribs</a>) <span class='comment'>(<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Commands_%28Enemy_Territory:_Quake_Wars%29&amp;action=edit" class="new" title="Commands (Enemy Territory: Quake Wars)">Commands (Enemy Territory: Quake Wars)</a> moved to <a href="/web/20071005212444/http://www.modwiki.net/wiki/Commands_%28ETQW%29" title="Commands (ETQW)">Commands (ETQW)</a>: Link existed on Console page, page didn't.)</span></li>
+<li>(<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Enemy_Territory:_Quake_Wars&amp;curid=2179&amp;diff=7910&amp;oldid=7849" title="Enemy Territory: Quake Wars"  tabindex="30">diff</a>) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Enemy_Territory:_Quake_Wars&amp;curid=2179&amp;action=history" title="Enemy Territory: Quake Wars">hist</a>) . .    <a href="/web/20071005212444/http://www.modwiki.net/wiki/Enemy_Territory:_Quake_Wars" title="Enemy Territory: Quake Wars">Enemy Territory: Quake Wars</a>; 10:00 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Kissaki" title="User:Kissaki">Kissaki</a> (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=User_talk:Kissaki&amp;action=edit" class="new" title="User talk:Kissaki">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Kissaki" title="Special:Contributions">contribs</a>)</li>
+<li>(<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Main_Page&amp;curid=3666&amp;diff=7909&amp;oldid=7726" title="Main Page"  tabindex="31">diff</a>) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Main_Page&amp;curid=3666&amp;action=history" title="Main Page">hist</a>) . .    <a href="/web/20071005212444/http://www.modwiki.net/wiki/Main_Page" title="Main Page">Main Page</a>; 09:43 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Kissaki" title="User:Kissaki">Kissaki</a> (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=User_talk:Kissaki&amp;action=edit" class="new" title="User talk:Kissaki">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Kissaki" title="Special:Contributions">contribs</a>)</li>
+<li>(<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Entity_Listing&amp;curid=3754&amp;diff=7908&amp;oldid=7907" title="Entity Listing"  tabindex="32">diff</a>) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Entity_Listing&amp;curid=3754&amp;action=history" title="Entity Listing">hist</a>) . .  <span class="minor">m</span>  <a href="/web/20071005212444/http://www.modwiki.net/wiki/Entity_Listing" title="Entity Listing">Entity Listing</a>; 07:24 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Rich" title="User:Rich">Rich</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Rich" title="User talk:Rich">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Rich" title="Special:Contributions">contribs</a>) <span class='comment'>(Link typo)</span></li>
+<li>(<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Entity_Listing&amp;curid=3754&amp;diff=7907&amp;oldid=7213" title="Entity Listing"  tabindex="33">diff</a>) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Entity_Listing&amp;curid=3754&amp;action=history" title="Entity Listing">hist</a>) . .    <a href="/web/20071005212444/http://www.modwiki.net/wiki/Entity_Listing" title="Entity Listing">Entity Listing</a>; 07:23 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Rich" title="User:Rich">Rich</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Rich" title="User talk:Rich">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Rich" title="Special:Contributions">contribs</a>) <span class='comment'>(Added link to new test page.)</span></li>
+<li>(diff) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Monster_zombie_fat_%28entity%29&amp;curid=3916&amp;action=history" title="Monster zombie fat (entity)">hist</a>) . .  <span class="newpage">N</span>  <a href="/web/20071005212444/http://www.modwiki.net/wiki/Monster_zombie_fat_%28entity%29" title="Monster zombie fat (entity)">Monster zombie fat (entity)</a>; 07:19 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Rich" title="User:Rich">Rich</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Rich" title="User talk:Rich">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Rich" title="Special:Contributions">contribs</a>) <span class='comment'>(Testing a manual upload of generated content)</span></li>
+<li>(<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Talk:Main_Page&amp;curid=1251&amp;diff=7905&amp;oldid=7904" title="Talk:Main Page"  tabindex="35">diff</a>) (<a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Talk:Main_Page&amp;curid=1251&amp;action=history" title="Talk:Main Page">hist</a>) . .    <a href="/web/20071005212444/http://www.modwiki.net/wiki/Talk:Main_Page" title="Talk:Main Page">Talk:Main Page</a>; 06:03 . . <a href="/web/20071005212444/http://www.modwiki.net/wiki/User:Iceheart" title="User:Iceheart">Iceheart</a> (<a href="/web/20071005212444/http://www.modwiki.net/wiki/User_talk:Iceheart" title="User talk:Iceheart">Talk</a> | <a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Iceheart" title="Special:Contributions">contribs</a>) <span class='comment'>(test wiki)</span></li>
+</ul>
+<div class="printfooter">
+Retrieved from "<a href="/web/20071005212444/http://www.modwiki.net/wiki/Special:Recentchanges">http://www.modwiki.net/wiki/Special:Recentchanges</a>"</div>
+						<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<ul>
+				 <li id="ca-article" class="selected"><a href="/web/20071005212444/http://www.modwiki.net/wiki/Special:Recentchanges">Special Page</a></li>
+		</ul>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Userlogin&amp;returnto=Special:Recentchanges">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/web/20071005212444im_/http://www.modwiki.net/wiki/upload/wiki.png);" href="/web/20071005212444/http://www.modwiki.net/wiki/Main_Page" title="Main Page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class='portlet' id='p-Main'>
+		<h5>Main</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/web/20071005212444/http://www.modwiki.net/wiki/Main_Page">Main Page</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 4'>
+		<h5>id Tech 4</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Doom-3"><a href="/web/20071005212444/http://www.modwiki.net/wiki/Doom_3">Doom 3</a></li>
+				<li id="n-Quake-4"><a href="/web/20071005212444/http://www.modwiki.net/wiki/Quake_4">Quake 4</a></li>
+				<li id="n-Prey"><a href="/web/20071005212444/http://www.modwiki.net/wiki/Prey">Prey</a></li>
+				<li id="n-ETQW"><a href="/web/20071005212444/http://www.modwiki.net/wiki/Enemy_Territory:_Quake_Wars">ETQW</a></li>
+				<li id="n-RTCW-2"><a href="/web/20071005212444/http://www.modwiki.net/wiki/Return_to_Castle_Wolfenstein_2">RTCW 2</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 5'>
+		<h5>id Tech 5</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Rage"><a href="/web/20071005212444/http://www.modwiki.net/wiki/Rage">Rage</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Quick Links'>
+		<h5>Quick Links</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Console"><a href="/web/20071005212444/http://www.modwiki.net/wiki/Console">Console</a></li>
+				<li id="n-Script-Events"><a href="/web/20071005212444/http://www.modwiki.net/wiki/Scripting">Script Events</a></li>
+				<li id="n-Material-Keywords"><a href="/web/20071005212444/http://www.modwiki.net/wiki/Material_%28decl%29">Material Keywords</a></li>
+				<li id="n-Modification-List"><a href="/web/20071005212444/http://www.modwiki.net/wiki/Modlist">Modification List</a></li>
+				<li id="n-Tutorial-List"><a href="/web/20071005212444/http://www.modwiki.net/wiki/Tutorial_list">Tutorial List</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Wiki'>
+		<h5>Wiki</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Open-tasks"><a href="/web/20071005212444/http://www.modwiki.net/wiki/modwiki:Open_tasks">Open tasks</a></li>
+				<li id="n-recentchanges"><a href="/web/20071005212444/http://www.modwiki.net/wiki/Special:Recentchanges">Recent changes</a></li>
+				<li id="n-Style-guide"><a href="/web/20071005212444/http://www.modwiki.net/wiki/modwiki:Style_guide">Style guide</a></li>
+				<li id="n-help"><a href="/web/20071005212444/http://www.modwiki.net/wiki/Help:Contents">Help</a></li>
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/web/20071005212444/http://www.modwiki.net/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" value="Search" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+			<li id="feedlinks"><span id="feed-rss"><a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Recentchanges&amp;feed=rss">rss</a>&nbsp;</span>
+					<span id="feed-atom"><a href="/web/20071005212444/http://www.modwiki.net/w/index.php?title=Special:Recentchanges&amp;feed=atom">atom</a>&nbsp;</span>
+					</li><li id="t-upload"><a href="/web/20071005212444/http://www.modwiki.net/wiki/Special:Upload">Upload file</a></li>
+<li id="t-specialpages"><a href="/web/20071005212444/http://www.modwiki.net/wiki/Special:Specialpages">Special pages</a></li>
+			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="/web/20071005212444/http://www.mediawiki.org/"><img src="/web/20071005212444im_/http://www.modwiki.net/w/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="/web/20071005212444/http://www.gnu.org/copyleft/fdl.html"><img src="/web/20071005212444im_/http://www.modwiki.net/w/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+				<li id="privacy"><a href="/web/20071005212444/http://www.modwiki.net/wiki/modwiki:Privacy_policy" title="modwiki:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="/web/20071005212444/http://www.modwiki.net/wiki/modwiki:About" title="modwiki:About">About modwiki</a></li>
+				<li id="disclaimer"><a href="/web/20071005212444/http://www.modwiki.net/wiki/modwiki:General_disclaimer" title="modwiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+	<script type="text/javascript"> if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+<!-- Served by h982484 in 0.26 secs. -->
+</body></html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 21:24:44 Oct 5, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 4:19:00 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

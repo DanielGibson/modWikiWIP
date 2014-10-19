@@ -1,0 +1,1147 @@
+DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex,nofollow" />
+<meta name="keywords" content="CVars (ETQW),Aas pullPlayer (cvar),Aas randomPullPlayer (cvar),Aas showAreas (cvar),Aas showPath (cvar),Aas showPushIntoArea (cvar),Aas showWallEdges (cvar),Aas test (cvar),Af contactFrictionScale (cvar),Af forceFriction (cvar),Af highlightBody (cvar)" />
+<link rel="shortcut icon" href="/web/20070729231147im_/http://modwiki.net/favicon.ico" />
+<link title="Creative Commons" type="application/rdf+xml" href="/w/index.php?title=CVars_%28ETQW%29&amp;action=creativecommons" rel="meta" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<title>CVars (ETQW) - modwiki</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20070729231147cs_/http://modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/web/20070729231147cs_/http://modwiki.net/w/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/w/skins/monobook/IE70Fixes.css?1";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
+		<script type="text/javascript" src="/web/20070729231147js_/http://modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20070729231147js_/http://modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/web/20070729231147cs_/http://modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231147cs_/http://modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231147cs_/http://modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns-0 ltr">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app10.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/modwiki.net\/w\/index.php?title=CVars_%28ETQW%29&oldid=7775";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "29";
+var displayMonth = "Jul";
+var displayYear = "2007";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://modwiki.net/w/index.php?title=CVars_%28ETQW%29&amp;oldid=7775" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20070729231147" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jun
+                       
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 23:11:47 Jul 29, 2007">JUL</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20071112005159/http://www.modwiki.net/w/index.php?title=CVars_%28ETQW%29&amp;oldid=7775" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="12 Nov 2007"><strong>NOV</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_prv_off.png" alt="Previous capture" width="14" height="16" border="0" />
+                       
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 23:11:47 Jul 29, 2007">29</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20071112005159/http://www.modwiki.net/w/index.php?title=CVars_%28ETQW%29&amp;oldid=7775" title="0:51:59 Nov 12, 2007" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2006
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 23:11:47 Jul 29, 2007">2007</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2008
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20070729231147*/http://modwiki.net/w/index.php?title=CVars_%28ETQW%29&amp;oldid=7775" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>2 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">29 Jul 07 - 12 Nov 07</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:6:000000100010_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000_2014:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">CVars (ETQW)</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From modwiki</h3>
+			<div id="contentSub">Revision as of 22:48, 27 August 2007; <a href="/web/20070729231147/http://modwiki.net/wiki/CVars_%28ETQW%29" title="CVars (ETQW)">Current revision</a><br /><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=CVars_%28ETQW%29&amp;direction=prev&amp;oldid=7775" title="CVars (ETQW)">?Older revision</a> | <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=CVars_%28ETQW%29&amp;direction=next&amp;oldid=7775" title="CVars (ETQW)">Newer revision→</a></div>
+									<div id="jump-to-nav">Jump to: <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=CVars_%28ETQW%29&amp;oldid=7775#column-one">navigation</a>, <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=CVars_%28ETQW%29&amp;oldid=7775#searchInput">search</a></div>			<!-- start content -->
+			<div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;"><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Etqwsquare_bg.png" class="image" title="Image:Etqwsquare_bg.png"><img src="/web/20070729231147im_/http://modwiki.net/w/images/f/f9/Etqwsquare_bg.png" alt="Image:Etqwsquare_bg.png" width="50" height="50" longdesc="/wiki/Image:Etqwsquare_bg.png" /></a> The information on this page is specific to <a href="/web/20070729231147/http://modwiki.net/wiki/Enemy_Territory:_Quake_Wars" title="Enemy Territory: Quake Wars">Enemy Territory: Quake Wars</a>.</div>
+<hr />
+<p>Existing <a href="/web/20070729231147/http://modwiki.net/wiki/Console" title="Console">CVars</a> as of public beta 2.
+</p>
+<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class='toclevel-1'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=CVars_%28ETQW%29&amp;oldid=7775#GAME_CVars:"><span class="tocnumber">1</span> <span class="toctext">GAME CVars:</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=CVars_%28ETQW%29&amp;oldid=7775#GAME_UI_CVars:"><span class="tocnumber">2</span> <span class="toctext">GAME UI CVars:</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=CVars_%28ETQW%29&amp;oldid=7775#RNDR_CVars:"><span class="tocnumber">3</span> <span class="toctext">RNDR CVars:</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=CVars_%28ETQW%29&amp;oldid=7775#SND_CVars:"><span class="tocnumber">4</span> <span class="toctext">SND CVars:</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=CVars_%28ETQW%29&amp;oldid=7775#SYS_CVars:"><span class="tocnumber">5</span> <span class="toctext">SYS CVars:</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=CVars_%28ETQW%29&amp;oldid=7775#Uncategorized_CVars:"><span class="tocnumber">6</span> <span class="toctext">Uncategorized CVars:</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="GAME_CVars:"></a><h2> GAME CVars: </h2>
+<table class="listtable">
+
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=A_glowBaseScale_%28cvar%29&amp;action=edit" class="new" title="A glowBaseScale (cvar)">a_glowBaseScale</a> </td><td> ... Original image contribution factor
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=A_glowLuminanceDependency_%28cvar%29&amp;action=edit" class="new" title="A glowLuminanceDependency (cvar)">a_glowLuminanceDependency</a> </td><td> ... Dependency of the glow on the luminance(brightness)
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=A_glowScale_%28cvar%29&amp;action=edit" class="new" title="A glowScale (cvar)">a_glowScale</a> </td><td> ... Blurred image contribution factor
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=A_glowSpriteMin_%28cvar%29&amp;action=edit" class="new" title="A glowSpriteMin (cvar)">a_glowSpriteMin</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=A_glowSpriteSize_%28cvar%29&amp;action=edit" class="new" title="A glowSpriteSize (cvar)">a_glowSpriteSize</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=A_glowSunBaseScale_%28cvar%29&amp;action=edit" class="new" title="A glowSunBaseScale (cvar)">a_glowSunBaseScale</a> </td><td> ... Factor to scale to sun factor with
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=A_glowSunPower_%28cvar%29&amp;action=edit" class="new" title="A glowSunPower (cvar)">a_glowSunPower</a> </td><td> ... Power to raise to sun factor to
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=A_glowSunScale_%28cvar%29&amp;action=edit" class="new" title="A glowSunScale (cvar)">a_glowSunScale</a> </td><td> ... Factor to scale to sun factor with
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=A_glowThresh_%28cvar%29&amp;action=edit" class="new" title="A glowThresh (cvar)">a_glowThresh</a> </td><td> ... Threshold above which part of the scene starts glowing
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=A_sun_%28cvar%29&amp;action=edit" class="new" title="A sun (cvar)">a_sun</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=A_windTimeScale_%28cvar%29&amp;action=edit" class="new" title="A windTimeScale (cvar)">a_windTimeScale</a> </td><td> ... Speed at which wind effects change
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Aas_extendFlyPaths_%28cvar%29&amp;action=edit" class="new" title="Aas extendFlyPaths (cvar)">aas_extendFlyPaths</a> </td><td> ... set to 1 to enable extending fly paths
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Aas_locationMemory_%28cvar%29&amp;action=edit" class="new" title="Aas locationMemory (cvar)">aas_locationMemory</a> </td><td> ... used to remember a particular location, set to 'current' to store the current x,y,z location
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Aas_optimizePaths_%28cvar%29&amp;action=edit" class="new" title="Aas optimizePaths (cvar)">aas_optimizePaths</a> </td><td> ... set to 1 to enable path optimization
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Aas_pullPlayer_%28cvar%29" title="Aas pullPlayer (cvar)">aas_pullPlayer</a> </td><td> ... pull the player to the specified area
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Aas_randomPullPlayer_%28cvar%29" title="Aas randomPullPlayer (cvar)">aas_randomPullPlayer</a> </td><td> ... pull the player to a random area
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Aas_showAreas_%28cvar%29" title="Aas showAreas (cvar)">aas_showAreas</a> </td><td> ... show the areas in the selected aas
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Aas_showBadAreas_%28cvar%29&amp;action=edit" class="new" title="Aas showBadAreas (cvar)">aas_showBadAreas</a> </td><td> ... show bad AAS areas
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Aas_showEdgeNums_%28cvar%29&amp;action=edit" class="new" title="Aas showEdgeNums (cvar)">aas_showEdgeNums</a> </td><td> ... show edge nums
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Aas_showFloorTrace_%28cvar%29&amp;action=edit" class="new" title="Aas showFloorTrace (cvar)">aas_showFloorTrace</a> </td><td> ... show floor trace
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Aas_showFuncObstacles_%28cvar%29&amp;action=edit" class="new" title="Aas showFuncObstacles (cvar)">aas_showFuncObstacles</a> </td><td> ... show the AAS func_obstacles on the map
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Aas_showHopPath_%28cvar%29&amp;action=edit" class="new" title="Aas showHopPath (cvar)">aas_showHopPath</a> </td><td> ... show hop path to specified area
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Aas_showManualReachabilities_%28cvar%29&amp;action=edit" class="new" title="Aas showManualReachabilities (cvar)">aas_showManualReachabilities</a> </td><td> ... show manually placed reachabilities
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Aas_showNearestCoverArea_%28cvar%29&amp;action=edit" class="new" title="Aas showNearestCoverArea (cvar)">aas_showNearestCoverArea</a> </td><td> ... show the nearest area with cover from the selected area (aas_showHideArea 4 will show the nearest area in cover from area 4)
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Aas_showNearestInsideArea_%28cvar%29&amp;action=edit" class="new" title="Aas showNearestInsideArea (cvar)">aas_showNearestInsideArea</a> </td><td> ... show the nearest area that is inside
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Aas_showObstacleAvoidance_%28cvar%29&amp;action=edit" class="new" title="Aas showObstacleAvoidance (cvar)">aas_showObstacleAvoidance</a> </td><td> ... shows obstacles along paths
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Aas_showObstaclePVS_%28cvar%29&amp;action=edit" class="new" title="Aas showObstaclePVS (cvar)">aas_showObstaclePVS</a> </td><td> ... show obstacle PVS for the given area
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Aas_showPath_%28cvar%29" title="Aas showPath (cvar)">aas_showPath</a> </td><td> ... show the path to the walk specified area
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Aas_showPushIntoArea_%28cvar%29" title="Aas showPushIntoArea (cvar)">aas_showPushIntoArea</a> </td><td> ... show an arrow going to the closest area
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Aas_showTravelTime_%28cvar%29&amp;action=edit" class="new" title="Aas showTravelTime (cvar)">aas_showTravelTime</a> </td><td> ... print the travel time to the specified goal area (only when aas_showAreas is set)
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Aas_showWallEdgeNums_%28cvar%29&amp;action=edit" class="new" title="Aas showWallEdgeNums (cvar)">aas_showWallEdgeNums</a> </td><td> ... show the number of the edges of walls
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Aas_showWallEdges_%28cvar%29" title="Aas showWallEdges (cvar)">aas_showWallEdges</a> </td><td> ... show the edges of walls, 2 = project all to same height, 3 = project onscreen
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Aas_skipObstacleAvoidance_%28cvar%29&amp;action=edit" class="new" title="Aas skipObstacleAvoidance (cvar)">aas_skipObstacleAvoidance</a> </td><td> ... ignore all dynamic obstacles along paths
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Aas_subSampleWalkPaths_%28cvar%29&amp;action=edit" class="new" title="Aas subSampleWalkPaths (cvar)">aas_subSampleWalkPaths</a> </td><td> ... set to 1 to enable walk path sub-sampling
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Aas_test_%28cvar%29" title="Aas test (cvar)">aas_test</a> </td><td> ... select which AAS to test
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_contactFrictionScale_%28cvar%29" title="Af contactFrictionScale (cvar)">af_contactFrictionScale</a> </td><td> ... scales the contact friction
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_forceFriction_%28cvar%29" title="Af forceFriction (cvar)">af_forceFriction</a> </td><td> ... force the given friction value
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_highlightBody_%28cvar%29" title="Af highlightBody (cvar)">af_highlightBody</a> </td><td> ... name of the body to highlight
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_highlightConstraint_%28cvar%29" title="Af highlightConstraint (cvar)">af_highlightConstraint</a> </td><td> ... name of the constraint to highlight
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_jointFrictionScale_%28cvar%29" title="Af jointFrictionScale (cvar)">af_jointFrictionScale</a> </td><td> ... scales the joint friction
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_maxAngularVelocity_%28cvar%29" title="Af maxAngularVelocity (cvar)">af_maxAngularVelocity</a> </td><td> ... maximum angular velocity
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_maxLinearVelocity_%28cvar%29" title="Af maxLinearVelocity (cvar)">af_maxLinearVelocity</a> </td><td> ... maximum linear velocity
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_showActive_%28cvar%29" title="Af showActive (cvar)">af_showActive</a> </td><td> ... show tree-like structures of articulated figures not at rest
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_showBodies_%28cvar%29" title="Af showBodies (cvar)">af_showBodies</a> </td><td> ... show bodies
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_showBodyNames_%28cvar%29" title="Af showBodyNames (cvar)">af_showBodyNames</a> </td><td> ... show body names
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_showConstrainedBodies_%28cvar%29" title="Af showConstrainedBodies (cvar)">af_showConstrainedBodies</a> </td><td> ... show the two bodies contrained by the highlighted constraint
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_showConstraintNames_%28cvar%29" title="Af showConstraintNames (cvar)">af_showConstraintNames</a> </td><td> ... show constraint names
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_showConstraints_%28cvar%29" title="Af showConstraints (cvar)">af_showConstraints</a> </td><td> ... show constraints
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_showInertia_%28cvar%29" title="Af showInertia (cvar)">af_showInertia</a> </td><td> ... show the inertia tensor of each body
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_showLimits_%28cvar%29" title="Af showLimits (cvar)">af_showLimits</a> </td><td> ... show joint limits
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_showMass_%28cvar%29" title="Af showMass (cvar)">af_showMass</a> </td><td> ... show the mass of each body
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_showPrimaryOnly_%28cvar%29" title="Af showPrimaryOnly (cvar)">af_showPrimaryOnly</a> </td><td> ... show primary constraints only
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_showTimings_%28cvar%29" title="Af showTimings (cvar)">af_showTimings</a> </td><td> ... show articulated figure cpu usage
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_showTotalMass_%28cvar%29" title="Af showTotalMass (cvar)">af_showTotalMass</a> </td><td> ... show the total mass of each articulated figure
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_showTrees_%28cvar%29" title="Af showTrees (cvar)">af_showTrees</a> </td><td> ... show tree-like structures
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_showVelocity_%28cvar%29" title="Af showVelocity (cvar)">af_showVelocity</a> </td><td> ... show the velocity of each body
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_skipFriction_%28cvar%29" title="Af skipFriction (cvar)">af_skipFriction</a> </td><td> ... skip friction
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_skipLimits_%28cvar%29" title="Af skipLimits (cvar)">af_skipLimits</a> </td><td> ... skip joint limits
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_skipSelfCollision_%28cvar%29" title="Af skipSelfCollision (cvar)">af_skipSelfCollision</a> </td><td> ... skip self collision detection
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_testSolid_%28cvar%29" title="Af testSolid (cvar)">af_testSolid</a> </td><td> ... test for bodies initially stuck in solid
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_timeScale_%28cvar%29" title="Af timeScale (cvar)">af_timeScale</a> </td><td> ... scales the time
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_useImpulseFriction_%28cvar%29" title="Af useImpulseFriction (cvar)">af_useImpulseFriction</a> </td><td> ... use impulse based contact friction
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_useJointImpulseFriction_%28cvar%29" title="Af useJointImpulseFriction (cvar)">af_useJointImpulseFriction</a> </td><td> ... use impulse based joint friction
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_useLinearTime_%28cvar%29" title="Af useLinearTime (cvar)">af_useLinearTime</a> </td><td> ... use linear time algorithm for tree-like structures
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Af_useSymmetry_%28cvar%29" title="Af useSymmetry (cvar)">af_useSymmetry</a> </td><td> ... use constraint matrix symmetry
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Ai_debugAnimState_%28cvar%29&amp;action=edit" class="new" title="Ai debugAnimState (cvar)">ai_debugAnimState</a> </td><td> ... displays animState changes for the specified monster entity number
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Ai_debugMove_%28cvar%29" title="Ai debugMove (cvar)">ai_debugMove</a> </td><td> ... draws movement information for monsters
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Ai_debugScript_%28cvar%29" title="Ai debugScript (cvar)">ai_debugScript</a> </td><td> ... displays script calls for the specified monster entity number
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/Ai_debugTrajectory_%28cvar%29" title="Ai debugTrajectory (cvar)">ai_debugTrajectory</a> </td><td> ... draws trajectory tests for monsters
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Anim_forceUpdate_%28cvar%29&amp;action=edit" class="new" title="Anim forceUpdate (cvar)">anim_forceUpdate</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Anim_maxBodyPitch_%28cvar%29&amp;action=edit" class="new" title="Anim maxBodyPitch (cvar)">anim_maxBodyPitch</a> </td><td> ... max pitch of body adjustment
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Anim_minBodyPitch_%28cvar%29&amp;action=edit" class="new" title="Anim minBodyPitch (cvar)">anim_minBodyPitch</a> </td><td> ... min pitch of body adjustment
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Aor_animationCutoffScale_%28cvar%29&amp;action=edit" class="new" title="Aor animationCutoffScale (cvar)">aor_animationCutoffScale</a> </td><td> ... scale the aor animation cutoff distance
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Aor_ikCutoffScale_%28cvar%29&amp;action=edit" class="new" title="Aor ikCutoffScale (cvar)">aor_ikCutoffScale</a> </td><td> ... scale the aor ik cutoff distance
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Aor_physicsCutoffScale_%28cvar%29&amp;action=edit" class="new" title="Aor physicsCutoffScale (cvar)">aor_physicsCutoffScale</a> </td><td> ... scale the aor physics cutoff distance
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Aor_physicsLod1StartScale_%28cvar%29&amp;action=edit" class="new" title="Aor physicsLod1StartScale (cvar)">aor_physicsLod1StartScale</a> </td><td> ... scale the aor physics lod 1 distance
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Aor_physicsLod2StartScale_%28cvar%29&amp;action=edit" class="new" title="Aor physicsLod2StartScale (cvar)">aor_physicsLod2StartScale</a> </td><td> ... scale the aor physics lod 2 distance
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Aor_physicsLod3StartScale_%28cvar%29&amp;action=edit" class="new" title="Aor physicsLod3StartScale (cvar)">aor_physicsLod3StartScale</a> </td><td> ... scale the aor physics lod 3 distance
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_aimSkill_%28cvar%29&amp;action=edit" class="new" title="Bot aimSkill (cvar)">bot_aimSkill</a> </td><td> ... Sets the bot's default aiming skill. 0 = EASY, 1 = MEDIUM, 2 = EXPERT, 3 = MASTER
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_balanceCriticalClass_%28cvar%29&amp;action=edit" class="new" title="Bot balanceCriticalClass (cvar)">bot_balanceCriticalClass</a> </td><td> ... Have the bots try to keep someone playing the critical class at all times. 0 = keep the class they spawn in as. Default = 1.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_breakPoint_%28cvar%29&amp;action=edit" class="new" title="Bot breakPoint (cvar)">bot_breakPoint</a> </td><td> ... Cause a program break to occur inside the bot's AI
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_debug_%28cvar%29&amp;action=edit" class="new" title="Bot debug (cvar)">bot_debug</a> </td><td> ... Debug various bot subsystems. Many bot debugging features are disabled if this is not set to 1
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_debugActionGoalNumber_%28cvar%29&amp;action=edit" class="new" title="Bot debugActionGoalNumber (cvar)">bot_debugActionGoalNumber</a> </td><td> ... Set to any action number on the map to have the bot ALWAYS do that action, for debugging. -1 = disabled. NOTE: The bot will treat the goal as a camp goal. This is useful for path testing.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_debugAirVehicles_%28cvar%29&amp;action=edit" class="new" title="Bot debugAirVehicles (cvar)">bot_debugAirVehicles</a> </td><td> ... Debug bot air vehicle usage. -1 = disable
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_debugGroundVehicles_%28cvar%29&amp;action=edit" class="new" title="Bot debugGroundVehicles (cvar)">bot_debugGroundVehicles</a> </td><td> ... Debug bot ground vehicle usage. -1 = disable
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_debugMapScript_%28cvar%29&amp;action=edit" class="new" title="Bot debugMapScript (cvar)">bot_debugMapScript</a> </td><td> ... Allows you to debug the bot script.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_debugObstacleAvoidance_%28cvar%29&amp;action=edit" class="new" title="Bot debugObstacleAvoidance (cvar)">bot_debugObstacleAvoidance</a> </td><td> ... Debug obstacle avoidance
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_debugObstacles_%28cvar%29&amp;action=edit" class="new" title="Bot debugObstacles (cvar)">bot_debugObstacles</a> </td><td> ... Debug bot obstacles in the world
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_debugPersonalVehicles_%28cvar%29&amp;action=edit" class="new" title="Bot debugPersonalVehicles (cvar)">bot_debugPersonalVehicles</a> </td><td> ... Only used for debugging the use of the husky icarus.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_debugSpeed_%28cvar%29&amp;action=edit" class="new" title="Bot debugSpeed (cvar)">bot_debugSpeed</a> </td><td> ... Debug bot's move speed. -1 = disable
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_debugWeapons_%28cvar%29&amp;action=edit" class="new" title="Bot debugWeapons (cvar)">bot_debugWeapons</a> </td><td> ... Only used for debugging bots weapons.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_doObjectives_%28cvar%29&amp;action=edit" class="new" title="Bot doObjectives (cvar)">bot_doObjectives</a> </td><td> ... 0 = bots let the player play the hero, with the bots filling a supporting role, 1 = bots do all the major objectives along with the player
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_drawActionDist_%28cvar%29&amp;action=edit" class="new" title="Bot drawActionDist (cvar)">bot_drawActionDist</a> </td><td> ... How far away to draw the bot action info. Default is 2048
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_drawActionGroupNum_%28cvar%29&amp;action=edit" class="new" title="Bot drawActionGroupNum (cvar)">bot_drawActionGroupNum</a> </td><td> ... Filter what action groups to draw with the bot_drawAction cmd. -1 = disabled.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_drawActionNumber_%28cvar%29&amp;action=edit" class="new" title="Bot drawActionNumber (cvar)">bot_drawActionNumber</a> </td><td> ... Draw a specific bot action only. -1 = disable
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_drawActionRoutesOnly_%28cvar%29&amp;action=edit" class="new" title="Bot drawActionRoutesOnly (cvar)">bot_drawActionRoutesOnly</a> </td><td> ... Draw only the bot actions that have the defined route.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_drawActions_%28cvar%29&amp;action=edit" class="new" title="Bot drawActions (cvar)">bot_drawActions</a> </td><td> ... Draw the bot's actions.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_drawActionSize_%28cvar%29&amp;action=edit" class="new" title="Bot drawActionSize (cvar)">bot_drawActionSize</a> </td><td> ... How big to draw the bot action info. Default is 0.2
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_drawActionTypeOnly_%28cvar%29&amp;action=edit" class="new" title="Bot drawActionTypeOnly (cvar)">bot_drawActionTypeOnly</a> </td><td> ... Draw only actions that have a gdf/strogg goal number matching the cvar value. Check the bot manual for goal numbers. -1 = disabled.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_drawActionWithClasses_%28cvar%29&amp;action=edit" class="new" title="Bot drawActionWithClasses (cvar)">bot_drawActionWithClasses</a> </td><td> ... Draw only actions that have a validClass set to anything other then 0 ( 0 = any class ).
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_drawActiveActionsOnly_%28cvar%29&amp;action=edit" class="new" title="Bot drawActiveActionsOnly (cvar)">bot_drawActiveActionsOnly</a> </td><td> ... Draw only active bot actions. 1 = all active actions. 2 = only GDF active actions. 3 = only Strogg active actions. Combo actions, that have both GDF and strogg goals, will still show up.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_drawActiveRoutesOnly_%28cvar%29&amp;action=edit" class="new" title="Bot drawActiveRoutesOnly (cvar)">bot_drawActiveRoutesOnly</a> </td><td> ... Only draw the active routes on the map.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_drawClientNumbers_%28cvar%29&amp;action=edit" class="new" title="Bot drawClientNumbers (cvar)">bot_drawClientNumbers</a> </td><td> ... Draw every clients number above their head
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_drawNodes_%28cvar%29&amp;action=edit" class="new" title="Bot drawNodes (cvar)">bot_drawNodes</a> </td><td> ... draw vehicle path nodes
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_drawObstacles_%28cvar%29&amp;action=edit" class="new" title="Bot drawObstacles (cvar)">bot_drawObstacles</a> </td><td> ... Draw the bot's dynamic obstacles in the world
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_drawRouteGroupOnly_%28cvar%29&amp;action=edit" class="new" title="Bot drawRouteGroupOnly (cvar)">bot_drawRouteGroupOnly</a> </td><td> ... Only draw routes that have the groupID specified.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_drawRoutes_%28cvar%29&amp;action=edit" class="new" title="Bot drawRoutes (cvar)">bot_drawRoutes</a> </td><td> ... Draw the routes on the map.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_enable_%28cvar%29&amp;action=edit" class="new" title="Bot enable (cvar)">bot_enable</a> </td><td> ... 0 = bots will not be loaded in the game. 1 = bots are loaded.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_followMe_%28cvar%29&amp;action=edit" class="new" title="Bot followMe (cvar)">bot_followMe</a> </td><td> ... Have the bots follow you in debug mode
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_godMode_%28cvar%29&amp;action=edit" class="new" title="Bot godMode (cvar)">bot_godMode</a> </td><td> ... Set to the bot client you want to enter god mode. -1 = disable.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_ignoreEnemies_%28cvar%29&amp;action=edit" class="new" title="Bot ignoreEnemies (cvar)">bot_ignoreEnemies</a> </td><td> ... If set to 1, bots will ignore all enemies. Useful for debugging bot behavior
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_ignoreGoals_%28cvar%29&amp;action=edit" class="new" title="Bot ignoreGoals (cvar)">bot_ignoreGoals</a> </td><td> ... If set to 1, bots will ignore all map objectives. Useful for debugging bot behavior
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_knifeOnly_%28cvar%29&amp;action=edit" class="new" title="Bot knifeOnly (cvar)">bot_knifeOnly</a> </td><td> ... goofy mode where the bots only use their knifes in combat.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_minClients_%28cvar%29&amp;action=edit" class="new" title="Bot minClients (cvar)">bot_minClients</a> </td><td> ... Keep a minimum number of clients on the server with bots. -1 to disable
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_noChat_%28cvar%29&amp;action=edit" class="new" title="Bot noChat (cvar)">bot_noChat</a> </td><td> ... 0 = bots chat, 1 = bots never chat
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_noRandomJump_%28cvar%29&amp;action=edit" class="new" title="Bot noRandomJump (cvar)">bot_noRandomJump</a> </td><td> ... makes bots not randomly jump
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_noTapOut_%28cvar%29&amp;action=edit" class="new" title="Bot noTapOut (cvar)">bot_noTapOut</a> </td><td> ... makes bots not want to ever tap out, for debug purposes
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_noTaunt_%28cvar%29&amp;action=edit" class="new" title="Bot noTaunt (cvar)">bot_noTaunt</a> </td><td> ... 0 = bots taunt, 1 = bots never taunt
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_pause_%28cvar%29&amp;action=edit" class="new" title="Bot pause (cvar)">bot_pause</a> </td><td> ... Pause the bot's thinking - useful for screenshots/debugging/etc
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_showPath_%28cvar%29&amp;action=edit" class="new" title="Bot showPath (cvar)">bot_showPath</a> </td><td> ... Show the path for the bot's client number. -1 = disable.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_sillyWarmup_%28cvar%29&amp;action=edit" class="new" title="Bot sillyWarmup (cvar)">bot_sillyWarmup</a> </td><td> ... 0 = bots play the game like normal, 1 = bots shoot each other and act silly during warmup
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_skill_%28cvar%29&amp;action=edit" class="new" title="Bot skill (cvar)">bot_skill</a> </td><td> ... Sets the bot's default AI skill. 0 = EASY, 1 = MEDIUM, 2 = EXPERT, 3 = MASTER
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_skipThinkClient_%28cvar%29&amp;action=edit" class="new" title="Bot skipThinkClient (cvar)">bot_skipThinkClient</a> </td><td> ... A debug only cvar that skips thinking for a particular bot with the client number entered. -1 = disabled.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_sleepWhenServerEmpty_%28cvar%29&amp;action=edit" class="new" title="Bot sleepWhenServerEmpty (cvar)">bot_sleepWhenServerEmpty</a> </td><td> ... has the bots stop thinking when the server is idle and there are no humans playing
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_spectateDebug_%28cvar%29&amp;action=edit" class="new" title="Bot spectateDebug (cvar)">bot_spectateDebug</a> </td><td> ... If enabled, automatically sets the debug hud to the bot being spectated
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_stayInVehicles_%28cvar%29&amp;action=edit" class="new" title="Bot stayInVehicles (cvar)">bot_stayInVehicles</a> </td><td> ... 1 = bots will never leave their vehicle. Only useful for debugging. Default is 0
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_testObstacleAvoidance_%28cvar%29&amp;action=edit" class="new" title="Bot testObstacleAvoidance (cvar)">bot_testObstacleAvoidance</a> </td><td> ... test obstacle avoidance
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_testObstacleQuery_%28cvar%29&amp;action=edit" class="new" title="Bot testObstacleQuery (cvar)">bot_testObstacleQuery</a> </td><td> ... test a previously recorded obstacle avoidance query
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_threading_%28cvar%29&amp;action=edit" class="new" title="Bot threading (cvar)">bot_threading</a> </td><td> ... enable running the bot AI in a separate thread
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_threadMaxFrameDelay_%28cvar%29&amp;action=edit" class="new" title="Bot threadMaxFrameDelay (cvar)">bot_threadMaxFrameDelay</a> </td><td> ... maximum number of game frames the bot AI can trail behind
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_threadMinFrameDelay_%28cvar%29&amp;action=edit" class="new" title="Bot threadMinFrameDelay (cvar)">bot_threadMinFrameDelay</a> </td><td> ... minimum number of game frames the bot AI trails behind
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_uiNumGDF_%28cvar%29&amp;action=edit" class="new" title="Bot uiNumGDF (cvar)">bot_uiNumGDF</a> </td><td> ... The number of gdf bots to add to the server. -1 to disable
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_uiNumStrogg_%28cvar%29&amp;action=edit" class="new" title="Bot uiNumStrogg (cvar)">bot_uiNumStrogg</a> </td><td> ... The number of strogg bots to add to the server. -1 to disable
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_uiSkill_%28cvar%29&amp;action=edit" class="new" title="Bot uiSkill (cvar)">bot_uiSkill</a> </td><td> ... The overall skill the bots should play at in the game. 0 = EASY, 1 = MEDIUM, 2 = EXPERT, 3 = MASTER
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_useAltRoutes_%28cvar%29&amp;action=edit" class="new" title="Bot useAltRoutes (cvar)">bot_useAltRoutes</a> </td><td> ... Debug the bot's alternate path use.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_useDeployables_%28cvar%29&amp;action=edit" class="new" title="Bot useDeployables (cvar)">bot_useDeployables</a> </td><td> ... 0 = bots dont drop deployables of any kind, 1 = bots can drop all deployables
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_useRearSpawn_%28cvar%29&amp;action=edit" class="new" title="Bot useRearSpawn (cvar)">bot_useRearSpawn</a> </td><td> ... debug bots using rear spawn points
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_useShotguns_%28cvar%29&amp;action=edit" class="new" title="Bot useShotguns (cvar)">bot_useShotguns</a> </td><td> ... 0 = bots wont use shotguns/nailguns. 1 = bots will use shotguns/nailguns.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_useSniperWeapons_%28cvar%29&amp;action=edit" class="new" title="Bot useSniperWeapons (cvar)">bot_useSniperWeapons</a> </td><td> ... 0 = bots wont use sniper rifles. 1 = bots will use sniper rifles.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_useSpawnHosts_%28cvar%29&amp;action=edit" class="new" title="Bot useSpawnHosts (cvar)">bot_useSpawnHosts</a> </td><td> ... 0 = strogg bots can't use spawn host bodies, 1 = bots can use spawnhosts
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_useStrafeJump_%28cvar%29&amp;action=edit" class="new" title="Bot useStrafeJump (cvar)">bot_useStrafeJump</a> </td><td> ... 0 = bots can't strafe jump, 1 = bots CAN strafe jump to goal locations that are far away
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_useSuicideWhenStuck_%28cvar%29&amp;action=edit" class="new" title="Bot useSuicideWhenStuck (cvar)">bot_useSuicideWhenStuck</a> </td><td> ... 0 = bots never suicide when stuck. 1 = bots suicide if they detect that they're stuck
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_useTKRevive_%28cvar%29&amp;action=edit" class="new" title="Bot useTKRevive (cvar)">bot_useTKRevive</a> </td><td> ... Allows the bots to use the advanced tactic of TK reviving if their teammate is weak. 0 = disabled. Default is 1
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Bot_useVehicles_%28cvar%29&amp;action=edit" class="new" title="Bot useVehicles (cvar)">bot_useVehicles</a> </td><td> ... 0 = bots dont use vehicles, 1 = bots do use vehicles
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Cm_drawTraces_%28cvar%29&amp;action=edit" class="new" title="Cm drawTraces (cvar)">cm_drawTraces</a> </td><td> ... draw polygon and edge normals
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_allowComplaint_charge_%28cvar%29&amp;action=edit" class="new" title="G allowComplaint charge (cvar)">g_allowComplaint_charge</a> </td><td> ... Allow complaints for teamkills with charges
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_allowComplaint_explosives_%28cvar%29&amp;action=edit" class="new" title="G allowComplaint explosives (cvar)">g_allowComplaint_explosives</a> </td><td> ... Allow complaints for teamkills with explosive weapons and items
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_allowComplaint_firesupport_%28cvar%29&amp;action=edit" class="new" title="G allowComplaint firesupport (cvar)">g_allowComplaint_firesupport</a> </td><td> ... Allow complaints for teamkills with fire support
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_allowComplaint_vehicles_%28cvar%29&amp;action=edit" class="new" title="G allowComplaint vehicles (cvar)">g_allowComplaint_vehicles</a> </td><td> ... Allow complaints for teamkills with vehicle
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_autoFireTeam_%28cvar%29&amp;action=edit" class="new" title="G autoFireTeam (cvar)">g_autoFireTeam</a> </td><td> ... Prompt to join a fireteam when switching to a new team.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_autoReadyPercent_%28cvar%29&amp;action=edit" class="new" title="G autoReadyPercent (cvar)">g_autoReadyPercent</a> </td><td> ... Percentage of a full server that must be in game for auto ready to start
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_autoReadyWait_%28cvar%29&amp;action=edit" class="new" title="G autoReadyWait (cvar)">g_autoReadyWait</a> </td><td> ... Length of time auto ready will wait before starting the countdown
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_banner_1_%28cvar%29&amp;action=edit" class="new" title="G banner 1 (cvar)">g_banner_1</a> </td><td> ... banner message 1
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_banner_10_%28cvar%29&amp;action=edit" class="new" title="G banner 10 (cvar)">g_banner_10</a> </td><td> ... banner message 10
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_banner_11_%28cvar%29&amp;action=edit" class="new" title="G banner 11 (cvar)">g_banner_11</a> </td><td> ... banner message 11
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_banner_12_%28cvar%29&amp;action=edit" class="new" title="G banner 12 (cvar)">g_banner_12</a> </td><td> ... banner message 12
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_banner_13_%28cvar%29&amp;action=edit" class="new" title="G banner 13 (cvar)">g_banner_13</a> </td><td> ... banner message 13
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_banner_14_%28cvar%29&amp;action=edit" class="new" title="G banner 14 (cvar)">g_banner_14</a> </td><td> ... banner message 14
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_banner_15_%28cvar%29&amp;action=edit" class="new" title="G banner 15 (cvar)">g_banner_15</a> </td><td> ... banner message 15
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_banner_16_%28cvar%29&amp;action=edit" class="new" title="G banner 16 (cvar)">g_banner_16</a> </td><td> ... banner message 16
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_banner_2_%28cvar%29&amp;action=edit" class="new" title="G banner 2 (cvar)">g_banner_2</a> </td><td> ... banner message 2
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_banner_3_%28cvar%29&amp;action=edit" class="new" title="G banner 3 (cvar)">g_banner_3</a> </td><td> ... banner message 3
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_banner_4_%28cvar%29&amp;action=edit" class="new" title="G banner 4 (cvar)">g_banner_4</a> </td><td> ... banner message 4
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_banner_5_%28cvar%29&amp;action=edit" class="new" title="G banner 5 (cvar)">g_banner_5</a> </td><td> ... banner message 5
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_banner_6_%28cvar%29&amp;action=edit" class="new" title="G banner 6 (cvar)">g_banner_6</a> </td><td> ... banner message 6
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_banner_7_%28cvar%29&amp;action=edit" class="new" title="G banner 7 (cvar)">g_banner_7</a> </td><td> ... banner message 7
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_banner_8_%28cvar%29&amp;action=edit" class="new" title="G banner 8 (cvar)">g_banner_8</a> </td><td> ... banner message 8
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_banner_9_%28cvar%29&amp;action=edit" class="new" title="G banner 9 (cvar)">g_banner_9</a> </td><td> ... banner message 9
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_banner_delay_%28cvar%29&amp;action=edit" class="new" title="G banner delay (cvar)">g_banner_delay</a> </td><td> ... delay between banner messages
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_banner_loopdelay_%28cvar%29&amp;action=edit" class="new" title="G banner loopdelay (cvar)">g_banner_loopdelay</a> </td><td> ... delay before banner messages repeat, 0 = off
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_cacheDictionaryMedia_%28cvar%29&amp;action=edit" class="new" title="G cacheDictionaryMedia (cvar)">g_cacheDictionaryMedia</a> </td><td> ... Precache all media from entity dictionaries
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_chatDefaultColor_%28cvar%29&amp;action=edit" class="new" title="G chatDefaultColor (cvar)">g_chatDefaultColor</a> </td><td> ... RGBA value for normal chat prints
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_chatFireTeamColor_%28cvar%29&amp;action=edit" class="new" title="G chatFireTeamColor (cvar)">g_chatFireTeamColor</a> </td><td> ... RGBA value for fire team chat prints
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_chatLineTimeout_%28cvar%29&amp;action=edit" class="new" title="G chatLineTimeout (cvar)">g_chatLineTimeout</a> </td><td> ... number of seconds that each chat line stays in the history
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_chatTeamColor_%28cvar%29&amp;action=edit" class="new" title="G chatTeamColor (cvar)">g_chatTeamColor</a> </td><td> ... RGBA value for team chat prints
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_cheapDecalsMaxDistance_%28cvar%29&amp;action=edit" class="new" title="G cheapDecalsMaxDistance (cvar)">g_cheapDecalsMaxDistance</a> </td><td> ... max distance decals are created
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_collisionModelMask_%28cvar%29&amp;action=edit" class="new" title="G collisionModelMask (cvar)">g_collisionModelMask</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_commandMapZoom_%28cvar%29&amp;action=edit" class="new" title="G commandMapZoom (cvar)">g_commandMapZoom</a> </td><td> ... command map zoom level
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_commandMapZoomStep_%28cvar%29&amp;action=edit" class="new" title="G commandMapZoomStep (cvar)">g_commandMapZoomStep</a> </td><td> ... percent to increase/decrease command map zoom by
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_compiledScriptSafety_%28cvar%29&amp;action=edit" class="new" title="G compiledScriptSafety (cvar)">g_compiledScriptSafety</a> </td><td> ... enables extra safety checks in exported scripts
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_complaintGUIDLimit_%28cvar%29&amp;action=edit" class="new" title="G complaintGUIDLimit (cvar)">g_complaintGUIDLimit</a> </td><td> ... Total unique complaints at which a player will be kicked
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_complaintLimit_%28cvar%29&amp;action=edit" class="new" title="G complaintLimit (cvar)">g_complaintLimit</a> </td><td> ... Total complaints at which a player will be kicked
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_damageIndicatorAlphaScale_%28cvar%29&amp;action=edit" class="new" title="G damageIndicatorAlphaScale (cvar)">g_damageIndicatorAlphaScale</a> </td><td> ... alpha of the damage indicators
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_damageIndicatorColor_%28cvar%29&amp;action=edit" class="new" title="G damageIndicatorColor (cvar)">g_damageIndicatorColor</a> </td><td> ... color of the damage indicators
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_damageIndicatorFadeTime_%28cvar%29&amp;action=edit" class="new" title="G damageIndicatorFadeTime (cvar)">g_damageIndicatorFadeTime</a> </td><td> ... number of seconds that a damage indicator stays visible
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_damageIndicatorHeight_%28cvar%29&amp;action=edit" class="new" title="G damageIndicatorHeight (cvar)">g_damageIndicatorHeight</a> </td><td> ... height of the damage indicators
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_damageIndicatorWidth_%28cvar%29&amp;action=edit" class="new" title="G damageIndicatorWidth (cvar)">g_damageIndicatorWidth</a> </td><td> ... width of the damage indicators
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/G_debugAnim_%28cvar%29" title="G debugAnim (cvar)">g_debugAnim</a> </td><td> ... displays information on which animations are playing on the specified entity number.  set to -1 to disable.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_debugAnimLookups_%28cvar%29&amp;action=edit" class="new" title="G debugAnimLookups (cvar)">g_debugAnimLookups</a> </td><td> ... prints successful animation lookups
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_debugAnimStance_%28cvar%29&amp;action=edit" class="new" title="G debugAnimStance (cvar)">g_debugAnimStance</a> </td><td> ... displays information on which stances are set on the specified entity number.  set to -1 to disable.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/G_debugBounds_%28cvar%29" title="G debugBounds (cvar)">g_debugBounds</a> </td><td> ... checks for models with bounds > 2048
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_debugBulletFiring_%28cvar%29&amp;action=edit" class="new" title="G debugBulletFiring (cvar)">g_debugBulletFiring</a> </td><td> ... spam info about bullet traces
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/G_debugCinematic_%28cvar%29" title="G debugCinematic (cvar)">g_debugCinematic</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/G_debugDamage_%28cvar%29" title="G debugDamage (cvar)">g_debugDamage</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_debugFootsteps_%28cvar%29&amp;action=edit" class="new" title="G debugFootsteps (cvar)">g_debugFootsteps</a> </td><td> ... prints which surfacetype the player is walking on
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_debugForceFields_%28cvar%29&amp;action=edit" class="new" title="G debugForceFields (cvar)">g_debugForceFields</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_debugFrameCommands_%28cvar%29&amp;action=edit" class="new" title="G debugFrameCommands (cvar)">g_debugFrameCommands</a> </td><td> ... Prints out frame commands as they are called
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_debugFrameCommandsFilter_%28cvar%29&amp;action=edit" class="new" title="G debugFrameCommandsFilter (cvar)">g_debugFrameCommandsFilter</a> </td><td> ... Filter the type of framecommands
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_debugGUI_%28cvar%29&amp;action=edit" class="new" title="G debugGUI (cvar)">g_debugGUI</a> </td><td> ... Show GUI window outlines
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_debugGUIEvents_%28cvar%29&amp;action=edit" class="new" title="G debugGUIEvents (cvar)">g_debugGUIEvents</a> </td><td> ... Show the results of events
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_debugGUIRenderWorld_%28cvar%29&amp;action=edit" class="new" title="G debugGUIRenderWorld (cvar)">g_debugGUIRenderWorld</a> </td><td> ... Output information for GUI-based renderWorlds
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_debugGUITextRect_%28cvar%29&amp;action=edit" class="new" title="G debugGUITextRect (cvar)">g_debugGUITextRect</a> </td><td> ... Show windows' text rectangle outlines
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_debugGUITextScale_%28cvar%29&amp;action=edit" class="new" title="G debugGUITextScale (cvar)">g_debugGUITextScale</a> </td><td> ... Size that the debug GUI info font is drawn in.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_debugLocations_%28cvar%29&amp;action=edit" class="new" title="G debugLocations (cvar)">g_debugLocations</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_debugMask_%28cvar%29&amp;action=edit" class="new" title="G debugMask (cvar)">g_debugMask</a> </td><td> ... debugs a deployment mask
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_debugNetworkWrite_%28cvar%29&amp;action=edit" class="new" title="G debugNetworkWrite (cvar)">g_debugNetworkWrite</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_debugPlayerList_%28cvar%29&amp;action=edit" class="new" title="G debugPlayerList (cvar)">g_debugPlayerList</a> </td><td> ... fills UI lists with fake players
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_debugProficiency_%28cvar%29&amp;action=edit" class="new" title="G debugProficiency (cvar)">g_debugProficiency</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/G_debugScript_%28cvar%29" title="G debugScript (cvar)">g_debugScript</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_debugSpecatorList_%28cvar%29&amp;action=edit" class="new" title="G debugSpecatorList (cvar)">g_debugSpecatorList</a> </td><td> ... fills the spectator list with fake players
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_debugVehicleDriveForces_%28cvar%29&amp;action=edit" class="new" title="G debugVehicleDriveForces (cvar)">g_debugVehicleDriveForces</a> </td><td> ... show info about wheeled drive forces
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_debugVehicleFeedback_%28cvar%29&amp;action=edit" class="new" title="G debugVehicleFeedback (cvar)">g_debugVehicleFeedback</a> </td><td> ... show info about wheeled suspension feedback
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_debugVehicleFrictionFeedback_%28cvar%29&amp;action=edit" class="new" title="G debugVehicleFrictionFeedback (cvar)">g_debugVehicleFrictionFeedback</a> </td><td> ... show info about wheeled surface friction feedback
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_debugVehicleHoverPads_%28cvar%29&amp;action=edit" class="new" title="G debugVehicleHoverPads (cvar)">g_debugVehicleHoverPads</a> </td><td> ... show info about hoverpads
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_debugVehicleHurtZones_%28cvar%29&amp;action=edit" class="new" title="G debugVehicleHurtZones (cvar)">g_debugVehicleHurtZones</a> </td><td> ... show info about the hurtZone component
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_debugVehiclePseudoHover_%28cvar%29&amp;action=edit" class="new" title="G debugVehiclePseudoHover (cvar)">g_debugVehiclePseudoHover</a> </td><td> ... show info about the pseudoHover component
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_debugVehicleWheelForces_%28cvar%29&amp;action=edit" class="new" title="G debugVehicleWheelForces (cvar)">g_debugVehicleWheelForces</a> </td><td> ... show info about wheel forces
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/G_debugWeapon_%28cvar%29" title="G debugWeapon (cvar)">g_debugWeapon</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_debugWeaponSpread_%28cvar%29&amp;action=edit" class="new" title="G debugWeaponSpread (cvar)">g_debugWeaponSpread</a> </td><td> ... displays the current spread value for the weapon
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/G_decals_%28cvar%29" title="G decals (cvar)">g_decals</a> </td><td> ... show decals such as bullet holes
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_demoAnalyze_%28cvar%29&amp;action=edit" class="new" title="G demoAnalyze (cvar)">g_demoAnalyze</a> </td><td> ... analyze demo during playback
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_demoOutputMDF_%28cvar%29&amp;action=edit" class="new" title="G demoOutputMDF (cvar)">g_demoOutputMDF</a> </td><td> ... output entity keyframe data from demo
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_disableFootsteps_%28cvar%29&amp;action=edit" class="new" title="G disableFootsteps (cvar)">g_disableFootsteps</a> </td><td> ... enable/disable footsteps
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_disableGlobalAudio_%28cvar%29&amp;action=edit" class="new" title="G disableGlobalAudio (cvar)">g_disableGlobalAudio</a> </td><td> ... disable global VOIP communication
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_disableTransportDebris_%28cvar%29&amp;action=edit" class="new" title="G disableTransportDebris (cvar)">g_disableTransportDebris</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_disableVehicleSpawns_%28cvar%29&amp;action=edit" class="new" title="G disableVehicleSpawns (cvar)">g_disableVehicleSpawns</a> </td><td> ... disables vehicles spawning from construction pads
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/G_disasm_%28cvar%29" title="G disasm (cvar)">g_disasm</a> </td><td> ... disassemble script into base/script disasm.txt on the local drive when script is compiled
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/G_dragDamping_%28cvar%29" title="G dragDamping (cvar)">g_dragDamping</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/G_dragEntity_%28cvar%29" title="G dragEntity (cvar)">g_dragEntity</a> </td><td> ... allows dragging physics objects around by placing the crosshair over them and holding the fire button
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_dragMaxforce_%28cvar%29&amp;action=edit" class="new" title="G dragMaxforce (cvar)">g_dragMaxforce</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/G_dragShowSelection_%28cvar%29" title="G dragShowSelection (cvar)">g_dragShowSelection</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_drawAntiLag_%28cvar%29&amp;action=edit" class="new" title="G drawAntiLag (cvar)">g_drawAntiLag</a> </td><td> ... Visualizes the anti-lag point generation
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_drawAntiLagHits_%28cvar%29&amp;action=edit" class="new" title="G drawAntiLagHits (cvar)">g_drawAntiLagHits</a> </td><td> ... Draws information when anti-lag generates a hit
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_drawContacts_%28cvar%29&amp;action=edit" class="new" title="G drawContacts (cvar)">g_drawContacts</a> </td><td> ... draw physics object contacts
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_drawPlayerDamage_%28cvar%29&amp;action=edit" class="new" title="G drawPlayerDamage (cvar)">g_drawPlayerDamage</a> </td><td> ... Draws numbers above the player's head every time they take damage ( Must be enabled on the server too )
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_drawPlayerIcons_%28cvar%29&amp;action=edit" class="new" title="G drawPlayerIcons (cvar)">g_drawPlayerIcons</a> </td><td> ... Enables/Disables player icons
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_drawRouteConstraints_%28cvar%29&amp;action=edit" class="new" title="G drawRouteConstraints (cvar)">g_drawRouteConstraints</a> </td><td> ... draws lines showing route constraints
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/G_editEntityMode_%28cvar%29" title="G editEntityMode (cvar)">g_editEntityMode</a> </td><td> ... 0 = off 1 = lights 2 = sounds 3 = articulated figures 4 = particle systems 5 = monsters 6 = entity names 7 = entity models
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_enemyColor_%28cvar%29&amp;action=edit" class="new" title="G enemyColor (cvar)">g_enemyColor</a> </td><td> ... color of enemy units
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_execMapConfigs_%28cvar%29&amp;action=edit" class="new" title="G execMapConfigs (cvar)">g_execMapConfigs</a> </td><td> ... Execute map cfg with same name
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/G_exportMask_%28cvar%29" title="G exportMask (cvar)">g_exportMask</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_fireteamColor_%28cvar%29&amp;action=edit" class="new" title="G fireteamColor (cvar)">g_fireteamColor</a> </td><td> ... color of fireteam units
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_forceClear_%28cvar%29&amp;action=edit" class="new" title="G forceClear (cvar)">g_forceClear</a> </td><td> ... forces clearing of color buffer on main game draw (faster)
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/G_fov_%28cvar%29" title="G fov (cvar)">g_fov</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/G_frametime_%28cvar%29" title="G frametime (cvar)">g_frametime</a> </td><td> ... displays timing information for each game frame
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_friendlyColor_%28cvar%29&amp;action=edit" class="new" title="G friendlyColor (cvar)">g_friendlyColor</a> </td><td> ... color of friendly units
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/G_gameReviewPause_%28cvar%29" title="G gameReviewPause (cvar)">g_gameReviewPause</a> </td><td> ... Time (in minutes) for scores review time
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_gameReviewReadyWait_%28cvar%29&amp;action=edit" class="new" title="G gameReviewReadyWait (cvar)">g_gameReviewReadyWait</a> </td><td> ... wait for players to ready up before going to the next map
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/G_gravity_%28cvar%29" title="G gravity (cvar)">g_gravity</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_guiSpeeds_%28cvar%29&amp;action=edit" class="new" title="G guiSpeeds (cvar)">g_guiSpeeds</a> </td><td> ... Show GUI speeds
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/G_gunX_%28cvar%29" title="G gunX (cvar)">g_gunX</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/G_gunY_%28cvar%29" title="G gunY (cvar)">g_gunY</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/G_gunZ_%28cvar%29" title="G gunZ (cvar)">g_gunZ</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_hitBeep_%28cvar%29&amp;action=edit" class="new" title="G hitBeep (cvar)">g_hitBeep</a> </td><td> ... play hit beep sound when you inflict damage. 0 = do nothing 1 = beep/flash cross-hair 2 = beep 3 = flash cross-hair
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/G_kickAmplitude_%28cvar%29" title="G kickAmplitude (cvar)">g_kickAmplitude</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_kickBanLength_%28cvar%29&amp;action=edit" class="new" title="G kickBanLength (cvar)">g_kickBanLength</a> </td><td> ... length of time a kicked player will be banned for
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/G_kickTime_%28cvar%29" title="G kickTime (cvar)">g_kickTime</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/G_knockback_%28cvar%29" title="G knockback (cvar)">g_knockback</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_logObjectives_%28cvar%29&amp;action=edit" class="new" title="G logObjectives (cvar)">g_logObjectives</a> </td><td> ... log objective completion info
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_logProficiency_%28cvar%29&amp;action=edit" class="new" title="G logProficiency (cvar)">g_logProficiency</a> </td><td> ... log proficiency data
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_maxPlayerWarnings_%28cvar%29&amp;action=edit" class="new" title="G maxPlayerWarnings (cvar)">g_maxPlayerWarnings</a> </td><td> ... maximum warnings before player is kicked
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_maxProficiency_%28cvar%29&amp;action=edit" class="new" title="G maxProficiency (cvar)">g_maxProficiency</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/G_maxShowDistance_%28cvar%29" title="G maxShowDistance (cvar)">g_maxShowDistance</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_maxSpectateTime_%28cvar%29&amp;action=edit" class="new" title="G maxSpectateTime (cvar)">g_maxSpectateTime</a> </td><td> ... maximum length of time a player may spectate for
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_maxTransportDebrisExtraHigh_%28cvar%29&amp;action=edit" class="new" title="G maxTransportDebrisExtraHigh (cvar)">g_maxTransportDebrisExtraHigh</a> </td><td> ... The maximum number of pieces of extra high priority (really large) debris. -1 means no limit.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_maxTransportDebrisHigh_%28cvar%29&amp;action=edit" class="new" title="G maxTransportDebrisHigh (cvar)">g_maxTransportDebrisHigh</a> </td><td> ... The maximum number of pieces of high priority (large) debris. -1 means no limit.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_maxTransportDebrisLow_%28cvar%29&amp;action=edit" class="new" title="G maxTransportDebrisLow (cvar)">g_maxTransportDebrisLow</a> </td><td> ... The maximum number of pieces of low priority (small) debris. -1 means no limit.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_maxTransportDebrisMedium_%28cvar%29&amp;action=edit" class="new" title="G maxTransportDebrisMedium (cvar)">g_maxTransportDebrisMedium</a> </td><td> ... The maximum number of pieces of medium priority (middling) debris. -1 means no limit.
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_maxVoiceChats_%28cvar%29&amp;action=edit" class="new" title="G maxVoiceChats (cvar)">g_maxVoiceChats</a> </td><td> ... maximum number of voice chats a player may do in a period of time
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_maxVoiceChatsOver_%28cvar%29&amp;action=edit" class="new" title="G maxVoiceChatsOver (cvar)">g_maxVoiceChatsOver</a> </td><td> ... time over which the maximum number of voice chat limit is applied
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_muteSpecs_%28cvar%29&amp;action=edit" class="new" title="G muteSpecs (cvar)">g_muteSpecs</a> </td><td> ... Send all spectator global chat to team chat
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_neutralColor_%28cvar%29&amp;action=edit" class="new" title="G neutralColor (cvar)">g_neutralColor</a> </td><td> ... color of neutral units
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_nextMap_%28cvar%29&amp;action=edit" class="new" title="G nextMap (cvar)">g_nextMap</a> </td><td> ... commands to execute when the current map campaign ends
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_noBotSpectate_%28cvar%29&amp;action=edit" class="new" title="G noBotSpectate (cvar)">g_noBotSpectate</a> </td><td> ... disables the ability to spectate bots
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_noRouteConstraintKick_%28cvar%29&amp;action=edit" class="new" title="G noRouteConstraintKick (cvar)">g_noRouteConstraintKick</a> </td><td> ... enables/disables players being kicked for deviating from routes
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/G_noRouteMaskDestruction_%28cvar%29" title="G noRouteMaskDestruction (cvar)">g_noRouteMaskDestruction</a> </td><td> ... enables/disables the mcp being destroyed when driven outside the mask
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_noVehicleDecay_%28cvar%29&amp;action=edit" class="new" title="G noVehicleDecay (cvar)">g_noVehicleDecay</a> </td><td> ... enables / disables vehicle decay
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/wiki/G_password_%28cvar%29" title="G password (cvar)">g_password</a> </td><td> ... game password
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_playerArrowIconSize_%28cvar%29&amp;action=edit" class="new" title="G playerArrowIconSize (cvar)">g_playerArrowIconSize</a> </td><td> ... Size of the screen space player arrow icons
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_playerIconAlphaScale_%28cvar%29&amp;action=edit" class="new" title="G playerIconAlphaScale (cvar)">g_playerIconAlphaScale</a> </td><td> ... alpha to apply to world-based objective icons
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_playerIconSize_%28cvar%29&amp;action=edit" class="new" title="G playerIconSize (cvar)">g_playerIconSize</a> </td><td> ... Size of the screen space player icons
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_playerPushForce_%28cvar%29&amp;action=edit" class="new" title="G playerPushForce (cvar)">g_playerPushForce</a> </td><td> ... force players can be pushed by other players
+</td></tr>
+<tr>
+<td> <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=G_playTo">
+
+
+
+
+<!--
+     FILE ARCHIVED ON 23:11:47 Jul 29, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 3:18:07 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

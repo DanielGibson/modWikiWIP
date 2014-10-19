@@ -1,0 +1,608 @@
+DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex,follow" />
+<meta name="keywords" content="Commands (Doom 3),AAS (file format),AasStats (console command),Addarrow (console command),AviDemo (console command),Benchmark (console command),Bind (console command),ConDump (console command),Console,Declarations,DemoShot (console command)" />
+<link rel="shortcut icon" href="/web/20070729231147im_/http://modwiki.net/favicon.ico" />
+<link title="Creative Commons" type="application/rdf+xml" href="/w/index.php?title=Commands_%28Doom_3%29&amp;action=creativecommons" rel="meta" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<title>Commands (Doom 3) - modwiki</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20070729231147cs_/http://modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/web/20070729231147cs_/http://modwiki.net/w/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/w/skins/monobook/IE70Fixes.css?1";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
+		<script type="text/javascript" src="/web/20070729231147js_/http://modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20070729231147js_/http://modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/web/20070729231147cs_/http://modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231147cs_/http://modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231147cs_/http://modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns-0 ltr">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app19.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/modwiki.net\/w\/index.php?title=Commands_%28Doom_3%29&diff=next&oldid=5648";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "29";
+var displayMonth = "Jul";
+var displayYear = "2007";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://modwiki.net/w/index.php?title=Commands_%28Doom_3%29&amp;diff=next&amp;oldid=5648" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20070729231147" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jun
+                       
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 23:11:47 Jul 29, 2007">JUL</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Aug
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_prv_off.png" alt="Previous capture" width="14" height="16" border="0" />
+                       
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 23:11:47 Jul 29, 2007">29</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2006
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 23:11:47 Jul 29, 2007">2007</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2008
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20070729231147*/http://modwiki.net/w/index.php?title=Commands_%28Doom_3%29&amp;diff=next&amp;oldid=5648" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>1 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">29 Jul 07 - 29 Jul 07</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:6:000000100000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000_2014:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">Commands (Doom 3)</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From modwiki</h3>
+			<div id="contentSub">(Difference between revisions)</div>
+									<div id="jump-to-nav">Jump to: <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Commands_%28Doom_3%29&amp;diff=next&amp;oldid=5648#column-one">navigation</a>, <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Commands_%28Doom_3%29&amp;diff=next&amp;oldid=5648#searchInput">search</a></div>			<!-- start content -->
+			
+			<table border='0' width='98%' cellpadding='0' cellspacing='4' class='diff'>
+			<tr>
+				<td colspan='2' width='50%' align='center' class='diff-otitle'><strong><a href='/web/20070729231147/http://modwiki.net/w/index.php?title=Commands_%28Doom_3%29&amp;oldid=5648'>Revision as of 12:49, 19 December 2005</a></strong><br /><a href="/web/20070729231147/http://modwiki.net/wiki/User:Legshot" title="User:Legshot">Legshot</a>  (<a href="/web/20070729231147/http://modwiki.net/w/index.php?title=User_talk:Legshot&amp;action=edit" class="new" title="User talk:Legshot">Talk</a> | <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Special:Contributions&amp;target=Legshot" title="Special:Contributions">contribs</a>)<br /> <span class='comment'>(organized further)</span><br /><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Commands_%28Doom_3%29&amp;diff=prev&amp;oldid=5648" title="Commands (Doom 3)" id="differences-prevlink">? Previous diff</a></td>
+				<td colspan='2' width='50%' align='center' class='diff-ntitle'><strong><a href='/web/20070729231147/http://modwiki.net/w/index.php?title=Commands_%28Doom_3%29&amp;oldid=5655'>Revision as of 15:04, 19 December 2005</a></strong><br /><a href="/web/20070729231147/http://modwiki.net/wiki/User:Iceheart" title="User:Iceheart">Iceheart</a>  (<a href="/web/20070729231147/http://modwiki.net/wiki/User_talk:Iceheart" title="User talk:Iceheart">Talk</a> | <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Special:Contributions&amp;target=Iceheart" title="Special:Contributions">contribs</a>) <br /> <span class='comment'>(Added nbsp's to make list more readable.)</span><br /><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Commands_%28Doom_3%29&amp;diff=next&amp;oldid=5655" title="Commands (Doom 3)" id="differences-nextlink">Next diff →</a></td>
+			</tr>
+			<tr><td colspan="2" align="left"><strong>Line 8:</strong></td>
+<td colspan="2" align="left"><strong>Line 8:</strong></td></tr>
+<tr><td> </td><td class='diff-context'>&lt;ul&gt;</td><td> </td><td class='diff-context'>&lt;ul&gt;</td></tr>
+<tr><td> </td><td class='diff-context'>{| border=0;</td><td> </td><td class='diff-context'>{| border=0;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[benchmark (console command)|benchmark]] &lt;/li&gt; || ... benchmark</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[benchmark (console command)|benchmark]] &lt;/li&gt; || ... benchmark</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[bind (console command)|bind]] &lt;/li&gt; || ... binds a command to a key</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[bind (console command)|bind]] &lt;/li&gt; || ... binds a command to a key</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[unbind (console command)|unbind]] &lt;/li&gt; || ... unbinds any command from a key</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[unbind (console command)|unbind]] &lt;/li&gt; || ... unbinds any command from a key</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[unbindall (console command)|unbindall]] &lt;/li&gt; || ... unbinds any commands from all keys</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[unbindall (console command)|unbindall]] &lt;/li&gt; || ... unbinds any commands from all keys</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[centerview (console command)|centerview]] &lt;/li&gt; || ... centers the player view</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[centerview (console command)|centerview]] &lt;/li&gt; || ... centers the player view</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[checkNewVersion (console command)|checkNewVersion]] &lt;/li&gt; || ... check if a new version of the game is available</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[checkNewVersion (console command)|checkNewVersion]] &lt;/li&gt; || ... check if a new version of the game is available</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[exec (console command)|exec]] &lt;/li&gt; || ... executes a config file</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[exec (console command)|exec]] &lt;/li&gt; || ... executes a config file</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[execMachineSpec (console command)|execMachineSpec]] &lt;/li&gt; || ... execs the appropriate config files and sets cvars based on com_machineSpec</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[execMachineSpec (console command)|execMachineSpec]] &lt;/li&gt; || ... execs the appropriate config files and sets cvars based on com_machineSpec</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[setMachineSpec (console command)|setMachineSpec]] &lt;/li&gt; || ... detects system capabilities and sets com_machineSpec to appropriate value</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[setMachineSpec (console command)|setMachineSpec]] &lt;/li&gt; || ... detects system capabilities and sets com_machineSpec to appropriate value</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[say (console command)|say]] &lt;/li&gt; || ... text chat</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[say (console command)|say]] &lt;/li&gt; || ... text chat</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[sayTeam (console command)|sayTeam]] &lt;/li&gt; || ... team text chat</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[sayTeam (console command)|sayTeam]] &lt;/li&gt; || ... team text chat</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[echo (console command)|echo]] &lt;/li&gt; || ... prints text</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[echo (console command)|echo]] &lt;/li&gt; || ... prints text</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[wait (console command)|wait]] &lt;/li&gt; || ... delays remaining buffered commands one or more frames</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[wait (console command)|wait]] &lt;/li&gt; || ... delays remaining buffered commands one or more frames</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[writeConfig (console command)|writeConfig]] &lt;/li&gt; || ... writes a config file</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[writeConfig (console command)|writeConfig]] &lt;/li&gt; || ... writes a config file</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td> </td><td class='diff-context'>|}</td><td> </td><td class='diff-context'>|}</td></tr>
+<tr><td colspan="2" align="left"><strong>Line 43:</strong></td>
+<td colspan="2" align="left"><strong>Line 43:</strong></td></tr>
+<tr><td> </td><td class='diff-context'>{| border=0;</td><td> </td><td class='diff-context'>{| border=0;</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[clear (console command)|clear]] &lt;/li&gt; || ... clears the console</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[clear (console command)|clear]] &lt;/li&gt; || ... clears the console</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[conDump (console command)|conDump]] &lt;/li&gt; || ... dumps the console text to a file</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[conDump (console command)|conDump]] &lt;/li&gt; || ... dumps the console text to a file</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td> </td><td class='diff-context'>|}</td><td> </td><td class='diff-context'>|}</td></tr>
+<tr><td colspan="2" align="left"><strong>Line 54:</strong></td>
+<td colspan="2" align="left"><strong>Line 54:</strong></td></tr>
+<tr><td> </td><td class='diff-context'>{| border=0;</td><td> </td><td class='diff-context'>{| border=0;</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[reset (console command)|reset]] &lt;/li&gt; || ... resets a cvar</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[reset (console command)|reset]] &lt;/li&gt; || ... resets a cvar</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[set (console command)|set]] &lt;/li&gt; || ... sets a cvar</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[set (console command)|set]] &lt;/li&gt; || ... sets a cvar</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[seta (console command)|seta]] &lt;/li&gt; || ... sets a cvar and flags it as archive</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[seta (console command)|seta]] &lt;/li&gt; || ... sets a cvar and flags it as archive</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[sets (console command)|sets]] &lt;/li&gt; || ... sets a cvar and flags it as server info</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[sets (console command)|sets]] &lt;/li&gt; || ... sets a cvar and flags it as server info</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[sett (console command)|sett]] &lt;/li&gt; || ... sets a cvar and flags it as tool</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[sett (console command)|sett]] &lt;/li&gt; || ... sets a cvar and flags it as tool</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[setu (console command)|setu]] &lt;/li&gt; || ... sets a cvar and flags it as user info</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[setu (console command)|setu]] &lt;/li&gt; || ... sets a cvar and flags it as user info</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[toggle (console command)|toggle]] &lt;/li&gt; || ... toggles a cvar</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[toggle (console command)|toggle]] &lt;/li&gt; || ... toggles a cvar</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[vstr (console command)|vstr]] &lt;/li&gt; || ... inserts the current value of a cvar as command text</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[vstr (console command)|vstr]] &lt;/li&gt; || ... inserts the current value of a cvar as command text</td></tr>
+<tr><td> </td><td class='diff-context'>|}</td><td> </td><td class='diff-context'>|}</td></tr>
+<tr><td> </td><td class='diff-context'>&lt;/ul&gt;</td><td> </td><td class='diff-context'>&lt;/ul&gt;</td></tr>
+<tr><td colspan="2" align="left"><strong>Line 76:</strong></td>
+<td colspan="2" align="left"><strong>Line 76:</strong></td></tr>
+<tr><td> </td><td class='diff-context'>{| border=0;</td><td> </td><td class='diff-context'>{| border=0;</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[exit (console command)|exit]] &lt;/li&gt; || ... exits the game</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[exit (console command)|exit]] &lt;/li&gt; || ... exits the game</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[quit (console command)|quit]] &lt;/li&gt; || ... quits the game</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[quit (console command)|quit]] &lt;/li&gt; || ... quits the game</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[loadGame (console command)|loadGame]] &lt;/li&gt; || ... loads a game</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[loadGame (console command)|loadGame]] &lt;/li&gt; || ... loads a game</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[saveGame (console command)|saveGame]] &lt;/li&gt; || ... saves a game</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[saveGame (console command)|saveGame]] &lt;/li&gt; || ... saves a game</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[map (console command)|map]] &lt;/li&gt; || ... loads a map</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[map (console command)|map]] &lt;/li&gt; || ... loads a map</td></tr>
+<tr><td> </td><td class='diff-context'>|}</td><td> </td><td class='diff-context'>|}</td></tr>
+<tr><td> </td><td class='diff-context'>&lt;/ul&gt;</td><td> </td><td class='diff-context'>&lt;/ul&gt;</td></tr>
+<tr><td colspan="2" align="left"><strong>Line 92:</strong></td>
+<td colspan="2" align="left"><strong>Line 92:</strong></td></tr>
+<tr><td> </td><td class='diff-context'>{| border=0;</td><td> </td><td class='diff-context'>{| border=0;</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[connect (console command)|connect]] &lt;/li&gt; || ... connects to a server</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[connect (console command)|connect]] &lt;/li&gt; || ... connects to a server</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[disconnect (console command)|disconnect]] &lt;/li&gt; || ... disconnects from a game</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[disconnect (console command)|disconnect]] &lt;/li&gt; || ... disconnects from a game</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[reconnect (console command)|reconnect]] &lt;/li&gt; || ... reconnect to the last server we tried to connect to</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[reconnect (console command)|reconnect]] &lt;/li&gt; || ... reconnect to the last server we tried to connect to</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[LANScan (console command)|LANScan]] &lt;/li&gt; || ... scans LAN for servers</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[LANScan (console command)|LANScan]] &lt;/li&gt; || ... scans LAN for servers</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[listServers (console command)|listServers]] &lt;/li&gt; || ... lists scanned servers</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[listServers (console command)|listServers]] &lt;/li&gt; || ... lists scanned servers</td></tr>
+<tr><td> </td><td class='diff-context'>|}</td><td> </td><td class='diff-context'>|}</td></tr>
+<tr><td> </td><td class='diff-context'>&lt;/ul&gt;</td><td> </td><td class='diff-context'>&lt;/ul&gt;</td></tr>
+<tr><td colspan="2" align="left"><strong>Line 108:</strong></td>
+<td colspan="2" align="left"><strong>Line 108:</strong></td></tr>
+<tr><td> </td><td class='diff-context'>&lt;ul&gt;</td><td> </td><td class='diff-context'>&lt;ul&gt;</td></tr>
+<tr><td> </td><td class='diff-context'>{| border=0;</td><td> </td><td class='diff-context'>{| border=0;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[aviDemo (console command)|aviDemo]] &lt;/li&gt; || ... writes AVIs for a demo</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[aviDemo (console command)|aviDemo]] &lt;/li&gt; || ... writes AVIs for a demo</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[aviGame (console command)|aviGame]] &lt;/li&gt; || ... writes AVIs for the current game</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[aviGame (console command)|aviGame]] &lt;/li&gt; || ... writes AVIs for the current game</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[demoShot (console command)|demoShot]] &lt;/li&gt; || ... writes a screenshot for a demo</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[demoShot (console command)|demoShot]] &lt;/li&gt; || ... writes a screenshot for a demo</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[playDemo (console command)|playDemo]] &lt;/li&gt; || ... plays back a demo</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[playDemo (console command)|playDemo]] &lt;/li&gt; || ... plays back a demo</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[recordDemo (console command)|recordDemo]] &lt;/li&gt; || ... records a demo</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[recordDemo (console command)|recordDemo]] &lt;/li&gt; || ... records a demo</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[stopRecording (console command)|stopRecording]] &lt;/li&gt; || ... stops demo recording</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[stopRecording (console command)|stopRecording]] &lt;/li&gt; || ... stops demo recording</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[timeDemo (console command)|timeDemo]] &lt;/li&gt; || ... times a demo</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[timeDemo (console command)|timeDemo]] &lt;/li&gt; || ... times a demo</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[timeDemoQuit (console command)|timeDemoQuit]] &lt;/li&gt; || ... times a demo and quits</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[timeDemoQuit (console command)|timeDemoQuit]] &lt;/li&gt; || ... times a demo and quits</td></tr>
+<tr><td> </td><td class='diff-context'>|}</td><td> </td><td class='diff-context'>|}</td></tr>
+<tr><td> </td><td class='diff-context'>&lt;/ul&gt;</td><td> </td><td class='diff-context'>&lt;/ul&gt;</td></tr>
+<tr><td colspan="2" align="left"><strong>Line 130:</strong></td>
+<td colspan="2" align="left"><strong>Line 130:</strong></td></tr>
+<tr><td> </td><td class='diff-context'>&lt;ul&gt;</td><td> </td><td class='diff-context'>&lt;ul&gt;</td></tr>
+<tr><td> </td><td class='diff-context'>{| border=0;</td><td> </td><td class='diff-context'>{| border=0;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[gameKick (console command)|gameKick]] &lt;/li&gt; || ... same as kick, but recognizes player names</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[gameKick (console command)|gameKick]] &lt;/li&gt; || ... same as kick, but recognizes player names</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[heartbeat (console command)|heartbeat]] &lt;/li&gt; || ... send a heartbeat to the the master servers</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[heartbeat (console command)|heartbeat]] &lt;/li&gt; || ... send a heartbeat to the the master servers</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[kick (console command)|kick]] &lt;/li&gt; || ... kick a client by connection number</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[kick (console command)|kick]] &lt;/li&gt; || ... kick a client by connection number</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[nextMap (console command)|nextMap]] &lt;/li&gt; || ... loads the next map on the server</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[nextMap (console command)|nextMap]] &lt;/li&gt; || ... loads the next map on the server</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[rcon (console command)|rcon]] &lt;/li&gt; || ... sends remote console command to server</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[rcon (console command)|rcon]] &lt;/li&gt; || ... sends remote console command to server</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[serverForceReady (console command)|serverForceReady]] &lt;/li&gt; || ... force all players ready</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[serverForceReady (console command)|serverForceReady]] &lt;/li&gt; || ... force all players ready</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[serverInfo (console command)|serverInfo]] &lt;/li&gt; || ... shows server info</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[serverInfo (console command)|serverInfo]] &lt;/li&gt; || ... shows server info</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[serverMapRestart (console command)|serverMapRestart]] &lt;/li&gt; || ... restart the current game</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[serverMapRestart (console command)|serverMapRestart]] &lt;/li&gt; || ... restart the current game</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[serverNextMap (console command)|serverNextMap]] &lt;/li&gt; || ... change to the next map</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[serverNextMap (console command)|serverNextMap]] &lt;/li&gt; || ... change to the next map</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[spawnServer (console command)|spawnServer]] &lt;/li&gt; || ... spawns a server</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[spawnServer (console command)|spawnServer]] &lt;/li&gt; || ... spawns a server</td></tr>
+<tr><td> </td><td class='diff-context'>|}</td><td> </td><td class='diff-context'>|}</td></tr>
+<tr><td> </td><td class='diff-context'>&lt;/ul&gt;</td><td> </td><td class='diff-context'>&lt;/ul&gt;</td></tr>
+<tr><td colspan="2" align="left"><strong>Line 160:</strong></td>
+<td colspan="2" align="left"><strong>Line 160:</strong></td></tr>
+<tr><td> </td><td class='diff-context'>{| border=0;</td><td> </td><td class='diff-context'>{| border=0;</td></tr>
+<tr><td> </td><td class='diff-context'>|- </td><td> </td><td class='diff-context'>|- </td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[aasStats (console command)|aasStats]] &lt;/li&gt; || ... This command displays AAS file statistics in the console.</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[aasStats (console command)|aasStats]] &lt;/li&gt; || ... This command displays AAS file statistics in the console.</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[runAAS (console command)|runAAS]] &lt;/li&gt; || ... compiles an AAS file for a map</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[runAAS (console command)|runAAS]] &lt;/li&gt; || ... compiles an AAS file for a map</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[runAASDir (console command)|runAASDir]] &lt;/li&gt; || ... compiles AAS files for all maps in a folder</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[runAASDir (console command)|runAASDir]] &lt;/li&gt; || ... compiles AAS files for all maps in a folder</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[runReach (console command)|runReach]] &lt;/li&gt; || ... calculates reachability for an AAS file</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[runReach (console command)|runReach]] &lt;/li&gt; || ... calculates reachability for an AAS file</td></tr>
+<tr><td> </td><td class='diff-context'>|}</td><td> </td><td class='diff-context'>|}</td></tr>
+<tr><td> </td><td class='diff-context'>&lt;/ul&gt;</td><td> </td><td class='diff-context'>&lt;/ul&gt;</td></tr>
+<tr><td colspan="2" align="left"><strong>Line 174:</strong></td>
+<td colspan="2" align="left"><strong>Line 174:</strong></td></tr>
+<tr><td> </td><td class='diff-context'>{| border=0;</td><td> </td><td class='diff-context'>{| border=0;</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[listAnims (console command)|listAnims]] &lt;/li&gt; || ... lists all animations</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[listAnims (console command)|listAnims]] &lt;/li&gt; || ... lists all animations</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[nextAnim (console command)|nextAnim]] &lt;/li&gt; || ... shows next animation on test model</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[nextAnim (console command)|nextAnim]] &lt;/li&gt; || ... shows next animation on test model</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[nextFrame (console command)|nextFrame]] &lt;/li&gt; || ... shows next animation frame on test model</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[nextFrame (console command)|nextFrame]] &lt;/li&gt; || ... shows next animation frame on test model</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[prevAnim (console command)|prevAnim]] &lt;/li&gt; || ... shows previous animation on test model</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[prevAnim (console command)|prevAnim]] &lt;/li&gt; || ... shows previous animation on test model</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[prevFrame (console command)|prevFrame]] &lt;/li&gt; || ... shows previous animation frame on test model</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[prevFrame (console command)|prevFrame]] &lt;/li&gt; || ... shows previous animation frame on test model</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[reloadanims (console command)|reloadanims]] &lt;/li&gt; || ... reloads animations</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[reloadanims (console command)|reloadanims]] &lt;/li&gt; || ... reloads animations</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[testAnim (console command)|testAnim]] &lt;/li&gt; || ... tests an animation</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[testAnim (console command)|testAnim]] &lt;/li&gt; || ... tests an animation</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[testBlend (console command)|testBlend]] &lt;/li&gt; || ... tests animation blending</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[testBlend (console command)|testBlend]] &lt;/li&gt; || ... tests animation blending</td></tr>
+<tr><td> </td><td class='diff-context'>|}</td><td> </td><td class='diff-context'>|}</td></tr>
+<tr><td> </td><td class='diff-context'>&lt;/ul&gt;</td><td> </td><td class='diff-context'>&lt;/ul&gt;</td></tr>
+<tr><td colspan="2" align="left"><strong>Line 196:</strong></td>
+<td colspan="2" align="left"><strong>Line 196:</strong></td></tr>
+<tr><td> </td><td class='diff-context'>{| border=0;</td><td> </td><td class='diff-context'>{| border=0;</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[damage (console command)|damage]] &lt;/li&gt; || ... apply damage to an entity</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[damage (console command)|damage]] &lt;/li&gt; || ... apply damage to an entity</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[deleteSelected (console command)|deleteSelected]] &lt;/li&gt; || ... deletes selected entity</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[deleteSelected (console command)|deleteSelected]] &lt;/li&gt; || ... deletes selected entity</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[listSpawnArgs (console command)|listSpawnArgs]] &lt;/li&gt; || ... list the spawn args of an entity</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[listSpawnArgs (console command)|listSpawnArgs]] &lt;/li&gt; || ... list the spawn args of an entity</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[remove (console command)|remove]] &lt;/li&gt; || ... removes an entity</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[remove (console command)|remove]] &lt;/li&gt; || ... removes an entity</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[saveSelected (console command)|saveSelected]] &lt;/li&gt; || ... saves the selected entity to the .map file</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[saveSelected (console command)|saveSelected]] &lt;/li&gt; || ... saves the selected entity to the .map file</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[spawn (console command)|spawn]] &lt;/li&gt; || ... spawns a game entity</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[spawn (console command)|spawn]] &lt;/li&gt; || ... spawns a game entity</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[teleport (console command)|teleport]] &lt;/li&gt; || ... teleports the player to an entity location</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[teleport (console command)|teleport]] &lt;/li&gt; || ... teleports the player to an entity location</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[trigger (console command)|trigger]] &lt;/li&gt; || ... triggers an entity</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[trigger (console command)|trigger]] &lt;/li&gt; || ... triggers an entity</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[listRenderEntityDefs (console command)|listRenderEntityDefs]] &lt;/li&gt; || ... lists the entity defs</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[listRenderEntityDefs (console command)|listRenderEntityDefs]] &lt;/li&gt; || ... lists the entity defs</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[listEntityDefs (console command)|listEntityDefs]] &lt;/li&gt; || ... lists entity defs</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[listEntityDefs (console command)|listEntityDefs]] &lt;/li&gt; || ... lists entity defs</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[printEntityDef (console command)|printEntityDef]] &lt;/li&gt; || ... prints an entity def</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[printEntityDef (console command)|printEntityDef]] &lt;/li&gt; || ... prints an entity def</td></tr>
+<tr><td> </td><td class='diff-context'>|}</td><td> </td><td class='diff-context'>|}</td></tr>
+<tr><td> </td><td class='diff-context'>&lt;/ul&gt;</td><td> </td><td class='diff-context'>&lt;/ul&gt;</td></tr>
+<tr><td colspan="2" align="left"><strong>Line 224:</strong></td>
+<td colspan="2" align="left"><strong>Line 224:</strong></td></tr>
+<tr><td> </td><td class='diff-context'>{| border=0;</td><td> </td><td class='diff-context'>{| border=0;</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[editGUIs (console command)|editGUIs]] &lt;/li&gt; || ... launches the GUI Editor</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[editGUIs (console command)|editGUIs]] &lt;/li&gt; || ... launches the GUI Editor</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[nextGUI (console command)|nextGUI]] &lt;/li&gt; || ... teleport the player to the next func_static with a gui</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[nextGUI (console command)|nextGUI]] &lt;/li&gt; || ... teleport the player to the next func_static with a gui</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[listGuis (console command)|listGuis]] &lt;/li&gt; || ... lists guis</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[listGuis (console command)|listGuis]] &lt;/li&gt; || ... lists guis</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[reloadGuis (console command)|reloadGuis]] &lt;/li&gt; || ... reloads guis</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[reloadGuis (console command)|reloadGuis]] &lt;/li&gt; || ... reloads guis</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[touchGui (console command)|touchGui]] &lt;/li&gt; || ... touches a gui</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[touchGui (console command)|touchGui]] &lt;/li&gt; || ... touches a gui</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[localizeGuis (console command)|localizeGuis]] &lt;/li&gt; || ... localize guis</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[localizeGuis (console command)|localizeGuis]] &lt;/li&gt; || ... localize guis</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[testGUI (console command)|testGUI]] &lt;/li&gt; || ... tests a gui</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[testGUI (console command)|testGUI]] &lt;/li&gt; || ... tests a gui</td></tr>
+<tr><td> </td><td class='diff-context'>|}</td><td> </td><td class='diff-context'>|}</td></tr>
+<tr><td> </td><td class='diff-context'>&lt;/ul&gt;</td><td> </td><td class='diff-context'>&lt;/ul&gt;</td></tr>
+<tr><td colspan="2" align="left"><strong>Line 244:</strong></td>
+<td colspan="2" align="left"><strong>Line 244:</strong></td></tr>
+<tr><td> </td><td class='diff-context'>{| border=0;</td><td> </td><td class='diff-context'>{| border=0;</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[memoryDump (console command)|memoryDump]] &lt;/li&gt; || ... creates a memory dump</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[memoryDump (console command)|memoryDump]] &lt;/li&gt; || ... creates a memory dump</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[memoryDumpCompressed (console command)|memoryDumpCompressed]] &lt;/li&gt; || ... creates a compressed memory dump</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[memoryDumpCompressed (console command)|memoryDumpCompressed]] &lt;/li&gt; || ... creates a compressed memory dump</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[showDictMemory (console command)|showDictMemory]] &lt;/li&gt; || ... shows memory used by dictionaries</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[showDictMemory (console command)|showDictMemory]] &lt;/li&gt; || ... shows memory used by dictionaries</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[showInteractionMemory (console command)|showInteractionMemory]] &lt;/li&gt; || ... shows memory used by interactions</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[showInteractionMemory (console command)|showInteractionMemory]] &lt;/li&gt; || ... shows memory used by interactions</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[showStringMemory (console command)|showStringMemory]] &lt;/li&gt; || ... shows memory used by strings</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[showStringMemory (console command)|showStringMemory]] &lt;/li&gt; || ... shows memory used by strings</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[showTriSurfMemory (console command)|showTriSurfMemory]] &lt;/li&gt; || ... shows memory used by triangle surfaces</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[showTriSurfMemory (console command)|showTriSurfMemory]] &lt;/li&gt; || ... shows memory used by triangle surfaces</td></tr>
+<tr><td> </td><td class='diff-context'>|}</td><td> </td><td class='diff-context'>|}</td></tr>
+<tr><td> </td><td class='diff-context'>&lt;/ul&gt;</td><td> </td><td class='diff-context'>&lt;/ul&gt;</td></tr>
+<tr><td colspan="2" align="left"><strong>Line 262:</strong></td>
+<td colspan="2" align="left"><strong>Line 262:</strong></td></tr>
+<tr><td> </td><td class='diff-context'>&lt;ul&gt;</td><td> </td><td class='diff-context'>&lt;ul&gt;</td></tr>
+<tr><td> </td><td class='diff-context'>{| border=0;</td><td> </td><td class='diff-context'>{| border=0;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[debugger (console command)|debugger]] &lt;/li&gt; || ... launches the Script Debugger</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[debugger (console command)|debugger]] &lt;/li&gt; || ... launches the Script Debugger</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[disasmScript (console command)|disasmScript]] &lt;/li&gt; || ... disassembles script</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[disasmScript (console command)|disasmScript]] &lt;/li&gt; || ... disassembles script</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[editScripts (console command)|editScripts]] &lt;/li&gt; || ... launches the in-game Script Editor</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[editScripts (console command)|editScripts]] &lt;/li&gt; || ... launches the in-game Script Editor</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[listThreads (console command)|listThreads]] &lt;/li&gt; || ... lists script threads</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[listThreads (console command)|listThreads]] &lt;/li&gt; || ... lists script threads</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[reloadScript (console command)|reloadScript]] &lt;/li&gt; || ... reloads scripts</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[reloadScript (console command)|reloadScript]] &lt;/li&gt; || ... reloads scripts</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[script (console command)|script]] &lt;/li&gt; || ... executes a line of script</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[script (console command)|script]] &lt;/li&gt; || ... executes a line of script</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td> </td><td class='diff-context'>|}</td><td> </td><td class='diff-context'>|}</td></tr>
+<tr><td colspan="2" align="left"><strong>Line 281:</strong></td>
+<td colspan="2" align="left"><strong>Line 281:</strong></td></tr>
+<tr><td> </td><td class='diff-context'>&lt;ul&gt;</td><td> </td><td class='diff-context'>&lt;ul&gt;</td></tr>
+<tr><td> </td><td class='diff-context'>{| border=0;</td><td> </td><td class='diff-context'>{| border=0;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[editSounds (console command)|editSounds]] &lt;/li&gt; || ... launches the in-game Sound Editor</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[editSounds (console command)|editSounds]] &lt;/li&gt; || ... launches the in-game Sound Editor</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[listSoundDecoders (console command)|listSoundDecoders]] &lt;/li&gt; || ... list active sound decoders</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[listSoundDecoders (console command)|listSoundDecoders]] &lt;/li&gt; || ... list active sound decoders</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[listSounds (console command)|listSounds]] &lt;/li&gt; || ... lists all sounds</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[listSounds (console command)|listSounds]] &lt;/li&gt; || ... lists all sounds</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[listSoundCmds (console command)|listSoundCmds]] &lt;/li&gt; || ... lists sound commands (???)</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[listSoundCmds (console command)|listSoundCmds]] &lt;/li&gt; || ... lists sound commands (???)</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[listSoundShaders (console command)|listSoundShaders]] &lt;/li&gt; || ... lists sound shaders (???)</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[listSoundShaders (console command)|listSoundShaders]] &lt;/li&gt; || ... lists sound shaders (???)</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[reloadSounds (console command)|reloadSounds]] &lt;/li&gt; || ... reloads all sounds</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[reloadSounds (console command)|reloadSounds]] &lt;/li&gt; || ... reloads all sounds</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[s_restart (console command)|s_restart]] &lt;/li&gt; || ... restarts the sound system</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[s_restart (console command)|s_restart]] &lt;/li&gt; || ... restarts the sound system</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[testSound (console command)|testSound]] &lt;/li&gt; || ... tests a sound</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[testSound (console command)|testSound]] &lt;/li&gt; || ... tests a sound</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td> </td><td class='diff-context'>|}</td><td> </td><td class='diff-context'>|}</td></tr>
+<tr><td colspan="2" align="left"><strong>Line 303:</strong></td>
+<td colspan="2" align="left"><strong>Line 303:</strong></td></tr>
+<tr><td> </td><td class='diff-context'>&lt;ul&gt;</td><td> </td><td class='diff-context'>&lt;ul&gt;</td></tr>
+<tr><td> </td><td class='diff-context'>{| border=0;</td><td> </td><td class='diff-context'>{| border=0;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[dmap (console command)|dmap]] &lt;/li&gt; || ... compiles a map</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[dmap (console command)|dmap]] &lt;/li&gt; || ... compiles a map</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[editAFs (console command)|editAFs]] &lt;/li&gt; || ... launches the in-game Articulated Figure Editor</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[editAFs (console command)|editAFs]] &lt;/li&gt; || ... launches the in-game Articulated Figure Editor</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[editDecls (console command)|editDecls]] &lt;/li&gt; || ... launches the in-game Declaration Editor</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[editDecls (console command)|editDecls]] &lt;/li&gt; || ... launches the in-game Declaration Editor</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[editLights (console command)|editLights]] &lt;/li&gt; || ... launches the in-game Light Editor</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[editLights (console command)|editLights]] &lt;/li&gt; || ... launches the in-game Light Editor</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[editor (console command)|editor]] &lt;/li&gt; || ... launches the level editor Radiant</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[editor (console command)|editor]] &lt;/li&gt; || ... launches the level editor Radiant</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[editParticles (console command)|editParticles]] &lt;/li&gt; || ... launches the in-game Particle Editor</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[editParticles (console command)|editParticles]] &lt;/li&gt; || ... launches the in-game Particle Editor</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[editPDAs (console command)|editPDAs]] &lt;/li&gt; || ... launches the in-game PDA Editor</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[editPDAs (console command)|editPDAs]] &lt;/li&gt; || ... launches the in-game PDA Editor</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[materialEditor (console command)|materialEditor]] &lt;/li&gt; || ... '''to_be_replaced'''</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[materialEditor (console command)|materialEditor]] &lt;/li&gt; || ... '''to_be_replaced'''</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[renderbump (console command)|renderbump]] &lt;/li&gt; || ... renders a bump map</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[renderbump (console command)|renderbump]] &lt;/li&gt; || ... renders a bump map</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[renderbumpFlat (console command)|renderbumpFlat]] &lt;/li&gt; || ... renders a flat bump map</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[renderbumpFlat (console command)|renderbumpFlat]] &lt;/li&gt; || ... renders a flat bump map</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[roq (console command)|roq]] &lt;/li&gt; || ... encodes a roq file</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[roq (console command)|roq]] &lt;/li&gt; || ... encodes a roq file</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td> </td><td class='diff-context'>|}</td><td> </td><td class='diff-context'>|}</td></tr>
+<tr><td colspan="2" align="left"><strong>Line 332:</strong></td>
+<td colspan="2" align="left"><strong>Line 332:</strong></td></tr>
+<tr><td> </td><td class='diff-context'>&lt;ul&gt;</td><td> </td><td class='diff-context'>&lt;ul&gt;</td></tr>
+<tr><td> </td><td class='diff-context'>{| border=0;</td><td> </td><td class='diff-context'>{| border=0;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[addChatLine (console command)|addChatLine]] &lt;/li&gt; || ... internal use (core to game chat lines)</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[addChatLine (console command)|addChatLine]] &lt;/li&gt; || ... internal use (core to game chat lines)</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[aviCmdDemo (console command)|aviCmdDemo]] &lt;/li&gt; || ... writes AVIs for a command demo</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[aviCmdDemo (console command)|aviCmdDemo]] &lt;/li&gt; || ... writes AVIs for a command demo</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[compressDemo (console command)|compressDemo]] &lt;/li&gt; || ... compresses a demo file</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[compressDemo (console command)|compressDemo]] &lt;/li&gt; || ... compresses a demo file</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[exitCmdDemo (console command)|exitCmdDemo]] &lt;/li&gt; || ... exits a command demo</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[exitCmdDemo (console command)|exitCmdDemo]] &lt;/li&gt; || ... exits a command demo</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[playCmdDemo (console command)|playCmdDemo]] &lt;/li&gt; || ... plays back a command demo</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[playCmdDemo (console command)|playCmdDemo]] &lt;/li&gt; || ... plays back a command demo</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[sizeDown (console command)|sizeDown]] &lt;/li&gt; || ... makes the rendered view smaller</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[sizeDown (console command)|sizeDown]] &lt;/li&gt; || ... makes the rendered view smaller</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[sizeUp (console command)|sizeUp]] &lt;/li&gt; || ... makes the rendered view larger</td><td>+</td><td class='diff-addedline'>| &lt;li&gt; <span class="diffchange">&amp;nbsp;</span>[[sizeUp (console command)|sizeUp]] &lt;/li&gt; || ... makes the rendered view larger</td></tr>
+<tr><td> </td><td class='diff-context'>|-</td><td> </td><td class='diff-context'>|-</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>| &lt;li&gt; [[takeViewNotes2 (console command)|takeViewNotes2]] &
+
+
+
+
+<!--
+     FILE ARCHIVED ON 23:11:47 Jul 29, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 2:38:19 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

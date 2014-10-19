@@ -1,0 +1,538 @@
+DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex,follow" />
+<meta name="keywords" content="Maya to MD5,Export (decl),Exportmodels (console command),Model (decl),Testmodel (console command),Nextanim (console command),Centerview (console command),Reloadmodels (console command)" />
+<link rel="shortcut icon" href="/web/20070729231805im_/http://www.modwiki.net/favicon.ico" />
+<link title="Creative Commons" type="application/rdf+xml" href="/w/index.php?title=Maya_to_MD5&amp;action=creativecommons" rel="meta" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<title>Maya to MD5 - modwiki</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20070729231805cs_/http://www.modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/web/20070729231805cs_/http://www.modwiki.net/w/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/w/skins/monobook/IE70Fixes.css?1";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
+		<script type="text/javascript" src="/web/20070729231805js_/http://www.modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20070729231805js_/http://www.modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/web/20070729231805cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231805cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231805cs_/http://www.modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns-0 ltr">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app19.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/www.modwiki.net\/w\/index.php?title=Maya_to_MD5&diff=7092&oldid=7088";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "29";
+var displayMonth = "Jul";
+var displayYear = "2007";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;diff=7092&amp;oldid=7088" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20070729231805" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jun
+                       
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 23:18:05 Jul 29, 2007">JUL</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Aug
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_prv_off.png" alt="Previous capture" width="14" height="16" border="0" />
+                       
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 23:18:05 Jul 29, 2007">29</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2006
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 23:18:05 Jul 29, 2007">2007</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2008
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20070729231805*/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;diff=7092&amp;oldid=7088" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>1 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">29 Jul 07 - 29 Jul 07</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:6:000000100000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000_2014:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">Maya to MD5</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From modwiki</h3>
+			<div id="contentSub">(Difference between revisions)</div>
+									<div id="jump-to-nav">Jump to: <a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;diff=7092&amp;oldid=7088#column-one">navigation</a>, <a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;diff=7092&amp;oldid=7088#searchInput">search</a></div>			<!-- start content -->
+			
+			<table border='0' width='98%' cellpadding='0' cellspacing='4' class='diff'>
+			<tr>
+				<td colspan='2' width='50%' align='center' class='diff-otitle'><strong><a href='/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;oldid=7088'>Revision as of 22:50, 26 January 2007</a></strong><br /><a href="/web/20070729231805/http://www.modwiki.net/wiki/User:Rich" title="User:Rich">Rich</a>  (<a href="/web/20070729231805/http://www.modwiki.net/wiki/User_talk:Rich" title="User talk:Rich">Talk</a> | <a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Rich" title="Special:Contributions">contribs</a>)<br /> <span class='comment'>(Adjusted Formatting)</span><br /><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;diff=prev&amp;oldid=7088" title="Maya to MD5" id="differences-prevlink">? Previous diff</a></td>
+				<td colspan='2' width='50%' align='center' class='diff-ntitle'><strong><a href='/web/20070729231805/http://www.modwiki.net/wiki/Maya_to_MD5'>Current revision</a></strong><br /><a href="/web/20070729231805/http://www.modwiki.net/wiki/User:Rich" title="User:Rich">Rich</a>  (<a href="/web/20070729231805/http://www.modwiki.net/wiki/User_talk:Rich" title="User talk:Rich">Talk</a> | <a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Rich" title="Special:Contributions">contribs</a>) <br /> <span class='comment'>(Moving comment to discussion page)</span><br /></td>
+			</tr>
+			<tr><td colspan="2" align="left"><strong>Line 1:</strong></td>
+<td colspan="2" align="left"><strong>Line 1:</strong></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">''At present this is pretty much a straight port of Goliath's PDF tutorial. It's the most concise document that I know of that details the process and should prove relatively easy to integrate into the wiki.''</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">&lt;!-- Introductory text goes here --&gt;</span></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">''I'll be stripping, revising, and moving information from this article throughout the wiki over the course of the next few days. I welcome any assistance on this. The general idea is to document everything there is to know about the conversion process and omit everything that bears relation to the task of modelling and texturing as that information is covered here in it's appropriate sections. The only exception is when that information has an impact on the conversion process in which case it should be condensed into a note.''</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">==Prerequisites==</span></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">--[[User:Rich|Rich]] 23:17</span>, <span class="diffchange">26 January 2007 (CET)</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">* You must have Maya 4.5</span>, <span class="diffchange">5.0 or 6.0.</span></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'><span class="diffchange">* Quake 4 has been reported to have compatability issues with version 5.0 and 6.0 of MayaImportx86.dll</span></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>==<span class="diffchange">Introduction</span>==</td><td>+</td><td class='diff-addedline'>==<span class="diffchange">Setting up Maya</span>==</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">I’ve just finished banging my head against a wall </span>and<span class="diffchange">, with </span>the <span class="diffchange">few brain cells remaining, have figured out how to get animated models </span>into <span class="diffchange">Doom3 with their proper textures applied using Maya</span>. <span class="diffchange">To save you time</span>, <span class="diffchange">energy, aspirin, and band-aids, here’s a quick tutorial on </span>the <span class="diffchange">process</span>. <span class="diffchange">This tutorial covers </span>the <span class="diffchange">following:</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">Download </span>and <span class="diffchange">extract </span>the <span class="diffchange">corresponding version of MayaImportx86.dll </span>into <span class="diffchange">your game's base directory</span>. <span class="diffchange">For instance</span>, the <span class="diffchange">correct location for Doom 3 is C:\Doom3\base</span>.</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'><span class="diffchange">&lt;!-- Is </span>the <span class="diffchange">base directory the correct location? --&gt;</span></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>* <span class="diffchange">The basics of creating a UV map in Maya</span>.</td><td>+</td><td class='diff-addedline'>* <span class="diffchange">http://www</span>.<span class="diffchange">iddevnet.com/doom3/downloads/MayaImportx86_Maya45.zip</span></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>* <span class="diffchange">Creating a (crappy) normal map, specular map and diffuse map</span>.</td><td>+</td><td class='diff-addedline'>* <span class="diffchange">http://www</span>.<span class="diffchange">iddevnet.com/doom3/downloads/MayaImportx86_Maya50.zip</span></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>* <span class="diffchange">Using Maya’s Hypershade to properly apply the textures so that your animated model is textured and lit correctly in Doom3</span>.</td><td>+</td><td class='diff-addedline'>* <span class="diffchange">http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya60</span>.<span class="diffchange">zip</span></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">==Setup and Assumptions==</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">Make sure that Maya's working path is defined in the PATH environment variable. This is done by default when installing Maya, but if for some reason it’s not, the engine will not know where to find the appropriate Maya files it needs to run the export routine.</span></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">This tutorial assumes </span>the <span class="diffchange">following:</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">In Windows XP, you can check and/or modify environment variables in </span>the <span class="diffchange">control panel under system properties.</span></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">* You have Maya 4.5, 5.0 or 6.0. You must have one of these Maya versions in order to export your Maya models/animations into D3’s md5 mesh/anim formats using the exportmodels commands. If you have a different brand of 3D app, check out Doom3World.org to see if someone has created an export utility for your specific software.</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">''Control Panel'' &gt; ''System'' &gt; ''Advanced'' &gt; ''Environment Variables''</span></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">* You know how to model. If you don’t, this tutorial can still be followed if you open up Maya and create a polygon cube… there’s your model =). Otherwise, I suggest checking out SimplyMaya.Com and 3DBuzz.Com for some excellent video tutorials on how to model and animate with Maya.</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">==Utilities==</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">The list you should be concerned with is at the bottom. It is labeled as system variables.</span></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">* ATI NormalMapper and NormalMapperUI Note that Doom3 can also render Normal maps via its renderbump function</span>. <span class="diffchange">However</span>, <span class="diffchange">it requires some extra material file </span>editing <span class="diffchange">and may cause problems for some</span>. <span class="diffchange">To avoid any complications, ATI’s utility will be used. Download and install the software according </span>to the <span class="diffchange">instructions. Then, open Maya and register and activate </span>the <span class="diffchange">plug</span>-<span class="diffchange">in that came with </span>the <span class="diffchange">ATI utlity that corresponds </span>to <span class="diffchange">your </span>Maya <span class="diffchange">version: Maya45NMFExport.mll is used for Maya 4.5, Maya50NMFExport.mll is used for Maya 5.0, etc</span>.</td><td>+</td><td class='diff-addedline'><span class="diffchange">Make sure the path variable's value contains the full working path of your Maya installation</span>. <span class="diffchange">If this information is not here at all</span>, <span class="diffchange">you can add to the end of the path variable manually by </span>editing <span class="diffchange">it</span>. <span class="diffchange">Simply add a semicolon </span>to the <span class="diffchange">end of </span>the <span class="diffchange">string (each PATH item is separated by a semi</span>-<span class="diffchange">colon) followed by </span>the <span class="diffchange">full path </span>to Maya<span class="diffchange">'s executable</span>.</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">==Setting up Maya and Doom3==</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">For instance, if your path variable looked like this...</span></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">===Avoiding Export Errors===</span></td><td>+</td><td class='diff-addedline'><span class="diffchange"> %SystemRoot%\system32;%SystemRoot%</span></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">If you’re having trouble being able to export your </span>.<span class="diffchange">mb or </span>.<span class="diffchange">ma files, here are a few pointers on getting Doom3 and Maya to play together</span>.</td><td>+</td><td class='diff-addedline'>..<span class="diffchange">. after modification it would then look something like this..</span>.</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">First, make sure you have the right MayaImportx86.dll file. There is one file for each version of </span>Maya <span class="diffchange">(</span>4.5<span class="diffchange">, </span>5 <span class="diffchange">and 6)</span>. <span class="diffchange">Visit iddevnet.com to get the version you that corresponds to your </span>Maya <span class="diffchange">version.</span></td><td>+</td><td class='diff-addedline'>Maya 4.5 <span class="diffchange">and </span>5.<span class="diffchange">0:</span></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'><span class="diffchange"> %SystemRoot%\system32;%SystemRoot%;C:\</span>Maya<span class="diffchange">\bin</span></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">* http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya45.zip</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">or</span></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">* http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya50.zip</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">* http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya60.zip</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Second, make sure the Maya binary directory is added to your system path. This is done by default when installing Maya, but if it’s not, D3 will not know where to find the appropriate Maya files it needs to run the export routine when it creates MD5 files. In Windows XP, you can check this by:</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Right-clicking on ''My Computer'' OR ''Start Menu'' ► ''Control Panel'' ► ''Settings'' ► ''System''. This brings you to ''System Properties''. Next, click on the ''Advanced'' tab. At the bottom of this dialog box, click the ''Environment Variables'' button. Under ''System Variables'', highlight the ''PATH'' variable. Click Edit.</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Make sure the variable value contains path information about your Maya installation. If this information is not here at all, you can add to the end of the path variable manually. First, type a semicolon (each PATH item is separated by a semi-colon) and then add the full path to the Maya binary directory.</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Maya 4.5 and 5.0:</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> C:\path-to-your-Maya-installation\bin</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td> </td><td class='diff-context'>Maya 6.0:</td><td> </td><td class='diff-context'>Maya 6.0:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> C:\<span class="diffchange">path-to-your-</span>Maya<span class="diffchange">-6.0-installation\</span></td><td>+</td><td class='diff-addedline'> <span class="diffchange">%SystemRoot%\system32;%SystemRoot%;</span>C:\Maya</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Note </span>the <span class="diffchange">lack of the “bin” directory</span>.</td><td>+</td><td class='diff-addedline'><span class="diffchange">NOTE: Your installation directory may differ from </span>the <span class="diffchange">examples listed above</span>.</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>==<span class="diffchange">Doom3 Materials</span>==</td><td>+</td><td class='diff-addedline'>==<span class="diffchange">Writing the corresponding declarations</span>==</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Doom3 gets its normal map, diffuse map, specular and any other shader-related information from material files. You’ll </span>need to <span class="diffchange">create one in order </span>to <span class="diffchange">bring everything together, although the specifics of material </span>files and <span class="diffchange">how they work are beyond the scope of this tutorial. Here’s a sample that you can </span>use <span class="diffchange">if you’re not familiar </span>with <span class="diffchange">them. Simply copy and paste </span>the <span class="diffchange">following text into a plaintext file called buddy</span>.<span class="diffchange">mtr and place it in your doom3/aolbuddy/materials folder</span>.</td><td>+</td><td class='diff-addedline'><span class="diffchange">You will </span>need to <span class="diffchange">write an export declaration </span>to <span class="diffchange">define what </span>files and <span class="diffchange">parameters to process for </span>use with the <span class="diffchange">exportModels command. For example.</span>..</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'> // AOhelL Buddy Material File</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> models/monsters/buddy/buddy</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> {</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> bumpmap models/monsters/buddy/buddy_local.tga</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> diffusemap models/monsters/buddy/buddy.tga</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> specularmap models/monsters/buddy/buddy_s.tga</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> }</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'></td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>==Doom3 Entities==</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'></td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>Every monster, every light, every model you toss into doom is an entity. Since we’re going to be making an animated model that could possibly be used as a monster (“AOLinvaders?”, “AOLiens?” “Doom3, The Shores of AOhelL?”), we’ll also need to make our model into an entity. Here are the very basics for how to do this. A lot more can be done to give your model some additional functionality, but that’s beyond the scope of this tutorial.</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>First, create a plaintext file called “buddy.def” and place it in the doom3/aolbuddy/def directory.</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>Copy and paste the following into your buddy.def file:</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'></td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> // AOhelL Buddy Entity</td><td colspan="2">&nbsp;</td></tr>
+<tr><td> </td><td class='diff-context'> export buddy {</td><td> </td><td class='diff-context'> export buddy {</td></tr>
+<tr><td> </td><td class='diff-context'> options –game aolbuddy -sourcedir models/monsters/buddy/cycles -destdir models/md5/monsters/buddy</td><td> </td><td class='diff-context'> options –game aolbuddy -sourcedir models/monsters/buddy/cycles -destdir models/md5/monsters/buddy</td></tr>
+<tr><td colspan="2" align="left"><strong>Line 74:</strong></td>
+<td colspan="2" align="left"><strong>Line 50:</strong></td></tr>
+<tr><td> </td><td class='diff-context'> anim buddy_idle.mb</td><td> </td><td class='diff-context'> anim buddy_idle.mb</td></tr>
+<tr><td> </td><td class='diff-context'> }</td><td> </td><td class='diff-context'> }</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>/<span class="diffchange">/ buddy model def</span></td><td>+</td><td class='diff-addedline'>&#160;</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'><span class="diffchange">The syntax of this type of declaration and it's various parameters and options are covered in the respective [[Export_(decl) | export declarations]] article.</span></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>&#160;</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'><span class="diffchange">You will also need to write a model declaration to test and</span>/<span class="diffchange">or use the resulting files in game. For example...</span></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>&#160;</td></tr>
+<tr><td> </td><td class='diff-context'> model monster_buddy {</td><td> </td><td class='diff-context'> model monster_buddy {</td></tr>
+<tr><td> </td><td class='diff-context'> mesh models/md5/monsters/buddy/buddy.md5mesh</td><td> </td><td class='diff-context'> mesh models/md5/monsters/buddy/buddy.md5mesh</td></tr>
+<tr><td> </td><td class='diff-context'> anim idle models/md5/monsters/buddy/buddy_idle.md5anim</td><td> </td><td class='diff-context'> anim idle models/md5/monsters/buddy/buddy_idle.md5anim</td></tr>
+<tr><td> </td><td class='diff-context'> }</td><td> </td><td class='diff-context'> }</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> // buddy entity def</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> entityDef monster_buddy {</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> &quot;inherit&quot; &quot;monster_default&quot;</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> &quot;scriptobject&quot; &quot;monster_zombie&quot;</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> // we’re not covering creating a new ai script file,</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> // so just use the default zombie one for now...</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> &quot;model&quot; &quot;monster_buddy&quot;</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> &quot;size&quot; &quot;32 32 68&quot;</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> &quot;use_aas&quot; &quot;aas48&quot;</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> &quot;team&quot; &quot;1&quot;</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> &quot;rank&quot; &quot;0&quot;</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> &quot;health&quot; &quot;25&quot;</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> // the values (upper_back, etc.) correspond to bone names</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> // within your model. Use the asterisks (*) to specify</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> // all child bones below the specified bone. Or, use</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> // a minus and asterisks (-*) to specify a range of</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> // bones NOT to include</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> &quot;damage_zone head&quot; &quot;*upper_back&quot;</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> &quot;damage_zone chest&quot; &quot;*mid_back -*upper_back&quot;</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> &quot;damage_zone left_arm&quot; &quot;*l_shoulderblade&quot;</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> &quot;damage_zone right_arm&quot; &quot;*r_shoulderblade&quot;</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> &quot;damage_zone legs&quot; &quot;*hip origin pelvis&quot;</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> &quot;damage_scale head&quot; &quot;2&quot;</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> &quot;anim&quot; &quot;idle&quot;</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> &quot;mass&quot; &quot;50&quot;</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> }</td><td colspan="2">&nbsp;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'> // EOF</td><td colspan="2">&nbsp;</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Okay</span>, this <span class="diffchange">file warrants some explanation. First, we have the export directive, which tells Doom3 to try to create mesh </span>and <span class="diffchange">anim files if they don’t already exist. Any </span>and <span class="diffchange">all options are… well, optional. However, the –sourcedir and –destdir </span>options are <span class="diffchange">helpful for keeping your files organized. Next, </span>the <span class="diffchange">format of the export line is fairly self-explanatory, but here’s a quick overview of the syntax </span>(<span class="diffchange">the –dest parameter is optional</span>)<span class="diffchange">:</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">Again</span>, <span class="diffchange">the syntax of </span>this <span class="diffchange">type of declaration </span>and <span class="diffchange">it's various parameters </span>and options are <span class="diffchange">covered in </span>the <span class="diffchange">respective [[Model_</span>(<span class="diffchange">decl</span>) <span class="diffchange">| model declarations]] article.</span></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> &lt;exportType&gt; &lt;mayaModelOrAnim&gt; -dest &lt;newNameForMD5MeshOrAnim&gt;</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">==Model Setup==</span></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">In this example, when the export completes successfully, Doom3 will create two files: buddy</span>.<span class="diffchange">md5mesh and buddy_idle.md5anim. The mesh is given </span>the <span class="diffchange">filename “buddy” instead </span>of <span class="diffchange">“buddy_idle” by using the –dest parameter</span>.</td><td>+</td><td class='diff-addedline'><span class="diffchange">* Your model must be comprised of triangles</span>. <span class="diffchange">This can be accomplished by selecting </span>the <span class="diffchange">whole </span>of <span class="diffchange">your model and clicking ''Polygons'' &gt; ''Triangulate''</span>.</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Next</span>, <span class="diffchange">we have </span>the model <span class="diffchange">definition</span>. <span class="diffchange">In it, we specify the mesh and animation names, and pair them with the corresponding .md5mesh and .md5anim files. The names given here are what you will use to refer </span>to <span class="diffchange">animations within </span>the <span class="diffchange">editor or elsewhere</span>. In other words, <span class="diffchange">your animation names recognized by Doom3 don’t necessarily have to </span>be the <span class="diffchange">same as </span>your <span class="diffchange">filenames</span>. <span class="diffchange">You can also use curly braces { . . . } after the path to </span>your <span class="diffchange">md5anim file </span>to <span class="diffchange">insert code that specifies events that should happen on particular frames of an animation. For example, if a monster should attack on </span>the <span class="diffchange">16th frame of a melee_attack animation in order </span>to <span class="diffchange">cause damage at </span>the <span class="diffchange">exact frame in an animation that shows the monster’s arm outstretched in a punch, you can include that information here. Read through some other monster def files to see how this is done or to learn about this feature in more detail. This method also works to specify the animation frames when footstep sounds should be played, script functions should be called, etc</span>.</td><td>+</td><td class='diff-addedline'><span class="diffchange">* Your model must have an origin bone</span>, <span class="diffchange">preferably located at </span>the model<span class="diffchange">'s base for ground based actors</span>. <span class="diffchange">Your model's skeletal hierarchy must be parented </span>to the <span class="diffchange">origin bone</span>. In other words, <span class="diffchange">the origin bone must </span>be the <span class="diffchange">root bone in </span>your <span class="diffchange">hierarchy</span>. <span class="diffchange">This bone must be created and linked in </span>your <span class="diffchange">skeletal hierarchy prior </span>to <span class="diffchange">binding </span>the <span class="diffchange">skeleton </span>to the <span class="diffchange">model</span>.</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">And finally, we have the entity definition. Now, defining our AOhelL guy as an entity isn’t actually required in order to be able to test the model. However, these few additional lines will allow us to add an army of AOheL Buddies to a map via the map editor. Of course, again, this is a very stripped down entity, and it won’t have the brains to do much. In fact, </span>all <span class="diffchange">it will do is get the model into the game, stand there, and face you when you’re close enough</span>.</td><td>+</td><td class='diff-addedline'><span class="diffchange">* You must ensure </span>all <span class="diffchange">discontinuous meshes are parented</span>.</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">That does it for all of the various text files needed</span>. <span class="diffchange">Now on to the fun stuff!</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">* Your model must be UV mapped</span>.</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">==My Buddy==</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">* Your model must be assigned a lambert material via the Hypershade window. This material's filter type must be Quadratic and it must derive it's diffuse or color texture from an image map.</span></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">The AOhelL Buddy can be made really easily. Basically</span>, <span class="diffchange">my version is a squashed poly cylinder for </span>the <span class="diffchange">head with a poly cube that has been beveled at the shoulders </span>and <span class="diffchange">extruded for </span>the <span class="diffchange">appendages. I kept it very simple for the purposes of this tutorial. If you want </span>to <span class="diffchange">see a quick visual overview of how Buddy was made, check </span>the <span class="diffchange">Appendix</span>. <span class="diffchange">Here’s Buddy, bones and all (without the origin):</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">* You must triangulate the mesh</span>, <span class="diffchange">freeze transformations, delete </span>the <span class="diffchange">history, </span>and <span class="diffchange">bind </span>the <span class="diffchange">skeleton </span>to the <span class="diffchange">model in that order</span>.</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>* You must save your model in .mb (Maya Binary) format.</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">For a great tutorial on skeleton setups, check out Building a Walk Cycle in Maya by Shawne Baines.</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">==Conversion==</span></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Three final steps before we move on: First</span>, <span class="diffchange">Doom3 works with Triangles</span>. <span class="diffchange">Our model here is in Quads</span>. <span class="diffchange">So, for compatibility’s sake, make sure to Triangulate your model. Select the head and the body and click Polygons ►Triangulate</span>.</td><td>+</td><td class='diff-addedline'><span class="diffchange">Start the game</span>, <span class="diffchange">bring down the console and type</span>...</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Second, make sure you have one final bone located at the model’s base. Think of this bone as something that will drag on the ground as the model moves around. Now rename this bone origin and make the parent/root bone of the entire hierarchy. Doom3 will use this for positional reference when animating the model. Note that we have NOT bound any bones to our model yet!</span></td><td>+</td><td class='diff-addedline'><span class="diffchange"> exportModels [filename]</span></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">And third, select </span>the <span class="diffchange">head, then select </span>the <span class="diffchange">body </span>and <span class="diffchange">press P to parent </span>the <span class="diffchange">head to the body. That way, our Buddy won’t lose his head…</span>.</td><td>+</td><td class='diff-addedline'><span class="diffchange">Filename refers to </span>the <span class="diffchange">declaration file containing your export declaration. For a more detailed description of </span>the <span class="diffchange">command </span>and <span class="diffchange">acceptable parameters visit </span>the <span class="diffchange">corresponding [[Exportmodels_(console_command) | exportModels]] article</span>.</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">==UV Maps</span>, <span class="diffchange">The Crappy Way==</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">If all goes well</span>, <span class="diffchange">your model and animations will be exported to the MD5 format.</span></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">So now that we have our model built, boned and triangulated, so let’s add some color to it. Before we can do that, however, we need to create a UV map for our model. I’m going to take the easy way out in this tutorial, considering how simple our model is and that UV mapping is not the point of this tutorial. Therefore, I’ll just use Maya’s automatic mapping function. Select both the head and body:</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">==Testing==</span></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Edit Polygons ► Texture ► Automatic Mapping (Options)</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">Before testing it's good practice </span>to ensure the <span class="diffchange">resulting MD5mesh references </span>the <span class="diffchange">material shader </span>you <span class="diffchange">wish </span>to <span class="diffchange">use</span>. You can <span class="diffchange">verify that </span>by <span class="diffchange">opening </span>the <span class="diffchange">MD5mesh </span>in a <span class="diffchange">text editor </span>and <span class="diffchange">looking for </span>the <span class="diffchange">shader line</span>. <span class="diffchange">It </span>will <span class="diffchange">look something </span>like so...</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">In Options Panel: Spacing Presets: 1024 Map</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">This will create a UV map that will look quite disgusting. Opening the UV Texture Editor will allow you </span>to <span class="diffchange">view your UV mess… er map. Make sure both the head and body of Buddy are selected.</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Window ► UV Texture Editor</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">If you don’t see anything but a blank graph, you either don’t have any objects selected or you didn’t create a UV map. Otherwise, you should see a nice jumble of lines. Now, as for the easy way out, I’m going to just resize the UVs so everything fits nicely. Normally, though, you would spend quite a lot of time refining your UV maps so they would be useful in a 2D paint program. Also, in a more complex model, simply scaling down the UV map is really not a good idea, as quite a lot of detail will be lost when it’s projected onto your model. Anyway, here as a before and after shot:</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Original UV Map</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">UV Map Reorganized</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Note: You can manipulate UVs by selecting an object, which will make its UVs appear in the UV Texture Editor. Then you can right-click over the UVs and choose UV from the Marking Menu. This will </span>ensure <span class="diffchange">that you’re editing </span>the <span class="diffchange">UVs and not </span>the <span class="diffchange">geometry itself. Now </span>you <span class="diffchange">can select, move, rotate and scale UVs just like anything else in Maya. Also, when dealing with Uvs, make sure you do NOT go beyond the +0.0 </span>to <span class="diffchange">+1.0 quadrant (upper right) of the graph. Anything outside these bounds will typically mess up what you’re trying to do.</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Okay, so now you have a low-poly model with a UV Map. In order to create a Normal map, however, we’re going to need a high-poly version. Again, glossing over things for the sake of sticking to the point of the tutorial, all I did to create a “high-poly” model was to Polygons ► Smooth out the head portion of the Buddy model. Yup, it’s lame-tastic!</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Now File ► Export your high- and low-poly models to the .nmf format (*.nmf should be listed in the file types as long as you’ve correctly installed the NMF plug-in that came with the ATI NormalMapper utility).</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Now, open ATI’s NormalMapperUI. If it’s your first time running it, it will ask you to find the NormalMapper executable. Once that step is competed, you’ll be presented with the GUI. Under 3D Data Files, browse and locate your low- and high-poly models. Under Output File, set your Output Path to doom3/aolbuddy/models/monsters/buddy. Name the file buddy_local.tga. Under Antialiasing Amount, adjust the slider two ticks from the left (or at least so that it is not set on min). Click Create Normal Map</span>. You <span class="diffchange">should see a command prompt open and the utility will run. Once it is finished (or while it’s running) we need to make 3 more images. Open up Photoshop or your favorite image editor and create one 512x512 image with RGB 128, 128, 128. This is our specular map. Name this file buddy_s.tga and put it in your doom3/aolbuddy/models/monsters/buddy directory. Again, create a 512x512 image, but this time use RGB 237, 207, 43 and name the file buddy.tga, saving it to your doom3/aolbuddy/models/monsters/buddy directory. This is our diffuse map. If you want, you </span>can <span class="diffchange">get a bit more creative than just a bright, solid yellow color. Feel free to go wild with Photoshop or whatever utility you choose to create a detailed diffuse map. My favorite is DeepPaint 3D from Right Hemisphere. You now have all of the materials mentioned in the buddy.mtr file plus the buddy.tga. So, now we’re finally to the point of this whole tutorial… slapping all of this stuff together.</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">==In Living Color==</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">===Hypershade===</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Color, textures and shaders are all handled in Maya </span>by the <span class="diffchange">Hypershade utility. When you first start using it, it may be a little… mysterious. But, like most things </span>in <span class="diffchange">Maya, once you get </span>a <span class="diffchange">handle on it, it makes a whole lot of sense... hopefully. So let’s open the Hypershade:</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Window ►Rendering Editors ► Hypershade</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">By default, Maya creates a lambert, a particleCloud </span>and <span class="diffchange">a shaderGlow material. Don’t remove or modify these, as they handle how newly created objects appear. You have been warned. The Hypershade is split into two main windows. On top are </span>the <span class="diffchange">elements that currently exist</span>. <span class="diffchange">On the bottom is your work area. Any single item that is being worked on </span>will <span class="diffchange">often exist in both places, so don’t get confused thinking you have multiple copies of everything. Also, as with most areas in Maya, the pan, zoom, etc. functions work just </span>like <span class="diffchange">they do elsewhere.</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">==Raw Materials==</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">First, we need to create a material… and by the way, this is the important part of the tutorial.</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Click Create ► Materials ► Lambert</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">This will add lambert1 to the top and bottom sections of the Hypershade window. You can rename this material by holding CTRL + double-clicking on its name. I renamed mine “buddy” because I’m </span>so <span class="diffchange">amazingly witty</span>. <span class="diffchange">Double-click the new Lambert material to open the Attribute Editor</span>. <span class="diffchange">Under Lambert Attributes, click the input (checkered) box to the right of Color</span>. <span class="diffchange">This will open a new window, Create Render Node. Under 2D Textures, make sure that the “Normal” radio button is selected. Now click File. Ensure that the Filter Type is “Quadraic. Now, for Image Name, browse to your buddy.tga file and select it. Close the Attribute Editor.</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Accoridng to iddevnet.com, Doom3 gets its material information from the “Diffuse” channel and not the “Color’ channel. However, I’ve tested it, and it does seem to work if you just fill out the Color channel information, like we did above. If you have problems, follow the steps above but use the Diffuse channel instead of Color.</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Now that our material has been created, we just simply need to apply it to our model. Keeping the Hypershade window open, select the Buddy model pieces (head and body). Now, right-click on the buddy material we’ve created and choose “Apply Material to Selection”. The Buddy model should turn the same shade of yellow as the buddy material, indicating that the material has been applied.</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">==Finally!==</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">And, finally… we get to perform the last steps to actually getting this sucker into Doom3. First, we have to take care of a few compatibility issues regarding Doom3 model and animation exports. Select the Buddy model. Now:</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Modify ► Freeze Transformations</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">And: Edit ► Delete By Type ► History</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">So again, make sure you have triangulated your mesh, performed Freeze Transformations, and then deleted the history. Without doing these three things in that order, your export will likely fail.</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">The last step in creating an animated model is to bind our bones to our model. Select the Buddy model and all of the bones. Then choose:</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Skin ► Bind Skin ► Smooth Bind</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Save the file as buddy_idle.mb in your doom3/aolbuddy/models/monsters/buddy directory.</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">A quick note about special bones and animated characters in Doom3: The origin bone should the root of your model. Check out any Doom3 monster in a model viewer that allows you to view bones to see how this should be done or open up a map with a monster in it and use the r_showSkel 1 console command to view the bone structure and names.</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">And now, the moment you’ve probably fallen asleep waiting to get to, reading through this long-assed tutorial… start Doom3 and run...</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> exportModels monster_buddy.def</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">...in the console. If all goes well, your model will be exported to the MD5 format, giving you a buddy.md5mesh and a buddy_idle.md5anim file. Since we used the –game option in our export definition, the shader path in the mesh that points to the Doom3 material information should be correct.</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">You can check for and/or fix this manually if you open up your md5mesh in a text editor and look for these lines (they should be just below your list of joints):</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td> </td><td class='diff-context'> mesh {</td><td> </td><td class='diff-context'> mesh {</td></tr>
+<tr><td colspan="2" align="left"><strong>Line 211:</strong></td>
+<td colspan="2" align="left"><strong>Line 98:</strong></td></tr>
+<tr><td> </td><td class='diff-context'> }</td><td> </td><td class='diff-context'> }</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Note how this shader “…” value in </span>your <span class="diffchange">mesh is the same as the first line in your buddy.mtr file. This is how Doom3 references the resources listed </span>in the .<span class="diffchange">mtr file with </span>your model<span class="diffchange">. If you have </span>the <span class="diffchange">same shader value as above, close </span>the <span class="diffchange">.md5mesh without making any changes. Otherwise, edit the shader value to match what is shown here</span>.</td><td>+</td><td class='diff-addedline'><span class="diffchange">To test </span>your <span class="diffchange">new creation, type [[Reloadmodels_(console_command) | reloadModels]] </span>in the <span class="diffchange">console and then load a map</span>. <span class="diffchange">Next, center </span>your <span class="diffchange">view so that the test </span>model <span class="diffchange">is not spawned in </span>the <span class="diffchange">floor (or type [[Centerview_(console_command) | centerview]] in </span>the <span class="diffchange">console)</span>.</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">To test your new creation, type reloadModels in the console and then load a map. Next, look up slightly so your Buddy doesn’t get created in the floor (or type “centerview” in the console). </span>Now, bring down the console and type<span class="diffchange">:</span></td><td>+</td><td class='diff-addedline'>Now, bring down the console and type <span class="diffchange">[[Testmodel_(console_command) | testModel]] followed by the name of your model declaration.</span></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> testmodel monster_buddy</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">Your model </span>should appear properly lit and colored. If you happened to <span class="diffchange">export and define animations for </span>your model <span class="diffchange">via the corresponding parameters </span>in <span class="diffchange">both your export and model declarations</span>, you can cycle through <span class="diffchange">these </span>animations by typing <span class="diffchange">[[Nextanim_(console_command) | nextAnim]] </span>in the console.</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">You </span>should <span class="diffchange">see your brand new Buddy </span>appear <span class="diffchange">in all of his glory. He should be </span>properly lit<span class="diffchange">/shadowed </span>and colored<span class="diffchange">, too</span>. If you happened to <span class="diffchange">animate </span>your model <span class="diffchange">(I didn’t discuss it at all </span>in <span class="diffchange">the tutorial)</span>, you can cycle through <span class="diffchange">your </span>animations by typing <span class="diffchange">“nextanim” </span>in the console.</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">That’s about it for this tutorial. Read further for a few troubleshooting tips. I hope this tutorial helped make the whole process of getting an animated character into Doom3 a bit easier.</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">Good luck and happy modding!</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td> </td><td class='diff-context'>==Troubleshooting==</td><td> </td><td class='diff-context'>==Troubleshooting==</td></tr>
+<tr><td colspan="2" align="left"><strong>Line 227:</strong></td>
+<td colspan="2" align="left"><strong>Line 108:</strong></td></tr>
+<tr><td> </td><td class='diff-context'>If something doesn’t work correctly, here are a few things to check:</td><td> </td><td class='diff-context'>If something doesn’t work correctly, here are a few things to check:</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>===<span class="diffchange">MD5 Export Failure</span>===</td><td>+</td><td class='diff-addedline'>===<span class="diffchange">Common Error Messages</span>===</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">The errors reported by the export process are fairly good at helping you track down a problem… so:</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">If D3 mentions something about UVs, you probably don’t have a UV map associated with your low-poly model.</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">If it says something about too many faces on your object, you probably forgot to triangulate (your model is using quads, which Doom3 can’t read).</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&#160;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">If it says something about missing skin clusters, you probably forgot to bind your bones to your model’s skin.</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>If Doom3 crashes altogether, make sure that you <span class="diffchange">performed a Modify ► Freeze Transformations</span>, <span class="diffchange">then Delete By Type ►History </span>and <span class="diffchange">then </span>bound your <span class="diffchange">bones </span>to your <span class="diffchange">model via Skin ► Bind Skin ► Smooth Bind</span>.</td><td>+</td><td class='diff-addedline'><span class="diffchange">* </span>If <span class="diffchange">the error message mentions something about UVs, you probably don’t have a UV map as
+
+
+
+
+<!--
+     FILE ARCHIVED ON 23:18:05 Jul 29, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 2:35:50 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,766 @@
+DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex,follow" />
+<meta name="keywords" content="User:PyBot,Rich,Entity Listing" />
+<link rel="shortcut icon" href="/web/20070729231805im_/http://modwiki.net/favicon.ico" />
+<link title="Creative Commons" type="application/rdf+xml" href="/w/index.php?title=User:PyBot&amp;action=creativecommons" rel="meta" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<title>User:PyBot - modwiki</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20070729231805cs_/http://modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/web/20070729231805cs_/http://modwiki.net/w/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/w/skins/monobook/IE70Fixes.css?1";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
+		<script type="text/javascript" src="/web/20070729231805js_/http://modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20070729231805js_/http://modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/web/20070729231805cs_/http://modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231805cs_/http://modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231805cs_/http://modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns-2 ltr">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app16.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/modwiki.net\/w\/index.php?title=User:PyBot&diff=prev&oldid=10675";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "29";
+var displayMonth = "Jul";
+var displayYear = "2007";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://modwiki.net/w/index.php?title=User:PyBot&amp;diff=prev&amp;oldid=10675" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20070729231805" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jun
+                       
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 23:18:05 Jul 29, 2007">JUL</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Aug
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_prv_off.png" alt="Previous capture" width="14" height="16" border="0" />
+                       
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 23:18:05 Jul 29, 2007">29</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2006
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 23:18:05 Jul 29, 2007">2007</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2008
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20070729231805*/http://modwiki.net/w/index.php?title=User:PyBot&amp;diff=prev&amp;oldid=10675" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>1 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">29 Jul 07 - 29 Jul 07</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:6:000000100000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000_2014:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">User:PyBot</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From modwiki</h3>
+			<div id="contentSub">(Difference between revisions)</div>
+									<div id="jump-to-nav">Jump to: <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User:PyBot&amp;diff=prev&amp;oldid=10675#column-one">navigation</a>, <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User:PyBot&amp;diff=prev&amp;oldid=10675#searchInput">search</a></div>			<!-- start content -->
+			
+			<table border='0' width='98%' cellpadding='0' cellspacing='4' class='diff'>
+			<tr>
+				<td colspan='2' width='50%' align='center' class='diff-otitle'><strong><a href='/web/20070729231805/http://modwiki.net/w/index.php?title=User:PyBot&amp;oldid=7932'>Revision as of 05:37, 4 October 2007</a></strong><br /><a href="/web/20070729231805/http://modwiki.net/wiki/User:Rich" title="User:Rich">Rich</a>  (<a href="/web/20070729231805/http://modwiki.net/wiki/User_talk:Rich" title="User talk:Rich">Talk</a> | <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Contributions&amp;target=Rich" title="Special:Contributions">contribs</a>)<br /> <span class='comment'>(usage, configuration, and source code)</span><br /><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User:PyBot&amp;diff=prev&amp;oldid=7932" title="User:PyBot" id="differences-prevlink">? Previous diff</a></td>
+				<td colspan='2' width='50%' align='center' class='diff-ntitle'><strong><a href='/web/20070729231805/http://modwiki.net/wiki/User:PyBot'>Current revision</a></strong><br /><a href="/web/20070729231805/http://modwiki.net/wiki/User:Rich" title="User:Rich">Rich</a>  (<a href="/web/20070729231805/http://modwiki.net/wiki/User_talk:Rich" title="User talk:Rich">Talk</a> | <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Contributions&amp;target=Rich" title="Special:Contributions">contribs</a>) <br /> <span class='comment'>(Updated source code)</span><br /></td>
+			</tr>
+			<tr><td colspan="2" align="left"><strong>Line 85:</strong></td>
+<td colspan="2" align="left"><strong>Line 85:</strong></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td> </td><td class='diff-context'>&lt;pre&gt;</td><td> </td><td class='diff-context'>&lt;pre&gt;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>&quot;&quot;&quot; idTech 4 data visualization script &quot;&quot;&quot;</td><td>+</td><td class='diff-addedline'>&quot;&quot;&quot; idTech 4 data visualization script &quot;&quot;&quot;</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>import os</td><td>+</td><td class='diff-addedline'>import os</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>import fileinput</td><td>+</td><td class='diff-addedline'>import fileinput</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>import re</td><td>+</td><td class='diff-addedline'>import re</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>import wikipedia</td><td>+</td><td class='diff-addedline'>import wikipedia</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span># create compiled regex</td><td>+</td><td class='diff-addedline'># create compiled regex</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>entdef = re.compile(r'entityDef\s(\w*)\s{([^}]*)}')</td><td>+</td><td class='diff-addedline'>entdef = re.compile(r'entityDef\s(\w*)\s{([^}]*)}')</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>kvpair = re.compile(r'\n\s{0,10}&quot;([^&quot;]*)&quot;\s*&quot;([^&quot;]*)&quot;')</td><td>+</td><td class='diff-addedline'>kvpair = re.compile(r'\n\s{0,10}&quot;([^&quot;]*)&quot;\s*&quot;([^&quot;]*)&quot;')</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>prefix = re.compile(r'(\w*)[\x20\t](\w*)')</td><td>+</td><td class='diff-addedline'>prefix = re.compile(r'(\w*)[\x20\t](\w*)')</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>clsmethod = re.compile(r'(\w*)::\w*\([^)]*\)\s*(?:\w*\s)?{([^\xBF]*?(?&lt;=\n))}')</td><td>+</td><td class='diff-addedline'>clsmethod = re.compile(r'(\w*)::\w*\([^)]*\)\s*(?:\w*\s)?{([^\xBF]*?(?&lt;=\n))}')</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>spnarg = re.compile(r'spawnArgs\.[^(]*\(\s&quot;(\w*)')</td><td>+</td><td class='diff-addedline'>spnarg = re.compile(r'spawnArgs\.[^(]*\(\s&quot;(\w*)')</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>clsdec = re.compile(r'CLASS_DECLARATION\(\s([^,]*),\s([^)]*?)\s\)')</td><td>+</td><td class='diff-addedline'>clsdec = re.compile(r'CLASS_DECLARATION\(\s([^,]*),\s([^)]*?)\s\)')</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>print 'Parsing entity declarations...'</td><td>+</td><td class='diff-addedline'>print 'Parsing entity declarations...'</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span># create list of def files</td><td>+</td><td class='diff-addedline'># create list of def files</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>defpath = &quot;E:\\<span class="diffchange">Doom3 </span>Assets\\def&quot;</td><td>+</td><td class='diff-addedline'>defpath = &quot;E:\\<span class="diffchange">Quake4 </span>Assets\\def&quot;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>deflist = list()</td><td>+</td><td class='diff-addedline'>deflist = list()</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>for (path, dname, fnames) in os.walk(defpath):</td><td>+</td><td class='diff-addedline'>for (path, dname, fnames) in os.walk(defpath):</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>for fn in fnames:</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>for fn in fnames:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>if fn.endswith(&quot;.def&quot;):</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>if fn.endswith(&quot;.def&quot;):</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">             </span>deflist.append(os.path.join(path, fn))</td><td>+</td><td class='diff-addedline'><span class="diffchange">            </span>deflist.append(os.path.join(path, fn))</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span># load contents of all def files into string</td><td>+</td><td class='diff-addedline'># load contents of all def files into string</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>defstring = str()</td><td>+</td><td class='diff-addedline'>defstring = str()</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>for line in fileinput.input(deflist):</td><td>+</td><td class='diff-addedline'>for line in fileinput.input(deflist):</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>defstring = defstring + line</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>defstring = defstring + line</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span># create list comprised of entity name and body</td><td>+</td><td class='diff-addedline'># create list comprised of entity name and body</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>match = re.findall(entdef, defstring)</td><td>+</td><td class='diff-addedline'>match = re.findall(entdef, defstring)</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span># parse each element in match feeding a list of key names,</td><td>+</td><td class='diff-addedline'># parse each element in match feeding a list of key names,</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span># the value of inherit, and the value of spawnclass into</td><td>+</td><td class='diff-addedline'># the value of inherit, and the value of spawnclass into</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span># a dictionary entry under the name of the entity.</td><td>+</td><td class='diff-addedline'># a dictionary entry under the name of the entity.</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>entdata = dict()</td><td>+</td><td class='diff-addedline'>entdata = dict()</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>for x in match:</td><td>+</td><td class='diff-addedline'>for x in match:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>name = x[0]</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>name = x[0]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>temp = dict(re.findall(kvpair, x[1]))</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>temp = dict(re.findall(kvpair, x[1]))</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>keys = temp.keys()</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>keys = temp.keys()</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>if 'inherit' in temp:</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>if 'inherit' in temp:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>inherit = temp['inherit']</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>inherit = temp['inherit']</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>else:</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>else:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>inherit = 'null'</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>inherit = 'null'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>if 'spawnclass' in temp:</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>if 'spawnclass' in temp:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>spawnclass = temp['spawnclass']</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>spawnclass = temp['spawnclass']</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>else:</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>else:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>spawnclass = 'null'</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>spawnclass = 'null'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>sdk = 0</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>sdk = 0</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>entdata[name] = [keys, inherit, spawnclass, sdk]</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>entdata[name] = [keys, inherit, spawnclass, sdk]</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>print 'Parsing source code...'</td><td>+</td><td class='diff-addedline'>print 'Parsing source code...'</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span># create list of source files</td><td>+</td><td class='diff-addedline'># create list of source files</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>srcpath = &quot;E:\\<span class="diffchange">D3_SDK</span>\\<span class="diffchange">src</span>&quot;</td><td>+</td><td class='diff-addedline'>srcpath = &quot;E:\\<span class="diffchange">Q4_SDK</span>\\<span class="diffchange">source</span>&quot;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>srclist = list()</td><td>+</td><td class='diff-addedline'>srclist = list()</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>for (path, dname, fnames) in os.walk(srcpath):</td><td>+</td><td class='diff-addedline'>for (path, dname, fnames) in os.walk(srcpath):</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>for fn in fnames:</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>for fn in fnames:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>if fn.endswith(&quot;.cpp&quot;):</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>if fn.endswith(&quot;.cpp&quot;):</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">             </span>srclist.append(os.path.join(path, fn))</td><td>+</td><td class='diff-addedline'><span class="diffchange">            </span>srclist.append(os.path.join(path, fn))</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span># load contents of all source files into string</td><td>+</td><td class='diff-addedline'># load contents of all source files into string</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>srcstring = str()</td><td>+</td><td class='diff-addedline'>srcstring = str()</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>for line in fileinput.input(srclist):</td><td>+</td><td class='diff-addedline'>for line in fileinput.input(srclist):</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>srcstring = srcstring + line</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>srcstring = srcstring + line</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span># create list comprised of classes and code to check for spawnargs</td><td>+</td><td class='diff-addedline'># create list comprised of classes and code to check for spawnargs</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>match = re.findall(clsmethod, srcstring)</td><td>+</td><td class='diff-addedline'>match = re.findall(clsmethod, srcstring)</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span># parse each element in match feeding a list of key names,</td><td>+</td><td class='diff-addedline'># parse each element in match feeding a list of key names,</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span># a null value for inherit, and a null value for spawnclass</td><td>+</td><td class='diff-addedline'># a null value for inherit, and a null value for spawnclass</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span># into a dictionary entry under the name of the class.</td><td>+</td><td class='diff-addedline'># into a dictionary entry under the name of the class.</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>for x in match:</td><td>+</td><td class='diff-addedline'>for x in match:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>name = x[0]</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>name = x[0]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>keys = re.findall(spnarg, x[1])</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>keys = re.findall(spnarg, x[1])</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>if name in entdata:</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>if name in entdata:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>keys = <span class="diffchange">keys + </span>entdata[name][0]</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>keys <span class="diffchange">+</span>= entdata[name][0]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>inherit = 'null'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>inherit = 'null'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>spawnclass = 'null'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>spawnclass = 'null'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>sdk = 1</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>sdk = 1</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>entdata[name] = [keys, inherit, spawnclass, sdk]</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>entdata[name] = [keys, inherit, spawnclass, sdk]</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span># create list comprised of class declarations where one class is</td><td>+</td><td class='diff-addedline'># create list comprised of class declarations where one class is</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span># derived from another.</td><td>+</td><td class='diff-addedline'># derived from another.</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>match = re.findall(clsdec, srcstring)</td><td>+</td><td class='diff-addedline'>match = re.findall(clsdec, srcstring)</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span># parse each element in match feeding the parent class name into</td><td>+</td><td class='diff-addedline'># parse each element in match feeding the parent class name into</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span># the inherit property.</td><td>+</td><td class='diff-addedline'># the inherit property.</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>for x in match:</td><td>+</td><td class='diff-addedline'>for x in match:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>name = x[1]</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>name = x[1]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>inherit = x[0]</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>inherit = x[0]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     if name in entdata:</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">    keys = []</span></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>entdata[name<span class="diffchange">][1</span>] = inherit</td><td>+</td><td class='diff-addedline'><span class="diffchange">    spawnclass = 0</span></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'><span class="diffchange">    sdk = 1</span></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>entdata[name] = <span class="diffchange">[keys, </span>inherit<span class="diffchange">, spawnclass, sdk]</span></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span># recursive function to return a list depicting the inheritance of</td><td>+</td><td class='diff-addedline'># recursive function to return a list depicting the inheritance of</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span># an entity or class</td><td>+</td><td class='diff-addedline'># an entity or class</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>def getInherit(name = '', templist = None):</td><td>+</td><td class='diff-addedline'>def getInherit(name = '', templist = None):</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>if templist is None:</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>if templist is None:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>templist = []</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>templist = []</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>templist.append(name)</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>templist.append(name)</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>if entdata[name][1] == 'null':</td><td>+</td><td class='diff-addedline'><span class="diffchange">    if name in entdata:</span></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>if entdata[name][2] == 'null':</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>if entdata[name][1] == 'null':</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">             </span>pass</td><td>+</td><td class='diff-addedline'><span class="diffchange">            </span>if entdata[name][2] == 'null':</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>else:</td><td>+</td><td class='diff-addedline'><span class="diffchange">                </span>pass</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">             </span>return getInherit(entdata[name][2], templist)</td><td>+</td><td class='diff-addedline'><span class="diffchange">            </span>else:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>else:</td><td>+</td><td class='diff-addedline'><span class="diffchange">                </span>return getInherit(entdata[name][2], templist)</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>return getInherit(entdata[name][1], templist)</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>else:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>return templist</td><td>+</td><td class='diff-addedline'><span class="diffchange">            </span>return getInherit(entdata[name][1], templist)</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>return templist</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span># compiles a list of all available keys including those inherited</td><td>+</td><td class='diff-addedline'># compiles a list of all available keys including those inherited</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>def getKeys(name = ''):</td><td>+</td><td class='diff-addedline'>def getKeys(name = ''):</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>templist = getInherit(name)</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>templist = getInherit(name)</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>keys = []</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>keys = []</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>while templist:</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>while templist:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>name = templist.pop()</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>name = templist.pop()</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>keys = keys + entdata[name][0]</td><td>+</td><td class='diff-addedline'><span class="diffchange">        if name in entdata:</span></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>temp = []</td><td>+</td><td class='diff-addedline'><span class="diffchange">            </span>keys = keys + entdata[name][0]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>for x in keys:</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>temp = []</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>if x in temp:</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>for x in keys:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">             </span>pass</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>if x in temp:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>else:</td><td>+</td><td class='diff-addedline'><span class="diffchange">            </span>pass</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">             </span>if re.match(prefix, x):</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>else:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">                 </span>temp1 = re.findall(prefix, x)</td><td>+</td><td class='diff-addedline'><span class="diffchange">            </span>if re.match(prefix, x):</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">                 </span>if temp1[0][0] + ' XXXX' in temp:</td><td>+</td><td class='diff-addedline'><span class="diffchange">                </span>temp1 = re.findall(prefix, x)</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">                     </span>pass</td><td>+</td><td class='diff-addedline'><span class="diffchange">                </span>if temp1[0][0] + ' XXXX' in temp:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">                 </span>else:</td><td>+</td><td class='diff-addedline'><span class="diffchange">                    </span>pass</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">                     </span>temp.append(temp1[0][0] + ' XXXX')</td><td>+</td><td class='diff-addedline'><span class="diffchange">                </span>else:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">                     </span>if temp1[0][0] in temp:</td><td>+</td><td class='diff-addedline'><span class="diffchange">                    </span>temp.append(temp1[0][0] + ' XXXX')</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">                         </span>temp.remove(temp1[0][0])</td><td>+</td><td class='diff-addedline'><span class="diffchange">                    </span>if temp1[0][0] in temp:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">             </span>else:</td><td>+</td><td class='diff-addedline'><span class="diffchange">                        </span>temp.remove(temp1[0][0])</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">                 </span>temp.append(x)</td><td>+</td><td class='diff-addedline'><span class="diffchange">            </span>else:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>temp.sort()</td><td>+</td><td class='diff-addedline'><span class="diffchange">                </span>temp.append(x)</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>return temp</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>temp.sort()</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>return temp</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>def getKV(name = ''):</td><td>+</td><td class='diff-addedline'>def getKV(name = ''):</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>match = re.findall(entdef, defstring)</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>match = re.findall(entdef, defstring)</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>data = dict()</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>data = dict()</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>for x in match:</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>for x in match:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>data[x[0]] = x[1]</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>data[x[0]] = x[1]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>hiarchy = getInherit(name)</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>hiarchy = getInherit(name)</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>kvdict = dict()</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>kvdict = dict()</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>while hiarchy:</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>while hiarchy:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>name = hiarchy.pop()</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>name = hiarchy.pop()</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>if entdata[name][3] == 0:</td><td>+</td><td class='diff-addedline'><span class="diffchange">        if name in entdata:</span></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">             </span>temp = dict(re.findall(kvpair, data[name]))</td><td>+</td><td class='diff-addedline'><span class="diffchange">            </span>if entdata[name][3] == 0:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">             </span>for x in temp:</td><td>+</td><td class='diff-addedline'><span class="diffchange">                </span>temp = dict(re.findall(kvpair, data[name]))</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">                 </span>if re.match(prefix, x):</td><td>+</td><td class='diff-addedline'><span class="diffchange">                </span>for x in temp:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">                     </span>temp1 = re.findall(prefix, x)</td><td>+</td><td class='diff-addedline'><span class="diffchange">                    </span>if re.match(prefix, x):</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">                     </span>if temp1[0][0] == 'editor_var':</td><td>+</td><td class='diff-addedline'><span class="diffchange">                        </span>temp1 = re.findall(prefix, x)</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">                         </span>kvdict[temp1[0][1]] = temp[x]</td><td>+</td><td class='diff-addedline'><span class="diffchange">                        </span>if temp1[0][0] == 'editor_var':</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">                 </span>if x == 'editor_usage':</td><td>+</td><td class='diff-addedline'><span class="diffchange">                            </span>kvdict[temp1[0][1]] = temp[x]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">                     </span>kvdict[x] = temp[x]</td><td>+</td><td class='diff-addedline'><span class="diffchange">                    </span>if x == 'editor_usage':</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>return kvdict</td><td>+</td><td class='diff-addedline'><span class="diffchange">                        </span>kvdict[x] = temp[x]</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>return kvdict</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span># present data formatted for wiki article</td><td>+</td><td class='diff-addedline'># present data formatted for wiki article</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>def printArticle(name = ''):</td><td>+</td><td class='diff-addedline'>def printArticle(name = ''):</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>keys = getKeys(name)</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>keys = getKeys(name)</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>kvdict = getKV(name)</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>kvdict = getKV(name)</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article = ''</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article = ''</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article += '{{stub}}\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    article += '{{bot}}\n'</span></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article += '__NOTOC__\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article += '{{stub}}\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article += '\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article += '__NOTOC__\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article += '==Description==\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article += '\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article += '\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article += '==Description==\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>if 'editor_usage' in kvdict:</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article += '\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>article += kvdict['editor_usage'] + '\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>if 'editor_usage' in kvdict:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>else:</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>article += kvdict['editor_usage'] + '\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>article += 'Description not available.\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>else:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article += '\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>article += 'Description not available.\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article += '==Spawn Arguments==\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article += '\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article += '\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article += '==Spawn Arguments==\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article += 'The following is a list of key/value pairs, also known as spawn arguments, that function with this entity. &lt;br&gt;\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article += '\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article += '{| class=&quot;listtable&quot;\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article += 'The following is a list of key/value pairs, also known as spawn arguments, that function with this entity. &lt;br&gt;\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article += '|-\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article += '{| class=&quot;listtable&quot;\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article += '! KEY !! DESCRIPTION\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article += '|-\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>for x in keys:</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article += '! KEY !! DESCRIPTION\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>article += '|-\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>for x in keys:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>if x in kvdict:</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>article += '|-\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">             </span>article += '| ' + x + ' || ' + kvdict[x] + '\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>if x in kvdict:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>else:</td><td>+</td><td class='diff-addedline'><span class="diffchange">            </span>article += '| ' + x + ' || ' + kvdict[x] + '\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">             </span>article += '| ' + x + ' || Description not available.\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>else:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article += '|}\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">            </span>article += '| ' + x + ' || Description not available.\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article += '\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article += '|}\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article += '==Inheritance==\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article += '\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article += '\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article += '==Inheritance==\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article += 'This entity is derived from the following:\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article += '\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article += '\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article += 'This entity is derived from the following:\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>inherit = getInherit(name)</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article += '\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>inherit.reverse()</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>inherit = getInherit(name)</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>for x in range(len(inherit)):</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>inherit.reverse()</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>for y in range(x):</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>for x in range(len(inherit)):</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">             </span>article += '*'</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>for y in range(x):</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>article += '*'</td><td>+</td><td class='diff-addedline'><span class="diffchange">            </span>article += '*'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>if entdata[inherit[x]][3] == 0:</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>article += '*'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">             </span>article += '[[' + inherit[x] + '_(entity) | ' + inherit[x] + ']]\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>if <span class="diffchange">inherit[x] in entdata and </span>entdata[inherit[x]][3] == 0:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>else:</td><td>+</td><td class='diff-addedline'><span class="diffchange">            </span>article += '[[' + inherit[x] + '_(entity) | ' + inherit[x] + ']]\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">             </span>article += '\'\'[[' + inherit[x] + '_(class) | '+ inherit[x] + ']]\'\'\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>else:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article += '\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">            </span>article += '\'\'[[' + inherit[x] + '_(class) | '+ inherit[x] + ']]\'\'\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article += '\'\'\'Note\'\'\': Entries marked in italics are classes defined in the SDK.\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article += '\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article += '\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article += '\'\'\'Note\'\'\': Entries marked in italics are classes defined in the SDK.\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article += '==Notes==\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article += '\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article += '\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article += '==Notes==\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article += 'Notes not available.\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article += '\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article += '\n'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article += 'Notes not available.\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>article += '[[Category:Mapping]][[Category:Coding]][[Category:Declarations]]'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article += '\n'</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>return article</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>article += '[[Category:Mapping]][[Category:Coding]][[Category:Declarations]]'</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>return article</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>def addArticle(name = ''):</td><td>+</td><td class='diff-addedline'>def addArticle(name = ''):</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>site = wikipedia.getSite()</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>site = wikipedia.getSite()</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>page = wikipedia.Page(site, name + '_(entity)')</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>page = wikipedia.Page(site, name + '_(entity)')</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>if page.exists() == False:</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>if page.exists() == False:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>text = printArticle(name)</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>text = printArticle(name)</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>page.put(text, 'Added Article', None, False, False)</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>page.put(text, 'Added Article', None, False, False)</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>def genArticles():</td><td>+</td><td class='diff-addedline'>def genArticles():</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>mylist = []</td><td>+</td><td class='diff-addedline'><span class="diffchange">    print 'Uploading Articles...'</span></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>match = re.findall(entdef, defstring)</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>mylist = []</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>for x in match:</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>match = re.findall(entdef, defstring)</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>mylist <span class="diffchange">+= </span>x</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>for x in match:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">     </span>for x in mylist:</td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>mylist<span class="diffchange">.append(</span>x<span class="diffchange">[0])</span></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>print <span class="diffchange">'</span>.<span class="diffchange">.. ' + </span>x + '<span class="diffchange">...</span>'</td><td>+</td><td class='diff-addedline'><span class="diffchange">    mylist.sort()</span></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span>addArticle(x)</td><td>+</td><td class='diff-addedline'><span class="diffchange">    </span>for x in mylist:</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">         </span></td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>print <span class="diffchange">mylist</span>.<span class="diffchange">index(</span>x<span class="diffchange">) </span>+ <span class="diffchange">1, </span>'<span class="diffchange">of</span>'<span class="diffchange">, len(mylist), '-', x</span></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> print 'Uploading Articles...'</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">        </span>addArticle(x)</td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange"> </span>genArticles()</td><td>+</td><td class='diff-addedline'>&#160;</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>genArticles()</td></tr>
+<tr><td> </td><td class='diff-context'>&lt;/pre&gt;</td><td> </td><td class='diff-context'>&lt;/pre&gt;</td></tr>
+
+			</table>
+		<hr /><h2>Current revision</h2>
+<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User:PyBot&amp;diff=prev&amp;oldid=10675#PyWikipediaBot"><span class="tocnumber">1</span> <span class="toctext">PyWikipediaBot</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User:PyBot&amp;diff=prev&amp;oldid=10675#Download"><span class="tocnumber">1.1</span> <span class="toctext">Download</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User:PyBot&amp;diff=prev&amp;oldid=10675#Configuration"><span class="tocnumber">1.2</span> <span class="toctext">Configuration</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User:PyBot&amp;diff=prev&amp;oldid=10675#Login"><span class="tocnumber">1.3</span> <span class="toctext">Login</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User:PyBot&amp;diff=prev&amp;oldid=10675#Code"><span class="tocnumber">1.4</span> <span class="toctext">Code</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User:PyBot&amp;diff=prev&amp;oldid=10675#Examples"><span class="tocnumber">1.5</span> <span class="toctext">Examples</span></a>
+<ul>
+<li class='toclevel-3'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User:PyBot&amp;diff=prev&amp;oldid=10675#Entity_Listing"><span class="tocnumber">1.5.1</span> <span class="toctext">Entity Listing</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User:PyBot&amp;action=edit&amp;section=1" title="Edit section: PyWikipediaBot">edit</a>]</div><a name="PyWikipediaBot"></a><h2>PyWikipediaBot</h2>
+<p>It's assumed you already have Python installed and are familiar with it's use.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User:PyBot&amp;action=edit&amp;section=2" title="Edit section: Download">edit</a>]</div><a name="Download"></a><h3>Download</h3>
+<p>Download the Python Wikipedia Robot Framework from one of the sources listed at <a href="/web/20070729231805/http://pywikipediabot.sourceforge.net/" class='external autonumber' title="http://pywikipediabot.sourceforge.net/">[1]</a>.
+</p><p>The location of installation is not important. The only setback is that your python program must be stored in the same location in  order to import the wikipedia module.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User:PyBot&amp;action=edit&amp;section=3" title="Edit section: Configuration">edit</a>]</div><a name="Configuration"></a><h3>Configuration</h3>
+<p>In order for the module to function with www.modwiki.net it must be configured properly.
+</p><p>First, create a new python script with the name user-config.py in your PyWikipediaBot installation directory. Then copy and paste the following code into this file and save it.
+</p>
+<pre>mylang = 'en'
+family = 'modwiki'
+usernames['modwiki']['en'] = u'PyBot'
+</pre>
+<p>Next, create a new python script with the name modwiki_family.py in the families subfolder of your PyWikipediaBot installation directory. Then copy and paste the following code into this file and save it.
+</p>
+<pre># -*- coding: utf-8  -*-
+
+import family
+
+# Modwiki - idTech 4 and future engine reference
+
+class Family(family.Family):
+
+    def __init__(self):
+        family.Family.__init__(self)
+        self.name = 'modwiki' #Set the family name; this should be the same as in the filename.
+        self.langs = {
+            'en': 'www.modwiki.net', #Put the hostname here.
+        }
+        self.namespaces[4] = {
+            '_default': u'MediaWiki', #Specify the project namespace here. Other
+        }                               #namespaces will be set to MediaWiki default.
+
+        self.namespaces[5] = {
+            '_default': u'MediaWiki talk',
+        }
+
+    def version(self, code):
+        return "1.6.8"  #The MediaWiki version used. Not very important in most cases.
+
+    def path(self, code):
+        return '/w/index.php' #The path of index.php
+</pre>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User:PyBot&amp;action=edit&amp;section=4" title="Edit section: Login">edit</a>]</div><a name="Login"></a><h3>Login</h3>
+<p>Before you can use the bot you must login using this account.
+</p><p>This can be done at the command line on your local machine by browsing to the directory you've installed PyWikipediaBot and invoking login.py with python like so...
+</p>
+<pre>C:\Python25\pywikipediabot\> python login.py
+</pre>
+<p>Note you must obtain the password for this account from one of the following users:
+</p><p><a href="/web/20070729231805/http://modwiki.net/wiki/User:Rich" title="User:Rich"> Rich</a>
+</p><p>From this point, you simply invoke your python program just as you did login.py above.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User:PyBot&amp;action=edit&amp;section=5" title="Edit section: Code">edit</a>]</div><a name="Code"></a><h3>Code</h3>
+<p>To make use of the module you must import it like so...
+</p>
+<pre>import wikipedia
+</pre>
+<p>Then you can retrieve or submit articles like so ...
+</p>
+<pre>site = wikipedia.getSite()
+page = wikipedia.Page(site, 'mypage')
+text = page.get()
+page.put(text, 'Added Article', None, False, False)
+</pre>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User:PyBot&amp;action=edit&amp;section=6" title="Edit section: Examples">edit</a>]</div><a name="Examples"></a><h3>Examples</h3>
+<p>Source code for modules written specifically for this wiki can be found in this section.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User:PyBot&amp;action=edit&amp;section=7" title="Edit section: Entity Listing">edit</a>]</div><a name="Entity_Listing"></a><h4>Entity Listing</h4>
+<p>The following python script was used to populate the <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Entity_Listing&amp;action=edit" class="new" title="Entity Listing"> Entity Listing</a>.
+</p>
+<pre>
+&quot;&quot;&quot; idTech 4 data visualization script &quot;&quot;&quot;
+
+import os
+import fileinput
+import re
+import wikipedia
+
+# create compiled regex
+
+entdef = re.compile(r'entityDef\s(\w*)\s{([^}]*)}')
+kvpair = re.compile(r'\n\s{0,10}&quot;([^&quot;]*)&quot;\s*&quot;([^&quot;]*)&quot;')
+prefix = re.compile(r'(\w*)[\x20\t](\w*)')
+
+clsmethod = re.compile(r'(\w*)::\w*\([^)]*\)\s*(?:\w*\s)?{([^\xBF]*?(?&lt;=\n))}')
+spnarg = re.compile(r'spawnArgs\.[^(]*\(\s&quot;(\w*)')
+clsdec = re.compile(r'CLASS_DECLARATION\(\s([^,]*),\s([^)]*?)\s\)')
+
+print 'Parsing entity declarations...'
+
+# create list of def files
+
+defpath = &quot;E:\\Quake4 Assets\\def&quot;
+deflist = list()
+
+for (path, dname, fnames) in os.walk(defpath):
+    for fn in fnames:
+        if fn.endswith(&quot;.def&quot;):
+            deflist.append(os.path.join(path, fn))
+
+# load contents of all def files into string
+
+defstring = str()
+
+for line in fileinput.input(deflist):
+    defstring = defstring + line
+
+# create list comprised of entity name and body
+
+match = re.findall(entdef, defstring)
+
+# parse each element in match feeding a list of key names,
+# the value of inherit, and the value of spawnclass into
+# a dictionary entry under the name of the entity.
+
+entdata = dict()
+
+for x in match:
+    name = x[0]
+    temp = dict(re.findall(kvpair, x[1]))
+    keys = temp.keys()
+    if 'inherit' in temp:
+        inherit = temp['inherit']
+    else:
+        inherit = 'null'
+    if 'spawnclass' in temp:
+        spawnclass = temp['spawnclass']
+    else:
+        spawnclass = 'null'
+        sdk = 0
+    entdata[name] = [keys, inherit, spawnclass, sdk]
+
+print 'Parsing source code...'
+
+# create list of source files
+
+srcpath = &quot;E:\\Q4_SDK\\source&quot;
+srclist = list()
+
+for (path, dname, fnames) in os.walk(srcpath):
+    for fn in fnames:
+        if fn.endswith(&quot;.cpp&quot;):
+            srclist.append(os.path.join(path, fn))
+
+# load contents of all source files into string
+
+srcstring = str()
+
+for line in fileinput.input(srclist):
+    srcstring = srcstring + line
+
+# create list comprised of classes and code to check for spawnargs
+
+match = re.findall(clsmethod, srcstring)
+
+# parse each element in match feeding a list of key names,
+# a null value for inherit, and a null value for spawnclass
+# into a dictionary entry under the name of the class.
+
+for x in match:
+    name = x[0]
+    keys = re.findall(spnarg, x[1])
+    if name in entdata:
+        keys += entdata[name][0]
+    inherit = 'null'
+    spawnclass = 'null'
+    sdk = 1
+    entdata[name] = [keys, inherit, spawnclass, sdk]
+
+# create list comprised of class declarations where one class is
+# derived from another.
+
+match = re.findall(clsdec, srcstring)
+
+# parse each element in match feeding the parent class name into
+# the inherit property.
+
+for x in match:
+    name = x[1]
+    inherit = x[0]
+    keys = []
+    spawnclass = 0
+    sdk = 1
+    entdata[name] = [keys, inherit, spawnclass, sdk]
+
+# recursive function to return a list depicting the inheritance of
+# an entity or class
+
+def getInherit(name = '', templist = None):
+    if templist is None:
+        templist = []
+    templist.append(name)
+    if name in entdata:
+        if entdata[name][1] == 'null':
+            if entdata[name][2] == 'null':
+                pass
+           
+
+
+
+
+<!--
+     FILE ARCHIVED ON 23:18:05 Jul 29, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 2:40:31 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

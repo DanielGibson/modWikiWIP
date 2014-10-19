@@ -1,0 +1,1887 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Commands (Wolf),AasStats (console command),Addarrow (console command),Bind (console command),ConDump (console command),Console,Damage (console command),Devmap (console command),Dir (console command),Dirtree (console command),Disconnect (console command)" />
+<link rel="shortcut icon" href="/web/20110426104331im_/http://www.modwiki.net/favicon.ico" />
+<link title="Creative Commons" type="application/rdf+xml" href="/w/index.php?title=Commands_%28Wolf%29&amp;action=creativecommons" rel="meta" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<title>Commands (Wolf) - modwiki</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20110426104331cs_/http://www.modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/web/20110426104331cs_/http://www.modwiki.net/w/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/w/skins/monobook/IE70Fixes.css?1";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
+		<script type="text/javascript" src="/web/20110426104331js_/http://www.modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20110426104331js_/http://www.modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/web/20110426104331cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20110426104331cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20110426104331cs_/http://www.modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns-0 ltr">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app17.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/www.modwiki.net\/wiki\/Commands_%28Wolf%29";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "26";
+var displayMonth = "Apr";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://www.modwiki.net/wiki/Commands_%28Wolf%29" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20110426104331" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Mar
+                       
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 10:43:31 Apr 26, 2011">APR</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110714084206/http://www.modwiki.net/wiki/Commands_%28Wolf%29" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="14 Jul 2011"><strong>JUL</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_prv_off.png" alt="Previous capture" width="14" height="16" border="0" />
+                       
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 10:43:31 Apr 26, 2011">26</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110714084206/http://www.modwiki.net/wiki/Commands_%28Wolf%29" title="8:42:06 Jul 14, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2010
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 10:43:31 Apr 26, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20130309032052/http://www.modwiki.net/wiki/Commands_(Wolf)" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="9 Mar 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20110426104331*/http://www.modwiki.net/wiki/Commands_%28Wolf%29" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>6 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">26 Apr 11 - 10 May 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:3:000100101000_2012:-1:000000000000_2013:-1:001110000000_2014:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">Commands (Wolf)</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From modwiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="/web/20110426104331/http://www.modwiki.net/wiki/Commands_%28Wolf%29#column-one">navigation</a>, <a href="/web/20110426104331/http://www.modwiki.net/wiki/Commands_%28Wolf%29#searchInput">search</a></div>			<!-- start content -->
+			<div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;"><a href="/web/20110426104331/http://www.modwiki.net/wiki/Image:Rtcw2square_bg.png" class="image" title="Image:Rtcw2square_bg.png"><img src="/web/20110426104331im_/http://www.modwiki.net/w/images/5/5d/Rtcw2square_bg.png" alt="Image:Rtcw2square_bg.png" width="50" height="50" longdesc="/wiki/Image:Rtcw2square_bg.png" /></a> The information on this page is specific to <a href="/web/20110426104331/http://www.modwiki.net/wiki/Wolfenstein" title="Wolfenstein">Wolfenstein</a>.</div>
+<hr />
+<p>Existing <a href="/web/20110426104331/http://www.modwiki.net/wiki/Console" title="Console">console</a> commands as of version 0.91.25.7022 (Single Player). You can get an up to date list by typing <a href="/web/20110426104331/http://www.modwiki.net/wiki/ListCmds_%28console_command%29" title="ListCmds (console command)">listCmds</a> in your console.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Commands_%28Wolf%29&amp;action=edit&amp;section=1" title="Edit section: To Be Sorted">edit</a>]</div><a name="To_Be_Sorted"></a><h2> To Be Sorted </h2>
+<table class="listtable">
+
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Aas_finish_areas_%28console_command%29&amp;action=edit" class="new" title="Aas finish areas (console command)">aas_finish_areas</a> </td><td> computes bounds for areas.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Aas_goalAreaSet_%28console_command%29&amp;action=edit" class="new" title="Aas goalAreaSet (console command)">aas_goalAreaSet</a> </td><td> sets the test path goal area using the entity you name or where you are pointing
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Aas_tacticalExtract_%28console_command%29&amp;action=edit" class="new" title="Aas tacticalExtract (console command)">aas_tacticalExtract</a> </td><td> pulls tactical information for the current position.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Aas_tacticalSetEnemyPos_%28console_command%29&amp;action=edit" class="new" title="Aas tacticalSetEnemyPos (console command)">aas_tacticalSetEnemyPos</a> </td><td> ai_debugMove and ai_debugTactical only work on the specified entity (if none, does one you're looking at)
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/AasStats_%28console_command%29" title="AasStats (console command)">aasStats</a> </td><td> shows AAS stats
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/Addarrow_%28console_command%29" title="Addarrow (console command)">addarrow</a> </td><td> adds a debug arrow
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Addline_%28console_command%29&amp;action=edit" class="new" title="Addline (console command)">addline</a> </td><td> adds a debug line
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Ai_alarmsReset_%28console_command%29&amp;action=edit" class="new" title="Ai alarmsReset (console command)">ai_alarmsReset</a> </td><td> shuts off all alarms
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Ai_clearCover_%28console_command%29&amp;action=edit" class="new" title="Ai clearCover (console command)">ai_clearCover</a> </td><td> tells selected ai to clear the override cover
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Ai_coverAdvance_%28console_command%29&amp;action=edit" class="new" title="Ai coverAdvance (console command)">ai_coverAdvance</a> </td><td> tells selected ai to advance cover toward his enemy
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Ai_coverRetreat_%28console_command%29&amp;action=edit" class="new" title="Ai coverRetreat (console command)">ai_coverRetreat</a> </td><td> tells selected ai to retreat cover from his enemy
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Ai_cycleanim_%28console_command%29&amp;action=edit" class="new" title="Ai cycleanim (console command)">ai_cycleanim</a> </td><td> cycles the given anim on the selected ai
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Ai_debugFilter_%28console_command%29&amp;action=edit" class="new" title="Ai debugFilter (console command)">ai_debugFilter</a> </td><td> ai_debugMove and ai_debugTactical only work on the specified entity (if none, does one you're looking at)
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Ai_facePlayer_%28console_command%29&amp;action=edit" class="new" title="Ai facePlayer (console command)">ai_facePlayer</a> </td><td> tells selected ai to face you
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Ai_goalEntSet_%28console_command%29&amp;action=edit" class="new" title="Ai goalEntSet (console command)">ai_goalEntSet</a> </td><td> tells selected ai go to the point you are pointing at
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Ai_goalPosSet_%28console_command%29&amp;action=edit" class="new" title="Ai goalPosSet (console command)">ai_goalPosSet</a> </td><td> tells selected ai go to the point you are pointing at
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Ai_goalPosSetFace_%28console_command%29&amp;action=edit" class="new" title="Ai goalPosSetFace (console command)">ai_goalPosSetFace</a> </td><td> tells selected ai to go to the point you are pointingat and face the player
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Ai_jump_%28console_command%29&amp;action=edit" class="new" title="Ai jump (console command)">ai_jump</a> </td><td> makes ai do their jump frame event
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Ai_moveToLocation_%28console_command%29&amp;action=edit" class="new" title="Ai moveToLocation (console command)">ai_moveToLocation</a> </td><td> tells selected ai to move to the specified location
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Ai_moveToRandDist_%28console_command%29&amp;action=edit" class="new" title="Ai moveToRandDist (console command)">ai_moveToRandDist</a> </td><td> tells selected ai to move in the direction specified
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Ai_playanim_%28console_command%29&amp;action=edit" class="new" title="Ai playanim (console command)">ai_playanim</a> </td><td> plays the given anim on the selected ai
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Ai_removeAwarness_%28console_command%29&amp;action=edit" class="new" title="Ai removeAwarness (console command)">ai_removeAwarness</a> </td><td> removes all shared awarness of this target
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Ai_setHeadFK_%28console_command%29&amp;action=edit" class="new" title="Ai setHeadFK (console command)">ai_setHeadFK</a> </td><td> sets the focus AI into the desired headFK pose
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Ai_setTimeScale_%28console_command%29&amp;action=edit" class="new" title="Ai setTimeScale (console command)">ai_setTimeScale</a> </td><td> Sets the timescale of all AI entities
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Ai_startfire_%28console_command%29&amp;action=edit" class="new" title="Ai startfire (console command)">ai_startfire</a> </td><td> starts an AI on fire
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Ai_stopfire_%28console_command%29&amp;action=edit" class="new" title="Ai stopfire (console command)">ai_stopfire</a> </td><td> stops an AI from being on fire
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Ai_stopMoveSoft_%28console_command%29&amp;action=edit" class="new" title="Ai stopMoveSoft (console command)">ai_stopMoveSoft</a> </td><td> tells selected ai to stop move the first chance he gets
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Ai_takeCover_%28console_command%29&amp;action=edit" class="new" title="Ai takeCover (console command)">ai_takeCover</a> </td><td> tells selected ai to take cover at the point you are pointing at with the player as the enemy
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Ai_testanim_%28console_command%29&amp;action=edit" class="new" title="Ai testanim (console command)">ai_testanim</a> </td><td> tests the given anim for approach pos, etc.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Ai_testFrameCommands_%28console_command%29&amp;action=edit" class="new" title="Ai testFrameCommands (console command)">ai_testFrameCommands</a> </td><td> test frame commands extraction from the given animation.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ApplyImpulse_%28console_command%29&amp;action=edit" class="new" title="ApplyImpulse (console command)">applyImpulse</a> </td><td> applys an impulse forward
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=AviGame_%28console_command%29&amp;action=edit" class="new" title="AviGame (console command)">aviGame</a> </td><td> writes AVIs for the current game
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/Bind_%28console_command%29" title="Bind (console command)">bind</a> </td><td> binds a key to a bind point
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Blinkline_%28console_command%29&amp;action=edit" class="new" title="Blinkline (console command)">blinkline</a> </td><td> blinks a debug line
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=BrainFind_%28console_command%29&amp;action=edit" class="new" title="BrainFind (console command)">brainFind</a> </td><td> Find in files for brain
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=BrainFindInMap_%28console_command%29&amp;action=edit" class="new" title="BrainFindInMap (console command)">brainFindInMap</a> </td><td> Find in files for brains referenced by a map
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=BrainListAnims_%28console_command%29&amp;action=edit" class="new" title="BrainListAnims (console command)">brainListAnims</a> </td><td> Search anims in files for brain
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=BrainListAnimsInMap_%28console_command%29&amp;action=edit" class="new" title="BrainListAnimsInMap (console command)">brainListAnimsInMap</a> </td><td> Search anims in files for brains referenced by a map
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=BrainListElements_%28console_command%29&amp;action=edit" class="new" title="BrainListElements (console command)">brainListElements</a> </td><td> Lists all tasks, conditions, etc. to a tab-delimited file to be loaded by Excel.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=BrainListSpeech_%28console_command%29&amp;action=edit" class="new" title="BrainListSpeech (console command)">brainListSpeech</a> </td><td> Search speech in files for brain
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=BrainListSpeechInMap_%28console_command%29&amp;action=edit" class="new" title="BrainListSpeechInMap (console command)">brainListSpeechInMap</a> </td><td> Search speech in files for brains referenced by a map
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=BrainReportMemUsage_%28console_command%29&amp;action=edit" class="new" title="BrainReportMemUsage (console command)">brainReportMemUsage</a> </td><td> Reports memory usage for all currently loaded brains
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Brainuse_%28console_command%29&amp;action=edit" class="new" title="Brainuse (console command)">brainuse</a> </td><td> brainuses an entity (fires it's OnUsed root task)
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Call_%28console_command%29&amp;action=edit" class="new" title="Call (console command)">call</a> </td><td> calls script function and prints out return val
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=CallNamedEvent_%28console_command%29&amp;action=edit" class="new" title="CallNamedEvent (console command)">callNamedEvent</a> </td><td> calls the named event on the player HUD
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=CameraClear_%28console_command%29&amp;action=edit" class="new" title="CameraClear (console command)">cameraClear</a> </td><td> breaks out of cinematic mode
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=CancelDeleteCorruptSaveFile_%28console_command%29&amp;action=edit" class="new" title="CancelDeleteCorruptSaveFile (console command)">CancelDeleteCorruptSaveFile</a> </td><td> Cancels deletion of last loaded save
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=CancelDeleteSaveData_%28console_command%29&amp;action=edit" class="new" title="CancelDeleteSaveData (console command)">CancelDeleteSaveData</a> </td><td> Cancels deletion of savedata
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Centerview_%28console_command%29&amp;action=edit" class="new" title="Centerview (console command)">centerview</a> </td><td> centers the view
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=CheckDecls_%28console_command%29&amp;action=edit" class="new" title="CheckDecls (console command)">checkDecls</a> </td><td> checks to make sure decls that are loaded have no textSource
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=CheckOneOfMany_%28console_command%29&amp;action=edit" class="new" title="CheckOneOfMany (console command)">CheckOneOfMany</a> </td><td> See if player has OneOfMany achievement, and give 1000 gold reward if they do
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Clear_%28console_command%29&amp;action=edit" class="new" title="Clear (console command)">clear</a> </td><td> clears the console
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ClearAllMenus_%28console_command%29&amp;action=edit" class="new" title="ClearAllMenus (console command)">ClearAllMenus</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ClearErrorScreenFlag_%28console_command%29&amp;action=edit" class="new" title="ClearErrorScreenFlag (console command)">ClearErrorScreenFlag</a> </td><td> clears an error for one of the screen to show
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ClearFogOverride_%28console_command%29&amp;action=edit" class="new" title="ClearFogOverride (console command)">clearFogOverride</a> </td><td> clears the override fog params in the atmosphere system
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=CloseConsole_%28console_command%29&amp;action=edit" class="new" title="CloseConsole (console command)">closeConsole</a> </td><td> closes the console
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Closehint_%28console_command%29&amp;action=edit" class="new" title="Closehint (console command)">closehint</a> </td><td> close current hint
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=CloseMessageBox_%28console_command%29&amp;action=edit" class="new" title="CloseMessageBox (console command)">closeMessageBox</a> </td><td> Closes the current message box
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=CollapseEntJoints_%28console_command%29&amp;action=edit" class="new" title="CollapseEntJoints (console command)">collapseEntJoints</a> </td><td> Collapse Joints of a named entity
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=CollapseJoints_%28console_command%29&amp;action=edit" class="new" title="CollapseJoints (console command)">collapseJoints</a> </td><td> Collapse Joints of AI
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=CollectibleComplete_%28console_command%29&amp;action=edit" class="new" title="CollectibleComplete (console command)">collectibleComplete</a> </td><td> collectibleComplete &lt;setname&gt;.  Iterative completes the collectible set (test achievements)
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=CollisionModelInfo_%28console_command%29&amp;action=edit" class="new" title="CollisionModelInfo (console command)">collisionModelInfo</a> </td><td> shows collision model info
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=CompileStreamPack_%28console_command%29&amp;action=edit" class="new" title="CompileStreamPack (console command)">compileStreamPack</a> </td><td> compiles a single stream pack/asl file
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=CompileStreamPacks_%28console_command%29&amp;action=edit" class="new" title="CompileStreamPacks (console command)">compileStreamPacks</a> </td><td> compiles all stream pack/asl files in a given dir tree
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ConCopy_%28console_command%29&amp;action=edit" class="new" title="ConCopy (console command)">conCopy</a> </td><td> copies lines of console text to system clipboard
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/ConDump_%28console_command%29" title="ConDump (console command)">conDump</a> </td><td> dumps the console text to a file
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ConfirmDeleteCorruptSaveFile_%28console_command%29&amp;action=edit" class="new" title="ConfirmDeleteCorruptSaveFile (console command)">ConfirmDeleteCorruptSaveFile</a> </td><td> Confirms deletion of last loaded save
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ConfirmDeleteSaveData_%28console_command%29&amp;action=edit" class="new" title="ConfirmDeleteSaveData (console command)">ConfirmDeleteSaveData</a> </td><td> Confirms deletion of savedata
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ContentManagerCommand_%28console_command%29&amp;action=edit" class="new" title="ContentManagerCommand (console command)">contentManagerCommand</a> </td><td> Send a command to the content manager.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Convert_%28console_command%29&amp;action=edit" class="new" title="Convert (console command)">convert</a> </td><td> converts a file to a specific target
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ConvertAscii_%28console_command%29&amp;action=edit" class="new" title="ConvertAscii (console command)">convertAscii</a> </td><td> converts a file to a specific ASCII target
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Crash_%28console_command%29&amp;action=edit" class="new" title="Crash (console command)">crash</a> </td><td> causes a crash
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=CrouchToggle_%28console_command%29&amp;action=edit" class="new" title="CrouchToggle (console command)">crouchToggle</a> </td><td> toggle crouch on/off
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Cvar_restart_%28console_command%29&amp;action=edit" class="new" title="Cvar restart (console command)">cvar_restart</a> </td><td> restart the cvar system
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/Damage_%28console_command%29" title="Damage (console command)">damage</a> </td><td> apply damage to an entity
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Dec_%28console_command%29&amp;action=edit" class="new" title="Dec (console command)">dec</a> </td><td> decrements the cvar integer value
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=DecrementCVar_%28console_command%29&amp;action=edit" class="new" title="DecrementCVar (console command)">DecrementCVar</a> </td><td> DecrementCVar &lt;name&gt; &lt;amount&gt; &lt;min&gt;
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=DeleteCorruptSaveFile_%28console_command%29&amp;action=edit" class="new" title="DeleteCorruptSaveFile (console command)">DeleteCorruptSaveFile</a> </td><td> Deletes last loaded save
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=DeleteSelected_%28console_command%29&amp;action=edit" class="new" title="DeleteSelected (console command)">deleteSelected</a> </td><td> deletes selected entity
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/Devmap_%28console_command%29" title="Devmap (console command)">devmap</a> </td><td> loads a map in developer mode
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=DifficultyHasChanged_%28console_command%29&amp;action=edit" class="new" title="DifficultyHasChanged (console command)">DifficultyHasChanged</a> </td><td> tells the stat manager that the difficulty setting has been changed
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/Dir_%28console_command%29" title="Dir (console command)">dir</a> </td><td> lists a folder
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/Dirtree_%28console_command%29" title="Dirtree (console command)">dirtree</a> </td><td> lists a folder with subfolders
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=DisasmScript_%28console_command%29&amp;action=edit" class="new" title="DisasmScript (console command)">disasmScript</a> </td><td> disassembles script
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/Disconnect_%28console_command%29" title="Disconnect (console command)">disconnect</a> </td><td> disconnects from a game
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=DisconnectPure_%28console_command%29&amp;action=edit" class="new" title="DisconnectPure (console command)">disconnectPure</a> </td><td> disconnects from a game with out all the fuss
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Dismissall_%28console_command%29&amp;action=edit" class="new" title="Dismissall (console command)">dismissall</a> </td><td> disable hints
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=DisplayPlayerInfo_%28console_command%29&amp;action=edit" class="new" title="DisplayPlayerInfo (console command)">displayPlayerInfo</a> </td><td> usage: outputs a lot of useful information about the player's experience
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=DoButton_%28console_command%29&amp;action=edit" class="new" title="DoButton (console command)">DoButton</a> </td><td> perform an button via a cmd
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=DowntownComplete_%28console_command%29&amp;action=edit" class="new" title="DowntownComplete (console command)">downtownComplete</a> </td><td> complete all the downtown missiones
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=DumpStealthEvents_%28console_command%29&amp;action=edit" class="new" title="DumpStealthEvents (console command)">dumpStealthEvents</a> </td><td> Lists info about the stealth events leading up to thecurrent state of enemy alertness
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/Echo_%28console_command%29" title="Echo (console command)">echo</a> </td><td> prints text
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Emote_%28console_command%29&amp;action=edit" class="new" title="Emote (console command)">emote</a> </td><td> plays an emote
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Error_%28console_command%29&amp;action=edit" class="new" title="Error (console command)">error</a> </td><td> causes an error
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=EvaluateMPPerformance_%28console_command%29&amp;action=edit" class="new" title="EvaluateMPPerformance (console command)">evaluateMPPerformance</a> </td><td> spawns serveral player models
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/Exec_%28console_command%29" title="Exec (console command)">exec</a> </td><td> executes a config file
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ExecMachineSpec_%28console_command%29&amp;action=edit" class="new" title="ExecMachineSpec (console command)">execMachineSpec</a> </td><td> execs the appropriate config files and sets cvars based on com_machineSpec
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/Exit_%28console_command%29" title="Exit (console command)">exit</a> </td><td> exits the game
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ExportCmpMD5R_%28console_command%29&amp;action=edit" class="new" title="ExportCmpMD5R (console command)">exportCmpMD5R</a> </td><td> Export all MD5R models in a compressed form
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ExportMD5R_%28console_command%29&amp;action=edit" class="new" title="ExportMD5R (console command)">exportMD5R</a> </td><td> Export all MD5R models
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=FadeSound_%28console_command%29&amp;action=edit" class="new" title="FadeSound (console command)">fadeSound</a> </td><td> fades all sound by X decibles over Y seconds
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=FailMission_%28console_command%29&amp;action=edit" class="new" title="FailMission (console command)">failMission</a> </td><td> fail a mission
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=FlushDecls_%28console_command%29&amp;action=edit" class="new" title="FlushDecls (console command)">flushDecls</a> </td><td> deallocates all current decls
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ForceBind_%28console_command%29&amp;action=edit" class="new" title="ForceBind (console command)">forceBind</a> </td><td> binds a key to a bind point (overrides read-only controllers)
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ForceUnbind_%28console_command%29&amp;action=edit" class="new" title="ForceUnbind (console command)">forceUnbind</a> </td><td> unbinds a bind point from a key (overrides read-only controllers)
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Freeze_%28console_command%29&amp;action=edit" class="new" title="Freeze (console command)">freeze</a> </td><td> freezes the game for a number of seconds
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Game_memory_%28console_command%29&amp;action=edit" class="new" title="Game memory (console command)">game_memory</a> </td><td> displays game class info
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=GameError_%28console_command%29&amp;action=edit" class="new" title="GameError (console command)">gameError</a> </td><td> causes a game error
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=GameExplorer_%28console_command%29&amp;action=edit" class="new" title="GameExplorer (console command)">GameExplorer</a> </td><td> game explorer command interface
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=GetAreaID_%28console_command%29&amp;action=edit" class="new" title="GetAreaID (console command)">GetAreaID</a> </td><td> gets the area ID of the portal area the player is in
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=GetGlobalVector_%28console_command%29&amp;action=edit" class="new" title="GetGlobalVector (console command)">getGlobalVector</a> </td><td> Gets a vector in the global vector array.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=GetLetterBoxedResolution_%28console_command%29&amp;action=edit" class="new" title="GetLetterBoxedResolution (console command)">getLetterBoxedResolution</a> </td><td> Given the back buffer dimensions and the desired aspect ratio of the letter boxed area, calculate the dimensions of the letter boxed area.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Getviewpos_%28console_command%29&amp;action=edit" class="new" title="Getviewpos (console command)">getviewpos</a> </td><td> prints the current view position
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/GfxInfo_%28console_command%29" title="GfxInfo (console command)">gfxInfo</a> </td><td> show graphics info
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Give_%28console_command%29&amp;action=edit" class="new" title="Give (console command)">give</a> </td><td> gives one or more items
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=GiveAchievement_%28console_command%29&amp;action=edit" class="new" title="GiveAchievement (console command)">GiveAchievement</a> </td><td> give logged in user an achievement
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=GiveAllIntel_%28console_command%29&amp;action=edit" class="new" title="GiveAllIntel (console command)">giveAllIntel</a> </td><td> gives all intel associated with the current district
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=GiveAllPowerUpgrades_%28console_command%29&amp;action=edit" class="new" title="GiveAllPowerUpgrades (console command)">giveAllPowerUpgrades</a> </td><td> Called by cheat menu to give all veil powers and upgrades
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=GiveGold_%28console_command%29&amp;action=edit" class="new" title="GiveGold (console command)">giveGold</a> </td><td> gives gold to the player
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=GiveMission_%28console_command%29&amp;action=edit" class="new" title="GiveMission (console command)">giveMission</a> </td><td> give a mission to the player
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=GiveObjectives_%28console_command%29&amp;action=edit" class="new" title="GiveObjectives (console command)">giveObjectives</a> </td><td> gives all objectives for the specified mission to theplayer (unhides objectives)
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=GivePowers_%28console_command%29&amp;action=edit" class="new" title="GivePowers (console command)">givePowers</a> </td><td> usage: givePowers &lt;powernum1&gt; ... (if none specified,gives all powers)
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=God_%28console_command%29&amp;action=edit" class="new" title="God (console command)">god</a> </td><td> enables god mode
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=GoToHub_%28console_command%29&amp;action=edit" class="new" title="GoToHub (console command)">GoToHub</a> </td><td> Called by Notebook.swf to abort the mission and return to it's HUB.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=GotoMenu_%28console_command%29&amp;action=edit" class="new" title="GotoMenu (console command)">GotoMenu</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=GotoMission_%28console_command%29&amp;action=edit" class="new" title="GotoMission (console command)">gotoMission</a> </td><td> allows the player to skip to or replay a specific mission
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Hide_%28console_command%29&amp;action=edit" class="new" title="Hide (console command)">hide</a> </td><td> hides a entity, or unhides a hidden entity
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Hitch_%28console_command%29&amp;action=edit" class="new" title="Hitch (console command)">hitch</a> </td><td> hitches the game
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Hk_RagdollExtractPose_%28console_command%29&amp;action=edit" class="new" title="Hk RagdollExtractPose (console command)">hk_RagdollExtractPose</a> </td><td> forces the AF of the target ent to create a ragdoll and extract the ragdoll reference pose
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Hk_RagdollMatchAnim_%28console_command%29&amp;action=edit" class="new" title="Hk RagdollMatchAnim (console command)">hk_RagdollMatchAnim</a> </td><td> forces the AF of the target ent to recalculate and dump its AF core body defs and offsets
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=HolsterToggle_%28console_command%29&amp;action=edit" class="new" title="HolsterToggle (console command)">holsterToggle</a> </td><td> holster/unholster your weapon
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=HUDReset_%28console_command%29&amp;action=edit" class="new" title="HUDReset (console command)">HUDReset</a> </td><td> used whenever HUD should close but wont because its the hud.  Basically turns off some of it's variables that would be called in posthide
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=In_restart_%28console_command%29&amp;action=edit" class="new" title="In restart (console command)">in_restart</a> </td><td> restarts the input system
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Inc_%28console_command%29&amp;action=edit" class="new" title="Inc (console command)">inc</a> </td><td> increments the cvar integer value
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=IncGlobalVector_%28console_command%29&amp;action=edit" class="new" title="IncGlobalVector (console command)">incGlobalVector</a> </td><td> Increments a vector in the global vector array.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=IncrementCVar_%28console_command%29&amp;action=edit" class="new" title="IncrementCVar (console command)">IncrementCVar</a> </td><td> IncrementCVar &lt;name&gt; &lt;amount&gt; &lt;max&gt;
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=IntelMissionSelection_%28console_command%29&amp;action=edit" class="new" title="IntelMissionSelection (console command)">IntelMissionSelection</a> </td><td> Called by Notebook.swf to change selected mission in Intel tab.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=IntelOpenSelection_%28console_command%29&amp;action=edit" class="new" title="IntelOpenSelection (console command)">IntelOpenSelection</a> </td><td> Called by Notebook.swf to activate the selected mission in objective tab.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=JournalActivateMission_%28console_command%29&amp;action=edit" class="new" title="JournalActivateMission (console command)">JournalActivateMission</a> </td><td> Called by Notebook.swf to activate the selected mission in objective tab.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=JournalCloseIntel_%28console_command%29&amp;action=edit" class="new" title="JournalCloseIntel (console command)">JournalCloseIntel</a> </td><td> Instructs the journal to close any open intel
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=JournalMapDT_%28console_command%29&amp;action=edit" class="new" title="JournalMapDT (console command)">JournalMapDT</a> </td><td> Instructs the journal to load up the map for downtown
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=JournalMapMTE_%28console_command%29&amp;action=edit" class="new" title="JournalMapMTE (console command)">JournalMapMTE</a> </td><td> Instructs the journal to load up the map for midtown east
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=JournalMapMTW_%28console_command%29&amp;action=edit" class="new" title="JournalMapMTW (console command)">JournalMapMTW</a> </td><td> Instructs the journal to load up the map for midtown west
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=JournalMissionSelection_%28console_command%29&amp;action=edit" class="new" title="JournalMissionSelection (console command)">JournalMissionSelection</a> </td><td> Called by Notebook.swf to change selected mission in objective tab.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=JournalTutorialExit_%28console_command%29&amp;action=edit" class="new" title="JournalTutorialExit (console command)">JournalTutorialExit</a> </td><td> Finish the journal tutorial
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=JournalTutorialIntel_%28console_command%29&amp;action=edit" class="new" title="JournalTutorialIntel (console command)">JournalTutorialIntel</a> </td><td> Plays the VO for the journal tutorial
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=JournalTutorialMaps_%28console_command%29&amp;action=edit" class="new" title="JournalTutorialMaps (console command)">JournalTutorialMaps</a> </td><td> Plays the VO for the journal tutorial
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=JournalTutorialObjectives_%28console_command%29&amp;action=edit" class="new" title="JournalTutorialObjectives (console command)">JournalTutorialObjectives</a> </td><td> Plays the VO for the journal tutorial
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=JournalTutorialStatistics_%28console_command%29&amp;action=edit" class="new" title="JournalTutorialStatistics (console command)">JournalTutorialStatistics</a> </td><td> Plays the VO for the journal tutorial
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=JournalTutorialUpgrades_%28console_command%29&amp;action=edit" class="new" title="JournalTutorialUpgrades (console command)">JournalTutorialUpgrades</a> </td><td> Plays the VO for the journal tutorial
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=JournalUpgradeSelection_%28console_command%29&amp;action=edit" class="new" title="JournalUpgradeSelection (console command)">JournalUpgradeSelection</a> </td><td> Called by Notebook.swf to change selected weapon inupgrades tab.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Kill_%28console_command%29&amp;action=edit" class="new" title="Kill (console command)">kill</a> </td><td> kills the player
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=KillActiveEnemies_%28console_command%29&amp;action=edit" class="new" title="KillActiveEnemies (console command)">killActiveEnemies</a> </td><td> kills (not removes) all active (non-hidden) enemies
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=KillItems_%28console_command%29&amp;action=edit" class="new" title="KillItems (console command)">killItems</a> </td><td> removes all items
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=KillMonsters_%28console_command%29&amp;action=edit" class="new" title="KillMonsters (console command)">killMonsters</a> </td><td> removes all monsters
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=KillMoveables_%28console_command%29&amp;action=edit" class="new" title="KillMoveables (console command)">killMoveables</a> </td><td> removes all moveables
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=KillRagdolls_%28console_command%29&amp;action=edit" class="new" title="KillRagdolls (console command)">killRagdolls</a> </td><td> removes all ragdolls
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=KillVehicles_%28console_command%29&amp;action=edit" class="new" title="KillVehicles (console command)">killVehicles</a> </td><td> kills all vehicles
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=LaunchMultiplayer_%28console_command%29&amp;action=edit" class="new" title="LaunchMultiplayer (console command)">launchMultiplayer</a> </td><td> launches the multiplayer executable
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListActiveAI_%28console_command%29&amp;action=edit" class="new" title="ListActiveAI (console command)">listActiveAI</a> </td><td> list active AI w/ zone and scenario
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/ListActiveEntities_%28console_command%29" title="ListActiveEntities (console command)">listActiveEntities</a> </td><td> lists active game entities
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListActiveFX_%28console_command%29&amp;action=edit" class="new" title="ListActiveFX (console command)">listActiveFX</a> </td><td> lists active fx entities and client entities
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListActiveScenarios_%28console_command%29&amp;action=edit" class="new" title="ListActiveScenarios (console command)">listActiveScenarios</a> </td><td> Lists info about the active scenario set
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListAF_%28console_command%29&amp;action=edit" class="new" title="ListAF (console command)">listAF</a> </td><td> lists articulated figures
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListAllDecls_%28console_command%29&amp;action=edit" class="new" title="ListAllDecls (console command)">listAllDecls</a> </td><td> lists every single decl, not just the summary
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListAnimBlendTrees_%28console_command%29&amp;action=edit" class="new" title="ListAnimBlendTrees (console command)">listAnimBlendTrees</a> </td><td> lists animation blend tree decls
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListAnimBlendTreeTechniques_%28console_command%29&amp;action=edit" class="new" title="ListAnimBlendTreeTechniques (console command)">listAnimBlendTreeTechniques</a> </td><td> lists animation blend tree techniques decls
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListAnims_%28console_command%29&amp;action=edit" class="new" title="ListAnims (console command)">listAnims</a> </td><td> lists all animations
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListAnimTrackWeights_%28console_command%29&amp;action=edit" class="new" title="ListAnimTrackWeights (console command)">listAnimTrackWeights</a> </td><td> lists animation track weight decls
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListBinds_%28console_command%29&amp;action=edit" class="new" title="ListBinds (console command)">listBinds</a> </td><td> list all of the current binds
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListClasses_%28console_command%29&amp;action=edit" class="new" title="ListClasses (console command)">listClasses</a> </td><td> lists game classes
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/ListCmds_%28console_command%29" title="ListCmds (console command)">listCmds</a> </td><td> lists commands
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListCollisionModels_%28console_command%29&amp;action=edit" class="new" title="ListCollisionModels (console command)">listCollisionModels</a> </td><td> lists collision models
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/ListCvars_%28console_command%29" title="ListCvars (console command)">listCvars</a> </td><td> lists cvars
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListDecls_%28console_command%29&amp;action=edit" class="new" title="ListDecls (console command)">listDecls</a> </td><td> lists all decls
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListDevices_%28console_command%29&amp;action=edit" class="new" title="ListDevices (console command)">listDevices</a> </td><td> list all of the currently found input devices
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListDictKeys_%28console_command%29&amp;action=edit" class="new" title="ListDictKeys (console command)">listDictKeys</a> </td><td> lists all keys used by dictionaries
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListDictValues_%28console_command%29&amp;action=edit" class="new" title="ListDictValues (console command)">listDictValues</a> </td><td> lists all values used by dictionaries
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListDLC_%28console_command%29&amp;action=edit" class="new" title="ListDLC (console command)">ListDLC</a> </td><td> lists found DLC
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListEffects_%28console_command%29&amp;action=edit" class="new" title="ListEffects (console command)">listEffects</a> </td><td> lists effect decls
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/ListEntities_%28console_command%29" title="ListEntities (console command)">listEntities</a> </td><td> lists game entities
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListEntityClassNum_%28console_command%29&amp;action=edit" class="new" title="ListEntityClassNum (console command)">listEntityClassNum</a> </td><td> lists
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListEntityDefs_%28console_command%29&amp;action=edit" class="new" title="ListEntityDefs (console command)">listEntityDefs</a> </td><td> lists entity defs
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListEntityStats_%28console_command%29&amp;action=edit" class="new" title="ListEntityStats (console command)">listEntityStats</a> </td><td> lists global entity stats
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListGameCmds_%28console_command%29&amp;action=edit" class="new" title="ListGameCmds (console command)">listGameCmds</a> </td><td> lists game commands
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Listglobals_%28console_command%29&amp;action=edit" class="new" title="Listglobals (console command)">listglobals</a> </td><td> list one or all globals
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListHuffmanFrequencies_%28console_command%29&amp;action=edit" class="new" title="ListHuffmanFrequencies (console command)">listHuffmanFrequencies</a> </td><td> lists decl text character frequencies
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListLines_%28console_command%29&amp;action=edit" class="new" title="ListLines (console command)">listLines</a> </td><td> lists all debug lines
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListLipsyncs_%28console_command%29&amp;action=edit" class="new" title="ListLipsyncs (console command)">listLipsyncs</a> </td><td> lists lip sync decls
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Listlocals_%28console_command%29&amp;action=edit" class="new" title="Listlocals (console command)">listlocals</a> </td><td> list one or all locals
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListMaterialAttribs_%28console_command%29&amp;action=edit" class="new" title="ListMaterialAttribs (console command)">listMaterialAttribs</a> </td><td> lists non-rendering attributes of materials
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListMaterials_%28console_command%29&amp;action=edit" class="new" title="ListMaterials (console command)">listMaterials</a> </td><td> lists materials
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListMaterialTransformTemplate_%28console_command%29&amp;action=edit" class="new" title="ListMaterialTransformTemplate (console command)">listMaterialTransformTemplate</a> </td><td> lists material transform templates
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListMaterialTypes_%28console_command%29&amp;action=edit" class="new" title="ListMaterialTypes (console command)">listMaterialTypes</a> </td><td> lists material types
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListMissions_%28console_command%29&amp;action=edit" class="new" title="ListMissions (console command)">listMissions</a> </td><td> lists all missions and their current status
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListModelDefs_%28console_command%29&amp;action=edit" class="new" title="ListModelDefs (console command)">listModelDefs</a> </td><td> lists model defs
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListModels_%28console_command%29&amp;action=edit" class="new" title="ListModels (console command)">listModels</a> </td><td> lists all models
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListMonsters_%28console_command%29&amp;action=edit" class="new" title="ListMonsters (console command)">listMonsters</a> </td><td> lists monsters: optional args: &lt;noHidden&gt; &lt;enemiesOnly&gt; &lt;noPrintWeapons&gt; &lt;countOnly&gt;
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListPlaybacks_%28console_command%29&amp;action=edit" class="new" title="ListPlaybacks (console command)">listPlaybacks</a> </td><td> lists playback decls
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListPlayerStates_%28console_command%29&amp;action=edit" class="new" title="ListPlayerStates (console command)">ListPlayerStates</a> </td><td> Lists several states associated with the player (god,undying, notarget, novis, noclip)
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListRefreshRatesForResolution_%28console_command%29&amp;action=edit" class="new" title="ListRefreshRatesForResolution (console command)">listRefreshRatesForResolution</a> </td><td> Print the available display refresh rates forthe given resolution.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListRenderEntityDefs_%28console_command%29&amp;action=edit" class="new" title="ListRenderEntityDefs (console command)">listRenderEntityDefs</a> </td><td> lists the entity defs
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListRendererCmds_%28console_command%29&amp;action=edit" class="new" title="ListRendererCmds (console command)">listRendererCmds</a> </td><td> lists renderer commands
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListRenderLightDefs_%28console_command%29&amp;action=edit" class="new" title="ListRenderLightDefs (console command)">listRenderLightDefs</a> </td><td> lists the light defs
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListScenarioDupes_%28console_command%29&amp;action=edit" class="new" title="ListScenarioDupes (console command)">listScenarioDupes</a> </td><td> Lists all entities within the given scenario that arereferenced by more than one scenario
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListSecrets_%28console_command%29&amp;action=edit" class="new" title="ListSecrets (console command)">listSecrets</a> </td><td> List all secrets in current level.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListShaders_%28console_command%29&amp;action=edit" class="new" title="ListShaders (console command)">ListShaders</a> </td><td> Lists all loaded shaders
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListSkins_%28console_command%29&amp;action=edit" class="new" title="ListSkins (console command)">listSkins</a> </td><td> lists skins
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListSoundCmds_%28console_command%29&amp;action=edit" class="new" title="ListSoundCmds (console command)">listSoundCmds</a> </td><td> lists sound commands
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/ListSpawnArgs_%28console_command%29" title="ListSpawnArgs (console command)">listSpawnArgs</a> </td><td> list the spawn args of an entity
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListSpawnIds_%28console_command%29&amp;action=edit" class="new" title="ListSpawnIds (console command)">listSpawnIds</a> </td><td> lists map entity numbers
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListSystemCmds_%28console_command%29&amp;action=edit" class="new" title="ListSystemCmds (console command)">listSystemCmds</a> </td><td> lists system commands
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListTables_%28console_command%29&amp;action=edit" class="new" title="ListTables (console command)">listTables</a> </td><td> lists tables
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListTAIs_%28console_command%29&amp;action=edit" class="new" title="ListTAIs (console command)">listTAIs</a> </td><td> lists tai decls
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListTechniques_%28console_command%29&amp;action=edit" class="new" title="ListTechniques (console command)">listTechniques</a> </td><td> lists all loaded techniques
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListThreads_%28console_command%29&amp;action=edit" class="new" title="ListThreads (console command)">listThreads</a> </td><td> lists script threads
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListToolCmds_%28console_command%29&amp;action=edit" class="new" title="ListToolCmds (console command)">listToolCmds</a> </td><td> lists tool commands
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListVertexCache_%28console_command%29&amp;action=edit" class="new" title="ListVertexCache (console command)">listVertexCache</a> </td><td> lists vertex cache
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListVideoResolutions_%28console_command%29&amp;action=edit" class="new" title="ListVideoResolutions (console command)">listVideoResolutions</a> </td><td> Print the available display resolutions.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ListVideos_%28console_command%29&amp;action=edit" class="new" title="ListVideos (console command)">listVideos</a> </td><td> lists videos
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=LoadGamepadBinds_%28console_command%29&amp;action=edit" class="new" title="LoadGamepadBinds (console command)">LoadGamepadBinds</a> </td><td> loads gamepad bindings from in_buttonConfig and in_stickConfig
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=LodMD5R_%28console_command%29&amp;action=edit" class="new" title="LodMD5R (console command)">lodMD5R</a> </td><td> Generate a LOD MD5R model from a series of models andwrite it out
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=MainMenuCommand_%28console_command%29&amp;action=edit" class="new" title="MainMenuCommand (console command)">mainMenuCommand</a> </td><td> Execute a command to the main menu entity
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/Map_%28console_command%29" title="Map (console command)">map</a> </td><td> loads a map
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=MapVersion_%28console_command%29&amp;action=edit" class="new" title="MapVersion (console command)">mapVersion</a> </td><td> prints the map version (timestamp)
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=MeasureFillRate_%28console_command%29&amp;action=edit" class="new" title="MeasureFillRate (console command)">measureFillRate</a> </td><td> measures fill rate performance of GPU
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=MemoryFragmentationStats_%28console_command%29&amp;action=edit" class="new" title="MemoryFragmentationStats (console command)">memoryFragmentationStats</a> </td><td> show heap fragmentation stats
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=MemoryPrintAllocations_%28console_command%29&amp;action=edit" class="new" title="MemoryPrintAllocations (console command)">memoryPrintAllocations</a> </td><td> prints a list of all the allocations within a certain heap
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=MemoryPrintNumUniformBlocksAllocated_%28console_command%29&amp;action=edit" class="new" title="MemoryPrintNumUniformBlocksAllocated (console command)">memoryPrintNumUniformBlocksAllocated</a> </td><td> Print the number of uniform blocks allocated for a physical heap
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=MessageBox_%28console_command%29&amp;action=edit" class="new" title="MessageBox (console command)">messageBox</a> </td><td> message box test
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=MessageBoxSession_%28console_command%29&amp;action=edit" class="new" title="MessageBoxSession (console command)">messageBoxSession</a> </td><td> Message box test exe-side
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=MidtownComplete_%28console_command%29&amp;action=edit" class="new" title="MidtownComplete (console command)">midtownComplete</a> </td><td> complete all the midtown missions
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Momoney_%28console_command%29&amp;action=edit" class="new" title="Momoney (console command)">momoney</a> </td><td> Gives player infinite money
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=NewCampaignHasStarted_%28console_command%29&amp;action=edit" class="new" title="NewCampaignHasStarted (console command)">NewCampaignHasStarted</a> </td><td> tells the stat manager that a new campaign has started
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Notarget_%28console_command%29&amp;action=edit" class="new" title="Notarget (console command)">notarget</a> </td><td> disables the player as a target
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Novis_%28console_command%29&amp;action=edit" class="new" title="Novis (console command)">novis</a> </td><td> disables the player as a target
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Openedhint_%28console_command%29&amp;action=edit" class="new" title="Openedhint (console command)">openedhint</a> </td><td> opened a hint
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=OpenScenarioPicker_%28console_command%29&amp;action=edit" class="new" title="OpenScenarioPicker (console command)">openScenarioPicker</a> </td><td> Allows the player to pick the scenario for the current zone
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Parse_%28console_command%29&amp;action=edit" class="new" title="Parse (console command)">parse</a> </td><td> prints tokenized string
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ParseAnimWeightDecls_%28console_command%29&amp;action=edit" class="new" title="ParseAnimWeightDecls (console command)">parseAnimWeightDecls</a> </td><td> forces anim weights to be parsed generating any content errors
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ParseBlendTreeDecls_%28console_command%29&amp;action=edit" class="new" title="ParseBlendTreeDecls (console command)">parseBlendTreeDecls</a> </td><td> forces blend trees to be parsed generating any content errors
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ParseCommandEventDecls_%28console_command%29&amp;action=edit" class="new" title="ParseCommandEventDecls (console command)">parseCommandEventDecls</a> </td><td> forces command events to be parsed generating any content errors
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ParseMaterials_%28console_command%29&amp;action=edit" class="new" title="ParseMaterials (console command)">parseMaterials</a> </td><td> forces materials to be parsed generating material parsing errors
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ParseSoundEffectDecls_%28console_command%29&amp;action=edit" class="new" title="ParseSoundEffectDecls (console command)">parseSoundEffectDecls</a> </td><td> forces sound effects to be parsed generating any content errors
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PassMission_%28console_command%29&amp;action=edit" class="new" title="PassMission (console command)">passMission</a> </td><td> mark a mission as completed
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/Path_%28console_command%29" title="Path (console command)">path</a> </td><td> lists search paths
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Pause_%28console_command%29&amp;action=edit" class="new" title="Pause (console command)">pause</a> </td><td> See <a href="/web/20110426104331/http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To" class='external free' title="http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To">http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To</a>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PerformLoadStreamPackTimings_%28console_command%29&amp;action=edit" class="new" title="PerformLoadStreamPackTimings (console command)">performLoadStreamPackTimings</a> </td><td> Loads a stream pack for debugging some loadingcode
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Play_%28console_command%29&amp;action=edit" class="new" title="Play (console command)">play</a> </td><td> See <a href="/web/20110426104331/http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To" class='external free' title="http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To">http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To</a>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PlayerBindTo_%28console_command%29&amp;action=edit" class="new" title="PlayerBindTo (console command)">playerBindTo</a> </td><td> binds the player to an entity
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PlayerKilledAllEnemies_%28console_command%29&amp;action=edit" class="new" title="PlayerKilledAllEnemies (console command)">playerKilledAllEnemies</a> </td><td> Have the player pretend like he's killed all enemies.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PlayerModel_%28console_command%29&amp;action=edit" class="new" title="PlayerModel (console command)">playerModel</a> </td><td> sets the given model on the player
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PopLight_%28console_command%29&amp;action=edit" class="new" title="PopLight (console command)">popLight</a> </td><td> removes the last created light
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PopulateArea_%28console_command%29&amp;action=edit" class="new" title="PopulateArea (console command)">populateArea</a> </td><td> usage: populateArea [maxSpawned] [entType] - spawns specified # of enemies (default 20) around you (can specify type, default is new_ss_sentry)
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PopulateSkies_%28console_command%29&amp;action=edit" class="new" title="PopulateSkies (console command)">populateSkies</a> </td><td> usage: populateArea [maxSpawned] [entType]
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PopulateStreets_%28console_command%29&amp;action=edit" class="new" title="PopulateStreets (console command)">populateStreets</a> </td><td> usage: populateArea [maxSpawned] [entType]
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PrintAF_%28console_command%29&amp;action=edit" class="new" title="PrintAF (console command)">printAF</a> </td><td> prints an articulated figure
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PrintDeclMemoryStats_%28console_command%29&amp;action=edit" class="new" title="PrintDeclMemoryStats (console command)">PrintDeclMemoryStats</a> </td><td> shows memory stats for the decl system
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PrintEffects_%28console_command%29&amp;action=edit" class="new" title="PrintEffects (console command)">printEffects</a> </td><td> prints effects
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PrintEntityDef_%28console_command%29&amp;action=edit" class="new" title="PrintEntityDef (console command)">printEntityDef</a> </td><td> prints an entity def
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PrintLipsyncs_%28console_command%29&amp;action=edit" class="new" title="PrintLipsyncs (console command)">printLipsyncs</a> </td><td> prints lip syncs
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PrintMaterial_%28console_command%29&amp;action=edit" class="new" title="PrintMaterial (console command)">printMaterial</a> </td><td> prints a material
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PrintMaterialTransformTemplate_%28console_command%29&amp;action=edit" class="new" title="PrintMaterialTransformTemplate (console command)">printMaterialTransformTemplate</a> </td><td> prints a material transform template
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PrintMaterialTypes_%28console_command%29&amp;action=edit" class="new" title="PrintMaterialTypes (console command)">printMaterialTypes</a> </td><td> prints material types
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PrintMemInfo_%28console_command%29&amp;action=edit" class="new" title="PrintMemInfo (console command)">printMemInfo</a> </td><td> prints memory debugging data
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PrintModel_%28console_command%29&amp;action=edit" class="new" title="PrintModel (console command)">printModel</a> </td><td> prints model info
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PrintModelDefs_%28console_command%29&amp;action=edit" class="new" title="PrintModelDefs (console command)">printModelDefs</a> </td><td> prints a model def
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PrintPlaybacks_%28console_command%29&amp;action=edit" class="new" title="PrintPlaybacks (console command)">printPlaybacks</a> </td><td> prints playbacks
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PrintSkin_%28console_command%29&amp;action=edit" class="new" title="PrintSkin (console command)">printSkin</a> </td><td> prints a skin
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PrintTable_%28console_command%29&amp;action=edit" class="new" title="PrintTable (console command)">printTable</a> </td><td> prints a table
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PrintVideo_%28console_command%29&amp;action=edit" class="new" title="PrintVideo (console command)">printVideo</a> </td><td> prints a video decl
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PurchaseAccept_%28console_command%29&amp;action=edit" class="new" title="PurchaseAccept (console command)">PurchaseAccept</a> </td><td> Called by Purchase.swf to accept the current purchase.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PurchaseAcceptAmmo_%28console_command%29&amp;action=edit" class="new" title="PurchaseAcceptAmmo (console command)">PurchaseAcceptAmmo</a> </td><td> Called by Purchase.swf to complete ammo transaction.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PurchasePowersList_%28console_command%29&amp;action=edit" class="new" title="PurchasePowersList (console command)">PurchasePowersList</a> </td><td> Called by Purchase.swf to request veil powers list.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PurchaseSelectAmmo_%28console_command%29&amp;action=edit" class="new" title="PurchaseSelectAmmo (console command)">PurchaseSelectAmmo</a> </td><td> Called by Purchase.swf to select ammo for purchase.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PurchaseSelectPower_%28console_command%29&amp;action=edit" class="new" title="PurchaseSelectPower (console command)">PurchaseSelectPower</a> </td><td> Called by Purchase.swf to request detailed info on a power.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PurchaseSelectUpgrade_%28console_command%29&amp;action=edit" class="new" title="PurchaseSelectUpgrade (console command)">PurchaseSelectUpgrade</a> </td><td> Called by Purchase.swf to request upgrade info.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PurchaseSelectWeapon_%28console_command%29&amp;action=edit" class="new" title="PurchaseSelectWeapon (console command)">PurchaseSelectWeapon</a> </td><td> Called by Purchase.swf to request detailed info on a weapon.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=PurchaseWeaponsList_%28console_command%29&amp;action=edit" class="new" title="PurchaseWeaponsList (console command)">PurchaseWeaponsList</a> </td><td> Called by Purchase.swf to request weapon list.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/Quit_%28console_command%29" title="Quit (console command)">quit</a> </td><td> quits the game
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=QuitMission_%28console_command%29&amp;action=edit" class="new" title="QuitMission (console command)">quitMission</a> </td><td> allows the player to quit out of the current mission
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=RecommendedVideoMode_%28console_command%29&amp;action=edit" class="new" title="RecommendedVideoMode (console command)">recommendedVideoMode</a> </td><td> print the recommended video settings for full screen on this machine
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=RefreshCompassIcons_%28console_command%29&amp;action=edit" class="new" title="RefreshCompassIcons (console command)">refreshCompassIcons</a> </td><td> updates persistent district compass icons based on current global variables
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=RefreshMissionCompleteStats_%28console_command%29&amp;action=edit" class="new" title="RefreshMissionCompleteStats (console command)">RefreshMissionCompleteStats</a> </td><td> Refreshes the mission complete stats
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=RefreshPurchaseUpgrades_%28console_command%29&amp;action=edit" class="new" title="RefreshPurchaseUpgrades (console command)">RefreshPurchaseUpgrades</a> </td><td> Called by purchase.swf to refresh upgrades, so weapons draw correctly.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Reloadanims_%28console_command%29&amp;action=edit" class="new" title="Reloadanims (console command)">reloadanims</a> </td><td> reloads animations
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ReloadBrains_%28console_command%29&amp;action=edit" class="new" title="ReloadBrains (console command)">reloadBrains</a> </td><td> reload brains
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/ReloadDecls_%28console_command%29" title="ReloadDecls (console command)">reloadDecls</a> </td><td> reloads decls
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ReloadEngine_%28console_command%29&amp;action=edit" class="new" title="ReloadEngine (console command)">reloadEngine</a> </td><td> reloads the engine down to including the file system
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ReloadFAS_%28console_command%29&amp;action=edit" class="new" title="ReloadFAS (console command)">reloadFAS</a> </td><td> reloads the viseme data
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Reloadglobals_%28console_command%29&amp;action=edit" class="new" title="Reloadglobals (console command)">reloadglobals</a> </td><td> reload one or all globals
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ReloadLanguage_%28console_command%29&amp;action=edit" class="new" title="ReloadLanguage (console command)">reloadLanguage</a> </td><td> reload language dict
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ReloadModels_%28console_command%29&amp;action=edit" class="new" title="ReloadModels (console command)">reloadModels</a> </td><td> reloads models
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ReloadScenes_%28console_command%29&amp;action=edit" class="new" title="ReloadScenes (console command)">reloadScenes</a> </td><td> reloads scenes
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ReloadScript_%28console_command%29&amp;action=edit" class="new" title="ReloadScript (console command)">reloadScript</a> </td><td> reloads scripts
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ReloadShaders_%28console_command%29&amp;action=edit" class="new" title="ReloadShaders (console command)">reloadShaders</a> </td><td> reloads the hardware shader programs
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ReloadVectors_%28console_command%29&amp;action=edit" class="new" title="ReloadVectors (console command)">reloadVectors</a> </td><td> reloads the global vector manager
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/Remove_%28console_command%29" title="Remove (console command)">remove</a> </td><td> removes an entity
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Removeline_%28console_command%29&amp;action=edit" class="new" title="Removeline (console command)">removeline</a> </td><td> removes a debug line
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=RemoveTargetEnt_%28console_command%29&amp;action=edit" class="new" title="RemoveTargetEnt (console command)">removeTargetEnt</a> </td><td> Removes the entity the player is aiming at
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ReopenMenu_%28console_command%29&amp;action=edit" class="new" title="ReopenMenu (console command)">ReopenMenu</a> </td><td> reopens the current menu
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ResaveDecl_%28console_command%29&amp;action=edit" class="new" title="ResaveDecl (console command)">resaveDecl</a> </td><td> resaves a decl or every decl of a certain type
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=RescanSI_%28console_command%29&amp;action=edit" class="new" title="RescanSI (console command)">rescanSI</a> </td><td> internal - rescan serverinfo cvars and tell game
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Reset_%28console_command%29&amp;action=edit" class="new" title="Reset (console command)">reset</a> </td><td> resets a cvar
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ResetCollectibles_%28console_command%29&amp;action=edit" class="new" title="ResetCollectibles (console command)">resetCollectibles</a> </td><td> resets all of the data/globals for collectibles collected
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ResetMission_%28console_command%29&amp;action=edit" class="new" title="ResetMission (console command)">resetMission</a> </td><td> reset one or all missions
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ResetScenario_%28console_command%29&amp;action=edit" class="new" title="ResetScenario (console command)">resetScenario</a> </td><td> Resets the given scenario
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Rumble_%28console_command%29&amp;action=edit" class="new" title="Rumble (console command)">rumble</a> </td><td> rumble the controller
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=RumbleWithTables_%28console_command%29&amp;action=edit" class="new" title="RumbleWithTables (console command)">rumbleWithTables</a> </td><td> rumble the controller using a table description
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=RunAutomatedTester_%28console_command%29&amp;action=edit" class="new" title="RunAutomatedTester (console command)">RunAutomatedTester</a> </td><td> Run a set of automated tests.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SaveMoveables_%28console_command%29&amp;action=edit" class="new" title="SaveMoveables (console command)">saveMoveables</a> </td><td> save all moveables to the .map file
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SaveSelected_%28console_command%29&amp;action=edit" class="new" title="SaveSelected (console command)">saveSelected</a> </td><td> saves the selected entity to the .map file
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformAddMapIcon_%28console_command%29&amp;action=edit" class="new" title="ScaleformAddMapIcon (console command)">ScaleformAddMapIcon</a> </td><td> Add icon to map
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformBindNextAnalogEvent_%28console_command%29&amp;action=edit" class="new" title="ScaleformBindNextAnalogEvent (console command)">ScaleformBindNextAnalogEvent</a> </td><td> Set text on the scaleform controller screen
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformBindNextJoystickEvent_%28console_command%29&amp;action=edit" class="new" title="ScaleformBindNextJoystickEvent (console command)">ScaleformBindNextJoystickEvent</a> </td><td> Set text on the scaleform controller screen
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformBindNextKeyEvent_%28console_command%29&amp;action=edit" class="new" title="ScaleformBindNextKeyEvent (console command)">ScaleformBindNextKeyEvent</a> </td><td> Set text on the scaleform controller screen
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformBufferCommand_%28console_command%29&amp;action=edit" class="new" title="ScaleformBufferCommand (console command)">ScaleformBufferCommand</a> </td><td> appends a command for execution
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformCaptureNextStartPress_%28console_command%29&amp;action=edit" class="new" title="ScaleformCaptureNextStartPress (console command)">ScaleformCaptureNextStartPress</a> </td><td> Looks for next gamepad start press and actives that gamepad
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformClearPreviousBinds_%28console_command%29&amp;action=edit" class="new" title="ScaleformClearPreviousBinds (console command)">ScaleformClearPreviousBinds</a> </td><td> Clears any previous key bindings to given key
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformClearSpecificBind_%28console_command%29&amp;action=edit" class="new" title="ScaleformClearSpecificBind (console command)">ScaleformClearSpecificBind</a> </td><td> Clears a previous bindpoint and key pair
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformCloseMenu_%28console_command%29&amp;action=edit" class="new" title="ScaleformCloseMenu (console command)">ScaleformCloseMenu</a> </td><td> Called by SWFs to close themselves.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformCloseVideo_%28console_command%29&amp;action=edit" class="new" title="ScaleformCloseVideo (console command)">ScaleformCloseVideo</a> </td><td> Closes the current video if one is playing
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformControllerChanged_%28console_command%29&amp;action=edit" class="new" title="ScaleformControllerChanged (console command)">ScaleformControllerChanged</a> </td><td> Notifies scaleform when a controller changed so it can update button hints and stuff
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformDiedLoadMenu_%28console_command%29&amp;action=edit" class="new" title="ScaleformDiedLoadMenu (console command)">ScaleformDiedLoadMenu</a> </td><td> Called by death menu to goto the main menu
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformDiedRestart_%28console_command%29&amp;action=edit" class="new" title="ScaleformDiedRestart (console command)">ScaleformDiedRestart</a> </td><td> Called by death menu to restart from checkpoint
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformDrawUnlocked_%28console_command%29&amp;action=edit" class="new" title="ScaleformDrawUnlocked (console command)">ScaleformDrawUnlocked</a> </td><td> Called by the end of level stats menu to ask for a compilation of unlockables
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformEndLetterBox_%28console_command%29&amp;action=edit" class="new" title="ScaleformEndLetterBox (console command)">ScaleformEndLetterBox</a> </td><td> If in the HUD, turns off letterbox and shows stuff
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetAnalogBindIds_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetAnalogBindIds (console command)">ScaleformGetAnalogBindIds</a> </td><td> retrieves bindpoint description
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetAnalogBindString_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetAnalogBindString (console command)">ScaleformGetAnalogBindString</a> </td><td> retrieves bindpoint langstrings
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetAudioModes_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetAudioModes (console command)">ScaleformGetAudioModes</a> </td><td> Get audio modes supported by the game.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetBindString_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetBindString (console command)">ScaleformGetBindString</a> </td><td> retrieves bindpoint description
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetButtonFromBindPoint_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetButtonFromBindPoint (console command)">ScaleformGetButtonFromBindPoint</a> </td><td> Returns a button id of a given bind point
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetCurrentVideoMode_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetCurrentVideoMode (console command)">ScaleformGetCurrentVideoMode</a> </td><td> Get the currently set video resolution and refresh rate for this machine.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetCVarDefaultValue_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetCVarDefaultValue (console command)">ScaleformGetCVarDefaultValue</a> </td><td> retrieves cvar default value and passes it to actionscript through a callback
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetCVarMaxValue_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetCVarMaxValue (console command)">ScaleformGetCVarMaxValue</a> </td><td> retreives cvar max value and passes it to actionscript through a callback
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetCVarMinValue_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetCVarMinValue (console command)">ScaleformGetCVarMinValue</a> </td><td> retreives cvar min value and passes it to actionscript through a callback
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetCVarValue_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetCVarValue (console command)">ScaleformGetCVarValue</a> </td><td> retreives cvar value and passes it to actionscript through a callback
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetDefaultNormalizedGamma_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetDefaultNormalizedGamma (console command)">ScaleformGetDefaultNormalizedGamma</a> </td><td> Get the default gamma value.  Normalized[0,1].
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetDemoMenus_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetDemoMenus (console command)">ScaleformGetDemoMenus</a> </td><td> Returns whether or not we are using demo menus
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetGamepadActive_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetGamepadActive (console command)">ScaleformGetGamepadActive</a> </td><td> Allows the scaleform to query for an active gamepad
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetGodMode_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetGodMode (console command)">ScaleformGetGodMode</a> </td><td> Gets the value of the god mode cheat
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetInputDevices_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetInputDevices (console command)">ScaleformGetInputDevices</a> </td><td> Get input devices supported by the game.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetJoystickBindIds_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetJoystickBindIds (console command)">ScaleformGetJoystickBindIds</a> </td><td> retrieves bindpoint description
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetJoystickBindString_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetJoystickBindString (console command)">ScaleformGetJoystickBindString</a> </td><td> retrieves bindpoint langstrings
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetKeyBindIds_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetKeyBindIds (console command)">ScaleformGetKeyBindIds</a> </td><td> retrieves bindpoint description
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetKeyBindString_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetKeyBindString (console command)">ScaleformGetKeyBindString</a> </td><td> retrieves bindpoint langstrings
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetLetterBoxedResolution_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetLetterBoxedResolution (console command)">ScaleformGetLetterBoxedResolution</a> </td><td> Get the letter boxed resolution to achieve the given aspect ratio.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetLocalizedString_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetLocalizedString (console command)">ScaleformGetLocalizedString</a> </td><td> Localizes a #str
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetMainStoryFinished_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetMainStoryFinished (console command)">ScaleformGetMainStoryFinished</a> </td><td> Returns whether or not the player has beaten the game.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetMaxAnisotropyBias_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetMaxAnisotropyBias (console command)">ScaleformGetMaxAnisotropyBias</a> </td><td> Get the max aniso bias as a floating point value [0,1].
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetMPPreorderDLC_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetMPPreorderDLC (console command)">ScaleformGetMPPreorderDLC</a> </td><td> Returns whether or not we have the MP Preorder for 2000 dollars
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetNormalizedGamma_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetNormalizedGamma (console command)">ScaleformGetNormalizedGamma</a> </td><td> Get the current gamma value.  Normalized [0,1].
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetPostProcessHighQuality_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetPostProcessHighQuality (console command)">ScaleformGetPostProcessHighQuality</a> </td><td> Get the post process quality to low or high quality
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetRecommendedVideoMode_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetRecommendedVideoMode (console command)">ScaleformGetRecommendedVideoMode</a> </td><td> Get the recommended video resolution and refresh rate for this machine.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetRefreshRates_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetRefreshRates (console command)">ScaleformGetRefreshRates</a> </td><td> Get refresh rates supported for the given resolution.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetSignInStatus_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetSignInStatus (console command)">ScaleformGetSignInStatus</a> </td><td> Returns whether the active controller has a profile signed in
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetValue_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetValue (console command)">ScaleformGetValue</a> </td><td> retrieves a value from scaleform
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetVideoResolutions_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetVideoResolutions (console command)">ScaleformGetVideoResolutions</a> </td><td> Get video modes supported by the display.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformGetWindowedFullscreenResolu_%28console_command%29&amp;action=edit" class="new" title="ScaleformGetWindowedFullscreenResolu (console command)">ScaleformGetWindowedFullscreenResolu</a> </td><td> tion Get the corresponding initial resolution when swithing from windowed &lt;-&gt; fullscreen.  Takes callback width height aspectRatio goingToFullscreen
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformIconPulse_%28console_command%29&amp;action=edit" class="new" title="ScaleformIconPulse (console command)">ScaleformIconPulse</a> </td><td> Makes a given power's icon pulse
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformInputHack_%28console_command%29&amp;action=edit" class="new" title="ScaleformInputHack (console command)">ScaleformInputHack</a> </td><td> When actionscript wants to simulate a button press
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformInvokeArgs_%28console_command%29&amp;action=edit" class="new" title="ScaleformInvokeArgs (console command)">ScaleformInvokeArgs</a> </td><td> calls scaleform invoke args
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformIsJoystickActive_%28console_command%29&amp;action=edit" class="new" title="ScaleformIsJoystickActive (console command)">ScaleformIsJoystickActive</a> </td><td> Empty string if none active, else name of the device.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformIsX360GamePadEnabled_%28console_command%29&amp;action=edit" class="new" title="ScaleformIsX360GamePadEnabled (console command)">ScaleformIsX360GamePadEnabled</a> </td><td> returns whether 360 controller is enabled
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformListCinematics_%28console_command%29&amp;action=edit" class="new" title="ScaleformListCinematics (console command)">ScaleformListCinematics</a> </td><td> Called by cinematics menu to get the ball rolling
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformLoadSWF_%28console_command%29&amp;action=edit" class="new" title="ScaleformLoadSWF (console command)">ScaleformLoadSWF</a> </td><td> Loads a test HUD SWF (instead of the GFX).
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformMissionCompleteContinue_%28console_command%29&amp;action=edit" class="new" title="ScaleformMissionCompleteContinue (console command)">ScaleformMissionCompleteContinue</a> </td><td> Called by end of level stats menu, to request an advancement to next level
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformPauseEmbeddedVideo_%28console_command%29&amp;action=edit" class="new" title="ScaleformPauseEmbeddedVideo (console command)">ScaleformPauseEmbeddedVideo</a> </td><td> Pauses an embedded video
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformPauseVideo_%28console_command%29&amp;action=edit" class="new" title="ScaleformPauseVideo (console command)">ScaleformPauseVideo</a> </td><td> Within the video GUI, pause the playing video.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformPlayEmbeddedVideo_%28console_command%29&amp;action=edit" class="new" title="ScaleformPlayEmbeddedVideo (console command)">ScaleformPlayEmbeddedVideo</a> </td><td> Plays an embedded video
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformPlaySound_%28console_command%29&amp;action=edit" class="new" title="ScaleformPlaySound (console command)">ScaleformPlaySound</a> </td><td> Play sound with specified attenuation (optional).
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformPlayVideo_%28console_command%29&amp;action=edit" class="new" title="ScaleformPlayVideo (console command)">ScaleformPlayVideo</a> </td><td> Open the video gui and play a video
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformPopRenderSettings_%28console_command%29&amp;action=edit" class="new" title="ScaleformPopRenderSettings (console command)">ScaleformPopRenderSettings</a> </td><td> This will restore the a previously pushed set ofrendering setting cvars.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformPushRenderSettings_%28console_command%29&amp;action=edit" class="new" title="ScaleformPushRenderSettings (console command)">ScaleformPushRenderSettings</a> </td><td> This will store the current set of rendering setting cvars.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformReopenMainMenu_%28console_command%29&amp;action=edit" class="new" title="ScaleformReopenMainMenu (console command)">ScaleformReopenMainMenu</a> </td><td> Closes and re-opens the main menu
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformReplayAccept_%28console_command%29&amp;action=edit" class="new" title="ScaleformReplayAccept (console command)">ScaleformReplayAccept</a> </td><td> Called by end of level stats menu, requests a replay of the level
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformRequestXInputPolling_%28console_command%29&amp;action=edit" class="new" title="ScaleformRequestXInputPolling (console command)">ScaleformRequestXInputPolling</a> </td><td> Enable per-frame polling for XInput devices.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformResetCVarValue_%28console_command%29&amp;action=edit" class="new" title="ScaleformResetCVarValue (console command)">ScaleformResetCVarValue</a> </td><td> Resets the value of a cvar to it's default
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformResumeVideo_%28console_command%29&amp;action=edit" class="new" title="ScaleformResumeVideo (console command)">ScaleformResumeVideo</a> </td><td> Within the video GUI, resume the paused video.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformSaveDeviceLost_%28console_command%29&amp;action=edit" class="new" title="ScaleformSaveDeviceLost (console command)">ScaleformSaveDeviceLost</a> </td><td> Alerts that the save device has been removed and clears the global popup and refreshes the saves list
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformSetCursor_%28console_command%29&amp;action=edit" class="new" title="ScaleformSetCursor (console command)">ScaleformSetCursor</a> </td><td> set the win32 cursor
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformSetCVarModified_%28console_command%29&amp;action=edit" class="new" title="ScaleformSetCVarModified (console command)">ScaleformSetCVarModified</a> </td><td> Sets a cvar's modified flag
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformSetFavoriteWeapon_%28console_command%29&amp;action=edit" class="new" title="ScaleformSetFavoriteWeapon (console command)">ScaleformSetFavoriteWeapon</a> </td><td> Called by WeaponSelect menu to set the player's favorite weapon
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformSetMaxAnisotropyBias_%28console_command%29&amp;action=edit" class="new" title="ScaleformSetMaxAnisotropyBias (console command)">ScaleformSetMaxAnisotropyBias</a> </td><td> Set the max aniso bias as a floating point value [0,1].
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformSetNormalizedGamma_%28console_command%29&amp;action=edit" class="new" title="ScaleformSetNormalizedGamma (console command)">ScaleformSetNormalizedGamma</a> </td><td> Set the current gamma value.  Normalized [0,1].
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformSetPlayerHasCheated_%28console_command%29&amp;action=edit" class="new" title="ScaleformSetPlayerHasCheated (console command)">ScaleformSetPlayerHasCheated</a> </td><td> Sets the variable in spstatsmanager so we knowthe player has cheated
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformSetPostProcessHighQuality_%28console_command%29&amp;action=edit" class="new" title="ScaleformSetPostProcessHighQuality (console command)">ScaleformSetPostProcessHighQuality</a> </td><td> Set the post process quality to low or high quality
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformShowSkipPrompt_%28console_command%29&amp;action=edit" class="new" title="ScaleformShowSkipPrompt (console command)">ScaleformShowSkipPrompt</a> </td><td> Notification of the video skip prompt.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformShowStartMenu_%28console_command%29&amp;action=edit" class="new" title="ScaleformShowStartMenu (console command)">ScaleformShowStartMenu</a> </td><td> opens start menu
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformShowStartScreen_%28console_command%29&amp;action=edit" class="new" title="ScaleformShowStartScreen (console command)">ScaleformShowStartScreen</a> </td><td> pushes startscreen menu
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformStartLetterBox_%28console_command%29&amp;action=edit" class="new" title="ScaleformStartLetterBox (console command)">ScaleformStartLetterBox</a> </td><td> If in the HUD, hides components and opens up the letterbox setting
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformTestButtonPrompt_%28console_command%29&amp;action=edit" class="new" title="ScaleformTestButtonPrompt (console command)">ScaleformTestButtonPrompt</a> </td><td> sends the given text to the button help message area
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformTipTest_%28console_command%29&amp;action=edit" class="new" title="ScaleformTipTest (console command)">ScaleformTipTest</a> </td><td> sends the given text to the tip box message area
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformToggleGamma_%28console_command%29&amp;action=edit" class="new" title="ScaleformToggleGamma (console command)">ScaleformToggleGamma</a> </td><td> Loads a gamma test pattern.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformToggleHUD_%28console_command%29&amp;action=edit" class="new" title="ScaleformToggleHUD (console command)">ScaleformToggleHUD</a> </td><td> Toggles the HUD on/off.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformUpdateBindText_%28console_command%29&amp;action=edit" class="new" title="ScaleformUpdateBindText (console command)">ScaleformUpdateBindText</a> </td><td> Calls SetBindText on all existing bindings
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScaleformUserHasSaveData_%28console_command%29&amp;action=edit" class="new" title="ScaleformUserHasSaveData (console command)">ScaleformUserHasSaveData</a> </td><td> returns whether the active user has any sava data
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ScreenShake_%28console_command%29&amp;action=edit" class="new" title="ScreenShake (console command)">screenShake</a> </td><td> Shake the screen
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/Screenshot_%28console_command%29" title="Screenshot (console command)">screenshot</a> </td><td> takes a tga screenshot
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/Script_%28console_command%29" title="Script (console command)">script</a> </td><td> executes a line of script
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SellAccept_%28console_command%29&amp;action=edit" class="new" title="SellAccept (console command)">SellAccept</a> </td><td> Called by Purchase.swf to sell the current selection.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/Set_%28console_command%29" title="Set (console command)">set</a> </td><td> sets a cvar
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/Seta_%28console_command%29" title="Seta (console command)">seta</a> </td><td> sets a cvar and flags it as archive
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SetErrorScreenFlag_%28console_command%29&amp;action=edit" class="new" title="SetErrorScreenFlag (console command)">SetErrorScreenFlag</a> </td><td> Sets an error for one of the screen to show
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SetFogOverride_%28console_command%29&amp;action=edit" class="new" title="SetFogOverride (console command)">setFogOverride</a> </td><td> sets the override fog params in the atmosphere system
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Setglobal_%28console_command%29&amp;action=edit" class="new" title="Setglobal (console command)">setglobal</a> </td><td> set a global variable
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SetGlobalVector_%28console_command%29&amp;action=edit" class="new" title="SetGlobalVector (console command)">setGlobalVector</a> </td><td> Sets a vector in the global vector array.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Setlocal_%28console_command%29&amp;action=edit" class="new" title="Setlocal (console command)">setlocal</a> </td><td> set a local variable
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SetMachineSpec_%28console_command%29&amp;action=edit" class="new" title="SetMachineSpec (console command)">setMachineSpec</a> </td><td> detects system capabilities and sets com_machineSpec to appropriate value
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SetPresenceContext_%28console_command%29&amp;action=edit" class="new" title="SetPresenceContext (console command)">SetPresenceContext</a> </td><td> sets rich presence context
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Sets_%28console_command%29&amp;action=edit" class="new" title="Sets (console command)">sets</a> </td><td> sets a cvar and flags it as server info
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Sett_%28console_command%29&amp;action=edit" class="new" title="Sett (console command)">sett</a> </td><td> sets a cvar and flags it as tool
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Setu_%28console_command%29&amp;action=edit" class="new" title="Setu (console command)">setu</a> </td><td> sets a cvar and flags it as user info
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Sfenablescenario_%28console_command%29&amp;action=edit" class="new" title="Sfenablescenario (console command)">sfenablescenario</a> </td><td> Called by the scenario picker to toggle the status ofa scenario in the list.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Sfmap_%28console_command%29&amp;action=edit" class="new" title="Sfmap (console command)">sfmap</a> </td><td> Called by SWFs to queue a map change (map crashes).
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Sfquit_%28console_command%29&amp;action=edit" class="new" title="Sfquit (console command)">sfquit</a> </td><td> Called by SWFs to exit the game.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ShowEntity_%28console_command%29&amp;action=edit" class="new" title="ShowEntity (console command)">showEntity</a> </td><td> Draws debug bounds for an entity
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ShowEntityDictUsage_%28console_command%29&amp;action=edit" class="new" title="ShowEntityDictUsage (console command)">ShowEntityDictUsage</a> </td><td> shows entity dictionary memory usage
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ShowEntitySpawnArgs_%28console_command%29&amp;action=edit" class="new" title="ShowEntitySpawnArgs (console command)">ShowEntitySpawnArgs</a> </td><td> shows entity spawnargs
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ShowHeapInfo_%28console_command%29&amp;action=edit" class="new" title="ShowHeapInfo (console command)">showHeapInfo</a> </td><td> Prints information about heap usage
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ShowMemAlloc_%28console_command%29&amp;action=edit" class="new" title="ShowMemAlloc (console command)">showMemAlloc</a> </td><td> Prints outstanding mem_alloc tags -- Debug only
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ShowMemory_%28console_command%29&amp;action=edit" class="new" title="ShowMemory (console command)">showMemory</a> </td><td> gives a reasonably detailed account of memory usage
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ShowMemTagAlloc_%28console_command%29&amp;action=edit" class="new" title="ShowMemTagAlloc (console command)">showMemTagAlloc</a> </td><td> prints a list of all the allocations within a certainheap
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ShowTempMessage_%28console_command%29&amp;action=edit" class="new" title="ShowTempMessage (console command)">showTempMessage</a> </td><td> shows a temporary message on the HUD
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ShowTriSurfMemory_%28console_command%29&amp;action=edit" class="new" title="ShowTriSurfMemory (console command)">showTriSurfMemory</a> </td><td> shows memory used by triangle surfaces
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SLook_%28console_command%29&amp;action=edit" class="new" title="SLook (console command)">sLook</a> </td><td> See <a href="/web/20110426104331/http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To" class='external free' title="http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To">http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To</a>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SModify_%28console_command%29&amp;action=edit" class="new" title="SModify (console command)">sModify</a> </td><td> See <a href="/web/20110426104331/http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To" class='external free' title="http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To">http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To</a>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SModifyDist_%28console_command%29&amp;action=edit" class="new" title="SModifyDist (console command)">sModifyDist</a> </td><td> See <a href="/web/20110426104331/http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To" class='external free' title="http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To">http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To</a>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SModifyToggle_%28console_command%29&amp;action=edit" class="new" title="SModifyToggle (console command)">sModifyToggle</a> </td><td> See <a href="/web/20110426104331/http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To" class='external free' title="http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To">http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To</a>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SModifyToggleIsolate_%28console_command%29&amp;action=edit" class="new" title="SModifyToggleIsolate (console command)">sModifyToggleIsolate</a> </td><td> See <a href="/web/20110426104331/http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To" class='external free' title="http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To">http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To</a>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SndConfig_%28console_command%29&amp;action=edit" class="new" title="SndConfig (console command)">sndConfig</a> </td><td> See <a href="/web/20110426104331/http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To" class='external free' title="http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To">http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To</a>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SndDebug_%28console_command%29&amp;action=edit" class="new" title="SndDebug (console command)">sndDebug</a> </td><td> See <a href="/web/20110426104331/http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To" class='external free' title="http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To">http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To</a>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SndDebugVoices_%28console_command%29&amp;action=edit" class="new" title="SndDebugVoices (console command)">sndDebugVoices</a> </td><td> See <a href="/web/20110426104331/http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To" class='external free' title="http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To">http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To</a>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SndDump_%28console_command%29&amp;action=edit" class="new" title="SndDump (console command)">sndDump</a> </td><td> See <a href="/web/20110426104331/http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To" class='external free' title="http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To">http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To</a>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SndDumpDefaults_%28console_command%29&amp;action=edit" class="new" title="SndDumpDefaults (console command)">sndDumpDefaults</a> </td><td> See <a href="/web/20110426104331/http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To" class='external free' title="http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To">http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To</a>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SndDumpUsage_%28console_command%29&amp;action=edit" class="new" title="SndDumpUsage (console command)">sndDumpUsage</a> </td><td> See <a href="/web/20110426104331/http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To" class='external free' title="http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To">http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To</a>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SndDumpVoices_%28console_command%29&amp;action=edit" class="new" title="SndDumpVoices (console command)">sndDumpVoices</a> </td><td> See <a href="/web/20110426104331/http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To" class='external free' title="http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To">http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To</a>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SndHelp_%28console_command%29&amp;action=edit" class="new" title="SndHelp (console command)">sndHelp</a> </td><td> See <a href="/web/20110426104331/http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To" class='external free' title="http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To">http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To</a>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SndListAssets_%28console_command%29&amp;action=edit" class="new" title="SndListAssets (console command)">sndListAssets</a> </td><td> See <a href="/web/20110426104331/http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To" class='external free' title="http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To">http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To</a>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SndListDecls_%28console_command%29&amp;action=edit" class="new" title="SndListDecls (console command)">sndListDecls</a> </td><td> See <a href="/web/20110426104331/http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To" class='external free' title="http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To">http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To</a>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SndListDefaults_%28console_command%29&amp;action=edit" class="new" title="SndListDefaults (console command)">sndListDefaults</a> </td><td> See <a href="/web/20110426104331/http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To" class='external free' title="http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To">http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To</a>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SndListPools_%28console_command%29&amp;action=edit" class="new" title="SndListPools (console command)">sndListPools</a> </td><td> See <a href="/web/20110426104331/http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To" class='external free' title="http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To">http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To</a>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SndListReverbs_%28console_command%29&amp;action=edit" class="new" title="SndListReverbs (console command)">sndListReverbs</a> </td><td> See <a href="/web/20110426104331/http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To" class='external free' title="http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To">http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To</a>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SndListVoices_%28console_command%29&amp;action=edit" class="new" title="SndListVoices (console command)">sndListVoices</a> </td><td> See <a href="/web/20110426104331/http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To" class='external free' title="http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To">http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To</a>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SndShot_%28console_command%29&amp;action=edit" class="new" title="SndShot (console command)">sndShot</a> </td><td> See <a href="/web/20110426104331/http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To" class='external free' title="http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To">http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To</a>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SndShowUsage_%28console_command%29&amp;action=edit" class="new" title="SndShowUsage (console command)">sndShowUsage</a> </td><td> See <a href="/web/20110426104331/http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To" class='external free' title="http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To">http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To</a>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SndStatSFX_%28console_command%29&amp;action=edit" class="new" title="SndStatSFX (console command)">sndStatSFX</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SndStopAll_%28console_command%29&amp;action=edit" class="new" title="SndStopAll (console command)">sndStopAll</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SndTestLoop_%28console_command%29&amp;action=edit" class="new" title="SndTestLoop (console command)">sndTestLoop</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SndTestReverb_%28console_command%29&amp;action=edit" class="new" title="SndTestReverb (console command)">sndTestReverb</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SndTestSound_%28console_command%29&amp;action=edit" class="new" title="SndTestSound (console command)">sndTestSound</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SndTestVolume_%28console_command%29&amp;action=edit" class="new" title="SndTestVolume (console command)">sndTestVolume</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SoulMachinePulse_%28console_command%29&amp;action=edit" class="new" title="SoulMachinePulse (console command)">soulMachinePulse</a> </td><td> causes the soul machine to pulse now
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/Spawn_%28console_command%29" title="Spawn (console command)">spawn</a> </td><td> spawns a game entity
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SpawnPyramid_%28console_command%29&amp;action=edit" class="new" title="SpawnPyramid (console command)">spawnPyramid</a> </td><td> Spawn ents in a pyramid
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SpawnScenario_%28console_command%29&amp;action=edit" class="new" title="SpawnScenario (console command)">spawnScenario</a> </td><td> Spawns the given scenario
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Speak_%28console_command%29&amp;action=edit" class="new" title="Speak (console command)">speak</a> </td><td> See <a href="/web/20110426104331/http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To" class='external free' title="http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To">http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To</a>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SprintMode_%28console_command%29&amp;action=edit" class="new" title="SprintMode (console command)">SprintMode</a> </td><td> enable sprinting
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=SprintToggle_%28console_command%29&amp;action=edit" class="new" title="SprintToggle (console command)">sprintToggle</a> </td><td> toggle sprint on/off
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=StripLODs_%28console_command%29&amp;action=edit" class="new" title="StripLODs (console command)">stripLODs</a> </td><td> strips out lods that aren't within the distance rangepassed in
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=TabComplete_%28console_command%29&amp;action=edit" class="new" title="TabComplete (console command)">tabComplete</a> </td><td> tab completes it's argument
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=TestCommandEvent_%28console_command%29&amp;action=edit" class="new" title="TestCommandEvent (console command)">testCommandEvent</a> </td><td> tests posting an event in CommandEventSystem
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=TestDamage_%28console_command%29&amp;action=edit" class="new" title="TestDamage (console command)">testDamage</a> </td><td> tests a damage def
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=TestDeath_%28console_command%29&amp;action=edit" class="new" title="TestDeath (console command)">testDeath</a> </td><td> tests death
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=TestLight_%28console_command%29&amp;action=edit" class="new" title="TestLight (console command)">testLight</a> </td><td> tests a light
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=TestLoadModels_%28console_command%29&amp;action=edit" class="new" title="TestLoadModels (console command)">testLoadModels</a> </td><td>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=TestNewBloodEffects_%28console_command%29&amp;action=edit" class="new" title="TestNewBloodEffects (console command)">TestNewBloodEffects</a> </td><td> Sets Cvars for new blood effects testing
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=TestPointLight_%28console_command%29&amp;action=edit" class="new" title="TestPointLight (console command)">testPointLight</a> </td><td> tests a point light
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=TestRadiusDamage_%28console_command%29&amp;action=edit" class="new" title="TestRadiusDamage (console command)">testRadiusDamage</a> </td><td> does a ginormous radius damage to test performance
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=TestSaveGameSystem_%28console_command%29&amp;action=edit" class="new" title="TestSaveGameSystem (console command)">testSaveGameSystem</a> </td><td> tests the savegame framework using a test class.
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=TestSIMD_%28console_command%29&amp;action=edit" class="new" title="TestSIMD (console command)">testSIMD</a> </td><td> test SIMD code
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ThrowAtPlayer_%28console_command%29&amp;action=edit" class="new" title="ThrowAtPlayer (console command)">throwAtPlayer</a> </td><td> throws the targetted object at the player
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/Toggle_%28console_command%29" title="Toggle (console command)">toggle</a> </td><td> toggles a cvar
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ToggleShroud_%28console_command%29&amp;action=edit" class="new" title="ToggleShroud (console command)">toggleShroud</a> </td><td> Toggle shroud state
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/Touch_%28console_command%29" title="Touch (console command)">touch</a> </td><td> touches a decl
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=TouchFile_%28console_command%29&amp;action=edit" class="new" title="TouchFile (console command)">touchFile</a> </td><td> touches a file
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=TouchFileList_%28console_command%29&amp;action=edit" class="new" title="TouchFileList (console command)">touchFileList</a> </td><td> touches a list of files
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=TouchModel_%28console_command%29&amp;action=edit" class="new" title="TouchModel (console command)">touchModel</a> </td><td> touches a model
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=TouchStreamTrigger_%28console_command%29&amp;action=edit" class="new" title="TouchStreamTrigger (console command)">touchStreamTrigger</a> </td><td> touches a stream trigger causing it to fire
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/Trigger_%28console_command%29" title="Trigger (console command)">trigger</a> </td><td> triggers an entity
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Unbind_%28console_command%29&amp;action=edit" class="new" title="Unbind (console command)">unbind</a> </td><td> unbinds a bind point from a key
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=UnbindAll_%28console_command%29&amp;action=edit" class="new" title="UnbindAll (console command)">unbindAll</a> </td><td> unbinds all bind points
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Undying_%28console_command%29&amp;action=edit" class="new" title="Undying (console command)">undying</a> </td><td> enables undying mode (take damage down to 1 health, but do not die)
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Unpause_%28console_command%29&amp;action=edit" class="new" title="Unpause (console command)">unpause</a> </td><td> See <a href="/web/20110426104331/http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To" class='external free' title="http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To">http://wiki.ravensoft.com:4444/wiki/index.php/Wolf2_Audio_How_To</a>
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=UpdateFillerMissions_%28console_command%29&amp;action=edit" class="new" title="UpdateFillerMissions (console command)">updateFillerMissions</a> </td><td> updates active filler missions based on current global variables
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/wiki/Vid_restart_%28console_command%29" title="Vid restart (console command)">vid_restart</a> </td><td> restarts renderSystem
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Vstr_%28console_command%29&amp;action=edit" class="new" title="Vstr (console command)">vstr</a> </td><td> inserts the current value of a cvar as command text
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Wait_%28console_command%29&amp;action=edit" class="new" title="Wait (console command)">wait</a> </td><td> delays remaining buffered commands one or more frames
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Where_%28console_command%29&amp;action=edit" class="new" title="Where (console command)">where</a> </td><td> prints the current view position
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=WriteConfig_%28console_command%29&amp;action=edit" class="new" title="WriteConfig (console command)">writeConfig</a> </td><td> writes a config file
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=WriteConfiguration_%28console_command%29&amp;action=edit" class="new" title="WriteConfiguration (console command)">WriteConfiguration</a> </td><td> WriteConfiguration
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=WritePrecache_%28console_command%29&amp;action=edit" class="new" title="WritePrecache (console command)">writePrecache</a> </td><td> writes precache commands
+</td></tr>
+<tr>
+<td> <a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=ZoomToggle_%28console_command%29&amp;action=edit" class="new" title="ZoomToggle (console command)">zoomToggle</a> </td><td> toggle ironsights/scope on/off
+</td></tr></table>
+<div class="printfooter">
+Retrieved from "<a href="/web/20110426104331/http://www.modwiki.net/wiki/Commands_%28Wolf%29">http://www.modwiki.net/wiki/Commands_%28Wolf%29</a>"</div>
+			<div id="catlinks"><p class='catlinks'><a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Special:Categories&amp;article=Commands_%28Wolf%29" title="Special:Categories">Category</a>: <span dir='ltr'><a href="/web/20110426104331/http://www.modwiki.net/wiki/Category:Engine_reference" title="Category:Engine reference">Engine reference</a></span><br /><hr /><a href="/web/20110426104331/http://www.modwiki.net/wiki/Category:Modwiki" title="Category:Modwiki">Modwiki</a> &gt; <a href="/web/20110426104331/http://www.modwiki.net/wiki/Category:Engine_reference" title="Category:Engine reference">Engine reference</a></p></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="/web/20110426104331/http://www.modwiki.net/wiki/Commands_%28Wolf%29">Article</a></li>
+				 <li id="ca-talk" class="new"><a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Talk:Commands_%28Wolf%29&amp;action=edit">Discussion</a></li>
+				 <li id="ca-edit"><a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Commands_%28Wolf%29&amp;action=edit">Edit</a></li>
+				 <li id="ca-history"><a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Commands_%28Wolf%29&amp;action=history">History</a></li>
+		</ul>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Special:Userlogin&amp;returnto=Commands_(Wolf)">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/web/20110426104331im_/http://www.modwiki.net/wiki/upload/wiki.png);" href="/web/20110426104331/http://www.modwiki.net/wiki/Main_Page" title="Main Page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class='portlet' id='p-Main'>
+		<h5>Main</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/web/20110426104331/http://www.modwiki.net/wiki/Main_Page">Main Page</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 4'>
+		<h5>id Tech 4</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Doom-3"><a href="/web/20110426104331/http://www.modwiki.net/wiki/Doom_3">Doom 3</a></li>
+				<li id="n-Quake-4"><a href="/web/20110426104331/http://www.modwiki.net/wiki/Quake_4">Quake 4</a></li>
+				<li id="n-Prey"><a href="/web/20110426104331/http://www.modwiki.net/wiki/Prey">Prey</a></li>
+				<li id="n-ETQW"><a href="/web/20110426104331/http://www.modwiki.net/wiki/Enemy_Territory:_Quake_Wars">ETQW</a></li>
+				<li id="n-Wolfenstein"><a href="/web/20110426104331/http://www.modwiki.net/wiki/Wolfenstein">Wolfenstein</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 5'>
+		<h5>id Tech 5</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Rage"><a href="/web/20110426104331/http://www.modwiki.net/wiki/Rage">Rage</a></li>
+				<li id="n-Doom-4"><a href="/web/20110426104331/http://www.modwiki.net/wiki/Doom_4">Doom 4</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Quick Links'>
+		<h5>Quick Links</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Console"><a href="/web/20110426104331/http://www.modwiki.net/wiki/Console">Console</a></li>
+				<li id="n-Script-Events"><a href="/web/20110426104331/http://www.modwiki.net/wiki/Scripting">Script Events</a></li>
+				<li id="n-Material-Keywords"><a href="/web/20110426104331/http://www.modwiki.net/wiki/Material_%28decl%29">Material Keywords</a></li>
+				<li id="n-Modification-List"><a href="/web/20110426104331/http://www.modwiki.net/wiki/Modlist">Modification List</a></li>
+				<li id="n-Tutorial-List"><a href="/web/20110426104331/http://www.modwiki.net/wiki/Tutorial_list">Tutorial List</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Wiki'>
+		<h5>Wiki</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Open-tasks"><a href="/web/20110426104331/http://www.modwiki.net/wiki/modwiki:Open_tasks">Open tasks</a></li>
+				<li id="n-recentchanges"><a href="/web/20110426104331/http://www.modwiki.net/wiki/Special:Recentchanges">Recent changes</a></li>
+				<li id="n-Style-guide"><a href="/web/20110426104331/http://www.modwiki.net/wiki/modwiki:Style_guide">Style guide</a></li>
+				<li id="n-help"><a href="/web/20110426104331/http://www.modwiki.net/wiki/Help:Contents">Help</a></li>
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/web/20110426104331/http://www.modwiki.net/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" value="Search" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/web/20110426104331/http://www.modwiki.net/wiki/Special:Whatlinkshere/Commands_%28Wolf%29">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/web/20110426104331/http://www.modwiki.net/wiki/Special:Recentchangeslinked/Commands_%28Wolf%29">Related changes</a></li>
+<li id="t-upload"><a href="/web/20110426104331/http://www.modwiki.net/wiki/Special:Upload">Upload file</a></li>
+<li id="t-specialpages"><a href="/web/20110426104331/http://www.modwiki.net/wiki/Special:Specialpages">Special pages</a></li>
+				<li id="t-print"><a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Commands_%28Wolf%29&amp;printable=yes">Printable version</a></li>				<li id="t-permalink"><a href="/web/20110426104331/http://www.modwiki.net/w/index.php?title=Commands_%28Wolf%29&amp;oldid=13597">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="/web/20110426104331/http://www.mediawiki.org/"><img src="/web/20110426104331im_/http://www.modwiki.net/w/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="/web/20110426104331/http://www.gnu.org/copyleft/fdl.html"><img src="/web/20110426104331im_/http://www.modwiki.net/w/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+				<li id="lastmod"> This page was last modified 05:56, 31 August 2009.</li>
+				<li id="copyright">Content is available under <a href="/web/20110426104331/http://www.gnu.org/copyleft/fdl.html" class='external ' title="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.2</a>.</li>
+				<li id="privacy"><a href="/web/20110426104331/http://www.modwiki.net/wiki/modwiki:Privacy_policy" title="modwiki:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="/web/20110426104331/http://www.modwiki.net/wiki/modwiki:About" title="modwiki:About">About modwiki</a></li>
+				<li id="disclaimer"><a href="/web/20110426104331/http://www.modwiki.net/wiki/modwiki:General_disclaimer" title="modwiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+	<script type="text/javascript"> if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+<!-- Served by h982484 in 0.86 secs. -->
+</body></html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 10:43:31 Apr 26, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 3:57:44 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

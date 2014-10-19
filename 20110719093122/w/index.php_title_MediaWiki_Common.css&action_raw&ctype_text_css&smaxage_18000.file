@@ -1,0 +1,65 @@
+
+
+
+
+
+/*
+     FILE ARCHIVED ON 9:31:22 Jul 19, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 1:54:49 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+Any CSS placed here will be applied to all skins.
+
+This page should not be updated very often, caching could make the wiki readers see things which aren't there anymore.
+<pre><nowiki> */
+/* Style for tables used for listing things and a little info */
+table.listtable {
+	width: 80%;
+}
+table.listtable td {
+	margin: 0px;
+	border-bottom-style: dashed;
+	border-color: #DDDDDD;
+	border-width: 1px;
+}
+/* Does not work in IE6 or lower.
+It only aligns similar tables on one page, should not matter too much. */
+table.listtable td:first-child {
+	width: 30%;
+}
+
+/* Common style for tables used on Modwiki. */
+table.mwstyle {
+	width: 80%;
+	text-align: center;
+	border: 2px solid grey;
+	border-collapse: collapse;
+}
+table.mwstyle th, table.mwstyle td {
+	border: 2px solid #990000;
+	text-align: center;
+	padding: 2px;
+	margin: 0px;
+}
+table.mwstyle th {
+	border: 2px solid #DD9999;
+	background: #AA0000;
+	color: white;
+	font-weight: bold;
+}
+
+/* Prevents images from floating. */
+/* 
+  Placed in comments for now, seemed to induce extra whitespace
+  in combination with section [edit] links
+/
+h1, h2, h3, h4 {
+	clear:both;
+}
+*/
+
+/*</nowiki></pre> */

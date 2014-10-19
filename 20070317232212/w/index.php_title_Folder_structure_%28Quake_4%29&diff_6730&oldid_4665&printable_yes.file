@@ -1,0 +1,664 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex,follow" />
+<meta name="keywords" content="Folder structure (Quake 4),Folder structure (Quake 4),AAS (file format),ASE (file format),Af (decl),CM (file format),Cube maps,DDS (file format),DEMO (file format),Declarations,Fs game (cvar)" />
+<link rel="shortcut icon" href="/web/20070317232212im_/http://www.modwiki.net/favicon.ico" />
+<link title="Creative Commons" type="application/rdf+xml" href="/w/index.php?title=Folder_structure_%28Quake_4%29&amp;action=creativecommons" rel="meta" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<title>Folder structure (Quake 4) - modwiki</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20070317232212cs_/http://www.modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css"  href="/web/20070317232212cs_/http://www.modwiki.net/w/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/w/skins/monobook/IE70Fixes.css?1";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
+		<script type="text/javascript" src="/web/20070317232212js_/http://www.modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20070317232212js_/http://www.modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/web/20070317232212cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070317232212cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070317232212cs_/http://www.modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns-0 ltr">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app12.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/www.modwiki.net\/w\/index.php?title=Folder_structure_%28Quake_4%29&diff=6730&oldid=4665&printable=yes";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "17";
+var displayMonth = "Mar";
+var displayYear = "2007";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://www.modwiki.net/w/index.php?title=Folder_structure_%28Quake_4%29&amp;diff=6730&amp;oldid=4665&amp;printable=yes" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20070317232212" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Feb
+                       
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 23:22:12 Mar 17, 2007">MAR</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Apr
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_prv_off.png" alt="Previous capture" width="14" height="16" border="0" />
+                       
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 23:22:12 Mar 17, 2007">17</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2006
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 23:22:12 Mar 17, 2007">2007</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2008
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20070317232212*/http://www.modwiki.net/w/index.php?title=Folder_structure_%28Quake_4%29&amp;diff=6730&amp;oldid=4665&amp;printable=yes" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>1 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">17 Mar 07 - 17 Mar 07</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:2:001000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000_2014:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">Folder structure (Quake 4)</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From modwiki</h3>
+			<div id="contentSub">(Difference between revisions)</div>
+									<div id="jump-to-nav">Jump to: <a href="/web/20070317232212/http://www.modwiki.net/w/index.php?title=Folder_structure_%28Quake_4%29&amp;diff=6730&amp;oldid=4665&amp;printable=yes#column-one">navigation</a>, <a href="/web/20070317232212/http://www.modwiki.net/w/index.php?title=Folder_structure_%28Quake_4%29&amp;diff=6730&amp;oldid=4665&amp;printable=yes#searchInput">search</a></div>			<!-- start content -->
+			
+			<table border='0' width='98%' cellpadding='0' cellspacing='4' class='diff'>
+			<tr>
+				<td colspan='2' width='50%' align='center' class='diff-otitle'><strong><a href='/web/20070317232212/http://www.modwiki.net/w/index.php?title=Folder_structure_%28Quake_4%29&amp;oldid=4665'>Revision as of 21:09, 31 October 2005</a></strong><br /><a href="/web/20070317232212/http://www.modwiki.net/w/index.php?title=User:Mordenkainen&amp;action=edit" class="new" title="User:Mordenkainen">Mordenkainen</a>  (<a href="/web/20070317232212/http://www.modwiki.net/wiki/User_talk:Mordenkainen" title="User talk:Mordenkainen">Talk</a> | <a href="/web/20070317232212/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Mordenkainen" title="Special:Contributions">contribs</a>)<br /> <span class='comment'>(Folder Structure (Quake 4) moved to Folder structure (Quake 4))</span><br /><a href="/web/20070317232212/http://www.modwiki.net/w/index.php?title=Folder_structure_%28Quake_4%29&amp;diff=prev&amp;oldid=4665" title="Folder structure (Quake 4)" id="differences-prevlink">�? Previous diff</a></td>
+				<td colspan='2' width='50%' align='center' class='diff-ntitle'><strong><a href='/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29'>Current revision</a></strong><br /><a href="/web/20070317232212/http://www.modwiki.net/w/index.php?title=User:Mordenkainen&amp;action=edit" class="new" title="User:Mordenkainen">Mordenkainen</a>  (<a href="/web/20070317232212/http://www.modwiki.net/wiki/User_talk:Mordenkainen" title="User talk:Mordenkainen">Talk</a> | <a href="/web/20070317232212/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Mordenkainen" title="Special:Contributions">contribs</a>) <br /> <span class='comment'>(added EFX information from orphaned page, added link to .FX)</span><br /></td>
+			</tr>
+			<tr><td colspan="2" align="left"><strong>Line 1:</strong></td>
+<td colspan="2" align="left"><strong>Line 1:</strong></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>{{Q4page}}</td><td>+</td><td class='diff-addedline'>{{Q4page}} <span class="diffchange">__NOTOC__ __NOEDITSECTION__</span></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">{|width=&quot;100%&quot; cellspacing=&quot;3&quot; align=&quot;right&quot;|</span></td><td>+</td><td class='diff-addedline'><span class="diffchange">This is the folder structure of Quake 4.</span></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">|valign=&quot;top&quot;|</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'><span class="diffchange">''Insert information here''</span></td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>|width=&quot;<span class="diffchange">30</span>%&quot; class=&quot;MainPageBG&quot; style=&quot;border: 1px solid #c6c9ff; color: #000; background-color: #ECFFEA&quot;|</td><td>+</td><td class='diff-addedline'><span class="diffchange">{</span>|width=&quot;<span class="diffchange">100%&quot; cellspacing=&quot;5&quot; align=&quot;left&quot;|</span></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>&#160;</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'><span class="diffchange">|valign=&quot;top&quot; width=&quot;20</span>%&quot; class=&quot;MainPageBG&quot; style=&quot;border: 1px solid #c6c9ff; color: #000; background-color: #ECFFEA&quot;|</td></tr>
+<tr><td> </td><td class='diff-context'>&lt;div style=&quot;padding: .4em .9em .9em;&quot;&gt;</td><td> </td><td class='diff-context'>&lt;div style=&quot;padding: .4em .9em .9em;&quot;&gt;</td></tr>
+<tr><td> </td><td class='diff-context'>&lt;h3&gt;Folder structure:&lt;/h3&gt;</td><td> </td><td class='diff-context'>&lt;h3&gt;Folder structure:&lt;/h3&gt;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>&lt;div style=&quot;text-align: left; margin-left: 10px;&quot;&gt;&lt;tt&gt;</td><td>+</td><td class='diff-addedline'>&lt;div style=&quot;text-align: left; margin-left: 10px<span class="diffchange">; font-size: 14px</span>;&quot;&gt;&lt;tt&gt;</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>*/[[<span class="diffchange">q4base_</span>(<span class="diffchange">folder</span>)|q4base]]</td><td>+</td><td class='diff-addedline'>*/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base</span>|q4base]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>**/[[<span class="diffchange">af_</span>(<span class="diffchange">folder</span>)|af]]</td><td>+</td><td class='diff-addedline'>**/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/af</span>|af]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>**/[[<span class="diffchange">cfg_</span>(<span class="diffchange">folder</span>)|cfg]]</td><td>+</td><td class='diff-addedline'>**/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/cfg</span>|cfg]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>**/[[<span class="diffchange">def_</span>(<span class="diffchange">folder</span>)|def]]</td><td>+</td><td class='diff-addedline'>**/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/def</span>|def]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>**/[[<span class="diffchange">demos_</span>(<span class="diffchange">folder</span>)|demos]]</td><td>+</td><td class='diff-addedline'>**/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/demos</span>|demos]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>**/[[<span class="diffchange">effects_</span>(<span class="diffchange">folder</span>)|effects]]</td><td>+</td><td class='diff-addedline'>**/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/effects</span>|effects]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>**/[[<span class="diffchange">efxs_</span>(<span class="diffchange">folder</span>)|efxs]]</td><td>+</td><td class='diff-addedline'>**/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/efxs</span>|efxs]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>**/[[<span class="diffchange">fonts_</span>(<span class="diffchange">folder</span>)|fonts]]</td><td>+</td><td class='diff-addedline'>**/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/fonts</span>|fonts]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>**/gfx</td><td>+</td><td class='diff-addedline'>**<span class="diffchange">/[[Folder structure (Quake 4)#/q4base</span>/gfx<span class="diffchange">/|gfx]]</span></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>***/[[<span class="diffchange">2d </span>(<span class="diffchange">folder</span>)|2d]]</td><td>+</td><td class='diff-addedline'>***/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/gfx/2d</span>|2d]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>***/[[<span class="diffchange">decals </span>(<span class="diffchange">folder</span>)|decals]]</td><td>+</td><td class='diff-addedline'>***/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/gfx/decals</span>|decals]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>***/[[gfx/effects <span class="diffchange">(folder)</span>|effects]]</td><td>+</td><td class='diff-addedline'>***/[[<span class="diffchange">Folder structure (Quake 4)#/q4base/</span>gfx/effects|effects]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>***/[[<span class="diffchange">env_</span>(<span class="diffchange">folder</span>)|env]]</td><td>+</td><td class='diff-addedline'>***/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/gfx/env</span>|env]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>***/[[gfx/guis <span class="diffchange">(folder)</span>|guis]]</td><td>+</td><td class='diff-addedline'>***/[[<span class="diffchange">Folder structure (Quake 4)#/q4base/</span>gfx/guis|guis]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>***/[[<span class="diffchange">lights_</span>(<span class="diffchange">folder</span>)|lights]]</td><td>+</td><td class='diff-addedline'>***/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/gfx/lights</span>|lights]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>***/[[<span class="diffchange">mp </span>(<span class="diffchange">folder</span>)|mp]]</td><td>+</td><td class='diff-addedline'>***/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/gfx/mp</span>|mp]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>***/[[<span class="diffchange">objectives </span>(<span class="diffchange">folder</span>)|objectives]]</td><td>+</td><td class='diff-addedline'>***/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/gfx/objectives</span>|objectives]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>**/[[<span class="diffchange">glprogs_</span>(<span class="diffchange">folder</span>)|glprogs]]</td><td>+</td><td class='diff-addedline'>**/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/glprogs</span>|glprogs]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>**/[[<span class="diffchange">guides_</span>(<span class="diffchange">folder</span>)|guides]]</td><td>+</td><td class='diff-addedline'>**/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/guides</span>|guides]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>**/[[<span class="diffchange">guis_</span>(<span class="diffchange">folder</span>)|guis]]</td><td>+</td><td class='diff-addedline'>**/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/guis</span>|guis]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>**/[[<span class="diffchange">lipsync_</span>(<span class="diffchange">folder</span>)|lipsync]]</td><td>+</td><td class='diff-addedline'>**/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/lipsync</span>|lipsync]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>**/[[<span class="diffchange">maps_</span>(<span class="diffchange">folder</span>)|maps]]</td><td>+</td><td class='diff-addedline'>**/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/maps</span>|maps]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>**/[[<span class="diffchange">materials_</span>(<span class="diffchange">folder</span>)|materials]]</td><td>+</td><td class='diff-addedline'>**/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/materials</span>|materials]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>**/[[<span class="diffchange">models_</span>(<span class="diffchange">folder</span>)|models]]</td><td>+</td><td class='diff-addedline'>**/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/models</span>|models]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>**/[[<span class="diffchange">playbacks_</span>(<span class="diffchange">folder</span>)|playbacks]]</td><td>+</td><td class='diff-addedline'>**/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/playbacks</span>|playbacks]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>**/[[<span class="diffchange">progimg_</span>(<span class="diffchange">folder</span>)|progimg]]</td><td>+</td><td class='diff-addedline'>**/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/progimg</span>|progimg]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>**/[[<span class="diffchange">scripts_</span>(<span class="diffchange">folder</span>)|scripts]]</td><td>+</td><td class='diff-addedline'>**/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/scripts</span>|scripts]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>**/[[<span class="diffchange">skins_</span>(<span class="diffchange">folder</span>)|skins]]</td><td>+</td><td class='diff-addedline'>**/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/skins</span>|skins]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>**/[[<span class="diffchange">sound_</span>(<span class="diffchange">folder</span>)|sound]]</td><td>+</td><td class='diff-addedline'>**/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/sound</span>|sound]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>**/[[<span class="diffchange">strings_</span>(<span class="diffchange">folder</span>)|strings]]</td><td>+</td><td class='diff-addedline'>**/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/strings</span>|strings]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>**/[[<span class="diffchange">textures_</span>(<span class="diffchange">folder</span>)|textures]]</td><td>+</td><td class='diff-addedline'>**/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/textures</span>|textures]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>**/[[<span class="diffchange">video_</span>(<span class="diffchange">folder</span>)|video]]&lt;/tt&gt;</td><td>+</td><td class='diff-addedline'>**/[[<span class="diffchange">Folder structure </span>(<span class="diffchange">Quake 4</span>)<span class="diffchange">#/q4base/video</span>|video]]&lt;/tt&gt;</td></tr>
+<tr><td> </td><td class='diff-context'>&lt;/div&gt;</td><td> </td><td class='diff-context'>&lt;/div&gt;</td></tr>
+<tr><td> </td><td class='diff-context'>&lt;/div&gt; </td><td> </td><td class='diff-context'>&lt;/div&gt; </td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>|valign=&quot;top&quot;|</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>This is the default Quake 4 mod directory. The contents of this directory include all the game assets used in the game. Mods for Quake 4 should be created in their own directory in the main Quake 4 installation folder as a brother folder to /q4base. In the engine code your mods' base name is always called &quot;base&quot; no matter the actual physical name. You set the game to use a different folder as base with the [[fs_game (cvar)|fs_game]] cvar.</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>You can also set the [[fs_game_base (cvar)|fs_game_base]] cvar to let you base a mod off base game and your own content as usual as well as an additional mod. </td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>'''Note:''' While you probably want to work on your mod with the assets decompressed and available in the Quake 4 folder structure, when you release your mod you should put them into .[[PK4 (file format)|PK4]] files.</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/af===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>This folder contains .AF files which setup the [[af (decl)|articulated figure declarations]].</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/cfg===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/def===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>This folder contains .DEF files which contain [[Declarations|declarations]] for entities, models and modelexport.</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/demos===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>This folder contains .[[DEMO (file format)|DEMO]] files which are gameplay recordings.</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/effects===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>This folder contains .[[FX (file format)|FX]] files which in turn contain [[Effect (decl)|effect declarations]].</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/efxs===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>This folder contains .[[EFX (file format)|EFX]] files which containt reverb information for maps.</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/fonts===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/gfx===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/gfx/2d===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/gfx/decals===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/gfx/effects===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>This folder contains .[[TGA (file format)|TGA]] files used in effects.</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/gfx/env===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>This folder contains [[images]] for [[cube maps|environment maps]] which are textures applied to the inside faces of a skybox to give the appearance of large spaces.</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/gfx/guis===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>This folder contains .[[TGA (file format)|TGA]] files used in the user interface.</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/gfx/lights===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>This folder contains .[[TGA (file format)|TGA]] files which become available for use in [[material (decl)|light materials]] to create 'light styles' that modulate what light projects onto the surfaces of the world.</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/gfx/mp===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/gfx/objectives===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/glprogs===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>This folder contains .[[VFP (file format)|VFP]] and .[[VP (file format)|VP]] files which become available for use in [[material (decl)|materials]] for [[vertex and fragment programs|visual special effects]].</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/guides===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>This folder contains .GUIDE files which contain [[Guide (decl)|material guide declarations]].</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/guis===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>This folder contains .GUI files which setup the [[GUIs|graphical user interfaces]].</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>&lt;!--all of the information in [[GUI (folder)]] should be moved to [[GUIs]]--&gt;</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/lipsync===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>This folder contains .LIPSYNC files which contain [[Lipsync (decl)|lipsync declarations]].</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/maps===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>This folder contains the .[[MAP (file format)|MAP]], .[[CM (file format)|CM]], .[[PROC (file format)|PROC]], and .[[AAS (file format)|AAS]] files for each map. Should there be any .BAK files there they should be removed prior to distribution as these are just backup versions created by the [[map editor]].</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/materials===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>This folder contains .MTR files which setup the [[Material (decl)|material declarations]].</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/models===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>This folder contains numerous sub-directories where the following file formats can be found:</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>; Model formats: .[[ASE (file format)|ASE]], .[[LWO (file format)|LWO]], .[[MD5 (file format)|MD5]].</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>; Image formats: .[[TGA (file format)|TGA]], .[[DDS (file format)|DDS]], .[[JPG (file format)|JPG]].</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>; Other formats: .[[CM (file format)|CM]].</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/playbacks===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/progimg===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/scripts===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/skins===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>This folder contains .SKIN files which setup the [[Skin (decl)|skin declarations]].</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/sound===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/strings===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>This folder contains .[[LANG (file format)|LANG]] files which are used for localization. The engine loads all of the files from this folder and parses the numbered strings within these files to make them available to the code, [[GUIs]] and [[Mapping|maps]].</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/textures===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>This folder contains .[[TGA (file format)|TGA]] or .[[JPG (file format)|JPG]] files which become available for use as assets in [[Material (decl)|material declarations]].</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>===/q4base/video===</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>This folder contains .[[ROQ (file format)|ROQ]] files which are movies.</td></tr>
+<tr><td> </td><td class='diff-context'>|}</td><td> </td><td class='diff-context'>|}</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td> </td><td class='diff-context'>[[Category:File system]]</td><td> </td><td class='diff-context'>[[Category:File system]]</td></tr>
+
+			</table>
+		<hr /><h2>Current revision</h2>
+<div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;"><a href="/web/20070317232212/http://www.modwiki.net/wiki/Image:Q4square_bg.png" class="image" title="Image:Q4square_bg.png"><img src="/web/20070317232212im_/http://www.modwiki.net/w/images/6/69/Q4square_bg.png" alt="Image:Q4square_bg.png" width="50" height="50" longdesc="/wiki/Image:Q4square_bg.png" /></a> The information on this page is specific to <a href="/web/20070317232212/http://www.modwiki.net/wiki/Quake_4" title="Quake 4">Quake 4</a>.</div>
+<hr />  
+<p>This is the folder structure of Quake 4.
+</p>
+<table width="100%" cellspacing="5">
+
+<tr>
+<td valign="top" width="20%" class="MainPageBG" style="border: 1px solid #c6c9ff; color: #000; background-color: #ECFFEA">
+<div style="padding: .4em .9em .9em;">
+<a name="Folder_structure:"></a><h3>Folder structure:</h3>
+<div style="text-align: left; margin-left: 10px; font-size: 14px;"><tt>
+<ul><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base" title="Folder structure (Quake 4)">q4base</a>
+<ul><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Faf" title="Folder structure (Quake 4)">af</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Fcfg" title="Folder structure (Quake 4)">cfg</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Fdef" title="Folder structure (Quake 4)">def</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Fdemos" title="Folder structure (Quake 4)">demos</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Feffects" title="Folder structure (Quake 4)">effects</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Fefxs" title="Folder structure (Quake 4)">efxs</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Ffonts" title="Folder structure (Quake 4)">fonts</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Fgfx.2F" title="Folder structure (Quake 4)">gfx</a>
+<ul><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Fgfx.2F2d" title="Folder structure (Quake 4)">2d</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Fgfx.2Fdecals" title="Folder structure (Quake 4)">decals</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Fgfx.2Feffects" title="Folder structure (Quake 4)">effects</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Fgfx.2Fenv" title="Folder structure (Quake 4)">env</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Fgfx.2Fguis" title="Folder structure (Quake 4)">guis</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Fgfx.2Flights" title="Folder structure (Quake 4)">lights</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Fgfx.2Fmp" title="Folder structure (Quake 4)">mp</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Fgfx.2Fobjectives" title="Folder structure (Quake 4)">objectives</a>
+</li></ul>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Fglprogs" title="Folder structure (Quake 4)">glprogs</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Fguides" title="Folder structure (Quake 4)">guides</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Fguis" title="Folder structure (Quake 4)">guis</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Flipsync" title="Folder structure (Quake 4)">lipsync</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Fmaps" title="Folder structure (Quake 4)">maps</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Fmaterials" title="Folder structure (Quake 4)">materials</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Fmodels" title="Folder structure (Quake 4)">models</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Fplaybacks" title="Folder structure (Quake 4)">playbacks</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Fprogimg" title="Folder structure (Quake 4)">progimg</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Fscripts" title="Folder structure (Quake 4)">scripts</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Fskins" title="Folder structure (Quake 4)">skins</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Fsound" title="Folder structure (Quake 4)">sound</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Fstrings" title="Folder structure (Quake 4)">strings</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Ftextures" title="Folder structure (Quake 4)">textures</a>
+</li><li>/<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29#.2Fq4base.2Fvideo" title="Folder structure (Quake 4)">video</a></tt>
+</li></ul>
+</li></ul>
+</div>
+</div> 
+</td><td valign="top">
+<a name=".2Fq4base"></a><h3>/q4base</h3>
+<p>This is the default Quake 4 mod directory. The contents of this directory include all the game assets used in the game. Mods for Quake 4 should be created in their own directory in the main Quake 4 installation folder as a brother folder to /q4base. In the engine code your mods' base name is always called "base" no matter the actual physical name. You set the game to use a different folder as base with the <a href="/web/20070317232212/http://www.modwiki.net/wiki/Fs_game_%28cvar%29" title="Fs game (cvar)">fs_game</a> cvar.
+</p><p>You can also set the <a href="/web/20070317232212/http://www.modwiki.net/wiki/Fs_game_base_%28cvar%29" title="Fs game base (cvar)">fs_game_base</a> cvar to let you base a mod off base game and your own content as usual as well as an additional mod. 
+</p><p><b>Note:</b> While you probably want to work on your mod with the assets decompressed and available in the Quake 4 folder structure, when you release your mod you should put them into .<a href="/web/20070317232212/http://www.modwiki.net/wiki/PK4_%28file_format%29" title="PK4 (file format)">PK4</a> files.
+</p>
+<a name=".2Fq4base.2Faf"></a><h3>/q4base/af</h3>
+<p>This folder contains .AF files which setup the <a href="/web/20070317232212/http://www.modwiki.net/wiki/Af_%28decl%29" title="Af (decl)">articulated figure declarations</a>.
+</p>
+<a name=".2Fq4base.2Fcfg"></a><h3>/q4base/cfg</h3>
+<a name=".2Fq4base.2Fdef"></a><h3>/q4base/def</h3>
+<p>This folder contains .DEF files which contain <a href="/web/20070317232212/http://www.modwiki.net/wiki/Declarations" title="Declarations">declarations</a> for entities, models and modelexport.
+</p>
+<a name=".2Fq4base.2Fdemos"></a><h3>/q4base/demos</h3>
+<p>This folder contains .<a href="/web/20070317232212/http://www.modwiki.net/wiki/DEMO_%28file_format%29" title="DEMO (file format)">DEMO</a> files which are gameplay recordings.
+</p>
+<a name=".2Fq4base.2Feffects"></a><h3>/q4base/effects</h3>
+<p>This folder contains .<a href="/web/20070317232212/http://www.modwiki.net/w/index.php?title=FX_%28file_format%29&amp;action=edit" class="new" title="FX (file format)">FX</a> files which in turn contain <a href="/web/20070317232212/http://www.modwiki.net/w/index.php?title=Effect_%28decl%29&amp;action=edit" class="new" title="Effect (decl)">effect declarations</a>.
+</p>
+<a name=".2Fq4base.2Fefxs"></a><h3>/q4base/efxs</h3>
+<p>This folder contains .<a href="/web/20070317232212/http://www.modwiki.net/w/index.php?title=EFX_%28file_format%29&amp;action=edit" class="new" title="EFX (file format)">EFX</a> files which containt reverb information for maps.
+</p>
+<a name=".2Fq4base.2Ffonts"></a><h3>/q4base/fonts</h3>
+<a name=".2Fq4base.2Fgfx"></a><h3>/q4base/gfx</h3>
+<a name=".2Fq4base.2Fgfx.2F2d"></a><h3>/q4base/gfx/2d</h3>
+<a name=".2Fq4base.2Fgfx.2Fdecals"></a><h3>/q4base/gfx/decals</h3>
+<a name=".2Fq4base.2Fgfx.2Feffects"></a><h3>/q4base/gfx/effects</h3>
+<p>This folder contains .<a href="/web/20070317232212/http://www.modwiki.net/wiki/TGA_%28file_format%29" title="TGA (file format)">TGA</a> files used in effects.
+</p>
+<a name=".2Fq4base.2Fgfx.2Fenv"></a><h3>/q4base/gfx/env</h3>
+<p>This folder contains <a href="/web/20070317232212/http://www.modwiki.net/wiki/Images" title="Images">images</a> for <a href="/web/20070317232212/http://www.modwiki.net/wiki/Cube_maps" title="Cube maps">environment maps</a> which are textures applied to the inside faces of a skybox to give the appearance of large spaces.
+</p>
+<a name=".2Fq4base.2Fgfx.2Fguis"></a><h3>/q4base/gfx/guis</h3>
+<p>This folder contains .<a href="/web/20070317232212/http://www.modwiki.net/wiki/TGA_%28file_format%29" title="TGA (file format)">TGA</a> files used in the user interface.
+</p>
+<a name=".2Fq4base.2Fgfx.2Flights"></a><h3>/q4base/gfx/lights</h3>
+<p>This folder contains .<a href="/web/20070317232212/http://www.modwiki.net/wiki/TGA_%28file_format%29" title="TGA (file format)">TGA</a> files which become available for use in <a href="/web/20070317232212/http://www.modwiki.net/wiki/Material_%28decl%29" title="Material (decl)">light materials</a> to create 'light styles' that modulate what light projects onto the surfaces of the world.
+</p>
+<a name=".2Fq4base.2Fgfx.2Fmp"></a><h3>/q4base/gfx/mp</h3>
+<a name=".2Fq4base.2Fgfx.2Fobjectives"></a><h3>/q4base/gfx/objectives</h3>
+<a name=".2Fq4base.2Fglprogs"></a><h3>/q4base/glprogs</h3>
+<p>This folder contains .<a href="/web/20070317232212/http://www.modwiki.net/wiki/VFP_%28file_format%29" title="VFP (file format)">VFP</a> and .<a href="/web/20070317232212/http://www.modwiki.net/wiki/VP_%28file_format%29" title="VP (file format)">VP</a> files which become available for use in <a href="/web/20070317232212/http://www.modwiki.net/wiki/Material_%28decl%29" title="Material (decl)">materials</a> for <a href="/web/20070317232212/http://www.modwiki.net/wiki/Vertex_and_fragment_programs" title="Vertex and fragment programs">visual special effects</a>.
+</p>
+<a name=".2Fq4base.2Fguides"></a><h3>/q4base/guides</h3>
+<p>This folder contains .GUIDE files which contain <a href="/web/20070317232212/http://www.modwiki.net/wiki/Guide_%28decl%29" title="Guide (decl)">material guide declarations</a>.
+</p>
+<a name=".2Fq4base.2Fguis"></a><h3>/q4base/guis</h3>
+<p>This folder contains .GUI files which setup the <a href="/web/20070317232212/http://www.modwiki.net/wiki/GUIs" title="GUIs">graphical user interfaces</a>.
+</p>
+<a name=".2Fq4base.2Flipsync"></a><h3>/q4base/lipsync</h3>
+<p>This folder contains .LIPSYNC files which contain <a href="/web/20070317232212/http://www.modwiki.net/wiki/Lipsync_%28decl%29" title="Lipsync (decl)">lipsync declarations</a>.
+</p>
+<a name=".2Fq4base.2Fmaps"></a><h3>/q4base/maps</h3>
+<p>This folder contains the .<a href="/web/20070317232212/http://www.modwiki.net/wiki/MAP_%28file_format%29" title="MAP (file format)">MAP</a>, .<a href="/web/20070317232212/http://www.modwiki.net/wiki/CM_%28file_format%29" title="CM (file format)">CM</a>, .<a href="/web/20070317232212/http://www.modwiki.net/wiki/PROC_%28file_format%29" title="PROC (file format)">PROC</a>, and .<a href="/web/20070317232212/http://www.modwiki.net/wiki/AAS_%28file_format%29" title="AAS (file format)">AAS</a> files for each map. Should there be any .BAK files there they should be removed prior to distribution as these are just backup versions created by the <a href="/web/20070317232212/http://www.modwiki.net/wiki/Map_editor" title="Map editor">map editor</a>.
+</p>
+<a name=".2Fq4base.2Fmaterials"></a><h3>/q4base/materials</h3>
+<p>This folder contains .MTR files which setup the <a href="/web/20070317232212/http://www.modwiki.net/wiki/Material_%28decl%29" title="Material (decl)">material declarations</a>.
+</p>
+<a name=".2Fq4base.2Fmodels"></a><h3>/q4base/models</h3>
+<p>This folder contains numerous sub-directories where the following file formats can be found:
+</p>
+<dl><dt> Model formats</dt><dd> .<a href="/web/20070317232212/http://www.modwiki.net/wiki/ASE_%28file_format%29" title="ASE (file format)">ASE</a>, .<a href="/web/20070317232212/http://www.modwiki.net/wiki/LWO_%28file_format%29" title="LWO (file format)">LWO</a>, .<a href="/web/20070317232212/http://www.modwiki.net/wiki/MD5_%28file_format%29" title="MD5 (file format)">MD5</a>.
+</dd><dt> Image formats</dt><dd> .<a href="/web/20070317232212/http://www.modwiki.net/wiki/TGA_%28file_format%29" title="TGA (file format)">TGA</a>, .<a href="/web/20070317232212/http://www.modwiki.net/wiki/DDS_%28file_format%29" title="DDS (file format)">DDS</a>, .<a href="/web/20070317232212/http://www.modwiki.net/wiki/JPG_%28file_format%29" title="JPG (file format)">JPG</a>.
+</dd><dt> Other formats</dt><dd> .<a href="/web/20070317232212/http://www.modwiki.net/wiki/CM_%28file_format%29" title="CM (file format)">CM</a>.
+</dd></dl>
+<a name=".2Fq4base.2Fplaybacks"></a><h3>/q4base/playbacks</h3>
+<a name=".2Fq4base.2Fprogimg"></a><h3>/q4base/progimg</h3>
+<a name=".2Fq4base.2Fscripts"></a><h3>/q4base/scripts</h3>
+<a name=".2Fq4base.2Fskins"></a><h3>/q4base/skins</h3>
+<p>This folder contains .SKIN files which setup the <a href="/web/20070317232212/http://www.modwiki.net/wiki/Skin_%28decl%29" title="Skin (decl)">skin declarations</a>.
+</p>
+<a name=".2Fq4base.2Fsound"></a><h3>/q4base/sound</h3>
+<a name=".2Fq4base.2Fstrings"></a><h3>/q4base/strings</h3>
+<p>This folder contains .<a href="/web/20070317232212/http://www.modwiki.net/wiki/LANG_%28file_format%29" title="LANG (file format)">LANG</a> files which are used for localization. The engine loads all of the files from this folder and parses the numbered strings within these files to make them available to the code, <a href="/web/20070317232212/http://www.modwiki.net/wiki/GUIs" title="GUIs">GUIs</a> and <a href="/web/20070317232212/http://www.modwiki.net/wiki/Mapping" title="Mapping">maps</a>.
+</p>
+<a name=".2Fq4base.2Ftextures"></a><h3>/q4base/textures</h3>
+<p>This folder contains .<a href="/web/20070317232212/http://www.modwiki.net/wiki/TGA_%28file_format%29" title="TGA (file format)">TGA</a> or .<a href="/web/20070317232212/http://www.modwiki.net/wiki/JPG_%28file_format%29" title="JPG (file format)">JPG</a> files which become available for use as assets in <a href="/web/20070317232212/http://www.modwiki.net/wiki/Material_%28decl%29" title="Material (decl)">material declarations</a>.
+</p>
+<a name=".2Fq4base.2Fvideo"></a><h3>/q4base/video</h3>
+<p>This folder contains .<a href="/web/20070317232212/http://www.modwiki.net/wiki/ROQ_%28file_format%29" title="ROQ (file format)">ROQ</a> files which are movies.
+</p>
+</td></tr></table>
+<div class="printfooter">
+Retrieved from "<a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29">http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29</a>"</div>
+			<div id="catlinks"><p class='catlinks'><a href="/web/20070317232212/http://www.modwiki.net/w/index.php?title=Special:Categories&amp;article=Folder_structure_%28Quake_4%29" title="Special:Categories">Category</a>: <span dir='ltr'><a href="/web/20070317232212/http://www.modwiki.net/wiki/Category:File_system" title="Category:File system">File system</a></span><br /><hr /><a href="/web/20070317232212/http://www.modwiki.net/wiki/Category:Modwiki" title="Category:Modwiki">Modwiki</a> &gt; <a href="/web/20070317232212/http://www.modwiki.net/wiki/Category:Engine_reference" title="Category:Engine reference">Engine reference</a> &gt; <a href="/web/20070317232212/http://www.modwiki.net/wiki/Category:File_system" title="Category:File system">File system</a></p></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="/web/20070317232212/http://www.modwiki.net/wiki/Folder_structure_%28Quake_4%29">Article</a></li>
+				 <li id="ca-talk"><a href="/web/20070317232212/http://www.modwiki.net/wiki/Talk:Folder_structure_%28Quake_4%29">Discussion</a></li>
+				 <li id="ca-edit"><a href="/web/20070317232212/http://www.modwiki.net/w/index.php?title=Folder_structure_%28Quake_4%29&amp;action=edit&amp;oldid=6730">Edit</a></li>
+				 <li id="ca-history"><a href="/web/20070317232212/http://www.modwiki.net/w/index.php?title=Folder_structure_%28Quake_4%29&amp;action=history">History</a></li>
+		</ul>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/web/20070317232212/http://www.modwiki.net/w/index.php?title=Special:Userlogin&amp;returnto=Folder_structure_(Quake_4)">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/web/20070317232212im_/http://www.modwiki.net/wiki/upload/wiki.png);" href="/web/20070317232212/http://www.modwiki.net/wiki/Main_Page" title="Main Page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class='portlet' id='p-Main'>
+		<h5>Main</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/web/20070317232212/http://www.modwiki.net/wiki/Main_Page">Main Page</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Engine'>
+		<h5>Engine</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Doom-3"><a href="/web/20070317232212/http://www.modwiki.net/wiki/Doom_3">Doom 3</a></li>
+				<li id="n-Quake-4"><a href="/web/20070317232212/http://www.modwiki.net/wiki/Quake_4">Quake 4</a></li>
+				<li id="n-Prey"><a href="/web/20070317232212/http://www.modwiki.net/wiki/Prey">Prey</a></li>
+				<li id="n-ETQW"><a href="/web/20070317232212/http://www.modwiki.net/wiki/Enemy_Territory:_Quake_Wars">ETQW</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Quick Links'>
+		<h5>Quick Links</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Console"><a href="/web/20070317232212/http://www.modwiki.net/wiki/Console">Console</a></li>
+				<li id="n-Script-Events"><a href="/web/20070317232212/http://www.modwiki.net/wiki/Scripting">Script Events</a></li>
+				<li id="n-Material-Keywords"><a href="/web/20070317232212/http://www.modwiki.net/wiki/Material_%28decl%29">Material Keywords</a></li>
+				<li id="n-Modification-List"><a href="/web/20070317232212/http://www.modwiki.net/wiki/Modlist">Modification List</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Wiki'>
+		<h5>Wiki</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Open-tasks"><a href="/web/20070317232212/http://www.modwiki.net/wiki/modwiki:Open_tasks">Open tasks</a></li>
+				<li id="n-recentchanges"><a href="/web/20070317232212/http://www.modwiki.net/wiki/Special:Recentchanges">Recent changes</a></li>
+				<li id="n-Style-guide"><a href="/web/20070317232212/http://www.modwiki.net/wiki/modwiki:Style_guide">Style guide</a></li>
+				<li id="n-help"><a href="/web/20070317232212/http://www.modwiki.net/wiki/Help:Contents">Help</a></li>
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/web/20070317232212/http://www.modwiki.net/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" value="Search" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/web/20070317232212/http://www.modwiki.net/wiki/Special:Whatlinkshere/Folder_structure_%28Quake_4%29">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/web/20070317232212/http://www.modwiki.net/wiki/Special:Recentchangeslinked/Folder_structure_%28Quake_4%29">Related changes</a></li>
+<li id="t-upload"><a href="/web/20070317232212/http://www.modwiki.net/wiki/Special:Upload">Upload file</a></li>
+<li id="t-specialpages"><a href="/web/20070317232212/http://www.modwiki.net/wiki/Special:Specialpages">Special pages</a></li>
+				<li id="t-print"><a href="/web/20070317232212/http://www.modwiki.net/w/index.php?title=Folder_structure_%28Quake_4%29&amp;diff=6730&amp;oldid=4665&amp;printable=yes&amp;printable=yes">Printable version</a></li>				<li id="t-ispermalink">Permanent link</li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="/web/20070317232212/http://www.mediawiki.org/"><img src="/web/20070317232212im_/http://www.modwiki.net/w/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="/web/20070317232212/http://www.gnu.org/copyleft/fdl.html"><img src="/web/20070317232212im_/http://www.modwiki.net/w/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+				<li id="lastmod"> This page was last modified 06:41, 10 July 2006.</li>
+				<li id="copyright">Content is available under <a href="/web/20070317232212/http://www.gnu.org/copyleft/fdl.html" class='external ' title="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.2</a>.</li>
+				<li id="privacy"><a href="/web/20070317232212/http://www.modwiki.net/wiki/modwiki:Privacy_policy" title="modwiki:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="/web/20070317232212/http://www.modwiki.net/wiki/modwiki:About" title="modwiki:About">About modwiki</a></li>
+				<li id="disclaimer"><a href="/web/20070317232212/http://www.modwiki.net/wiki/modwiki:General_disclaimer" title="modwiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+	<script type="text/javascript"> if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+<!-- Served by h982484 in 0.67 secs. -->
+</body></html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 23:22:12 Mar 17, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 2:35:03 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

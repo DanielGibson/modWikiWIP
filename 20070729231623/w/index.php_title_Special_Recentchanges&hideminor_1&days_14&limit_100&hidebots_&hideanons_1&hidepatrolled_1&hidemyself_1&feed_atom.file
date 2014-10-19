@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="http://modwiki.net/w/skins/common/feed.css"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+		<id>http://modwiki.net/w/index.php?title=Special:Recentchanges&amp;hideminor=1&amp;days=14&amp;limit=100&amp;hidebots=&amp;hideanons=1&amp;hidepatrolled=1&amp;hidemyself=1&amp;feed=atom</id>
+		<title>modwiki - Recent changes [en]</title>
+		<link rel="self" type="application/atom+xml" href="http://modwiki.net/w/index.php?title=Special:Recentchanges&amp;hideminor=1&amp;days=14&amp;limit=100&amp;hidebots=&amp;hideanons=1&amp;hidepatrolled=1&amp;hidemyself=1&amp;feed=atom"/>
+		<link rel="alternate" type="text/html" href="http://modwiki.net/wiki/Special:Recentchanges"/>
+		<updated>2007-09-17T00:17:03Z</updated>
+		<subtitle>Track the most recent changes to the wiki on this page.</subtitle>
+		<generator>MediaWiki 1.6.8</generator>
+
+	<entry>
+		<id>http://modwiki.net/wiki/Server_query_protocol</id>
+		<title>Server query protocol</title>
+		<link rel="alternate" type="text/html" href="http://modwiki.net/wiki/Server_query_protocol"/>
+				<updated>2007-09-16T20:35:43Z</updated>
+		
+		<summary type="html">&lt;p&gt;Rewritten certain parts, data structures TO DO&lt;/p&gt;
+
+			&lt;table border='0' width='98%' cellpadding='0' cellspacing='4' style=&quot;background-color: white;&quot;&gt;
+			&lt;tr&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Revision as of 20:35, 16 September 2007&lt;/td&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Current revision&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 1:&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;{{stub}}&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;{{stub}}&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;All [[id Tech 4]] engines have a means of querying servers to gather info about a particular server. Mostly the protocol is slightly different &lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;in &lt;/span&gt;different games.&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;All [[id Tech 4]] engines have a means of querying servers to gather info about a particular server. Mostly the protocol is slightly different &lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;for &lt;/span&gt;different games.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;{{D3section|&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;title=&lt;/span&gt;Doom 3 version}}&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;{{D3section|Doom 3 version}}&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;=== Querying the master server ===&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;=== Querying the master server ===&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;=== Querying a server ===&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;=== Querying a server ===&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;{{ETQWsection|&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;title=Doom 3 &lt;/span&gt;version}}&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;{{ETQWsection|&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;ET:QW &lt;/span&gt;version}}&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;== Server Feed ==&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;The version used in Enemy Territory: Quake Wars works slightly different. Because users are required to login, access to the master servers doesn't seem to be possible for unauthenticated users.&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;*&lt;/span&gt;Demo &lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;Serverfeed [&lt;/span&gt;http://etqwdemo-ipgetter.demonware.net/ipgetter/ &lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;here]&lt;/span&gt;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&amp;#160;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;=&lt;/span&gt;== Server Feed &lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;=&lt;/span&gt;==&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;Luckily, the list of servers is available from a second source. The current URLs for server lists are:&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;{|&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;! &lt;/span&gt;Demo &lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;server list &lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;| &lt;/span&gt;http://etqwdemo-ipgetter.demonware.net/ipgetter/&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;|-&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;! Full game&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;| ''TBA''&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;|}&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&amp;#160;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;Sending an HTTP GET request to one of these URLs wil return an HTTP message with as content a list of &amp;lt;IP&amp;gt;:&amp;lt;PORT&amp;gt; pairs. Each entry is a functioning server and needs to be polled for extra information.&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&amp;#160;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;=== Data Block ===&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;=== Data Block ===&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&amp;lt;pre&amp;gt;The data block for each client is:&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&amp;lt;pre&amp;gt;The data block for each client is:&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 42:&lt;/strong&gt;&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 54:&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;8 = The return match is active (ie, the second play of the map)&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;8 = The return match is active (ie, the second play of the map)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&amp;lt;/pre&amp;gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&amp;lt;/pre&amp;gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;*[&lt;/span&gt;http://community.enemyterritory.com/forums/showpost.php?p=129140&amp;amp;postcount=50 &lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;source]&lt;/span&gt;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&amp;#160;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;=== Source ===&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;http://community.enemyterritory.com/forums/showpost.php?p=129140&amp;amp;postcount=50&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;[[Category:Coding]]&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;[[Category:Coding]]&lt;/td&gt;&lt;/tr&gt;
+
+			&lt;/table&gt;
+		</summary>
+		<author><name>Kamikazee</name></author>	</entry>
+
+	<entry>
+		<id>http://modwiki.net/wiki/User_talk:Rich</id>
+		<title>User talk:Rich</title>
+		<link rel="alternate" type="text/html" href="http://modwiki.net/wiki/User_talk:Rich"/>
+				<updated>2007-09-16T06:06:09Z</updated>
+		
+		<summary type="html">&lt;p&gt;/* Autodownloading needs an article. */&lt;/p&gt;
+
+			&lt;table border='0' width='98%' cellpadding='0' cellspacing='4' style=&quot;background-color: white;&quot;&gt;
+			&lt;tr&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Revision as of 06:06, 16 September 2007&lt;/td&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Current revision&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 6:&lt;/strong&gt;&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 6:&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;This thread discusses an inconsistency in what the game classifies as &amp;quot;pure&amp;quot; content. It would be important to make note of this as it can cause custom content to be overlooked by clients.&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;This thread discusses an inconsistency in what the game classifies as &amp;quot;pure&amp;quot; content. It would be important to make note of this as it can cause custom content to be overlooked by clients.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;http://www.the-emz.com/tutorials/auto/&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;Another good source.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&amp;lt;strike&amp;gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&amp;lt;strike&amp;gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;=== System Requirements ===&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;=== System Requirements ===&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+
+			&lt;/table&gt;
+		</summary>
+		<author><name>Rich</name></author>	</entry>
+
+	<entry>
+		<id>http://modwiki.net/wiki/Server_query_protocol</id>
+		<title>Server query protocol</title>
+		<link rel="alternate" type="text/html" href="http://modwiki.net/wiki/Server_query_protocol"/>
+				<updated>2007-09-15T09:48:40Z</updated>
+		
+		<summary type="html">&lt;p&gt;Quickly pasted, fix later&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;New page&lt;/b&gt;&lt;/p&gt;&lt;div&gt;{{stub}}&lt;br /&gt;
+&lt;br /&gt;
+All [[id Tech 4]] engines have a means of querying servers to gather info about a particular server. Mostly the protocol is slightly different in different games.&lt;br /&gt;
+&lt;br /&gt;
+{{D3section|title=Doom 3 version}}&lt;br /&gt;
+=== Querying the master server ===&lt;br /&gt;
+=== Querying a server ===&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+{{ETQWsection|title=Doom 3 version}}&lt;br /&gt;
+== Server Feed ==&lt;br /&gt;
+*Demo Serverfeed [http://etqwdemo-ipgetter.demonware.net/ipgetter/ here]&lt;br /&gt;
+=== Data Block ===&lt;br /&gt;
+&amp;lt;pre&amp;gt;The data block for each client is:&lt;br /&gt;
+&lt;br /&gt;
+Code:&lt;br /&gt;
+&lt;br /&gt;
+struct client_t {&lt;br /&gt;
+  short ping;&lt;br /&gt;
+  int rate;&lt;br /&gt;
+  char name[32]; // NULL-terminated&lt;br /&gt;
+  byte isBot;&lt;br /&gt;
+ };&lt;br /&gt;
+&lt;br /&gt;
+The data block following all 32 clients is:&lt;br /&gt;
+Code:&lt;br /&gt;
+&lt;br /&gt;
+ struct serverInfo_t {&lt;br /&gt;
+  int osMask;&lt;br /&gt;
+  byte isRanked;&lt;br /&gt;
+  int timeLeft;&lt;br /&gt;
+  byte gameState;&lt;br /&gt;
+ };&lt;br /&gt;
+&lt;br /&gt;
+gameState is a bitfield of the following possible items:&lt;br /&gt;
+For all gametypes (these are three mutually-exclusive):&lt;br /&gt;
+1 = Warmup/Warmup countdown&lt;br /&gt;
+2 = Game in progress&lt;br /&gt;
+4 = Game over, in review screen&lt;br /&gt;
+&lt;br /&gt;
+For stopwatch:&lt;br /&gt;
+8 = The return match is active (ie, the second play of the map)&lt;br /&gt;
+&amp;lt;/pre&amp;gt;&lt;br /&gt;
+*[http://community.enemyterritory.com/forums/showpost.php?p=129140&amp;amp;postcount=50 source]&lt;br /&gt;
+&lt;br /&gt;
+[[Category:Coding]]&lt;/div&gt;</summary>
+		<author><name>Kamikazee</name></author>	</entry>
+
+	<entry>
+		<id>http://modwiki.net/wiki/Enemy_Territory:_Quake_Wars</id>
+		<title>Enemy Territory: Quake Wars</title>
+		<link rel="alternate" type="text/html" href="http://modwiki.net/wiki/Enemy_Territory:_Quake_Wars"/>
+				<updated>2007-09-15T09:44:57Z</updated>
+		
+		<summary type="html">&lt;p&gt;Moved server query stuff to own page in coding section&lt;/p&gt;
+
+			&lt;table border='0' width='98%' cellpadding='0' cellspacing='4' style=&quot;background-color: white;&quot;&gt;
+			&lt;tr&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Revision as of 09:44, 15 September 2007&lt;/td&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Current revision&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 2:&lt;/strong&gt;&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 2:&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;: ''This page is a placeholder that will become the main page for Enemy Territory: Quake Wars, once it is released. Until then, visit [[id Tech 4]] for the latest information regarding this game.''&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;: ''This page is a placeholder that will become the main page for Enemy Territory: Quake Wars, once it is released. Until then, visit [[id Tech 4]] for the latest information regarding this game.''&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;== Server Feed ==&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;*Demo Serverfeed [http://etqwdemo-ipgetter.demonware.net/ipgetter/ here]&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;=== Data Block ===&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;&amp;lt;pre&amp;gt;The data block for each client is:&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;Code:&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;struct client_t {&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;  short ping;&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;  int rate;&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;  char name[32]; // NULL-terminated&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;  byte isBot;&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt; };&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;The data block following all 32 clients is:&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;Code:&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt; struct serverInfo_t {&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;  int osMask;&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;  byte isRanked;&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;  int timeLeft;&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;  byte gameState;&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt; };&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;gameState is a bitfield of the following possible items:&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;For all gametypes (these are three mutually-exclusive):&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;1 = Warmup/Warmup countdown&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;2 = Game in progress&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;4 = Game over, in review screen&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;For stopwatch:&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;8 = The return match is active (ie, the second play of the map)&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;&amp;lt;/pre&amp;gt;&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;*[http://community.enemyterritory.com/forums/showpost.php?p=129140&amp;amp;postcount=50 source]&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+
+			&lt;/table&gt;
+		</summary>
+		<author><name>Kamikazee</name></author>	</entry>
+
+	<entry>
+		<id>http://modwiki.net/wiki/Coding</id>
+		<title>Coding</title>
+		<link rel="alternate" type="text/html" href="http://modwiki.net/wiki/Coding"/>
+				<updated>2007-09-15T09:44:12Z</updated>
+		
+		<summary type="html">&lt;p&gt;id Tech-ed, added Reference section&lt;/p&gt;
+
+			&lt;table border='0' width='98%' cellpadding='0' cellspacing='4' style=&quot;background-color: white;&quot;&gt;
+			&lt;tr&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Revision as of 09:44, 15 September 2007&lt;/td&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Current revision&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 5:&lt;/strong&gt;&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 5:&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;*[[How to build the SDK on Windows]]}}&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;*[[How to build the SDK on Windows]]}}&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;The &lt;/span&gt;[[&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;Doom 3 engine&lt;/span&gt;]] &lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;was &lt;/span&gt;written in C++, a high-level programming language. Coding, as it applies to &lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;Doom 3 engine &lt;/span&gt;games, is the modification of the engine's public source code to extend upon its capabilities.&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;All engines in the &lt;/span&gt;[[&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;id Tech 4&lt;/span&gt;]] &lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;family are &lt;/span&gt;written in C++, a high-level programming language. Coding, as it applies to &lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;id Tech 4 &lt;/span&gt;games, is the modification of the engine's public source code to extend upon its capabilities.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;==The SDK and its limitations==&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;==The SDK and its limitations==&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;Because the &lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;Doom 3 &lt;/span&gt;engine is not open source (although it likely will be in the distant future), the public is only afforded the ability to modify a portion of the complete source code.&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;Because the engine is not open source (although it likely will be in the distant future), the public is only afforded the ability to modify a portion of the complete source code.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;This incomplete portion of the source code is known as the SDK, or software development kit. This package affords modders the ability to compile a new gamex86.dll/gamex86.so/gameppc.dylib file for windows/linux/mac respectively.&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;This incomplete portion of the source code is known as the SDK, or software development kit. This package affords modders the ability to compile a new gamex86.dll/gamex86.so/gameppc.dylib file for windows/linux/mac respectively.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 19:&lt;/strong&gt;&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 19:&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;*Download the [http://www.3drealms.com/prey/download.html#sdk Prey SDK]&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;*Download the [http://www.3drealms.com/prey/download.html#sdk Prey SDK]&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;The latest version of the SDK (1.3 as of this writing) supports Visual Studio .NET 2003 and 2005 &amp;quot;out of the box&amp;quot;.&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;The latest version of the &lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;Doom 3 &lt;/span&gt;SDK (1.3 as of this writing) supports Visual Studio .NET 2003 and 2005 &amp;quot;out of the box&amp;quot;.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&amp;#160;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;== References ==&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;* [[The annotated API]]&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;* [[CVar flags|CVar flags]] (Description of the flags)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;* [[Server query protocol]]&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;==Coding tutorials==&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;==Coding tutorials==&lt;/td&gt;&lt;/tr&gt;
+
+			&lt;/table&gt;
+		</summary>
+		<author><name>Kamikazee</name></author>	</entry>
+
+	<entry>
+		<id>http://modwiki.net/wiki/Modlist</id>
+		<title>Modlist</title>
+		<link rel="alternate" type="text/html" href="http://modwiki.net/wiki/Modlist"/>
+				<updated>2007-09-14T17:55:59Z</updated>
+		
+		<summary type="html">&lt;p&gt;/* Total Conversions */ Placed RUINER site into comments, site is an image slideshow which ends with &amp;quot;fall 2007&amp;quot;...&lt;/p&gt;
+
+			&lt;table border='0' width='98%' cellpadding='0' cellspacing='4' style=&quot;background-color: white;&quot;&gt;
+			&lt;tr&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Revision as of 17:55, 14 September 2007&lt;/td&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Current revision&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 22:&lt;/strong&gt;&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 22:&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;*[http://dungeondoom.d3files.com/ninja_tournament/ Ninja Tournament]&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;*[http://dungeondoom.d3files.com/ninja_tournament/ Ninja Tournament]&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;*[http://chextrek.com/ Chex Trek: Beyond the Quest]&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;*[http://chextrek.com/ Chex Trek: Beyond the Quest]&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;*[http://www.ruiner.atomicarmadillo.com/ RUINER]&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;&amp;lt;!--&lt;/span&gt;*[http://www.ruiner.atomicarmadillo.com/ RUINER]&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;--&amp;gt;&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;* RUINER (No site yet)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;===Multiplayer===&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;===Multiplayer===&lt;/td&gt;&lt;/tr&gt;
+
+			&lt;/table&gt;
+		</summary>
+		<author><name>Kamikazee</name></author>	</entry>
+
+	<entry>
+		<id>http://modwiki.net/wiki/Modlist</id>
+		<title>Modlist</title>
+		<link rel="alternate" type="text/html" href="http://modwiki.net/wiki/Modlist"/>
+				<updated>2007-09-14T05:34:21Z</updated>
+		
+		<summary type="html">&lt;p&gt;/* Total Conversions */&lt;/p&gt;
+
+			&lt;table border='0' width='98%' cellpadding='0' cellspacing='4' style=&quot;background-color: white;&quot;&gt;
+			&lt;tr&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Revision as of 05:34, 14 September 2007&lt;/td&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Current revision&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 22:&lt;/strong&gt;&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 22:&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;*[http://dungeondoom.d3files.com/ninja_tournament/ Ninja Tournament]&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;*[http://dungeondoom.d3files.com/ninja_tournament/ Ninja Tournament]&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;*[http://chextrek.com/ Chex Trek: Beyond the Quest]&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;*[http://chextrek.com/ Chex Trek: Beyond the Quest]&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;*[http://www.ruiner.atomicarmadillo.com/ RUINER]&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;===Multiplayer===&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;===Multiplayer===&lt;/td&gt;&lt;/tr&gt;
+
+			&lt;/table&gt;
+		</summary>
+		<author><name>Revility</name></author>	</entry>
+
+	<entry>
+		<id>http://modwiki.net/wiki/Talk:Entity_Listing</id>
+		<title>Talk:Entity Listing</title>
+		<link rel="alternate" type="text/html" href="http://modwiki.net/wiki/Talk:Entity_Listing"/>
+				<updated>2007-09-14T01:34:07Z</updated>
+		
+		<summary type="html">&lt;p&gt;Python&lt;/p&gt;
+
+			&lt;table border='0' width='98%' cellpadding='0' cellspacing='4' style=&quot;background-color: white;&quot;&gt;
+			&lt;tr&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Revision as of 01:34, 14 September 2007&lt;/td&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Current revision&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 100:&lt;/strong&gt;&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 100:&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;--[[User:Kamikazee|Kamikazee]] 14:51, 7 June 2007 (CEST)&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;--[[User:Kamikazee|Kamikazee]] 14:51, 7 June 2007 (CEST)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;== Python ==&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;I've been tinkering with Python a bit lately in hopes that I might be able to write a script to do a bit of data visualization with the entity declarations.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;I'm new to the language so I have a lot to learn but here's where I'm at so far...&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&amp;lt;pre&amp;gt;&amp;quot;&amp;quot;&amp;quot; idTech 4 data visualization script &amp;quot;&amp;quot;&amp;quot;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;import fileinput&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;import re&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;entdef = re.compile('entityDef\s(\w*)\s{')&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;keyvalue = re.compile('\s*&amp;quot;([^&amp;quot;]*)&amp;quot;\s*&amp;quot;([^&amp;quot;]*)&amp;quot;')&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;enddef = re.compile('}')&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;entlist = list()&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;entdict = dict()&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;for line in fileinput.input('E:/Doom3 Assets/def/mp.def'):&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;    if line.endswith('\n'):&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;        line = line[:-1]&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;    entmatch = entdef.match(line)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;    kvmatch = keyvalue.match(line)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;    endmatch = enddef.match(line)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;    if entmatch:&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;        entdict['~name'] = entmatch.group(1)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;    if kvmatch:&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;        entdict[kvmatch.group(1)] = kvmatch.group(2)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;    if endmatch:&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;        entlist.append(entdict.copy())&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;        entdict.clear()&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;        &lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;for entity in entlist:&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;    print entity['~name']&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;    for pair in entity.iteritems():&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;        if pair[0] != '~name':&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;            print pair&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&amp;lt;/pre&amp;gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;It's not much. All it does at present it read in the declarations from a single file but it took quite a bit of time for me to get to this point so I thought I'd share.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;Perhaps one of you has a better idea on how to structure the data in memory to make it easier to work with.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;In theory you could do some very interesting things with the data once it's all correctly loaded into memory. For instance, you could have the script write out a inheritance diagram in SVG.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;--[[User:Rich|Rich]] 03:34, 14 September 2007 (CEST)&lt;/td&gt;&lt;/tr&gt;
+
+			&lt;/table&gt;
+		</summary>
+		<author><name>Rich</name></author>	</entry>
+
+	<entry>
+		<id>http://modwiki.net/wiki/Dmap_%28console_command%29</id>
+		<title>Dmap (console command)</title>
+		<link rel="alternate" type="text/html" href="http://modwiki.net/wiki/Dmap_%28console_command%29"/>
+				<updated>2007-09-14T01:18:42Z</updated>
+		
+		<summary type="html">&lt;p&gt;Removed note. I does work under Linux&lt;/p&gt;
+
+			&lt;table border='0' width='98%' cellpadding='0' cellspacing='4' style=&quot;background-color: white;&quot;&gt;
+			&lt;tr&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Revision as of 01:18, 14 September 2007&lt;/td&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Current revision&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 33:&lt;/strong&gt;&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 33:&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;| notes=This command will take a .MAP file and generate a .[[CM (file format)|CM]], .[[PROC (file format)|PROC]] and sometimes one or more .[[AAS (file format)|AAS]] files. See also the [[Maps (folder)|map formats]] page and the [[testmap (console command)|testmap]] console command.}}&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;| notes=This command will take a .MAP file and generate a .[[CM (file format)|CM]], .[[PROC (file format)|PROC]] and sometimes one or more .[[AAS (file format)|AAS]] files. See also the [[Maps (folder)|map formats]] page and the [[testmap (console command)|testmap]] console command.}}&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;It's reported that this command does not work under Linux and at present there is no known workaround.&lt;/td&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;
+
+			&lt;/table&gt;
+		</summary>
+		<author><name>Rich</name></author>	</entry>
+
+	<entry>
+		<id>http://modwiki.net/wiki/Common_Mapping_Issues</id>
+		<title>Common Mapping Issues</title>
+		<link rel="alternate" type="text/html" href="http://modwiki.net/wiki/Common_Mapping_Issues"/>
+				<updated>2007-09-13T21:14:28Z</updated>
+		
+		<summary type="html">&lt;p&gt;Possible warning sign for the #INF error&lt;/p&gt;
+
+			&lt;table border='0' width='98%' cellpadding='0' cellspacing='4' style=&quot;background-color: white;&quot;&gt;
+			&lt;tr&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Revision as of 21:14, 13 September 2007&lt;/td&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Current revision&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 45:&lt;/strong&gt;&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 45:&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;===#IND/#INF===&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;===#IND/#INF===&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;''Severe'': A problem whose cause is yet to be determined. On occasion the editor will save out a map file where it replaces some of the numerical values in the map file with the character string ''#IND'' or ''#INF''.  There is a means to salvage your map but you may or may not lose some brushwork in the process.&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;''Severe'': A problem whose cause is yet to be determined. On occasion the &lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;built-in &lt;/span&gt;editor will save out a map file where it replaces some of the numerical values in the map file with the character string ''#IND'' or ''#INF''.  There is a means to salvage your map but you may or may not lose some brushwork in the process.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;* Make a copy of the map file&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;* Make a copy of the map file&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 55:&lt;/strong&gt;&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 55:&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;* Clear your map of any corrupt brushes&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;* Clear your map of any corrupt brushes&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;* Save the map under a different file name&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;* Save the map under a different file name&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;One possible warning sign that precedes this problem is when a texture is applied to a brush and the brush changes colour but does not display the actual texture in the 3D preview window. If this happens, do not save the map file, but instead change the texture a few times until the preview window shows the correct result.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;[[Category:Mapping]]&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;[[Category:Mapping]]&lt;/td&gt;&lt;/tr&gt;
+
+			&lt;/table&gt;
+		</summary>
+		<author><name>OrbWeaver</name></author>	</entry>
+
+	<entry>
+		<id>http://modwiki.net/wiki/Talk:How_to_build_the_SDK_on_Linux</id>
+		<title>Talk:How to build the SDK on Linux</title>
+		<link rel="alternate" type="text/html" href="http://modwiki.net/wiki/Talk:How_to_build_the_SDK_on_Linux"/>
+				<updated>2007-09-13T14:01:56Z</updated>
+		
+		<summary type="html">&lt;p&gt;GCC 4 compliance&lt;/p&gt;
+
+			&lt;table border='0' width='98%' cellpadding='0' cellspacing='4' style=&quot;background-color: white;&quot;&gt;
+			&lt;tr&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Revision as of 14:01, 13 September 2007&lt;/td&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Current revision&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 32:&lt;/strong&gt;&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 32:&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;I just tagged this page with D3page since I don't know how big a difference it is for Q4, so if anyone more familiar with the subject wants to include instructions for Q4 here, I would be very happy. --[[User:Iceheart|iceheart]] 12:30, 4 April 2006 (W. Europe Daylight Time)&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;I just tagged this page with D3page since I don't know how big a difference it is for Q4, so if anyone more familiar with the subject wants to include instructions for Q4 here, I would be very happy. --[[User:Iceheart|iceheart]] 12:30, 4 April 2006 (W. Europe Daylight Time)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;== GCC 4 compliance ==&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;As of Doom 3 1.3.1 the cod

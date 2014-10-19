@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="User:Anggra21" />
+<link rel="shortcut icon" href="/web/20111205221646im_/http://www.modwiki.net/favicon.ico" />
+<link title="Creative Commons" type="application/rdf+xml" href="/w/index.php?title=User:Anggra21&amp;action=creativecommons" rel="meta" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<title>User:Anggra21 - modwiki</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20111205221646cs_/http://www.modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/web/20111205221646cs_/http://www.modwiki.net/w/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/w/skins/monobook/IE70Fixes.css?1";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
+		<script type="text/javascript" src="/web/20111205221646js_/http://www.modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20111205221646js_/http://www.modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/web/20111205221646cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20111205221646cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20111205221646cs_/http://www.modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns-2 ltr">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app10.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/www.modwiki.net\/wiki\/User:Anggra21";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "5";
+var displayMonth = "Dec";
+var displayYear = "2011";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://www.modwiki.net/wiki/User:Anggra21" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20111205221646" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Nov
+                       
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 22:16:46 Dec 5, 2011">DEC</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20120205172233/http://www.modwiki.net/wiki/User:Anggra21" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="5 Feb 2012"><strong>FEB</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20111204214946/http://www.modwiki.net/wiki/User:Anggra21" title="21:49:46 Dec 4, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 22:16:46 Dec 5, 2011">5</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20120105205039/http://www.modwiki.net/wiki/User:Anggra21" title="20:50:39 Jan 5, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2010
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 22:16:46 Dec 5, 2011">2011</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20121221034023/http://www.modwiki.net/wiki/User:Anggra21" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="21 Dec 2012"><strong>2012</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20111205221646*/http://www.modwiki.net/wiki/User:Anggra21" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>25 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">4 Dec 11 - 30 Nov 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:11:000000000002_2012:-1:111111111111_2013:-1:111111111110_2014:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">User:Anggra21</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From modwiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="/web/20111205221646/http://www.modwiki.net/wiki/User:Anggra21#column-one">navigation</a>, <a href="/web/20111205221646/http://www.modwiki.net/wiki/User:Anggra21#searchInput">search</a></div>			<!-- start content -->
+			<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20111205221646/http://www.modwiki.net/w/index.php?title=User:Anggra21&amp;action=edit&amp;section=1" title="Edit section: Garden pests">edit</a>]</div><a name="Garden_pests"></a><h1>Garden pests</h1>
+<p>If we could <a href="/web/20111205221646/http://homeimprovementbiz.com/" class='external text' title="http://homeimprovementbiz.com">garden</a> without any interference from the pests attack the plants, then indeed gardening would be a simple matter, but over time we should be wary of enemy small small size, but big mess they made.
+</p><p>If the disease can be prevented by a healthy state, so that pests can be kept away from the park is very nice: Han waste piles, where Insects breed. I do not think a compost that will be affected, but dirty, neglected to invite the country seems to have problems.
+</p><p>There is some help to keep pest. Continuous stirring of the soil by earthworms help keep the soil open to air and water. Many of our common birds Feed on Insects. Sparrows, Robins, chickadees, orioles and grassland birds are examples of birds that would help. Some Insects eat other insects and harmful. Some kinds of ladybugs do a good deed: Ichneumon - fly helps too. Frogs and magic of a number of insects that can eat a meal. Frog type of treatment, that is all.
+</p><p>Each gardener should try to make a garden attractive to birds and Frogs. Good nestkastje, grain sprinkled about in early spring, water location, invitations, bird life, and your garden. If you wish toads, fix things for them as well. During the summer, as the Tigers to rest in the shade at night he is ready to eat, but not to kill, since toads prefer live food. How can "fix" the toads. Well, something must be done in a peaceful retreat, dark and wet preparation. A few stones, some of the events under the carpet in the humid forest with leaves that look very good for the Tigers.
+</p><p>There are two general classes of Insects known by the way, they are doing their job. Somewhat undermines the system of its factory in this type of insect has a mouth that this is a job to do. Locusts and Caterpillars of this species. Another type of liquid suck - from plants, which in some respects worse. Aphids are here, such as mosquitoes, which have robbed us. All plants are linked to large-scale Insects, and suck the life of the planting.
+</p><p>Now we can fight that head. Co-corrosion can be caught with poison sprayed the crops that they take into their bodies with the plant. Bordeaux mixture is a poison sprayed on the crop for this purpose.
+</p><p>In other cases, the only thing to attack the insect direct. So certain insecticides, as they are sprayed on crops in a fall in the Insects. They work in a deadly offensive in one way or another, that the body of the insect.
+</p><p>Sometimes we work too concerned about the Underground Insects. You saw a yard full of ants, nests. Here is a drug, but what we should be careful.
+</p><p>This question is constantly asked, "How can I tell what insect is bad," Well, you can tell partly by the work done, and seeing the insect itself partly the latter is not always easy to be there .. I had cutworms one season and never saw one. I just saw that the job is done. If a tender cut from the plants clean the Republic of Armenia is confident that the cutworm is abroad look. Well, this is a difficult question because his family is great, if you look at the gray-striped Caterpillar, you probably know that it is a cutworm .. But because of its habit of resting on the ground during the day and night, are difficult to prevent catching cutworm is around early in the season is ready to handle a cut Lily .. When it comes to peas, a little later, he was ready for them. Lot or block the paper collars, or tin sitting in a bar. Collar on, you need a patch at the factory.
+</p><p>Of course, plant lice are more common: They often do not look green. However, they may be red, yellow or brown. Lice are easy enough to find, because they always remain in their proposal. They are very close to the plants sucking Insects as food went up, and is sure to find them. But cruel Insects do their work, and hid him. This is very difficult to treat.
+</p><p>Slugs great damage to the bushes. They ate leaves the body, leaving only the veins remain. They are soft, flesh, green above and yellow below.
+</p><p>A beetle, striped beetle, attacks young melons and squash leaves. He leaves holes in a riddling it. This beetle, as its name implies stripes. Back to black with yellow stripes running the length.
+</p><p>So there is lead, a garden pest. A strong blow to almost any garden plant food, or flowers, or vegetables, the more eggs they lay in a pile of old junk. Do you have cleaned the Trash. The ball is more dangerous than any other pest insects in the garden alone. You can find it in the following way: Is there a trick to bring them into the ground during the day: 'You see they rest during the day underground. So just water the soil, which is snail. How do you know where you are. They are more likely to hide near the plants they eat. So that the ground water is a nice clean lime water. This will prevent you, and they will see what is the problem.
+</p><p>In addition to these common pests, pests which attack many types of plants, has specialized for specific crop pests. Discouraged, is not it? Beans have pests of their own, so that the potatoes and cabbage. In fact, the vegetable <a href="/web/20111205221646/http://homeimprovementbiz.com/" class='external text' title="http://homeimprovementbiz.com">garden</a> has many inhabitants of the flower garden lice are very bothersome, cutworm, and leading a good time too, and ants are often given as a season ago. But the real prize for discouraging garden pests of vegetables take: If we go to some of the fruit, the vegetable garden should be to the benefit of fruits from the orchards.
+</p><p>A common <a href="/web/20111205221646/http://homeimprovementbiz.com/" class='external text' title="http://homeimprovementbiz.com">garden</a> pests and plant a tomato worm. This is a big worm with yellow and green ribbons. His job was to eat new fruits.
+</p><p>A big, green light, Caterpillar is celery. This Caterpillar can tell a black ribbon, a circle or any part of his body.
+</p><p>Squash bug may be required by the body brown, long and thin, and unpleasant odors that are killed by other partners on the lookout for mistakes potatoes. This depends on the black and yellow stripes on the back Grumpy. Small green cabbage worm is a perfect situation, a small Caterpillar and smaller than the tomato worm. This is probably the most common and garden pests by name. <a href="/web/20111205221646/http://www.employer-engagement.salford.ac.uk/wiki/index.php/User:Anggra21" class='external text' title="http://www.employer-engagement.salford.ac.uk/wiki/index.php/User:Anggra21">Gardening</a>
+</p><div class="printfooter">
+Retrieved from "<a href="/web/20111205221646/http://www.modwiki.net/wiki/User:Anggra21">http://www.modwiki.net/wiki/User:Anggra21</a>"</div>
+						<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<ul>
+				 <li id="ca-nstab-user" class="selected"><a href="/web/20111205221646/http://www.modwiki.net/wiki/User:Anggra21">User page</a></li>
+				 <li id="ca-talk" class="new"><a href="/web/20111205221646/http://www.modwiki.net/w/index.php?title=User_talk:Anggra21&amp;action=edit">Discussion</a></li>
+				 <li id="ca-edit"><a href="/web/20111205221646/http://www.modwiki.net/w/index.php?title=User:Anggra21&amp;action=edit">Edit</a></li>
+				 <li id="ca-history"><a href="/web/20111205221646/http://www.modwiki.net/w/index.php?title=User:Anggra21&amp;action=history">History</a></li>
+		</ul>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/web/20111205221646/http://www.modwiki.net/w/index.php?title=Special:Userlogin&amp;returnto=User:Anggra21">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/web/20111205221646im_/http://www.modwiki.net/wiki/upload/wiki.png);" href="/web/20111205221646/http://www.modwiki.net/wiki/Main_Page" title="Main Page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class='portlet' id='p-Main'>
+		<h5>Main</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/web/20111205221646/http://www.modwiki.net/wiki/Main_Page">Main Page</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 4'>
+		<h5>id Tech 4</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Doom-3"><a href="/web/20111205221646/http://www.modwiki.net/wiki/Doom_3">Doom 3</a></li>
+				<li id="n-Quake-4"><a href="/web/20111205221646/http://www.modwiki.net/wiki/Quake_4">Quake 4</a></li>
+				<li id="n-Prey"><a href="/web/20111205221646/http://www.modwiki.net/wiki/Prey">Prey</a></li>
+				<li id="n-ETQW"><a href="/web/20111205221646/http://www.modwiki.net/wiki/Enemy_Territory:_Quake_Wars">ETQW</a></li>
+				<li id="n-Wolfenstein"><a href="/web/20111205221646/http://www.modwiki.net/wiki/Wolfenstein">Wolfenstein</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 5'>
+		<h5>id Tech 5</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Rage"><a href="/web/20111205221646/http://www.modwiki.net/wiki/Rage">Rage</a></li>
+				<li id="n-Doom-4"><a href="/web/20111205221646/http://www.modwiki.net/wiki/Doom_4">Doom 4</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Quick Links'>
+		<h5>Quick Links</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Console"><a href="/web/20111205221646/http://www.modwiki.net/wiki/Console">Console</a></li>
+				<li id="n-Script-Events"><a href="/web/20111205221646/http://www.modwiki.net/wiki/Scripting">Script Events</a></li>
+				<li id="n-Material-Keywords"><a href="/web/20111205221646/http://www.modwiki.net/wiki/Material_%28decl%29">Material Keywords</a></li>
+				<li id="n-Modification-List"><a href="/web/20111205221646/http://www.modwiki.net/wiki/Modlist">Modification List</a></li>
+				<li id="n-Tutorial-List"><a href="/web/20111205221646/http://www.modwiki.net/wiki/Tutorial_list">Tutorial List</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Wiki'>
+		<h5>Wiki</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Open-tasks"><a href="/web/20111205221646/http://www.modwiki.net/wiki/modwiki:Open_tasks">Open tasks</a></li>
+				<li id="n-recentchanges"><a href="/web/20111205221646/http://www.modwiki.net/wiki/Special:Recentchanges">Recent changes</a></li>
+				<li id="n-Style-guide"><a href="/web/20111205221646/http://www.modwiki.net/wiki/modwiki:Style_guide">Style guide</a></li>
+				<li id="n-help"><a href="/web/20111205221646/http://www.modwiki.net/wiki/Help:Contents">Help</a></li>
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/web/20111205221646/http://www.modwiki.net/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" value="Search" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/web/20111205221646/http://www.modwiki.net/wiki/Special:Whatlinkshere/User:Anggra21">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/web/20111205221646/http://www.modwiki.net/wiki/Special:Recentchangeslinked/User:Anggra21">Related changes</a></li>
+<li id="t-contributions"><a href="/web/20111205221646/http://www.modwiki.net/wiki/Special:Contributions/Anggra21">User contributions</a></li>
+<li id="t-upload"><a href="/web/20111205221646/http://www.modwiki.net/wiki/Special:Upload">Upload file</a></li>
+<li id="t-specialpages"><a href="/web/20111205221646/http://www.modwiki.net/wiki/Special:Specialpages">Special pages</a></li>
+				<li id="t-print"><a href="/web/20111205221646/http://www.modwiki.net/w/index.php?title=User:Anggra21&amp;printable=yes">Printable version</a></li>				<li id="t-permalink"><a href="/web/20111205221646/http://www.modwiki.net/w/index.php?title=User:Anggra21&amp;oldid=27817">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="/web/20111205221646/http://www.mediawiki.org/"><img src="/web/20111205221646im_/http://www.modwiki.net/w/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="/web/20111205221646/http://www.gnu.org/copyleft/fdl.html"><img src="/web/20111205221646im_/http://www.modwiki.net/w/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+				<li id="lastmod"> This page was last modified 00:54, 3 December 2011.</li>
+				<li id="copyright">Content is available under <a href="/web/20111205221646/http://www.gnu.org/copyleft/fdl.html" class='external ' title="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.2</a>.</li>
+				<li id="privacy"><a href="/web/20111205221646/http://www.modwiki.net/wiki/modwiki:Privacy_policy" title="modwiki:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="/web/20111205221646/http://www.modwiki.net/wiki/modwiki:About" title="modwiki:About">About modwiki</a></li>
+				<li id="disclaimer"><a href="/web/20111205221646/http://www.modwiki.net/wiki/modwiki:General_disclaimer" title="modwiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+	<script type="text/javascript"> if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+<!-- Served by h982484 in 0.21 secs. -->
+</body></html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 22:16:46 Dec 5, 2011 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 4:36:32 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

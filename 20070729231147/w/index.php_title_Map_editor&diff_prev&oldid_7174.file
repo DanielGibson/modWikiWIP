@@ -1,0 +1,698 @@
+DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex,follow" />
+<meta name="keywords" content="Map editor,Console,DEF (file format),Declarations,DoomEdit,DoomEdit hotkeys,Doom 3 engine,Editor (console command),Images,Material (decl),Patch" />
+<link rel="shortcut icon" href="/web/20070729231147im_/http://modwiki.net/favicon.ico" />
+<link title="Creative Commons" type="application/rdf+xml" href="/w/index.php?title=Map_editor&amp;action=creativecommons" rel="meta" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<title>Map editor - modwiki</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20070729231147cs_/http://modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/web/20070729231147cs_/http://modwiki.net/w/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/w/skins/monobook/IE70Fixes.css?1";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
+		<script type="text/javascript" src="/web/20070729231147js_/http://modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20070729231147js_/http://modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/web/20070729231147cs_/http://modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231147cs_/http://modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231147cs_/http://modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns-0 ltr">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app15.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/modwiki.net\/w\/index.php?title=Map_editor&diff=prev&oldid=7174";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "29";
+var displayMonth = "Jul";
+var displayYear = "2007";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20070729231147" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jun
+                       
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 23:11:47 Jul 29, 2007">JUL</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Aug
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_prv_off.png" alt="Previous capture" width="14" height="16" border="0" />
+                       
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 23:11:47 Jul 29, 2007">29</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2006
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 23:11:47 Jul 29, 2007">2007</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2008
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20070729231147*/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>1 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">29 Jul 07 - 29 Jul 07</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:6:000000100000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000_2014:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">Map editor</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From modwiki</h3>
+			<div id="contentSub">(Difference between revisions)</div>
+									<div id="jump-to-nav">Jump to: <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#column-one">navigation</a>, <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#searchInput">search</a></div>			<!-- start content -->
+			
+			<table border='0' width='98%' cellpadding='0' cellspacing='4' class='diff'>
+			<tr>
+				<td colspan='2' width='50%' align='center' class='diff-otitle'><strong><a href='/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;oldid=7173'>Revision as of 00:20, 11 April 2007</a></strong><br /><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=User:Davlor&amp;action=edit" class="new" title="User:Davlor">Davlor</a>  (<a href="/web/20070729231147/http://modwiki.net/w/index.php?title=User_talk:Davlor&amp;action=edit" class="new" title="User talk:Davlor">Talk</a> | <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Special:Contributions&amp;target=Davlor" title="Special:Contributions">contribs</a>)<br /> <span class='comment'>(<span class="autocomment"><a href="/web/20070729231147/http://modwiki.net/wiki/Map_editor#Rotation" title="Map editor">→</a>Rotation</span>)</span><br /><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7173" title="Map editor" id="differences-prevlink">? Previous diff</a></td>
+				<td colspan='2' width='50%' align='center' class='diff-ntitle'><strong><a href='/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;oldid=7174'>Revision as of 00:21, 11 April 2007</a></strong><br /><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=User:Davlor&amp;action=edit" class="new" title="User:Davlor">Davlor</a>  (<a href="/web/20070729231147/http://modwiki.net/w/index.php?title=User_talk:Davlor&amp;action=edit" class="new" title="User talk:Davlor">Talk</a> | <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Special:Contributions&amp;target=Davlor" title="Special:Contributions">contribs</a>) <br /> <span class='comment'>(<span class="autocomment"><a href="/web/20070729231147/http://modwiki.net/wiki/Map_editor#Selection_Options" title="Map editor">→</a>Selection Options</span>)</span><br /><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=next&amp;oldid=7174" title="Map editor" id="differences-nextlink">Next diff →</a></td>
+			</tr>
+			<tr><td colspan="2" align="left"><strong>Line 112:</strong></td>
+<td colspan="2" align="left"><strong>Line 112:</strong></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td> </td><td class='diff-context'>[[Image:Toolbar_dont_select_models.png|Don't select models]]</td><td> </td><td class='diff-context'>[[Image:Toolbar_dont_select_models.png|Don't select models]]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>When active you can't select [[Models]] with &quot;shift clicking<span class="diffchange">&quot;</span>, however Selection Operations still work (see above).</td><td>+</td><td class='diff-addedline'>When active you can't select [[Models]] with &quot;shift clicking,<span class="diffchange">&quot; </span>however Selection Operations still work (see above).</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td> </td><td class='diff-context'>[[Image:Toolbar_select_primitves.png|Select primitives by bounding brush]]</td><td> </td><td class='diff-context'>[[Image:Toolbar_select_primitves.png|Select primitives by bounding brush]]</td></tr>
+
+			</table>
+		<hr /><h2>Revision as of 00:21, 11 April 2007</h2>
+<div align="left" style="float:right; font-size: 17px;background: #FFFFEE; padding: 5px; border: 1px solid #000000; padding-left: 15px; padding-right: 15px; margin-left: 15px; margin-right: 15px; padding-bottom: 15px; width: 400px;">
+<div align="right" style="font-size: 10px; text-align=right;"><a href="/web/20070729231147/http://modwiki.net/wiki/Help:Reference_box" title="Help:Reference box">What's this?</a></div>
+<div><b>Map editor quick reference</b></div>
+<hr /><span style="font-size: 14px">
+<p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:D3square_25.png" class="image" title="Image:D3square_25.png"><img src="/web/20070729231147im_/http://modwiki.net/w/images/2/23/D3square_25.png" alt="Image:D3square_25.png" width="25" height="25" longdesc="/wiki/Image:D3square_25.png" /></a> <b>Doom 3</b>
+</p>
+<ul><li><a href="/web/20070729231147/http://modwiki.net/wiki/DoomEdit" title="DoomEdit">DoomEdit</a>
+<ul><li><a href="/web/20070729231147/http://modwiki.net/wiki/DoomEdit#Troubleshooting" title="DoomEdit">Troubleshooting DoomEdit</a>
+</li></ul>
+</li></ul>
+<p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Q4square_25.png" class="image" title="Image:Q4square_25.png"><img src="/web/20070729231147im_/http://modwiki.net/w/images/e/e8/Q4square_25.png" alt="Image:Q4square_25.png" width="25" height="25" longdesc="/wiki/Image:Q4square_25.png" /></a> <b>Quake 4</b>
+</p>
+<ul><li><a href="/web/20070729231147/http://modwiki.net/wiki/QuakeEdit" title="QuakeEdit">QuakeEdit</a>
+<ul><li><a href="/web/20070729231147/http://modwiki.net/wiki/QuakeEdit#Troubleshooting" title="QuakeEdit">Troubleshooting QuakeEdit</a> 
+</li></ul>
+</li></ul>
+</span></div>
+<p>This article describes the built-in editor that comes with all <a href="/web/20070729231147/http://modwiki.net/wiki/Doom_3_engine" title="Doom 3 engine">Doom 3 engine</a> games. Always check the editor specific page for the particular game you're editing in. The map editor can be started by typing "<a href="/web/20070729231147/http://modwiki.net/wiki/Editor_%28console_command%29" title="Editor (console command)">editor</a>" in the <a href="/web/20070729231147/http://modwiki.net/wiki/Console" title="Console">console</a> or as a <a href="/web/20070729231147/http://modwiki.net/wiki/Startup_parameters" title="Startup parameters">startup parameter</a>.
+</p>
+<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class='toclevel-1'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#Editor_basics"><span class="tocnumber">1</span> <span class="toctext">Editor basics</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#The_toolbar"><span class="tocnumber">1.1</span> <span class="toctext">The toolbar</span></a>
+<ul>
+<li class='toclevel-3'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#File_Operations"><span class="tocnumber">1.1.1</span> <span class="toctext">File Operations</span></a></li>
+<li class='toclevel-3'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#Flip_.26_Rotate"><span class="tocnumber">1.1.2</span> <span class="toctext">Flip &amp; Rotate</span></a></li>
+<li class='toclevel-3'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#Selection_Operations"><span class="tocnumber">1.1.3</span> <span class="toctext">Selection Operations</span></a></li>
+<li class='toclevel-3'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#CSG_Operations"><span class="tocnumber">1.1.4</span> <span class="toctext">CSG Operations</span></a></li>
+<li class='toclevel-3'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#View_options"><span class="tocnumber">1.1.5</span> <span class="toctext">View options</span></a></li>
+<li class='toclevel-3'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#Rotation"><span class="tocnumber">1.1.6</span> <span class="toctext">Rotation</span></a></li>
+<li class='toclevel-3'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#Scaling"><span class="tocnumber">1.1.7</span> <span class="toctext">Scaling</span></a></li>
+<li class='toclevel-3'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#Movement"><span class="tocnumber">1.1.8</span> <span class="toctext">Movement</span></a></li>
+<li class='toclevel-3'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#Selection_Options"><span class="tocnumber">1.1.9</span> <span class="toctext">Selection Options</span></a></li>
+<li class='toclevel-3'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#Model_Options"><span class="tocnumber">1.1.10</span> <span class="toctext">Model Options</span></a></li>
+<li class='toclevel-3'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#Patch_Options"><span class="tocnumber">1.1.11</span> <span class="toctext">Patch Options</span></a></li>
+<li class='toclevel-3'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#Light_Options"><span class="tocnumber">1.1.12</span> <span class="toctext">Light Options</span></a></li>
+<li class='toclevel-3'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#Spline_Editing"><span class="tocnumber">1.1.13</span> <span class="toctext">Spline Editing</span></a></li>
+<li class='toclevel-3'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#Sound_Options"><span class="tocnumber">1.1.14</span> <span class="toctext">Sound Options</span></a></li>
+<li class='toclevel-3'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#Game"><span class="tocnumber">1.1.15</span> <span class="toctext">Game</span></a></li>
+</ul>
+</li>
+<li class='toclevel-2'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#The_views"><span class="tocnumber">1.2</span> <span class="toctext">The views</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#The_entity_inspector"><span class="tocnumber">1.3</span> <span class="toctext">The entity inspector</span></a>
+<ul>
+<li class='toclevel-3'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#Main_text_areas"><span class="tocnumber">1.3.1</span> <span class="toctext">Main text areas</span></a></li>
+<li class='toclevel-3'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#Entity_orientation"><span class="tocnumber">1.3.2</span> <span class="toctext">Entity orientation</span></a></li>
+<li class='toclevel-3'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#Animation_controls"><span class="tocnumber">1.3.3</span> <span class="toctext">Animation controls</span></a></li>
+<li class='toclevel-3'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#Advanced_controls"><span class="tocnumber">1.3.4</span> <span class="toctext">Advanced controls</span></a></li>
+</ul>
+</li>
+<li class='toclevel-2'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#The_media_inspector"><span class="tocnumber">1.4</span> <span class="toctext">The media inspector</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#The_texture_inspector"><span class="tocnumber">1.5</span> <span class="toctext">The texture inspector</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#The_console_inspector"><span class="tocnumber">1.6</span> <span class="toctext">The console inspector</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#Light_editor"><span class="tocnumber">2</span> <span class="toctext">Light editor</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174#Surface_inspector"><span class="tocnumber">3</span> <span class="toctext">Surface inspector</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="Editor_basics"></a><h2>Editor basics</h2>
+<p>What follows is a series of images that show various parts of the Doom 3 engine level design software and what each feature does.
+</p>
+<a name="The_toolbar"></a><h3> The toolbar </h3>
+<p>Most of the commands can be accessed through several ways. The two main ways are either through shortcut keys, or the toolbar.
+<b>Note:</b> You can drag the toolbar with the handle on the left just like any other toolbar.
+</p>
+<a name="File_Operations"></a><h4> File Operations </h4>
+<p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_open.png" class="image" title="Open"><img src="/web/20070729231147im_/http://modwiki.net/w/images/9/90/Toolbar_open.png" alt="Open" width="23" height="23" longdesc="/wiki/Image:Toolbar_open.png" /></a>
+Open an existing file within the application.
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_save.png" class="image" title="Save"><img src="/web/20070729231147im_/http://modwiki.net/w/images/6/69/Toolbar_save.png" alt="Save" width="23" height="23" longdesc="/wiki/Image:Toolbar_save.png" /></a>
+Saves the current map. If this is the first time of saving, you will be prompted for a new filename to be declared.
+</p>
+<a name="Flip_.26_Rotate"></a><h4> Flip &amp; Rotate </h4>
+<p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_x-axis_flip.png" class="image" title="x-axis Flip"><img src="/web/20070729231147im_/http://modwiki.net/w/images/7/79/Toolbar_x-axis_flip.png" alt="x-axis Flip" width="23" height="23" longdesc="/wiki/Image:Toolbar_x-axis_flip.png" /></a>
+Flip the selected Brush/Entity/Patch over the X Axis.
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_x-axis_rotate.png" class="image" title="x-axis Rotate"><img src="/web/20070729231147im_/http://modwiki.net/w/images/8/89/Toolbar_x-axis_rotate.png" alt="x-axis Rotate" width="23" height="23" longdesc="/wiki/Image:Toolbar_x-axis_rotate.png" /></a>
+Rotate the selected Brush/Entity/Patch over the X Axis 90 degrees.
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_y-axis_flip.png" class="image" title="y-axis Flip"><img src="/web/20070729231147im_/http://modwiki.net/w/images/b/bf/Toolbar_y-axis_flip.png" alt="y-axis Flip" width="23" height="23" longdesc="/wiki/Image:Toolbar_y-axis_flip.png" /></a>
+Flip the selected Brush/Entity/Patch over the Y Axis.
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_y-axis_rotate.png" class="image" title="y-axis Rotate"><img src="/web/20070729231147im_/http://modwiki.net/w/images/c/c7/Toolbar_y-axis_rotate.png" alt="y-axis Rotate" width="23" height="23" longdesc="/wiki/Image:Toolbar_y-axis_rotate.png" /></a>
+Rotate the selected Brush/Entity/Patch over the Y Axis 90 degrees.
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_z-axis_flip.png" class="image" title="z-axis Flip"><img src="/web/20070729231147im_/http://modwiki.net/w/images/e/e3/Toolbar_z-axis_flip.png" alt="z-axis Flip" width="24" height="23" longdesc="/wiki/Image:Toolbar_z-axis_flip.png" /></a>
+Flip the selected Brush/Entity/Patch over the Z Axis.
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_z-axis_rotate.png" class="image" title="z-axis Rotate"><img src="/web/20070729231147im_/http://modwiki.net/w/images/9/92/Toolbar_z-axis_rotate.png" alt="z-axis Rotate" width="23" height="23" longdesc="/wiki/Image:Toolbar_z-axis_rotate.png" /></a>
+Rotate the selected Brush/Entity/Patch over the Z Axis 90 degrees.
+</p>
+<a name="Selection_Operations"></a><h4> Selection Operations </h4>
+<p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_complete_tall.png" class="image" title="Complete Tall"><img src="/web/20070729231147im_/http://modwiki.net/w/images/c/c8/Toolbar_complete_tall.png" alt="Complete Tall" width="23" height="23" longdesc="/wiki/Image:Toolbar_complete_tall.png" /></a>
+Selects everything completely inside the current brush in your current 2D view, and deletes the brush afterwards.
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_select_touching.png" class="image" title="Select Touching"><img src="/web/20070729231147im_/http://modwiki.net/w/images/b/b2/Toolbar_select_touching.png" alt="Select Touching" width="23" height="23" longdesc="/wiki/Image:Toolbar_select_touching.png" /></a>
+Selects everything touching the current brush, and does <b>not</b> delete the brush afterwards.
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_select_partial_tall.png" class="image" title="Select Partial Tall"><img src="/web/20070729231147im_/http://modwiki.net/w/images/b/b3/Toolbar_select_partial_tall.png" alt="Select Partial Tall" width="23" height="23" longdesc="/wiki/Image:Toolbar_select_partial_tall.png" /></a>
+Selects everything inside (also incomplete) the current brush in your current 2D view, and deletes the brush afterwards.
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_select_inside.png" class="image" title="Select Inside"><img src="/web/20070729231147im_/http://modwiki.net/w/images/3/3f/Toolbar_select_inside.png" alt="Select Inside" width="23" height="23" longdesc="/wiki/Image:Toolbar_select_inside.png" /></a>
+Selects everything completely inside the current brush in the 3D view (does respect all 3 axis), and deletes the brush afterwards.
+</p>
+<a name="CSG_Operations"></a><h4> CSG Operations </h4>
+<p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_csg_substract.png" class="image" title="CSG Substract"><img src="/web/20070729231147im_/http://modwiki.net/w/images/b/b2/Toolbar_csg_substract.png" alt="CSG Substract" width="23" height="23" longdesc="/wiki/Image:Toolbar_csg_substract.png" /></a>
+Subtract the selected brush (only) from any touching brushes. *
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_csg_merge.png" class="image" title="CSG Merge"><img src="/web/20070729231147im_/http://modwiki.net/w/images/0/07/Toolbar_csg_merge.png" alt="CSG Merge" width="23" height="23" longdesc="/wiki/Image:Toolbar_csg_merge.png" /></a>
+Any touching, selected brushes forming a convex shape are merged into a single brush.
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_hollow.png" class="image" title="Hollow"><img src="/web/20070729231147im_/http://modwiki.net/w/images/e/e7/Toolbar_hollow.png" alt="Hollow" width="23" height="23" longdesc="/wiki/Image:Toolbar_hollow.png" /></a>
+Converts a solid brush into a set of brushes forming a hollow space with its outer dimensions the size of the original brush, and a wall thickness equal to the grid size. *
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_clipper.png" class="image" title="Clipper"><img src="/web/20070729231147im_/http://modwiki.net/w/images/0/06/Toolbar_clipper.png" alt="Clipper" width="23" height="23" longdesc="/wiki/Image:Toolbar_clipper.png" /></a>
+Clipper: 2 or 3 point brush clipping tool. *
+</p>
+<a name="View_options"></a><h4> View options </h4>
+<p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_change_views.png" class="image" title="Change Views"><img src="/web/20070729231147im_/http://modwiki.net/w/images/3/3b/Toolbar_change_views.png" alt="Change Views" width="23" height="23" longdesc="/wiki/Image:Toolbar_change_views.png" /></a>
+Cycles through the available 2D views (<a href="/web/20070729231147/http://modwiki.net/wiki/DoomEdit_hotkeys" title="DoomEdit hotkeys">hotkey: CTRL + TAB</a>).
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_texture_view_mode.png" class="image" title="Texture view mode"><img src="/web/20070729231147im_/http://modwiki.net/w/images/5/5d/Toolbar_texture_view_mode.png" alt="Texture view mode" width="23" height="23" longdesc="/wiki/Image:Toolbar_texture_view_mode.png" /></a>
+Selects the texture view mode for the 3D view-port.
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_cubic_clip_the_came.png" class="image" title="Cubic clip the camera view"><img src="/web/20070729231147im_/http://modwiki.net/w/images/c/c7/Toolbar_cubic_clip_the_came.png" alt="Cubic clip the camera view" width="23" height="23" longdesc="/wiki/Image:Toolbar_cubic_clip_the_came.png" /></a>
+Cubic Clipping allows the user to limit the view distance within the 3D view-port leading to improved editor performance while working on large maps.
+</p>
+<a name="Rotation"></a><h4> Rotation </h4>
+<p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_free_rotation.png" class="image" title="Free Rotation"><img src="/web/20070729231147im_/http://modwiki.net/w/images/c/c9/Toolbar_free_rotation.png" alt="Free Rotation" width="23" height="23" longdesc="/wiki/Image:Toolbar_free_rotation.png" /></a>
+Let's you freely rotate the selected objects (each on its own). Does not work with all entities.
+</p>
+<a name="Scaling"></a><h4> Scaling </h4>
+<p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_center_scale.png" class="image" title="Center Scale"><img src="/web/20070729231147im_/http://modwiki.net/w/images/6/64/Toolbar_center_scale.png" alt="Center Scale" width="23" height="23" longdesc="/wiki/Image:Toolbar_center_scale.png" /></a>
+Center scaling allows you to adjust the scale of the selected brush, from it's center point, equally into all four directions. *
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_scale_x.png" class="image" title="Scale X"><img src="/web/20070729231147im_/http://modwiki.net/w/images/6/62/Toolbar_scale_x.png" alt="Scale X" width="23" height="23" longdesc="/wiki/Image:Toolbar_scale_x.png" /></a>
+When active, disallows scaling on the X axis (can be combined with Y or Z).
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_scale_y.png" class="image" title="Scale Y"><img src="/web/20070729231147im_/http://modwiki.net/w/images/5/5c/Toolbar_scale_y.png" alt="Scale Y" width="23" height="23" longdesc="/wiki/Image:Toolbar_scale_y.png" /></a>
+When active, disallows scaling on the Y axis (can be combined with X or Z).
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_scale_z.png" class="image" title="Scale Z"><img src="/web/20070729231147im_/http://modwiki.net/w/images/4/45/Toolbar_scale_z.png" alt="Scale Z" width="23" height="23" longdesc="/wiki/Image:Toolbar_scale_z.png" /></a>
+When active, disallows scaling on the Z axis (can be combined with X or Y).
+</p>
+<a name="Movement"></a><h4> Movement </h4>
+<p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_move_selection_only.png" class="image" title="Move selection only (No Size)"><img src="/web/20070729231147im_/http://modwiki.net/w/images/c/c5/Toolbar_move_selection_only.png" alt="Move selection only (No Size)" width="23" height="23" longdesc="/wiki/Image:Toolbar_move_selection_only.png" /></a>
+Allows you to move the selected object when you click and drag outside of it (instead of resizing it).
+</p>
+<a name="Selection_Options"></a><h4> Selection Options </h4>
+<p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_only_selected_brush.png" class="image" title="Only Selected Brushes"><img src="/web/20070729231147im_/http://modwiki.net/w/images/9/99/Toolbar_only_selected_brush.png" alt="Only Selected Brushes" width="23" height="23" longdesc="/wiki/Image:Toolbar_only_selected_brush.png" /></a>
+Disallows models to be (de-)selected, and resizing only works on selected brushes (no selected entities or models are resized).
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_dont_select_models.png" class="image" title="Don't select models"><img src="/web/20070729231147im_/http://modwiki.net/w/images/f/ff/Toolbar_dont_select_models.png" alt="Don't select models" width="23" height="23" longdesc="/wiki/Image:Toolbar_dont_select_models.png" /></a>
+When active you can't select <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Models&amp;action=edit" class="new" title="Models">Models</a> with "shift clicking," however Selection Operations still work (see above).
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_select_primitves.png" class="image" title="Select primitives by bounding brush"><img src="/web/20070729231147im_/http://modwiki.net/w/images/f/ff/Toolbar_select_primitves.png" alt="Select primitives by bounding brush" width="23" height="23" longdesc="/wiki/Image:Toolbar_select_primitves.png" /></a>
+Normally you have to "shift click" anywhere inside a model to select it. When this is turned on, you can click anywhere inside the surrounding bounding box. To see these boxes, also turn on "Show primitive bounding box" below.
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_show_primitive_bbox.png" class="image" title="Show primitive bounding box"><img src="/web/20070729231147im_/http://modwiki.net/w/images/d/d0/Toolbar_show_primitive_bbox.png" alt="Show primitive bounding box" width="23" height="23" longdesc="/wiki/Image:Toolbar_show_primitive_bbox.png" /></a>
+Shows bounding box of entities and patches.
+</p>
+<a name="Model_Options"></a><h4> Model Options </h4>
+<p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_show_models_as.png" class="image" title="Show Models As"><img src="/web/20070729231147im_/http://modwiki.net/w/images/8/84/Toolbar_show_models_as.png" alt="Show Models As" width="23" height="23" longdesc="/wiki/Image:Toolbar_show_models_as.png" /></a>
+Selects how models are shown in the 3D view port (wireframe or skinned).
+</p>
+<a name="Patch_Options"></a><h4> Patch Options </h4>
+<p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_show_patches_as_wir.png" class="image" title="Show patches as wireframes"><img src="/web/20070729231147im_/http://modwiki.net/w/images/9/92/Toolbar_show_patches_as_wir.png" alt="Show patches as wireframes" width="23" height="23" longdesc="/wiki/Image:Toolbar_show_patches_as_wir.png" /></a>
+Show patches as wireframes instead of solid objects within the 3D view-port (simplifies editing where required).
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_patch_bend_mode.png" class="image" title="Patch Bend mode"><img src="/web/20070729231147im_/http://modwiki.net/w/images/7/74/Toolbar_patch_bend_mode.png" alt="Patch Bend mode" width="23" height="23" longdesc="/wiki/Image:Toolbar_patch_bend_mode.png" /></a>
+Simpler method used for bending patches (for certain situations). *
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_redisperse_patch_po.png" class="image" title="Redisperse patch points"><img src="/web/20070729231147im_/http://modwiki.net/w/images/7/70/Toolbar_redisperse_patch_po.png" alt="Redisperse patch points" width="23" height="23" longdesc="/wiki/Image:Toolbar_redisperse_patch_po.png" /></a>
+Simply re-organises the patch points so they are easier to manipulate.
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_put_caps_on_current.png" class="image" title="Put caps on the current patch"><img src="/web/20070729231147im_/http://modwiki.net/w/images/5/5c/Toolbar_put_caps_on_current.png" alt="Put caps on the current patch" width="23" height="23" longdesc="/wiki/Image:Toolbar_put_caps_on_current.png" /></a>
+Closes any holes in the currently selected patch (to stop the player from seeing "inside" the patch)
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_welds_equal_patch_p.png" class="image" title="Welds equal patch points during move"><img src="/web/20070729231147im_/http://modwiki.net/w/images/1/15/Toolbar_welds_equal_patch_p.png" alt="Welds equal patch points during move" width="23" height="23" longdesc="/wiki/Image:Toolbar_welds_equal_patch_p.png" /></a>
+Welds patch points together where 2 patch points are located on the same grid location.
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_selects_drill_down.png" class="image" title="Select drill down rows and columns"><img src="/web/20070729231147im_/http://modwiki.net/w/images/8/86/Toolbar_selects_drill_down.png" alt="Select drill down rows and columns" width="23" height="23" longdesc="/wiki/Image:Toolbar_selects_drill_down.png" /></a>
+???
+</p>
+<a name="Light_Options"></a><h4> Light Options </h4>
+<p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_show_light_volumes.png" class="image" title="Show Light Volumes"><img src="/web/20070729231147im_/http://modwiki.net/w/images/9/95/Toolbar_show_light_volumes.png" alt="Show Light Volumes" width="23" height="23" longdesc="/wiki/Image:Toolbar_show_light_volumes.png" /></a>
+Will show light size box for all lights even when no lights are selected.
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_show_.png" class="image" title="???"><img src="/web/20070729231147im_/http://modwiki.net/w/images/1/1c/Toolbar_show_.png" alt="???" width="23" height="23" longdesc="/wiki/Image:Toolbar_show_.png" /></a>
+(?)
+</p>
+<a name="Spline_Editing"></a><h4> Spline Editing </h4>
+<p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_spline_options.png" class="image" title="Spline options"><img src="/web/20070729231147im_/http://modwiki.net/w/images/f/f4/Toolbar_spline_options.png" alt="Spline options" width="23" height="23" longdesc="/wiki/Image:Toolbar_spline_options.png" /></a>
+Displays options panel for use while creating and editing a spline.
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_edit_curve_points.png" class="image" title="Edit Curve Points"><img src="/web/20070729231147im_/http://modwiki.net/w/images/2/2c/Toolbar_edit_curve_points.png" alt="Edit Curve Points" width="23" height="23" longdesc="/wiki/Image:Toolbar_edit_curve_points.png" /></a>
+Enables editing of the selected spline.
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_add_curve_points.png" class="image" title="Add Curve Points"><img src="/web/20070729231147im_/http://modwiki.net/w/images/b/b8/Toolbar_add_curve_points.png" alt="Add Curve Points" width="23" height="23" longdesc="/wiki/Image:Toolbar_add_curve_points.png" /></a>
+Add an extra spline point to the end of the currently selected spline. 
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_insert_curve_point.png" class="image" title="Insert Curve Point"><img src="/web/20070729231147im_/http://modwiki.net/w/images/3/31/Toolbar_insert_curve_point.png" alt="Insert Curve Point" width="23" height="23" longdesc="/wiki/Image:Toolbar_insert_curve_point.png" /></a>
+Insert an extra spline point in the center of the currently selected spline.
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_delete_curve_point.png" class="image" title="Delete Curve Point"><img src="/web/20070729231147im_/http://modwiki.net/w/images/f/f5/Toolbar_delete_curve_point.png" alt="Delete Curve Point" width="23" height="23" longdesc="/wiki/Image:Toolbar_delete_curve_point.png" /></a>
+Delete the currently selected spline point.
+</p>
+<a name="Sound_Options"></a><h4> Sound Options </h4>
+<p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_always_show_volumes.png" class="image" title="Always show sound volumes"><img src="/web/20070729231147im_/http://modwiki.net/w/images/7/77/Toolbar_always_show_volumes.png" alt="Always show sound volumes" width="23" height="23" longdesc="/wiki/Image:Toolbar_always_show_volumes.png" /></a>
+Display circular area (or, volume) that a sound covers within the game world.
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_show_only_when_sele.png" class="image" title="Show only when selected"><img src="/web/20070729231147im_/http://modwiki.net/w/images/e/e1/Toolbar_show_only_when_sele.png" alt="Show only when selected" width="23" height="23" longdesc="/wiki/Image:Toolbar_show_only_when_sele.png" /></a>
+Shows the volume of the speaker only when it's being selected.
+</p>
+<a name="Game"></a><h4> Game </h4>
+<p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Toolbar_switch_to_game.png" class="image" title="Switch to game"><img src="/web/20070729231147im_/http://modwiki.net/w/images/7/7e/Toolbar_switch_to_game.png" alt="Switch to game" width="23" height="23" longdesc="/wiki/Image:Toolbar_switch_to_game.png" /></a>
+Switch game window to front (<a href="/web/20070729231147/http://modwiki.net/wiki/DoomEdit_hotkeys" title="DoomEdit hotkeys">hotkey: F2</a>).
+</p>
+<pre>? = Unknown function, to be investigated and updated as soon as possible
+* = Should be used with care due to problems these tools may cause with your map
+</pre>
+<a name="The_views"></a><h3>The views</h3>
+<p>There are several views available while editing and creating levels using the map editor. The main view orientations are as follows:
+</p>
+<ul><li>X/Y (Top, or birds-eye view)
+</li><li>X/Z (Front view)
+</li><li>Y/Z (Side, or profile view)
+</li><li>Z (Vertical space (height) view)
+</li><li>Cam (3D view)
+</li></ul>
+<p>Depending on how you have the editor setup, you may be interested in using the <a href="/web/20070729231147/http://modwiki.net/wiki/DoomEdit_hotkeys" title="DoomEdit hotkeys">hotkey: Ctrl + TAB</a>. This enables you to cycle through all of the 2D views within the selected viewport.
+</p>
+<a name="The_entity_inspector"></a><h3>The entity inspector</h3>
+<p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Inspectors_entity.png" class="image" title="The Entity Inspector"><img src="/web/20070729231147im_/http://modwiki.net/w/images/5/58/Inspectors_entity.png" alt="The Entity Inspector" width="449" height="456" longdesc="/wiki/Image:Inspectors_entity.png" /></a>
+</p>
+<a name="Main_text_areas"></a><h4>Main text areas</h4>
+<dl><dt>Entity Class combo box</dt><dd> This holds the class name of the entity being manipulated within the inspector.
+</dd></dl>
+<dl><dt>Create Button</dt><dd> This button will create a new instance of the selected entity in the combo box. 
+</dd></dl>
+<dl><dt>List A</dt><dd> A general class description is displayed followed by available key-value pairs for the selected entity. This information is read directly from the <a href="/web/20070729231147/http://modwiki.net/wiki/DEF_%28file_format%29" title="DEF (file format)">definition files</a>. Double-clicking on one key-value will automatically set the "Key" textbox to it.
+</dd></dl>
+<dl><dt>List B</dt><dd> This list contains all the key-value pairs that the selected entity currently has definied. Think of these pairs as attributes of an object. All entities should at least have the basic attributes "classname", "name", and "origin". Each pair can be selected and modified by clicking on it.
+</dd></dl>
+<dl><dt>"Key" textbox</dt><dd> You may enter the name of the key you wish to set here or select one from the list of available ones.
+</dd></dl>
+<dl><dt>"Val" textbox</dt><dd> You may enter the value for a key here. You must have previously entered a key name in the "Key" textbox. Click "Enter" to save the key-value into the entity; it should now appear in area B.
+</dd></dl>
+<dl><dt>"X" button</dt><dd> Deletes the selected key-value. You shouldn't delete the default attributes as this may render your entity faulty.
+</dd></dl>
+<a name="Entity_orientation"></a><h4>Entity orientation</h4>
+<dl><dt>9 numbered buttons</dt><dd> The buttons 45, 90, 135, 180, 225, 270, 315, 360, when clicked will rotate the selected entity/model to face that direction (uses top view-port). This automatically sets the key "angle" with the chosen value.
+</dd></dl>
+<dl><dt>Up/Dn buttons</dt><dd> Same as numbered buttons above, but sets the "angle" key to directly up (-1) or directly down (-2).
+</dd></dl>
+<a name="Animation_controls"></a><h4>Animation controls</h4>
+<dl><dt>Combo-box</dt><dd> The drop down combo-box displays all possible animations that a monster or character has defined in its <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Modeldef_%28decl%29&amp;action=edit" class="new" title="Modeldef (decl)">model def</a>. The selected animation is the default animation that the monster or character will use when triggered within a cinematic. Automatically sets the key-value pair "anim".
+</dd></dl>
+<dl><dt>Play/Stop Buttons</dt><dd> When clicked, these buttons will start and stop the monster or character animation being shown in the 3D viewport of the editor.
+</dd></dl>
+<dl><dt>Frame Slider</dt><dd> To view any single frame of animation, you can slide the bar to the relevant location and view the frame in the 3D viewport. While playing, the slider will move in synch with the current frame number of the animation being displayed.
+</dd></dl>
+<a name="Advanced_controls"></a><h4>Advanced controls</h4>
+<dl><dt>Curve Button</dt><dd> While working with splines, this button will allow you to choose the type of line that you wish to use. Generally speaking, you will most likely use a NURBS path to create a route for a func_mover to follow. Automatically sets the key-value pair "curve_Nurbs" or "curve_CatmullRomSpline".
+</dd></dl>
+<dl><dt>Model Button</dt><dd> A new browser dialog will be displayed where you are able to select any of the models that are available (see the media inspector below for more details on the similar functionality). The selected model will automatically be applied to the currently selected entity. Once done, the 3D view-port will be updated to display the new model in-place of the previous brush entity. Automatically sets the key-value pair "model". 
+</dd></dl>
+<dl><dt>Skin Button</dt><dd> With this button you are able to choose the skin for the currently selected model (if there is a choice available); see the media inspector below for more details on the similar functionality. This is best used for character or monster models where each model may have several skins to choose from. For instance, "Standard Imp" has an alternate "Hell" skin), skins are defined in <a href="/web/20070729231147/http://modwiki.net/wiki/Skin_%28decl%29" title="Skin (decl)">skin defs</a>. Automatically sets the key-value pair "skin".
+</dd></dl>
+<dl><dt>Sound Button</dt><dd> When used with a speaker entity, you are able to go through the sounds and sound shaders that are available; see the media inspector below for more details on the similar functionality. The sounds inspector that appears will allow you to sample the sound before selecting it for your speaker entity to play. Automatically sets the key-value pair "s_shader".
+</dd></dl>
+<div><a href="/web/20070729231147/http://modwiki.net/wiki/Image:D3square_25.png" class="image" title="Image:D3square_25.png"><img src="/web/20070729231147im_/http://modwiki.net/w/images/2/23/D3square_25.png" alt="Image:D3square_25.png" width="25" height="25" longdesc="/wiki/Image:D3square_25.png" /></a> <b>Note:</b> Doom 3 only: <dl><dd><i><b>Particle Button:</b> When used with a func_emitter or func_fx entity, you are able to cycle through the available particle effects and apply one to the currently selected entity; see the media inspector below for more details on the similar functionality. There is a render view within the Particle Inspector that will allow you to view the particle effect before selecting it to be used within your map. Automatically sets the key-value pair "model".</i></dd></dl></div>
+<dl><dt>Gui Button</dt><dd> With this, you are able to use the Gui inspector to sample all of the Gui's available for use; see the media inspector below for more details on the similar functionality. Automatically sets the key-value pair "gui".
+</dd></dl>
+<p>To access the entity inspector you can also use <a href="/web/20070729231147/http://modwiki.net/wiki/DoomEdit_hotkeys" title="DoomEdit hotkeys">hotkey: N</a>.
+</p>
+<a name="The_media_inspector"></a><h3>The media inspector</h3>
+<p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Inspectors_media.png" class="image" title="The Media Inspector"><img src="/web/20070729231147im_/http://modwiki.net/w/images/9/98/Inspectors_media.png" alt="The Media Inspector" width="449" height="456" longdesc="/wiki/Image:Inspectors_media.png" /></a>
+</p><p>This inspector is divided into two main areas: the top one serves as an assets explorer breaking down assets through their relative paths in their <a href="/web/20070729231147/http://modwiki.net/wiki/Declarations" title="Declarations">declarations</a> files. The two icons in this area are the folder and the file. Selecting a file will automatically load it into memory (for instance, if it's a texture it will become available in the texture inspector, see below). You can also load more than one asset at a time by double clicking on its parent folder; this action will load all assets in that folder and subfolders into memory. The "reload" button on top serves to reload all the declaration files again, because of a bug in the map editor you need to click the button for the inspector to load model assets. If you right click a selected asset a context menu will appear; this menu does not function properly and will crash the editor.
+</p><p>The bottom part of the inspector is the preview window. The four coloured lines represent the red, green, blue and alpha components of <a href="/web/20070729231147/http://modwiki.net/wiki/Images" title="Images">images</a> but this feature has no effect. You can use the left and right mouse buttons to rotate and move the asset selected, respectively. For some assets like textures and guis the rotation feature is unavailable. To access the media inspector you can also use <a href="/web/20070729231147/http://modwiki.net/wiki/DoomEdit_hotkeys" title="DoomEdit hotkeys">hotkey: M</a>.
+</p>
+<a name="The_texture_inspector"></a><h3>The texture inspector</h3>
+<p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Inspectors_textures.png" class="image" title="The Texture Inspector"><img src="/web/20070729231147im_/http://modwiki.net/w/images/d/d7/Inspectors_textures.png" alt="The Texture Inspector" width="449" height="456" longdesc="/wiki/Image:Inspectors_textures.png" /></a>
+</p><p>This inspector will list all the textures which are loaded into memory and available to be applied to elements of your map. Textures are loaded either automatically by loading a map and by using the media inspector. To access the texture inspector you can also use <a href="/web/20070729231147/http://modwiki.net/wiki/DoomEdit_hotkeys" title="DoomEdit hotkeys">hotkey: T</a>. Aside from the scrollbar, you can scroll the texture inspector by right-click-drag. Scrolling with the mouse wheel does not work properly and you must right-click-drag at least once for it to "kick in".
+</p>
+<a name="The_console_inspector"></a><h3>The console inspector</h3>
+<p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Inspectors_console.png" class="image" title="The console Inspector"><img src="/web/20070729231147im_/http://modwiki.net/w/images/9/96/Inspectors_console.png" alt="The console Inspector" width="449" height="456" longdesc="/wiki/Image:Inspectors_console.png" /></a>
+</p><p>This inspector mirrors the game's console and most of the <a href="/web/20070729231147/http://modwiki.net/wiki/Console" title="Console">CVars and console commands</a> work here too. Pressing the TAB key will display the command history. To access the console inspector you can also use <a href="/web/20070729231147/http://modwiki.net/wiki/DoomEdit_hotkeys" title="DoomEdit hotkeys">hotkey: O</a>.
+</p>
+<a name="Light_editor"></a><h2>Light editor</h2>
+<p>To access the light editor window press the <a href="/web/20070729231147/http://modwiki.net/wiki/DoomEdit_hotkeys" title="DoomEdit hotkeys">hotkey: J</a> or type "<a href="/web/20070729231147/http://modwiki.net/w/index.php?title=EditLights_%28console_command%29&amp;action=edit" class="new" title="EditLights (console command)">editLights</a>" in the console.
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Light_editor.png" class="image" title="The light editor"><img src="/web/20070729231147im_/http://modwiki.net/w/images/d/d6/Light_editor.png" alt="The light editor" width="473" height="498" longdesc="/wiki/Image:Light_editor.png" /></a>
+</p><p>On the left you can choose between point and projected lights. A point light will affect everything inside the purple coloured parallelopiped while a projected light normally uses a pyramid. Simply put, a point light is like the Sun while projected lights behave like spotlights.
+</p><p>In the point light options, the "equilateral radius" setting locks the radius settings for all three axis into the same value and always get a cube-like volume. These three control the size of the purple box. The "fall-off" radio buttons don't appear to do anything; whilst the "parallel" setting will make the light appear to be infinitely far away casting all the shadows in the same direction, simulating the Sun. If you enable the "centre" option the three text boxes on its right will become active and a small purple dot will appear in the editing window. This centre refers to the origin of the light and shadows. Usually this is the same as the origin of the affected volume but by enabling this option you can make the volume light up one area while the centre of the light is in another. You can change this centre by either dragging the purple dot in the editor view or by inserting its actual origin values here.
+</p><p>When you select "projected light" a second set of options becomes available while the above are disabled. The light's volume will also change to a square pyramid with two purple dots. The nine-cell matrix controls this new volume but it's easier to do it in the editor view window by dragging the purple dots around. If you enable the "explicit start/end points" options the volume is capped somewhere before the light's origin and two green dots appear. You can also control the cap in the text boxes but it's easier to drag the green control dots.
+</p><p>The options on the right apply to both types of light. The three options on top control optimisations you can enable. Please note that these can be overridden by the actual <a href="/web/20070729231147/http://modwiki.net/wiki/Material_%28decl%29" title="Material (decl)">texture</a> you might choose below.
+</p><p>The colour button allows you to pick a particular colour for the light from a palette. Finally, you can choose a specific material in the "texture" dropdown list. These will modulate the light and light volume and while some will respect the colour you pick in the palette others will override that.
+</p>
+<div><a href="/web/20070729231147/http://modwiki.net/wiki/Image:D3square_25.png" class="image" title="Image:D3square_25.png"><img src="/web/20070729231147im_/http://modwiki.net/w/images/2/23/D3square_25.png" alt="Image:D3square_25.png" width="25" height="25" longdesc="/wiki/Image:D3square_25.png" /></a> <b>Note:</b> Doom 3 only: <dl><dd><i>The "brightness" slider is obsolete and doesn't work.</i></dd></dl></div>
+<div><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Q4square_25.png" class="image" title="Image:Q4square_25.png"><img src="/web/20070729231147im_/http://modwiki.net/w/images/e/e8/Q4square_25.png" alt="Image:Q4square_25.png" width="25" height="25" longdesc="/wiki/Image:Q4square_25.png" /></a> <b>Note:</b> Quake 4 only: <dl><dd><i>The "detail" area allows you to set a detail value for each light. The lower the value the more likely it is to be ignored by the engine when running at lower quality settings.</i></dd></dl></div>
+<p>The black area the dropdown list is to preview the light material currently selected. Right-click drag will move the surface around while ALT + right-click drag will move the surface closer or farther away. If you want to remove a light material you will need to delete its path and name from the "texture" list.
+</p><p>On the bottom the "apply" button allows you to see your current changes in the editor view windows will the "apply different" allows you to select many different lights, make them all share the colour, light material or whatever property you've changed leaving everything else intact.
+</p>
+<a name="Surface_inspector"></a><h2>Surface inspector</h2>
+<p>To access this inspector press the <a href="/web/20070729231147/http://modwiki.net/wiki/DoomEdit_hotkeys" title="DoomEdit hotkeys">hotkey: S</a>.
+</p><p><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Surface_inspector.png" class="image" title="The surface inspector"><img src="/web/20070729231147im_/http://modwiki.net/w/images/5/53/Surface_inspector.png" alt="The surface inspector" width="680" height="437" longdesc="/wiki/Image:Surface_inspector.png" /></a>
+</p><p>This is where you can modify the texturing (and complexity in case of a <a href="/web/20070729231147/http://modwiki.net/wiki/Patch" title="Patch">patch</a>) of a particular surface. The textbox on top shows the material of the currently selected surface. The following two dials allow you to shift a texture x units in any direction while the "rotate" one allows you to rotate the texture around a rotating axis located in the centre of the surface.
+</p><p>Next come the scaling options that allow you stretch or shrink a texture in a particular direction. Enabling the "absolute" option makes any values on the right boxes ignore any previous scaling values.
+</p><p>The "fit" button scales the texture enough to fit the particular surface perfectly. The "width" and "height" values control how many times a texture should fit in that surface. The "cap" button is most useful for aligning textures in capped patches while "natural" will revert all scaling/rotation changes to that surface. The two flip buttons allows you to mirror a texture along the respective axis.
+</p><p>Finally if you are selecting a patch and enable the "subdivide patch" option you can then control how complex that patch is with the slider. More subdivisions means higher quality but lower performance.
+</p>
+<div><a href="/web/20070729231147/http://modwiki.net/wiki/Image:D3square_25.png" class="image" title="Image:D3square_25.png"><img src="/web/20070729231147im_/http://modwiki.net/w/images/2/23/D3square_25.png" alt="Image:D3square_25.png" width="25" height="25" longdesc="/wiki/Image:D3square_25.png" /></a> <b>Note:</b> Doom 3 only: <dl><dd><i>The "texture tool goes here" area of the inspector doesn't work.</i></dd></dl></div>
+<div class="printfooter">
+Retrieved from "<a href="/web/20070729231147/http://modwiki.net/wiki/Map_editor">http://modwiki.net/wiki/Map_editor</a>"</div>
+			<div id="catlinks"><p class='catlinks'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Special:Categories&amp;article=Map_editor" title="Special:Categories">Category</a>: <span dir='ltr'><a href="/web/20070729231147/http://modwiki.net/wiki/Category:Mapping" title="Category:Mapping">Mapping</a></span><br /><hr /><a href="/web/20070729231147/http://modwiki.net/wiki/Category:Modwiki" title="Category:Modwiki">Modwiki</a> &gt; <a href="/web/20070729231147/http://modwiki.net/wiki/Category:Mapping" title="Category:Mapping">Mapping</a></p></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="/web/20070729231147/http://modwiki.net/wiki/Map_editor">Article</a></li>
+				 <li id="ca-talk"><a href="/web/20070729231147/http://modwiki.net/wiki/Talk:Map_editor">Discussion</a></li>
+				 <li id="ca-edit"><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;action=edit&amp;oldid=7174">Edit</a></li>
+				 <li id="ca-history"><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;action=history">History</a></li>
+		</ul>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Special:Userlogin&amp;returnto=Map_editor">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/web/20070729231147im_/http://modwiki.net/wiki/upload/wiki.png);" href="/web/20070729231147/http://modwiki.net/wiki/Main_Page" title="Main Page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class='portlet' id='p-Main'>
+		<h5>Main</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/web/20070729231147/http://modwiki.net/wiki/Main_Page">Main Page</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 4'>
+		<h5>id Tech 4</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Doom-3"><a href="/web/20070729231147/http://modwiki.net/wiki/Doom_3">Doom 3</a></li>
+				<li id="n-Quake-4"><a href="/web/20070729231147/http://modwiki.net/wiki/Quake_4">Quake 4</a></li>
+				<li id="n-Prey"><a href="/web/20070729231147/http://modwiki.net/wiki/Prey">Prey</a></li>
+				<li id="n-ETQW"><a href="/web/20070729231147/http://modwiki.net/wiki/Enemy_Territory:_Quake_Wars">ETQW</a></li>
+				<li id="n-RTCW-2"><a href="/web/20070729231147/http://modwiki.net/wiki/Return_to_Castle_Wolfenstein_2">RTCW 2</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 5'>
+		<h5>id Tech 5</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Rage"><a href="/web/20070729231147/http://modwiki.net/wiki/Rage">Rage</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Quick Links'>
+		<h5>Quick Links</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Console"><a href="/web/20070729231147/http://modwiki.net/wiki/Console">Console</a></li>
+				<li id="n-Script-Events"><a href="/web/20070729231147/http://modwiki.net/wiki/Scripting">Script Events</a></li>
+				<li id="n-Material-Keywords"><a href="/web/20070729231147/http://modwiki.net/wiki/Material_%28decl%29">Material Keywords</a></li>
+				<li id="n-Modification-List"><a href="/web/20070729231147/http://modwiki.net/wiki/Modlist">Modification List</a></li>
+				<li id="n-Tutorial-List"><a href="/web/20070729231147/http://modwiki.net/wiki/Tutorial_list">Tutorial List</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Wiki'>
+		<h5>Wiki</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Open-tasks"><a href="/web/20070729231147/http://modwiki.net/wiki/modwiki:Open_tasks">Open tasks</a></li>
+				<li id="n-recentchanges"><a href="/web/20070729231147/http://modwiki.net/wiki/Special:Recentchanges">Recent changes</a></li>
+				<li id="n-Style-guide"><a href="/web/20070729231147/http://modwiki.net/wiki/modwiki:Style_guide">Style guide</a></li>
+				<li id="n-help"><a href="/web/20070729231147/http://modwiki.net/wiki/Help:Contents">Help</a></li>
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/web/20070729231147/http://modwiki.net/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" value="Search" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/web/20070729231147/http://modwiki.net/wiki/Special:Whatlinkshere/Map_editor">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/web/20070729231147/http://modwiki.net/wiki/Special:Recentchangeslinked/Map_editor">Related changes</a></li>
+<li id="t-upload"><a href="/web/20070729231147/http://modwiki.net/wiki/Special:Upload">Upload file</a></li>
+<li id="t-specialpages"><a href="/web/20070729231147/http://modwiki.net/wiki/Special:Specialpages">Special pages</a></li>
+				<li id="t-print"><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Map_editor&amp;diff=prev&amp;oldid=7174&amp;printable=yes">Printable version</a></li>				<li id="t-ispermalink">Permanent link</li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="/web/20070729231147/http://www.mediawiki.org/"><img src="/web/20070729231147im_/http://modwiki.net/w/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="/web/20070729231147/http://www.gnu.org/copyleft/fdl.html"><img src="/web/20070729231147im_/http://modwiki.net/w/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+				<li id="privacy"><a href="/web/20070729231147/http://modwiki.net/wiki/modwiki:Privacy_policy" title="modwiki:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="/web/20070729231147/http://modwiki.net/wiki/modwiki:About" title="modwiki:About">About modwiki</a></li>
+				<li id="disclaimer"><a href="/web/20070729231147/http://modwiki.net/wiki/modwiki:General_disclaimer" title="modwiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+	<script type="text/javascript"> if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+<!-- Served by h982484 in 0.62 secs. -->
+</body></html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 23:11:47 Jul 29, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 2:44:23 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

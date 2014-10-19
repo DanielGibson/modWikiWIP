@@ -1,0 +1,768 @@
+DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex,follow" />
+<meta name="keywords" content="Special:Whatlinkshere" />
+<link rel="shortcut icon" href="/web/20070729231805im_/http://www.modwiki.net/favicon.ico" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<title>Template:CVar - modwiki</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20070729231805cs_/http://www.modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/web/20070729231805cs_/http://www.modwiki.net/w/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/w/skins/monobook/IE70Fixes.css?1";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
+		<script type="text/javascript" src="/web/20070729231805js_/http://www.modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20070729231805js_/http://www.modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/web/20070729231805cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231805cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231805cs_/http://www.modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns--1 ltr">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app16.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/www.modwiki.net\/w\/index.php?title=Special:Whatlinkshere\/Template:CVar&limit=500&from=2824";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "29";
+var displayMonth = "Jul";
+var displayYear = "2007";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://www.modwiki.net/w/index.php?title=Special:Whatlinkshere/Template:CVar&amp;limit=500&amp;from=2824" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20070729231805" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jun
+                       
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 23:18:05 Jul 29, 2007">JUL</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Aug
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_prv_off.png" alt="Previous capture" width="14" height="16" border="0" />
+                       
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 23:18:05 Jul 29, 2007">29</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2006
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 23:18:05 Jul 29, 2007">2007</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2008
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20070729231805*/http://www.modwiki.net/w/index.php?title=Special:Whatlinkshere/Template:CVar&amp;limit=500&amp;from=2824" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>1 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">29 Jul 07 - 29 Jul 07</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:6:000000100000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000_2014:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">Template:CVar</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From modwiki</h3>
+			<div id="contentSub">(List of links)</div>
+									<div id="jump-to-nav">Jump to: <a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Special:Whatlinkshere/Template:CVar&amp;limit=500&amp;from=2824#column-one">navigation</a>, <a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Special:Whatlinkshere/Template:CVar&amp;limit=500&amp;from=2824#searchInput">search</a></div>			<!-- start content -->
+			&lt; <a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Template:CVar&amp;redirect=no" title="Template:CVar">Template:CVar</a><br />
+<p>The following pages link to here:
+</p>View (<a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Special:Whatlinkshere/Template:CVar&amp;limit=500&amp;from=2824&amp;dir=prev" title="Special:Whatlinkshere/Template:CVar">previous 500</a>) (<a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Special:Whatlinkshere/Template:CVar&amp;limit=500&amp;from=3335" title="Special:Whatlinkshere/Template:CVar">next 500</a>) (<a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Special:Whatlinkshere/Template:CVar&amp;limit=20&amp;from=2824" title="Special:Whatlinkshere/Template:CVar">20</a> | <a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Special:Whatlinkshere/Template:CVar&amp;limit=50&amp;from=2824" title="Special:Whatlinkshere/Template:CVar">50</a> | <a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Special:Whatlinkshere/Template:CVar&amp;limit=100&amp;from=2824" title="Special:Whatlinkshere/Template:CVar">100</a> | <a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Special:Whatlinkshere/Template:CVar&amp;limit=250&amp;from=2824" title="Special:Whatlinkshere/Template:CVar">250</a> | <a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Special:Whatlinkshere/Template:CVar&amp;limit=500&amp;from=2824" title="Special:Whatlinkshere/Template:CVar">500</a>).<ul><li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Cm_testTranslation_%28cvar%29" title="Cm testTranslation (cvar)">Cm testTranslation (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Cm_testWalk_%28cvar%29" title="Cm testWalk (cvar)">Cm testWalk (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_allowVehicleGunOverheat_%28cvar%29" title="G allowVehicleGunOverheat (cvar)">G allowVehicleGunOverheat (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_armorProtection_%28cvar%29" title="G armorProtection (cvar)">G armorProtection (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_armorProtectionMP_%28cvar%29" title="G armorProtectionMP (cvar)">G armorProtectionMP (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_blobSize_%28cvar%29" title="G blobSize (cvar)">G blobSize (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_blobTime_%28cvar%29" title="G blobTime (cvar)">G blobTime (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_brassTime_%28cvar%29" title="G brassTime (cvar)">G brassTime (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_cinematic_%28cvar%29" title="G cinematic (cvar)">G cinematic (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_cinematicMaxSkipTime_%28cvar%29" title="G cinematicMaxSkipTime (cvar)">G cinematicMaxSkipTime (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_crosshairCharInfoFar_%28cvar%29" title="G crosshairCharInfoFar (cvar)">G crosshairCharInfoFar (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_crosshairColor_%28cvar%29" title="G crosshairColor (cvar)">G crosshairColor (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_crosshairCustom_%28cvar%29" title="G crosshairCustom (cvar)">G crosshairCustom (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_crosshairCustomFile_%28cvar%29" title="G crosshairCustomFile (cvar)">G crosshairCustomFile (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_crosshairSize_%28cvar%29" title="G crosshairSize (cvar)">G crosshairSize (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_currentPlayback_%28cvar%29" title="G currentPlayback (cvar)">G currentPlayback (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_debugAnim_%28cvar%29" title="G debugAnim (cvar)">G debugAnim (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_debugBounds_%28cvar%29" title="G debugBounds (cvar)">G debugBounds (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_debugCinematic_%28cvar%29" title="G debugCinematic (cvar)">G debugCinematic (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_debugDamage_%28cvar%29" title="G debugDamage (cvar)">G debugDamage (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_debugMove_%28cvar%29" title="G debugMove (cvar)">G debugMove (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_debugMover_%28cvar%29" title="G debugMover (cvar)">G debugMover (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_debugScript_%28cvar%29" title="G debugScript (cvar)">G debugScript (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_debugState_%28cvar%29" title="G debugState (cvar)">G debugState (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_debugTriggers_%28cvar%29" title="G debugTriggers (cvar)">G debugTriggers (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_debugVehicle_%28cvar%29" title="G debugVehicle (cvar)">G debugVehicle (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_debugVehicleAI_%28cvar%29" title="G debugVehicleAI (cvar)">G debugVehicleAI (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_debugVehicleDriver_%28cvar%29" title="G debugVehicleDriver (cvar)">G debugVehicleDriver (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_debugWeapon_%28cvar%29" title="G debugWeapon (cvar)">G debugWeapon (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_decals_%28cvar%29" title="G decals (cvar)">G decals (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_disasm_%28cvar%29" title="G disasm (cvar)">G disasm (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_doubleVision_%28cvar%29" title="G doubleVision (cvar)">G doubleVision (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_dragDamping_%28cvar%29" title="G dragDamping (cvar)">G dragDamping (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_dragShowSelection_%28cvar%29" title="G dragShowSelection (cvar)">G dragShowSelection (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_dropItemRotation_%28cvar%29" title="G dropItemRotation (cvar)">G dropItemRotation (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_dvAmplitude_%28cvar%29" title="G dvAmplitude (cvar)">G dvAmplitude (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_dvFrequency_%28cvar%29" title="G dvFrequency (cvar)">G dvFrequency (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_dvTime_%28cvar%29" title="G dvTime (cvar)">G dvTime (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_editEntityDistance_%28cvar%29" title="G editEntityDistance (cvar)">G editEntityDistance (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_editEntityTextDistance_%28cvar%29" title="G editEntityTextDistance (cvar)">G editEntityTextDistance (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_exportMask_%28cvar%29" title="G exportMask (cvar)">G exportMask (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_flushSave_%28cvar%29" title="G flushSave (cvar)">G flushSave (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_forceUndying_%28cvar%29" title="G forceUndying (cvar)">G forceUndying (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_fov_%28cvar%29" title="G fov (cvar)">G fov (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_showTriggers_%28cvar%29" title="G showTriggers (cvar)">G showTriggers (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_shadows_%28cvar%29" title="R shadows (cvar)">R shadows (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Com_aviDemoHeight_%28cvar%29" title="Com aviDemoHeight (cvar)">Com aviDemoHeight (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Com_aviDemoWidth_%28cvar%29" title="Com aviDemoWidth (cvar)">Com aviDemoWidth (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Com_aviDemoSamples_%28cvar%29" title="Com aviDemoSamples (cvar)">Com aviDemoSamples (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Com_aviDemoTics_%28cvar%29" title="Com aviDemoTics (cvar)">Com aviDemoTics (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_frametime_%28cvar%29" title="G frametime (cvar)">G frametime (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_gameReviewPause_%28cvar%29" title="G gameReviewPause (cvar)">G gameReviewPause (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_gravity_%28cvar%29" title="G gravity (cvar)">G gravity (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_gunPitch_%28cvar%29" title="G gunPitch (cvar)">G gunPitch (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_gunRoll_%28cvar%29" title="G gunRoll (cvar)">G gunRoll (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_gunViewStyle_%28cvar%29" title="G gunViewStyle (cvar)">G gunViewStyle (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_gunX_%28cvar%29" title="G gunX (cvar)">G gunX (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_gunY_%28cvar%29" title="G gunY (cvar)">G gunY (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_gunYaw_%28cvar%29" title="G gunYaw (cvar)">G gunYaw (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_gunZ_%28cvar%29" title="G gunZ (cvar)">G gunZ (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_healthTakeAmt_%28cvar%29" title="G healthTakeAmt (cvar)">G healthTakeAmt (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_healthTakeLimit_%28cvar%29" title="G healthTakeLimit (cvar)">G healthTakeLimit (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_healthTakeTime_%28cvar%29" title="G healthTakeTime (cvar)">G healthTakeTime (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_keepEntityStats_%28cvar%29" title="G keepEntityStats (cvar)">G keepEntityStats (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_kickAmplitude_%28cvar%29" title="G kickAmplitude (cvar)">G kickAmplitude (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_kickTime_%28cvar%29" title="G kickTime (cvar)">G kickTime (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_knockback_%28cvar%29" title="G knockback (cvar)">G knockback (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_log_%28cvar%29" title="G log (cvar)">G log (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_mapCycle_%28cvar%29" title="G mapCycle (cvar)">G mapCycle (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_maxShowDistance_%28cvar%29" title="G maxShowDistance (cvar)">G maxShowDistance (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_monsters_%28cvar%29" title="G monsters (cvar)">G monsters (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_mp_gravity_%28cvar%29" title="G mp gravity (cvar)">G mp gravity (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_mpWeaponAngleScale_%28cvar%29" title="G mpWeaponAngleScale (cvar)">G mpWeaponAngleScale (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_muzzleFlash_%28cvar%29" title="G muzzleFlash (cvar)">G muzzleFlash (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_nightmare_%28cvar%29" title="G nightmare (cvar)">G nightmare (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_password_%28cvar%29" title="G password (cvar)">G password (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_perfTest_aiNoDodge_%28cvar%29" title="G perfTest aiNoDodge (cvar)">G perfTest aiNoDodge (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_perfTest_aiNoObstacleAvoid_%28cvar%29" title="G perfTest aiNoObstacleAvoid (cvar)">G perfTest aiNoObstacleAvoid (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_perfTest_aiNoRagdoll_%28cvar%29" title="G perfTest aiNoRagdoll (cvar)">G perfTest aiNoRagdoll (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_perfTest_aiNoVisTrace_%28cvar%29" title="G perfTest aiNoVisTrace (cvar)">G perfTest aiNoVisTrace (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_perfTest_aiStationary_%28cvar%29" title="G perfTest aiStationary (cvar)">G perfTest aiStationary (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_perfTest_aiUndying_%28cvar%29" title="G perfTest aiUndying (cvar)">G perfTest aiUndying (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_perfTest_hitscanBBox_%28cvar%29" title="G perfTest hitscanBBox (cvar)">G perfTest hitscanBBox (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_perfTest_hitscanShort_%28cvar%29" title="G perfTest hitscanShort (cvar)">G perfTest hitscanShort (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_perfTest_noJointTransform_%28cvar%29" title="G perfTest noJointTransform (cvar)">G perfTest noJointTransform (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_perfTest_noPlayerFocus_%28cvar%29" title="G perfTest noPlayerFocus (cvar)">G perfTest noPlayerFocus (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_perfTest_noProjectiles_%28cvar%29" title="G perfTest noProjectiles (cvar)">G perfTest noProjectiles (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_perfTest_weaponNoFX_%28cvar%29" title="G perfTest weaponNoFX (cvar)">G perfTest weaponNoFX (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_playPlayback_%28cvar%29" title="G playPlayback (cvar)">G playPlayback (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_projectileLights_%28cvar%29" title="G projectileLights (cvar)">G projectileLights (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_recordPlayback_%28cvar%29" title="G recordPlayback (cvar)">G recordPlayback (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_showActiveEntities_%28cvar%29" title="G showActiveEntities (cvar)">G showActiveEntities (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_showAreaClipSectors_%28cvar%29" title="G showAreaClipSectors (cvar)">G showAreaClipSectors (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_showcamerainfo_%28cvar%29" title="G showcamerainfo (cvar)">G showcamerainfo (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_showClipSectorFilter_%28cvar%29" title="G showClipSectorFilter (cvar)">G showClipSectorFilter (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_showClipSectors_%28cvar%29" title="G showClipSectors (cvar)">G showClipSectors (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_showCollisionModels_%28cvar%29" title="G showCollisionModels (cvar)">G showCollisionModels (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_showCollisionTraces_%28cvar%29" title="G showCollisionTraces (cvar)">G showCollisionTraces (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_showCollisionWorld_%28cvar%29" title="G showCollisionWorld (cvar)">G showCollisionWorld (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_showDebugHud_%28cvar%29" title="G showDebugHud (cvar)">G showDebugHud (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_showEnemies_%28cvar%29" title="G showEnemies (cvar)">G showEnemies (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_showEntityInfo_%28cvar%29" title="G showEntityInfo (cvar)">G showEntityInfo (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_showFrameCmds_%28cvar%29" title="G showFrameCmds (cvar)">G showFrameCmds (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_showGodDamage_%28cvar%29" title="G showGodDamage (cvar)">G showGodDamage (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_showHud_%28cvar%29" title="G showHud (cvar)">G showHud (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_showHudPopups_%28cvar%29" title="G showHudPopups (cvar)">G showHudPopups (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_showPlayback_%28cvar%29" title="G showPlayback (cvar)">G showPlayback (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_showPlayerShadow_%28cvar%29" title="G showPlayerShadow (cvar)">G showPlayerShadow (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_showProjectilePct_%28cvar%29" title="G showProjectilePct (cvar)">G showProjectilePct (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_showPVS_%28cvar%29" title="G showPVS (cvar)">G showPVS (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_showRange_%28cvar%29" title="G showRange (cvar)">G showRange (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_showTargets_%28cvar%29" title="G showTargets (cvar)">G showTargets (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_showTestModelFrame_%28cvar%29" title="G showTestModelFrame (cvar)">G showTestModelFrame (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_showviewpos_%28cvar%29" title="G showviewpos (cvar)">G showviewpos (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_skill_%28cvar%29" title="G skill (cvar)">G skill (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_skipFX_%28cvar%29" title="G skipFX (cvar)">G skipFX (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_skipItemShadowsMP_%28cvar%29" title="G skipItemShadowsMP (cvar)">G skipItemShadowsMP (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_skipParticles_%28cvar%29" title="G skipParticles (cvar)">G skipParticles (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_skipPlayerShadowsMP_%28cvar%29" title="G skipPlayerShadowsMP (cvar)">G skipPlayerShadowsMP (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_skipViewEffects_%28cvar%29" title="G skipViewEffects (cvar)">G skipViewEffects (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_spectatorChat_%28cvar%29" title="G spectatorChat (cvar)">G spectatorChat (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_stopTime_%28cvar%29" title="G stopTime (cvar)">G stopTime (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_testCTF_%28cvar%29" title="G testCTF (cvar)">G testCTF (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_testDeath_%28cvar%29" title="G testDeath (cvar)">G testDeath (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_testHealthVision_%28cvar%29" title="G testHealthVision (cvar)">G testHealthVision (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_testModelAnimate_%28cvar%29" title="G testModelAnimate (cvar)">G testModelAnimate (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_testModelBlend_%28cvar%29" title="G testModelBlend (cvar)">G testModelBlend (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_testModelRotate_%28cvar%29" title="G testModelRotate (cvar)">G testModelRotate (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_testPlayer_%28cvar%29" title="G testPlayer (cvar)">G testPlayer (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_testPostProcess_%28cvar%29" title="G testPostProcess (cvar)">G testPostProcess (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_testScoreboard_%28cvar%29" title="G testScoreboard (cvar)">G testScoreboard (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_timeEntities_%28cvar%29" title="G timeEntities (cvar)">G timeEntities (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_useDynamicProtection_%28cvar%29" title="G useDynamicProtection (cvar)">G useDynamicProtection (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_vehicleForce_%28cvar%29" title="G vehicleForce (cvar)">G vehicleForce (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_vehicleMode_%28cvar%29" title="G vehicleMode (cvar)">G vehicleMode (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_vehicleVelocity_%28cvar%29" title="G vehicleVelocity (cvar)">G vehicleVelocity (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_version_%28cvar%29" title="G version (cvar)">G version (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_viewNodalX_%28cvar%29" title="G viewNodalX (cvar)">G viewNodalX (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_viewNodalZ_%28cvar%29" title="G viewNodalZ (cvar)">G viewNodalZ (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/G_voteFlags_%28cvar%29" title="G voteFlags (cvar)">G voteFlags (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Gamedate_%28cvar%29" title="Gamedate (cvar)">Gamedate (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Gamename_%28cvar%29" title="Gamename (cvar)">Gamename (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Gui_ui_name_%28cvar%29" title="Gui ui name (cvar)">Gui ui name (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Ik_debug_%28cvar%29" title="Ik debug (cvar)">Ik debug (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Ik_enable_%28cvar%29" title="Ik enable (cvar)">Ik enable (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_clientLagOMeter_%28cvar%29" title="Net clientLagOMeter (cvar)">Net clientLagOMeter (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_clientPredictGUI_%28cvar%29" title="Net clientPredictGUI (cvar)">Net clientPredictGUI (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_clientShowSnapshot_%28cvar%29" title="Net clientShowSnapshot (cvar)">Net clientShowSnapshot (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_clientShowSnapshotRadius_%28cvar%29" title="Net clientShowSnapshotRadius (cvar)">Net clientShowSnapshotRadius (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_predictionErrorDecay_%28cvar%29" title="Net predictionErrorDecay (cvar)">Net predictionErrorDecay (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_showPredictionError_%28cvar%29" title="Net showPredictionError (cvar)">Net showPredictionError (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Password_%28cvar%29" title="Password (cvar)">Password (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_acceloverride_%28cvar%29" title="Pm acceloverride (cvar)">Pm acceloverride (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_air_%28cvar%29" title="Pm air (cvar)">Pm air (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_bboxwidth_%28cvar%29" title="Pm bboxwidth (cvar)">Pm bboxwidth (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_bobpitch_%28cvar%29" title="Pm bobpitch (cvar)">Pm bobpitch (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_bobroll_%28cvar%29" title="Pm bobroll (cvar)">Pm bobroll (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_bobup_%28cvar%29" title="Pm bobup (cvar)">Pm bobup (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_crouchbob_%28cvar%29" title="Pm crouchbob (cvar)">Pm crouchbob (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_crouchheight_%28cvar%29" title="Pm crouchheight (cvar)">Pm crouchheight (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_crouchrate_%28cvar%29" title="Pm crouchrate (cvar)">Pm crouchrate (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_crouchspeed_%28cvar%29" title="Pm crouchspeed (cvar)">Pm crouchspeed (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_crouchviewheight_%28cvar%29" title="Pm crouchviewheight (cvar)">Pm crouchviewheight (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_deadheight_%28cvar%29" title="Pm deadheight (cvar)">Pm deadheight (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_deadviewheight_%28cvar%29" title="Pm deadviewheight (cvar)">Pm deadviewheight (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_forcespectatormove_%28cvar%29" title="Pm forcespectatormove (cvar)">Pm forcespectatormove (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_frictionoverride_%28cvar%29" title="Pm frictionoverride (cvar)">Pm frictionoverride (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_jumpheight_%28cvar%29" title="Pm jumpheight (cvar)">Pm jumpheight (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_maxviewpitch_%28cvar%29" title="Pm maxviewpitch (cvar)">Pm maxviewpitch (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_minviewpitch_%28cvar%29" title="Pm minviewpitch (cvar)">Pm minviewpitch (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_modelView_%28cvar%29" title="Pm modelView (cvar)">Pm modelView (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_noclipspeed_%28cvar%29" title="Pm noclipspeed (cvar)">Pm noclipspeed (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_normalheight_%28cvar%29" title="Pm normalheight (cvar)">Pm normalheight (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_normalviewheight_%28cvar%29" title="Pm normalviewheight (cvar)">Pm normalviewheight (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_runbob_%28cvar%29" title="Pm runbob (cvar)">Pm runbob (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_runpitch_%28cvar%29" title="Pm runpitch (cvar)">Pm runpitch (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_runroll_%28cvar%29" title="Pm runroll (cvar)">Pm runroll (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_spectatebbox_%28cvar%29" title="Pm spectatebbox (cvar)">Pm spectatebbox (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_spectatespeed_%28cvar%29" title="Pm spectatespeed (cvar)">Pm spectatespeed (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_speed_%28cvar%29" title="Pm speed (cvar)">Pm speed (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_stamina_%28cvar%29" title="Pm stamina (cvar)">Pm stamina (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_staminarate_%28cvar%29" title="Pm staminarate (cvar)">Pm staminarate (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_staminathreshold_%28cvar%29" title="Pm staminathreshold (cvar)">Pm staminathreshold (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_stepsize_%28cvar%29" title="Pm stepsize (cvar)">Pm stepsize (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_usecylinder_%28cvar%29" title="Pm usecylinder (cvar)">Pm usecylinder (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_vehicleCameraMinDist_%28cvar%29" title="Pm vehicleCameraMinDist (cvar)">Pm vehicleCameraMinDist (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_vehicleCameraScaleMax_%28cvar%29" title="Pm vehicleCameraScaleMax (cvar)">Pm vehicleCameraScaleMax (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_vehicleCameraSnap_%28cvar%29" title="Pm vehicleCameraSnap (cvar)">Pm vehicleCameraSnap (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_vehicleCameraSpeedScale_%28cvar%29" title="Pm vehicleCameraSpeedScale (cvar)">Pm vehicleCameraSpeedScale (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_vehicleSoundLerpScale_%28cvar%29" title="Pm vehicleSoundLerpScale (cvar)">Pm vehicleSoundLerpScale (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_walkbob_%28cvar%29" title="Pm walkbob (cvar)">Pm walkbob (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Pm_walkspeed_%28cvar%29" title="Pm walkspeed (cvar)">Pm walkspeed (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Rb_showActive_%28cvar%29" title="Rb showActive (cvar)">Rb showActive (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Rb_showBodies_%28cvar%29" title="Rb showBodies (cvar)">Rb showBodies (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Rb_showContacts_%28cvar%29" title="Rb showContacts (cvar)">Rb showContacts (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Rb_showInertia_%28cvar%29" title="Rb showInertia (cvar)">Rb showInertia (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Rb_showMass_%28cvar%29" title="Rb showMass (cvar)">Rb showMass (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Rb_showTimings_%28cvar%29" title="Rb showTimings (cvar)">Rb showTimings (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Rb_showVelocity_%28cvar%29" title="Rb showVelocity (cvar)">Rb showVelocity (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Si_allowHitscanTint_%28cvar%29" title="Si allowHitscanTint (cvar)">Si allowHitscanTint (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Si_allowVoting_%28cvar%29" title="Si allowVoting (cvar)">Si allowVoting (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Si_countDown_%28cvar%29" title="Si countDown (cvar)">Si countDown (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Si_entityFilter_%28cvar%29" title="Si entityFilter (cvar)">Si entityFilter (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Si_mapCycle_%28cvar%29" title="Si mapCycle (cvar)">Si mapCycle (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Si_maxPlayers_%28cvar%29" title="Si maxPlayers (cvar)">Si maxPlayers (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Si_minPlayers_%28cvar%29" title="Si minPlayers (cvar)">Si minPlayers (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Si_shuffle_%28cvar%29" title="Si shuffle (cvar)">Si shuffle (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Si_spectators_%28cvar%29" title="Si spectators (cvar)">Si spectators (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Si_teamDamage_%28cvar%29" title="Si teamDamage (cvar)">Si teamDamage (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Si_tourneyLimit_%28cvar%29" title="Si tourneyLimit (cvar)">Si tourneyLimit (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Si_usePass_%28cvar%29" title="Si usePass (cvar)">Si usePass (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Si_useReady_%28cvar%29" title="Si useReady (cvar)">Si useReady (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Si_warmup_%28cvar%29" title="Si warmup (cvar)">Si warmup (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Si_weaponStay_%28cvar%29" title="Si weaponStay (cvar)">Si weaponStay (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Ui_model_%28cvar%29" title="Ui model (cvar)">Ui model (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Ui_model_backup_%28cvar%29" title="Ui model backup (cvar)">Ui model backup (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Ui_model_marine_%28cvar%29" title="Ui model marine (cvar)">Ui model marine (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Ui_model_strogg_%28cvar%29" title="Ui model strogg (cvar)">Ui model strogg (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Ui_skin_%28cvar%29" title="Ui skin (cvar)">Ui skin (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Gui_configServerRate_%28cvar%29" title="Gui configServerRate (cvar)">Gui configServerRate (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Gui_debug_%28cvar%29" title="Gui debug (cvar)">Gui debug (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Gui_edit_%28cvar%29" title="Gui edit (cvar)">Gui edit (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Gui_mediumFontLimit_%28cvar%29" title="Gui mediumFontLimit (cvar)">Gui mediumFontLimit (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Gui_smallFontLimit_%28cvar%29" title="Gui smallFontLimit (cvar)">Gui smallFontLimit (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image_cacheMegs_%28cvar%29" title="Image cacheMegs (cvar)">Image cacheMegs (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image_cacheMinK_%28cvar%29" title="Image cacheMinK (cvar)">Image cacheMinK (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image_colorMipLevels_%28cvar%29" title="Image colorMipLevels (cvar)">Image colorMipLevels (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image_downSize_%28cvar%29" title="Image downSize (cvar)">Image downSize (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image_downSizeBump_%28cvar%29" title="Image downSizeBump (cvar)">Image downSizeBump (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image_downSizeBumpLimit_%28cvar%29" title="Image downSizeBumpLimit (cvar)">Image downSizeBumpLimit (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image_downSizeLimit_%28cvar%29" title="Image downSizeLimit (cvar)">Image downSizeLimit (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image_downSizeSpecular_%28cvar%29" title="Image downSizeSpecular (cvar)">Image downSizeSpecular (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image_downSizeSpecularLimit_%28cvar%29" title="Image downSizeSpecularLimit (cvar)">Image downSizeSpecularLimit (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image_filter_%28cvar%29" title="Image filter (cvar)">Image filter (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image_ignoreHighQuality_%28cvar%29" title="Image ignoreHighQuality (cvar)">Image ignoreHighQuality (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image_lodbias_%28cvar%29" title="Image lodbias (cvar)">Image lodbias (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image_preload_%28cvar%29" title="Image preload (cvar)">Image preload (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image_showBackgroundLoads_%28cvar%29" title="Image showBackgroundLoads (cvar)">Image showBackgroundLoads (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image_useAllFormats_%28cvar%29" title="Image useAllFormats (cvar)">Image useAllFormats (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image_useCache_%28cvar%29" title="Image useCache (cvar)">Image useCache (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image_writeNormalTGA_%28cvar%29" title="Image writeNormalTGA (cvar)">Image writeNormalTGA (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image_writePrecompressedTextures_%28cvar%29" title="Image writePrecompressedTextures (cvar)">Image writePrecompressedTextures (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image_writeTGA_%28cvar%29" title="Image writeTGA (cvar)">Image writeTGA (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_checkBounds_%28cvar%29" title="R checkBounds (cvar)">R checkBounds (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_clear_%28cvar%29" title="R clear (cvar)">R clear (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_debugArrowStep_%28cvar%29" title="R debugArrowStep (cvar)">R debugArrowStep (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_debugLineDepthTest_%28cvar%29" title="R debugLineDepthTest (cvar)">R debugLineDepthTest (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_debugLineWidth_%28cvar%29" title="R debugLineWidth (cvar)">R debugLineWidth (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_debugPolygonFilled_%28cvar%29" title="R debugPolygonFilled (cvar)">R debugPolygonFilled (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_debugRenderToTexture_%28cvar%29" title="R debugRenderToTexture (cvar)">R debugRenderToTexture (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_displayRefresh_%28cvar%29" title="R displayRefresh (cvar)">R displayRefresh (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_finish_%28cvar%29" title="R finish (cvar)">R finish (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_flareSize_%28cvar%29" title="R flareSize (cvar)">R flareSize (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_forceLoadImages_%28cvar%29" title="R forceLoadImages (cvar)">R forceLoadImages (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_frontBuffer_%28cvar%29" title="R frontBuffer (cvar)">R frontBuffer (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_gamma_%28cvar%29" title="R gamma (cvar)">R gamma (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_glDriver_%28cvar%29" title="R glDriver (cvar)">R glDriver (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_ignore_%28cvar%29" title="R ignore (cvar)">R ignore (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_ignore2_%28cvar%29" title="R ignore2 (cvar)">R ignore2 (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_ignoreGLErrors_%28cvar%29" title="R ignoreGLErrors (cvar)">R ignoreGLErrors (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_inhibitFragmentProgram_%28cvar%29" title="R inhibitFragmentProgram (cvar)">R inhibitFragmentProgram (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_jitter_%28cvar%29" title="R jitter (cvar)">R jitter (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_jointNameOffset_%28cvar%29" title="R jointNameOffset (cvar)">R jointNameOffset (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_jointNameScale_%28cvar%29" title="R jointNameScale (cvar)">R jointNameScale (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_lightAllBackFaces_%28cvar%29" title="R lightAllBackFaces (cvar)">R lightAllBackFaces (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_lockSurfaces_%28cvar%29" title="R lockSurfaces (cvar)">R lockSurfaces (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_megaTextureLevel_%28cvar%29" title="R megaTextureLevel (cvar)">R megaTextureLevel (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_mergeModelSurfaces_%28cvar%29" title="R mergeModelSurfaces (cvar)">R mergeModelSurfaces (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_offsetfactor_%28cvar%29" title="R offsetfactor (cvar)">R offsetfactor (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_offsetunits_%28cvar%29" title="R offsetunits (cvar)">R offsetunits (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_orderIndexes_%28cvar%29" title="R orderIndexes (cvar)">R orderIndexes (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_shadowPolygonFactor_%28cvar%29" title="R shadowPolygonFactor (cvar)">R shadowPolygonFactor (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_shadowPolygonOffset_%28cvar%29" title="R shadowPolygonOffset (cvar)">R shadowPolygonOffset (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showAlloc_%28cvar%29" title="R showAlloc (cvar)">R showAlloc (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showCull_%28cvar%29" title="R showCull (cvar)">R showCull (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showDefs_%28cvar%29" title="R showDefs (cvar)">R showDefs (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showDemo_%28cvar%29" title="R showDemo (cvar)">R showDemo (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showDepth_%28cvar%29" title="R showDepth (cvar)">R showDepth (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showDominantTri_%28cvar%29" title="R showDominantTri (cvar)">R showDominantTri (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showEdges_%28cvar%29" title="R showEdges (cvar)">R showEdges (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showEntityScissors_%28cvar%29" title="R showEntityScissors (cvar)">R showEntityScissors (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showImages_%28cvar%29" title="R showImages (cvar)">R showImages (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showIntensity_%28cvar%29" title="R showIntensity (cvar)">R showIntensity (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showInteractionScissors_%28cvar%29" title="R showInteractionScissors (cvar)">R showInteractionScissors (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showInteractionFrustums_%28cvar%29" title="R showInteractionFrustums (cvar)">R showInteractionFrustums (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showLights_%28cvar%29" title="R showLights (cvar)">R showLights (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showLightScale_%28cvar%29" title="R showLightScale (cvar)">R showLightScale (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showMegaTexture_%28cvar%29" title="R showMegaTexture (cvar)">R showMegaTexture (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showMegaTextureLabels_%28cvar%29" title="R showMegaTextureLabels (cvar)">R showMegaTextureLabels (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showNormals_%28cvar%29" title="R showNormals (cvar)">R showNormals (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showOverDraw_%28cvar%29" title="R showOverDraw (cvar)">R showOverDraw (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showSilhouette_%28cvar%29" title="R showSilhouette (cvar)">R showSilhouette (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showSkel_%28cvar%29" title="R showSkel (cvar)">R showSkel (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showSmp_%28cvar%29" title="R showSmp (cvar)">R showSmp (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showSurfaces_%28cvar%29" title="R showSurfaces (cvar)">R showSurfaces (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showTangentSpace_%28cvar%29" title="R showTangentSpace (cvar)">R showTangentSpace (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showTexturePolarity_%28cvar%29" title="R showTexturePolarity (cvar)">R showTexturePolarity (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showTextureVectors_%28cvar%29" title="R showTextureVectors (cvar)">R showTextureVectors (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showTrace_%28cvar%29" title="R showTrace (cvar)">R showTrace (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showUnsmoothedTangents_%28cvar%29" title="R showUnsmoothedTangents (cvar)">R showUnsmoothedTangents (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showUpdates_%28cvar%29" title="R showUpdates (cvar)">R showUpdates (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showVertexCache_%28cvar%29" title="R showVertexCache (cvar)">R showVertexCache (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showVertexColor_%28cvar%29" title="R showVertexColor (cvar)">R showVertexColor (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_showViewEntitys_%28cvar%29" title="R showViewEntitys (cvar)">R showViewEntitys (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_singleArea_%28cvar%29" title="R singleArea (cvar)">R singleArea (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_singleEntity_%28cvar%29" title="R singleEntity (cvar)">R singleEntity (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_singleLight_%28cvar%29" title="R singleLight (cvar)">R singleLight (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_singleSurface_%28cvar%29" title="R singleSurface (cvar)">R singleSurface (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_singleTriangle_%28cvar%29" title="R singleTriangle (cvar)">R singleTriangle (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_skipAmbient_%28cvar%29" title="R skipAmbient (cvar)">R skipAmbient (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_skipBackEnd_%28cvar%29" title="R skipBackEnd (cvar)">R skipBackEnd (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_skipBlendLights_%28cvar%29" title="R skipBlendLights (cvar)">R skipBlendLights (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_skipBump_%28cvar%29" title="R skipBump (cvar)">R skipBump (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_skipCopyTexture_%28cvar%29" title="R skipCopyTexture (cvar)">R skipCopyTexture (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_skipDeforms_%28cvar%29" title="R skipDeforms (cvar)">R skipDeforms (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_skipDiffuse_%28cvar%29" title="R skipDiffuse (cvar)">R skipDiffuse (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_skipDynamicTextures_%28cvar%29" title="R skipDynamicTextures (cvar)">R skipDynamicTextures (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_skipFogLights_%28cvar%29" title="R skipFogLights (cvar)">R skipFogLights (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_skipFrontEnd_%28cvar%29" title="R skipFrontEnd (cvar)">R skipFrontEnd (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_skipGuiShaders_%28cvar%29" title="R skipGuiShaders (cvar)">R skipGuiShaders (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_skipInteractions_%28cvar%29" title="R skipInteractions (cvar)">R skipInteractions (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_skipLightScale_%28cvar%29" title="R skipLightScale (cvar)">R skipLightScale (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_skipMegaTexture_%28cvar%29" title="R skipMegaTexture (cvar)">R skipMegaTexture (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_skipNewAmbient_%28cvar%29" title="R skipNewAmbient (cvar)">R skipNewAmbient (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_skipOverlays_%28cvar%29" title="R skipOverlays (cvar)">R skipOverlays (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_skipPostProcess_%28cvar%29" title="R skipPostProcess (cvar)">R skipPostProcess (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_skipRender_%28cvar%29" title="R skipRender (cvar)">R skipRender (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_skipRenderContext_%28cvar%29" title="R skipRenderContext (cvar)">R skipRenderContext (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_skipROQ_%28cvar%29" title="R skipROQ (cvar)">R skipROQ (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_skipSpecular_%28cvar%29" title="R skipSpecular (cvar)">R skipSpecular (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_skipSubviews_%28cvar%29" title="R skipSubviews (cvar)">R skipSubviews (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_skipSuppress_%28cvar%29" title="R skipSuppress (cvar)">R skipSuppress (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_skipTranslucent_%28cvar%29" title="R skipTranslucent (cvar)">R skipTranslucent (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_skipUpdates_%28cvar%29" title="R skipUpdates (cvar)">R skipUpdates (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_slopNormal_%28cvar%29" title="R slopNormal (cvar)">R slopNormal (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_slopTexCoord_%28cvar%29" title="R slopTexCoord (cvar)">R slopTexCoord (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_slopVertex_%28cvar%29" title="R slopVertex (cvar)">R slopVertex (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_subviewOnly_%28cvar%29" title="R subviewOnly (cvar)">R subviewOnly (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_swapInterval_%28cvar%29" title="R swapInterval (cvar)">R swapInterval (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_terrainScale_%28cvar%29" title="R terrainScale (cvar)">R terrainScale (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_testARBProgram_%28cvar%29" title="R testARBProgram (cvar)">R testARBProgram (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_testGamma_%28cvar%29" title="R testGamma (cvar)">R testGamma (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_testGammaBias_%28cvar%29" title="R testGammaBias (cvar)">R testGammaBias (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_testStepGamma_%28cvar%29" title="R testStepGamma (cvar)">R testStepGamma (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useCachedDynamicModels_%28cvar%29" title="R useCachedDynamicModels (cvar)">R useCachedDynamicModels (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useClippedLightScissors_%28cvar%29" title="R useClippedLightScissors (cvar)">R useClippedLightScissors (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useCombinerDisplayLists_%28cvar%29" title="R useCombinerDisplayLists (cvar)">R useCombinerDisplayLists (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useConstantMaterials_%28cvar%29" title="R useConstantMaterials (cvar)">R useConstantMaterials (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useCulling_%28cvar%29" title="R useCulling (cvar)">R useCulling (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useDeferredTangents_%28cvar%29" title="R useDeferredTangents (cvar)">R useDeferredTangents (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useDepthBoundsTest_%28cvar%29" title="R useDepthBoundsTest (cvar)">R useDepthBoundsTest (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useEntityCallbacks_%28cvar%29" title="R useEntityCallbacks (cvar)">R useEntityCallbacks (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useEntityCulling_%28cvar%29" title="R useEntityCulling (cvar)">R useEntityCulling (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useEntityScissors_%28cvar%29" title="R useEntityScissors (cvar)">R useEntityScissors (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useExternalShadows_%28cvar%29" title="R useExternalShadows (cvar)">R useExternalShadows (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useIndexBuffers_%28cvar%29" title="R useIndexBuffers (cvar)">R useIndexBuffers (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useInfiniteFarZ_%28cvar%29" title="R useInfiniteFarZ (cvar)">R useInfiniteFarZ (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useInteractionCulling_%28cvar%29" title="R useInteractionCulling (cvar)">R useInteractionCulling (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useInteractionScissors_%28cvar%29" title="R useInteractionScissors (cvar)">R useInteractionScissors (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useLightCulling_%28cvar%29" title="R useLightCulling (cvar)">R useLightCulling (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useLightPortalFlow_%28cvar%29" title="R useLightPortalFlow (cvar)">R useLightPortalFlow (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useLightScissors_%28cvar%29" title="R useLightScissors (cvar)">R useLightScissors (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useNodeCommonChildren_%28cvar%29" title="R useNodeCommonChildren (cvar)">R useNodeCommonChildren (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useNV20MonoLights_%28cvar%29" title="R useNV20MonoLights (cvar)">R useNV20MonoLights (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_usePortals_%28cvar%29" title="R usePortals (cvar)">R usePortals (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_usePreciseTriangleInteractions_%28cvar%29" title="R usePreciseTriangleInteractions (cvar)">R usePreciseTriangleInteractions (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useShadowCulling_%28cvar%29" title="R useShadowCulling (cvar)">R useShadowCulling (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useShadowProjectedCull_%28cvar%29" title="R useShadowProjectedCull (cvar)">R useShadowProjectedCull (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useShadowSurfaceScissor_%28cvar%29" title="R useShadowSurfaceScissor (cvar)">R useShadowSurfaceScissor (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useShadowVertexProgram_%28cvar%29" title="R useShadowVertexProgram (cvar)">R useShadowVertexProgram (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useSilRemap_%28cvar%29" title="R useSilRemap (cvar)">R useSilRemap (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useStateCaching_%28cvar%29" title="R useStateCaching (cvar)">R useStateCaching (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useTripleTextureARB_%28cvar%29" title="R useTripleTextureARB (cvar)">R useTripleTextureARB (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useTurboShadow_%28cvar%29" title="R useTurboShadow (cvar)">R useTurboShadow (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_useVertexBuffers_%28cvar%29" title="R useVertexBuffers (cvar)">R useVertexBuffers (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_vertexBufferMegs_%28cvar%29" title="R vertexBufferMegs (cvar)">R vertexBufferMegs (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/R_znear_%28cvar%29" title="R znear (cvar)">R znear (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_clipVolumes_%28cvar%29" title="S clipVolumes (cvar)">S clipVolumes (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_constantAmplitude_%28cvar%29" title="S constantAmplitude (cvar)">S constantAmplitude (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_decompressionLimit_%28cvar%29" title="S decompressionLimit (cvar)">S decompressionLimit (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_doorDistanceAdd_%28cvar%29" title="S doorDistanceAdd (cvar)">S doorDistanceAdd (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_dotbias2_%28cvar%29" title="S dotbias2 (cvar)">S dotbias2 (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_dotbias6_%28cvar%29" title="S dotbias6 (cvar)">S dotbias6 (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_drawSounds_%28cvar%29" title="S drawSounds (cvar)">S drawSounds (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_force22kHz_%28cvar%29" title="S force22kHz (cvar)">S force22kHz (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_globalFraction_%28cvar%29" title="S globalFraction (cvar)">S globalFraction (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_meterTopTime_%28cvar%29" title="S meterTopTime (cvar)">S meterTopTime (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_minVolume2_%28cvar%29" title="S minVolume2 (cvar)">S minVolume2 (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_minVolume6_%28cvar%29" title="S minVolume6 (cvar)">S minVolume6 (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_muteEAXReverb_%28cvar%29" title="S muteEAXReverb (cvar)">S muteEAXReverb (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_noSound_%28cvar%29" title="S noSound (cvar)">S noSound (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_numberOfSpeakers_%28cvar%29" title="S numberOfSpeakers (cvar)">S numberOfSpeakers (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_playDefaultSound_%28cvar%29" title="S playDefaultSound (cvar)">S playDefaultSound (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_quadraticFalloff_%28cvar%29" title="S quadraticFalloff (cvar)">S quadraticFalloff (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_realTimeDecoding_%28cvar%29" title="S realTimeDecoding (cvar)">S realTimeDecoding (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_reverbFeedback_%28cvar%29" title="S reverbFeedback (cvar)">S reverbFeedback (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_reverbTime_%28cvar%29" title="S reverbTime (cvar)">S reverbTime (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_reverse_%28cvar%29" title="S reverse (cvar)">S reverse (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_showLevelMeter_%28cvar%29" title="S showLevelMeter (cvar)">S showLevelMeter (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_showStartSound_%28cvar%29" title="S showStartSound (cvar)">S showStartSound (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_singleEmitter_%28cvar%29" title="S singleEmitter (cvar)">S singleEmitter (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_subFraction_%28cvar%29" title="S subFraction (cvar)">S subFraction (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_useEAXReverb_%28cvar%29" title="S useEAXReverb (cvar)">S useEAXReverb (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_useOcclusion_%28cvar%29" title="S useOcclusion (cvar)">S useOcclusion (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/S_useOpenAL_%28cvar%29" title="S useOpenAL (cvar)">S useOpenAL (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Com_fixedTic_%28cvar%29" title="Com fixedTic (cvar)">Com fixedTic (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Com_forceGenericSIMD_%28cvar%29" title="Com forceGenericSIMD (cvar)">Com forceGenericSIMD (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Com_guid_%28cvar%29" title="Com guid (cvar)">Com guid (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Com_journal_%28cvar%29" title="Com journal (cvar)">Com journal (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Com_logDemos_%28cvar%29" title="Com logDemos (cvar)">Com logDemos (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Com_makingBuild_%28cvar%29" title="Com makingBuild (cvar)">Com makingBuild (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Com_memoryMarker_%28cvar%29" title="Com memoryMarker (cvar)">Com memoryMarker (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Com_minTics_%28cvar%29" title="Com minTics (cvar)">Com minTics (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Com_preloadDemos_%28cvar%29" title="Com preloadDemos (cvar)">Com preloadDemos (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Com_purgeAll_%28cvar%29" title="Com purgeAll (cvar)">Com purgeAll (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Com_showAngles_%28cvar%29" title="Com showAngles (cvar)">Com showAngles (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Com_showAsyncStats_%28cvar%29" title="Com showAsyncStats (cvar)">Com showAsyncStats (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Com_showDemo_%28cvar%29" title="Com showDemo (cvar)">Com showDemo (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Com_showMemoryUsage_%28cvar%29" title="Com showMemoryUsage (cvar)">Com showMemoryUsage (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Com_showSoundDecoders_%28cvar%29" title="Com showSoundDecoders (cvar)">Com showSoundDecoders (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Com_showTics_%28cvar%29" title="Com showTics (cvar)">Com showTics (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Com_skipGameDraw_%28cvar%29" title="Com skipGameDraw (cvar)">Com skipGameDraw (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Com_skipRenderer_%28cvar%29" title="Com skipRenderer (cvar)">Com skipRenderer (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Com_timestampPrints_%28cvar%29" title="Com timestampPrints (cvar)">Com timestampPrints (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Com_updateLoadSize_%28cvar%29" title="Com updateLoadSize (cvar)">Com updateLoadSize (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Com_wipeSeconds_%28cvar%29" title="Com wipeSeconds (cvar)">Com wipeSeconds (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Con_speed_%28cvar%29" title="Con speed (cvar)">Con speed (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Decl_show_%28cvar%29" title="Decl show (cvar)">Decl show (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Fs_basepath_%28cvar%29" title="Fs basepath (cvar)">Fs basepath (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Fs_caseSensitiveOS_%28cvar%29" title="Fs caseSensitiveOS (cvar)">Fs caseSensitiveOS (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Fs_cdpath_%28cvar%29" title="Fs cdpath (cvar)">Fs cdpath (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Fs_copyfiles_%28cvar%29" title="Fs copyfiles (cvar)">Fs copyfiles (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Fs_debug_%28cvar%29" title="Fs debug (cvar)">Fs debug (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Fs_devpath_%28cvar%29" title="Fs devpath (cvar)">Fs devpath (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Fs_restrict_%28cvar%29" title="Fs restrict (cvar)">Fs restrict (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Fs_savepath_%28cvar%29" title="Fs savepath (cvar)">Fs savepath (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Fs_searchAddons_%28cvar%29" title="Fs searchAddons (cvar)">Fs searchAddons (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/In_alwaysRun_%28cvar%29" title="In alwaysRun (cvar)">In alwaysRun (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/In_anglespeedkey_%28cvar%29" title="In anglespeedkey (cvar)">In anglespeedkey (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/In_freeLook_%28cvar%29" title="In freeLook (cvar)">In freeLook (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/In_mouse_%28cvar%29" title="In mouse (cvar)">In mouse (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/In_pitchspeed_%28cvar%29" title="In pitchspeed (cvar)">In pitchspeed (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/In_yawspeed_%28cvar%29" title="In yawspeed (cvar)">In yawspeed (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Lcp_showFailures_%28cvar%29" title="Lcp showFailures (cvar)">Lcp showFailures (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/M_pitch_%28cvar%29" title="M pitch (cvar)">M pitch (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/M_showMouseRate_%28cvar%29" title="M showMouseRate (cvar)">M showMouseRate (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/M_smooth_%28cvar%29" title="M smooth (cvar)">M smooth (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/M_strafeScale_%28cvar%29" title="M strafeScale (cvar)">M strafeScale (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/M_strafeSmooth_%28cvar%29" title="M strafeSmooth (cvar)">M strafeSmooth (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/M_yaw_%28cvar%29" title="M yaw (cvar)">M yaw (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_channelShowDrop_%28cvar%29" title="Net channelShowDrop (cvar)">Net channelShowDrop (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_channelShowPackets_%28cvar%29" title="Net channelShowPackets (cvar)">Net channelShowPackets (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_clientDownload_%28cvar%29" title="Net clientDownload (cvar)">Net clientDownload (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_clientMaxPrediction_%28cvar%29" title="Net clientMaxPrediction (cvar)">Net clientMaxPrediction (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_clientMaxRate_%28cvar%29" title="Net clientMaxRate (cvar)">Net clientMaxRate (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_clientPrediction_%28cvar%29" title="Net clientPrediction (cvar)">Net clientPrediction (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_clientRemoteConsoleAddress_%28cvar%29" title="Net clientRemoteConsoleAddress (cvar)">Net clientRemoteConsoleAddress (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_clientRemoteConsolePassword_%28cvar%29" title="Net clientRemoteConsolePassword (cvar)">Net clientRemoteConsolePassword (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_clientServerTimeout_%28cvar%29" title="Net clientServerTimeout (cvar)">Net clientServerTimeout (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_clientUsercmdBackup_%28cvar%29" title="Net clientUsercmdBackup (cvar)">Net clientUsercmdBackup (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_forceDrop_%28cvar%29" title="Net forceDrop (cvar)">Net forceDrop (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_forceLatency_%28cvar%29" title="Net forceLatency (cvar)">Net forceLatency (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_ip_%28cvar%29" title="Net ip (cvar)">Net ip (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_LANServer_%28cvar%29" title="Net LANServer (cvar)">Net LANServer (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_master0_%28cvar%29" title="Net master0 (cvar)">Net master0 (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_master1_%28cvar%29" title="Net master1 (cvar)">Net master1 (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_master2_%28cvar%29" title="Net master2 (cvar)">Net master2 (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_master3_%28cvar%29" title="Net master3 (cvar)">Net master3 (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_master4_%28cvar%29" title="Net master4 (cvar)">Net master4 (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_port_%28cvar%29" title="Net port (cvar)">Net port (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_serverAllowServerMod_%28cvar%29" title="Net serverAllowServerMod (cvar)">Net serverAllowServerMod (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_serverClientTimeout_%28cvar%29" title="Net serverClientTimeout (cvar)">Net serverClientTimeout (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_serverDedicated_%28cvar%29" title="Net serverDedicated (cvar)">Net serverDedicated (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_serverDrawClient_%28cvar%29" title="Net serverDrawClient (cvar)">Net serverDrawClient (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_serverMaxClientRate_%28cvar%29" title="Net serverMaxClientRate (cvar)">Net serverMaxClientRate (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_serverMaxUsercmdRelay_%28cvar%29" title="Net serverMaxUsercmdRelay (cvar)">Net serverMaxUsercmdRelay (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_serverReloadEngine_%28cvar%29" title="Net serverReloadEngine (cvar)">Net serverReloadEngine (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_serverRemoteConsolePassword_%28cvar%29" title="Net serverRemoteConsolePassword (cvar)">Net serverRemoteConsolePassword (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_serverSnapshotDelay_%28cvar%29" title="Net serverSnapshotDelay (cvar)">Net serverSnapshotDelay (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_serverZombieTimeout_%28cvar%29" title="Net serverZombieTimeout (cvar)">Net serverZombieTimeout (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_socksEnabled_%28cvar%29" title="Net socksEnabled (cvar)">Net socksEnabled (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_socksPassword_%28cvar%29" title="Net socksPassword (cvar)">Net socksPassword (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_socksPort_%28cvar%29" title="Net socksPort (cvar)">Net socksPort (cvar)</a> (inclusion) </li>
+<li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Net_socksServer_%28cvar%29" title="Net socksServer (cvar)">Net socksServer (cvar)</a> (inclusion) </li>
+<li><a hre>
+
+
+
+
+<!--
+     FILE ARCHIVED ON 23:18:05 Jul 29, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 2:56:36 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

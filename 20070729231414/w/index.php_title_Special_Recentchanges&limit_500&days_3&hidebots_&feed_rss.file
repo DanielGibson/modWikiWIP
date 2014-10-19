@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="http://modwiki.net/w/skins/common/feed.css"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>modwiki - Recent changes [en]</title>
+		<link>http://modwiki.net/wiki/Special:Recentchanges</link>
+		<description>Track the most recent changes to the wiki on this page.</description>
+		<language>en</language>
+		<generator>MediaWiki 1.6.8</generator>
+		<lastBuildDate>Sat, 16 Feb 2008 11:28:21 GMT</lastBuildDate>
+		<item>
+			<title>Func door (entity)</title>
+			<link>http://modwiki.net/wiki/Func_door_%28entity%29</link>
+			<description>&lt;p&gt;Added locked k/v pair&lt;/p&gt;
+
+			&lt;table border='0' width='98%' cellpadding='0' cellspacing='4' style=&quot;background-color: white;&quot;&gt;
+			&lt;tr&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Revision as of 08:01, 16 February 2008&lt;/td&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Current revision&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 71:&lt;/strong&gt;&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 71:&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;|-&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;|-&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;| lip || lip remaining at end of move.&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;| lip || lip remaining at end of move.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;|-&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;| locked || used in conjunction with no_touch,the door must be triggered by a trigger, after which it works normally.  if locked = 1 then the door opens when unlocked, if locked = 2 then the door just becomes unlocked..&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;|-&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;|-&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;| maxs || Description not available.&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;| maxs || Description not available.&lt;/td&gt;&lt;/tr&gt;
+
+			&lt;/table&gt;
+		</description>
+			<pubDate>Sat, 16 Feb 2008 08:01:58 GMT</pubDate>			<dc:creator>Rich</dc:creator>			<comments>http://modwiki.net/wiki/Talk:Func_door_%28entity%29</comments>		</item>
+		<item>
+			<title>WeaponReady (script event)</title>
+			<link>http://modwiki.net/wiki/WeaponReady_%28script_event%29</link>
+			<description>&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;New page&lt;/b&gt;&lt;/p&gt;&lt;div&gt;Description&lt;br /&gt;
+&lt;br /&gt;
+Describing the state of weapon after reloading.&lt;br /&gt;
+&lt;br /&gt;
+Usage&lt;br /&gt;
+&lt;br /&gt;
+In your script type...&lt;br /&gt;
+&lt;br /&gt;
+void  weaponReady()&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+Examples&lt;br /&gt;
+&lt;br /&gt;
+        if ( !ammoInClip() ) {&lt;br /&gt;
+                weaponOutOfAmmo();&lt;br /&gt;
+           } else {&lt;br /&gt;
+                weaponReady();&lt;br /&gt;
+           }&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+Note:  If no ammo in clip,weapon will put away automatically,&lt;br /&gt;
+       after reloading,the weapon will be ready(to fire or idle)&lt;br /&gt;
+&lt;br /&gt;
+--[[User:Terryflying|Terryflying]] 08:14, 16 February 2008 (CET)&lt;/div&gt;</description>
+			<pubDate>Sat, 16 Feb 2008 07:14:17 GMT</pubDate>			<dc:creator>Terryflying</dc:creator>			<comments>http://modwiki.net/wiki/Talk:WeaponReady_%28script_event%29</comments>		</item>
+		<item>
+			<title>AddToClip (script event)</title>
+			<link>http://modwiki.net/wiki/AddToClip_%28script_event%29</link>
+			<description>&lt;p&gt;Revised for consistancy&lt;/p&gt;
+
+			&lt;table border='0' width='98%' cellpadding='0' cellspacing='4' style=&quot;background-color: white;&quot;&gt;
+		

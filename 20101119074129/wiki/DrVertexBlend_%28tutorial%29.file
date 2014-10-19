@@ -1,0 +1,615 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="DrVertexBlend (tutorial)" />
+<link rel="shortcut icon" href="/web/20101119074129im_/http://www.modwiki.net/favicon.ico" />
+<link title="Creative Commons" type="application/rdf+xml" href="/w/index.php?title=DrVertexBlend_%28tutorial%29&amp;action=creativecommons" rel="meta" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<title>DrVertexBlend (tutorial) - modwiki</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20101119074129cs_/http://www.modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/web/20101119074129cs_/http://www.modwiki.net/w/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/w/skins/monobook/IE70Fixes.css?1";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
+		<script type="text/javascript" src="/web/20101119074129js_/http://www.modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20101119074129js_/http://www.modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/web/20101119074129cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20101119074129cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20101119074129cs_/http://www.modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns-0 ltr">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app3.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/www.modwiki.net\/wiki\/DrVertexBlend_%28tutorial%29";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "19";
+var displayMonth = "Nov";
+var displayYear = "2010";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://www.modwiki.net/wiki/DrVertexBlend_%28tutorial%29" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20101119074129" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Oct
+                       
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 7:41:29 Nov 19, 2010">NOV</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110825022437/http://www.modwiki.net/wiki/DrVertexBlend_%28tutorial%29" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="25 Aug 2011"><strong>AUG</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101118044419/http://www.modwiki.net/wiki/DrVertexBlend_%28tutorial%29" title="4:44:19 Nov 18, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 7:41:29 Nov 19, 2010">19</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110825022437/http://www.modwiki.net/wiki/DrVertexBlend_%28tutorial%29" title="2:24:37 Aug 25, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2009
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 7:41:29 Nov 19, 2010">2010</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2011
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20101119074129*/http://www.modwiki.net/wiki/DrVertexBlend_%28tutorial%29" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>3 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">18 Nov 10 - 25 Aug 11</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:10:000000000020_2011:-1:000000010000_2012:-1:000000000000_2013:-1:000000000000_2014:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">DrVertexBlend (tutorial)</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From modwiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="/web/20101119074129/http://www.modwiki.net/wiki/DrVertexBlend_%28tutorial%29#column-one">navigation</a>, <a href="/web/20101119074129/http://www.modwiki.net/wiki/DrVertexBlend_%28tutorial%29#searchInput">search</a></div>			<!-- start content -->
+			<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class='toclevel-1'><a href="/web/20101119074129/http://www.modwiki.net/wiki/DrVertexBlend_%28tutorial%29#Vertex_Painted_ASE_Models_with_DarkRadiant_and_Blender_2.53"><span class="tocnumber">1</span> <span class="toctext">Vertex Painted ASE Models with DarkRadiant and Blender 2.53</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20101119074129/http://www.modwiki.net/wiki/DrVertexBlend_%28tutorial%29#Required_Plugins"><span class="tocnumber">1.1</span> <span class="toctext">Required Plugins</span></a></li>
+<li class='toclevel-2'><a href="/web/20101119074129/http://www.modwiki.net/wiki/DrVertexBlend_%28tutorial%29#Plugin_Installation"><span class="tocnumber">1.2</span> <span class="toctext">Plugin Installation</span></a>
+<ul>
+<li class='toclevel-3'><a href="/web/20101119074129/http://www.modwiki.net/wiki/DrVertexBlend_%28tutorial%29#Blender_2.53"><span class="tocnumber">1.2.1</span> <span class="toctext">Blender 2.53</span></a></li>
+</ul>
+</li>
+<li class='toclevel-2'><a href="/web/20101119074129/http://www.modwiki.net/wiki/DrVertexBlend_%28tutorial%29#Exporting_Geometry_From_DarkRadiant"><span class="tocnumber">1.3</span> <span class="toctext">Exporting Geometry From DarkRadiant</span></a></li>
+<li class='toclevel-2'><a href="/web/20101119074129/http://www.modwiki.net/wiki/DrVertexBlend_%28tutorial%29#Importing_the_.ASE_into_Blender_2.53"><span class="tocnumber">1.4</span> <span class="toctext">Importing the .ASE into Blender 2.53</span></a></li>
+<li class='toclevel-2'><a href="/web/20101119074129/http://www.modwiki.net/wiki/DrVertexBlend_%28tutorial%29#Vertex_Painting_Each_Object"><span class="tocnumber">1.5</span> <span class="toctext">Vertex Painting Each Object</span></a></li>
+<li class='toclevel-2'><a href="/web/20101119074129/http://www.modwiki.net/wiki/DrVertexBlend_%28tutorial%29#Exporting_Objects_from_Blender_2.53"><span class="tocnumber">1.6</span> <span class="toctext">Exporting Objects from Blender 2.53</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="/web/20101119074129/http://www.modwiki.net/wiki/DrVertexBlend_%28tutorial%29#Appendix_A._Preparing_a_Native_Object_for_Export"><span class="tocnumber">2</span> <span class="toctext">Appendix A. Preparing a Native Object for Export</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20101119074129/http://www.modwiki.net/wiki/DrVertexBlend_%28tutorial%29#UV_Mapping"><span class="tocnumber">2.1</span> <span class="toctext">UV Mapping</span></a></li>
+<li class='toclevel-2'><a href="/web/20101119074129/http://www.modwiki.net/wiki/DrVertexBlend_%28tutorial%29#Applying_a_Material"><span class="tocnumber">2.2</span> <span class="toctext">Applying a Material</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="/web/20101119074129/http://www.modwiki.net/wiki/DrVertexBlend_%28tutorial%29#Appendix_B._Preparing_Vertex_Blended_or_Colored_Material_Shaders"><span class="tocnumber">3</span> <span class="toctext">Appendix B. Preparing Vertex Blended or Colored Material Shaders</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20101119074129/http://www.modwiki.net/wiki/DrVertexBlend_%28tutorial%29#Vertex_Blended"><span class="tocnumber">3.1</span> <span class="toctext">Vertex Blended</span></a></li>
+<li class='toclevel-2'><a href="/web/20101119074129/http://www.modwiki.net/wiki/DrVertexBlend_%28tutorial%29#Vertex_Colored"><span class="tocnumber">3.2</span> <span class="toctext">Vertex Colored</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101119074129/http://www.modwiki.net/w/index.php?title=DrVertexBlend_%28tutorial%29&amp;action=edit&amp;section=1" title="Edit section: Vertex Painted ASE Models with DarkRadiant and Blender 2.53">edit</a>]</div><a name="Vertex_Painted_ASE_Models_with_DarkRadiant_and_Blender_2.53"></a><h1>Vertex Painted ASE Models with DarkRadiant and Blender 2.53</h1>
+<p>For the level designer who is not comfortable in a modeling package I've written a series of ASE import and export plugins so that you might benefit from vertex blending or coloring in your maps.
+</p><p>These plugins will not absolve you of a modeling application completely however they will spare you from modeling and uv mapping. Essentially the entire process has been reduced to four steps.
+</p>
+<ol><li>Export map geometry from DarkRadiant
+</li><li>Import resulting .ASE into Blender
+</li><li>Switch to vertex paint mode and paint
+</li><li>Export object(s) from Blender
+</li></ol>
+<p>It is assumed you already have DarkRadiant 1.4 and Blender 2.53 installed.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101119074129/http://www.modwiki.net/w/index.php?title=DrVertexBlend_%28tutorial%29&amp;action=edit&amp;section=2" title="Edit section: Required Plugins">edit</a>]</div><a name="Required_Plugins"></a><h3>Required Plugins</h3>
+<ul><li>DarkRadiant ASE Export
+</li><li><a href="/web/20101119074129/https://docs.google.com/leaf?id=0B3KUZe06PPyDM2FhMGQ1YjYtNDVhYy00Y2I4LWI5OWEtMWE1Njg3ZTYzZmVh&amp;hl=en" class='external text' title="https://docs.google.com/leaf?id=0B3KUZe06PPyDM2FhMGQ1YjYtNDVhYy00Y2I4LWI5OWEtMWE1Njg3ZTYzZmVh&amp;hl=en">Blender 2.53 ASE Import</a>
+</li><li><a href="/web/20101119074129/https://docs.google.com/leaf?id=0B3KUZe06PPyDYjI2ZDAxYmYtN2I3NS00MjFkLTkyNTAtOGFjYTI4MzQ3MzQ5&amp;hl=en" class='external text' title="https://docs.google.com/leaf?id=0B3KUZe06PPyDYjI2ZDAxYmYtN2I3NS00MjFkLTkyNTAtOGFjYTI4MzQ3MzQ5&amp;hl=en">Blender 2.53 ASE Export</a>
+</li></ul>
+<p>The DarkRadiant ASE Export plugin is bundled with DarkRadiant and will not need to be installed.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101119074129/http://www.modwiki.net/w/index.php?title=DrVertexBlend_%28tutorial%29&amp;action=edit&amp;section=3" title="Edit section: Plugin Installation">edit</a>]</div><a name="Plugin_Installation"></a><h2>Plugin Installation</h2>
+<p>Due to discrepancies that arise depending on what operating system you are using, whether you are using the 32-bit or 64-bit versions of Blender, and installation options, the full path for installation may vary.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101119074129/http://www.modwiki.net/w/index.php?title=DrVertexBlend_%28tutorial%29&amp;action=edit&amp;section=4" title="Edit section: Blender 2.53">edit</a>]</div><a name="Blender_2.53"></a><h3>Blender 2.53</h3>
+<p>The Blender 2.53 ASE Import and Export plugins (import_ase.py and export_ase.py) should be placed in the relative path below.
+</p>
+<pre>...\scripts\io
+
+</pre>
+<p>If you have difficulty finding this location on your system you can perform a search for any of the following files.
+</p>
+<pre>engine_render_pov.py
+export_3ds.py
+export_fbx.py
+export_mdd.py
+export_obj.py
+export_ply.py
+export_x3d.py
+import_anim_bvh.py
+import_scene_3ds.py
+import_scene_obj.py
+import_shape_mdd.py
+
+</pre>
+<p>Once you have placed <b>import_ase.py</b> and <b>export_ase.py</b> in the location described above you can verify installation by starting Blender 2.53. If <b>Ascii Scene Export (.ASE)</b> is available in the <b>File > Import</b> and <b>File > Export</b> menus, installation was successful.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101119074129/http://www.modwiki.net/w/index.php?title=DrVertexBlend_%28tutorial%29&amp;action=edit&amp;section=5" title="Edit section: Exporting Geometry From DarkRadiant">edit</a>]</div><a name="Exporting_Geometry_From_DarkRadiant"></a><h2>Exporting Geometry From DarkRadiant</h2>
+<p>Only brushes and patches may be exported using <b>Export ASE...</b> from DarkRadiant. This excludes entities comprised of brushes and patches. If you intend to export such an entity please revert it to worldspawn first.
+</p><p>Also it should be mentioned that at the time of this writing, The Dark Mod does not appear to come with many if any vertex blended or vertex colored material shaders. If you intend to use such a material, you'll need to use one from Doom 3 or create a new one before you reach this step.
+</p><p>If you don't know how to create such a material you'll find a brief description of the process in Appendix B at the end of this document.
+</p><p>Assuming you have DarkRadiant open, you have created or loaded the map geometry you intend to export, and vertex blended or colored material shaders are applied to your satisfaction, perform the following steps.
+</p>
+<ol><li>Select the brushes and patches for export.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Step2.1.PNG" class="image" title="Image:Step2.1.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/a/aa/Step2.1.PNG" alt="Image:Step2.1.PNG" width="321" height="293" longdesc="/wiki/Image:Step2.1.PNG" /></a>
+</li><li>Select Scripts &gt; Export ASE...<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Step2.2.PNG" class="image" title="Image:Step2.2.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/4/43/Step2.2.PNG" alt="Image:Step2.2.PNG" width="358" height="164" longdesc="/wiki/Image:Step2.2.PNG" /></a>
+</li><li>In the filename textbox enter a filename.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Step2.3.PNG" class="image" title="Image:Step2.3.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/7/7b/Step2.3.PNG" alt="Image:Step2.3.PNG" width="292" height="167" longdesc="/wiki/Image:Step2.3.PNG" /></a>
+</li><li>In the path textbox enter the path or use the elipsis button on the right side of the text box to browse for a folder.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Step2.4.PNG" class="image" title="Image:Step2.4.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/6/63/Step2.4.PNG" alt="Image:Step2.4.PNG" width="292" height="167" longdesc="/wiki/Image:Step2.4.PNG" /></a>
+</li><li>Click the OK button.<br />
+</li></ol>
+<p>If export was successful you will find a file with the name you've specified at the location specified. If you attempt to overwrite the file you will be prompted to confirm or cancel the operation.
+</p><p>If for some reason there was a problem no file will be exported and an error message will be present in the console.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101119074129/http://www.modwiki.net/w/index.php?title=DrVertexBlend_%28tutorial%29&amp;action=edit&amp;section=6" title="Edit section: Importing the .ASE into Blender 2.53">edit</a>]</div><a name="Importing_the_.ASE_into_Blender_2.53"></a><h2>Importing the .ASE into Blender 2.53</h2>
+<p>When starting Blender you will be presented with the default layout which includes a scene with a camera, light, and cube primative in the main viewport.
+</p><p><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Step3general1.PNG" class="image" title=""><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/thumb/f/fd/Step3general1.PNG/800px-Step3general1.PNG" alt="" width="800" height="450" longdesc="/wiki/Image:Step3general1.PNG" /></a>
+</p><p>The cube should be highlighted in orange to identify it as being selected. If not right click it. Press x to delete it from the scene.
+</p><p><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Step3general2.PNG" class="image" title="Image:Step3general2.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/f/f9/Step3general2.PNG" alt="Image:Step3general2.PNG" width="234" height="190" longdesc="/wiki/Image:Step3general2.PNG" /></a>
+</p><p>With the cube removed, perform the following steps.
+</p>
+<ol><li>Click File &gt; Import &gt; Ascii Scene Export (.ASE) to open the file browser.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Step3.1.PNG" class="image" title="Image:Step3.1.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/e/e0/Step3.1.PNG" alt="Image:Step3.1.PNG" width="475" height="396" longdesc="/wiki/Image:Step3.1.PNG" /></a>
+</li><li>Navigate to the location of the .ASE exported in the previous section and select the file.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Step3.2.PNG" class="image" title="Image:Step3.2.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/e/ea/Step3.2.PNG" alt="Image:Step3.2.PNG" width="220" height="169" longdesc="/wiki/Image:Step3.2.PNG" /></a>
+</li><li>Click the Import ASE button in the top right corner.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Step3.3.PNG" class="image" title="Image:Step3.3.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/1/1a/Step3.3.PNG" alt="Image:Step3.3.PNG" width="159" height="97" longdesc="/wiki/Image:Step3.3.PNG" /></a>
+</li></ol>
+<p>If import was successful familiar geometry should appear in the main viewport and be reflected in the outliner. Take care that if you were to switch to textured mode, no texture would appear on the model. But rest assured that the material shaders applied in DarkRadiant have been preserved.
+</p><p><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Step3general3.PNG" class="image" title="Image:Step3general3.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/b/bb/Step3general3.PNG" alt="Image:Step3general3.PNG" width="604" height="330" longdesc="/wiki/Image:Step3general3.PNG" /></a>
+</p><p>The reason for this is because a material shader as used in the idTech 4 engine is not an image as Blender expects all textures to be. Instead, it is a declaration which references several images along side other game assets. Take note that in the image below, the texture panel is making reference to a non-existant image texture. This reference "textures/rock/newdarkrockblend" does not represent a file named newdarkrockblend in a folder called textures/rock. This is in fact the full name of a material shader.
+</p><p><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Step3general4.PNG" class="image" title="Image:Step3general4.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/b/b4/Step3general4.PNG" alt="Image:Step3general4.PNG" width="338" height="589" longdesc="/wiki/Image:Step3general4.PNG" /></a>
+</p><p>While it is theoretically possible to give the script the ability to read the contents of .pk4 files, load the contents of .mtr files, identify the specified material shader, and extract/convert the required image files so that they may be loaded into Blender, it is not required for vertex painting.
+</p><p>In the future such functionality may be incoorporated into the script but as it stands, it is not too much to ask that you refrain from playing with texture settings within Blender unless you know what you are doing.
+</p><p>It is important to note that brushes with multiple textures are exported as separate objects within a single .ASE file. Although the .ASE format supports unique textures per-face, idTech 4 does not so spliting faces into separate objects is required.
+</p><p>If there were any problems during import or it appears parts of the model are missing, check the console which would be the DOS or BASH terminal running in the background for error messages. If you encounter a problem please share the full contents of the console and the .ASE so that I can fix it.
+</p><p><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Step3general5.PNG" class="image" title="Image:Step3general5.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/c/c3/Step3general5.PNG" alt="Image:Step3general5.PNG" width="545" height="62" longdesc="/wiki/Image:Step3general5.PNG" /></a>
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101119074129/http://www.modwiki.net/w/index.php?title=DrVertexBlend_%28tutorial%29&amp;action=edit&amp;section=7" title="Edit section: Vertex Painting Each Object">edit</a>]</div><a name="Vertex_Painting_Each_Object"></a><h2>Vertex Painting Each Object</h2>
+<p>For each mesh object in your scene you plan to vertex paint, perform the following steps.
+</p>
+<ol><li>Right click the object to select it.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Step4.1.PNG" class="image" title="Image:Step4.1.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/1/1e/Step4.1.PNG" alt="Image:Step4.1.PNG" width="567" height="369" longdesc="/wiki/Image:Step4.1.PNG" /></a>
+</li><li>Press the period key on your numpad to focus the viewport on the selection.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Step4.2.PNG" class="image" title="Image:Step4.2.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/7/7d/Step4.2.PNG" alt="Image:Step4.2.PNG" width="691" height="496" longdesc="/wiki/Image:Step4.2.PNG" /></a>
+</li><li>Select Vertex Paint mode from the mode selection box at the bottom of the main viewport.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Step4.3.PNG" class="image" title="Image:Step4.3.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/3/38/Step4.3.PNG" alt="Image:Step4.3.PNG" width="211" height="195" longdesc="/wiki/Image:Step4.3.PNG" /></a>
+</li><li>Using the following controls, paint the vertices of the selected object.
+<ul><li>the middle mouse button to rotate
+</li><li>the shift key and middle mouse button to pan
+</li><li>the mouse wheel to zoom
+</li><li>the color wheel on the left for color selection
+</li><li>the left mouse button to paint
+</li></ul>
+</li></ol>
+<p><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Step4general2.PNG" class="image" title="Image:Step4general2.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/c/cc/Step4general2.PNG" alt="Image:Step4general2.PNG" width="145" height="388" longdesc="/wiki/Image:Step4general2.PNG" /></a><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Step4general1.PNG" class="image" title=""><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/thumb/8/8a/Step4general1.PNG/400px-Step4general1.PNG" alt="" width="400" height="281" longdesc="/wiki/Image:Step4general1.PNG" /></a>
+</p><p>Vertex blending is when two textures are blended based on the color of the underlying vertices. idTech 4 dictates that you use white to represent one texture and black to represent the other. Gray values are used to gradually blend between the two.
+</p><p>Vertex coloring is when one texture is tinted based on the color of the underlying vertices. You are not restricted in color usage although I am hard pressed to find a use for this. Technically you could paint shadows and the like on a mesh provided the geometry was dense enough.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101119074129/http://www.modwiki.net/w/index.php?title=DrVertexBlend_%28tutorial%29&amp;action=edit&amp;section=8" title="Edit section: Exporting Objects from Blender 2.53">edit</a>]</div><a name="Exporting_Objects_from_Blender_2.53"></a><h2>Exporting Objects from Blender 2.53</h2>
+<p>If you've created any new geometry within Blender it must be uv mapped and assigned a material before you can export. A brief explanation will be covered in Appendix A at the end of this document.
+</p><p>That said, if you've been following the tutorial and the objects in the scene are vertex painted to your satisfaction you are ready to export.
+</p><p>To make your selection visible it's best to change the mode from vertex paint to object mode. Right click each mesh object in your scene and choose object mode from the mode selection box.
+</p><p><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Step5general1.PNG" class="image" title="Image:Step5general1.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/a/a0/Step5general1.PNG" alt="Image:Step5general1.PNG" width="178" height="191" longdesc="/wiki/Image:Step5general1.PNG" /></a> 
+</p><p>Now you are prepared to export a group selection of objects.
+</p>
+<ol><li>Right click to select a mesh object.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Step5.1.PNG" class="image" title="Image:Step5.1.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/f/ff/Step5.1.PNG" alt="Image:Step5.1.PNG" width="684" height="479" longdesc="/wiki/Image:Step5.1.PNG" /></a>
+</li><li>Hold shift and right click each mesh object to add it to the selection.
+</li><li>With everything you intend to export selected, click File &gt; Export &gt; Ascii Scene Export (.ASE)<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Step5.3.PNG" class="image" title="Image:Step5.3.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/9/90/Step5.3.PNG" alt="Image:Step5.3.PNG" width="468" height="450" longdesc="/wiki/Image:Step5.3.PNG" /></a>
+</li><li>Navigate to the location you wish to export and type a unique filename in the filename text box.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Step5.4.PNG" class="image" title="Image:Step5.4.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/8/8b/Step5.4.PNG" alt="Image:Step5.4.PNG" width="209" height="176" longdesc="/wiki/Image:Step5.4.PNG" /></a>
+</li><li>Click the Export ASE button in the top right corner.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Step5.5.PNG" class="image" title="Image:Step5.5.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/d/d2/Step5.5.PNG" alt="Image:Step5.5.PNG" width="142" height="82" longdesc="/wiki/Image:Step5.5.PNG" /></a>
+</li></ol>
+<p>If export was successful a file with the name specified will appear in the location specified. If you attempt to overwrite an existing file the plugin will abort.
+</p><p>If no file exists check the console to ensure no problems were encountered during export. Now you should be able to copy the resulting .ASE file into the appropriate location along with your mod assets and use it in your map(s).
+</p><p><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Step5general2.PNG" class="image" title="Image:Step5general2.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/4/47/Step5general2.PNG" alt="Image:Step5general2.PNG" width="662" height="367" longdesc="/wiki/Image:Step5general2.PNG" /></a>
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101119074129/http://www.modwiki.net/w/index.php?title=DrVertexBlend_%28tutorial%29&amp;action=edit&amp;section=9" title="Edit section: Appendix A. Preparing a Native Object for Export">edit</a>]</div><a name="Appendix_A._Preparing_a_Native_Object_for_Export"></a><h1>Appendix A. Preparing a Native Object for Export</h1>
+<p>If you've created objects within Blender, it is not enough to simply export them as you would with something you've imported from DarkRadiant.
+</p><p>The distinction is in the fact that brushes and patches exported to .ase from DarkRadiant are already UV mapped and have a material applied while objects created within Blender do not.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101119074129/http://www.modwiki.net/w/index.php?title=DrVertexBlend_%28tutorial%29&amp;action=edit&amp;section=10" title="Edit section: UV Mapping">edit</a>]</div><a name="UV_Mapping"></a><h3>UV Mapping</h3>
+<p><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:800px-Cube_Representative_UV_Unwrapping.png" class="image" title="Image:800px-Cube Representative UV Unwrapping.png"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/a/a5/800px-Cube_Representative_UV_Unwrapping.png" alt="Image:800px-Cube Representative UV Unwrapping.png" width="800" height="533" longdesc="/wiki/Image:800px-Cube_Representative_UV_Unwrapping.png" /></a>
+</p><p>UV mapping is best explained through an analogy. Imagine you have a box and you want to lay it flat and run it through your printer to apply a texture to it. Obviously the box isn't going to lay flat unless you pull it apart at the seams.
+</p><p>UV mapping is the process of marking the seams on your object and commanding Blender to unwrap it. Once an object has been UV mapped, you've essentially given Blender and more importantly idTech 4 instructions on where parts of a 2D texture should appear on the 3D model.
+</p><p>For the purposes of this section the example object will be a cube.
+</p>
+<ol><li>On the menu bar immediately to the right of the help menu is the layout dropdown box. Change the layout to UV editing.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Astep1.PNG" class="image" title="Image:Astep1.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/5/57/Astep1.PNG" alt="Image:Astep1.PNG" width="290" height="286" longdesc="/wiki/Image:Astep1.PNG" /></a>
+</li><li>Right click your object in the 3D viewport to select it and toggle edit mode.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Astep2.PNG" class="image" title="Image:Astep2.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/0/0a/Astep2.PNG" alt="Image:Astep2.PNG" width="180" height="181" longdesc="/wiki/Image:Astep2.PNG" /></a>
+</li><li>Change the selection mode to edge and press the a key to deselect everything.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Astep3.PNG" class="image" title="Image:Astep3.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/e/e1/Astep3.PNG" alt="Image:Astep3.PNG" width="211" height="58" longdesc="/wiki/Image:Astep3.PNG" /></a>
+</li><li>Use right click followed by shift and right click to select a few edges to designate as seams.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Astep4.PNG" class="image" title="Image:Astep4.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/6/68/Astep4.PNG" alt="Image:Astep4.PNG" width="529" height="520" longdesc="/wiki/Image:Astep4.PNG" /></a>
+</li><li>On the tool shelf to the left of the 3D viewport under UV mapping select Mark Seams.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Astep5.PNG" class="image" title="Image:Astep5.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/c/cf/Astep5.PNG" alt="Image:Astep5.PNG" width="251" height="120" longdesc="/wiki/Image:Astep5.PNG" /></a>
+</li><li>Repeat this process until you are satisfied. It may help to turn wireframe mode on so you can see the seams on all sides of the model.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Astep6.PNG" class="image" title="Image:Astep6.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/7/7b/Astep6.PNG" alt="Image:Astep6.PNG" width="527" height="528" longdesc="/wiki/Image:Astep6.PNG" /></a>
+</li><li>In the 3D viewport press the a key to select all.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Astep7.PNG" class="image" title="Image:Astep7.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/9/93/Astep7.PNG" alt="Image:Astep7.PNG" width="503" height="516" longdesc="/wiki/Image:Astep7.PNG" /></a>
+</li><li>On the tool shelf to the left of the 3D viewport under UV mapping select Unwrap &gt; Unwrap. The unfolded version of your cube should appear in the UV editor on the left.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Astep8a.PNG" class="image" title="Image:Astep8a.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/d/d8/Astep8a.PNG" alt="Image:Astep8a.PNG" width="257" height="308" longdesc="/wiki/Image:Astep8a.PNG" /></a><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Astep8b.PNG" class="image" title="Image:Astep8b.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/d/d6/Astep8b.PNG" alt="Image:Astep8b.PNG" width="374" height="364" longdesc="/wiki/Image:Astep8b.PNG" /></a>
+</li><li>On the menu bar immediately to the right of the help menu is the layout dropdown box. Change the layout to Default.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Astep9.PNG" class="image" title="Image:Astep9.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/e/ec/Astep9.PNG" alt="Image:Astep9.PNG" width="272" height="286" longdesc="/wiki/Image:Astep9.PNG" /></a>
+</li><li>The seams are no longer needed. You may clear them by selecting all with the a key followed by clicking the clear seams button on the toolbar to the left of the 3D viewport under UV mapping.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Astep10.PNG" class="image" title="Image:Astep10.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/4/49/Astep10.PNG" alt="Image:Astep10.PNG" width="305" height="167" longdesc="/wiki/Image:Astep10.PNG" /></a>
+</li></ol>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101119074129/http://www.modwiki.net/w/index.php?title=DrVertexBlend_%28tutorial%29&amp;action=edit&amp;section=11" title="Edit section: Applying a Material">edit</a>]</div><a name="Applying_a_Material"></a><h3>Applying a Material</h3>
+<p>Applying a material is important as well as it's where the export script learns what material shader to apply to each object.
+</p>
+<ol><li>Change back to object mode using the mode selection box.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Aastep1.PNG" class="image" title="Image:Aastep1.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/e/e3/Aastep1.PNG" alt="Image:Aastep1.PNG" width="164" height="190" longdesc="/wiki/Image:Aastep1.PNG" /></a>
+</li><li>Ensure the cube is selected and open the material properties on the right.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Aastep2.PNG" class="image" title="Image:Aastep2.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/d/dd/Aastep2.PNG" alt="Image:Aastep2.PNG" width="325" height="175" longdesc="/wiki/Image:Aastep2.PNG" /></a>
+</li><li>Add a new material to the object.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Aastep3.PNG" class="image" title="Image:Aastep3.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/3/38/Aastep3.PNG" alt="Image:Aastep3.PNG" width="304" height="90" longdesc="/wiki/Image:Aastep3.PNG" /></a>
+</li><li>Open the texture properties and select the first texture channel.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Aastep4.PNG" class="image" title="Image:Aastep4.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/9/9f/Aastep4.PNG" alt="Image:Aastep4.PNG" width="332" height="792" longdesc="/wiki/Image:Aastep4.PNG" /></a>
+</li><li>Change the type to image.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Aastep5.PNG" class="image" title="Image:Aastep5.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/4/40/Aastep5.PNG" alt="Image:Aastep5.PNG" width="319" height="400" longdesc="/wiki/Image:Aastep5.PNG" /></a>
+</li><li>Scroll down to the image properties and add a new image.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Aastep6.PNG" class="image" title="Image:Aastep6.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/8/88/Aastep6.PNG" alt="Image:Aastep6.PNG" width="251" height="95" longdesc="/wiki/Image:Aastep6.PNG" /></a>
+</li><li>Change the source to file.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Aastep7.PNG" class="image" title="Image:Aastep7.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/7/74/Aastep7.PNG" alt="Image:Aastep7.PNG" width="310" height="207" longdesc="/wiki/Image:Aastep7.PNG" /></a>
+</li><li>In the file name text box type the full material shader name.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Aastep8.PNG" class="image" title="Image:Aastep8.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/d/d5/Aastep8.PNG" alt="Image:Aastep8.PNG" width="311" height="185" longdesc="/wiki/Image:Aastep8.PNG" /></a>
+</li></ol>
+<p>At this point the object should be ready for export. If you have multiple objects you'd like to export as an .ASE you'll need to uv map and apply a material to them separately.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101119074129/http://www.modwiki.net/w/index.php?title=DrVertexBlend_%28tutorial%29&amp;action=edit&amp;section=12" title="Edit section: Appendix B. Preparing Vertex Blended or Colored Material Shaders">edit</a>]</div><a name="Appendix_B._Preparing_Vertex_Blended_or_Colored_Material_Shaders"></a><h1>Appendix B. Preparing Vertex Blended or Colored Material Shaders</h1>
+<p>Generally this is a matter of opening up one or multiple material shader(s), mixing and matching portions of them, making a few modifications, and saving the newly created material shader with a unique name.
+</p><p>In section four I outlined the difference between vertex blended and vertex colored material shaders. I'm going to assume you've grasped the concept and know which of the two you're after.
+</p><p>It would also be of great benefit if you studied the texturing documentation available here along with a few existing materials that make use of vertex colors like textures/rock/dirt03_sharprock3.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101119074129/http://www.modwiki.net/w/index.php?title=DrVertexBlend_%28tutorial%29&amp;action=edit&amp;section=13" title="Edit section: Vertex Blended">edit</a>]</div><a name="Vertex_Blended"></a><h3>Vertex Blended</h3>
+<ol><li>Open DarkRadiant along with a plain text editor like notepad.
+</li><li>In the media browser identify the first material you'd like to use.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Bstep2.PNG" class="image" title=""><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/thumb/c/ca/Bstep2.PNG/800px-Bstep2.PNG" alt="" width="800" height="476" longdesc="/wiki/Image:Bstep2.PNG" /></a>
+</li><li>Right click it and select show shader definition.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Bstep3.PNG" class="image" title="Image:Bstep3.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/0/0f/Bstep3.PNG" alt="Image:Bstep3.PNG" width="256" height="88" longdesc="/wiki/Image:Bstep3.PNG" /></a>
+</li><li>Copy the text that makes up the material shader into your text editor.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Bstep4.PNG" class="image" title=""><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/thumb/d/dd/Bstep4.PNG/800px-Bstep4.PNG" alt="" width="800" height="625" longdesc="/wiki/Image:Bstep4.PNG" /></a>
+</li><li>Repeat this process for a second material adding the additional text to the bottom.
+</li><li>In your text editor break any diffusemap, bumpmap, or specularmap keywords into stages.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Bstep6a.PNG" class="image" title=""><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/thumb/8/85/Bstep6a.PNG/400px-Bstep6a.PNG" alt="" width="400" height="404" longdesc="/wiki/Image:Bstep6a.PNG" /></a><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Bstep6b.PNG" class="image" title=""><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/thumb/2/26/Bstep6b.PNG/400px-Bstep6b.PNG" alt="" width="400" height="493" longdesc="/wiki/Image:Bstep6b.PNG" /></a>
+</li><li>Remove any image processing keywords like addheightmap if present so only the most logical image reference remains.
+</li><li>In the first material shader, add the keyword vertexColor to each stage.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Bstep8.PNG" class="image" title="Image:Bstep8.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/f/fa/Bstep8.PNG" alt="Image:Bstep8.PNG" width="698" height="920" longdesc="/wiki/Image:Bstep8.PNG" /></a>
+</li><li>In the second material shader, add the keyword inverseVertexColor to each stage.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Bstep9.PNG" class="image" title="Image:Bstep9.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/e/e2/Bstep9.PNG" alt="Image:Bstep9.PNG" width="694" height="885" longdesc="/wiki/Image:Bstep9.PNG" /></a>
+</li><li>Cut and paste the stages from the second material shader into the end of the first.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Bstep10.PNG" class="image" title="Image:Bstep10.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/a/a4/Bstep10.PNG" alt="Image:Bstep10.PNG" width="707" height="879" longdesc="/wiki/Image:Bstep10.PNG" /></a>
+</li><li>Delete the remnants of the second material shader.
+</li><li>Rename the remaining material shader so that it has a unique name.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Bstep12.PNG" class="image" title="Image:Bstep12.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/2/28/Bstep12.PNG" alt="Image:Bstep12.PNG" width="579" height="172" longdesc="/wiki/Image:Bstep12.PNG" /></a>
+</li><li>Save it as an .mtr file.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Bstep13.PNG" class="image" title="Image:Bstep13.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/d/da/Bstep13.PNG" alt="Image:Bstep13.PNG" width="758" height="519" longdesc="/wiki/Image:Bstep13.PNG" /></a>
+</li><li>Place it in the materials subfolder within your mod directory.
+</li></ol>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101119074129/http://www.modwiki.net/w/index.php?title=DrVertexBlend_%28tutorial%29&amp;action=edit&amp;section=14" title="Edit section: Vertex Colored">edit</a>]</div><a name="Vertex_Colored"></a><h3>Vertex Colored</h3>
+<ol><li>Open DarkRadiant along with a text editor.
+</li><li>In the media browser identify the material you'd like to use.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Bbstep2.PNG" class="image" title=""><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/thumb/a/aa/Bbstep2.PNG/800px-Bbstep2.PNG" alt="" width="800" height="473" longdesc="/wiki/Image:Bbstep2.PNG" /></a>
+</li><li>Right click it and select show shader definition.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Bbstep3.PNG" class="image" title="Image:Bbstep3.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/1/19/Bbstep3.PNG" alt="Image:Bbstep3.PNG" width="266" height="95" longdesc="/wiki/Image:Bbstep3.PNG" /></a>
+</li><li>Copy the material shader into your text editor.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Bbstep4.PNG" class="image" title=""><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/thumb/a/a3/Bbstep4.PNG/800px-Bbstep4.PNG" alt="" width="800" height="626" longdesc="/wiki/Image:Bbstep4.PNG" /></a>
+</li><li>In your text editor break the diffusemap keyword if present, into a stage.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Bbstep5a.PNG" class="image" title=""><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/thumb/9/98/Bbstep5a.PNG/400px-Bbstep5a.PNG" alt="" width="400" height="372" longdesc="/wiki/Image:Bbstep5a.PNG" /></a><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Bbstep5b.PNG" class="image" title=""><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/thumb/7/71/Bbstep5b.PNG/400px-Bbstep5b.PNG" alt="" width="400" height="428" longdesc="/wiki/Image:Bbstep5b.PNG" /></a>
+</li><li>Add the keyword vertexColor to the diffuse stage.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Bbstep6.PNG" class="image" title="Image:Bbstep6.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/4/47/Bbstep6.PNG" alt="Image:Bbstep6.PNG" width="581" height="106" longdesc="/wiki/Image:Bbstep6.PNG" /></a>
+</li><li>Rename the modified material shader so that it has a unique name.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Bbstep7.PNG" class="image" title="Image:Bbstep7.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/3/3a/Bbstep7.PNG" alt="Image:Bbstep7.PNG" width="638" height="69" longdesc="/wiki/Image:Bbstep7.PNG" /></a>
+</li><li>Save it as an .mtr file.<br /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Image:Bbstep8.PNG" class="image" title="Image:Bbstep8.PNG"><img src="/web/20101119074129im_/http://www.modwiki.net/w/images/3/32/Bbstep8.PNG" alt="Image:Bbstep8.PNG" width="758" height="519" longdesc="/wiki/Image:Bbstep8.PNG" /></a>
+</li><li>Place it in the materials subfolder within your mod directory.
+</li></ol>
+<div class="printfooter">
+Retrieved from "<a href="/web/20101119074129/http://www.modwiki.net/wiki/DrVertexBlend_%28tutorial%29">http://www.modwiki.net/wiki/DrVertexBlend_%28tutorial%29</a>"</div>
+			<div id="catlinks"><p class='catlinks'><a href="/web/20101119074129/http://www.modwiki.net/w/index.php?title=Special:Categories&amp;article=DrVertexBlend_%28tutorial%29" title="Special:Categories">Categories</a>: <span dir='ltr'><a href="/web/20101119074129/http://www.modwiki.net/wiki/Category:Modelling" title="Category:Modelling">Modelling</a></span> | <span dir='ltr'><a href="/web/20101119074129/http://www.modwiki.net/wiki/Category:Texturing" title="Category:Texturing">Texturing</a></span> | <span dir='ltr'><a href="/web/20101119074129/http://www.modwiki.net/wiki/Category:Tutorials" title="Category:Tutorials">Tutorials</a></span><br /><hr /><a href="/web/20101119074129/http://www.modwiki.net/wiki/Category:Modwiki" title="Category:Modwiki">Modwiki</a> &gt; <a href="/web/20101119074129/http://www.modwiki.net/wiki/Category:Help" title="Category:Help">Help</a> &gt; <a href="/web/20101119074129/http://www.modwiki.net/wiki/Category:Tutorials" title="Category:Tutorials">Tutorials</a><br />
+<a href="/web/20101119074129/http://www.modwiki.net/wiki/Category:Modwiki" title="Category:Modwiki">Modwiki</a> &gt; <a href="/web/20101119074129/http://www.modwiki.net/wiki/Category:Modelling" title="Category:Modelling">Modelling</a><br />
+<a href="/web/20101119074129/http://www.modwiki.net/wiki/Category:Modwiki" title="Category:Modwiki">Modwiki</a> &gt; <a href="/web/20101119074129/http://www.modwiki.net/wiki/Category:Texturing" title="Category:Texturing">Texturing</a></p></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="/web/20101119074129/http://www.modwiki.net/wiki/DrVertexBlend_%28tutorial%29">Article</a></li>
+				 <li id="ca-talk" class="new"><a href="/web/20101119074129/http://www.modwiki.net/w/index.php?title=Talk:DrVertexBlend_%28tutorial%29&amp;action=edit">Discussion</a></li>
+				 <li id="ca-edit"><a href="/web/20101119074129/http://www.modwiki.net/w/index.php?title=DrVertexBlend_%28tutorial%29&amp;action=edit">Edit</a></li>
+				 <li id="ca-history"><a href="/web/20101119074129/http://www.modwiki.net/w/index.php?title=DrVertexBlend_%28tutorial%29&amp;action=history">History</a></li>
+		</ul>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/web/20101119074129/http://www.modwiki.net/w/index.php?title=Special:Userlogin&amp;returnto=DrVertexBlend_(tutorial)">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/web/20101119074129im_/http://www.modwiki.net/wiki/upload/wiki.png);" href="/web/20101119074129/http://www.modwiki.net/wiki/Main_Page" title="Main Page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class='portlet' id='p-Main'>
+		<h5>Main</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/web/20101119074129/http://www.modwiki.net/wiki/Main_Page">Main Page</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 4'>
+		<h5>id Tech 4</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Doom-3"><a href="/web/20101119074129/http://www.modwiki.net/wiki/Doom_3">Doom 3</a></li>
+				<li id="n-Quake-4"><a href="/web/20101119074129/http://www.modwiki.net/wiki/Quake_4">Quake 4</a></li>
+				<li id="n-Prey"><a href="/web/20101119074129/http://www.modwiki.net/wiki/Prey">Prey</a></li>
+				<li id="n-ETQW"><a href="/web/20101119074129/http://www.modwiki.net/wiki/Enemy_Territory:_Quake_Wars">ETQW</a></li>
+				<li id="n-Wolfenstein"><a href="/web/20101119074129/http://www.modwiki.net/wiki/Wolfenstein">Wolfenstein</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 5'>
+		<h5>id Tech 5</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Rage"><a href="/web/20101119074129/http://www.modwiki.net/wiki/Rage">Rage</a></li>
+				<li id="n-Doom-4"><a href="/web/20101119074129/http://www.modwiki.net/wiki/Doom_4">Doom 4</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Quick Links'>
+		<h5>Quick Links</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Console"><a href="/web/20101119074129/http://www.modwiki.net/wiki/Console">Console</a></li>
+				<li id="n-Script-Events"><a href="/web/20101119074129/http://www.modwiki.net/wiki/Scripting">Script Events</a></li>
+				<li id="n-Material-Keywords"><a href="/web/20101119074129/http://www.modwiki.net/wiki/Material_%28decl%29">Material Keywords</a></li>
+				<li id="n-Modification-List"><a href="/web/20101119074129/http://www.modwiki.net/wiki/Modlist">Modification List</a></li>
+				<li id="n-Tutorial-List"><a href="/web/20101119074129/http://www.modwiki.net/wiki/Tutorial_list">Tutorial List</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Wiki'>
+		<h5>Wiki</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Open-tasks"><a href="/web/20101119074129/http://www.modwiki.net/wiki/modwiki:Open_tasks">Open tasks</a></li>
+				<li id="n-recentchanges"><a href="/web/20101119074129/http://www.modwiki.net/wiki/Special:Recentchanges">Recent changes</a></li>
+				<li id="n-Style-guide"><a href="/web/20101119074129/http://www.modwiki.net/wiki/modwiki:Style_guide">Style guide</a></li>
+				<li id="n-help"><a href="/web/20101119074129/http://www.modwiki.net/wiki/Help:Contents">Help</a></li>
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/web/20101119074129/http://www.modwiki.net/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" value="Search" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/web/20101119074129/http://www.modwiki.net/wiki/Special:Whatlinkshere/DrVertexBlend_%28tutorial%29">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/web/20101119074129/http://www.modwiki.net/wiki/Special:Recentchangeslinked/DrVertexBlend_%28tutorial%29">Related changes</a></li>
+<li id="t-upload"><a href="/web/20101119074129/http://www.modwiki.net/wiki/Special:Upload">Upload file</a></li>
+<li id="t-specialpages"><a href="/web/20101119074129/http://www.modwiki.net/wiki/Special:Specialpages">Special pages</a></li>
+				<li id="t-print"><a href="/web/20101119074129/http://www.modwiki.net/w/index.php?title=DrVertexBlend_%28tutorial%29&amp;printable=yes">Printable version</a></li>				<li id="t-permalink"><a href="/web/20101119074129/http://www.modwiki.net/w/index.php?title=DrVertexBlend_%28tutorial%29&amp;oldid=13964">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="/web/20101119074129/http://www.mediawiki.org/"><img src="/web/20101119074129im_/http://www.modwiki.net/w/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="/web/20101119074129/http://www.gnu.org/copyleft/fdl.html"><img src="/web/20101119074129im_/http://www.modwiki.net/w/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+				<li id="lastmod"> This page was last modified 10:40, 25 July 2010.</li>
+				<li id="copyright">Content is available under <a href="/web/20101119074129/http://www.gnu.org/copyleft/fdl.html" class='external ' title="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.2</a>.</li>
+				<li id="privacy"><a href="/web/20101119074129/http://www.modwiki.net/wiki/modwiki:Privacy_policy" title="modwiki:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="/web/20101119074129/http://www.modwiki.net/wiki/modwiki:About" title="modwiki:About">About modwiki</a></li>
+				<li id="disclaimer"><a href="/web/20101119074129/http://www.modwiki.net/wiki/modwiki:General_disclaimer" title="modwiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+	<script type="text/javascript"> if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+<!-- Served by h982484 in 0.64 secs. -->
+</body></html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 7:41:29 Nov 19, 2010 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 4:00:32 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

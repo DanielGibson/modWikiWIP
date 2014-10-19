@@ -1,0 +1,495 @@
+DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex,follow" />
+<link rel="shortcut icon" href="/web/20070729231805im_/http://modwiki.net/favicon.ico" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<title>Wanted pages - modwiki</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20070729231805cs_/http://modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/web/20070729231805cs_/http://modwiki.net/w/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/w/skins/monobook/IE70Fixes.css?1";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
+		<script type="text/javascript" src="/web/20070729231805js_/http://modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20070729231805js_/http://modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/web/20070729231805cs_/http://modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231805cs_/http://modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231805cs_/http://modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns--1 ltr">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app11.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/modwiki.net\/w\/index.php?title=Special:Wantedpages&limit=100&offset=1600";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "29";
+var displayMonth = "Jul";
+var displayYear = "2007";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://modwiki.net/w/index.php?title=Special:Wantedpages&amp;limit=100&amp;offset=1600" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20070729231805" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jun
+                       
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 23:18:05 Jul 29, 2007">JUL</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Aug
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_prv_off.png" alt="Previous capture" width="14" height="16" border="0" />
+                       
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 23:18:05 Jul 29, 2007">29</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2006
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 23:18:05 Jul 29, 2007">2007</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2008
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20070729231805*/http://modwiki.net/w/index.php?title=Special:Wantedpages&amp;limit=100&amp;offset=1600" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>1 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">29 Jul 07 - 29 Jul 07</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:6:000000100000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000_2014:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">Wanted pages</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From modwiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Wantedpages&amp;limit=100&amp;offset=1600#column-one">navigation</a>, <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Wantedpages&amp;limit=100&amp;offset=1600#searchInput">search</a></div>			<!-- start content -->
+			<p>Showing below up to <b>100</b> results starting with #<b>1,601</b>.
+<br />View (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Wantedpages&amp;limit=100&amp;offset=1500">previous 100</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Wantedpages&amp;limit=100&amp;offset=1700">next 100</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Wantedpages&amp;limit=20&amp;offset=1600">20</a> | <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Wantedpages&amp;limit=50&amp;offset=1600">50</a> | <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Wantedpages&amp;limit=100&amp;offset=1600">100</a> | <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Wantedpages&amp;limit=250&amp;offset=1600">250</a> | <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Wantedpages&amp;limit=500&amp;offset=1600">500</a>).</p>
+<ol start='1601' class='special'><li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=G_mbNumBlurs_%28cvar%29&amp;action=edit" class="new" title="G mbNumBlurs (cvar)">G mbNumBlurs (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=G_mbNumBlurs_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=G_mpPlayerRagdollLife_%28cvar%29&amp;action=edit" class="new" title="G mpPlayerRagdollLife (cvar)">G mpPlayerRagdollLife (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=G_mpPlayerRagdollLife_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=G_mpSyncPlayerRagdoll_%28cvar%29&amp;action=edit" class="new" title="G mpSyncPlayerRagdoll (cvar)">G mpSyncPlayerRagdoll (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=G_mpSyncPlayerRagdoll_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=G_nodormant_%28cvar%29&amp;action=edit" class="new" title="G nodormant (cvar)">G nodormant (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=G_nodormant_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=G_nogore_%28cvar%29&amp;action=edit" class="new" title="G nogore (cvar)">G nogore (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=G_nogore_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=G_postEventsDebug_%28cvar%29&amp;action=edit" class="new" title="G postEventsDebug (cvar)">G postEventsDebug (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=G_postEventsDebug_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=G_printDDA_%28cvar%29&amp;action=edit" class="new" title="G printDDA (cvar)">G printDDA (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=G_printDDA_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=G_printlocations_%28cvar%29&amp;action=edit" class="new" title="G printlocations (cvar)">G printlocations (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=G_printlocations_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=G_ragdollDecals_%28cvar%29&amp;action=edit" class="new" title="G ragdollDecals (cvar)">G ragdollDecals (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=G_ragdollDecals_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=G_roadhouseCompleted_%28cvar%29&amp;action=edit" class="new" title="G roadhouseCompleted (cvar)">G roadhouseCompleted (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=G_roadhouseCompleted_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=G_robustDormantAll_%28cvar%29&amp;action=edit" class="new" title="G robustDormantAll (cvar)">G robustDormantAll (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=G_robustDormantAll_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=G_runMapCycle_%28cvar%29&amp;action=edit" class="new" title="G runMapCycle (cvar)">G runMapCycle (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=G_runMapCycle_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=G_showAimHealth_%28cvar%29&amp;action=edit" class="new" title="G showAimHealth (cvar)">G showAimHealth (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=G_showAimHealth_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=G_showDormant_%28cvar%29&amp;action=edit" class="new" title="G showDormant (cvar)">G showDormant (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=G_showDormant_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=G_showEntityCount_%28cvar%29&amp;action=edit" class="new" title="G showEntityCount (cvar)">G showEntityCount (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=G_showEntityCount_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=G_showGamePortals_%28cvar%29&amp;action=edit" class="new" title="G showGamePortals (cvar)">G showGamePortals (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=G_showGamePortals_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=G_showProjectileLaunchPoint_%28cvar%29&amp;action=edit" class="new" title="G showProjectileLaunchPoint (cvar)">G showProjectileLaunchPoint (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=G_showProjectileLaunchPoint_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=G_showValidSoundAreas_%28cvar%29&amp;action=edit" class="new" title="G showValidSoundAreas (cvar)">G showValidSoundAreas (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=G_showValidSoundAreas_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=G_springConstant_%28cvar%29&amp;action=edit" class="new" title="G springConstant (cvar)">G springConstant (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=G_springConstant_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=G_subtitles_%28cvar%29&amp;action=edit" class="new" title="G subtitles (cvar)">G subtitles (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=G_subtitles_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=G_testModelPitch_%28cvar%29&amp;action=edit" class="new" title="G testModelPitch (cvar)">G testModelPitch (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=G_testModelPitch_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=G_tips_%28cvar%29&amp;action=edit" class="new" title="G tips (cvar)">G tips (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=G_tips_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=G_trackDDA_%28cvar%29&amp;action=edit" class="new" title="G trackDDA (cvar)">G trackDDA (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=G_trackDDA_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=G_useDDA_%28cvar%29&amp;action=edit" class="new" title="G useDDA (cvar)">G useDDA (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=G_useDDA_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=G_wicked_%28cvar%29&amp;action=edit" class="new" title="G wicked (cvar)">G wicked (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=G_wicked_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Gui_filter_pb_%28cvar%29&amp;action=edit" class="new" title="Gui filter pb (cvar)">Gui filter pb (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Gui_filter_pb_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Gui_translationOffset_vertical_%28cvar%29&amp;action=edit" class="new" title="Gui translationOffset vertical (cvar)">Gui translationOffset vertical (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Gui_translationOffset_vertical_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Gui_translationOffset_x_%28cvar%29&amp;action=edit" class="new" title="Gui translationOffset x (cvar)">Gui translationOffset x (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Gui_translationOffset_x_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Gui_translationOffset_y_%28cvar%29&amp;action=edit" class="new" title="Gui translationOffset y (cvar)">Gui translationOffset y (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Gui_translationOffset_y_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Gui_translationOffset_z_%28cvar%29&amp;action=edit" class="new" title="Gui translationOffset z (cvar)">Gui translationOffset z (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Gui_translationOffset_z_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Image_downSizeSoftLimit_%28cvar%29&amp;action=edit" class="new" title="Image downSizeSoftLimit (cvar)">Image downSizeSoftLimit (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Image_downSizeSoftLimit_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Image_useHighRes_%28cvar%29&amp;action=edit" class="new" title="Image useHighRes (cvar)">Image useHighRes (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Image_useHighRes_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Image_writePrecompressedTexture_%28cvar%29&amp;action=edit" class="new" title="Image writePrecompressedTexture (cvar)">Image writePrecompressedTexture (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Image_writePrecompressedTexture_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Model_usePrebuiltModels_%28cvar%29&amp;action=edit" class="new" title="Model usePrebuiltModels (cvar)">Model usePrebuiltModels (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Model_usePrebuiltModels_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Model_writePrebuiltModels_%28cvar%29&amp;action=edit" class="new" title="Model writePrebuiltModels (cvar)">Model writePrebuiltModels (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Model_writePrebuiltModels_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=P_camInterpDebug_%28cvar%29&amp;action=edit" class="new" title="P camInterpDebug (cvar)">P camInterpDebug (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=P_camInterpDebug_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=P_camRotRateScale_%28cvar%29&amp;action=edit" class="new" title="P camRotRateScale (cvar)">P camRotRateScale (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=P_camRotRateScale_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=P_disableCamInterp_%28cvar%29&amp;action=edit" class="new" title="P disableCamInterp (cvar)">P disableCamInterp (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=P_disableCamInterp_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=P_iterRotMoveNumIterations_%28cvar%29&amp;action=edit" class="new" title="P iterRotMoveNumIterations (cvar)">P iterRotMoveNumIterations (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=P_iterRotMoveNumIterations_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=P_iterRotMoveTransDist_%28cvar%29&amp;action=edit" class="new" title="P iterRotMoveTransDist (cvar)">P iterRotMoveTransDist (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=P_iterRotMoveTransDist_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=P_mountedGunDebug_%28cvar%29&amp;action=edit" class="new" title="P mountedGunDebug (cvar)">P mountedGunDebug (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=P_mountedGunDebug_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=P_playerPhysicsDebug_%28cvar%29&amp;action=edit" class="new" title="P playerPhysicsDebug (cvar)">P playerPhysicsDebug (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=P_playerPhysicsDebug_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=P_tripwireDebug_%28cvar%29&amp;action=edit" class="new" title="P tripwireDebug (cvar)">P tripwireDebug (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=P_tripwireDebug_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Pm_thirdPersonDeathMP_%28cvar%29&amp;action=edit" class="new" title="Pm thirdPersonDeathMP (cvar)">Pm thirdPersonDeathMP (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Pm_thirdPersonDeathMP_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Pm_wallwalkstepsize_%28cvar%29&amp;action=edit" class="new" title="Pm wallwalkstepsize (cvar)">Pm wallwalkstepsize (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Pm_wallwalkstepsize_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=R_aspectratio_%28cvar%29&amp;action=edit" class="new" title="R aspectratio (cvar)">R aspectratio (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=R_aspectratio_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=R_correctSpecular_%28cvar%29&amp;action=edit" class="new" title="R correctSpecular (cvar)">R correctSpecular (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=R_correctSpecular_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=R_cubemapNormalize_%28cvar%29&amp;action=edit" class="new" title="R cubemapNormalize (cvar)">R cubemapNormalize (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=R_cubemapNormalize_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=R_debugDeformations_%28cvar%29&amp;action=edit" class="new" title="R debugDeformations (cvar)">R debugDeformations (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=R_debugDeformations_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=R_demoAspectHack_%28cvar%29&amp;action=edit" class="new" title="R demoAspectHack (cvar)">R demoAspectHack (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=R_demoAspectHack_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=R_demoInteractionHack_%28cvar%29&amp;action=edit" class="new" title="R demoInteractionHack (cvar)">R demoInteractionHack (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=R_demoInteractionHack_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=R_glowAlphaChange_%28cvar%29&amp;action=edit" class="new" title="R glowAlphaChange (cvar)">R glowAlphaChange (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=R_glowAlphaChange_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=R_glowAlpha_%28cvar%29&amp;action=edit" class="new" title="R glowAlpha (cvar)">R glowAlpha (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=R_glowAlpha_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=R_glowSteps_%28cvar%29&amp;action=edit" class="new" title="R glowSteps (cvar)">R glowSteps (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=R_glowSteps_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=R_glowStrength_%28cvar%29&amp;action=edit" class="new" title="R glowStrength (cvar)">R glowStrength (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=R_glowStrength_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=R_lightWholeMesh_%28cvar%29&amp;action=edit" class="new" title="R lightWholeMesh (cvar)">R lightWholeMesh (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=R_lightWholeMesh_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=R_lowParticleDetail_%28cvar%29&amp;action=edit" class="new" title="R lowParticleDetail (cvar)">R lowParticleDetail (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=R_lowParticleDetail_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=R_lowWorldDetail_%28cvar%29&amp;action=edit" class="new" title="R lowWorldDetail (cvar)">R lowWorldDetail (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=R_lowWorldDetail_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=R_noBufferDword_%28cvar%29&amp;action=edit" class="new" title="R noBufferDword (cvar)">R noBufferDword (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=R_noBufferDword_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=R_normalizeBumpmap_%28cvar%29&amp;action=edit" class="new" title="R normalizeBumpmap (cvar)">R normalizeBumpmap (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=R_normalizeBumpmap_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=R_pbufferRenderH_%28cvar%29&amp;action=edit" class="new" title="R pbufferRenderH (cvar)">R pbufferRenderH (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=R_pbufferRenderH_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=R_pbufferRenderW_%28cvar%29&amp;action=edit" class="new" title="R pbufferRenderW (cvar)">R pbufferRenderW (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=R_pbufferRenderW_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=R_pbufferRender_%28cvar%29&amp;action=edit" class="new" title="R pbufferRender (cvar)">R pbufferRender (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=R_pbufferRender_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=R_recalcParticleBounds_%28cvar%29&amp;action=edit" class="new" title="R recalcParticleBounds (cvar)">R recalcParticleBounds (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=R_recalcParticleBounds_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=R_shaderLevel_%28cvar%29&amp;action=edit" class="new" title="R shaderLevel (cvar)">R shaderLevel (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=R_shaderLevel_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=R_showTextureSize_%28cvar%29&amp;action=edit" class="new" title="R showTextureSize (cvar)">R showTextureSize (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=R_showTextureSize_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=R_skipBeams_%28cvar%29&amp;action=edit" class="new" title="R skipBeams (cvar)">R skipBeams (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=R_skipBeams_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=R_skipDeformations_%28cvar%29&amp;action=edit" class="new" title="R skipDeformations (cvar)">R skipDeformations (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=R_skipDeformations_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=R_skipGlowOverlay_%28cvar%29&amp;action=edit" class="new" title="R skipGlowOverlay (cvar)">R skipGlowOverlay (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=R_skipGlowOverlay_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=R_skipLights_%28cvar%29&amp;action=edit" class="new" title="R skipLights (cvar)">R skipLights (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=R_skipLights_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=R_usePreciseTriangleInteraction_%28cvar%29&amp;action=edit" class="new" title="R usePreciseTriangleInteraction (cvar)">R usePreciseTriangleInteraction (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=R_usePreciseTriangleInteraction_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=S_debugshakes_%28cvar%29&amp;action=edit" class="new" title="S debugshakes (cvar)">S debugshakes (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=S_debugshakes_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=S_eaxtools_%28cvar%29&amp;action=edit" class="new" title="S eaxtools (cvar)">S eaxtools (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=S_eaxtools_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=S_lowPassPortals_%28cvar%29&amp;action=edit" class="new" title="S lowPassPortals (cvar)">S lowPassPortals (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=S_lowPassPortals_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=S_lowPassSpirit_%28cvar%29&amp;action=edit" class="new" title="S lowPassSpirit (cvar)">S lowPassSpirit (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=S_lowPassSpirit_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=S_musicVolume_dB_%28cvar%29&amp;action=edit" class="new" title="S musicVolume dB (cvar)">S musicVolume dB (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=S_musicVolume_dB_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=S_showSoundsInWalls_%28cvar%29&amp;action=edit" class="new" title="S showSoundsInWalls (cvar)">S showSoundsInWalls (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=S_showSoundsInWalls_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=S_voiceDuckFadeTimeIn_%28cvar%29&amp;action=edit" class="new" title="S voiceDuckFadeTimeIn (cvar)">S voiceDuckFadeTimeIn (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=S_voiceDuckFadeTimeIn_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=S_voiceDuckFadeTimeOut_%28cvar%29&amp;action=edit" class="new" title="S voiceDuckFadeTimeOut (cvar)">S voiceDuckFadeTimeOut (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=S_voiceDuckFadeTimeOut_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=S_voiceDuckVolume_%28cvar%29&amp;action=edit" class="new" title="S voiceDuckVolume (cvar)">S voiceDuckVolume (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=S_voiceDuckVolume_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=S_voiceDucking_%28cvar%29&amp;action=edit" class="new" title="S voiceDucking (cvar)">S voiceDucking (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=S_voiceDucking_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Si_serverURL_%28cvar%29&amp;action=edit" class="new" title="Si serverURL (cvar)">Si serverURL (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Si_serverURL_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Sys_forceCache_%28cvar%29&amp;action=edit" class="new" title="Sys forceCache (cvar)">Sys forceCache (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Sys_forceCache_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Sys_savedPosition_%28cvar%29&amp;action=edit" class="new" title="Sys savedPosition (cvar)">Sys savedPosition (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Sys_savedPosition_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Ui_modelNum_%28cvar%29&amp;action=edit" class="new" title="Ui modelNum (cvar)">Ui modelNum (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Ui_modelNum_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Autolabel_%28cvar%29&amp;action=edit" class="new" title="Autolabel (cvar)">Autolabel (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Autolabel_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Bse_maxParticles_%28cvar%29&amp;action=edit" class="new" title="Bse maxParticles (cvar)">Bse maxParticles (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Bse_maxParticles_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Bse_scale_%28cvar%29&amp;action=edit" class="new" title="Bse scale (cvar)">Bse scale (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Bse_scale_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Bsp_menuitem0_%28cvar%29&amp;action=edit" class="new" title="Bsp menuitem0 (cvar)">Bsp menuitem0 (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Bsp_menuitem0_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Bsp_menuitem10_%28cvar%29&amp;action=edit" class="new" title="Bsp menuitem10 (cvar)">Bsp menuitem10 (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Bsp_menuitem10_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Bsp_menuitem11_%28cvar%29&amp;action=edit" class="new" title="Bsp menuitem11 (cvar)">Bsp menuitem11 (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Bsp_menuitem11_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Bsp_menuitem12_%28cvar%29&amp;action=edit" class="new" title="Bsp menuitem12 (cvar)">Bsp menuitem12 (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Bsp_menuitem12_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Bsp_menuitem13_%28cvar%29&amp;action=edit" class="new" title="Bsp menuitem13 (cvar)">Bsp menuitem13 (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Bsp_menuitem13_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Bsp_menuitem1_%28cvar%29&amp;action=edit" class="new" title="Bsp menuitem1 (cvar)">Bsp menuitem1 (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Bsp_menuitem1_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Bsp_menuitem2_%28cvar%29&amp;action=edit" class="new" title="Bsp menuitem2 (cvar)">Bsp menuitem2 (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Bsp_menuitem2_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Bsp_menuitem3_%28cvar%29&amp;action=edit" class="new" title="Bsp menuitem3 (cvar)">Bsp menuitem3 (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Bsp_menuitem3_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Bsp_menuitem4_%28cvar%29&amp;action=edit" class="new" title="Bsp menuitem4 (cvar)">Bsp menuitem4 (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Bsp_menuitem4_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Bsp_menuitem5_%28cvar%29&amp;action=edit" class="new" title="Bsp menuitem5 (cvar)">Bsp menuitem5 (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Bsp_menuitem5_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Bsp_menuitem6_%28cvar%29&amp;action=edit" class="new" title="Bsp menuitem6 (cvar)">Bsp menuitem6 (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Bsp_menuitem6_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+<li><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Bsp_menuitem7_%28cvar%29&amp;action=edit" class="new" title="Bsp menuitem7 (cvar)">Bsp menuitem7 (cvar)</a> (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Whatlinkshere&amp;target=Bsp_menuitem7_(cvar)" title="Special:Whatlinkshere">1 links</a>)</li>
+</ol><p>View (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Wantedpages&amp;limit=100&amp;offset=1500">previous 100</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Wantedpages&amp;limit=100&amp;offset=1700">next 100</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Wantedpages&amp;limit=20&amp;offset=1600">20</a> | <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Wantedpages&amp;limit=50&amp;offset=1600">50</a> | <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Wantedpages&amp;limit=100&amp;offset=1600">100</a> | <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Wantedpages&amp;limit=250&amp;offset=1600">250</a> | <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Wantedpages&amp;limit=500&amp;offset=1600">500</a>).</p>
+<div class="printfooter">
+Retrieved from "<a href="/web/20070729231805/http://modwiki.net/wiki/Special:Wantedpages">http://modwiki.net/wiki/Special:Wantedpages</a>"</div>
+						<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<ul>
+				 <li id="ca-article" class="selected"><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Wantedpages&amp;limit=100&amp;offset=1600">Special Page</a></li>
+		</ul>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Userlogin&amp;returnto=Special:Wantedpages">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/web/20070729231805im_/http://modwiki.net/wiki/upload/wiki.png);" href="/web/20070729231805/http://modwiki.net/wiki/Main_Page" title="Main Page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class='portlet' id='p-Main'>
+		<h5>Main</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/web/20070729231805/http://modwiki.net/wiki/Main_Page">Main Page</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 4'>
+		<h5>id Tech 4</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Doom-3"><a href="/web/20070729231805/http://modwiki.net/wiki/Doom_3">Doom 3</a></li>
+				<li id="n-Quake-4"><a href="/web/20070729231805/http://modwiki.net/wiki/Quake_4">Quake 4</a></li>
+				<li id="n-Prey"><a href="/web/20070729231805/http://modwiki.net/wiki/Prey">Prey</a></li>
+				<li id="n-ETQW"><a href="/web/20070729231805/http://modwiki.net/wiki/Enemy_Territory:_Quake_Wars">ETQW</a></li>
+				<li id="n-RTCW-2"><a href="/web/20070729231805/http://modwiki.net/wiki/Return_to_Castle_Wolfenstein_2">RTCW 2</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 5'>
+		<h5>id Tech 5</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Rage"><a href="/web/20070729231805/http://modwiki.net/wiki/Rage">Rage</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Quick Links'>
+		<h5>Quick Links</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Console"><a href="/web/20070729231805/http://modwiki.net/wiki/Console">Console</a></li>
+				<li id="n-Script-Events"><a href="/web/20070729231805/http://modwiki.net/wiki/Scripting">Script Events</a></li>
+				<li id="n-Material-Keywords"><a href="/web/20070729231805/http://modwiki.net/wiki/Material_%28decl%29">Material Keywords</a></li>
+				<li id="n-Modification-List"><a href="/web/20070729231805/http://modwiki.net/wiki/Modlist">Modification List</a></li>
+				<li id="n-Tutorial-List"><a href="/web/20070729231805/http://modwiki.net/wiki/Tutorial_list">Tutorial List</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Wiki'>
+		<h5>Wiki</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Open-tasks"><a href="/web/20070729231805/http://modwiki.net/wiki/modwiki:Open_tasks">Open tasks</a></li>
+				<li id="n-recentchanges"><a href="/web/20070729231805/http://modwiki.net/wiki/Special:Recentchanges">Recent changes</a></li>
+				<li id="n-Style-guide"><a href="/web/20070729231805/http://modwiki.net/wiki/modwiki:Style_guide">Style guide</a></li>
+				<li id="n-help"><a href="/web/20070729231805/http://modwiki.net/wiki/Help:Contents">Help</a></li>
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/web/20070729231805/http://modwiki.net/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" value="Search" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+<li id="t-upload"><a href="/web/20070729231805/http://modwiki.net/wiki/Special:Upload">Upload file</a></li>
+<li id="t-specialpages"><a href="/web/20070729231805/http://modwiki.net/wiki/Special:Specialpages">Special pages</a></li>
+			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="/web/20070729231805/http://www.mediawiki.org/"><img src="/web/20070729231805im_/http://modwiki.net/w/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="/web/20070729231805/http://www.gnu.org/copyleft/fdl.html"><img src="/web/20070729231805im_/http://modwiki.net/w/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+				<li id="privacy"><a href="/web/20070729231805/http://modwiki.net/wiki/modwiki:Privacy_policy" title="modwiki:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="/web/20070729231805/http://modwiki.net/wiki/modwiki:About" title="modwiki:About">About modwiki</a></li>
+				<li id="disclaimer"><a href="/web/20070729231805/http://modwiki.net/wiki/modwiki:General_disclaimer" title="modwiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+	<script type="text/javascript"> if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+<!-- Served by h982484 in 0.95 secs. -->
+</body></html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 23:18:05 Jul 29, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 3:02:46 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

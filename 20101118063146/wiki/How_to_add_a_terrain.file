@@ -1,0 +1,595 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="How to add a terrain,Blend (Material stage keyword),How to add a sky,Id Tech 4,Material (decl),NoSelfShadow (Material global keyword),NoShadows (Material global keyword),Text editor,Texturing,Nonsolid (Material global keyword),MEGA (file format)" />
+<link rel="shortcut icon" href="/web/20101118063146im_/http://www.modwiki.net/favicon.ico" />
+<link title="Creative Commons" type="application/rdf+xml" href="/w/index.php?title=How_to_add_a_terrain&amp;action=creativecommons" rel="meta" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<title>How to add a terrain - modwiki</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20101118063146cs_/http://www.modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/web/20101118063146cs_/http://www.modwiki.net/w/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/w/skins/monobook/IE70Fixes.css?1";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
+		<script type="text/javascript" src="/web/20101118063146js_/http://www.modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20101118063146js_/http://www.modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/web/20101118063146cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20101118063146cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20101118063146cs_/http://www.modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns-0 ltr">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app16.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/www.modwiki.net\/wiki\/How_to_add_a_terrain";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "18";
+var displayMonth = "Nov";
+var displayYear = "2010";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://www.modwiki.net/wiki/How_to_add_a_terrain" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20101118063146" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20101017185712/http://www.modwiki.net/wiki/How_to_add_a_terrain" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="17 Oct 2010"><strong>OCT</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 6:31:46 Nov 18, 2010">NOV</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110310234157/http://www.modwiki.net/wiki/How_to_add_a_terrain" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="10 Mar 2011"><strong>MAR</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20101017185712/http://www.modwiki.net/wiki/How_to_add_a_terrain" title="18:57:12 Oct 17, 2010" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 6:31:46 Nov 18, 2010">18</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20110310234157/http://www.modwiki.net/wiki/How_to_add_a_terrain" title="23:41:57 Mar 10, 2011" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20091004055243/http://www.modwiki.net/wiki/How_to_add_a_terrain" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="4 Oct 2009"><strong>2009</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 6:31:46 Nov 18, 2010">2010</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20111207132649/http://www.modwiki.net/wiki/How_to_add_a_terrain" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="7 Dec 2011"><strong>2011</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20101118063146*/http://www.modwiki.net/wiki/How_to_add_a_terrain" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>41 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">29 Jul 07 - 29 Sep 13</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000100101_2008:-1:101111100000_2009:-1:000000000100_2010:10:000100000110_2011:-1:001200000111_2012:-1:111111211111_2013:-1:111111111000_2014:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">How to add a terrain</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From modwiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="/web/20101118063146/http://www.modwiki.net/wiki/How_to_add_a_terrain#column-one">navigation</a>, <a href="/web/20101118063146/http://www.modwiki.net/wiki/How_to_add_a_terrain#searchInput">search</a></div>			<!-- start content -->
+			<p>This step-by-step tutorial will demonstrate how level designers, with no prior modelling experience, can easily create good terrains for <a href="/web/20101118063146/http://www.modwiki.net/wiki/How_to_add_a_sky" title="How to add a sky">3D skyboxes</a> as well as interactive terrain with a little more work using only free applications. Whereas many more utilities and procedures could be thrown in, an effort has been paid on optimising the art pipeline. Once you are familiar with this method you can easily branch out and seek more specialized knowledge.
+</p><p>If you have further questions about this tutorial please put them in this article's <a href="/web/20101118063146/http://www.modwiki.net/w/index.php?title=Talk:How_to_add_a_terrain&amp;action=edit" class="new" title="Talk:How to add a terrain">Talk</a> page.
+</p>
+<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class='toclevel-1'><a href="/web/20101118063146/http://www.modwiki.net/wiki/How_to_add_a_terrain#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
+<li class='toclevel-1'><a href="/web/20101118063146/http://www.modwiki.net/wiki/How_to_add_a_terrain#Requirements"><span class="tocnumber">2</span> <span class="toctext">Requirements</span></a></li>
+<li class='toclevel-1'><a href="/web/20101118063146/http://www.modwiki.net/wiki/How_to_add_a_terrain#Step_one:_Generate_heightmap"><span class="tocnumber">3</span> <span class="toctext">Step one: Generate heightmap</span></a></li>
+<li class='toclevel-1'><a href="/web/20101118063146/http://www.modwiki.net/wiki/How_to_add_a_terrain#Step_two:_Modify_heightmap"><span class="tocnumber">4</span> <span class="toctext">Step two: Modify heightmap</span></a></li>
+<li class='toclevel-1'><a href="/web/20101118063146/http://www.modwiki.net/wiki/How_to_add_a_terrain#Step_three:_Generate_Textures"><span class="tocnumber">5</span> <span class="toctext">Step three: Generate Textures</span></a></li>
+<li class='toclevel-1'><a href="/web/20101118063146/http://www.modwiki.net/wiki/How_to_add_a_terrain#Step_four:_Optimise_and_UV_map"><span class="tocnumber">6</span> <span class="toctext">Step four: Optimise and UV map</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20101118063146/http://www.modwiki.net/wiki/How_to_add_a_terrain#Adding_a_terrain"><span class="tocnumber">6.1</span> <span class="toctext">Adding a terrain</span></a></li>
+<li class='toclevel-2'><a href="/web/20101118063146/http://www.modwiki.net/wiki/How_to_add_a_terrain#Scaling_the_terrain"><span class="tocnumber">6.2</span> <span class="toctext">Scaling the terrain</span></a></li>
+<li class='toclevel-2'><a href="/web/20101118063146/http://www.modwiki.net/wiki/How_to_add_a_terrain#Smoothing_the_terrain"><span class="tocnumber">6.3</span> <span class="toctext">Smoothing the terrain</span></a></li>
+<li class='toclevel-2'><a href="/web/20101118063146/http://www.modwiki.net/wiki/How_to_add_a_terrain#UV_Mapping_the_terrain"><span class="tocnumber">6.4</span> <span class="toctext">UV Mapping the terrain</span></a></li>
+<li class='toclevel-2'><a href="/web/20101118063146/http://www.modwiki.net/wiki/How_to_add_a_terrain#Exporting_to_ASE"><span class="tocnumber">6.5</span> <span class="toctext">Exporting to ASE</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="/web/20101118063146/http://www.modwiki.net/wiki/How_to_add_a_terrain#Getting_it_to_the_game"><span class="tocnumber">7</span> <span class="toctext">Getting it to the game</span></a></li>
+<li class='toclevel-1'><a href="/web/20101118063146/http://www.modwiki.net/wiki/How_to_add_a_terrain#Wrapping_it_up"><span class="tocnumber">8</span> <span class="toctext">Wrapping it up</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101118063146/http://www.modwiki.net/w/index.php?title=How_to_add_a_terrain&amp;action=edit&amp;section=1" title="Edit section: Overview">edit</a>]</div><a name="Overview"></a><h2>Overview</h2>
+<p>This method has the following overarching structure:
+</p><p><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Terrain_01.png" class="image" title="Image:Terrain 01.png"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/d/d0/Terrain_01.png" alt="Image:Terrain 01.png" width="610" height="421" longdesc="/wiki/Image:Terrain_01.png" /></a>
+</p><p>This is an iterative process: you may need a couple of passes to get exactly what you want. Unfortunately, since the <a href="/web/20101118063146/http://www.modwiki.net/wiki/Id_Tech_4" title="Id Tech 4">id Tech 4</a> engine doesn't have a dedicated terrain editor some back-and-forth is inevitable.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101118063146/http://www.modwiki.net/w/index.php?title=How_to_add_a_terrain&amp;action=edit&amp;section=2" title="Edit section: Requirements">edit</a>]</div><a name="Requirements"></a><h2>Requirements</h2>
+<p>You’ll need these free utilities to use this tutorial:
+</p>
+<ul><li><a href="/web/20101118063146/http://www.bundysoft.com/L3DT" class='external text' title="http://www.bundysoft.com/L3DT">L3DT Standard Edition v2.4</a> – Primarily a terrain generator. We’ll use it to generate our preliminary heightmap and create textures for the final terrain.
+</li><li><a href="/web/20101118063146/http://www.earthsculptor.com/" class='external text' title="http://www.earthsculptor.com/">Earth Sculptor v0.25 BETA</a> – A heightmap-based terrain editor. For this tutorial we’ll use it to shape the terrain generated with L3DT.
+</li><li><a href="/web/20101118063146/http://www.blender.org/download/get-blender/" class='external text' title="http://www.blender.org/download/get-blender/">Blender</a> – The free modelling application to convert from heightmap to a 3D model and generate UV mapping coordinates.
+</li><li><a href="/web/20101118063146/http://www.doom3world.org/phpbb2/viewtopic.php?f=50&amp;t=9275" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?f=50&amp;t=9275">ASE exporter for Blender</a> – To export our terrain model from Blender to ASCII Scene Export format all id Tech 4 games can load. <a href="/web/20101118063146/http://xor.planetaclix.pt/files/doomase_exp610.py" class='external text' title="http://xor.planetaclix.pt/files/doomase_exp610.py">Local mirror (43KB)</a>
+</li></ul>
+<p>Note: The versions mentioned above are the ones used when this article was written. For some of these programs a newer version may be preferable.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101118063146/http://www.modwiki.net/w/index.php?title=How_to_add_a_terrain&amp;action=edit&amp;section=3" title="Edit section: Step one: Generate heightmap">edit</a>]</div><a name="Step_one:_Generate_heightmap"></a><h2>Step one: Generate heightmap</h2>
+<p>This initial stage will produce a heightmap file that we’ll use as a base for later editing. If you already have a heightmap or you want to start completely from scratch you should skip this step.
+</p><p>Start L3DT, go to the File menu and select “New map…” and you should be greeted with the following dialogue box; choose the first option “Design/inflate” and click “Next”. You can try some of the other methods but this one is the fastest and usually wields the best results.
+</p><p>In this next screen you should move the two slider positions all the way to the right until it says “2048 x 2048 (4.0 Mpxls)” below them. For now leave all the other options intact though when you feel more comfortable you could play around with the heightfield resolution factor. The “mosaic map” option is of no use here, however, enabling “edge wrapping” will allow you to tile the terrain seamlessly. This has little value for large scale terrains, which are the purpose of this tutorial, but it may allow you to use this program to generate standard textures like dirt or rock.
+</p><p><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Terrain_02.png" class="image" title="Image:Terrain 02.png"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/6/6e/Terrain_02.png" alt="Image:Terrain 02.png" width="306" height="355" longdesc="/wiki/Image:Terrain_02.png" /></a>
+</p><p>When using the “Design/inflate” method you get this third screen where you can tailor the terrain to your liking by tweaking the parameters defined here. They are all pretty much self-explanatory however you should raise the average altitude on the first slider and lower the frequency of lakes in the last one for best results. The “scale of features” slider is helpful when you want to create a terrain for a 3D skybox (“vast”) or interactive terrain (“tiny”). Finally, the “notes” button at the bottom provides helpful tips on your choice of default climate. Don’t be alarmed if it takes a few tries to get just the terrain you want but don’t agonise about getting it absolutely right since you’ll be able to change the landscape later on; simply make sure you have the major geographic details where you want them and don’t worry about exact steepness of a certain hill. Click “OK” when you’re satisfied.
+</p><p><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Terrain_03.png" class="image" title="Image:Terrain 03.png"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/8/8f/Terrain_03.png" alt="Image:Terrain 03.png" width="362" height="365" longdesc="/wiki/Image:Terrain_03.png" /></a>
+</p><p>After a few seconds, you should be looking at something similar to the image below. This terrain was generated without tweaking either the average altitude or the lake frequency which, as you can attest, can lead to terrains with plenty of water bias. As we shall see later on, even if you want water in your terrain putting it here instead of the level editor has some drawbacks.
+</p><p>L3DT allows you to modify the generated design by double clicking on each specific “pixel”. You can change altitude, climate or change a specific mount into a volcano just to give an example. You can spend hours literally shaping your terrain however, for the purpose of this tutorial we’ll assume you have finished the terrain generation phase.
+</p><p>If you click “Operations” in the menu you’ll see all the layers the program uses. Although we only need a couple you usually have to generate them all and in order. That’s what the first option “Next (auto)” does. However, we’re going to go step-by-step here. After the design map which we’ve just finished comes the heightfield which is, in all ways we care about, the same as a heightmap used by the <a href="/web/20101118063146/http://www.modwiki.net/wiki/Id_Tech_4" title="Id Tech 4">id Tech 4</a> engine. Click on “Heightfield > generate map” and wait until the application finishes. These are lengthy operations that can, depending on your terrain complexity, take a couple of minutes even on fairly fast CPUs.
+</p><p><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Terrain_04.png" class="image" title="Image:Terrain 04.png"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/6/60/Terrain_04.png" alt="Image:Terrain 04.png" width="467" height="540" longdesc="/wiki/Image:Terrain_04.png" /></a>
+</p><p>Now go to the “File” menu, highlight “Export” and select “Active map…”. In the screen that appears, make sure you select “Bitmap” and that the width and height fields read “2048”; browse to where you want to save the image and click “OK”. For the purpose of this tutorial let’s name it “heightfield.bmp”. Leave the other options alone for now.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101118063146/http://www.modwiki.net/w/index.php?title=How_to_add_a_terrain&amp;action=edit&amp;section=4" title="Edit section: Step two: Modify heightmap">edit</a>]</div><a name="Step_two:_Modify_heightmap"></a><h2>Step two: Modify heightmap</h2>
+<p>Once you have a base heightmap you’ll want to modify it so it works better in-game, especially for interactive terrains. If you’re doing a terrain to put as scenery in a 3D Skybox you probably won’t need to modify it and can skip this section.
+</p><p>Start EarthSculptor and go into “Utility > Import Heightmap” and select the “heightfield.bmp” file we generated previously. The programme should now generate the terrain for you. EarthSculptor is very easy to work with so there’s no need for an extensive walkthrough, you’ll spend most of your time in the “Terraform” tool (select it by clicking on the second button of the toolbar). Although you’ll want to setup water (if any) in the level editor it may be useful to enable water in EarthSculptor even if your terrain doesn’t have any water at all. The water line will give you a good sense of scale. Also, you may need to edit the "terrain height" scale value.
+</p><p>When you’ve finished terraforming your terrain, select “Utility > Export Heightmap”, let’s use “heightmap.png” this time.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101118063146/http://www.modwiki.net/w/index.php?title=How_to_add_a_terrain&amp;action=edit&amp;section=5" title="Edit section: Step three: Generate Textures">edit</a>]</div><a name="Step_three:_Generate_Textures"></a><h2>Step three: Generate Textures</h2>
+<p>Start L3DT again but this time go to “File > Import > Heightfield...” and select our “heightmap.png above.
+</p><p>Okay, now we’ll generate the next terrain layer. Go to “Operations” and select “Water map > flood wizard”. You can click “Next” in the screen that first appears while in the second one shown below you may want to change the “Salin > EnableFlag” to false (unless of course it makes sense for your terrain). Click “OK” and wait another couple of minutes. When it’s done, go into “Operations” and select the next layer “Attributes map > Generate map”. Continue to the next one “Terrain normals”. You’ll notice that it has generated what seems like a regular normalmap used by id Tech 4 engine. Go to “File > Export > Active map…”. Again, choose “Bitmap” and browse to where you want to save. We’ll call this one “normalmap.bmp”.
+</p><p>After that, generate the next layer: the “Light map”. You’ll be asked to enter some values but you can leave all of them on default with the exception of the Sun’s position in the first screen shown below, as you’ll want to make sure the parameters here match the lighting on your level.
+</p><p><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Terrain_05.png" class="image" title="Image:Terrain 05.png"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/7/75/Terrain_05.png" alt="Image:Terrain 05.png" width="374" height="273" longdesc="/wiki/Image:Terrain_05.png" /></a>
+</p><p>When you’re done, proceed to generate the last layer we need, the “Texture map” in the Operations menu. In the single screen that appears, make sure the first three options are enabled and all the rest are disabled and click “OK”; after a few seconds you should have something similar to this:
+</p><p><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Terrain_06.jpg" class="image" title="Image:Terrain 06.jpg"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/6/67/Terrain_06.jpg" alt="Image:Terrain 06.jpg" width="467" height="540" longdesc="/wiki/Image:Terrain_06.jpg" /></a>
+</p><p>Export this layer as a bitmap also; we’ll name it “texturemap.bmp”. Optionally, you can save your terrain (if you haven’t already) by clicking on “File > Save > Save project as…” in case you may want to re-edit it later on; although that means you’ll need to re-generate all the layers and re-export the maps as described above.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101118063146/http://www.modwiki.net/w/index.php?title=How_to_add_a_terrain&amp;action=edit&amp;section=6" title="Edit section: Step four: Optimise and UV map">edit</a>]</div><a name="Step_four:_Optimise_and_UV_map"></a><h2>Step four: Optimise and UV map</h2>
+<p>The makers of Blender, like the creators of most modelling packages, have an axe to grind against the default Windows widgets so don’t be alarmed at just how alien the application looks and behaves. This tutorial will walk you right through everything with screenshots highlighting the specific areas you need to watch for as well as common hotkey shortcuts.
+</p><p><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Terrain_07.png" class="image" title="Image:Terrain 07.png"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/a/ad/Terrain_07.png" alt="Image:Terrain 07.png" width="512" height="361" longdesc="/wiki/Image:Terrain_07.png" /></a>
+</p><p>What you’re looking at is the main 3D window with “toolbars” at the bottom. You’re viewing a cube right in the middle of the grid from above, using the top view; the red and green arrows are the axis while the black dot to the right is a light. The tetrahedron-looking shape at the bottom right is the camera position, direction and frustrum in can you want to switch from top, side, etc. views to camera view. For now ignore everything except the cube.
+</p><p>Blender has the nasty habit of inserting a cube on every new Blender file. We won’t need it so we must remove it. It’s selected by default (notice the pink contour) so deleting it is a simple matter of hitting the “Del” hotkey. You’ll get a confirmation dialogue box (see below). Either click where it says “Erase selected Object(s)” or hit “Enter”. The cube should now be gone and the toolbars at the bottom should be hidden.
+</p><p><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Terrain_08.png" class="image" title="Image:Terrain 08.png"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/9/95/Terrain_08.png" alt="Image:Terrain 08.png" width="369" height="246" longdesc="/wiki/Image:Terrain_08.png" /></a>
+</p><p>Before we do anything else though, let’s make Blender a little more similar to the level editor. Go into “View > View Properties”; in the small translucent window that appears change both the spacing and divisions values to 8 by clicking directly in them and typing “8”. While you’re at it, change the “Clip Start” and “Clip End” values. Set the former to 1 and the latter to whatever size you want your terrain to be. For instance, if you’re doing a 16384 by 16384 terrain, setting 16384 here will work reasonably well. When you’re done, click the little “x” on the top left on the small window.
+</p><p><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Terrain_09.png" class="image" title="Image:Terrain 09.png"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/8/82/Terrain_09.png" alt="Image:Terrain 09.png" width="324" height="297" longdesc="/wiki/Image:Terrain_09.png" /></a>
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101118063146/http://www.modwiki.net/w/index.php?title=How_to_add_a_terrain&amp;action=edit&amp;section=7" title="Edit section: Adding a terrain">edit</a>]</div><a name="Adding_a_terrain"></a><h3>Adding a terrain</h3>
+<p>Now click “Add > Mesh > Plane” and you should see a flat pink plane with a yellow outline. Use the mouse wheel to zoom in and out. On the bottom of your screen you should see a button called “Subdivide” as shown in the image below. Click on it until you get enough mesh complexity.
+</p><p><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Terrain_10.png" class="image" title="Image:Terrain 10.png"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/d/d6/Terrain_10.png" alt="Image:Terrain 10.png" width="428" height="283" longdesc="/wiki/Image:Terrain_10.png" /></a>
+</p><p>You can keep tabs on how many polys your terrain has by looking at the values on the top right of the screen. The value you’re most concerned about is “Fa” or faces. The first value is how many are currently selected while the value after the hyphen is the total number of faces in your terrain. Every time you hit subdivide the number of faces quadruples. If you think you’ve gone too far you can hit Ctrl + Z to undo. The number of polygons your terrain should have depends entirely on the terrain itself, what it’s used for, etc. Obviously, interactive terrain is going to need more complexity while scenery terrain won’t. The important part to remember is that, like with textures, it’s better to start with detail and then scale back. Pre-emptive optimisation can lead to problems later on.
+</p><p>Now let’s import our terrain. We do this by using the previously created “heightmap.bmp” file as a noise when we deform our plane in Blender. First things first, add a material to the scene. You can do this by clicking the button “New” shown below:
+</p><p><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Terrain_11.png" class="image" title="Image:Terrain 11.png"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/0/02/Terrain_11.png" alt="Image:Terrain 11.png" width="308" height="242" longdesc="/wiki/Image:Terrain_11.png" /></a>
+</p><p>After that, you click the little sphere button entitled “Shading” (or press F5) and then press the yellow and black brick on the centre mini-toolbar entitled “Texture buttons” (or press F6); you then press the “Add New” button to add a new image to the material you’ve created. In the “Texture Type” combo box select “Image”. Two new button areas should appear, press the “Load” button on the right.
+</p><p><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Terrain_12.png" class="image" title="Image:Terrain 12.png"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/f/f6/Terrain_12.png" alt="Image:Terrain 12.png" width="494" height="288" longdesc="/wiki/Image:Terrain_12.png" /></a>
+</p><p>You should now be looking at something that closely resembles DOS Shell so it’s okay to feel like you’re back in the late eighties. You’ll need to navigate to the place where you kept your “heightmap.bmp” file. If you’ve been saving your progress on the desktop you need to go to C:\Documents and Settings\&lt;yourwindowsaccount&gt;\Desktop. Once you find it you need to left click on it until the filename appears on top and then right-click on it until the file is highlighted with blue. Then hit the “SELECT IMAGE” button on the right part of the screen. You should now be able to see your heightmap in the preview area below.
+</p><p>Now we have to return to where we were. Press the button showing a black square with four red vertices entitled “Editing” (or press F9) and then hit the “Noise” button in the centre:
+</p><p><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Terrain_13.png" class="image" title="Image:Terrain 13.png"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/6/65/Terrain_13.png" alt="Image:Terrain 13.png" width="512" height="263" longdesc="/wiki/Image:Terrain_13.png" /></a>
+</p><p>You’ll need to keep hitting the “Noise” button until the height of the terrain reaches roughly what you want proportional to the side. To better see this you can change your perspective from “top” to “side” (or “front”). To do this, select “View &gt; Side”. Don’t worry about getting the height exactly as we’ll be changing this in a bit.
+</p><p><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Terrain_14.png" class="image" title="Image:Terrain 14.png"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/3/34/Terrain_14.png" alt="Image:Terrain 14.png" width="335" height="539" longdesc="/wiki/Image:Terrain_14.png" /></a>
+</p><p>Now it’s a good time to save your file. Go to “File &gt; Save as…” and you’ll be greeted by the same DOS Shell like look. Just find a directory, type the name of your file on the second textbox but leave the “.blend” extension and click the “Save As” button located on the right. You should always save to a different file. Throughout the rest of this tutorial we’ll be making some major changes to the mesh which might be tricky to restore and it’s important that you can go back to a previous version if you make a mistake without having to go through L3DT and EarthSculptor routine for this same terrain.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101118063146/http://www.modwiki.net/w/index.php?title=How_to_add_a_terrain&amp;action=edit&amp;section=8" title="Edit section: Scaling the terrain">edit</a>]</div><a name="Scaling_the_terrain"></a><h3>Scaling the terrain</h3>
+<p>Now that we have deformed our mesh using our heightmap we need to scale the terrain. First go into “Object Mode” as shown in the image below and then select “Object &gt; Transform Properties” from the menu that appears.
+</p><p><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Terrain_15.png" class="image" title="Image:Terrain 15.png"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/0/08/Terrain_15.png" alt="Image:Terrain 15.png" width="409" height="399" longdesc="/wiki/Image:Terrain_15.png" /></a>
+</p><p>A small translucent box should appear. The values we’re concerned here are the “DimX”, “DimY” and “DimZ” values. The first two should read “16” so replace these with the size you want your terrain model to fill in the editor in game units, for instance, if you want a 16384 x 16384 terrain then put “16384” in both “DimX” and “DimY”. You should consider clicking the “Link Scale” button beforehand though. This will let you scale height automatically but only use this if both X and Y dimensions are supposed to be equal.
+</p><p>TIP: In Blender, light coloured buttons are disabled, while a dark coloured button mean that function is enabled.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101118063146/http://www.modwiki.net/w/index.php?title=How_to_add_a_terrain&amp;action=edit&amp;section=9" title="Edit section: Smoothing the terrain">edit</a>]</div><a name="Smoothing_the_terrain"></a><h3>Smoothing the terrain</h3>
+<p>After scaling the terrain you may need to zoom out. As you can see in Blender the terrain looks very faceted because you can see every polygon. Click the “Set Smooth” button to fix this.
+</p><p><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Terrain_16.png" class="image" title="Image:Terrain 16.png"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/e/e6/Terrain_16.png" alt="Image:Terrain 16.png" width="356" height="269" longdesc="/wiki/Image:Terrain_16.png" /></a>
+</p><p>We don’t want this to happen in the game too so we’re going to tell the terrain exporter to manually smooth the polygons over.
+</p><p>Firstly make sure the terrain is selected (it should since we haven’t yet messed with selection – you can select/deselect everything in Blender by pressing A – toggle it until you get the pink outline) and then select Edit mode from the listbox and look below to the “Link and Materials” toolbar.
+</p><p>When you selected Edit mode a new set of six buttons appeared under “Vertex Groups”. Click the “new” button and a new two new gray fields should appear right above it.
+</p><p><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Terrain_17.png" class="image" title="Image:Terrain 17.png"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/0/03/Terrain_17.png" alt="Image:Terrain 17.png" width="255" height="196" longdesc="/wiki/Image:Terrain_17.png" /></a>
+</p><p>The first is the name of the vertex group you just created. Change the name to “smooth.1” as indicated in the image above and hit the “Assign” button which assigns the current group to all selected vertices (which is all of our terrain in this case). If all went well you should be able to hit the “Select” and “Desel.” buttons right beneath that to toggle the selection of your terrain (faces turn yellow when selected or you just see pink dots when not selected).
+</p><p>You can have more than one smoothing group obviously (you need to pick and choose which faces you want to group instead of grouping the whole terrain into a single group) however, for our purposes where we just want a model of the terrain it’s not needed. If you had a terrain where you wanted some man-made structure built right into the model however, you would group all the vertices that make up the “terrain” into a smoothing group and leave out the vertices that compose the building or whatever. Since any man-made structures will be added in the level editor afterwards instead of right into the terrain model we don’t have to worry about this. Now is a good time to save to another file.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101118063146/http://www.modwiki.net/w/index.php?title=How_to_add_a_terrain&amp;action=edit&amp;section=10" title="Edit section: UV Mapping the terrain">edit</a>]</div><a name="UV_Mapping_the_terrain"></a><h3>UV Mapping the terrain</h3>
+<p>NOTE FROM A NOOB reader, it appears that the UV mode was removed and merged with the edit mode around 2007?  And you press "u" while in edit mode? If so the following section may need editing....
+</p><p>You’ve probably heard of this expression but put simply, it’s how you wrap a texture around a model. You might also have heard the cries of anguish over a particular model’s UV mapping nightmare; this comes about because a texture is (usually) a 2D format while a model is representation of a 3D volume. You most likely already encountered this problem if you ever used patches and curves on your maps. It’s hard to get the textures to line up correctly on patches, especially if you want them to tile onto brushes, etc.
+</p><p>For our purposes here, UV mapping is very easy. We are simply going to “lay the texture down on the terrain” as if it were a sheet on a person laying in bed. We do this by selecting “UV Face select” mode as portrayed in the image below and you’ll note the terrain mesh turns pink. Next, we select the “UV/Image Editor” from the lowest window type button.
+</p><p><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Terrain_18.png" class="image" title="Image:Terrain 18.png"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/6/65/Terrain_18.png" alt="Image:Terrain 18.png" width="260" height="373" longdesc="/wiki/Image:Terrain_18.png" /></a>
+<a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Terrain_19.png" class="image" title="Image:Terrain 19.png"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/b/bb/Terrain_19.png" alt="Image:Terrain 19.png" width="230" height="504" longdesc="/wiki/Image:Terrain_19.png" /></a>
+</p><p>You should now have something that resembles this:
+</p><p><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Terrain_20.png" class="image" title="Image:Terrain 20.png"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/9/9f/Terrain_20.png" alt="Image:Terrain 20.png" width="512" height="372" longdesc="/wiki/Image:Terrain_20.png" /></a>
+</p><p>Move the mouse pointer to the 3D view area and press “U” and a floating menu called “UV Calculation” should appear. Select the “Project from View 1/1” option (or "Project from View (bounds)" depending on your version of Blender). You can now revert the lower half of the screen back to “toolbar” mode by selecting “Buttons Window”. Save again to another file.
+</p><p><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Terrain_21.png" class="image" title="Image:Terrain 21.png"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/f/fb/Terrain_21.png" alt="Image:Terrain 21.png" width="277" height="399" longdesc="/wiki/Image:Terrain_21.png" /></a>
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101118063146/http://www.modwiki.net/w/index.php?title=How_to_add_a_terrain&amp;action=edit&amp;section=11" title="Edit section: Exporting to ASE">edit</a>]</div><a name="Exporting_to_ASE"></a><h3>Exporting to ASE</h3>
+<p>Before we can use the terrain in the level editor we must export it into a model format the engine understands. Click “File &gt; Export &gt; ASCII Scene (.ase) v0.6.10” (or whatever version of the exporter you’re using). In Blender’s file explorer find the last .blend file you saved and click the “Export ASCII Scene” button on the top right. A small dialogue box should appear.
+</p><p>Make sure you disable the “Selection Only” button and enable the “VertGr. as SmoothGr.” button. Wait until Blender finishes and you should have an .<a href="/web/20101118063146/http://www.modwiki.net/w/index.php?title=Ase_%28file_format%29&amp;action=edit" class="new" title="Ase (file format)">ASE</a> file in the same directory you had your .BLEND file.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101118063146/http://www.modwiki.net/w/index.php?title=How_to_add_a_terrain&amp;action=edit&amp;section=12" title="Edit section: Getting it to the game">edit</a>]</div><a name="Getting_it_to_the_game"></a><h2>Getting it to the game</h2>
+<p>Make a copy of the .ASE file and put it in the /base/models directory and open it with a <a href="/web/20101118063146/http://www.modwiki.net/wiki/Text_editor" title="Text editor">text editor</a>. It’s not relevant here to know the structure of an .ASE file but the important thing is that the format lists one or more materials and then one or more 3D objects, each of which point to one material defined in the file. We only have one object, our terrain, and we also should only have one material (unless something went wrong along the way). Look at the file in Notepad and see that you have something similar to this:
+</p><p><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Terrain_22.png" class="image" title="Image:Terrain 22.png"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/e/ec/Terrain_22.png" alt="Image:Terrain 22.png" width="575" height="585" longdesc="/wiki/Image:Terrain_22.png" /></a>
+</p><p>Right near the start you should have a block of text named “MATERIAL 0”, go to the last line highlighted in the image above, “*MATERIAL_XP_TYPE Filter” and paste the following text after that line:
+</p>
+<pre>*MAP_DIFFUSE {
+	*MAP_NAME "Map #6"
+	*MAP_CLASS "Bitmap"
+	*MAP_SUBNO 1
+	*MAP_AMOUNT 1.0000
+	*BITMAP "\\q4base\textures\myterrainmat.tga"
+	*MAP_TYPE Screen
+	*UVW_U_OFFSET 0.0000
+	*UVW_V_OFFSET 0.0000
+	*UVW_U_TILING 1.0000
+	*UVW_V_TILING 1.0000
+	*UVW_ANGLE 0.0000
+	*UVW_BLUR 1.0000
+	*UVW_BLUR_OFFSET 0.0000
+	*UVW_NOUSE_AMT 1.0000
+	*UVW_NOISE_SIZE 1.0000
+	*UVW_NOISE_LEVEL 1
+	*UVW_NOISE_PHASE 0.0000
+	*BITMAP_FILTER Pyramidal
+}
+</pre>
+<p>Save the file; it should now look like this:
+</p><p><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Terrain_23.png" class="image" title="Image:Terrain 23.png"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/d/d0/Terrain_23.png" alt="Image:Terrain 23.png" width="575" height="585" longdesc="/wiki/Image:Terrain_23.png" /></a>
+</p><p>You can set the <b>*BITMAP "\\q4base\textures\myterrainmat.tga"</b> line to anything you want just make sure you include <b>\\base\</b> (or <b>\\q4base\</b> if you’re editing for Quake 4) and that it points to a valid material name, not texture (the .TGA extension is not needed). For this tutorial we’re going to create this material called <b>myterrainmat</b>. Before we do that, let’s put all the textures into place.
+</p>
+<div><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Etqwsquare_25.png" class="image" title="Image:Etqwsquare_25.png"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/7/7e/Etqwsquare_25.png" alt="Image:Etqwsquare_25.png" width="25" height="25" longdesc="/wiki/Image:Etqwsquare_25.png" /></a> <b>Note:</b> Enemy Territory: Quake Wars only: <dl><dd><i>Instead of editing the <b>*BITMAP</b> line, ETQW expects the material name in the line <b>*MATERIAL_NAME</b>. For example: *MATERIAL_NAME "textures/myterrainmat".</i></dd></dl></div>
+<p>As you may know, there is a <a href="/web/20101118063146/http://www.modwiki.net/wiki/Texturing" title="Texturing">naming convention</a> when editing textures for id Tech 4 engine. The diffusemap should have the “_d” suffix, the normalmap should have the “_local” suffix, etc. Take the previously exported “texturemap.bmp”, convert it to .TGA (24-bit uncompressed) and save it as “myterrainmat_d.tga” into the “/textures/” folder. Do the same for the “normalmap.bmp” and save it as “myterrainmat_local.tga”. Now let’s create the <a href="/web/20101118063146/http://www.modwiki.net/wiki/Material_%28decl%29" title="Material (decl)">material declaration</a>:
+</p>
+<pre>textures/myterrainmat
+{
+	qer_editorimage	textures/myterrainmat_d
+
+	nonsolid	// Only for scenery terrain
+	noshadows	// Can be used in both interactive and scenery
+	noselfshadow	// Only for scenery terrain
+</pre>
+<p>The <a href="/web/20101118063146/http://www.modwiki.net/w/index.php?title=Nonsolid_%28Material_global_keyword%29&amp;action=edit" class="new" title="Nonsolid (Material global keyword)">nonsolid keyword</a> is appropriate for 3D Skybox terrains but you should obviously leave it out for interactive terrains; you can leave the <a href="/web/20101118063146/http://www.modwiki.net/wiki/NoShadows_%28Material_global_keyword%29" title="NoShadows (Material global keyword)">noshadows keyword</a> for either terrain type because our diffusemap already has the lightmap backed into it and the stencil shadows generally look wrong unless the polygon mesh is very dense. You’ll want to leave out the <a href="/web/20101118063146/http://www.modwiki.net/wiki/NoSelfShadow_%28Material_global_keyword%29" title="NoSelfShadow (Material global keyword)">noSelfShadow keyword</a> for interactive terrains otherwise shadows cast by surfaces which also have that keyword (the player model for instance) will not be cast onto the terrain.
+</p>
+<pre>	bumpmap	textures/myterrainmat_local
+	diffusemap	textures/myterrainmat_d
+
+	{
+		blend	filter
+		map	textures/roughdirt_d
+	}
+
+	{
+		blend	add
+		map	textures/myterrainmat_d
+	}
+}
+</pre>
+<p>While a 1024 x 1024 texture resolution is fine for 3D Skybox maps even 2048 x 2048 is not enough for interactive terrains unless they are very small. To improve the overall quality we’re going to fake a detail texture layer. We do this by filtering in a very rough looking texture that has no distinctive features because we want it to tile and tiling a texture with prominent characteristics can give away the tiling effect quite easily. For this tutorial the terrain will be using this texture:
+</p><p><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Terrain_24.jpg" class="image" title="Image:Terrain 24.jpg"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/f/ff/Terrain_24.jpg" alt="Image:Terrain 24.jpg" width="512" height="512" longdesc="/wiki/Image:Terrain_24.jpg" /></a>
+</p><p>All id Tech 4 engine games released so far have plenty of similar looking textures so find one that fits your own terrain textures. Below you can see a comparison screenshot of the same terrain with and without the detail layer.
+</p><p><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Terrain_25.jpg" class="image" title="Image:Terrain 25.jpg"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/c/cc/Terrain_25.jpg" alt="Image:Terrain 25.jpg" width="512" height="384" longdesc="/wiki/Image:Terrain_25.jpg" /></a>
+</p><p>Finally, we add back the texture we used for the diffuse map to restore the original hue removed by the <a href="/web/20101118063146/http://www.modwiki.net/wiki/Blend_%28Material_stage_keyword%29" title="Blend (Material stage keyword)">filter stage</a>.
+</p>
+<div><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Etqwsquare_25.png" class="image" title="Image:Etqwsquare_25.png"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/7/7e/Etqwsquare_25.png" alt="Image:Etqwsquare_25.png" width="25" height="25" longdesc="/wiki/Image:Etqwsquare_25.png" /></a> <b>Note:</b> Enemy Territory: Quake Wars only: <dl><dd><i>If you intend to use a <a href="/web/20101118063146/http://www.modwiki.net/w/index.php?title=MEGA_%28file_format%29&amp;action=edit" class="new" title="MEGA (file format)">MegaTexture</a> with your terrain you should reference the following material instead:</i></dd></dl></div>
+<pre>material megatextures/myterrainmat {
+	useTemplate megatextures/default_ambient&lt; "myterrainmat" &gt;
+}
+</pre>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20101118063146/http://www.modwiki.net/w/index.php?title=How_to_add_a_terrain&amp;action=edit&amp;section=13" title="Edit section: Wrapping it up">edit</a>]</div><a name="Wrapping_it_up"></a><h2>Wrapping it up</h2>
+<p>You should now have a fully functioning terrain in your map however there may still be some work to be done. You may want to reduce the mesh’s complexity and/or the texture resolution (for memory budget or file download reasons) or perhaps you need to have holes in the terrain to build caves, etc. for your interactive terrain. All of this is should wait until your map nears the optimisation phase and you’ve firmly decided your terrain placement, lighting conditions, etc.
+</p><p><a href="/web/20101118063146/http://www.modwiki.net/wiki/Image:Terrain_27.jpg" class="image" title="Image:Terrain 27.jpg"><img src="/web/20101118063146im_/http://www.modwiki.net/w/images/6/6b/Terrain_27.jpg" alt="Image:Terrain 27.jpg" width="512" height="384" longdesc="/wiki/Image:Terrain_27.jpg" /></a>
+</p>
+<!-- Saved in parser cache with key modwiki:pcache:idhash:3889-0!1!0!0!!en!2 and timestamp 20101117154301 -->
+<div class="printfooter">
+Retrieved from "<a href="/web/20101118063146/http://www.modwiki.net/wiki/How_to_add_a_terrain">http://www.modwiki.net/wiki/How_to_add_a_terrain</a>"</div>
+			<div id="catlinks"><p class='catlinks'><a href="/web/20101118063146/http://www.modwiki.net/w/index.php?title=Special:Categories&amp;article=How_to_add_a_terrain" title="Special:Categories">Categories</a>: <span dir='ltr'><a href="/web/20101118063146/http://www.modwiki.net/wiki/Category:Mapping" title="Category:Mapping">Mapping</a></span> | <span dir='ltr'><a href="/web/20101118063146/http://www.modwiki.net/wiki/Category:Tutorials" title="Category:Tutorials">Tutorials</a></span><br /><hr /><a href="/web/20101118063146/http://www.modwiki.net/wiki/Category:Modwiki" title="Category:Modwiki">Modwiki</a> &gt; <a href="/web/20101118063146/http://www.modwiki.net/wiki/Category:Help" title="Category:Help">Help</a> &gt; <a href="/web/20101118063146/http://www.modwiki.net/wiki/Category:Tutorials" title="Category:Tutorials">Tutorials</a><br />
+<a href="/web/20101118063146/http://www.modwiki.net/wiki/Category:Modwiki" title="Category:Modwiki">Modwiki</a> &gt; <a href="/web/20101118063146/http://www.modwiki.net/wiki/Category:Mapping" title="Category:Mapping">Mapping</a></p></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="/web/20101118063146/http://www.modwiki.net/wiki/How_to_add_a_terrain">Article</a></li>
+				 <li id="ca-talk" class="new"><a href="/web/20101118063146/http://www.modwiki.net/w/index.php?title=Talk:How_to_add_a_terrain&amp;action=edit">Discussion</a></li>
+				 <li id="ca-edit"><a href="/web/20101118063146/http://www.modwiki.net/w/index.php?title=How_to_add_a_terrain&amp;action=edit">Edit</a></li>
+				 <li id="ca-history"><a href="/web/20101118063146/http://www.modwiki.net/w/index.php?title=How_to_add_a_terrain&amp;action=history">History</a></li>
+		</ul>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/web/20101118063146/http://www.modwiki.net/w/index.php?title=Special:Userlogin&amp;returnto=How_to_add_a_terrain">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/web/20101118063146im_/http://www.modwiki.net/wiki/upload/wiki.png);" href="/web/20101118063146/http://www.modwiki.net/wiki/Main_Page" title="Main Page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class='portlet' id='p-Main'>
+		<h5>Main</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/web/20101118063146/http://www.modwiki.net/wiki/Main_Page">Main Page</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 4'>
+		<h5>id Tech 4</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Doom-3"><a href="/web/20101118063146/http://www.modwiki.net/wiki/Doom_3">Doom 3</a></li>
+				<li id="n-Quake-4"><a href="/web/20101118063146/http://www.modwiki.net/wiki/Quake_4">Quake 4</a></li>
+				<li id="n-Prey"><a href="/web/20101118063146/http://www.modwiki.net/wiki/Prey">Prey</a></li>
+				<li id="n-ETQW"><a href="/web/20101118063146/http://www.modwiki.net/wiki/Enemy_Territory:_Quake_Wars">ETQW</a></li>
+				<li id="n-Wolfenstein"><a href="/web/20101118063146/http://www.modwiki.net/wiki/Wolfenstein">Wolfenstein</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 5'>
+		<h5>id Tech 5</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Rage"><a href="/web/20101118063146/http://www.modwiki.net/wiki/Rage">Rage</a></li>
+				<li id="n-Doom-4"><a href="/web/20101118063146/http://www.modwiki.net/wiki/Doom_4">Doom 4</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Quick Links'>
+		<h5>Quick Links</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Console"><a href="/web/20101118063146/http://www.modwiki.net/wiki/Console">Console</a></li>
+				<li id="n-Script-Events"><a href="/web/20101118063146/http://www.modwiki.net/wiki/Scripting">Script Events</a></li>
+				<li id="n-Material-Keywords"><a href="/web/20101118063146/http://www.modwiki.net/wiki/Material_%28decl%29">Material Keywords</a></li>
+				<li id="n-Modification-List"><a href="/web/20101118063146/http://www.modwiki.net/wiki/Modlist">Modification List</a></li>
+				<li id="n-Tutorial-List"><a href="/web/20101118063146/http://www.modwiki.net/wiki/Tutorial_list">Tutorial List</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Wiki'>
+		<h5>Wiki</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Open-tasks"><a href="/web/20101118063146/http://www.modwiki.net/wiki/modwiki:Open_tasks">Open tasks</a></li>
+				<li id="n-recentchanges"><a href="/web/20101118063146/http://www.modwiki.net/wiki/Special:Recentchanges">Recent changes</a></li>
+				<li id="n-Style-guide"><a href="/web/20101118063146/http://www.modwiki.net/wiki/modwiki:Style_guide">Style guide</a></li>
+				<li id="n-help"><a href="/web/20101118063146/http://www.modwiki.net/wiki/Help:Contents">Help</a></li>
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/web/20101118063146/http://www.modwiki.net/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" value="Search" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/web/20101118063146/http://www.modwiki.net/wiki/Special:Whatlinkshere/How_to_add_a_terrain">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/web/20101118063146/http://www.modwiki.net/wiki/Special:Recentchangeslinked/How_to_add_a_terrain">Related changes</a></li>
+<li id="t-upload"><a href="/web/20101118063146/http://www.modwiki.net/wiki/Special:Upload">Upload file</a></li>
+<li id="t-specialpages"><a href="/web/20101118063146/http://www.modwiki.net/wiki/Special:Specialpages">Special pages</a></li>
+				<li id="t-print"><a href="/web/20101118063146/http://www.modwiki.net/w/index.php?title=How_to_add_a_terrain&amp;printable=yes">Printable version</a></li>				<li id="t-permalink"><a href="/web/20101118063146/http://www.modwiki.net/w/index.php?title=How_to_add_a_terrain&amp;oldid=13889">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="/web/20101118063146/http://www.mediawiki.org/"><img src="/web/20101118063146im_/http://www.modwiki.net/w/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="/web/20101118063146/http://www.gnu.org/copyleft/fdl.html"><img src="/web/20101118063146im_/http://www.modwiki.net/w/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+				<li id="lastmod"> This page was last modified 00:58, 12 July 2010.</li>
+				<li id="copyright">Content is available under <a href="/web/20101118063146/http://www.gnu.org/copyleft/fdl.html" class='external ' title="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.2</a>.</li>
+				<li id="privacy"><a href="/web/20101118063146/http://www.modwiki.net/wiki/modwiki:Privacy_policy" title="modwiki:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="/web/20101118063146/http://www.modwiki.net/wiki/modwiki:About" title="modwiki:About">About modwiki</a></li>
+				<li id="disclaimer"><a href="/web/20101118063146/http://www.modwiki.net/wiki/modwiki:General_disclaimer" title="modwiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+	<script type="text/javascript"> if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+<!-- Served by h982484 in 0.17 secs. -->
+</body></html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 6:31:46 Nov 18, 2010 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 4:04:58 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,933 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Script events (Doom 3),AccelSound (script event),AccelTime (script event),AccelTo (script event),ActivateTargets (script event),Activate (script event),AddToClip (script event),AngToForward (script event),AngToRight (script event),AngToUp (script event),AnimDone (script event)" />
+<link rel="shortcut icon" href="/web/20121120055059im_/http://www.modwiki.net/favicon.ico" />
+<link title="Creative Commons" type="application/rdf+xml" href="/w/index.php?title=Script_events_%28Doom_3%29&amp;action=creativecommons" rel="meta" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<title>Script events (Doom 3) - modwiki</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20121120055059cs_/http://www.modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/web/20121120055059cs_/http://www.modwiki.net/w/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/w/skins/monobook/IE70Fixes.css?1";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
+		<script type="text/javascript" src="/web/20121120055059js_/http://www.modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20121120055059js_/http://www.modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/web/20121120055059cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20121120055059cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20121120055059cs_/http://www.modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns-0 ltr">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app19.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/www.modwiki.net\/wiki\/Script_events_(Doom_3)";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "20";
+var displayMonth = "Nov";
+var displayYear = "2012";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://www.modwiki.net/wiki/Script_events_(Doom_3)" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20121120055059" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20121020044129/http://www.modwiki.net/wiki/Script_events_(Doom_3)" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="20 Oct 2012"><strong>OCT</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 5:50:59 Nov 20, 2012">NOV</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20121221032321/http://www.modwiki.net/wiki/Script_events_(Doom_3)" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="21 Dec 2012"><strong>DEC</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20121020044129/http://www.modwiki.net/wiki/Script_events_(Doom_3)" title="4:41:29 Oct 20, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 5:50:59 Nov 20, 2012">20</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20121221032321/http://www.modwiki.net/wiki/Script_events_(Doom_3)" title="3:23:21 Dec 21, 2012" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20110906122100/http://www.modwiki.net/wiki/Script_events_%28Doom_3%29" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="6 Sep 2011"><strong>2011</strong></a>
+		                
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 5:50:59 Nov 20, 2012">2012</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20131201100006/http://www.modwiki.net/wiki/Script_events_(Doom_3)" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="1 Dec 2013"><strong>2013</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20121120055059*/http://www.modwiki.net/wiki/Script_events_(Doom_3)" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>41 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">13 Feb 07 - 1 Jan 14</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:010000100111_2008:-1:110012000000_2009:-1:100000001001_2010:-1:000000010100_2011:-1:000000001011_2012:10:111101111111_2013:-1:111111111101_2014:-1:100000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">Script events (Doom 3)</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From modwiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="/web/20121120055059/http://www.modwiki.net/wiki/Script_events_(Doom_3)#column-one">navigation</a>, <a href="/web/20121120055059/http://www.modwiki.net/wiki/Script_events_(Doom_3)#searchInput">search</a></div>			<!-- start content -->
+			<div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;"><a href="/web/20121120055059/http://www.modwiki.net/wiki/Image:D3square_bg.png" class="image" title="Image:D3square_bg.png"><img src="/web/20121120055059im_/http://www.modwiki.net/w/images/c/cb/D3square_bg.png" alt="Image:D3square_bg.png" width="50" height="50" longdesc="/wiki/Image:D3square_bg.png" /></a> The information on this page is specific to <a href="/web/20121120055059/http://www.modwiki.net/wiki/Doom_3" title="Doom 3">Doom 3</a>.</div>
+<hr />
+<p>Script events are commands used in Doom 3's native scripting language.
+</p><p>Existing script events as of version 1.3.1302 (1.3).
+</p>
+<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class='toclevel-1'><a href="/web/20121120055059/http://www.modwiki.net/wiki/Script_events_(Doom_3)#System_Events"><span class="tocnumber">1</span> <span class="toctext">System Events</span></a></li>
+<li class='toclevel-1'><a href="/web/20121120055059/http://www.modwiki.net/wiki/Script_events_(Doom_3)#Entity_Events"><span class="tocnumber">2</span> <span class="toctext">Entity Events</span></a></li>
+<li class='toclevel-1'><a href="/web/20121120055059/http://www.modwiki.net/wiki/Script_events_(Doom_3)#idActor_Events"><span class="tocnumber">3</span> <span class="toctext">idActor Events</span></a></li>
+<li class='toclevel-1'><a href="/web/20121120055059/http://www.modwiki.net/wiki/Script_events_(Doom_3)#idAFEntity_ClawFourFingers_Events"><span class="tocnumber">4</span> <span class="toctext">idAFEntity_ClawFourFingers Events</span></a></li>
+<li class='toclevel-1'><a href="/web/20121120055059/http://www.modwiki.net/wiki/Script_events_(Doom_3)#idAI_Events"><span class="tocnumber">5</span> <span class="toctext">idAI Events</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20121120055059/http://www.modwiki.net/wiki/Script_events_(Doom_3)#idAI_Vagary_Events"><span class="tocnumber">5.1</span> <span class="toctext">idAI_Vagary Events</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="/web/20121120055059/http://www.modwiki.net/wiki/Script_events_(Doom_3)#idAnimated_Events"><span class="tocnumber">6</span> <span class="toctext">idAnimated Events</span></a></li>
+<li class='toclevel-1'><a href="/web/20121120055059/http://www.modwiki.net/wiki/Script_events_(Doom_3)#idAnimatedEntity_Events"><span class="tocnumber">7</span> <span class="toctext">idAnimatedEntity Events</span></a></li>
+<li class='toclevel-1'><a href="/web/20121120055059/http://www.modwiki.net/wiki/Script_events_(Doom_3)#idCameraAnim_Events"><span class="tocnumber">8</span> <span class="toctext">idCameraAnim Events</span></a></li>
+<li class='toclevel-1'><a href="/web/20121120055059/http://www.modwiki.net/wiki/Script_events_(Doom_3)#idCombatNode_Events"><span class="tocnumber">9</span> <span class="toctext">idCombatNode Events</span></a></li>
+<li class='toclevel-1'><a href="/web/20121120055059/http://www.modwiki.net/wiki/Script_events_(Doom_3)#idDoor_Events"><span class="tocnumber">10</span> <span class="toctext">idDoor Events</span></a></li>
+<li class='toclevel-1'><a href="/web/20121120055059/http://www.modwiki.net/wiki/Script_events_(Doom_3)#idForcefield_Events"><span class="tocnumber">11</span> <span class="toctext">idForcefield Events</span></a></li>
+<li class='toclevel-1'><a href="/web/20121120055059/http://www.modwiki.net/wiki/Script_events_(Doom_3)#idLight_Events"><span class="tocnumber">12</span> <span class="toctext">idLight Events</span></a></li>
+<li class='toclevel-1'><a href="/web/20121120055059/http://www.modwiki.net/wiki/Script_events_(Doom_3)#idMoveable_Events"><span class="tocnumber">13</span> <span class="toctext">idMoveable Events</span></a></li>
+<li class='toclevel-1'><a href="/web/20121120055059/http://www.modwiki.net/wiki/Script_events_(Doom_3)#idMover_Events"><span class="tocnumber">14</span> <span class="toctext">idMover Events</span></a></li>
+<li class='toclevel-1'><a href="/web/20121120055059/http://www.modwiki.net/wiki/Script_events_(Doom_3)#idPlayer_Events"><span class="tocnumber">15</span> <span class="toctext">idPlayer Events</span></a></li>
+<li class='toclevel-1'><a href="/web/20121120055059/http://www.modwiki.net/wiki/Script_events_(Doom_3)#idProjectile_Events"><span class="tocnumber">16</span> <span class="toctext">idProjectile Events</span></a></li>
+<li class='toclevel-1'><a href="/web/20121120055059/http://www.modwiki.net/wiki/Script_events_(Doom_3)#idWeapon_Events"><span class="tocnumber">17</span> <span class="toctext">idWeapon Events</span></a></li>
+<li class='toclevel-1'><a href="/web/20121120055059/http://www.modwiki.net/wiki/Script_events_(Doom_3)#Utility_Functions"><span class="tocnumber">18</span> <span class="toctext">Utility Functions</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Script_events_%28Doom_3%29&amp;action=edit&amp;section=1" title="Edit section: System Events">edit</a>]</div><a name="System_Events"></a><h2>System Events</h2>
+<p>Events declared in <a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=IdThread_%28class%29&amp;action=edit" class="new" title="IdThread (class)">idThread</a>, accessible via <a href="/web/20121120055059/http://www.modwiki.net/wiki/Scripting_basics#sys" title="Scripting basics">sys</a> identifier.
+</p>
+<ul><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/AngToForward_%28script_event%29" title="AngToForward (script event)"> angToForward</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/AngToRight_%28script_event%29" title="AngToRight (script event)"> angToRight</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/AngToUp_%28script_event%29" title="AngToUp (script event)"> angToUp</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Assert_%28script_event%29" title="Assert (script event)"> assert</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/ClearPersistantArgs_%28script_event%29" title="ClearPersistantArgs (script event)"> clearPersistantArgs</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/ClearSignalThread_%28script_event%29" title="ClearSignalThread (script event)"> clearSignalThread</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/CopySpawnArgs_%28script_event%29" title="CopySpawnArgs (script event)"> copySpawnArgs</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Cos_%28script_event%29" title="Cos (script event)"> cos</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/CrossProduct_%28script_event%29" title="CrossProduct (script event)"> CrossProduct</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/DebugArrow_%28script_event%29" title="DebugArrow (script event)"> debugArrow</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/DebugBounds_%28script_event%29" title="DebugBounds (script event)"> debugBounds</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/DebugCircle_%28script_event%29" title="DebugCircle (script event)"> debugCircle</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/DebugLine_%28script_event%29" title="DebugLine (script event)"> debugLine</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/DotProduct_%28script_event%29" title="DotProduct (script event)"> DotProduct</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/DrawText_%28script_event%29" title="DrawText (script event)"> drawText</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Error_%28script_event%29" title="Error (script event)"> error</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/FadeIn_%28script_event%29" title="FadeIn (script event)"> fadeIn</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/FadeOut_%28script_event%29" title="FadeOut (script event)"> fadeOut</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/FadeTo_%28script_event%29" title="FadeTo (script event)"> fadeTo</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/FirstPerson_%28script_event%29" title="FirstPerson (script event)"> firstPerson</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Getcvar_%28script_event%29" title="Getcvar (script event)"> getcvar</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetEntity_%28script_event%29" title="GetEntity (script event)"> getEntity</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetFrameTime_%28script_event%29" title="GetFrameTime (script event)"> getFrameTime</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetPersistantFloat_%28script_event%29" title="GetPersistantFloat (script event)"> getPersistantFloat</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetPersistantString_%28script_event%29" title="GetPersistantString (script event)"> getPersistantString</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetPersistantVector_%28script_event%29" title="GetPersistantVector (script event)"> getPersistantVector</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetTicsPerSecond_%28script_event%29" title="GetTicsPerSecond (script event)"> getTicsPerSecond</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetTime_%28script_event%29" title="GetTime (script event)"> getTime</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetTraceBody_%28script_event%29" title="GetTraceBody (script event)"> getTraceBody</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetTraceEndPos_%28script_event%29" title="GetTraceEndPos (script event)"> getTraceEndPos</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetTraceEntity_%28script_event%29" title="GetTraceEntity (script event)"> getTraceEntity</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetTraceFraction_%28script_event%29" title="GetTraceFraction (script event)"> getTraceFraction</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetTraceJoint_%28script_event%29" title="GetTraceJoint (script event)"> getTraceJoint</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetTraceNormal_%28script_event%29" title="GetTraceNormal (script event)"> getTraceNormal</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/InfluenceActive_%28script_event%29" title="InfluenceActive (script event)"> influenceActive</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/IsClient_%28script_event%29" title="IsClient (script event)"> isClient</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/IsMultiplayer_%28script_event%29" title="IsMultiplayer (script event)"> isMultiplayer</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Killthread_%28script_event%29" title="Killthread (script event)"> killthread</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Music_%28script_event%29" title="Music (script event)"> music</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/OnSignal_%28script_event%29" title="OnSignal (script event)"> onSignal</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Pause_%28script_event%29" title="Pause (script event)"> pause</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Print_%28script_event%29" title="Print (script event)"> print</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Println_%28script_event%29" title="Println (script event)"> println</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/RadiusDamage_%28script_event%29" title="RadiusDamage (script event)"> radiusDamage</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Random_%28script_event%29" title="Random (script event)"> random</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Respawn_%28script_event%29" title="Respawn (script event)"> respawn</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Say_%28script_event%29" title="Say (script event)"> say</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetCamera_%28script_event%29" title="SetCamera (script event)"> setCamera</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Setcvar_%28script_event%29" title="Setcvar (script event)"> setcvar</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetPersistantArg_%28script_event%29" title="SetPersistantArg (script event)"> setPersistantArg</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetSpawnArg_%28script_event%29" title="SetSpawnArg (script event)"> setSpawnArg</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Sin_%28script_event%29" title="Sin (script event)"> sin</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Spawn_%28script_event%29" title="Spawn (script event)"> spawn</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SpawnFloat_%28script_event%29" title="SpawnFloat (script event)"> SpawnFloat</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SpawnString_%28script_event%29" title="SpawnString (script event)"> SpawnString</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SpawnVector_%28script_event%29" title="SpawnVector (script event)"> SpawnVector</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Sqrt_%28script_event%29" title="Sqrt (script event)"> sqrt</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/StrLeft_%28script_event%29" title="StrLeft (script event)"> strLeft</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/StrLength_%28script_event%29" title="StrLength (script event)"> strLength</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/StrMid_%28script_event%29" title="StrMid (script event)"> strMid</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/StrRight_%28script_event%29" title="StrRight (script event)"> strRight</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/StrSkip_%28script_event%29" title="StrSkip (script event)"> strSkip</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/StrToFloat_%28script_event%29" title="StrToFloat (script event)"> strToFloat</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Terminate_%28script_event%29" title="Terminate (script event)"> terminate</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Threadname_%28script_event%29" title="Threadname (script event)"> threadname</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Trace_%28script_event%29" title="Trace (script event)"> trace</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/TracePoint_%28script_event%29" title="TracePoint (script event)"> tracePoint</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Trigger_%28script_event%29" title="Trigger (script event)"> trigger</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/VecLength_%28script_event%29" title="VecLength (script event)"> vecLength</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/VecNormalize_%28script_event%29" title="VecNormalize (script event)"> vecNormalize</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/VecToAngles_%28script_event%29" title="VecToAngles (script event)"> VecToAngles</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Wait_%28script_event%29" title="Wait (script event)"> wait</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/WaitFor_%28script_event%29" title="WaitFor (script event)"> waitFor</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/WaitForThread_%28script_event%29" title="WaitForThread (script event)"> waitForThread</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/WaitFrame_%28script_event%29" title="WaitFrame (script event)"> waitFrame</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Warning_%28script_event%29" title="Warning (script event)"> warning</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Script_events_%28Doom_3%29&amp;action=edit&amp;section=2" title="Edit section: Entity Events">edit</a>]</div><a name="Entity_Events"></a><h2>Entity Events</h2>
+<p>Events declared in the <a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Base_spawn_class&amp;action=edit" class="new" title="Base spawn class">base spawn class</a> <a href="/web/20121120055059/http://www.modwiki.net/wiki/IdEntity_%28class%29" title="IdEntity (class)">idEntity</a>
+</p><p>All entities have these events.
+</p>
+<ul><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Activate_%28script_event%29" title="Activate (script event)"> activate</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/ActivateTargets_%28script_event%29" title="ActivateTargets (script event)"> activateTargets</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Bind_%28script_event%29" title="Bind (script event)"> bind</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/BindPosition_%28script_event%29" title="BindPosition (script event)"> bindPosition</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/BindToJoint_%28script_event%29" title="BindToJoint (script event)"> bindToJoint</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/CacheSoundShader_%28script_event%29" title="CacheSoundShader (script event)"> cacheSoundShader</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/CallFunction_%28script_event%29" title="CallFunction (script event)"> callFunction</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/ClearSignal_%28script_event%29" title="ClearSignal (script event)"> clearSignal</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/DistanceTo_%28script_event%29" title="DistanceTo (script event)"> distanceTo</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/DistanceToPoint_%28script_event%29" title="DistanceToPoint (script event)"> distanceToPoint</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/FadeSound_%28script_event%29" title="FadeSound (script event)"> fadeSound</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetAngles_%28script_event%29" title="GetAngles (script event)"> getAngles</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetAngularVelocity_%28script_event%29" title="GetAngularVelocity (script event)"> getAngularVelocity</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetColor_%28script_event%29" title="GetColor (script event)"> getColor</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetEntityKey_%28script_event%29" title="GetEntityKey (script event)"> getEntityKey</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetFloatKey_%28script_event%29" title="GetFloatKey (script event)"> getFloatKey</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetIntKey_%28script_event%29" title="GetIntKey (script event)"> getIntKey</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetKey_%28script_event%29" title="GetKey (script event)"> getKey</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetLinearVelocity_%28script_event%29" title="GetLinearVelocity (script event)"> getLinearVelocity</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetMaxs_%28script_event%29" title="GetMaxs (script event)"> getMaxs</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetMins_%28script_event%29" title="GetMins (script event)"> getMins</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetName_%28script_event%29" title="GetName (script event)"> getName</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetNextKey_%28script_event%29" title="GetNextKey (script event)"> getNextKey</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetOrigin_%28script_event%29" title="GetOrigin (script event)"> getOrigin</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetShaderParm_%28script_event%29" title="GetShaderParm (script event)"> getShaderParm</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetSize_%28script_event%29" title="GetSize (script event)"> getSize</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetTarget_%28script_event%29" title="GetTarget (script event)"> getTarget</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetVectorKey_%28script_event%29" title="GetVectorKey (script event)"> getVectorKey</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetWorldOrigin_%28script_event%29" title="GetWorldOrigin (script event)"> getWorldOrigin</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/HasFunction_%28script_event%29" title="HasFunction (script event)"> hasFunction</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Hide_%28script_event%29" title="Hide (script event)"> hide</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/IsHidden_%28script_event%29" title="IsHidden (script event)"> isHidden</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/NumTargets_%28script_event%29" title="NumTargets (script event)"> numTargets</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/RandomTarget_%28script_event%29" title="RandomTarget (script event)"> randomTarget</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Remove_%28script_event%29" title="Remove (script event)"> remove</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/RemoveBinds_%28script_event%29" title="RemoveBinds (script event)"> removeBinds</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/RestorePosition_%28script_event%29" title="RestorePosition (script event)"> restorePosition</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetAngles_%28script_event%29" title="SetAngles (script event)"> setAngles</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetAngularVelocity_%28script_event%29" title="SetAngularVelocity (script event)"> setAngularVelocity</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetColor_%28script_event%29" title="SetColor (script event)"> setColor</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetGuiFloat_%28script_event%29" title="SetGuiFloat (script event)"> setGuiFloat</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetGuiParm_%28script_event%29" title="SetGuiParm (script event)"> setGuiParm</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetKey_%28script_event%29" title="SetKey (script event)"> setKey</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetLinearVelocity_%28script_event%29" title="SetLinearVelocity (script event)"> setLinearVelocity</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetModel_%28script_event%29" title="SetModel (script event)"> setModel</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetName_%28script_event%29" title="SetName (script event)"> setName</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetNeverDormant_%28script_event%29" title="SetNeverDormant (script event)"> setNeverDormant</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetOrigin_%28script_event%29" title="SetOrigin (script event)"> setOrigin</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetOwner_%28script_event%29" title="SetOwner (script event)"> setOwner</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetShaderParm_%28script_event%29" title="SetShaderParm (script event)"> setShaderParm</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetShaderParms_%28script_event%29" title="SetShaderParms (script event)"> setShaderParms</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetSize_%28script_event%29" title="SetSize (script event)"> setSize</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetSkin_%28script_event%29" title="SetSkin (script event)"> setSkin</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetWorldOrigin_%28script_event%29" title="SetWorldOrigin (script event)"> setWorldOrigin</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Show_%28script_event%29" title="Show (script event)"> show</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/StartFx_%28script_event%29" title="StartFx (script event)"> startFx</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/StartSound_%28script_event%29" title="StartSound (script event)"> startSound</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/StartSoundShader_%28script_event%29" title="StartSoundShader (script event)"> startSoundShader</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/StopSound_%28script_event%29" title="StopSound (script event)"> stopSound</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Touches_%28script_event%29" title="Touches (script event)"> touches</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Unbind_%28script_event%29" title="Unbind (script event)"> unbind</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Wait_%28script_event%29" title="Wait (script event)"> wait</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/WaitFrame_%28script_event%29" title="WaitFrame (script event)"> waitFrame</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Script_events_%28Doom_3%29&amp;action=edit&amp;section=3" title="Edit section: idActor Events">edit</a>]</div><a name="idActor_Events"></a><h2>idActor Events</h2>
+<p>Events declared in the <a href="/web/20121120055059/http://www.modwiki.net/wiki/Spawn_class" title="Spawn class">spawn class</a> <a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=IdActor_%28class%29&amp;action=edit" class="new" title="IdActor (class)">idActor</a>
+</p>
+<ul><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=AnimDistance_%28script_event%29&amp;action=edit" class="new" title="AnimDistance (script event)"> animDistance</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=AnimLength_%28script_event%29&amp;action=edit" class="new" title="AnimLength (script event)"> animLength</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=AnimState_%28script_event%29&amp;action=edit" class="new" title="AnimState (script event)"> animState</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=CheckAnim_%28script_event%29&amp;action=edit" class="new" title="CheckAnim (script event)"> checkAnim</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=ChooseAnim_%28script_event%29&amp;action=edit" class="new" title="ChooseAnim (script event)"> chooseAnim</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/ClosestEnemyToPoint_%28script_event%29" title="ClosestEnemyToPoint (script event)"> closestEnemyToPoint</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/DisableEyeFocus_%28script_event%29" title="DisableEyeFocus (script event)"> disableEyeFocus</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/DisablePain_%28script_event%29" title="DisablePain (script event)"> disablePain</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/EnableAnim_%28script_event%29" title="EnableAnim (script event)"> enableAnim</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/EnableEyeFocus_%28script_event%29" title="EnableEyeFocus (script event)"> enableEyeFocus</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/EnablePain_%28script_event%29" title="EnablePain (script event)"> enablePain</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=FinishAction_%28script_event%29&amp;action=edit" class="new" title="FinishAction (script event)"> finishAction</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=GetAnimState_%28script_event%29&amp;action=edit" class="new" title="GetAnimState (script event)"> getAnimState</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetHead_%28script_event%29" title="GetHead (script event)"> getHead</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=GetPainAnim_%28script_event%29&amp;action=edit" class="new" title="GetPainAnim (script event)"> getPainAnim</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=GetState_%28script_event%29&amp;action=edit" class="new" title="GetState (script event)"> getState</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=HasAnim_%28script_event%29&amp;action=edit" class="new" title="HasAnim (script event)"> hasAnim</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/HasEnemies_%28script_event%29" title="HasEnemies (script event)"> hasEnemies</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/IdleAnim_%28script_event%29" title="IdleAnim (script event)"> idleAnim</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=InAnimState_%28script_event%29&amp;action=edit" class="new" title="InAnimState (script event)"> inAnimState</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/NextEnemy_%28script_event%29" title="NextEnemy (script event)"> nextEnemy</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/OverrideAnim_%28script_event%29" title="OverrideAnim (script event)"> overrideAnim</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/PreventPain_%28script_event%29" title="PreventPain (script event)"> preventPain</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetAnimPrefix_%28script_event%29" title="SetAnimPrefix (script event)"> setAnimPrefix</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetConstraintPosition_%28script_event%29" title="SetConstraintPosition (script event)"> SetConstraintPosition</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=SetNextState_%28script_event%29&amp;action=edit" class="new" title="SetNextState (script event)"> setNextState</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=SetState_%28script_event%29&amp;action=edit" class="new" title="SetState (script event)"> setState</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetSyncedAnimWeight_%28script_event%29" title="SetSyncedAnimWeight (script event)"> setSyncedAnimWeight</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/StopAnim_%28script_event%29" title="StopAnim (script event)"> stopAnim</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Script_events_%28Doom_3%29&amp;action=edit&amp;section=4" title="Edit section: idAFEntity_ClawFourFingers Events">edit</a>]</div><a name="idAFEntity_ClawFourFingers_Events"></a><h2>idAFEntity_ClawFourFingers Events</h2>
+<p>Events declared in the <a href="/web/20121120055059/http://www.modwiki.net/wiki/Spawn_class" title="Spawn class">spawn class</a> <a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=IdAFEntity_ClawFourFingers_%28class%29&amp;action=edit" class="new" title="IdAFEntity ClawFourFingers (class)">idAFEntity_ClawFourFingers</a>
+</p>
+<ul><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetFingerAngle_%28script_event%29" title="SetFingerAngle (script event)"> setFingerAngle</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/StopFingers_%28script_event%29" title="StopFingers (script event)"> stopFingers</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Script_events_%28Doom_3%29&amp;action=edit&amp;section=5" title="Edit section: idAI Events">edit</a>]</div><a name="idAI_Events"></a><h2>idAI Events</h2>
+<p>Events declared in the <a href="/web/20121120055059/http://www.modwiki.net/wiki/Spawn_class" title="Spawn class">spawn class</a> <a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=IdAI_%28class%29&amp;action=edit" class="new" title="IdAI (class)">idAI</a>
+</p>
+<ul><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=AllowDamage_%28script_event%29&amp;action=edit" class="new" title="AllowDamage (script event)"> allowDamage</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=AllowHiddenMovement_%28script_event%29&amp;action=edit" class="new" title="AllowHiddenMovement (script event)"> allowHiddenMovement</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=AllowMovement_%28script_event%29&amp;action=edit" class="new" title="AllowMovement (script event)"> allowMovement</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=AnimTurn_%28script_event%29&amp;action=edit" class="new" title="AnimTurn (script event)"> animTurn</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=AttackBegin_%28script_event%29&amp;action=edit" class="new" title="AttackBegin (script event)"> attackBegin</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=AttackEnd_%28script_event%29&amp;action=edit" class="new" title="AttackEnd (script event)"> attackEnd</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=AttackMelee_%28script_event%29&amp;action=edit" class="new" title="AttackMelee (script event)"> attackMelee</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=AttackMissile_%28script_event%29&amp;action=edit" class="new" title="AttackMissile (script event)"> attackMissile</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/BecomeNonSolid_%28script_event%29" title="BecomeNonSolid (script event)"> becomeNonSolid</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/BecomeRagdoll_%28script_event%29" title="BecomeRagdoll (script event)"> becomeRagdoll</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/BecomeSolid_%28script_event%29" title="BecomeSolid (script event)"> becomeSolid</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Burn_%28script_event%29&amp;action=edit" class="new" title="Burn (script event)"> burn</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/CanBecomeSolid_%28script_event%29" title="CanBecomeSolid (script event)"> canBecomeSolid</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=CanHitEnemy_%28script_event%29&amp;action=edit" class="new" title="CanHitEnemy (script event)"> canHitEnemy</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=CanHitEnemyFromAnim_%28script_event%29&amp;action=edit" class="new" title="CanHitEnemyFromAnim (script event)"> canHitEnemyFromAnim</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=CanHitEnemyFromJoint_%28script_event%29&amp;action=edit" class="new" title="CanHitEnemyFromJoint (script event)"> canHitEnemyFromJoint</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=CanReachEnemy_%28script_event%29&amp;action=edit" class="new" title="CanReachEnemy (script event)"> canReachEnemy</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=CanReachEntity_%28script_event%29&amp;action=edit" class="new" title="CanReachEntity (script event)"> canReachEntity</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=CanReachPosition_%28script_event%29&amp;action=edit" class="new" title="CanReachPosition (script event)"> canReachPosition</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=CanSee_%28script_event%29&amp;action=edit" class="new" title="CanSee (script event)"> canSee</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=ChargeAttack_%28script_event%29&amp;action=edit" class="new" title="ChargeAttack (script event)"> chargeAttack</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=ClearBurn_%28script_event%29&amp;action=edit" class="new" title="ClearBurn (script event)"> clearBurn</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=ClearEnemy_%28script_event%29&amp;action=edit" class="new" title="ClearEnemy (script event)"> clearEnemy</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=ClearFlyOffset_%28script_event%29&amp;action=edit" class="new" title="ClearFlyOffset (script event)"> clearFlyOffset</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=ClosestReachableEnemyOfEntity_%28script_event%29&amp;action=edit" class="new" title="ClosestReachableEnemyOfEntity (script event)"> closestReachableEnemyOfEntity</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=CreateMissile_%28script_event%29&amp;action=edit" class="new" title="CreateMissile (script event)"> createMissile</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/DirectDamage_%28script_event%29" title="DirectDamage (script event)"> directDamage</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/DisableAFPush_%28script_event%29" title="DisableAFPush (script event)"> disableAFPush</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/DisableClip_%28script_event%29" title="DisableClip (script event)"> disableClip</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/DisableGravity_%28script_event%29" title="DisableGravity (script event)"> disableGravity</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/EnableAFPush_%28script_event%29" title="EnableAFPush (script event)"> enableAFPush</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/EnableClip_%28script_event%29" title="EnableClip (script event)"> enableClip</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/EnableGravity_%28script_event%29" title="EnableGravity (script event)"> enableGravity</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=EnemyInCombatCone_%28script_event%29&amp;action=edit" class="new" title="EnemyInCombatCone (script event)"> enemyInCombatCone</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=EnemyPositionValid_%28script_event%29&amp;action=edit" class="new" title="EnemyPositionValid (script event)"> enemyPositionValid</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=EnemyRange_%28script_event%29&amp;action=edit" class="new" title="EnemyRange (script event)"> enemyRange</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=EnemyRange2D_%28script_event%29&amp;action=edit" class="new" title="EnemyRange2D (script event)"> enemyRange2D</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=EntityInAttackCone_%28script_event%29&amp;action=edit" class="new" title="EntityInAttackCone (script event)"> entityInAttackCone</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=FaceEnemy_%28script_event%29&amp;action=edit" class="new" title="FaceEnemy (script event)"> faceEnemy</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=FaceEntity_%28script_event%29&amp;action=edit" class="new" title="FaceEntity (script event)"> faceEntity</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=FacingIdeal_%28script_event%29&amp;action=edit" class="new" title="FacingIdeal (script event)"> facingIdeal</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=FindActorsInBounds_%28script_event%29&amp;action=edit" class="new" title="FindActorsInBounds (script event)"> findActorsInBounds</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/FindEnemy_%28script_event%29" title="FindEnemy (script event)"> findEnemy</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=FindEnemyAI_%28script_event%29&amp;action=edit" class="new" title="FindEnemyAI (script event)"> findEnemyAI</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=FindEnemyInCombatNodes_%28script_event%29&amp;action=edit" class="new" title="FindEnemyInCombatNodes (script event)"> findEnemyInCombatNodes</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=FireMissileAtTarget_%28script_event%29&amp;action=edit" class="new" title="FireMissileAtTarget (script event)"> fireMissileAtTarget</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=GetClosestHiddenTarget_%28script_event%29&amp;action=edit" class="new" title="GetClosestHiddenTarget (script event)"> getClosestHiddenTarget</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=GetCombatNode_%28script_event%29&amp;action=edit" class="new" title="GetCombatNode (script event)"> getCombatNode</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=GetCurrentYaw_%28script_event%29&amp;action=edit" class="new" title="GetCurrentYaw (script event)"> getCurrentYaw</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetEnemy_%28script_event%29" title="GetEnemy (script event)"> getEnemy</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=GetEnemyEyePos_%28script_event%29&amp;action=edit" class="new" title="GetEnemyEyePos (script event)"> getEnemyEyePos</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=GetEnemyPos_%28script_event%29&amp;action=edit" class="new" title="GetEnemyPos (script event)"> getEnemyPos</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetHealth_%28script_event%29" title="GetHealth (script event)"> getHealth</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=GetJumpVelocity_%28script_event%29&amp;action=edit" class="new" title="GetJumpVelocity (script event)"> getJumpVelocity</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=GetMoveType_%28script_event%29&amp;action=edit" class="new" title="GetMoveType (script event)"> getMoveType</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=GetObstacle_%28script_event%29&amp;action=edit" class="new" title="GetObstacle (script event)"> getObstacle</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=GetRandomTarget_%28script_event%29&amp;action=edit" class="new" title="GetRandomTarget (script event)"> getRandomTarget</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=GetReachableEntityPosition_%28script_event%29&amp;action=edit" class="new" title="GetReachableEntityPosition (script event)"> getReachableEntityPosition</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=GetTalkTarget_%28script_event%29&amp;action=edit" class="new" title="GetTalkTarget (script event)"> getTalkTarget</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=GetTurnDelta_%28script_event%29&amp;action=edit" class="new" title="GetTurnDelta (script event)"> getTurnDelta</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=GetTurnRate_%28script_event%29&amp;action=edit" class="new" title="GetTurnRate (script event)"> getTurnRate</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=HeardSound_%28script_event%29&amp;action=edit" class="new" title="HeardSound (script event)"> heardSound</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=IgnoreDamage_%28script_event%29&amp;action=edit" class="new" title="IgnoreDamage (script event)"> ignoreDamage</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=KickObstacles_%28script_event%29&amp;action=edit" class="new" title="KickObstacles (script event)"> kickObstacles</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Kill_%28script_event%29" title="Kill (script event)"> kill</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=LaunchMissile_%28script_event%29&amp;action=edit" class="new" title="LaunchMissile (script event)"> launchMissile</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=LocateEnemy_%28script_event%29&amp;action=edit" class="new" title="LocateEnemy (script event)"> locateEnemy</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/LookAt_%28script_event%29" title="LookAt (script event)"> lookAt</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=LookAtEnemy_%28script_event%29&amp;action=edit" class="new" title="LookAtEnemy (script event)"> lookAtEnemy</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=MeleeAttackToJoint_%28script_event%29&amp;action=edit" class="new" title="MeleeAttackToJoint (script event)"> meleeAttackToJoint</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/MoveOutOfRange_%28script_event%29" title="MoveOutOfRange (script event)"> moveOutOfRange</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=MoveStatus_%28script_event%29&amp;action=edit" class="new" title="MoveStatus (script event)"> moveStatus</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=MoveToAttackPosition_%28script_event%29&amp;action=edit" class="new" title="MoveToAttackPosition (script event)"> moveToAttackPosition</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=MoveToCover_%28script_event%29&amp;action=edit" class="new" title="MoveToCover (script event)"> moveToCover</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/MoveToEnemy_%28script_event%29" title="MoveToEnemy (script event)"> moveToEnemy</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=MoveToEnemyHeight_%28script_event%29&amp;action=edit" class="new" title="MoveToEnemyHeight (script event)"> moveToEnemyHeight</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=MoveToEntity_%28script_event%29&amp;action=edit" class="new" title="MoveToEntity (script event)"> moveToEntity</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=MoveToPosition_%28script_event%29&amp;action=edit" class="new" title="MoveToPosition (script event)"> moveToPosition</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=MuzzleFlash_%28script_event%29&amp;action=edit" class="new" title="MuzzleFlash (script event)"> muzzleFlash</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=NumSmokeEmitters_%28script_event%29&amp;action=edit" class="new" title="NumSmokeEmitters (script event)"> numSmokeEmitters</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=PreBurn_%28script_event%29&amp;action=edit" class="new" title="PreBurn (script event)"> preBurn</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=PredictEnemyPos_%28script_event%29&amp;action=edit" class="new" title="PredictEnemyPos (script event)"> predictEnemyPos</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=PushPointIntoAAS_%28script_event%29&amp;action=edit" class="new" title="PushPointIntoAAS (script event)"> pushPointIntoAAS</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=RandomPath_%28script_event%29&amp;action=edit" class="new" title="RandomPath (script event)"> randomPath</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=RadiusDamageFromJoint_%28script_event%29&amp;action=edit" class="new" title="RadiusDamageFromJoint (script event)"> radiusDamageFromJoint</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=RestoreMove_%28script_event%29&amp;action=edit" class="new" title="RestoreMove (script event)"> restoreMove</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=SaveMove_%28script_event%29&amp;action=edit" class="new" title="SaveMove (script event)"> saveMove</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=SetBoneMod_%28script_event%29&amp;action=edit" class="new" title="SetBoneMod (script event)"> setBoneMod</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetEnemy_%28script_event%29" title="SetEnemy (script event)"> setEnemy</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=SetFlyOffset_%28script_event%29&amp;action=edit" class="new" title="SetFlyOffset (script event)"> setFlyOffset</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=SetFlySpeed_%28script_event%29&amp;action=edit" class="new" title="SetFlySpeed (script event)"> setFlySpeed</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetHealth_%28script_event%29" title="SetHealth (script event)"> setHealth</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=SetMoveType_%28script_event%29&amp;action=edit" class="new" title="SetMoveType (script event)"> setMoveType</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=SetSmokeVisibility_%28script_event%29&amp;action=edit" class="new" title="SetSmokeVisibility (script event)"> setSmokeVisibility</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetTalkState_%28script_event%29" title="SetTalkState (script event)"> setTalkState</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=SetTalkTarget_%28script_event%29&amp;action=edit" class="new" title="SetTalkTarget (script event)"> setTalkTarget</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=SetTurnRate_%28script_event%29&amp;action=edit" class="new" title="SetTurnRate (script event)"> setTurnRate</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Shrivel_%28script_event%29&amp;action=edit" class="new" title="Shrivel (script event)"> shrivel</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=SlideTo_%28script_event%29&amp;action=edit" class="new" title="SlideTo (script event)"> slideTo</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=StopMove_%28script_event%29&amp;action=edit" class="new" title="StopMove (script event)"> stopMove</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=StopRagdoll_%28script_event%29&amp;action=edit" class="new" title="StopRagdoll (script event)"> stopRagdoll</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/StopThinking_%28script_event%29" title="StopThinking (script event)"> stopThinking</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=TestAnimAttack_%28script_event%29&amp;action=edit" class="new" title="TestAnimAttack (script event)"> testAnimAttack</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=TestAnimMove_%28script_event%29&amp;action=edit" class="new" title="TestAnimMove (script event)"> testAnimMove</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=TestAnimMoveTowardEnemy_%28script_event%29&amp;action=edit" class="new" title="TestAnimMoveTowardEnemy (script event)"> testAnimMoveTowardEnemy</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=TestChargeAttack_%28script_event%29&amp;action=edit" class="new" title="TestChargeAttack (script event)"> testChargeAttack</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=TestMeleeAttack_%28script_event%29&amp;action=edit" class="new" title="TestMeleeAttack (script event)"> testMeleeAttack</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=TestMoveToPosition_%28script_event%29&amp;action=edit" class="new" title="TestMoveToPosition (script event)"> testMoveToPosition</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=TravelDistanceBetweenEntities_%28script_event%29&amp;action=edit" class="new" title="TravelDistanceBetweenEntities (script event)"> travelDistanceBetweenEntities</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=TravelDistanceBetweenPoints_%28script_event%29&amp;action=edit" class="new" title="TravelDistanceBetweenPoints (script event)"> travelDistanceBetweenPoints</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=TravelDistanceToEntity_%28script_event%29&amp;action=edit" class="new" title="TravelDistanceToEntity (script event)"> travelDistanceToEntity</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=TravelDistanceToPoint_%28script_event%29&amp;action=edit" class="new" title="TravelDistanceToPoint (script event)"> travelDistanceToPoint</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=TurnTo_%28script_event%29&amp;action=edit" class="new" title="TurnTo (script event)"> turnTo</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=TurnToEntity_%28script_event%29&amp;action=edit" class="new" title="TurnToEntity (script event)"> turnToEntity</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=TurnToPos_%28script_event%29&amp;action=edit" class="new" title="TurnToPos (script event)"> turnToPos</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=WaitAction_%28script_event%29&amp;action=edit" class="new" title="WaitAction (script event)"> waitAction</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=WaitMove_%28script_event%29&amp;action=edit" class="new" title="WaitMove (script event)"> waitMove</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=WakeOnFlashlight_%28script_event%29&amp;action=edit" class="new" title="WakeOnFlashlight (script event)"> wakeOnFlashlight</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Wander_%28script_event%29&amp;action=edit" class="new" title="Wander (script event)"> wander</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Script_events_%28Doom_3%29&amp;action=edit&amp;section=6" title="Edit section: idAI_Vagary Events">edit</a>]</div><a name="idAI_Vagary_Events"></a><h3>idAI_Vagary Events</h3>
+<p>Events declared in the <a href="/web/20121120055059/http://www.modwiki.net/wiki/Spawn_class" title="Spawn class">spawn class</a> <a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=IdAI_Vagary_%28class%29&amp;action=edit" class="new" title="IdAI Vagary (class)">idAI_Vagary</a>
+</p>
+<ul><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Vagary_ChooseObjectToThrow_%28script_event%29&amp;action=edit" class="new" title="Vagary ChooseObjectToThrow (script event)"> vagary_ChooseObjectToThrow</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Vagary_ThrowObjectAtEnemy_%28script_event%29&amp;action=edit" class="new" title="Vagary ThrowObjectAtEnemy (script event)"> vagary_ThrowObjectAtEnemy</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Script_events_%28Doom_3%29&amp;action=edit&amp;section=7" title="Edit section: idAnimated Events">edit</a>]</div><a name="idAnimated_Events"></a><h2>idAnimated Events</h2>
+<p>Events declared in the <a href="/web/20121120055059/http://www.modwiki.net/wiki/Spawn_class" title="Spawn class">spawn class</a> <a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=IdAnimated_%28class%29&amp;action=edit" class="new" title="IdAnimated (class)">idAnimated</a>
+</p>
+<ul><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/LaunchMissiles_%28script_event%29" title="LaunchMissiles (script event)"> launchMissiles</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/LeftFoot_%28script_event%29" title="LeftFoot (script event)"> leftFoot</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/RightFoot_%28script_event%29" title="RightFoot (script event)"> rightFoot</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/StartRagdoll_%28script_event%29" title="StartRagdoll (script event)"> startRagdoll</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Script_events_%28Doom_3%29&amp;action=edit&amp;section=8" title="Edit section: idAnimatedEntity Events">edit</a>]</div><a name="idAnimatedEntity_Events"></a><h2>idAnimatedEntity Events</h2>
+<p>Events declared in the <a href="/web/20121120055059/http://www.modwiki.net/wiki/Spawn_class" title="Spawn class">spawn class</a> <a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=IdAnimatedEntity_%28class%29&amp;action=edit" class="new" title="IdAnimatedEntity (class)">idAnimatedEntity</a>
+</p>
+<ul><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/ClearAllJoints_%28script_event%29" title="ClearAllJoints (script event)"> clearAllJoints</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/ClearJoint_%28script_event%29" title="ClearJoint (script event)"> clearJoint</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetJointAngle_%28script_event%29" title="GetJointAngle (script event)"> getJointAngle</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetJointHandle_%28script_event%29" title="GetJointHandle (script event)"> getJointHandle</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetJointPos_%28script_event%29" title="GetJointPos (script event)"> getJointPos</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetJointAngle_%28script_event%29" title="SetJointAngle (script event)"> setJointAngle</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetJointPos_%28script_event%29" title="SetJointPos (script event)"> setJointPos</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Script_events_%28Doom_3%29&amp;action=edit&amp;section=9" title="Edit section: idCameraAnim Events">edit</a>]</div><a name="idCameraAnim_Events"></a><h2>idCameraAnim Events</h2>
+<p>Events declared in the <a href="/web/20121120055059/http://www.modwiki.net/wiki/Spawn_class" title="Spawn class">spawn class</a> <a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=IdCameraAnim_%28class%29&amp;action=edit" class="new" title="IdCameraAnim (class)">idCameraAnim</a>
+</p>
+<ul><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Start_%28script_event%29" title="Start (script event)"> start</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Stop_%28script_event%29" title="Stop (script event)"> stop</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Script_events_%28Doom_3%29&amp;action=edit&amp;section=10" title="Edit section: idCombatNode Events">edit</a>]</div><a name="idCombatNode_Events"></a><h2>idCombatNode Events</h2>
+<p>Events declared in the <a href="/web/20121120055059/http://www.modwiki.net/wiki/Spawn_class" title="Spawn class">spawn class</a> <a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=IdCombatNode_%28class%29&amp;action=edit" class="new" title="IdCombatNode (class)">idCombatNode</a>
+</p>
+<ul><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/MarkUsed_%28script_event%29" title="MarkUsed (script event)"> markUsed</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Script_events_%28Doom_3%29&amp;action=edit&amp;section=11" title="Edit section: idDoor Events">edit</a>]</div><a name="idDoor_Events"></a><h2>idDoor Events</h2>
+<p>Events declared in the <a href="/web/20121120055059/http://www.modwiki.net/wiki/Spawn_class" title="Spawn class">spawn class</a> <a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=IdDoor_%28class%29&amp;action=edit" class="new" title="IdDoor (class)">idDoor</a>
+</p>
+<ul><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Close_%28script_event%29" title="Close (script event)"> close</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Disable_%28script_event%29" title="Disable (script event)"> disable</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Enable_%28script_event%29" title="Enable (script event)"> enable</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/IsLocked_%28script_event%29" title="IsLocked (script event)"> isLocked</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/IsOpen_%28script_event%29" title="IsOpen (script event)"> isOpen</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Lock_%28script_event%29" title="Lock (script event)"> lock</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Open_%28script_event%29" title="Open (script event)"> open</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Script_events_%28Doom_3%29&amp;action=edit&amp;section=12" title="Edit section: idForcefield Events">edit</a>]</div><a name="idForcefield_Events"></a><h2>idForcefield Events</h2>
+<p>Events declared in the <a href="/web/20121120055059/http://www.modwiki.net/wiki/Spawn_class" title="Spawn class">spawn class</a> <a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=IdForceField_%28class%29&amp;action=edit" class="new" title="IdForceField (class)">idForceField</a>
+</p>
+<ul><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Toggle_%28script_event%29" title="Toggle (script event)"> Toggle</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Script_events_%28Doom_3%29&amp;action=edit&amp;section=13" title="Edit section: idLight Events">edit</a>]</div><a name="idLight_Events"></a><h2>idLight Events</h2>
+<p>Events declared in the <a href="/web/20121120055059/http://www.modwiki.net/wiki/Spawn_class" title="Spawn class">spawn class</a> <a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=IdLight_%28class%29&amp;action=edit" class="new" title="IdLight (class)">idLight</a>
+</p>
+<ul><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/FadeInLight_%28script_event%29" title="FadeInLight (script event)"> fadeInLight</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/FadeOutLight_%28script_event%29" title="FadeOutLight (script event)"> fadeOutLight</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetLightParm_%28script_event%29" title="GetLightParm (script event)"> getLightParm</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Off_%28script_event%29" title="Off (script event)"> Off</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/On_%28script_event%29" title="On (script event)"> On</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetLightParm_%28script_event%29" title="SetLightParm (script event)"> setLightParm</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetLightParms_%28script_event%29" title="SetLightParms (script event)"> setLightParms</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetRadius_%28script_event%29" title="SetRadius (script event)"> setRadius</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetRadiusXYZ_%28script_event%29" title="SetRadiusXYZ (script event)"> setRadiusXYZ</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetShader_%28script_event%29" title="SetShader (script event)"> setShader</a>
+</li></ul>
+<p><br />
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Script_events_%28Doom_3%29&amp;action=edit&amp;section=14" title="Edit section: idMoveable Events">edit</a>]</div><a name="idMoveable_Events"></a><h2>idMoveable Events</h2>
+<p>Events declared in the <a href="/web/20121120055059/http://www.modwiki.net/wiki/Spawn_class" title="Spawn class">spawn class</a> <a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=IdMoveAble_%28class%29&amp;action=edit" class="new" title="IdMoveAble (class)">idMoveAble</a>
+</p>
+<ul><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/BecomeNonSolid_%28script_event%29" title="BecomeNonSolid (script event)"> becomeNonSolid</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/EnableDamage_%28script_event%29" title="EnableDamage (script event)"> enableDamage</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/IsAtRest_%28script_event%29" title="IsAtRest (script event)"> isAtRest</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Script_events_%28Doom_3%29&amp;action=edit&amp;section=15" title="Edit section: idMover Events">edit</a>]</div><a name="idMover_Events"></a><h2>idMover Events</h2>
+<p>Events declared in the <a href="/web/20121120055059/http://www.modwiki.net/wiki/Spawn_class" title="Spawn class">spawn class</a> <a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=IdMover_%28class%29&amp;action=edit" class="new" title="IdMover (class)">idMover</a>
+</p>
+<ul><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/AccelSound_%28script_event%29" title="AccelSound (script event)"> accelSound</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/AccelTime_%28script_event%29" title="AccelTime (script event)"> accelTime</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/AccelTo_%28script_event%29" title="AccelTo (script event)"> accelTo</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Bob_%28script_event%29" title="Bob (script event)"> bob</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/ClosePortal_%28script_event%29" title="ClosePortal (script event)"> closePortal</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/DecelSound_%28script_event%29" title="DecelSound (script event)"> decelSound</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/DecelTime_%28script_event%29" title="DecelTime (script event)"> decelTime</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/DecelTo_%28script_event%29" title="DecelTo (script event)"> decelTo</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/DisableSplineAngles_%28script_event%29" title="DisableSplineAngles (script event)"> disableSplineAngles</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/EnableSplineAngles_%28script_event%29" title="EnableSplineAngles (script event)"> enableSplineAngles</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/IsMoving_%28script_event%29" title="IsMoving (script event)"> isMoving</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/IsRotating_%28script_event%29" title="IsRotating (script event)"> isRotating</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Move_%28script_event%29" title="Move (script event)"> move</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/MoveSound_%28script_event%29" title="MoveSound (script event)"> moveSound</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/MoveTo_%28script_event%29" title="MoveTo (script event)"> moveTo</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/MoveToPos_%28script_event%29" title="MoveToPos (script event)"> moveToPos</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/OpenPortal_%28script_event%29" title="OpenPortal (script event)"> openPortal</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/RemoveInitialSplineAngles_%28script_event%29" title="RemoveInitialSplineAngles (script event)"> removeInitialSplineAngles</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Rotate_%28script_event%29" title="Rotate (script event)"> rotate</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/RotateDownTo_%28script_event%29" title="RotateDownTo (script event)"> rotateDownTo</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/RotateOnce_%28script_event%29" title="RotateOnce (script event)"> rotateOnce</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/RotateTo_%28script_event%29" title="RotateTo (script event)"> rotateTo</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/RotateUpTo_%28script_event%29" title="RotateUpTo (script event)"> rotateUpTo</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Speed_%28script_event%29" title="Speed (script event)"> speed</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/StartSpline_%28script_event%29" title="StartSpline (script event)"> startSpline</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/StopMoving_%28script_event%29" title="StopMoving (script event)"> stopMoving</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/StopRotating_%28script_event%29" title="StopRotating (script event)"> stopRotating</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/StopSpline_%28script_event%29" title="StopSpline (script event)"> stopSpline</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Sway_%28script_event%29" title="Sway (script event)"> sway</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Time_%28script_event%29" title="Time (script event)"> time</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Script_events_%28Doom_3%29&amp;action=edit&amp;section=16" title="Edit section: idPlayer Events">edit</a>]</div><a name="idPlayer_Events"></a><h2>idPlayer Events</h2>
+<p>Events declared in the <a href="/web/20121120055059/http://www.modwiki.net/wiki/Spawn_class" title="Spawn class">spawn class</a> <a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=IdPlayer_%28class%29&amp;action=edit" class="new" title="IdPlayer (class)">idPlayer</a>
+</p>
+<ul><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/DisableWeapon_%28script_event%29" title="DisableWeapon (script event)"> disableWeapon</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/EnableWeapon_%28script_event%29" title="EnableWeapon (script event)"> enableWeapon</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetButtons_%28script_event%29" title="GetButtons (script event)"> getButtons</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetCurrentWeapon_%28script_event%29" title="GetCurrentWeapon (script event)"> getCurrentWeapon</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetMove_%28script_event%29" title="GetMove (script event)"> getMove</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetPreviousWeapon_%28script_event%29" title="GetPreviousWeapon (script event)"> getPreviousWeapon</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetViewAngles_%28script_event%29" title="GetViewAngles (script event)"> getViewAngles</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetWeaponEntity_%28script_event%29" title="GetWeaponEntity (script event)"> getWeaponEntity</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/InPDA_%28script_event%29" title="InPDA (script event)"> inPDA</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/OpenPDA_%28script_event%29" title="OpenPDA (script event)"> openPDA</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SelectWeapon_%28script_event%29" title="SelectWeapon (script event)"> selectWeapon</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Script_events_%28Doom_3%29&amp;action=edit&amp;section=17" title="Edit section: idProjectile Events">edit</a>]</div><a name="idProjectile_Events"></a><h2>idProjectile Events</h2>
+<p>Events declared in the <a href="/web/20121120055059/http://www.modwiki.net/wiki/Spawn_class" title="Spawn class">spawn class</a> <a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=IdProjectile_%28class%29&amp;action=edit" class="new" title="IdProjectile (class)">idProjectile</a>
+</p>
+<ul><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetProjectileState_%28script_event%29" title="GetProjectileState (script event)"> getProjectileState</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Script_events_%28Doom_3%29&amp;action=edit&amp;section=18" title="Edit section: idWeapon Events">edit</a>]</div><a name="idWeapon_Events"></a><h2>idWeapon Events</h2>
+<p>Events declared in the <a href="/web/20121120055059/http://www.modwiki.net/wiki/Spawn_class" title="Spawn class">spawn class</a> <a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=IdWeapon_%28class%29&amp;action=edit" class="new" title="IdWeapon (class)">idWeapon</a>
+</p>
+<ul><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/AddToClip_%28script_event%29" title="AddToClip (script event)"> addToClip</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=AllowDrop_%28script_event%29&amp;action=edit" class="new" title="AllowDrop (script event)"> allowDrop</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=AmmoAvailable_%28script_event%29&amp;action=edit" class="new" title="AmmoAvailable (script event)"> ammoAvailable</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=AmmoInClip_%28script_event%29&amp;action=edit" class="new" title="AmmoInClip (script event)"> ammoInClip</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/AnimDone_%28script_event%29" title="AnimDone (script event)"> animDone</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=AutoReload_%28script_event%29&amp;action=edit" class="new" title="AutoReload (script event)"> autoReload</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/ClipSize_%28script_event%29" title="ClipSize (script event)"> clipSize</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=CreateProjectile_%28script_event%29&amp;action=edit" class="new" title="CreateProjectile (script event)"> createProjectile</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/Flashlight_%28script_event%29" title="Flashlight (script event)"> flashlight</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/GetBlendFrames_%28script_event%29" title="GetBlendFrames (script event)"> getBlendFrames</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=GetOwner_%28script_event%29&amp;action=edit" class="new" title="GetOwner (script event)"> getOwner</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=GetWorldModel_%28script_event%29&amp;action=edit" class="new" title="GetWorldModel (script event)"> getWorldModel</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=IsInvisible_%28script_event%29&amp;action=edit" class="new" title="IsInvisible (script event)"> isInvisible</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/LaunchProjectiles_%28script_event%29" title="LaunchProjectiles (script event)"> launchProjectiles</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Melee_%28script_event%29&amp;action=edit" class="new" title="Melee (script event)"> melee</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=NetEndReload_%28script_event%29&amp;action=edit" class="new" title="NetEndReload (script event)"> netEndReload</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=NetReload_%28script_event%29&amp;action=edit" class="new" title="NetReload (script event)"> netReload</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=NextWeapon_%28script_event%29&amp;action=edit" class="new" title="NextWeapon (script event)"> nextWeapon</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/PlayAnim_%28script_event%29" title="PlayAnim (script event)"> playAnim</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/PlayCycle_%28script_event%29" title="PlayCycle (script event)"> playCycle</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/SetBlendFrames_%28script_event%29" title="SetBlendFrames (script event)"> setBlendFrames</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=TotalAmmoCount_%28script_event%29&amp;action=edit" class="new" title="TotalAmmoCount (script event)"> totalAmmoCount</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/UseAmmo_%28script_event%29" title="UseAmmo (script event)"> useAmmo</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=WeaponHolstered_%28script_event%29&amp;action=edit" class="new" title="WeaponHolstered (script event)"> weaponHolstered</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=WeaponLowering_%28script_event%29&amp;action=edit" class="new" title="WeaponLowering (script event)"> weaponLowering</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/WeaponOutOfAmmo_%28script_event%29" title="WeaponOutOfAmmo (script event)"> weaponOutOfAmmo</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/WeaponReady_%28script_event%29" title="WeaponReady (script event)"> weaponReady</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=WeaponReloading_%28script_event%29&amp;action=edit" class="new" title="WeaponReloading (script event)"> weaponReloading</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=WeaponRising_%28script_event%29&amp;action=edit" class="new" title="WeaponRising (script event)"> weaponRising</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/WeaponState_%28script_event%29" title="WeaponState (script event)"> weaponState</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Script_events_%28Doom_3%29&amp;action=edit&amp;section=19" title="Edit section: Utility Functions">edit</a>]</div><a name="Utility_Functions"></a><h2>Utility Functions</h2>
+<p>These functions can be found in <i>doom_util.script</i>.
+</p>
+<ul><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Abs_%28script_event%29&amp;action=edit" class="new" title="Abs (script event)"> abs</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Anglemod180_%28script_event%29&amp;action=edit" class="new" title="Anglemod180 (script event)"> anglemod180</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Anglemod360_%28script_event%29&amp;action=edit" class="new" title="Anglemod360 (script event)"> anglemod360</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=CalcTimeForRotationAroundEntity_%28script_event%29&amp;action=edit" class="new" title="CalcTimeForRotationAroundEntity (script event)"> CalcTimeForRotationAroundEntity</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=ClearSmoke_%28script_event%29&amp;action=edit" class="new" title="ClearSmoke (script event)"> clearSmoke</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/CrossFadeEnt_%28script_event%29" title="CrossFadeEnt (script event)"> crossFadeEnt</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=DelayRemove_%28script_event%29&amp;action=edit" class="new" title="DelayRemove (script event)"> delayRemove</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=DelayRemoveThread_%28script_event%29&amp;action=edit" class="new" title="DelayRemoveThread (script event)"> delayRemoveThread</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=DelayTime_%28script_event%29&amp;action=edit" class="new" title="DelayTime (script event)"> DelayTime</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/FadeInEnt_%28script_event%29" title="FadeInEnt (script event)"> fadeInEnt</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/wiki/FadeOutEnt_%28script_event%29" title="FadeOutEnt (script event)"> fadeOutEnt</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Func_clipmodel_%28script_event%29&amp;action=edit" class="new" title="Func clipmodel (script event)"> func_clipmodel</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Headlook_off_%28script_event%29&amp;action=edit" class="new" title="Headlook off (script event)"> headlook_off</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Headlook_on_%28script_event%29&amp;action=edit" class="new" title="Headlook on (script event)"> headlook_on</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=InterpolateShaderParm_%28script_event%29&amp;action=edit" class="new" title="InterpolateShaderParm (script event)"> interpolateShaderParm</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=OverrideLegs_%28script_event%29&amp;action=edit" class="new" title="OverrideLegs (script event)"> overrideLegs</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=OverrideTorso_%28script_event%29&amp;action=edit" class="new" title="OverrideTorso (script event)"> overrideTorso</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=RandomDelay_%28script_event%29&amp;action=edit" class="new" title="RandomDelay (script event)"> RandomDelay</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=RandomTime_%28script_event%29&amp;action=edit" class="new" title="RandomTime (script event)"> RandomTime</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=SetShaderTime_%28script_event%29&amp;action=edit" class="new" title="SetShaderTime (script event)"> setShaderTime</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Unpause_%28script_event%29&amp;action=edit" class="new" title="Unpause (script event)"> unpause</a>
+</li><li><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=WaitForButtonPress_%28script_event%29&amp;action=edit" class="new" title="WaitForButtonPress (script event)"> waitForButtonPress</a>
+</li></ul>
+
+<!-- Saved in parser cache with key modwiki:pcache:idhash:1311-0!1!0!0!!en!2 and timestamp 20121119100904 -->
+<div class="printfooter">
+Retrieved from "<a href="/web/20121120055059/http://www.modwiki.net/wiki/Script_events_%28Doom_3%29">http://www.modwiki.net/wiki/Script_events_%28Doom_3%29</a>"</div>
+			<div id="catlinks"><p class='catlinks'><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Special:Categories&amp;article=Script_events_%28Doom_3%29" title="Special:Categories">Category</a>: <span dir='ltr'><a href="/web/20121120055059/http://www.modwiki.net/wiki/Category:Scripting" title="Category:Scripting">Scripting</a></span><br /><hr /><a href="/web/20121120055059/http://www.modwiki.net/wiki/Category:Modwiki" title="Category:Modwiki">Modwiki</a> &gt; <a href="/web/20121120055059/http://www.modwiki.net/wiki/Category:Scripting" title="Category:Scripting">Scripting</a></p></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="/web/20121120055059/http://www.modwiki.net/wiki/Script_events_%28Doom_3%29">Article</a></li>
+				 <li id="ca-talk" class="new"><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Talk:Script_events_%28Doom_3%29&amp;action=edit">Discussion</a></li>
+				 <li id="ca-edit"><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Script_events_%28Doom_3%29&amp;action=edit">Edit</a></li>
+				 <li id="ca-history"><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Script_events_%28Doom_3%29&amp;action=history">History</a></li>
+		</ul>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Special:Userlogin&amp;returnto=Script_events_(Doom_3)">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/web/20121120055059im_/http://www.modwiki.net/wiki/upload/wiki.png);" href="/web/20121120055059/http://www.modwiki.net/wiki/Main_Page" title="Main Page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class='portlet' id='p-Main'>
+		<h5>Main</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/web/20121120055059/http://www.modwiki.net/wiki/Main_Page">Main Page</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 4'>
+		<h5>id Tech 4</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Doom-3"><a href="/web/20121120055059/http://www.modwiki.net/wiki/Doom_3">Doom 3</a></li>
+				<li id="n-Quake-4"><a href="/web/20121120055059/http://www.modwiki.net/wiki/Quake_4">Quake 4</a></li>
+				<li id="n-Prey"><a href="/web/20121120055059/http://www.modwiki.net/wiki/Prey">Prey</a></li>
+				<li id="n-ETQW"><a href="/web/20121120055059/http://www.modwiki.net/wiki/Enemy_Territory:_Quake_Wars">ETQW</a></li>
+				<li id="n-Wolfenstein"><a href="/web/20121120055059/http://www.modwiki.net/wiki/Wolfenstein">Wolfenstein</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 5'>
+		<h5>id Tech 5</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Rage"><a href="/web/20121120055059/http://www.modwiki.net/wiki/Rage">Rage</a></li>
+				<li id="n-Doom-4"><a href="/web/20121120055059/http://www.modwiki.net/wiki/Doom_4">Doom 4</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Quick Links'>
+		<h5>Quick Links</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Console"><a href="/web/20121120055059/http://www.modwiki.net/wiki/Console">Console</a></li>
+				<li id="n-Script-Events"><a href="/web/20121120055059/http://www.modwiki.net/wiki/Scripting">Script Events</a></li>
+				<li id="n-Material-Keywords"><a href="/web/20121120055059/http://www.modwiki.net/wiki/Material_%28decl%29">Material Keywords</a></li>
+				<li id="n-Modification-List"><a href="/web/20121120055059/http://www.modwiki.net/wiki/Modlist">Modification List</a></li>
+				<li id="n-Tutorial-List"><a href="/web/20121120055059/http://www.modwiki.net/wiki/Tutorial_list">Tutorial List</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Wiki'>
+		<h5>Wiki</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Open-tasks"><a href="/web/20121120055059/http://www.modwiki.net/wiki/modwiki:Open_tasks">Open tasks</a></li>
+				<li id="n-recentchanges"><a href="/web/20121120055059/http://www.modwiki.net/wiki/Special:Recentchanges">Recent changes</a></li>
+				<li id="n-Style-guide"><a href="/web/20121120055059/http://www.modwiki.net/wiki/modwiki:Style_guide">Style guide</a></li>
+				<li id="n-help"><a href="/web/20121120055059/http://www.modwiki.net/wiki/Help:Contents">Help</a></li>
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/web/20121120055059/http://www.modwiki.net/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" value="Search" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/web/20121120055059/http://www.modwiki.net/wiki/Special:Whatlinkshere/Script_events_%28Doom_3%29">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/web/20121120055059/http://www.modwiki.net/wiki/Special:Recentchangeslinked/Script_events_%28Doom_3%29">Related changes</a></li>
+<li id="t-upload"><a href="/web/20121120055059/http://www.modwiki.net/wiki/Special:Upload">Upload file</a></li>
+<li id="t-specialpages"><a href="/web/20121120055059/http://www.modwiki.net/wiki/Special:Specialpages">Special pages</a></li>
+				<li id="t-print"><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Script_events_%28Doom_3%29&amp;printable=yes">Printable version</a></li>				<li id="t-permalink"><a href="/web/20121120055059/http://www.modwiki.net/w/index.php?title=Script_events_%28Doom_3%29&amp;oldid=12828">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="/web/20121120055059/http://www.mediawiki.org/"><img src="/web/20121120055059im_/http://www.modwiki.net/w/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="/web/20121120055059/http://www.gnu.org/copyleft/fdl.html"><img src="/web/20121120055059im_/http://www.modwiki.net/w/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+				<li id="lastmod"> This page was last modified 08:40, 4 June 2008.</li>
+				<li id="copyright">Content is available under <a href="/web/20121120055059/http://www.gnu.org/copyleft/fdl.html" class='external ' title="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.2</a>.</li>
+				<li id="privacy"><a href="/web/20121120055059/http://www.modwiki.net/wiki/modwiki:Privacy_policy" title="modwiki:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="/web/20121120055059/http://www.modwiki.net/wiki/modwiki:About" title="modwiki:About">About modwiki</a></li>
+				<li id="disclaimer"><a href="/web/20121120055059/http://www.modwiki.net/wiki/modwiki:General_disclaimer" title="modwiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+	<script type="text/javascript"> if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+<!-- Served by www.modwiki.net in 4.51 secs. -->
+</body></html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 5:50:59 Nov 20, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 4:17:11 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

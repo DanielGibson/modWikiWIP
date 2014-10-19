@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="http://modwiki.net/w/skins/common/feed.css"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+		<id>http://modwiki.net/w/index.php?title=Special:Recentchanges&amp;days=1&amp;limit=250&amp;hidebots=&amp;hideliu=1&amp;hidepatrolled=1&amp;feed=atom</id>
+		<title>modwiki - Recent changes [en]</title>
+		<link rel="self" type="application/atom+xml" href="http://modwiki.net/w/index.php?title=Special:Recentchanges&amp;days=1&amp;limit=250&amp;hidebots=&amp;hideliu=1&amp;hidepatrolled=1&amp;feed=atom"/>
+		<link rel="alternate" type="text/html" href="http://modwiki.net/wiki/Special:Recentchanges"/>
+		<updated>2007-09-15T15:56:32Z</updated>
+		<subtitle>Track the most recent changes to the wiki on this page.</subtitle>
+		<generator>MediaWiki 1.6.8</generator>
+
+	<entry>
+		<id>http://modwiki.net/wiki/Server_query_protocol</id>
+		<title>Server query protocol</title>
+		<link rel="alternate" type="text/html" href="http://modwiki.net/wiki/Server_query_protocol"/>
+				<updated>2007-09-15T09:48:40Z</updated>
+		
+		<summary type="html">&lt;p&gt;Quickly pasted, fix later&lt;/p&gt;
+&lt;p&gt;&lt;b&gt;New page&lt;/b&gt;&lt;/p&gt;&lt;div&gt;{{stub}}&lt;br /&gt;
+&lt;br /&gt;
+All [[id Tech 4]] engines have a means of querying servers to gather info about a particular server. Mostly the protocol is slightly different in different games.&lt;br /&gt;
+&lt;br /&gt;
+{{D3section|title=Doom 3 version}}&lt;br /&gt;
+=== Querying the master server ===&lt;br /&gt;
+=== Querying a server ===&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+{{ETQWsection|title=Doom 3 version}}&lt;br /&gt;
+== Server Feed ==&lt;br /&gt;
+*Demo Serverfeed [http://etqwdemo-ipgetter.demonware.net/ipgetter/ here]&lt;br /&gt;
+=== Data Block ===&lt;br /&gt;
+&amp;lt;pre&amp;gt;The data block for each client is:&lt;br /&gt;
+&lt;br /&gt;
+Code:&lt;br /&gt;
+&lt;br /&gt;
+struct client_t {&lt;br /&gt;
+  short ping;&lt;br /&gt;
+  int rate;&lt;br /&gt;
+  char name[32]; // NULL-terminated&lt;br /&gt;
+  byte isBot;&lt;br /&gt;
+ };&lt;br /&gt;
+&lt;br /&gt;
+The data block following all 32 clients is:&lt;br /&gt;
+Code:&lt;br /&gt;
+&lt;br /&gt;
+ struct serverInfo_t {&lt;br /&gt;
+  int osMask;&lt;br /&gt;
+  byte isRanked;&lt;br /&gt;
+  int timeLeft;&lt;br /&gt;
+  byte gameState;&lt;br /&gt;
+ };&lt;br /&gt;
+&lt;br /&gt;
+gameState is a bitfield of the following possible items:&lt;br /&gt;
+For all gametypes (these are three mutually-exclusive):&lt;br /&gt;
+1 = Warmup/Warmup countdown&lt;br /&gt;
+2 = Game in progress&lt;br /&gt;
+4 = Game over, in review screen&lt;br /&gt;
+&lt;br /&gt;
+For stopwatch:&lt;br /&gt;
+8 = The return match is active (ie, the second play of the map)&lt;br /&gt;
+&amp;lt;/pre&amp;gt;&lt;br /&gt;
+*[http://community.enemyterritory.com/forums/showpost.php?p=129140&amp;amp;postcount=50 source]&lt;br /&gt;
+&lt;br /&gt;
+[[Category:Coding]]&lt;/div&gt;</summary>
+		<author><name>Kamikazee</name></author>	</entry>
+
+	<entry>
+		<id>http://modwiki.net/wiki/Enemy_Territory:_Quake_Wars</id>
+		<title>Enemy Territory: Quake Wars</title>
+		<link rel="alternate" type="text/html" href="http://modwiki.net/wiki/Enemy_Territory:_Quake_Wars"/>
+				<updated>2007-09-15T09:44:57Z</updated>
+		
+		<summary type="html">&lt;p&gt;Moved server query stuff to own page in coding section&lt;/p&gt;
+
+			&lt;table border='0' width='98%' cellpadding='0' cellspacing='4' style=&quot;background-color: white;&quot;&gt;
+			&lt;tr&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Revision as of 09:44, 15 September 2007&lt;/td&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Current revision&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 2:&lt;/strong&gt;&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 2:&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;: ''This page is a placeholder that will become the main page for Enemy Territory: Quake Wars

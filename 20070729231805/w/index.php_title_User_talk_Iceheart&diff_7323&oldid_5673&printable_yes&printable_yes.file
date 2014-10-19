@@ -1,0 +1,662 @@
+DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex,follow" />
+<meta name="keywords" content="User talk:Iceheart,Iceheart,Rich,Democritus,Kamikazee,Legshot,Zeh,Categories,Common.css,Modwiki" />
+<link rel="shortcut icon" href="/web/20070729231805im_/http://modwiki.net/favicon.ico" />
+<link title="Creative Commons" type="application/rdf+xml" href="/w/index.php?title=User_talk:Iceheart&amp;action=creativecommons" rel="meta" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<title>User talk:Iceheart - modwiki</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20070729231805cs_/http://modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css"  href="/web/20070729231805cs_/http://modwiki.net/w/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/w/skins/monobook/IE70Fixes.css?1";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
+		<script type="text/javascript" src="/web/20070729231805js_/http://modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20070729231805js_/http://modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/web/20070729231805cs_/http://modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231805cs_/http://modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231805cs_/http://modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns-3 ltr">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app0.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/modwiki.net\/w\/index.php?title=User_talk:Iceheart&diff=7323&oldid=5673&printable=yes&printable=yes";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "29";
+var displayMonth = "Jul";
+var displayYear = "2007";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;diff=7323&amp;oldid=5673&amp;printable=yes&amp;printable=yes" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20070729231805" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jun
+                       
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 23:18:05 Jul 29, 2007">JUL</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Aug
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_prv_off.png" alt="Previous capture" width="14" height="16" border="0" />
+                       
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 23:18:05 Jul 29, 2007">29</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2006
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 23:18:05 Jul 29, 2007">2007</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2008
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20070729231805*/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;diff=7323&amp;oldid=5673&amp;printable=yes&amp;printable=yes" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>1 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">29 Jul 07 - 29 Jul 07</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:6:000000100000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000_2014:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">User talk:Iceheart</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From modwiki</h3>
+			<div id="contentSub">(Difference between revisions)</div>
+									<div id="jump-to-nav">Jump to: <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;diff=7323&amp;oldid=5673&amp;printable=yes&amp;printable=yes#column-one">navigation</a>, <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;diff=7323&amp;oldid=5673&amp;printable=yes&amp;printable=yes#searchInput">search</a></div>			<!-- start content -->
+			
+			<table border='0' width='98%' cellpadding='0' cellspacing='4' class='diff'>
+			<tr>
+				<td colspan='2' width='50%' align='center' class='diff-otitle'><strong><a href='/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;oldid=5673'>Revision as of 22:24, 20 December 2005</a></strong><br /><a href="/web/20070729231805/http://modwiki.net/wiki/User:Iceheart" title="User:Iceheart">Iceheart</a>  (<a href="/web/20070729231805/http://modwiki.net/wiki/User_talk:Iceheart" title="User talk:Iceheart">Talk</a> | <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Contributions&amp;target=Iceheart" title="Special:Contributions">contribs</a>)<br /> <span class='comment'>(Okay)</span><br /><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;diff=prev&amp;oldid=5673" title="User talk:Iceheart" id="differences-prevlink">? Previous diff</a></td>
+				<td colspan='2' width='50%' align='center' class='diff-ntitle'><strong><a href='/web/20070729231805/http://modwiki.net/wiki/User_talk:Iceheart'>Current revision</a></strong><br /><a href="/web/20070729231805/http://modwiki.net/wiki/User:Rich" title="User:Rich">Rich</a>  (<a href="/web/20070729231805/http://modwiki.net/wiki/User_talk:Rich" title="User talk:Rich">Talk</a> | <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Contributions&amp;target=Rich" title="Special:Contributions">contribs</a>) <br /> <span class='comment'>(<span class="autocomment"><a href="/web/20070729231805/http://modwiki.net/wiki/User_talk:Iceheart#Kamikazee_-_Elevated_Rights" title="User talk:Iceheart">→</a>Kamikazee - Elevated Rights</span>)</span><br /></td>
+			</tr>
+			<tr><td colspan="2" align="left"><strong>Line 68:</strong></td>
+<td colspan="2" align="left"><strong>Line 68:</strong></td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td> </td><td class='diff-context'>I hope I answered all of it, but feel free to ask or suggest more. --[[User:Iceheart|iceheart]] 23:24, 20 December 2005 (W. Europe Standard Time)</td><td> </td><td class='diff-context'>I hope I answered all of it, but feel free to ask or suggest more. --[[User:Iceheart|iceheart]] 23:24, 20 December 2005 (W. Europe Standard Time)</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>== BTW ==</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>For more real-time communication you could check into our IRC channel, #modwiki @ irc.gamesurge.net (I'm pretty much always there, even though it has been strangely empty recently). --[[User:Iceheart|iceheart]] 23:26, 20 December 2005 (W. Europe Standard Time)</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>== Spammers ==</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>I noticed that you too have had to rollback and block some users. I've done a bit of reading and I would hazard a guess that it's bots at work.</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>Perhaps we should make use of the $wgSpamRegex variable to block edits that contain matching keywords?</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>It's explained on this page...</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>http://meta.wikimedia.org/wiki/Anti-spam_Features</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>I can't see a reason why anyone would ever need to hide anything on a page so if we block the CSS properties that they use to hide their links it should fix the problem. I've got a little experience with regular expressions so for what we've encountered up to this point, this should work...</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'> $wgSpamRegex=/overflow\s*:\s*auto|display\s*:\s*none/i</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>Let me know what you think.</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>--[[User:Rich|Rich]] 09:33, 29 March 2006 (W. Europe Daylight Time)</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>== Ok rich ==</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>I implemented your solution (big blacklist filter didn't cooperate) and it seems to work fine for now but on meta they say this:</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'> Unfortunately there are many workarounds this spammer can use, but for the time being this will get them off your back.</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>about blocking css attributes, but it's still a help. --[[User:Iceheart|iceheart]] 12:16, 4 April 2006 (W. Europe Daylight Time)</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>== Spam RegEx ==</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>I'm sure there are workarounds as their are probably dozens of ways to hide things on webpages. </td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>In the meantime, they can't post spam.</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>And should they find a way around it, I'll just rework the RegEx. It's like ping pong. Back and forth.</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>--[[User:Rich|Rich]] 07:55, 5 April 2006 (W. Europe Daylight Time)</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>== Shout when those CSS rules are fixed ==</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>I wanted to fix the CVar template, but doing that without those CSS rules wouldn't improve it.</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>So let me know then when you get those rules in so that table can be dealt with. --[[User:Kamikazee|Kamikazee]] 21:06, 15 June 2006 (W. Europe Daylight Time)</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>== Back from vacation! ==</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>In case noone noticed, I've been on vacation for the past two weeks. This means I've forgotten everything I was supposed to do here, so if some helpful soul will clue me in, I will be grateful! --[[User:Iceheart|iceheart]] 00:22, 1 July 2006 (W. Europe Daylight Time)</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>== Special Delivery ==</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>I needed to clean up my discussion page, as do you. Here's the CSS relevant discussion from my page as you are the only one who can implement it...</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>----</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>==== Tables are botched ====</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>http://www.modwiki.net/wiki/Commands_%28Doom_3%29</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>--[[User:Rich|Rich]] 05:50, 29 August 2006 (CEST)</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>==== Tables were fixed ====</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>Some time ago, that table showed all the &lt;nowiki&gt;&lt;/li&gt;&lt;/nowiki&gt; tags. Since the wiki renderer couldn't live with them, I removed all those tags. Now it seems that they are needed again.</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>However, I would strongly advise to import the CSS style rules I proposed in the page's Discussion. That way, the page can be cleaned once and for all but still give the same layout. Once those rules are in place, the conversion should be nearly painless by using a simple editor to remove all those redundant &lt;nowiki&gt;&lt;li&gt;&lt;/nowiki&gt; tags. -[[User:Kamikazee|Kamikazee]] 23:55, 29 August 2006 (CEST)</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>==== Downgrade. ====</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>Unfortunately, the recent server move required that I downgrade mediawiki to an older version, so that's why they might be needed again.</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>Which CSS rule was it that I was to insert?. --[[User:Iceheart|iceheart]] 02:15, 30 August 2006 (CEST)</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>==== CSS rules to add ====</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>Here they are:</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>* [http://www.modwiki.net/wiki/Talk:Commands_%28Doom_3%29#Another_sugestion_for_style_rules CSS rules for unordered-list-style tables]</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>* [http://www.modwiki.net/w/index.php?title=User_talk:Rich&amp;direction=prev&amp;oldid=6743#CVar_tables_broken_.2B_style_sugestion CSS rules for better markup of tables] (Eg. the CVar template or the table in the Blend (material statement) )</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>-[[User:Kamikazee|Kamikazee]] 13:38, 31 August 2006 (CEST)</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>==== Where to add ====</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>I guess the CSS rules need to be added to [[MediaWiki:Common.css]] so they apply to all skins. -[[User:Kamikazee|Kamikazee]] 13:49, 4 September 2006 (CEST)</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>----</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>--[[User:Rich|Rich]] 07:55, 2 April 2007 (CEST)</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>== Kamikazee - Elevated Rights ==</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>I'd like to give Kamikazee elevated privileges here on the wiki. He's one of our most active members and I think he has a sound head on his shoulders.</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>Your call.</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>--[[User:Rich|Rich]] 05:44, 23 May 2007 (CEST)</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>== Rights ==</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>Thanks. I just wanted to run the idea by you.</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>--[[User:Rich|Rich]] 12:30, 23 May 2007 (CEST)</td></tr>
+
+			</table>
+		<hr /><h2>Current revision</h2>
+<p>About the summary - I know. I wasn't updating summaries because I was actually starting the new pages. The few editions I made to existing pages had a summary. Also, I noticed you edited one of the other pages while I was editing it, I think it's what started up the confusion? <a href="/web/20070729231805/http://modwiki.net/wiki/User:Zeh" title="User:Zeh">Zeh</a>
+</p>
+<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;diff=7323&amp;oldid=5673&amp;printable=yes&amp;printable=yes#Heh.2C_funny"><span class="tocnumber">1</span> <span class="toctext">Heh, funny</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;diff=7323&amp;oldid=5673&amp;printable=yes&amp;printable=yes#no_no"><span class="tocnumber">2</span> <span class="toctext">no no</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;diff=7323&amp;oldid=5673&amp;printable=yes&amp;printable=yes#Nested_Categories"><span class="tocnumber">3</span> <span class="toctext">Nested Categories</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;diff=7323&amp;oldid=5673&amp;printable=yes&amp;printable=yes#shakesGen"><span class="tocnumber">4</span> <span class="toctext">shakesGen</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;diff=7323&amp;oldid=5673&amp;printable=yes&amp;printable=yes#Navigation"><span class="tocnumber">5</span> <span class="toctext">Navigation</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;diff=7323&amp;oldid=5673&amp;printable=yes&amp;printable=yes#Okay"><span class="tocnumber">6</span> <span class="toctext">Okay</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;diff=7323&amp;oldid=5673&amp;printable=yes&amp;printable=yes#BTW"><span class="tocnumber">7</span> <span class="toctext">BTW</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;diff=7323&amp;oldid=5673&amp;printable=yes&amp;printable=yes#Spammers"><span class="tocnumber">8</span> <span class="toctext">Spammers</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;diff=7323&amp;oldid=5673&amp;printable=yes&amp;printable=yes#Ok_rich"><span class="tocnumber">9</span> <span class="toctext">Ok rich</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;diff=7323&amp;oldid=5673&amp;printable=yes&amp;printable=yes#Spam_RegEx"><span class="tocnumber">10</span> <span class="toctext">Spam RegEx</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;diff=7323&amp;oldid=5673&amp;printable=yes&amp;printable=yes#Shout_when_those_CSS_rules_are_fixed"><span class="tocnumber">11</span> <span class="toctext">Shout when those CSS rules are fixed</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;diff=7323&amp;oldid=5673&amp;printable=yes&amp;printable=yes#Back_from_vacation.21"><span class="tocnumber">12</span> <span class="toctext">Back from vacation!</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;diff=7323&amp;oldid=5673&amp;printable=yes&amp;printable=yes#Special_Delivery"><span class="tocnumber">13</span> <span class="toctext">Special Delivery</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;diff=7323&amp;oldid=5673&amp;printable=yes&amp;printable=yes#Tables_are_botched"><span class="tocnumber">13.1</span> <span class="toctext">Tables are botched</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;diff=7323&amp;oldid=5673&amp;printable=yes&amp;printable=yes#Tables_were_fixed"><span class="tocnumber">13.2</span> <span class="toctext">Tables were fixed</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;diff=7323&amp;oldid=5673&amp;printable=yes&amp;printable=yes#Downgrade."><span class="tocnumber">13.3</span> <span class="toctext">Downgrade.</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;diff=7323&amp;oldid=5673&amp;printable=yes&amp;printable=yes#CSS_rules_to_add"><span class="tocnumber">13.4</span> <span class="toctext">CSS rules to add</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;diff=7323&amp;oldid=5673&amp;printable=yes&amp;printable=yes#Where_to_add"><span class="tocnumber">13.5</span> <span class="toctext">Where to add</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;diff=7323&amp;oldid=5673&amp;printable=yes&amp;printable=yes#Kamikazee_-_Elevated_Rights"><span class="tocnumber">14</span> <span class="toctext">Kamikazee - Elevated Rights</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;diff=7323&amp;oldid=5673&amp;printable=yes&amp;printable=yes#Rights"><span class="tocnumber">15</span> <span class="toctext">Rights</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;action=edit&amp;section=1" title="Edit section: Heh, funny">edit</a>]</div><a name="Heh.2C_funny"></a><h2> Heh, funny </h2>
+<p>In your last update to edit guidelines you wrote:
+</p><p>"<i>Linking unlinked linkworthy</i> text is not minor."
+</p><p>Ouch.&nbsp;;)
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;action=edit&amp;section=2" title="Edit section: no no">edit</a>]</div><a name="no_no"></a><h2> no no </h2>
+<p>heh, I wasn't clear. I meant the aliteration is funny: "linking unlinked linkworthy..." I mean, it's a mouthful.&nbsp;;)
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;action=edit&amp;section=3" title="Edit section: Nested Categories">edit</a>]</div><a name="Nested_Categories"></a><h2>Nested Categories</h2>
+<p>How do you enable those neat
+</p><p>Categories: Main Category -> Sub Category -> Sub-Sub Category 
+</p><p>displays? I've installed 1.5 on my own site but I haven't figured that out yet. I also blatantly stole some help texts (mainly the editing guide, hope that's okay)
+</p>
+<ul><li><a href="/web/20070729231805/http://modwiki.net/wiki/User:Democritus" title="User:Democritus">Democritus</a> 20:24, 3 November 2005 (W. Europe Standard Time)
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;action=edit&amp;section=4" title="Edit section: shakesGen">edit</a>]</div><a name="shakesGen"></a><h2>shakesGen</h2>
+<p>the in the notes section because that's how you make it re-make all the shakeData.  Just letting you know hwy I changed it.
+</p><p>-thf
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;action=edit&amp;section=5" title="Edit section: Navigation">edit</a>]</div><a name="Navigation"></a><h2> Navigation </h2>
+<p>Note: The whole thing is hard for me to explain because a) it's not yet a stable idea in my mind and b) I'm no native english speaker, so please bear with me&nbsp;:) 
+</p><p>I've been thinkin about navigation of this wiki lately. Imho it could be improved.
+Seeing as how editing Doom3 and Quake4 is very similar, I don't think it's a very good idea to seperate the two so harsh.
+</p><p>I think the navigation should be task based (what does the user want to do) and on the lowest level game specific. Take the console commands for example. I know you somehow don't like one page for the two games, because you think it hinders overview and having even 4 of them is easy to maintain, but I still disagree. The way I'm organising the page it's getting harder and harder to not oversee stuff. It's hard to check if there are missing commands or duplicates because it's not a listing of categorized objects in the system but rather just a plain list of the commands. Thinking about having to do that for all 4 games in the future makes me somewhat afraid O_o! Imho all commands should be on one list, not because someone is interessted in the differences between the two games but just because it's easier as a whole. Say you come to a page of a command from some article and you want to see the list as a whole. To which list do you link back? To all 4? What if I just want to see for which game a command is? You'd have to use the page search and this makes it more complex to use. It's also redundant information which is just horrible to manage.
+</p><p>The whole wiki seems a little unorganized to me. It's hard to find existing pages. When I was editing the command list, I wanted to add links to some commands and I had to find out which pages exist and if I found more pages on one topic, I had to find out which is the main one. There should be more structure to it. I wanted to link to a file format from the command list page. I couldn't find it because 3 letter search is disabled. Another example: I wanted to link to the Articulated Figure Editor (sp?) from the editor page and I didn't find one about it at first. I then found a page called "AF editor". Imho there should be a simple description page to a term, which has the full name and always the same format. This format could be 1) short description and 2) link to articles about the term or similar.
+</p><p>Also the different sections should have a basic layout shared. I think the whole layout should be somewhat streemlined. I don't think I know enough about all there is to editing yet, to handle that task alone but maybe we could discuss that somewhere all together, come up with a good layout and apply it to the page.
+</p><p>Another exmaple: The mapping section. It's somewhat confusing. First you have a page about mapping which explains some basic term, and the tools. On the editor page you have some more information but no links to further reading. No info or links to tutorials about creating rooms, no information about simple editing. It's rather confusing.
+</p><p>The menu on the left isn't useful at all. There are only links to the games and from there you're depended on the page to page navigation which is imho very ineffective. There's also no breadcrumb navigation which shows where you are and where you came from like: main -> editing -> mapping -> a basic room (for example). 
+</p><p>The wiki itself is rather confusing, as all the features of it are somewhat hidden under "special pages". Maybe some of these pages could be in the main menu? It was a little confusing to get used to this wiki from the start (it's not that hard but it could be improved imho). 
+</p><p>Imho the whole separation of the two games from the beginning is useless as they even now share many pages. Some are shared, some are different and the ones different often have the same info on it.
+</p><p>Q: Does anyone know if it's possible to apply templates to pages in certain categories?
+</p><p>I hope it's somewhat clear where I'm going at, but as I'm still confused with the wiki it's hard to explain it better. Maybe it's all nonsense anyway, but I try to somewhat organize the mapping section (of site) when I come home and post a proposal here. 
+</p><p>--<a href="/web/20070729231805/http://modwiki.net/wiki/User:Legshot" title="User:Legshot">Legshot</a> 15:46, 20 December 2005 (W. Europe Standard Time)
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;action=edit&amp;section=6" title="Edit section: Okay">edit</a>]</div><a name="Okay"></a><h2> Okay </h2>
+<p>First off: You have bread crumbs navigation for categories (only way to do it in mediawiki) on the bottom of each page.
+</p><p>Second: I know that many things between D3 and Q4 are identical, BUT that doesn't mean that that will also be the case for ETQW, Prey, the next wolfenstein game, and god knows what else after that, all of which are pretty much guaranteed to be heavily engine modded. THAT is the reason for the separate lists, even though it might seem pointless now. On the other hand, a master index of CVars and commands would be a nice page to have. Information redundancy is GOOD, information redundancy is only bad if different articles disagree with each other!
+</p><p>Suggestions for organization of the front pages is welcome, but there's no guarantee that it will actually happen.
+</p><p>Re: Mapping page, tutorial links, etc: Well, this is a wiki, which means anyone is free to add things they feel are missing, that's one of the biggest points with it.
+</p><p>The functionality under "special pages" are things regular users shouldn't have to use, if any of them are actually useful there should be a proper wiki page with that info instead, like instead of "all categories", you would go to <a href="/web/20070729231805/http://modwiki.net/wiki/modwiki:Categories" title="modwiki:Categories">modwiki:Categories</a> or <a href="/web/20070729231805/http://modwiki.net/wiki/Category:Modwiki" title="Category:Modwiki">Category:Modwiki</a> (for following down the hierarchy AND seeing all the articles).
+</p><p>I hope I answered all of it, but feel free to ask or suggest more. --<a href="/web/20070729231805/http://modwiki.net/wiki/User:Iceheart" title="User:Iceheart">iceheart</a> 23:24, 20 December 2005 (W. Europe Standard Time)
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;action=edit&amp;section=7" title="Edit section: BTW">edit</a>]</div><a name="BTW"></a><h2> BTW </h2>
+<p>For more real-time communication you could check into our IRC channel, #modwiki @ irc.gamesurge.net (I'm pretty much always there, even though it has been strangely empty recently). --<a href="/web/20070729231805/http://modwiki.net/wiki/User:Iceheart" title="User:Iceheart">iceheart</a> 23:26, 20 December 2005 (W. Europe Standard Time)
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;action=edit&amp;section=8" title="Edit section: Spammers">edit</a>]</div><a name="Spammers"></a><h2> Spammers </h2>
+<p>I noticed that you too have had to rollback and block some users. I've done a bit of reading and I would hazard a guess that it's bots at work.
+</p><p>Perhaps we should make use of the $wgSpamRegex variable to block edits that contain matching keywords?
+</p><p>It's explained on this page...
+<a href="/web/20070729231805/http://meta.wikimedia.org/wiki/Anti-spam_Features" class='external free' title="http://meta.wikimedia.org/wiki/Anti-spam_Features">http://meta.wikimedia.org/wiki/Anti-spam_Features</a>
+</p><p>I can't see a reason why anyone would ever need to hide anything on a page so if we block the CSS properties that they use to hide their links it should fix the problem. I've got a little experience with regular expressions so for what we've encountered up to this point, this should work...
+</p>
+<pre>$wgSpamRegex=/overflow\s*:\s*auto|display\s*:\s*none/i
+</pre>
+<p>Let me know what you think.
+</p><p>--<a href="/web/20070729231805/http://modwiki.net/wiki/User:Rich" title="User:Rich">Rich</a> 09:33, 29 March 2006 (W. Europe Daylight Time)
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;action=edit&amp;section=9" title="Edit section: Ok rich">edit</a>]</div><a name="Ok_rich"></a><h2> Ok rich </h2>
+<p>I implemented your solution (big blacklist filter didn't cooperate) and it seems to work fine for now but on meta they say this:
+</p>
+<pre>Unfortunately there are many workarounds this spammer can use, but for the time being this will get them off your back.
+</pre>
+<p>about blocking css attributes, but it's still a help. --<a href="/web/20070729231805/http://modwiki.net/wiki/User:Iceheart" title="User:Iceheart">iceheart</a> 12:16, 4 April 2006 (W. Europe Daylight Time)
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;action=edit&amp;section=10" title="Edit section: Spam RegEx">edit</a>]</div><a name="Spam_RegEx"></a><h2> Spam RegEx </h2>
+<p>I'm sure there are workarounds as their are probably dozens of ways to hide things on webpages. 
+</p><p>In the meantime, they can't post spam.
+</p><p>And should they find a way around it, I'll just rework the RegEx. It's like ping pong. Back and forth.
+</p><p>--<a href="/web/20070729231805/http://modwiki.net/wiki/User:Rich" title="User:Rich">Rich</a> 07:55, 5 April 2006 (W. Europe Daylight Time)
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;action=edit&amp;section=11" title="Edit section: Shout when those CSS rules are fixed">edit</a>]</div><a name="Shout_when_those_CSS_rules_are_fixed"></a><h2> Shout when those CSS rules are fixed </h2>
+<p>I wanted to fix the CVar template, but doing that without those CSS rules wouldn't improve it.
+So let me know then when you get those rules in so that table can be dealt with. --<a href="/web/20070729231805/http://modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a> 21:06, 15 June 2006 (W. Europe Daylight Time)
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;action=edit&amp;section=12" title="Edit section: Back from vacation!">edit</a>]</div><a name="Back_from_vacation.21"></a><h2> Back from vacation! </h2>
+<p>In case noone noticed, I've been on vacation for the past two weeks. This means I've forgotten everything I was supposed to do here, so if some helpful soul will clue me in, I will be grateful! --<a href="/web/20070729231805/http://modwiki.net/wiki/User:Iceheart" title="User:Iceheart">iceheart</a> 00:22, 1 July 2006 (W. Europe Daylight Time)
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;action=edit&amp;section=13" title="Edit section: Special Delivery">edit</a>]</div><a name="Special_Delivery"></a><h2> Special Delivery </h2>
+<p>I needed to clean up my discussion page, as do you. Here's the CSS relevant discussion from my page as you are the only one who can implement it...
+</p>
+<hr />
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;action=edit&amp;section=14" title="Edit section: Tables are botched">edit</a>]</div><a name="Tables_are_botched"></a><h4> Tables are botched </h4>
+<p><a href="/web/20070729231805/http://www.modwiki.net/wiki/Commands_%28Doom_3%29" class='external free' title="http://www.modwiki.net/wiki/Commands_%28Doom_3%29">http://www.modwiki.net/wiki/Commands_%28Doom_3%29</a>
+</p><p>--<a href="/web/20070729231805/http://modwiki.net/wiki/User:Rich" title="User:Rich">Rich</a> 05:50, 29 August 2006 (CEST)
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;action=edit&amp;section=15" title="Edit section: Tables were fixed">edit</a>]</div><a name="Tables_were_fixed"></a><h4> Tables were fixed </h4>
+<p>Some time ago, that table showed all the &lt;/li&gt; tags. Since the wiki renderer couldn't live with them, I removed all those tags. Now it seems that they are needed again.
+</p><p>However, I would strongly advise to import the CSS style rules I proposed in the page's Discussion. That way, the page can be cleaned once and for all but still give the same layout. Once those rules are in place, the conversion should be nearly painless by using a simple editor to remove all those redundant &lt;li&gt; tags. -<a href="/web/20070729231805/http://modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a> 23:55, 29 August 2006 (CEST)
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;action=edit&amp;section=16" title="Edit section: Downgrade.">edit</a>]</div><a name="Downgrade."></a><h4> Downgrade. </h4>
+<p>Unfortunately, the recent server move required that I downgrade mediawiki to an older version, so that's why they might be needed again.
+</p><p>Which CSS rule was it that I was to insert?. --<a href="/web/20070729231805/http://modwiki.net/wiki/User:Iceheart" title="User:Iceheart">iceheart</a> 02:15, 30 August 2006 (CEST)
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;action=edit&amp;section=17" title="Edit section: CSS rules to add">edit</a>]</div><a name="CSS_rules_to_add"></a><h4> CSS rules to add </h4>
+<p>Here they are:
+</p>
+<ul><li> <a href="/web/20070729231805/http://www.modwiki.net/wiki/Talk:Commands_%28Doom_3%29#Another_sugestion_for_style_rules" class='external text' title="http://www.modwiki.net/wiki/Talk:Commands_%28Doom_3%29#Another_sugestion_for_style_rules">CSS rules for unordered-list-style tables</a>
+</li><li> <a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=User_talk:Rich&amp;direction=prev&amp;oldid=6743#CVar_tables_broken_.2B_style_sugestion" class='external text' title="http://www.modwiki.net/w/index.php?title=User_talk:Rich&amp;direction=prev&amp;oldid=6743#CVar_tables_broken_.2B_style_sugestion">CSS rules for better markup of tables</a> (Eg. the CVar template or the table in the Blend (material statement) )
+</li></ul>
+<p>-<a href="/web/20070729231805/http://modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a> 13:38, 31 August 2006 (CEST)
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;action=edit&amp;section=18" title="Edit section: Where to add">edit</a>]</div><a name="Where_to_add"></a><h4> Where to add </h4>
+<p>I guess the CSS rules need to be added to <a href="/web/20070729231805/http://modwiki.net/wiki/MediaWiki:Common.css" title="MediaWiki:Common.css">MediaWiki:Common.css</a> so they apply to all skins. -<a href="/web/20070729231805/http://modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a> 13:49, 4 September 2006 (CEST)
+</p>
+<hr />
+<p>--<a href="/web/20070729231805/http://modwiki.net/wiki/User:Rich" title="User:Rich">Rich</a> 07:55, 2 April 2007 (CEST)
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;action=edit&amp;section=19" title="Edit section: Kamikazee - Elevated Rights">edit</a>]</div><a name="Kamikazee_-_Elevated_Rights"></a><h2> Kamikazee - Elevated Rights </h2>
+<p>I'd like to give Kamikazee elevated privileges here on the wiki. He's one of our most active members and I think he has a sound head on his shoulders.
+</p><p>Your call.
+</p><p>--<a href="/web/20070729231805/http://modwiki.net/wiki/User:Rich" title="User:Rich">Rich</a> 05:44, 23 May 2007 (CEST)
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;action=edit&amp;section=20" title="Edit section: Rights">edit</a>]</div><a name="Rights"></a><h2> Rights </h2>
+<p>Thanks. I just wanted to run the idea by you.
+</p><p>--<a href="/web/20070729231805/http://modwiki.net/wiki/User:Rich" title="User:Rich">Rich</a> 12:30, 23 May 2007 (CEST)
+</p><div class="printfooter">
+Retrieved from "<a href="/web/20070729231805/http://modwiki.net/wiki/User_talk:Iceheart">http://modwiki.net/wiki/User_talk:Iceheart</a>"</div>
+						<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<ul>
+				 <li id="ca-nstab-user"><a href="/web/20070729231805/http://modwiki.net/wiki/User:Iceheart">User page</a></li>
+				 <li id="ca-talk" class="selected"><a href="/web/20070729231805/http://modwiki.net/wiki/User_talk:Iceheart">Discussion</a></li>
+				 <li id="ca-edit" class=" istalk"><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;action=edit&amp;oldid=7323">Edit</a></li>
+				 <li id="ca-addsection"><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;action=edit&amp;section=new">+</a></li>
+				 <li id="ca-history"><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;action=history">History</a></li>
+		</ul>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Userlogin&amp;returnto=User_talk:Iceheart">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/web/20070729231805im_/http://modwiki.net/wiki/upload/wiki.png);" href="/web/20070729231805/http://modwiki.net/wiki/Main_Page" title="Main Page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class='portlet' id='p-Main'>
+		<h5>Main</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/web/20070729231805/http://modwiki.net/wiki/Main_Page">Main Page</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 4'>
+		<h5>id Tech 4</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Doom-3"><a href="/web/20070729231805/http://modwiki.net/wiki/Doom_3">Doom 3</a></li>
+				<li id="n-Quake-4"><a href="/web/20070729231805/http://modwiki.net/wiki/Quake_4">Quake 4</a></li>
+				<li id="n-Prey"><a href="/web/20070729231805/http://modwiki.net/wiki/Prey">Prey</a></li>
+				<li id="n-ETQW"><a href="/web/20070729231805/http://modwiki.net/wiki/Enemy_Territory:_Quake_Wars">ETQW</a></li>
+				<li id="n-RTCW-2"><a href="/web/20070729231805/http://modwiki.net/wiki/Return_to_Castle_Wolfenstein_2">RTCW 2</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 5'>
+		<h5>id Tech 5</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Rage"><a href="/web/20070729231805/http://modwiki.net/wiki/Rage">Rage</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Quick Links'>
+		<h5>Quick Links</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Console"><a href="/web/20070729231805/http://modwiki.net/wiki/Console">Console</a></li>
+				<li id="n-Script-Events"><a href="/web/20070729231805/http://modwiki.net/wiki/Scripting">Script Events</a></li>
+				<li id="n-Material-Keywords"><a href="/web/20070729231805/http://modwiki.net/wiki/Material_%28decl%29">Material Keywords</a></li>
+				<li id="n-Modification-List"><a href="/web/20070729231805/http://modwiki.net/wiki/Modlist">Modification List</a></li>
+				<li id="n-Tutorial-List"><a href="/web/20070729231805/http://modwiki.net/wiki/Tutorial_list">Tutorial List</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Wiki'>
+		<h5>Wiki</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Open-tasks"><a href="/web/20070729231805/http://modwiki.net/wiki/modwiki:Open_tasks">Open tasks</a></li>
+				<li id="n-recentchanges"><a href="/web/20070729231805/http://modwiki.net/wiki/Special:Recentchanges">Recent changes</a></li>
+				<li id="n-Style-guide"><a href="/web/20070729231805/http://modwiki.net/wiki/modwiki:Style_guide">Style guide</a></li>
+				<li id="n-help"><a href="/web/20070729231805/http://modwiki.net/wiki/Help:Contents">Help</a></li>
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/web/20070729231805/http://modwiki.net/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" value="Search" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/web/20070729231805/http://modwiki.net/wiki/Special:Whatlinkshere/User_talk:Iceheart">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/web/20070729231805/http://modwiki.net/wiki/Special:Recentchangeslinked/User_talk:Iceheart">Related changes</a></li>
+<li id="t-contributions"><a href="/web/20070729231805/http://modwiki.net/wiki/Special:Contributions/Iceheart">User contributions</a></li>
+<li id="t-upload"><a href="/web/20070729231805/http://modwiki.net/wiki/Special:Upload">Upload file</a></li>
+<li id="t-specialpages"><a href="/web/20070729231805/http://modwiki.net/wiki/Special:Specialpages">Special pages</a></li>
+				<li id="t-print"><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Iceheart&amp;diff=7323&amp;oldid=5673&amp;printable=yes&amp;printable=yes">Printable version</a></li>				<li id="t-ispermalink">Permanent link</li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="/web/20070729231805/http://www.mediawiki.org/"><img src="/web/20070729231805im_/http://modwiki.net/w/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="/web/20070729231805/http://www.gnu.org/copyleft/fdl.html"><img src="/web/20070729231805im_/http://modwiki.net/w/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+				<li id="lastmod"> This page was last modified 10:30, 23 May 2007.</li>
+				<li id="copyright">Content is available under <a href="/web/20070729231805/http://www.gnu.org/copyleft/fdl.html" class='external ' title="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.2</a>.</li>
+				<li id="privacy"><a href="/web/20070729231805/http://modwiki.net/wiki/modwiki:Privacy_policy" title="modwiki:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="/web/20070729231805/http://modwiki.net/wiki/modwiki:About" title="modwiki:About">About modwiki</a></li>
+				<li id="disclaimer"><a href="/web/20070729231805/http://modwiki.net/wiki/modwiki:General_disclaimer" title="modwiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+	<script type="text/javascript"> if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+<!-- Served by h982484 in 0.27 secs. -->
+</body></html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 23:18:05 Jul 29, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 2:35:18 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

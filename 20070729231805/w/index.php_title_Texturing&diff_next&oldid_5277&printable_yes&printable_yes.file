@@ -1,0 +1,572 @@
+DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex,follow" />
+<meta name="keywords" content="Texturing,Addnormals (Image program function),Blend (Material stage keyword),Bumpmap (Material global keyword),Cube maps,DDS (file format),Diffusemap (Material global keyword),Doom 3 engine,Guide (decl),Heightmap (Image program function),Image useCompression (cvar)" />
+<link rel="shortcut icon" href="/web/20070729231805im_/http://www.modwiki.net/favicon.ico" />
+<link title="Creative Commons" type="application/rdf+xml" href="/w/index.php?title=Texturing&amp;action=creativecommons" rel="meta" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<title>Texturing - modwiki</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20070729231805cs_/http://www.modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css"  href="/web/20070729231805cs_/http://www.modwiki.net/w/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/w/skins/monobook/IE70Fixes.css?1";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
+		<script type="text/javascript" src="/web/20070729231805js_/http://www.modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20070729231805js_/http://www.modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/web/20070729231805cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231805cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231805cs_/http://www.modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns-0 ltr">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app14.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/www.modwiki.net\/w\/index.php?title=Texturing&diff=next&oldid=5277&printable=yes&printable=yes";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "29";
+var displayMonth = "Jul";
+var displayYear = "2007";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=next&amp;oldid=5277&amp;printable=yes&amp;printable=yes" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20070729231805" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jun
+                       
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 23:18:05 Jul 29, 2007">JUL</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Aug
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_prv_off.png" alt="Previous capture" width="14" height="16" border="0" />
+                       
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 23:18:05 Jul 29, 2007">29</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2006
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 23:18:05 Jul 29, 2007">2007</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2008
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20070729231805*/http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=next&amp;oldid=5277&amp;printable=yes&amp;printable=yes" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>1 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">29 Jul 07 - 29 Jul 07</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:6:000000100000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000_2014:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">Texturing</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From modwiki</h3>
+			<div id="contentSub">(Difference between revisions)</div>
+									<div id="jump-to-nav">Jump to: <a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=next&amp;oldid=5277&amp;printable=yes&amp;printable=yes#column-one">navigation</a>, <a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=next&amp;oldid=5277&amp;printable=yes&amp;printable=yes#searchInput">search</a></div>			<!-- start content -->
+			
+			<table border='0' width='98%' cellpadding='0' cellspacing='4' class='diff'>
+			<tr>
+				<td colspan='2' width='50%' align='center' class='diff-otitle'><strong><a href='/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;oldid=5277'>Revision as of 10:43, 16 December 2005</a></strong><br /><a href="/web/20070729231805/http://www.modwiki.net/wiki/User:Legshot" title="User:Legshot">Legshot</a>  (<a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=User_talk:Legshot&amp;action=edit" class="new" title="User talk:Legshot">Talk</a> | <a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Legshot" title="Special:Contributions">contribs</a>)<br /> <span class='comment'>(<span class="autocomment"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Texturing#Hit_maps" title="Texturing">→</a>Hit maps -</span>  new template)</span><br /><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=prev&amp;oldid=5277" title="Texturing" id="differences-prevlink">? Previous diff</a></td>
+				<td colspan='2' width='50%' align='center' class='diff-ntitle'><strong><a href='/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;oldid=6465'>Revision as of 22:03, 10 June 2006</a></strong><br /><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=User:Flarn2006&amp;action=edit" class="new" title="User:Flarn2006">Flarn2006</a>  (<a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=User_talk:Flarn2006&amp;action=edit" class="new" title="User talk:Flarn2006">Talk</a> | <a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Flarn2006" title="Special:Contributions">contribs</a>) <br /> <span class='comment'>(<span class="autocomment"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Texturing#General_image_editing" title="Texturing">→</a>General image editing</span>)</span><br /><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=next&amp;oldid=6465" title="Texturing" id="differences-nextlink">Next diff →</a></td>
+			</tr>
+			<tr><td colspan="2" align="left"><strong>Line 122:</strong></td>
+<td colspan="2" align="left"><strong>Line 122:</strong></td></tr>
+<tr><td> </td><td class='diff-context'>===General image editing===</td><td> </td><td class='diff-context'>===General image editing===</td></tr>
+<tr><td> </td><td class='diff-context'>*[http://www.adobe.com/ Adobe Photoshop]</td><td> </td><td class='diff-context'>*[http://www.adobe.com/ Adobe Photoshop]</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>*[http://www.jasc.com/ Paint Shop Pro]</td></tr>
+<tr><td> </td><td class='diff-context'>*[http://www.spiralgraphics.biz/gen2tour/index.htm Genetica]</td><td> </td><td class='diff-context'>*[http://www.spiralgraphics.biz/gen2tour/index.htm Genetica]</td></tr>
+<tr><td> </td><td class='diff-context'>*[http://www.gimp.org/ The Gimp]</td><td> </td><td class='diff-context'>*[http://www.gimp.org/ The Gimp]</td></tr>
+
+			</table>
+		<hr /><h2>Revision as of 22:03, 10 June 2006</h2>
+<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class='toclevel-1'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=next&amp;oldid=5277&amp;printable=yes&amp;printable=yes#Material_shaders"><span class="tocnumber">1</span> <span class="toctext">Material shaders</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=next&amp;oldid=5277&amp;printable=yes&amp;printable=yes#Diffuse_maps"><span class="tocnumber">2</span> <span class="toctext">Diffuse maps</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=next&amp;oldid=5277&amp;printable=yes&amp;printable=yes#Bump_maps"><span class="tocnumber">3</span> <span class="toctext">Bump maps</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=next&amp;oldid=5277&amp;printable=yes&amp;printable=yes#Normal_maps"><span class="tocnumber">3.1</span> <span class="toctext">Normal maps</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=next&amp;oldid=5277&amp;printable=yes&amp;printable=yes#Height_maps"><span class="tocnumber">3.2</span> <span class="toctext">Height maps</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=next&amp;oldid=5277&amp;printable=yes&amp;printable=yes#Normal_maps_vs._height_maps"><span class="tocnumber">3.3</span> <span class="toctext">Normal maps vs. height maps</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=next&amp;oldid=5277&amp;printable=yes&amp;printable=yes#Specular_maps"><span class="tocnumber">4</span> <span class="toctext">Specular maps</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=next&amp;oldid=5277&amp;printable=yes&amp;printable=yes#Hit_maps"><span class="tocnumber">5</span> <span class="toctext">Hit maps</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=next&amp;oldid=5277&amp;printable=yes&amp;printable=yes#Sky_and_reflective_maps"><span class="tocnumber">6</span> <span class="toctext">Sky and reflective maps</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=next&amp;oldid=5277&amp;printable=yes&amp;printable=yes#Supported_image_formats"><span class="tocnumber">7</span> <span class="toctext">Supported image formats</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=next&amp;oldid=5277&amp;printable=yes&amp;printable=yes#Compressed_and_uncompressed"><span class="tocnumber">8</span> <span class="toctext">Compressed and uncompressed</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=next&amp;oldid=5277&amp;printable=yes&amp;printable=yes#Texturing_applications"><span class="tocnumber">9</span> <span class="toctext">Texturing applications</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=next&amp;oldid=5277&amp;printable=yes&amp;printable=yes#General_image_editing"><span class="tocnumber">9.1</span> <span class="toctext">General image editing</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=next&amp;oldid=5277&amp;printable=yes&amp;printable=yes#Normal_mapping"><span class="tocnumber">9.2</span> <span class="toctext">Normal mapping</span></a>
+<ul>
+<li class='toclevel-3'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=next&amp;oldid=5277&amp;printable=yes&amp;printable=yes#Height_map_to_normal_map_conversion"><span class="tocnumber">9.2.1</span> <span class="toctext">Height map to normal map conversion</span></a></li>
+<li class='toclevel-3'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=next&amp;oldid=5277&amp;printable=yes&amp;printable=yes#Normal_map_to_height_map_conversion"><span class="tocnumber">9.2.2</span> <span class="toctext">Normal map to height map conversion</span></a></li>
+<li class='toclevel-3'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=next&amp;oldid=5277&amp;printable=yes&amp;printable=yes#3D_rendering"><span class="tocnumber">9.2.3</span> <span class="toctext">3D rendering</span></a></li>
+<li class='toclevel-3'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=next&amp;oldid=5277&amp;printable=yes&amp;printable=yes#Normal_map_photography"><span class="tocnumber">9.2.4</span> <span class="toctext">Normal map photography</span></a></li>
+</ul>
+</li>
+<li class='toclevel-2'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=next&amp;oldid=5277&amp;printable=yes&amp;printable=yes#DDS_format"><span class="tocnumber">9.3</span> <span class="toctext">DDS format</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=next&amp;oldid=5277&amp;printable=yes&amp;printable=yes#Cube_maps"><span class="tocnumber">9.4</span> <span class="toctext">Cube maps</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="Material_shaders"></a><h2>Material shaders</h2>
+<p>In older games, a single image qualified as a texture and all that was required was that you simply drop the corresponding image into a specific folder. The general concept in the <a href="/web/20070729231805/http://www.modwiki.net/wiki/Doom_3_engine" title="Doom 3 engine">Doom 3 engine</a> is to use a <a href="/web/20070729231805/http://www.modwiki.net/wiki/Material_%28decl%29" title="Material (decl)">material shader</a> that uses multiple <a href="/web/20070729231805/http://www.modwiki.net/wiki/Images" title="Images">images</a> that each represent a different property of a surface. This makes texturing more work than it was in the past, but it also gives much more power and flexibility to the developers.
+</p><p>Check the following links to learn more about the syntax of material files. This will help you understand and write them:
+</p>
+<dl><dt> <a href="/web/20070729231805/http://www.modwiki.net/wiki/Material_%28decl%29" title="Material (decl)">Material declarations</a>&nbsp;</dt><dd> The basic syntax of material shaders is explained here.
+</dd><dt> <a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Material_%28global_keywords%29&amp;action=edit" class="new" title="Material (global keywords)">Global keywords</a>&nbsp;</dt><dd> Global keywords used in material shaders are indexed in this article.
+</dd><dt> <a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Material_%28stage_keywords%29&amp;action=edit" class="new" title="Material (stage keywords)">Stage keywords</a>&nbsp;</dt><dd> Stage specific material shader keywords are listed in this article.
+</dd></dl>
+<div><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image:Q4square_25.png" class="image" title="Image:Q4square_25.png"><img src="/web/20070729231805im_/http://www.modwiki.net/w/images/e/e8/Q4square_25.png" alt="Image:Q4square_25.png" width="25" height="25" longdesc="/wiki/Image:Q4square_25.png" /></a> <b>Note:</b> Quake 4 only: <dl><dd><i>You can also use <a href="/web/20070729231805/http://www.modwiki.net/wiki/Guide_%28decl%29" title="Guide (decl)">guides</a> to simplify writing many materials that behave the same way.</i></dd></dl></div>
+<a name="Diffuse_maps"></a><h2>Diffuse maps</h2>
+<div class="thumb tright"><div style="width:182px;"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image:Diffuse_example.jpg" class="internal" title="An example diffuse map"><img src="/web/20070729231805im_/http://www.modwiki.net/w/images/thumb/6/64/Diffuse_example.jpg/180px-Diffuse_example.jpg" alt="An example diffuse map" width="180" height="180" longdesc="/wiki/Image:Diffuse_example.jpg" /></a>  <div class="thumbcaption" ><div class="magnify" style="float:right"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image:Diffuse_example.jpg" class="internal" title="Enlarge"><img src="/web/20070729231805im_/http://www.modwiki.net/w/skins/common/images/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>An example diffuse map</div></div></div>
+<p>Diffuse maps in Doom 3 represent the diffuse reflection and color of a surface. In other words they define the color and intensity of light reflected back when it strikes a surface.
+</p><p>The goal when creating a diffuse map is to draw a color map and darken areas where light would be absorbed. For instance, the cracks in a brick wall absorb more light than they reflect back.
+</p><p>The example to the right demonstrates this as the bricks themselves are a greyish value and the cracks between them almost black.
+</p><p>No surface reflects light back at the same intensity it's recieved. In that respect, it's a good idea to darken your diffuse maps appropriately. Generally, the smoother a surface is the less light is diffused and the brighter your diffuse map can be.
+</p><p>Diffuse maps are added to material shaders by use of the <a href="/web/20070729231805/http://www.modwiki.net/wiki/Diffusemap_%28Material_global_keyword%29" title="Diffusemap (Material global keyword)">Diffusemap</a> keyword or the <a href="/web/20070729231805/http://www.modwiki.net/wiki/Blend_%28Material_stage_keyword%29" title="Blend (Material stage keyword)">Blend</a> keyword with the "diffusemap" parameter. As convention it's recommended that you add "_d" to the end of the texture's filename.
+</p>
+<a name="Bump_maps"></a><h2>Bump maps</h2>
+<p>Bump mapping adds an illusion of depth and texture to images. It doesn't actually alter geometry but rather affects the shading over a surface. There are two different kinds of bump maps useable in the Doom 3 engine: Normal and height maps. 
+</p>
+<a name="Normal_maps"></a><h3>Normal maps</h3>
+<div class="thumb tright"><div style="width:182px;"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image:Normal_example.jpg" class="internal" title="An example normal map"><img src="/web/20070729231805im_/http://www.modwiki.net/w/images/thumb/a/a2/Normal_example.jpg/180px-Normal_example.jpg" alt="An example normal map" width="180" height="180" longdesc="/wiki/Image:Normal_example.jpg" /></a>  <div class="thumbcaption" ><div class="magnify" style="float:right"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image:Normal_example.jpg" class="internal" title="Enlarge"><img src="/web/20070729231805im_/http://www.modwiki.net/w/skins/common/images/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>An example normal map</div></div></div>
+<p>Normal maps define the slope or normals of a surface. In other words, they alter the direction a surface appears to be facing.
+</p><p>The normal for each pixel is defined by storing spacial X,Y,Z transformation data in the R,G,B channels. The example to the right demonstrates this.
+</p><p>There are two methods to create normal maps.
+</p>
+<ul><li> Render a normal map from 3D geometry
+</li><li> Convert a height map into a normal map
+</li></ul>
+<p>There are links to tools for use with both methods at the bottom of this page.
+</p><p>Normal bump maps are added to material shaders by use of the <a href="/web/20070729231805/http://www.modwiki.net/wiki/Bumpmap_%28Material_global_keyword%29" title="Bumpmap (Material global keyword)">Bumpmap</a> keyword or the <a href="/web/20070729231805/http://www.modwiki.net/wiki/Blend_%28Material_stage_keyword%29" title="Blend (Material stage keyword)">Blend</a> keyword with the "bumpmap" parameter. As convention it's recommended that you add "_local" to the end of the texture's filename.
+</p>
+<a name="Height_maps"></a><h3>Height maps</h3>
+<div class="thumb tright"><div style="width:182px;"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image:Height_example.jpg" class="internal" title="An example height map"><img src="/web/20070729231805im_/http://www.modwiki.net/w/images/thumb/4/41/Height_example.jpg/180px-Height_example.jpg" alt="An example height map" width="180" height="180" longdesc="/wiki/Image:Height_example.jpg" /></a>  <div class="thumbcaption" ><div class="magnify" style="float:right"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image:Height_example.jpg" class="internal" title="Enlarge"><img src="/web/20070729231805im_/http://www.modwiki.net/w/skins/common/images/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>An example height map</div></div></div>
+<p>Height maps are greyscale images that define the height of the indivdual pixels of a surface. They adjust the visual depth of a texture. 
+</p><p>The height of each pixel is defined by the brightness of the image. A white pixel is as high, a black pixel is as low as it gets. grey levels in between represent different heights. 
+</p><p>Heightmaps are usually painted in an image manipulation program. There is usually no need to render those. Note that height maps are converted to normalmaps by the Doom 3 engine when loaded. The use of height maps is only to allow for an easier workflow.
+</p><p>Height bump maps are added to a material by use of the <a href="/web/20070729231805/http://www.modwiki.net/wiki/Heightmap_%28Image_program_function%29" title="Heightmap (Image program function)">Heightmap</a> function. As convention it's recommended that you add "_h" to the end of the texture's filename.
+</p>
+<a name="Normal_maps_vs._height_maps"></a><h3>Normal maps vs. height maps</h3>
+<p>The Doom 3 engine is able to combine both a normal map and a height map into one combined bump map. This is done because normal maps contain rendered, larger scale details which can best be modified by working with a 3d <a href="/web/20070729231805/http://www.modwiki.net/wiki/Modelling" title="Modelling">modelling</a> software. To allow for finer painted detail that goes along with the structure of the image itself usually a height map is used and painted. This was done to allow for an easier workflow.
+</p><p>Normal and height bump maps can be combined in a material by using <a href="/web/20070729231805/http://www.modwiki.net/wiki/Addnormals_%28Image_program_function%29" title="Addnormals (Image program function)">Addnormals</a> function.
+</p>
+<a name="Specular_maps"></a><h2>Specular maps</h2>
+<div class="thumb tright"><div style="width:182px;"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image:Specular_example.jpg" class="internal" title="An example specular map"><img src="/web/20070729231805im_/http://www.modwiki.net/w/images/thumb/d/dc/Specular_example.jpg/180px-Specular_example.jpg" alt="An example specular map" width="180" height="180" longdesc="/wiki/Image:Specular_example.jpg" /></a>  <div class="thumbcaption" ><div class="magnify" style="float:right"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image:Specular_example.jpg" class="internal" title="Enlarge"><img src="/web/20070729231805im_/http://www.modwiki.net/w/skins/common/images/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div>An example specular map</div></div></div>
+<p>Specular maps in Doom 3 represent the specular intensity and color of highlights on a surface. In other words they define the "shinyness" and color of specular reflections.
+</p><p>The brighter a specular map is, the more shine is applied to the final material.
+</p><p>The goal when creating a specular map is to fill the image with a solid value to represent the general specularity of the surface and then darken areas where weathering would occur.
+</p><p>Again, the example to the right demonstrates this as the face of a brick would recieve more wear and tear than the edges and therefore be duller. Note that the cracks themselves have little to no specularity at all.
+</p><p>Color applied to a specular map tints the color of highlights. Bricks are made out of a sand like material and as such would reflect slightly variable tints. This too is present in the example to the right.
+</p><p>Specular maps are added to material shaders by use of the <a href="/web/20070729231805/http://www.modwiki.net/wiki/Specularmap_%28Material_global_keyword%29" title="Specularmap (Material global keyword)">Specularmap keyword</a> or the <a href="/web/20070729231805/http://www.modwiki.net/wiki/Blend_%28Material_stage_keyword%29" title="Blend (Material stage keyword)">Blend</a> keyword with the "specularmap" parameter. As convention it's recommended that you add "_s" to the end of the texture's filename.
+</p>
+<a name="Hit_maps"></a><h2> <span align="absbottom"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Image:Q4square_25.png" class="image" title="Q4"><img src="/web/20070729231805im_/http://www.modwiki.net/w/images/e/e8/Q4square_25.png" alt="Q4" width="25" height="25" longdesc="/wiki/Image:Q4square_25.png" /></a> Hit maps</span> </h2>
+<dl><dd> <i>The information in this section is specific to <a href="/web/20070729231805/http://www.modwiki.net/wiki/Quake_4" title="Quake 4">Quake 4</a>.</i>
+</dd></dl>
+<p>Hit maps are special images mainly used for animated models. These are made up of simple patches of color that follow the RGB values given in a <a href="/web/20070729231805/http://www.modwiki.net/wiki/Materialtype_%28decl%29" title="Materialtype (decl)">materialtype</a>. When an area of the model is hit a different impact effect is played depending on the hit map color of the area hit. Usually smaller resolution hitmaps are used compared to regular skins as detail does not need to be as high as the diffuse or normal map.
+</p><p>Hit maps are added to material shaders by use of the <a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=MaterialImage_%28Material_global_keyword%29&amp;action=edit" class="new" title="MaterialImage (Material global keyword)">materialImage</a> keyword. As convention it's recommended that you add "_hit" to the end of the texture's filename.
+</p>
+<a name="Sky_and_reflective_maps"></a><h2>Sky and reflective maps</h2>
+<p>Both sky and reflective materials make use of <a href="/web/20070729231805/http://www.modwiki.net/wiki/Cube_maps" title="Cube maps">cube maps</a> (also known as environment maps).
+</p><p>The Doom 3:ROE expansion pack adds sky portal functionality to the game which does away with the need to use cube maps for sky materials. However, it's currently a feature unique to the expansion.
+</p>
+<a name="Supported_image_formats"></a><h2>Supported image formats</h2>
+<p>The Doom 3 engine supports the following image formats:
+</p>
+<ul><li><a href="/web/20070729231805/http://www.modwiki.net/wiki/TGA_%28file_format%29" title="TGA (file format)">TGA</a>
+</li><li><a href="/web/20070729231805/http://www.modwiki.net/wiki/DDS_%28file_format%29" title="DDS (file format)">DDS</a>
+</li><li><a href="/web/20070729231805/http://www.modwiki.net/wiki/JPG_%28file_format%29" title="JPG (file format)">JPG</a>
+</li></ul>
+<p>Details on each format and it's quirks can be found by following the links above.
+</p>
+<a name="Compressed_and_uncompressed"></a><h2>Compressed and uncompressed</h2>
+<p>If you look at the vanilla texture assets, you'll notice that Doom 3 has TGA and DDS versions of each image in the game. The TGA files are used when running in high or ultra quality mode (in high quality, the diffuse maps use the compressed DDS files, but the normal maps use the uncompressed TGA files). In all other modes only DDS files are used.
+</p><p>If no corresponding DDS file exists, Doom 3 generates one for use this session, this run-time compression means that while you can run in a lower quality than <a href="/web/20070729231805/http://www.modwiki.net/wiki/Quality_settings" title="Quality settings">ultra</a>, you won't actually have any DDS files to distribute. It's recommended therefore that you create your own DDS files as relying on Doom 3's automatic generation slows down loading significantly.
+</p><p>You can bypass the DDS files and load the TGA files directly by setting <a href="/web/20070729231805/http://www.modwiki.net/wiki/Image_usePrecompressedTextures_%28cvar%29" title="Image usePrecompressedTextures (cvar)"> image_usePrecompressedTextures</a> to 0. The images will still be compressed dynamically at load time, but since you'll be forcing the game to use the TGA files the results of changes to the images will be immediately apparent. You can bypass compression by setting <a href="/web/20070729231805/http://www.modwiki.net/wiki/Image_useCompression_%28cvar%29" title="Image useCompression (cvar)">image_useCompression</a> and <a href="/web/20070729231805/http://www.modwiki.net/wiki/Image_useNormalCompression_%28cvar%29" title="Image useNormalCompression (cvar)">image_useNormalCompression</a> to 0.
+</p><p>The DDS files used in Doom 3 were created with the following settings:
+</p>
+<ul><li>Normal Maps: "RXGB +red 0.0 +green 0.5 +blue 0.5";
+</li><li>Specular: "DXT1";
+</li><li>Diffuse (no alpha): "DXT1";
+</li><li>Diffuse (w/ alpha): "DXT3";
+</li></ul>
+<p>You can use the following command line arguments with ATi's The Compressonator:
+</p>
+<pre>thecompressonator -convert "normal.tga" "normal.dds" RXGB +red 0.0 +green 0.5 +blue 0.5 -mipmaps 
+thecompressonator -convert "specular.tga" "specular.dds" DXT1 -mipmaps 
+thecompressonator -convert "diffuse.tga" "diffuse.dds" DXT1 -mipmaps 
+thecompressonator -convert "diffuse.tga" "diffuse.dds" DXT3 -mipmaps
+</pre>
+<p>See the <a href="/web/20070729231805/http://www.modwiki.net/wiki/Modding" title="Modding">modding</a> page for how to automatically compress all your assets for distribution.
+</p>
+<a name="Texturing_applications"></a><h2>Texturing applications</h2>
+<a name="General_image_editing"></a><h3>General image editing</h3>
+<ul><li><a href="/web/20070729231805/http://www.adobe.com/" class='external text' title="http://www.adobe.com/">Adobe Photoshop</a>
+</li><li><a href="/web/20070729231805/http://www.jasc.com/" class='external text' title="http://www.jasc.com/">Paint Shop Pro</a>
+</li><li><a href="/web/20070729231805/http://www.spiralgraphics.biz/gen2tour/index.htm" class='external text' title="http://www.spiralgraphics.biz/gen2tour/index.htm">Genetica</a>
+</li><li><a href="/web/20070729231805/http://www.gimp.org/" class='external text' title="http://www.gimp.org/">The Gimp</a>
+</li><li><a href="/web/20070729231805/http://www.i-tex.de/" class='external text' title="http://www.i-tex.de/">Texture Maker</a>
+</li></ul>
+<a name="Normal_mapping"></a><h3>Normal mapping</h3>
+<a name="Height_map_to_normal_map_conversion"></a><h4>Height map to normal map conversion</h4>
+<ul><li><a href="/web/20070729231805/http://www.google.com/search?hl=en&amp;q=NVidia%20Texture%20Tools&amp;btnI=I'm+Feeling+Lucky" class='external text' title="http://www.google.com/search?hl=en&amp;q=NVidia%20Texture%20Tools&amp;btnI=I'm+Feeling+Lucky">Nvidia Normal Map Filter</a> - <a href="/web/20070729231805/http://www.modwiki.net/wiki/NvidaNormalMapFilter_%28tool_overview%29" title="NvidaNormalMapFilter (tool overview)"> Overview</a>
+</li><li><a href="/web/20070729231805/http://nifelheim.dyndns.org/%7ecocidius/" class='external text' title="http://nifelheim.dyndns.org/%7ecocidius/">GIMP DDS &amp; Normal Map Plugins</a>
+</li></ul>
+<a name="Normal_map_to_height_map_conversion"></a><h4>Normal map to height map conversion</h4>
+<ul><li><a href="/web/20070729231805/http://66.70.170.53/Ryan/heightmap/heightmap.html" class='external text' title="http://66.70.170.53/Ryan/heightmap/heightmap.html">Displacement Map Creator</a>
+</li></ul>
+<a name="3D_rendering"></a><h4>3D rendering</h4>
+<ul><li><a href="/web/20070729231805/http://engineering.soclab.bth.se/tools/177.aspx" class='external text' title="http://engineering.soclab.bth.se/tools/177.aspx">ORB (Open Render Bump)</a>
+</li><li><a href="/web/20070729231805/http://developer.nvidia.com/object/melody_home.html" class='external text' title="http://developer.nvidia.com/object/melody_home.html">NVidia Melody</a>
+</li><li><a href="/web/20070729231805/http://www.modwiki.net/wiki/Renderbump_%28console_command%29" title="Renderbump (console command)">renderbump</a>
+</li><li><a href="/web/20070729231805/http://www.modwiki.net/wiki/RenderbumpFlat_%28console_command%29" title="RenderbumpFlat (console command)">renderbumpFlat</a>
+</li></ul>
+<a name="Normal_map_photography"></a><h4>Normal map photography</h4>
+<ul><li><a href="/web/20070729231805/http://66.70.170.53/Ryan/nrmphoto/nrmphoto.html" class='external text' title="http://66.70.170.53/Ryan/nrmphoto/nrmphoto.html">How to make normal maps from real surfaces</a>
+</li></ul>
+<a name="DDS_format"></a><h3>DDS format</h3>
+<ul><li><a href="/web/20070729231805/http://www.google.com/search?hl=en&amp;q=NVidia%20Texture%20Tools&amp;btnI=I'm+Feeling+Lucky" class='external text' title="http://www.google.com/search?hl=en&amp;q=NVidia%20Texture%20Tools&amp;btnI=I'm+Feeling+Lucky">Nvidia DDS Thumbnail Viewer</a>
+</li><li><a href="/web/20070729231805/http://www.ati.com/developer/compressonator.html" class='external text' title="http://www.ati.com/developer/compressonator.html">ATI Compressonator</a>
+</li></ul>
+<a name="Cube_maps"></a><h3>Cube maps</h3>
+<ul><li><a href="/web/20070729231805/http://www.skypaint.com/" class='external text' title="http://www.skypaint.com/">SkyPaint</a>
+</li><li><a href="/web/20070729231805/http://www.planetside.co.uk/terragen/" class='external text' title="http://www.planetside.co.uk/terragen/">Terragen</a>
+</li></ul>
+<div class="printfooter">
+Retrieved from "<a href="/web/20070729231805/http://www.modwiki.net/wiki/Texturing">http://www.modwiki.net/wiki/Texturing</a>"</div>
+			<div id="catlinks"><p class='catlinks'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Special:Categories&amp;article=Texturing" title="Special:Categories">Category</a>: <span dir='ltr'><a href="/web/20070729231805/http://www.modwiki.net/wiki/Category:Texturing" title="Category:Texturing">Texturing</a></span><br /><hr /><a href="/web/20070729231805/http://www.modwiki.net/wiki/Category:Modwiki" title="Category:Modwiki">Modwiki</a> &gt; <a href="/web/20070729231805/http://www.modwiki.net/wiki/Category:Texturing" title="Category:Texturing">Texturing</a></p></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Texturing">Article</a></li>
+				 <li id="ca-talk"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Talk:Texturing">Discussion</a></li>
+				 <li id="ca-edit"><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;action=edit&amp;oldid=6465">Edit</a></li>
+				 <li id="ca-history"><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;action=history">History</a></li>
+		</ul>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Special:Userlogin&amp;returnto=Texturing">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/web/20070729231805im_/http://www.modwiki.net/wiki/upload/wiki.png);" href="/web/20070729231805/http://www.modwiki.net/wiki/Main_Page" title="Main Page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class='portlet' id='p-Main'>
+		<h5>Main</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Main_Page">Main Page</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 4'>
+		<h5>id Tech 4</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Doom-3"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Doom_3">Doom 3</a></li>
+				<li id="n-Quake-4"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Quake_4">Quake 4</a></li>
+				<li id="n-Prey"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Prey">Prey</a></li>
+				<li id="n-ETQW"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Enemy_Territory:_Quake_Wars">ETQW</a></li>
+				<li id="n-RTCW-2"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Return_to_Castle_Wolfenstein_2">RTCW 2</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 5'>
+		<h5>id Tech 5</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Rage"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Rage">Rage</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Quick Links'>
+		<h5>Quick Links</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Console"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Console">Console</a></li>
+				<li id="n-Script-Events"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Scripting">Script Events</a></li>
+				<li id="n-Material-Keywords"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Material_%28decl%29">Material Keywords</a></li>
+				<li id="n-Modification-List"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Modlist">Modification List</a></li>
+				<li id="n-Tutorial-List"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Tutorial_list">Tutorial List</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Wiki'>
+		<h5>Wiki</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Open-tasks"><a href="/web/20070729231805/http://www.modwiki.net/wiki/modwiki:Open_tasks">Open tasks</a></li>
+				<li id="n-recentchanges"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Special:Recentchanges">Recent changes</a></li>
+				<li id="n-Style-guide"><a href="/web/20070729231805/http://www.modwiki.net/wiki/modwiki:Style_guide">Style guide</a></li>
+				<li id="n-help"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Help:Contents">Help</a></li>
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/web/20070729231805/http://www.modwiki.net/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" value="Search" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Special:Whatlinkshere/Texturing">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Special:Recentchangeslinked/Texturing">Related changes</a></li>
+<li id="t-upload"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Special:Upload">Upload file</a></li>
+<li id="t-specialpages"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Special:Specialpages">Special pages</a></li>
+				<li id="t-print"><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Texturing&amp;diff=next&amp;oldid=5277&amp;printable=yes&amp;printable=yes">Printable version</a></li>				<li id="t-ispermalink">Permanent link</li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="/web/20070729231805/http://www.mediawiki.org/"><img src="/web/20070729231805im_/http://www.modwiki.net/w/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="/web/20070729231805/http://www.gnu.org/copyleft/fdl.html"><img src="/web/20070729231805im_/http://www.modwiki.net/w/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+				<li id="privacy"><a href="/web/20070729231805/http://www.modwiki.net/wiki/modwiki:Privacy_policy" title="modwiki:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="/web/20070729231805/http://www.modwiki.net/wiki/modwiki:About" title="modwiki:About">About modwiki</a></li>
+				<li id="disclaimer"><a href="/web/20070729231805/http://www.modwiki.net/wiki/modwiki:General_disclaimer" title="modwiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+	<script type="text/javascript"> if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+<!-- Served by h982484 in 0.30 secs. -->
+</body></html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 23:18:05 Jul 29, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 2:37:57 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="http://modwiki.net/w/skins/common/feed.css"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>modwiki - Recent changes [en]</title>
+		<link>http://modwiki.net/wiki/Special:Recentchanges</link>
+		<description>Track the most recent changes to the wiki on this page.</description>
+		<language>en</language>
+		<generator>MediaWiki 1.6.8</generator>
+		<lastBuildDate>Sun, 17 Feb 2008 02:11:23 GMT</lastBuildDate>
+		<item>
+			<title>Talk:How to build the SDK on Windows</title>
+			<link>http://modwiki.net/wiki/Talk:How_to_build_the_SDK_on_Windows</link>
+			<description>&lt;p&gt;How about this?&lt;/p&gt;
+
+			&lt;table border='0' width='98%' cellpadding='0' cellspacing='4' style=&quot;background-color: white;&quot;&gt;
+			&lt;tr&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Revision as of 15:30, 16 February 2008&lt;/td&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Current revision&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 14:&lt;/strong&gt;&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 14:&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;[[User:Hemebond|Hemebond]] 09:56, 17 February 2007 (CET)&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;[[User:Hemebond|Hemebond]] 09:56, 17 February 2007 (CET)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;== How about this? ==&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;I've just put together a small walkthrough for successfully compiling the Quake 4 version of the SDK.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;[http://bunkerthegame.forumakers.com/programming-f2/compiling-the-sdk-t24.htm]&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;Step 1:&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;*Install Visual Studio 2003, Visual Studio 2005, or Visual C++ 2005 Express Edition.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;*Install Microsoft Platform SDK for Windows 2003 (NOT Vista). This step is not required if you're using the full version of Visual Studio, as the PSDK is included with VS.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;*Install Quake 4 SDK.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;Step 2:&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;*Open q4sdk.sln&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;*If asked to convert the projects, say yes.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;*Ignore any warnings about source control.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;Step 3:&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;*Repeat the following for all 3 projects (Game, idlib, MPGame), setting the configuration selector to 'All Configurations':&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;#Right click on the project name and choose 'Properties'.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;#Goto 'Configuration Properties -&amp;gt; C/C++ -&amp;gt; General' and in the 'Additional Include Directories' field put ' &amp;quot;&amp;lt;path-to-PSDK&amp;gt;\include&amp;quot; ' (include the &amp;quot;&amp;quot;). Replace the &amp;lt;path-to-PSDK&amp;gt; to point to wherever you installed the PSDK (usually C:\Program Files\PSDK\...). Use the ... button to help find the appropriate folder quickly.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;Step 4:&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;*Repeat the following for Game and MPGame (NOT idlib), setting the configuration selector to 'All Configurations':&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;#Right click on the project name and choose 'Properties'.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;#Goto 'Configuration Properties -&amp;gt; Linker -&amp;gt; General' and in the 'Additional Library Directories' field put ' &amp;quot;&amp;lt;path-to-PSDK&amp;gt;\lib&amp;quot; ' (include the &amp;quot;&amp;quot;). Replace the &amp;lt;path-to-PSDK&amp;gt; to point to wherever you installed the PSDK (usually C:\Program Files\PSDK\...). Use the ... button to help find the appropriate folde

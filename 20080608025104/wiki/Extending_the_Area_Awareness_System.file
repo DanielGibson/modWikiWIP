@@ -1,0 +1,1350 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Extending the Area Awareness System" />
+<link rel="shortcut icon" href="/web/20080608025104im_/http://www.modwiki.net/favicon.ico" />
+<link title="Creative Commons" type="application/rdf+xml" href="/w/index.php?title=Extending_the_Area_Awareness_System&amp;action=creativecommons" rel="meta" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<title>Extending the Area Awareness System - modwiki</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20080608025104cs_/http://www.modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/web/20080608025104cs_/http://www.modwiki.net/w/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/w/skins/monobook/IE70Fixes.css?1";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
+		<script type="text/javascript" src="/web/20080608025104js_/http://www.modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20080608025104js_/http://www.modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/web/20080608025104cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20080608025104cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20080608025104cs_/http://www.modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns-0 ltr">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app10.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/www.modwiki.net\/wiki\/Extending_the_Area_Awareness_System";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "8";
+var displayMonth = "Jun";
+var displayYear = "2008";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://www.modwiki.net/wiki/Extending_the_Area_Awareness_System" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20080608025104" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20080408210410/http://www.modwiki.net/wiki/Extending_the_Area_Awareness_System" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="8 Apr 2008"><strong>APR</strong></a>
+		                
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 2:51:04 Jun 8, 2008">JUN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jul
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20080408210410/http://www.modwiki.net/wiki/Extending_the_Area_Awareness_System" title="21:04:10 Apr 8, 2008" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 2:51:04 Jun 8, 2008">8</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2007
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 2:51:04 Jun 8, 2008">2008</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2009
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20080608025104*/http://www.modwiki.net/wiki/Extending_the_Area_Awareness_System" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>4 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">29 Jul 07 - 8 Jun 08</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000100001_2008:5:000101000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000_2014:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">Extending the Area Awareness System</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From modwiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="/web/20080608025104/http://www.modwiki.net/wiki/Extending_the_Area_Awareness_System#column-one">navigation</a>, <a href="/web/20080608025104/http://www.modwiki.net/wiki/Extending_the_Area_Awareness_System#searchInput">search</a></div>			<!-- start content -->
+			<p>I recently finished up some work extending the AAS compiler. I was able to add elevator and transporter capabilities to the navigation graph. I did this by adding new reachabilities between areas based on each idPlat in a map. 
+</p><p>I have summarized the work below and included a download link for the code, <b>the aas code in the download is one version behind and needs to be updated.</b>
+</p><p>The changes below could be used for adding the same ability for other AI characters in doom 3.
+</p><p><b>Is there any way to decrease tab indentation in code on the wiki?</b>
+</p>
+<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class='toclevel-1'><a href="/web/20080608025104/http://www.modwiki.net/wiki/Extending_the_Area_Awareness_System#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
+<li class='toclevel-1'><a href="/web/20080608025104/http://www.modwiki.net/wiki/Extending_the_Area_Awareness_System#Setup_Code"><span class="tocnumber">2</span> <span class="toctext">Setup Code</span></a></li>
+<li class='toclevel-1'><a href="/web/20080608025104/http://www.modwiki.net/wiki/Extending_the_Area_Awareness_System#Adding_Elevator_Reachabilities"><span class="tocnumber">3</span> <span class="toctext">Adding Elevator Reachabilities</span></a></li>
+<li class='toclevel-1'><a href="/web/20080608025104/http://www.modwiki.net/wiki/Extending_the_Area_Awareness_System#Elevator_Screenshots"><span class="tocnumber">4</span> <span class="toctext">Elevator Screenshots</span></a></li>
+<li class='toclevel-1'><a href="/web/20080608025104/http://www.modwiki.net/wiki/Extending_the_Area_Awareness_System#Adding_Transporter_Reachabilities"><span class="tocnumber">5</span> <span class="toctext">Adding Transporter Reachabilities</span></a></li>
+<li class='toclevel-1'><a href="/web/20080608025104/http://www.modwiki.net/wiki/Extending_the_Area_Awareness_System#Helper_Routines"><span class="tocnumber">6</span> <span class="toctext">Helper Routines</span></a></li>
+<li class='toclevel-1'><a href="/web/20080608025104/http://www.modwiki.net/wiki/Extending_the_Area_Awareness_System#Clean_Up_Code"><span class="tocnumber">7</span> <span class="toctext">Clean Up Code</span></a></li>
+<li class='toclevel-1'><a href="/web/20080608025104/http://www.modwiki.net/wiki/Extending_the_Area_Awareness_System#Source_Download_and_Mod_Integration"><span class="tocnumber">8</span> <span class="toctext">Source Download and Mod Integration</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608025104/http://www.modwiki.net/w/index.php?title=Extending_the_Area_Awareness_System&amp;action=edit&amp;section=1" title="Edit section: Overview">edit</a>]</div><a name="Overview"></a><h2> Overview </h2>
+<p>When doom 3 shipped it did so without support for elevators. So paths like the following resulted even though the elevator would be a better choice.
+</p>
+<div class="thumb tnone"><div style="width:182px;"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Image:Bot_noelevator.jpg" class="internal" title=""><img src="/web/20080608025104im_/http://www.modwiki.net/w/images/thumb/b/b4/Bot_noelevator.jpg/180px-Bot_noelevator.jpg" alt="" width="180" height="135" longdesc="/wiki/Image:Bot_noelevator.jpg" /></a>  <div class="thumbcaption" ><div class="magnify" style="float:right"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Image:Bot_noelevator.jpg" class="internal" title="Enlarge"><img src="/web/20080608025104im_/http://www.modwiki.net/w/skins/common/images/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div></div></div></div>
+<p>What follows is an overview of how elevators capabilities were added and some tips if you want to incorporate this capability into your mod.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608025104/http://www.modwiki.net/w/index.php?title=Extending_the_Area_Awareness_System&amp;action=edit&amp;section=2" title="Edit section: Setup Code">edit</a>]</div><a name="Setup_Code"></a><h2> Setup Code </h2>
+<p>Each time a map is loaded you will need to call the routines to add the reachabilities to the AAS system. I had to reorganize just a little bit to make the map entities load before the AAS files were loaded and processed. 
+</p>
+<pre>&nbsp;
+<span style="color: #339900; font-style: italic;">/*
+===================
+idGameLocal::LoadMap
+&nbsp;
+Initializes all map variables common to both save games and spawned games.
+===================
+*/</span>
+<span style="color: #0000ff;">void</span> idGameLocal::<span style="color: #00aabb;">LoadMap</span><span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">const</span> <span style="color: #0000ff;">char</span> *mapName, <span style="color: #0000ff;">int</span> randseed <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+&nbsp;
+<span style="color: #339900;">// removed irrelevant code</span>
+&nbsp;
+playerConnectedAreas.<span style="color: #00aabb;">i</span> = -<span style="color: #0000dd;">1</span>;
+&nbsp;
+<span style="color: #339900;">#ifndef MOD_BOTS // cusTom3 - aas extensions - moved to later in InitFromNewMap so entities are spawned</span>
+	<span style="color: #0000ff;">int</span> i;
+	<span style="color: #339900;">// load navigation system for all the different monster sizes</span>
+	<span style="color: #0000ff;">for</span><span style="color: #000000;">&#40;</span> i = <span style="color: #0000dd;">0</span>; i &lt; aasNames.<span style="color: #00aabb;">Num</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>; i++ <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+		aasList<span style="color: #000000;">&#91;</span> i <span style="color: #000000;">&#93;</span>-&gt;Init<span style="color: #000000;">&#40;</span> idStr<span style="color: #000000;">&#40;</span> mapFileName <span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">SetFileExtension</span><span style="color: #000000;">&#40;</span> aasNames<span style="color: #000000;">&#91;</span> i <span style="color: #000000;">&#93;</span> <span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">c_str</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>, mapFile-&gt;GetGeometryCRC<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span>;
+	<span style="color: #000000;">&#125;</span>
+<span style="color: #339900;">#endif</span>
+&nbsp;
+	<span style="color: #339900;">// clear the smoke particle free list</span>
+	smokeParticles-&gt;Init<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>;</pre>
+<p>When the AAS files are loaded they need to have data added to them. In order to calculate that data the rest of the map needs to be loaded. Moving the AAS initialization to later in the process after MapPopulate takes care of this.
+</p>
+<pre>&nbsp;
+<span style="color: #339900; font-style: italic;">/*
+===================
+idGameLocal::InitFromNewMap
+===================
+*/</span>
+<span style="color: #0000ff;">void</span> idGameLocal::<span style="color: #00aabb;">InitFromNewMap</span><span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">const</span> <span style="color: #0000ff;">char</span> *mapName, idRenderWorld *renderWorld, idSoundWorld *soundWorld, <span style="color: #0000ff;">bool</span> isServer, <span style="color: #0000ff;">bool</span> isClient, <span style="color: #0000ff;">int</span> randseed <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+&nbsp;
+<span style="color: #339900;">// removed irrelevant code</span>
+&nbsp;
+	MapPopulate<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>;
+&nbsp;
+<span style="color: #339900;">#ifdef MOD_BOTS // cusTom3 - aas extensions - moved here from LoadMap so entities are spawned for botaas calculations</span>
+	<span style="color: #339900;">// load navigation system for all the different monster sizes</span>
+	<span style="color: #0000ff;">int</span> i;
+	<span style="color: #0000ff;">for</span><span style="color: #000000;">&#40;</span> i = <span style="color: #0000dd;">0</span>; i &lt; aasNames.<span style="color: #00aabb;">Num</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>; i++ <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+		aasList<span style="color: #000000;">&#91;</span> i <span style="color: #000000;">&#93;</span>-&gt;Init<span style="color: #000000;">&#40;</span> idStr<span style="color: #000000;">&#40;</span> mapFileName <span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">SetFileExtension</span><span style="color: #000000;">&#40;</span> aasNames<span style="color: #000000;">&#91;</span> i <span style="color: #000000;">&#93;</span> <span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">c_str</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>, mapFile-&gt;GetGeometryCRC<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span>;
+	<span style="color: #000000;">&#125;</span>
+<span style="color: #339900;">#endif</span>
+&nbsp;
+	mpGame.<span style="color: #00aabb;">Reset</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>;</pre>
+<p>When Init is called on each idAAS the actual work to find and add the extensions is done. For now the only file that is processed is the aas48 file. If someone wants to incorporate the player class changing code we could have bots with any model, and any AAS size. If you do this, you will need to change the check to include the appropriate extension. other modifications later may also be necessary.
+</p>
+<pre>&nbsp;
+<span style="color: #339900; font-style: italic;">/*
+============
+idAASLocal::Init
+============
+*/</span>
+<span style="color: #0000ff;">bool</span> idAASLocal::<span style="color: #00aabb;">Init</span><span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">const</span> idStr &amp;mapName, <span style="color: #0000ff;">unsigned</span> <span style="color: #0000ff;">int</span> mapFileCRC <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+	<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">file</span> &amp;&amp; mapName.<span style="color: #00aabb;">Icmp</span><span style="color: #000000;">&#40;</span> file-&gt;GetName<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span> == <span style="color: #0000dd;">0</span> &amp;&amp; mapFileCRC == file-&gt;GetCRC<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+		common-&gt;Printf<span style="color: #000000;">&#40;</span> <span style="color: #666666;">"Keeping %s<span style="color: #666666; font-weight: bold;">\n</span>"</span>, file-&gt;GetName<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span>;
+		RemoveAllObstacles<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>;
+	<span style="color: #000000;">&#125;</span>
+	<span style="color: #0000ff;">else</span> <span style="color: #000000;">&#123;</span>
+		Shutdown<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>;
+&nbsp;
+		<span style="color: #0000ff;">file</span> = AASFileManager-&gt;LoadAAS<span style="color: #000000;">&#40;</span> mapName, mapFileCRC <span style="color: #000000;">&#41;</span>;
+		<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span>&nbsp;!<span style="color: #0000ff;">file</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+			common-&gt;DWarning<span style="color: #000000;">&#40;</span> <span style="color: #666666;">"Couldn't load AAS file: '%s'"</span>, mapName.<span style="color: #00aabb;">c_str</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span>;
+			<span style="color: #0000ff;">return</span> <span style="color: #0000ff;">false</span>;
+		<span style="color: #000000;">&#125;</span>
+&nbsp;
+<span style="color: #339900;">#ifdef MOD_BOTS // cusTom3 - aas extensions </span>
+		<span style="color: #339900;">// TODO: don't need a builder unless it is a 48, but Init's for now, look at later</span>
+		<span style="color: #339900;">// if class changing is added models could change, would have to handle that here</span>
+		botAASBuilder-&gt;Init<span style="color: #000000;">&#40;</span> <span style="color: #0000dd;">this</span> <span style="color: #000000;">&#41;</span>;
+		<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span>mapName.<span style="color: #00aabb;">Find</span><span style="color: #000000;">&#40;</span> <span style="color: #666666;">"aas48"</span>, <span style="color: #0000ff;">false</span> <span style="color: #000000;">&#41;</span> &gt; <span style="color: #0000dd;">0</span><span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+			botAASBuilder-&gt;AddReachabilities<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>;
+		<span style="color: #000000;">&#125;</span>
+<span style="color: #339900;">#endif // TODO: save the new information out to a file so it doesn't have to be processed each map load</span>
+		
+		SetupRouting<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>;
+	<span style="color: #000000;">&#125;</span>
+	<span style="color: #0000ff;">return</span> <span style="color: #0000ff;">true</span>;
+<span style="color: #000000;">&#125;</span></pre>
+<p>Just for reference the botAASBuilder variable is declared in AAS_local.h as an instance of BotAASBuild, which had to get up close and personal to idAASLocal.
+</p>
+<pre>&nbsp;
+&nbsp;
+class idAASLocal&nbsp;: <span style="color: #0000ff;">public</span> idAAS <span style="color: #000000;">&#123;</span>
+<span style="color: #339900;">#ifdef MOD_BOTS // cusTom3 - aas extensions</span>
+	<span style="color: #0000ff;">friend</span> class BotAASBuild;
+<span style="color: #339900;">#endif</span>
+&nbsp;
+<span style="color: #339900;">// removed irrelevant code</span>
+&nbsp;
+<span style="color: #339900;">#ifdef MOD_BOTS // cusTom3 - aas extensions</span>
+<span style="color: #0000ff;">private</span>:	
+	BotAASBuild *				botAASBuilder;
+<span style="color: #339900;">#endif</span></pre>
+<p>The call to AddReachabilities is where it gets fun. It turns out that the engine exe and the game dll have separate heaps. So in order to extend the AAS navigation graph I had to hack around some memory allocation issues. What it amounts to is I back up the original server allocated lists and replace them with my own dll allocated list. The original list data is appended to the local list, and now we are free to add as much data as we want.
+</p>
+<pre>&nbsp;
+<span style="color: #339900; font-style: italic;">/*
+============
+BotAASBuild::AddReachabilities
+============
+*/</span>
+<span style="color: #0000ff;">void</span> BotAASBuild::<span style="color: #00aabb;">AddReachabilities</span><span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">void</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+	
+	<span style="color: #339900;">// steal the portals list so i can manipulate it</span>
+	originalPortals.<span style="color: #00aabb;">list</span> = file-&gt;portals.<span style="color: #00aabb;">list</span>;
+	originalPortals.<span style="color: #00aabb;">granularity</span> = file-&gt;portals.<span style="color: #00aabb;">granularity</span>;
+	originalPortals.<span style="color: #00aabb;">num</span> = file-&gt;portals.<span style="color: #00aabb;">num</span>;
+	originalPortals.<span style="color: #00aabb;">size</span> = file-&gt;portals.<span style="color: #00aabb;">size</span>;
+&nbsp;
+	portals.<span style="color: #00aabb;">Append</span><span style="color: #000000;">&#40;</span>file-&gt;portals<span style="color: #000000;">&#41;</span>;
+	file-&gt;portals.<span style="color: #00aabb;">list</span> = portals.<span style="color: #00aabb;">list</span>;
+&nbsp;
+	originalPortalIndex.<span style="color: #00aabb;">list</span> = file-&gt;portalIndex.<span style="color: #00aabb;">list</span>;
+	originalPortalIndex.<span style="color: #00aabb;">granularity</span> = file-&gt;portalIndex.<span style="color: #00aabb;">granularity</span>;
+	originalPortalIndex.<span style="color: #00aabb;">num</span> = file-&gt;portalIndex.<span style="color: #00aabb;">num</span>;
+	originalPortalIndex.<span style="color: #00aabb;">size</span> = file-&gt;portalIndex.<span style="color: #00aabb;">size</span>;
+&nbsp;
+	portalIndex.<span style="color: #00aabb;">Append</span><span style="color: #000000;">&#40;</span>file-&gt;portalIndex<span style="color: #000000;">&#41;</span>;
+	file-&gt;portalIndex.<span style="color: #00aabb;">list</span> = portalIndex.<span style="color: #00aabb;">list</span>;
+&nbsp;
+	AddElevatorReachabilities<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>;
+	AddTransporterReachabilities<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>;
+	<span style="color: #339900;">//TryToAddLadders();</span>
+<span style="color: #000000;">&#125;</span></pre>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608025104/http://www.modwiki.net/w/index.php?title=Extending_the_Area_Awareness_System&amp;action=edit&amp;section=3" title="Edit section: Adding Elevator Reachabilities">edit</a>]</div><a name="Adding_Elevator_Reachabilities"></a><h2> Adding Elevator Reachabilities </h2>
+<p>The add AddElevatorReachabilies method became a MONSTER. There may be simpler implementations, but then again, this one started out simpler at one point too. I will only cover this routine at a high level, explaining some of the reasons for the design. I would suggest you read the comments and skim the code unless your are truly interested in the messy implementation.
+</p><p>My apologies for any formatting crapiness&nbsp;:( is there a way to get wiki not to indent so far???
+</p>
+<pre>&nbsp;
+<span style="color: #339900; font-style: italic;">/*
+============
+BotAASBuild::AddElevatorReachabilities
+&nbsp;
+cusTom3	- welcome to the longest, largest, monolithic beast i can ever credit myself to writing
+	- the original idea started fairly simple as a port from the original q3 implementation
+	- it just grew as different cases were tacked on, yes, it could use a rewrite with a simpler idea but...
+	- favors reachabilties starting at outer edge of plat for navigation system usage.
+	- if the top and bottom of the plat are in the same cluster reachabilities are created directly from top to bottom
+	- if they are in different clusters and a portal exists between them the reachabilities use the portal
+	- if there is no cluster portal this will try to create them
+		- TODO: should improve this logic to try areas for shared edges going up center trace
+	- look at using PushPointIntoAreaNum after PointReachableAreaNum - preliminary test didn't look good&nbsp;:(
+============
+*/</span>
+<span style="color: #0000ff;">void</span> BotAASBuild::<span style="color: #00aabb;">AddElevatorReachabilities</span><span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">void</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+	idAASFile *<span style="color: #0000ff;">file</span>;
+	<span style="color: #0000ff;">file</span> = aas-&gt;file;
+&nbsp;
+	idEntity *ent;
+	<span style="color: #339900;">// for each entity in the map</span>
+	<span style="color: #0000ff;">for</span> <span style="color: #000000;">&#40;</span> ent = gameLocal.<span style="color: #00aabb;">spawnedEntities</span>.<span style="color: #00aabb;">Next</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>; ent&nbsp;!= <span style="color: #0000ff;">NULL</span>; ent = ent-&gt;spawnNode.<span style="color: #00aabb;">Next</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+		<span style="color: #339900;">// that is an elevator</span>
+		<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> ent-&gt;IsType<span style="color: #000000;">&#40;</span> idPlat::<span style="color: #00aabb;">Type</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+			idPlat *platform = static_cast&lt;idPlat *&gt;<span style="color: #000000;">&#40;</span>ent<span style="color: #000000;">&#41;</span>;</pre>
+<p>This is why we needed the map populated&nbsp;;)  this first part just says, find each platform in the map.
+</p><p>Then a bunch of variables and stuff:
+</p>
+<pre>&nbsp;
+	<span style="color: #339900;">// TODO: play with how much to expand this</span>
+	idBounds bounds = model-&gt;GetAbsBounds<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">Expand</span><span style="color: #000000;">&#40;</span> <span style="color: #0000dd;">0</span> <span style="color: #000000;">&#41;</span>;
+		
+	<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> aas_showElevators.<span style="color: #00aabb;">GetBool</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+		gameRenderWorld-&gt;DebugBounds<span style="color: #000000;">&#40;</span> colorGreen, bounds, vec3_origin, <span style="color: #0000dd;">200000</span> <span style="color: #000000;">&#41;</span>;
+	<span style="color: #000000;">&#125;</span>
+&nbsp;
+	<span style="color: #339900;">// top and bottom of plat (located in center, slightly above)</span>
+	idVec3 top, bottom, center;
+	center = bounds.<span style="color: #00aabb;">GetCenter</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>;
+	bottom = center;
+	bottom<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">2</span><span style="color: #000000;">&#93;</span> = bounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">2</span><span style="color: #000000;">&#93;</span> + <span style="color: #0000dd;">2</span>; 
+	top = center;
+	top<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">2</span><span style="color: #000000;">&#93;</span> = bottom<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">2</span><span style="color: #000000;">&#93;</span> + <span style="color: #000000;">&#40;</span> platform-&gt;GetPosition2<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">2</span><span style="color: #000000;">&#93;</span> - platform-&gt;GetPosition1<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">2</span><span style="color: #000000;">&#93;</span> <span style="color: #000000;">&#41;</span>; 
+&nbsp;
+	<span style="color: #339900;">// start of possible reach (on bottom), end of possible reach (on top) and thier area and cluster numbers</span>
+	idVec3 start, end;
+	<span style="color: #0000ff;">int</span> topAreaNum, bottomAreaNum;
+	<span style="color: #0000ff;">int</span> topClusterNum, bottomClusterNum;
+	<span style="color: #339900;">// for last ditch effort to create a reach</span>
+	idVec3 bottomNeedPortal, topNeedPortal;
+	<span style="color: #0000ff;">bool</span> needPortal;
+&nbsp;
+	<span style="color: #339900;">// check for portals going up the plat before processing</span>
+	idVec3 firstPortal, lastPortal;
+	<span style="color: #0000ff;">int</span> firstPortalNum, lastPortalNum;
+	firstPortalNum = lastPortalNum = <span style="color: #0000dd;">0</span>;
+	<span style="color: #0000ff;">bool</span> reachabilityCreated = <span style="color: #0000ff;">false</span>;</pre>
+<p>The first thing the routine does when it finds a plat is trace up the “elevator shaft�? to see if there are any cluster portals separating the top and bottom positions of the plat. if the trace finds one, it is stored for processing later, and we continue up in search of more. If it finds more it creates reachabilities to them now.
+</p><p><br />
+</p>
+<pre>&nbsp;
+<span style="color: #339900;">// look for portals up the elevator shaft and create reachabilities </span>
+	start = bottom;
+	bottomAreaNum = aas-&gt;PointReachableAreaNum<span style="color: #000000;">&#40;</span> start, DefaultBotBounds<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>, travelFlags <span style="color: #000000;">&#41;</span>;
+	bottomClusterNum = file-&gt;areas<span style="color: #000000;">&#91;</span>bottomAreaNum<span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">cluster</span>;
+&nbsp;
+	<span style="color: #339900;">// trace from bottom to top getting areas to look for portals</span>
+	aasTrace_t trace;
+	<span style="color: #0000ff;">int</span> areas<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">10</span><span style="color: #000000;">&#93;</span>;	
+	idVec3 points<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">10</span><span style="color: #000000;">&#93;</span>; 
+	trace.<span style="color: #00aabb;">maxAreas</span> = <span style="color: #0000dd;">10</span>;
+	trace.<span style="color: #00aabb;">areas</span> = areas;
+	trace.<span style="color: #00aabb;">points</span> = points;
+	file-&gt;Trace<span style="color: #000000;">&#40;</span> trace, bottom, top <span style="color: #000000;">&#41;</span>;
+	<span style="color: #339900;">// for each area in trace (ignoring start area)</span>
+	<span style="color: #0000ff;">for</span> <span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">int</span> q = <span style="color: #0000dd;">1</span>; q &lt; trace.<span style="color: #00aabb;">numAreas</span>; q++ <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+		aasArea_t area = file-&gt;areas<span style="color: #000000;">&#91;</span>trace.<span style="color: #00aabb;">areas</span><span style="color: #000000;">&#91;</span>q<span style="color: #000000;">&#93;</span><span style="color: #000000;">&#93;</span>; 
+		<span style="color: #339900;">// only want portal areas</span>
+		<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> area.<span style="color: #00aabb;">cluster</span> &gt; <span style="color: #0000dd;">0</span> <span style="color: #000000;">&#41;</span> <span style="color: #0000ff;">continue</span>;
+		<span style="color: #339900;">// trace is returning the same area 2 times in a row???</span>
+		<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> trace.<span style="color: #00aabb;">areas</span><span style="color: #000000;">&#91;</span>q<span style="color: #000000;">&#93;</span> == trace.<span style="color: #00aabb;">areas</span><span style="color: #000000;">&#91;</span>q-<span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span> <span style="color: #000000;">&#41;</span> <span style="color: #0000ff;">continue</span>;
+&nbsp;
+		aasPortal_t p = file-&gt;portals<span style="color: #000000;">&#91;</span>-area.<span style="color: #00aabb;">cluster</span><span style="color: #000000;">&#93;</span>;
+		<span style="color: #339900;">// make sure the portal just found is a portal to the bottom cluster (gets set to next bottom)</span>
+		<span style="color: #339900;">// TODO: there is a possibility that an edge point around the bottom</span>
+		<span style="color: #339900;">// is in a different cluster than the bottom center point and a usable portal would be missed</span>
+		<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> bottomClusterNum &gt; <span style="color: #0000dd;">0</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+			<span style="color: #0000ff;">if</span><span style="color: #000000;">&#40;</span>&nbsp;!<span style="color: #000000;">&#40;</span> p.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span> == bottomClusterNum || p.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span> == bottomClusterNum <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span> <span style="color: #0000ff;">continue</span>;	
+		<span style="color: #000000;">&#125;</span>
+		<span style="color: #339900;">// would need an else if &lt; 0 here</span>
+		<span style="color: #0000ff;">else</span> <span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> bottomClusterNum &lt; <span style="color: #0000dd;">0</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span> <span style="color: #339900;">// the bottom is also a portal - need to check that both portals share one cluster</span>
+			aasPortal_t b = file-&gt;portals<span style="color: #000000;">&#91;</span>-bottomClusterNum<span style="color: #000000;">&#93;</span>;
+			<span style="color: #0000ff;">if</span><span style="color: #000000;">&#40;</span>&nbsp;!<span style="color: #000000;">&#40;</span> p.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span> == b.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span> || p.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span> == b.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span> || p.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span> == b.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span> || p.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span> == b.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span> <span style="color: #0000ff;">continue</span>;	
+		<span style="color: #000000;">&#125;</span>
+		<span style="color: #339900;">// if it is 0, the center bottom of plat is out of bounds (d3ctf3 small circle plat)</span>
+&nbsp;
+		<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span>&nbsp;!firstPortalNum <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span> <span style="color: #339900;">// just save the first portal for later reachability processing</span>
+			firstPortalNum = trace.<span style="color: #00aabb;">areas</span><span style="color: #000000;">&#91;</span>q<span style="color: #000000;">&#93;</span>;
+			firstPortal = trace.<span style="color: #00aabb;">points</span><span style="color: #000000;">&#91;</span>q<span style="color: #000000;">&#93;</span>;
+		<span style="color: #000000;">&#125;</span>
+		<span style="color: #0000ff;">else</span> <span style="color: #000000;">&#123;</span> <span style="color: #339900;">// create reaches from portal to portal up the shaft now</span>
+			<span style="color: #339900;">// found a portal up the elevator shaft to create reaches to</span>
+			aasArea_t bottomArea = file-&gt;areas<span style="color: #000000;">&#91;</span>bottomAreaNum<span style="color: #000000;">&#93;</span>;
+			CreateReachability<span style="color: #000000;">&#40;</span> start, trace.<span style="color: #00aabb;">points</span><span style="color: #000000;">&#91;</span>q<span style="color: #000000;">&#93;</span>, bottomAreaNum, trace.<span style="color: #00aabb;">areas</span><span style="color: #000000;">&#91;</span>q<span style="color: #000000;">&#93;</span>, TFL_ELEVATOR <span style="color: #000000;">&#41;</span>;
+			reachabilityCreated = <span style="color: #0000ff;">true</span>;
+		<span style="color: #000000;">&#125;</span> <span style="color: #339900;">// end else q == 1</span>
+&nbsp;
+		<span style="color: #339900;">// will be used for top processing</span>
+		lastPortal = trace.<span style="color: #00aabb;">points</span><span style="color: #000000;">&#91;</span>q<span style="color: #000000;">&#93;</span>;
+		lastPortalNum = trace.<span style="color: #00aabb;">areas</span><span style="color: #000000;">&#91;</span>q<span style="color: #000000;">&#93;</span>;
+&nbsp;
+		<span style="color: #339900;">// reset the bottom area up to the portal just found and keep looking up the shaft from there</span>
+		bottomAreaNum = trace.<span style="color: #00aabb;">areas</span><span style="color: #000000;">&#91;</span>q<span style="color: #000000;">&#93;</span>;
+		bottomClusterNum = area.<span style="color: #00aabb;">cluster</span>;
+		start = trace.<span style="color: #00aabb;">points</span><span style="color: #000000;">&#91;</span>q<span style="color: #000000;">&#93;</span>;
+	<span style="color: #000000;">&#125;</span> <span style="color: #339900;">// end for each area </span>
+&nbsp;</pre>
+<p>When the above code is done if there was one portal on the way up the point where it is first hit will be in firstPortal. If there were more than one (think 3 story plat) the point where the last portal found (nearest top) will be in lastPortal and a reachability will have been created between the portals. none of the portal checking code would be required if the portals were created after the reachabilies were, oh well, it was fun learning it.
+</p><p>Next the routine starts looking around the bottom of the platform for places to start using the plat. It looks a little like this as it searches around the bottom position of the plat:
+</p>
+<pre>&nbsp;
+<span style="color: #339900; font-style: italic;">/*
+================
+	4-----1-----5
+	|	    |			
+	|	    |		|
+	0	    2		|Y
+	|	    |		|____
+	|	    |			X
+	7-----3-----6
+================
+*/</span></pre>
+<p>this is q3 inspired&nbsp;;) 
+</p>
+<pre>&nbsp;
+<span style="color: #0000ff;">float</span> x<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">8</span><span style="color: #000000;">&#93;</span>, y<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">8</span><span style="color: #000000;">&#93;</span>, x_top<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">8</span><span style="color: #000000;">&#93;</span>, y_top<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">8</span><span style="color: #000000;">&#93;</span>;
+x<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span> = bounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>; x<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span> = center<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>; x<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">2</span><span style="color: #000000;">&#93;</span> = bounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>; x<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">3</span><span style="color: #000000;">&#93;</span> = center<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>;
+x<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">4</span><span style="color: #000000;">&#93;</span> = bounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>; x<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">5</span><span style="color: #000000;">&#93;</span> = bounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>; x<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">6</span><span style="color: #000000;">&#93;</span> = bounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>; x<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">7</span><span style="color: #000000;">&#93;</span> = bounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>;
+&nbsp;
+y<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span> = center<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>; y<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span> = bounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>; y<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">2</span><span style="color: #000000;">&#93;</span> = center<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>; y<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">3</span><span style="color: #000000;">&#93;</span> = bounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>;
+y<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">4</span><span style="color: #000000;">&#93;</span> = bounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>; y<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">5</span><span style="color: #000000;">&#93;</span> = bounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>; y<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">6</span><span style="color: #000000;">&#93;</span> = bounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>; y<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">7</span><span style="color: #000000;">&#93;</span> = bounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>;
+&nbsp;
+<span style="color: #339900;">// find adjacent areas around the bottom of the plat</span>
+<span style="color: #0000ff;">for</span> <span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">int</span> i = <span style="color: #0000dd;">0</span>; i &lt; <span style="color: #0000dd;">9</span>; i++ <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+	<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> i &lt; <span style="color: #0000dd;">8</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>  <span style="color: #339900;">//loops around the outside of the plat</span>
+		start<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span> = x<span style="color: #000000;">&#91;</span>i<span style="color: #000000;">&#93;</span>;
+		start<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span> = y<span style="color: #000000;">&#91;</span>i<span style="color: #000000;">&#93;</span>;
+		start<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">2</span><span style="color: #000000;">&#93;</span> = bottom<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">2</span><span style="color: #000000;">&#93;</span>;  
+		bottomAreaNum = aas-&gt;PointReachableAreaNum<span style="color: #000000;">&#40;</span> start, DefaultBotBounds<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>, travelFlags <span style="color: #000000;">&#41;</span>;
+&nbsp;
+		<span style="color: #0000ff;">int</span> k; <span style="color: #339900;">// TODO: try to eliminate this loop once and see what results</span>
+		<span style="color: #0000ff;">for</span> <span style="color: #000000;">&#40;</span> k = <span style="color: #0000dd;">0</span>; k &lt; <span style="color: #0000dd;">4</span>; k++ <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+			<span style="color: #0000ff;">if</span><span style="color: #000000;">&#40;</span> bottomAreaNum &amp;&amp; file-&gt;GetArea<span style="color: #000000;">&#40;</span> bottomAreaNum <span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">flags</span> &amp; AREA_REACHABLE_WALK <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+				<span style="color: #339900;">//gameRenderWorld-&gt;DebugCone( colorCyan, start, idVec3( 0, 0, 1 ), 0, 1);</span>
+				<span style="color: #0000ff;">break</span>;
+			<span style="color: #000000;">&#125;</span>
+			start<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">2</span><span style="color: #000000;">&#93;</span> += <span style="color: #0000dd;">2</span>; 
+			bottomAreaNum = aas-&gt;PointReachableAreaNum<span style="color: #000000;">&#40;</span> start, DefaultBotBounds<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>, travelFlags <span style="color: #000000;">&#41;</span>;
+		<span style="color: #000000;">&#125;</span>
+		<span style="color: #339900;">// couldn't find a reachable area - no need to process  for this point</span>
+		<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> k &gt;= <span style="color: #0000dd;">4</span> <span style="color: #000000;">&#41;</span> <span style="color: #0000ff;">continue</span>;
+		bottomClusterNum = file-&gt;areas<span style="color: #000000;">&#91;</span>bottomAreaNum<span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">cluster</span>;
+	<span style="color: #000000;">&#125;</span>
+	<span style="color: #0000ff;">else</span> <span style="color: #000000;">&#123;</span>  <span style="color: #339900;">// check at the middle of the plat (or the portal if there was one)</span>
+		<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> lastPortalNum <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+			start = lastPortal;
+			bottomAreaNum = lastPortalNum;
+		<span style="color: #000000;">&#125;</span>
+		<span style="color: #0000ff;">else</span> <span style="color: #000000;">&#123;</span>
+			start = bottom;
+			bottomAreaNum = aas-&gt;PointReachableAreaNum<span style="color: #000000;">&#40;</span> start, DefaultBotBounds<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>, travelFlags <span style="color: #000000;">&#41;</span>;
+			<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span>&nbsp;!bottomAreaNum <span style="color: #000000;">&#41;</span> <span style="color: #0000ff;">continue</span>; 
+		<span style="color: #000000;">&#125;</span>
+		bottomClusterNum = file-&gt;areas<span style="color: #000000;">&#91;</span>bottomAreaNum<span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">cluster</span>;
+	<span style="color: #000000;">&#125;</span></pre>
+<p>If it finds a location that is valid to start from, it then starts trying to find a place to get to at the top. It will first search around the top just like it did around the bottom. This makes the routine favor direct reachabilities from top to bottom. On the 9th iteration it checks for a portal up the elevator shaft and creates the reachability to the portal if it is there.
+</p>
+<pre>&nbsp;
+<span style="color: #339900;">//look at adjacent areas around the top of the plat make larger steps to outside the plat everytime</span>
+idBounds topBounds = bounds; 
+<span style="color: #0000ff;">for</span> <span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">int</span> n = <span style="color: #0000dd;">0</span>; n &lt; <span style="color: #0000dd;">3</span>; n++ <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+	topBounds.<span style="color: #00aabb;">ExpandSelf</span><span style="color: #000000;">&#40;</span> <span style="color: #0000dd;">2</span> * n <span style="color: #000000;">&#41;</span>;
+&nbsp;
+	x_top<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span> = topBounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>; x_top<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span> = center<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>; x_top<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">2</span><span style="color: #000000;">&#93;</span> = topBounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>; x_top<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">3</span><span style="color: #000000;">&#93;</span> = center<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>;
+	x_top<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">4</span><span style="color: #000000;">&#93;</span> = topBounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>; x_top<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">5</span><span style="color: #000000;">&#93;</span> = topBounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>; x_top<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">6</span><span style="color: #000000;">&#93;</span> = topBounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>; x_top<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">7</span><span style="color: #000000;">&#93;</span> = topBounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>;
+	y_top<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span> = center<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>; y_top<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span> = topBounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>; y_top<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">2</span><span style="color: #000000;">&#93;</span> = center<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>; y_top<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">3</span><span style="color: #000000;">&#93;</span> = topBounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>;
+	y_top<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">4</span><span style="color: #000000;">&#93;</span> = topBounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>; y_top<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">5</span><span style="color: #000000;">&#93;</span> = topBounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>; y_top<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">6</span><span style="color: #000000;">&#93;</span> = topBounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>; y_top<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">7</span><span style="color: #000000;">&#93;</span> = topBounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>;
+&nbsp;
+	<span style="color: #339900;">// circle around top plat position looking for areas</span>
+	<span style="color: #0000ff;">for</span> <span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">int</span> j = <span style="color: #0000dd;">0</span>; j &lt; <span style="color: #0000dd;">9</span>; j++ <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+		<span style="color: #339900;">// for the last round check for portal</span>
+		<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> j &gt;= <span style="color: #0000dd;">8</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+			<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> firstPortalNum <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+				end = firstPortal;
+				topAreaNum = firstPortalNum;
+			<span style="color: #000000;">&#125;</span> 
+			<span style="color: #0000ff;">else</span> <span style="color: #000000;">&#123;</span>
+				<span style="color: #0000ff;">continue</span>;
+			<span style="color: #000000;">&#125;</span>
+		<span style="color: #000000;">&#125;</span>
+		<span style="color: #0000ff;">else</span> <span style="color: #000000;">&#123;</span>
+			end<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span> = x_top<span style="color: #000000;">&#91;</span>j<span style="color: #000000;">&#93;</span>;
+			end<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span> = y_top<span style="color: #000000;">&#91;</span>j<span style="color: #000000;">&#93;</span>;
+			end<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">2</span><span style="color: #000000;">&#93;</span> = top<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">2</span><span style="color: #000000;">&#93;</span>;	
+			topAreaNum = aas-&gt;PointReachableAreaNum<span style="color: #000000;">&#40;</span> end, DefaultBotBounds<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>, travelFlags <span style="color: #000000;">&#41;</span>;
+			
+			<span style="color: #0000ff;">int</span> l; <span style="color: #339900;">// trace up a little higher</span>
+			<span style="color: #0000ff;">for</span> <span style="color: #000000;">&#40;</span> l = <span style="color: #0000dd;">0</span>; l &lt; <span style="color: #0000dd;">8</span>; l++ <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+				<span style="color: #339900;">// gameRenderWorld-&gt;DebugArrow(colorPurple, start, end, 3, 200000);</span>
+				<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> topAreaNum &amp;&amp; file-&gt;GetArea<span style="color: #000000;">&#40;</span> topAreaNum <span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">flags</span> &amp; AREA_REACHABLE_WALK<span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+					<span style="color: #339900;">// found a reachable area near top of plat - trace to see if we can reach it from center</span>
+					aasTrace_t trace; <span style="color: #339900;">// TODO: trace with a bounding box (don't know how)???</span>
+					aas-&gt;Trace<span style="color: #000000;">&#40;</span>trace, top, end<span style="color: #000000;">&#41;</span>;
+					<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> trace.<span style="color: #00aabb;">fraction</span> &gt;= <span style="color: #0000dd;">1</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+						<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> aas_showElevators.<span style="color: #00aabb;">GetBool</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+							gameRenderWorld-&gt;DebugArrow<span style="color: #000000;">&#40;</span> colorPurple, top, end, <span style="color: #0000dd;">1</span>, <span style="color: #0000dd;">200000</span> <span style="color: #000000;">&#41;</span>;
+						<span style="color: #000000;">&#125;</span>
+						<span style="color: #339900;">// TODO: Need to trace down to the floor here and check trace.distance &gt; plat.height (d3dm1)</span>
+						<span style="color: #0000ff;">break</span>; 
+					<span style="color: #000000;">&#125;</span> <span style="color: #0000ff;">else</span> <span style="color: #000000;">&#123;</span> <span style="color: #339900;">// failed trace</span>
+						<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> aas_showElevators.<span style="color: #00aabb;">GetBool</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+							gameRenderWorld-&gt;DebugArrow<span style="color: #000000;">&#40;</span> colorOrange, top, end, <span style="color: #0000dd;">1</span>, <span style="color: #0000dd;">200000</span> <span style="color: #000000;">&#41;</span>;
+						<span style="color: #000000;">&#125;</span>
+					<span style="color: #000000;">&#125;</span>
+				<span style="color: #000000;">&#125;</span>
+				end<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">2</span><span style="color: #000000;">&#93;</span> += <span style="color: #0000dd;">4</span>;
+				topAreaNum = aas-&gt;PointReachableAreaNum<span style="color: #000000;">&#40;</span> end, DefaultBotBounds<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>, travelFlags <span style="color: #000000;">&#41;</span>;
+			<span style="color: #000000;">&#125;</span>
+			<span style="color: #339900;">// couldn't find top area</span>
+			<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> l &gt;= <span style="color: #0000dd;">8</span> <span style="color: #000000;">&#41;</span> <span style="color: #0000ff;">continue</span>;</pre>
+<p>If it has found a valid bottom and top position vector it checks to make sure a reachability between the two makes sense, checking for things like the top and bottom being in the same area, or in different clusters, etc. if they are in different clusters the routine will look for possible portal areas along the way.
+</p>
+<pre>&nbsp;
+<span style="color: #339900;">// don't create reachabilities to the same area (worthless)</span>
+   	<span style="color: #0000ff;">if</span><span style="color: #000000;">&#40;</span> bottomAreaNum == topAreaNum <span style="color: #000000;">&#41;</span> <span style="color: #0000ff;">continue</span>;
+&nbsp;
+	<span style="color: #339900;">// area from which we will create a reachability</span>
+	aasArea_t area = file-&gt;areas<span style="color: #000000;">&#91;</span>bottomAreaNum<span style="color: #000000;">&#93;</span>;
+	idReachability *reach;
+	<span style="color: #0000ff;">bool</span> create = <span style="color: #0000ff;">true</span>;
+&nbsp;
+	<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> j &lt; <span style="color: #0000dd;">8</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+		<span style="color: #339900;">// if a reachability in the area already points to the area don't create another one</span>
+		<span style="color: #0000ff;">for</span> <span style="color: #000000;">&#40;</span> reach = area.<span style="color: #00aabb;">reach</span>; reach; reach = reach-&gt;next <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+			<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> reach-&gt;fromAreaNum == bottomAreaNum &amp;&amp; reach-&gt;toAreaNum == topAreaNum <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+				create = <span style="color: #0000ff;">false</span>;
+				<span style="color: #0000ff;">break</span>;
+			<span style="color: #000000;">&#125;</span>
+		<span style="color: #000000;">&#125;</span>
+		<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span>&nbsp;!create <span style="color: #000000;">&#41;</span> <span style="color: #0000ff;">continue</span>;
+	<span style="color: #000000;">&#125;</span>
+	<span style="color: #339900;">// area to create reachability to</span>
+	aasArea_t dest = file-&gt;areas<span style="color: #000000;">&#91;</span>topAreaNum<span style="color: #000000;">&#93;</span>;
+&nbsp;
+	<span style="color: #339900;">// if goal area is portal it needs to be a portal for the bottom cluster</span>
+	<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> dest.<span style="color: #00aabb;">cluster</span> &lt; <span style="color: #0000dd;">0</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+		<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> bottomClusterNum &gt; <span style="color: #0000dd;">0</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+			<span style="color: #0000ff;">const</span> aasPortal_t p = file-&gt;GetPortal<span style="color: #000000;">&#40;</span> -dest.<span style="color: #00aabb;">cluster</span> <span style="color: #000000;">&#41;</span>;
+			<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> p.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>&nbsp;!= bottomClusterNum &amp;&amp; p.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>&nbsp;!= bottomClusterNum <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+				<span style="color: #0000ff;">continue</span>;
+			<span style="color: #000000;">&#125;</span>
+		<span style="color: #000000;">&#125;</span>
+		<span style="color: #0000ff;">else</span> <span style="color: #000000;">&#123;</span> <span style="color: #339900;">// if they are both portals they need to share a cluster</span>
+			<span style="color: #0000ff;">const</span> aasPortal_t e = file-&gt;GetPortal<span style="color: #000000;">&#40;</span> -dest.<span style="color: #00aabb;">cluster</span> <span style="color: #000000;">&#41;</span>;
+			<span style="color: #0000ff;">const</span> aasPortal_t s = file-&gt;GetPortal<span style="color: #000000;">&#40;</span> -bottomClusterNum <span style="color: #000000;">&#41;</span>;
+			<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span>! <span style="color: #000000;">&#40;</span> s.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span> == e.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span> || s.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span> == e.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span> || s.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span> == e.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span> || s.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span> == e.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+				<span style="color: #0000ff;">continue</span>;
+			<span style="color: #000000;">&#125;</span>
+		<span style="color: #000000;">&#125;</span>
+	<span style="color: #000000;">&#125;</span>
+&nbsp;
+	<span style="color: #339900;">// if areas are not portals and are in different clusters</span>
+	<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> area.<span style="color: #00aabb;">cluster</span> &gt; <span style="color: #0000dd;">0</span> &amp;&amp; dest.<span style="color: #00aabb;">cluster</span> &gt; <span style="color: #0000dd;">0</span> &amp;&amp; area.<span style="color: #00aabb;">cluster</span>&nbsp;!= dest.<span style="color: #00aabb;">cluster</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+		topClusterNum = dest.<span style="color: #00aabb;">cluster</span>;
+		create = <span style="color: #0000ff;">false</span>;
+		<span style="color: #339900;">// if any face in the area bounds both clusters make it a portal</span>
+		<span style="color: #0000ff;">for</span> <span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">int</span> j = <span style="color: #0000dd;">0</span>; j &lt; area.<span style="color: #00aabb;">numFaces</span>; j++ <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+			<span style="color: #0000ff;">const</span> aasFace_t face = file-&gt;GetFace<span style="color: #000000;">&#40;</span> <span style="color: #0000dd;">abs</span><span style="color: #000000;">&#40;</span> file-&gt;GetFaceIndex<span style="color: #000000;">&#40;</span> area.<span style="color: #00aabb;">firstFace</span> + j <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span>;
+			<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> file-&gt;GetArea<span style="color: #000000;">&#40;</span> face.<span style="color: #00aabb;">areas</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">cluster</span> == bottomClusterNum &amp;&amp; file-&gt;GetArea<span style="color: #000000;">&#40;</span> face.<span style="color: #00aabb;">areas</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">cluster</span>== topClusterNum || file-&gt;GetArea<span style="color: #000000;">&#40;</span> face.<span style="color: #00aabb;">areas</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">cluster</span> == topClusterNum &amp;&amp; file-&gt;GetArea<span style="color: #000000;">&#40;</span> face.<span style="color: #00aabb;">areas</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">cluster</span> == bottomClusterNum <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+				gameLocal.<span style="color: #00aabb;">Printf</span><span style="color: #000000;">&#40;</span><span style="color: #666666;">"create a portal here"</span><span style="color: #000000;">&#41;</span>;
+				create = <span style="color: #0000ff;">true</span>;
+				<span style="color: #0000ff;">break</span>;
+			<span style="color: #000000;">&#125;</span>
+		<span style="color: #000000;">&#125;</span>
+		<span style="color: #339900;">// if the bottom area can be made a cluster make it</span>
+		<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> create <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+			CreatePortal<span style="color: #000000;">&#40;</span> bottomAreaNum, bottomClusterNum, topClusterNum <span style="color: #000000;">&#41;</span>;							
+		<span style="color: #000000;">&#125;</span>
+		<span style="color: #0000ff;">else</span> <span style="color: #000000;">&#123;</span> <span style="color: #339900;">// UGLY: check the top area same as we just checked the bottom</span>
+			<span style="color: #339900;">// TODO: see if this ever gets used, if not think about getting rid of it for now?</span>
+			<span style="color: #339900;">// TODO: break out the common code into ConvertAreaToPortal</span>
+			<span style="color: #0000ff;">for</span> <span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">int</span> j = <span style="color: #0000dd;">0</span>; j &lt; dest.<span style="color: #00aabb;">numFaces</span>; j++ <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+				<span style="color: #0000ff;">const</span> aasFace_t face = file-&gt;GetFace<span style="color: #000000;">&#40;</span> <span style="color: #0000dd;">abs</span><span style="color: #000000;">&#40;</span> file-&gt;GetFaceIndex<span style="color: #000000;">&#40;</span> dest.<span style="color: #00aabb;">firstFace</span> + j <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span>;
+				<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> file-&gt;GetArea<span style="color: #000000;">&#40;</span> face.<span style="color: #00aabb;">areas</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">cluster</span> == bottomClusterNum &amp;&amp; file-&gt;GetArea<span style="color: #000000;">&#40;</span> face.<span style="color: #00aabb;">areas</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">cluster</span>== topClusterNum || file-&gt;GetArea<span style="color: #000000;">&#40;</span> face.<span style="color: #00aabb;">areas</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">cluster</span> == topClusterNum &amp;&amp; file-&gt;GetArea<span style="color: #000000;">&#40;</span> face.<span style="color: #00aabb;">areas</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">cluster</span> == bottomClusterNum <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+					create = <span style="color: #0000ff;">true</span>;
+					<span style="color: #0000ff;">break</span>;
+				<span style="color: #000000;">&#125;</span>
+			<span style="color: #000000;">&#125;</span>
+			<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> create <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+				<span style="color: #339900;">// make the top area a portal</span>
+				CreatePortal<span style="color: #000000;">&#40;</span> topAreaNum, topClusterNum, bottomClusterNum<span style="color: #000000;">&#41;</span>;
+			<span style="color: #000000;">&#125;</span>
+			<span style="color: #0000ff;">else</span> <span style="color: #000000;">&#123;</span> <span style="color: #339900;">// areas are in different clusters and neither made a portal</span>
+				<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> area.<span style="color: #00aabb;">rev_reach</span> &amp;&amp; dest.<span style="color: #00aabb;">reach</span><span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+					bottomNeedPortal = start;
+					topNeedPortal = end;
+					needPortal = <span style="color: #0000ff;">true</span>;
+				<span style="color: #000000;">&#125;</span>
+				<span style="color: #0000ff;">continue</span>; 
+			<span style="color: #000000;">&#125;</span>
+		<span style="color: #000000;">&#125;</span>
+	<span style="color: #000000;">&#125;</span></pre>
+<p>If we got passed all that ugliness then we are ready to create a reachability.
+</p>
+<pre>&nbsp;
+	<span style="color: #339900;">// if got to this point there is a valid to area and from area for a reachability</span>
+	CreateReachability<span style="color: #000000;">&#40;</span> start, end, bottomAreaNum, topAreaNum, TFL_ELEVATOR <span style="color: #000000;">&#41;</span>;
+	reachabilityCreated = <span style="color: #0000ff;">true</span>;
+	<span style="color: #339900;">//don't go any further to the outside</span>
+	n = <span style="color: #0000dd;">9999</span>;
+<span style="color: #000000;">&#125;</span></pre>
+<p>This type of pattern will continue until each spot in the bottom rotation has been checked against each spot in the top rotation, and the first and last portals have also been connected. Finally, if all the coagulation above couldn’t create something usable, one last attempt is made creating a portal that doesn’t REALLY share an edge between two clusters, but it works&nbsp;;)
+</p>
+<pre>&nbsp;
+	<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span>&nbsp;!reachabilityCreated <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+		<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> aas_showElevators.<span style="color: #00aabb;">GetBool</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+			<span style="color: #339900;">// give a little warning visually&nbsp;;)</span>
+			gameRenderWorld-&gt;DebugBounds<span style="color: #000000;">&#40;</span> colorPink, bounds, vec3_origin, <span style="color: #0000dd;">200000</span> <span style="color: #000000;">&#41;</span>;
+		<span style="color: #000000;">&#125;</span>
+		<span style="color: #339900;">// could try many different things for a last ditch effort. (d3dm3 plats)</span>
+		<span style="color: #339900;">// for now try and create a portal at top and one reach from bottom (could use list from bottom)</span>
+		<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> needPortal <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+			topAreaNum = aas-&gt;PointReachableAreaNum<span style="color: #000000;">&#40;</span> topNeedPortal, DefaultBotBounds<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>, travelFlags <span style="color: #000000;">&#41;</span>;
+			aasArea_t topArea = file-&gt;areas<span style="color: #000000;">&#91;</span>topAreaNum<span style="color: #000000;">&#93;</span>;
+			topClusterNum = topArea.<span style="color: #00aabb;">cluster</span>;
+			<span style="color: #0000dd;">assert</span><span style="color: #000000;">&#40;</span>topClusterNum &gt; <span style="color: #0000dd;">0</span><span style="color: #000000;">&#41;</span>;
+			bottomAreaNum = aas-&gt;PointReachableAreaNum<span style="color: #000000;">&#40;</span> bottomNeedPortal, DefaultBotBounds<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>, travelFlags <span style="color: #000000;">&#41;</span>;
+			bottomClusterNum = file-&gt;GetArea<span style="color: #000000;">&#40;</span> bottomAreaNum <span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">cluster</span>;
+			<span style="color: #0000dd;">assert</span><span style="color: #000000;">&#40;</span> bottomClusterNum <span style="color: #000000;">&#41;</span>;
+			<span style="color: #339900;">// TODO: this wacked out the points way crazy like in some spots</span>
+			<span style="color: #339900;">//aas-&gt;PushPointIntoAreaNum(topAreaNum, topNeedPortal);</span>
+			<span style="color: #339900;">//aas-&gt;PushPointIntoAreaNum(bottomAreaNum, bottomNeedPortal);</span>
+			CreatePortal<span style="color: #000000;">&#40;</span> topAreaNum, topClusterNum, bottomClusterNum <span style="color: #000000;">&#41;</span>;
+			CreateReachability<span style="color: #000000;">&#40;</span> bottomNeedPortal, topNeedPortal, bottomAreaNum, topAreaNum, TFL_ELEVATOR <span style="color: #000000;">&#41;</span>; 
+		<span style="color: #000000;">&#125;</span>
+	<span style="color: #000000;">&#125;</span></pre>
+<p>Here are some pics to help explain. let me know if they are too dark ( my old monitor sucks a$$) also, <b>the image policy page is empty</b> so I took the safe route and uploaded crappy resolution images, if we thumbnail them can we upload nicer ones?
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608025104/http://www.modwiki.net/w/index.php?title=Extending_the_Area_Awareness_System&amp;action=edit&amp;section=4" title="Edit section: Elevator Screenshots">edit</a>]</div><a name="Elevator_Screenshots"></a><h2> Elevator Screenshots </h2>
+<p>This is what a plat looks like when the top and bottom are in the same cluster. Yes, there are probably too many reachabilities. I just haven’t tweaked enough.
+</p>
+<div class="thumb tnone"><div style="width:182px;"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Image:Plat_reachability_1.jpg" class="internal" title=""><img src="/web/20080608025104im_/http://www.modwiki.net/w/images/thumb/4/4b/Plat_reachability_1.jpg/180px-Plat_reachability_1.jpg" alt="" width="180" height="135" longdesc="/wiki/Image:Plat_reachability_1.jpg" /></a>  <div class="thumbcaption" ><div class="magnify" style="float:right"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Image:Plat_reachability_1.jpg" class="internal" title="Enlarge"><img src="/web/20080608025104im_/http://www.modwiki.net/w/skins/common/images/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div></div></div></div>
+<p>The Edge 2 turned out good, yes you also see a transporter reachability in there&nbsp;;)
+</p>
+<div class="thumb tnone"><div style="width:182px;"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Image:Plat_reachability_2.jpg" class="internal" title=""><img src="/web/20080608025104im_/http://www.modwiki.net/w/images/thumb/5/57/Plat_reachability_2.jpg/180px-Plat_reachability_2.jpg" alt="" width="180" height="135" longdesc="/wiki/Image:Plat_reachability_2.jpg" /></a>  <div class="thumbcaption" ><div class="magnify" style="float:right"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Image:Plat_reachability_2.jpg" class="internal" title="Enlarge"><img src="/web/20080608025104im_/http://www.modwiki.net/w/skins/common/images/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div></div></div></div>
+<p>This one has a cluster portal up the center. It was important to make sure the reachabilities still started at the outer edge so that the AI would know they were looking to do plat navigation before they accidentally ended up on or under it.
+</p>
+<div class="thumb tnone"><div style="width:182px;"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Image:Plat_reachability_2_portal.jpg" class="internal" title=""><img src="/web/20080608025104im_/http://www.modwiki.net/w/images/thumb/8/88/Plat_reachability_2_portal.jpg/180px-Plat_reachability_2_portal.jpg" alt="" width="180" height="135" longdesc="/wiki/Image:Plat_reachability_2_portal.jpg" /></a>  <div class="thumbcaption" ><div class="magnify" style="float:right"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Image:Plat_reachability_2_portal.jpg" class="internal" title="Enlarge"><img src="/web/20080608025104im_/http://www.modwiki.net/w/skins/common/images/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div></div></div></div>
+<p>There were a couple that were stubborn…
+</p>
+<div class="thumb tnone"><div style="width:182px;"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Image:Plat_reachability_skinny.jpg" class="internal" title=""><img src="/web/20080608025104im_/http://www.modwiki.net/w/images/thumb/8/86/Plat_reachability_skinny.jpg/180px-Plat_reachability_skinny.jpg" alt="" width="180" height="135" longdesc="/wiki/Image:Plat_reachability_skinny.jpg" /></a>  <div class="thumbcaption" ><div class="magnify" style="float:right"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Image:Plat_reachability_skinny.jpg" class="internal" title="Enlarge"><img src="/web/20080608025104im_/http://www.modwiki.net/w/skins/common/images/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div></div></div></div>
+<p>The two story plats have more than one cluster portal up the elevator shaft:
+</p>
+<div class="thumb tnone"><div style="width:182px;"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Image:Plat_reachability_2story.jpg" class="internal" title=""><img src="/web/20080608025104im_/http://www.modwiki.net/w/images/thumb/a/af/Plat_reachability_2story.jpg/180px-Plat_reachability_2story.jpg" alt="" width="180" height="135" longdesc="/wiki/Image:Plat_reachability_2story.jpg" /></a>  <div class="thumbcaption" ><div class="magnify" style="float:right"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Image:Plat_reachability_2story.jpg" class="internal" title="Enlarge"><img src="/web/20080608025104im_/http://www.modwiki.net/w/skins/common/images/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div></div></div></div>
+<p>Will bots be playing CTF soon? 
+</p>
+<div class="thumb tnone"><div style="width:182px;"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Image:Plat_hit_them_all.jpg" class="internal" title=""><img src="/web/20080608025104im_/http://www.modwiki.net/w/images/thumb/7/72/Plat_hit_them_all.jpg/180px-Plat_hit_them_all.jpg" alt="" width="180" height="135" longdesc="/wiki/Image:Plat_hit_them_all.jpg" /></a>  <div class="thumbcaption" ><div class="magnify" style="float:right"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Image:Plat_hit_them_all.jpg" class="internal" title="Enlarge"><img src="/web/20080608025104im_/http://www.modwiki.net/w/skins/common/images/magnify-clip.png" width="15" height="11" alt="Enlarge" /></a></div></div></div></div>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608025104/http://www.modwiki.net/w/index.php?title=Extending_the_Area_Awareness_System&amp;action=edit&amp;section=5" title="Edit section: Adding Transporter Reachabilities">edit</a>]</div><a name="Adding_Transporter_Reachabilities"></a><h2> Adding Transporter Reachabilities </h2>
+<p>Just for reference:
+</p>
+<pre>&nbsp;
+<span style="color: #339900; font-style: italic;">/*
+============
+BotAASBuild::AddTransporterReachabilities
+&nbsp;
+ cusTom3	- needs some work, but is functional for purpose for now&nbsp;;)
+============
+*/</span>
+<span style="color: #0000ff;">void</span> BotAASBuild::<span style="color: #00aabb;">AddTransporterReachabilities</span><span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">void</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+	<span style="color: #339900;">// teleporters - if trigger and destination are in the same area just ignore them???? (not likely but test map had it) </span>
+	
+	idEntity *ent;
+	<span style="color: #339900;">// for each entity in the map</span>
+	<span style="color: #0000ff;">for</span> <span style="color: #000000;">&#40;</span> ent = gameLocal.<span style="color: #00aabb;">spawnedEntities</span>.<span style="color: #00aabb;">Next</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>; ent&nbsp;!= <span style="color: #0000ff;">NULL</span>; ent = ent-&gt;spawnNode.<span style="color: #00aabb;">Next</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+		<span style="color: #339900;">// that is an elevator</span>
+		<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> ent-&gt;IsType<span style="color: #000000;">&#40;</span> idTrigger_Multi::<span style="color: #00aabb;">Type</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+			<span style="color: #0000ff;">const</span> <span style="color: #0000ff;">char</span> *targetName;
+			<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> ent-&gt;spawnArgs.<span style="color: #00aabb;">GetString</span><span style="color: #000000;">&#40;</span> <span style="color: #666666;">"target"</span>, <span style="color: #666666;">""</span>, &amp;targetName <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+				idEntity *target = gameLocal.<span style="color: #00aabb;">FindEntity</span><span style="color: #000000;">&#40;</span> targetName <span style="color: #000000;">&#41;</span>;
+				<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> target &amp;&amp; target-&gt;IsType<span style="color: #000000;">&#40;</span> idPlayerStart::<span style="color: #00aabb;">Type</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+					<span style="color: #0000ff;">int</span> startArea, targetArea, startCluster, targetCluster;
+					<span style="color: #0000ff;">bool</span> needsPortal = <span style="color: #0000ff;">false</span>;
+					<span style="color: #339900;">// get the areas the trigger multi bounds is in (just origin for now)</span>
+					startArea = aas-&gt;PointReachableAreaNum<span style="color: #000000;">&#40;</span> ent-&gt;GetPhysics<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>-&gt;GetOrigin<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>, DefaultBotBounds<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>, travelFlags <span style="color: #000000;">&#41;</span>;
+					<span style="color: #339900;">// get the areas the info_player_teleport is in (just origin for now) -- expanded bounding box 10 here to get a target area on d3dm1</span>
+					targetArea = aas-&gt;PointReachableAreaNum<span style="color: #000000;">&#40;</span> target-&gt;GetPhysics<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>-&gt;GetOrigin<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>, DefaultBotBounds<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">Expand</span><span style="color: #000000;">&#40;</span> <span style="color: #0000dd;">10</span> <span style="color: #000000;">&#41;</span>, travelFlags <span style="color: #000000;">&#41;</span>;
+					<span style="color: #339900;">// if both are in valid areas (should be)</span>
+					<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> startArea &amp;&amp; targetArea <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+						startCluster = aas-&gt;file-&gt;GetArea<span style="color: #000000;">&#40;</span> startArea <span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">cluster</span>;
+						targetCluster = aas-&gt;file-&gt;GetArea<span style="color: #000000;">&#40;</span> targetArea <span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">cluster</span>;
+						<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> startCluster &gt; <span style="color: #0000dd;">0</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+							<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> targetCluster &gt; <span style="color: #0000dd;">0</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+								<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> startCluster&nbsp;!= targetCluster <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+									needsPortal = <span style="color: #0000ff;">true</span>;
+								<span style="color: #000000;">&#125;</span>
+							<span style="color: #000000;">&#125;</span> 
+							<span style="color: #0000ff;">else</span> <span style="color: #000000;">&#123;</span> <span style="color: #339900;">// target area is a cluster portal</span>
+								<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> file-&gt;GetPortal<span style="color: #000000;">&#40;</span> -targetCluster <span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>&nbsp;!= startCluster &amp;&amp; file-&gt;GetPortal<span style="color: #000000;">&#40;</span> -targetCluster <span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>&nbsp;!= startCluster <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+									needsPortal = <span style="color: #0000ff;">true</span>;
+								<span style="color: #000000;">&#125;</span>
+							<span style="color: #000000;">&#125;</span>
+						<span style="color: #000000;">&#125;</span>
+						<span style="color: #0000ff;">else</span> <span style="color: #000000;">&#123;</span> <span style="color: #339900;">// start area is a cluster portal</span>
+							<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> targetCluster &gt; <span style="color: #0000dd;">0</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+								<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> file-&gt;GetPortal<span style="color: #000000;">&#40;</span> -startCluster <span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>&nbsp;!= targetCluster &amp;&amp; file-&gt;GetPortal<span style="color: #000000;">&#40;</span> -startCluster <span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>&nbsp;!= targetCluster <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+									needsPortal = <span style="color: #0000ff;">true</span>;
+								<span style="color: #000000;">&#125;</span>
+							<span style="color: #000000;">&#125;</span>
+							<span style="color: #0000ff;">else</span> <span style="color: #000000;">&#123;</span> <span style="color: #339900;">// both portals</span>
+								<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> <span style="color: #000000;">&#40;</span>file-&gt;GetPortal<span style="color: #000000;">&#40;</span> -startCluster <span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>&nbsp;!= file-&gt;GetPortal<span style="color: #000000;">&#40;</span> -targetCluster <span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#41;</span> &amp;&amp;
+									 <span style="color: #000000;">&#40;</span>file-&gt;GetPortal<span style="color: #000000;">&#40;</span> -startCluster <span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>&nbsp;!= file-&gt;GetPortal<span style="color: #000000;">&#40;</span> -targetCluster <span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#41;</span> &amp;&amp;
+									 <span style="color: #000000;">&#40;</span>file-&gt;GetPortal<span style="color: #000000;">&#40;</span> -startCluster <span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>&nbsp;!= file-&gt;GetPortal<span style="color: #000000;">&#40;</span> -targetCluster <span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#41;</span> &amp;&amp;
+									 <span style="color: #000000;">&#40;</span>file-&gt;GetPortal<span style="color: #000000;">&#40;</span> -startCluster <span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>&nbsp;!= file-&gt;GetPortal<span style="color: #000000;">&#40;</span> -targetCluster <span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+										 <span style="color: #339900;">// need a portal and both are already portals, won't work?</span>
+										 <span style="color: #0000ff;">continue</span>;
+								<span style="color: #000000;">&#125;</span>
+							<span style="color: #000000;">&#125;</span>
+						<span style="color: #000000;">&#125;</span>
+					<span style="color: #000000;">&#125;</span>
+					<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> needsPortal <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span> 
+						CreatePortal<span style="color: #000000;">&#40;</span> startArea, startCluster, targetCluster <span style="color: #000000;">&#41;</span>;
+					<span style="color: #000000;">&#125;</span>
+					CreateReachability<span style="color: #000000;">&#40;</span> ent-&gt;GetPhysics<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>-&gt;GetOrigin<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>, target-&gt;GetPhysics<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>-&gt;GetOrigin<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>, startArea, targetArea, TFL_TELEPORT <span style="color: #000000;">&#41;</span>;
+				<span style="color: #000000;">&#125;</span>
+			<span style="color: #000000;">&#125;</span>
+		<span style="color: #000000;">&#125;</span>
+	<span style="color: #000000;">&#125;</span>
+<span style="color: #000000;">&#125;</span></pre>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608025104/http://www.modwiki.net/w/index.php?title=Extending_the_Area_Awareness_System&amp;action=edit&amp;section=6" title="Edit section: Helper Routines">edit</a>]</div><a name="Helper_Routines"></a><h2> Helper Routines </h2>
+<p>A few routines were broken out for reuse. I started reading Large Scale Software Development in C++ after implementing all of this and would probably design the component different now if i did it again.
+</p>
+<pre>&nbsp;
+<span style="color: #339900; font-style: italic;">/*
+============
+BotAASBuild::CreateReachability
+============
+*/</span>
+<span style="color: #0000ff;">void</span> BotAASBuild::<span style="color: #00aabb;">CreateReachability</span><span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">const</span> idVec3 &amp;start, <span style="color: #0000ff;">const</span> idVec3 &amp;end, <span style="color: #0000ff;">int</span> fromAreaNum, <span style="color: #0000ff;">int</span> toAreaNum, <span style="color: #0000ff;">int</span> travelFlags <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+	<span style="color: #339900;">// TODO: this should probably return a pointer to the reachability created</span>
+	idReachability *r = AllocReachability<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>;
+	idReachability *reach;
+	
+	<span style="color: #339900;">// add the reach to the end of the start areas reachability list </span>
+	<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> reach = file-&gt;areas<span style="color: #000000;">&#91;</span>fromAreaNum<span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">reach</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+		<span style="color: #339900;">// get to the last reach in the list - he he</span>
+		<span style="color: #0000ff;">for</span> <span style="color: #000000;">&#40;</span>&nbsp;; reach-&gt;next; reach = reach-&gt;next <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span><span style="color: #000000;">&#125;</span>
+		reach-&gt;next = r;
+	<span style="color: #000000;">&#125;</span> 
+	<span style="color: #0000ff;">else</span> <span style="color: #000000;">&#123;</span>
+		<span style="color: #339900;">// will be only reachability in start area list</span>
+		file-&gt;areas<span style="color: #000000;">&#91;</span>fromAreaNum<span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">reach</span> = r; 
+	<span style="color: #000000;">&#125;</span>
+&nbsp;
+	r-&gt;next = <span style="color: #0000ff;">NULL</span>; 
+	r-&gt;start = start; 
+	r-&gt;end = end;
+	r-&gt;fromAreaNum = fromAreaNum;
+	r-&gt;toAreaNum = toAreaNum;
+	r-&gt;travelType = travelFlags;
+	r-&gt;travelTime = <span style="color: #0000dd;">1</span>; <span style="color: #339900;">// TODO: distance calculation here </span>
+	r-&gt;edgeNum = <span style="color: #0000dd;">0</span>; <span style="color: #339900;">// TODO: elevator height here, portal wouldn't share edge either? make parameter if needed?</span>
+	r-&gt;areaTravelTimes = <span style="color: #0000ff;">NULL</span>;
+	<span style="color: #0000ff;">if</span><span style="color: #000000;">&#40;</span> reach = file-&gt;areas<span style="color: #000000;">&#91;</span>toAreaNum<span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">rev_reach</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+		<span style="color: #339900;">// get to the end of the rev_reach list</span>
+		<span style="color: #0000ff;">for</span> <span style="color: #000000;">&#40;</span>&nbsp;; reach-&gt;rev_next; reach = reach-&gt;rev_next <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span><span style="color: #000000;">&#125;</span>
+		reach-&gt;rev_next = r;
+	<span style="color: #000000;">&#125;</span> <span style="color: #0000ff;">else</span> <span style="color: #000000;">&#123;</span>
+		<span style="color: #339900;">// will be only one in list</span>
+		file-&gt;areas<span style="color: #000000;">&#91;</span>toAreaNum<span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">rev_reach</span> = r; 
+	<span style="color: #000000;">&#125;</span>
+	<span style="color: #339900;">//return r;</span>
+<span style="color: #000000;">&#125;</span></pre>
+<pre>&nbsp;
+<span style="color: #339900; font-style: italic;">/*
+============
+BotAASBuild::CreatePortal
+============
+*/</span>
+<span style="color: #0000ff;">void</span> BotAASBuild::<span style="color: #00aabb;">CreatePortal</span><span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">int</span> areaNum, <span style="color: #0000ff;">int</span> cluster, <span style="color: #0000ff;">int</span> joinCluster <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+	<span style="color: #339900;">// TODO: could just pass in a reference to the area??</span>
+	aasPortal_t portal;
+	portal.<span style="color: #00aabb;">areaNum</span> = areaNum;
+	portal.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span> = cluster;
+	portal.<span style="color: #00aabb;">clusterAreaNum</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span> = aas-&gt;ClusterAreaNum<span style="color: #000000;">&#40;</span> cluster, areaNum <span style="color: #000000;">&#41;</span>;
+	portal.<span style="color: #00aabb;">clusters</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span> = joinCluster;
+	portal.<span style="color: #00aabb;">clusterAreaNum</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span> = file-&gt;GetCluster<span style="color: #000000;">&#40;</span> joinCluster <span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">numReachableAreas</span>;
+	<span style="color: #0000ff;">int</span> portalIndex = file-&gt;portals.<span style="color: #00aabb;">Append</span><span style="color: #000000;">&#40;</span> portal <span style="color: #000000;">&#41;</span>;
+	
+	<span style="color: #339900;">// adding an area to the joinCluster, update cluster stats </span>
+	file-&gt;clusters<span style="color: #000000;">&#91;</span>joinCluster<span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">numAreas</span>++;
+	file-&gt;clusters<span style="color: #000000;">&#91;</span>joinCluster<span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">numPortals</span>++;
+	file-&gt;clusters<span style="color: #000000;">&#91;</span>joinCluster<span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">numReachableAreas</span>++;
+		
+	<span style="color: #339900;">// update the files portalIndex</span>
+	<span style="color: #0000ff;">int</span> insertat = file-&gt;clusters<span style="color: #000000;">&#91;</span>joinCluster<span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">firstPortal</span>;
+	file-&gt;portalIndex.<span style="color: #00aabb;">Insert</span><span style="color: #000000;">&#40;</span> portalIndex, insertat <span style="color: #000000;">&#41;</span>;
+&nbsp;
+	<span style="color: #339900;">// reset the clusters firstPortal member to new locations</span>
+	<span style="color: #0000ff;">int</span> current = <span style="color: #0000dd;">0</span>;
+	<span style="color: #0000ff;">for</span> <span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">int</span> c = <span style="color: #0000dd;">1</span>; c &lt; file-&gt;GetNumClusters<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>; c++ <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+		file-&gt;clusters<span style="color: #000000;">&#91;</span>c<span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">firstPortal</span> = current;
+		current += file-&gt;clusters<span style="color: #000000;">&#91;</span>c<span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">numPortals</span>;
+	<span style="color: #000000;">&#125;</span>
+	
+	<span style="color: #339900;">// adding a portal to the current cluster, update cluster stats</span>
+	file-&gt;clusters<span style="color: #000000;">&#91;</span>cluster<span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">numPortals</span>++;
+	insertat = file-&gt;clusters<span style="color: #000000;">&#91;</span>cluster<span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">firstPortal</span>;
+	file-&gt;portalIndex.<span style="color: #00aabb;">Insert</span><span style="color: #000000;">&#40;</span> portalIndex, insertat <span style="color: #000000;">&#41;</span>;
+&nbsp;
+	<span style="color: #339900;">// reset the clusters firstPortal member to new locations (again)</span>
+	current = <span style="color: #0000dd;">0</span>;
+	<span style="color: #0000ff;">for</span> <span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">int</span> c = <span style="color: #0000dd;">1</span>; c &lt; file-&gt;GetNumClusters<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>; c++ <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+		file-&gt;clusters<span style="color: #000000;">&#91;</span>c<span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">firstPortal</span> = current;
+		current += file-&gt;clusters<span style="color: #000000;">&#91;</span>c<span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">numPortals</span>;
+	<span style="color: #000000;">&#125;</span>
+	
+	<span style="color: #339900;">// update the area </span>
+	file-&gt;areas<span style="color: #000000;">&#91;</span>areaNum<span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">cluster</span> = -portalIndex;
+	file-&gt;areas<span style="color: #000000;">&#91;</span>areaNum<span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">contents</span> |= AREACONTENTS_CLUSTERPORTAL;
+<span style="color: #000000;">&#125;</span>
+&nbsp;</pre>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608025104/http://www.modwiki.net/w/index.php?title=Extending_the_Area_Awareness_System&amp;action=edit&amp;section=7" title="Edit section: Clean Up Code">edit</a>]</div><a name="Clean_Up_Code"></a><h2> Clean Up Code </h2>
+<p>When a map unloads all the AAS file additions need to be undone before the engine tries do free the AAS data. If this isn’t done correctly you may spend hours and days reading about things like heap corruption and linking to the CRT runtime and many other things C++&nbsp;:)
+</p>
+<pre>&nbsp;
+<span style="color: #339900; font-style: italic;">/*
+============
+idAASLocal::Shutdown
+============
+*/</span>
+<span style="color: #0000ff;">void</span> idAASLocal::<span style="color: #00aabb;">Shutdown</span><span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">void</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+	<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">file</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+&nbsp;
+<span style="color: #339900;">#ifdef MOD_BOTS // cusTom3 - aas extensions </span>
+	<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span>idStr<span style="color: #000000;">&#40;</span>file-&gt;GetName<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span><span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">Find</span><span style="color: #000000;">&#40;</span> <span style="color: #666666;">"aas48"</span>, <span style="color: #0000ff;">false</span> <span style="color: #000000;">&#41;</span> &gt; <span style="color: #0000dd;">0</span><span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+		botAASBuilder-&gt;FreeAAS<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>;
+	<span style="color: #000000;">&#125;</span>
+<span style="color: #339900;">#endif // TODO: save the new information out to a file so it doesn't have to be processed each map load</span>
+		
+		ShutdownRouting<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>;
+		RemoveAllObstacles<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>;
+		AASFileManager-&gt;FreeAAS<span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">file</span> <span style="color: #000000;">&#41;</span>;
+		<span style="color: #0000ff;">file</span> = <span style="color: #0000ff;">NULL</span>;
+	<span style="color: #000000;">&#125;</span>
+<span style="color: #000000;">&#125;</span></pre>
+<p>This calls into a clean up routine that puts the lists back into place, cleans up the  remainder of the new ones and unlinks all the reachabilities from the data structures.
+</p>
+<pre>&nbsp;
+<span style="color: #339900; font-style: italic;">/*
+============
+BotAASBuild::FreeAAS
+&nbsp;
+============
+*/</span>
+<span style="color: #0000ff;">void</span> BotAASBuild::<span style="color: #00aabb;">FreeAAS</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+	<span style="color: #339900;">//OutputAASReachInfo( file );</span>
+	
+	<span style="color: #339900;">// remove the references that point to engine objects - as innefficiently as possible&nbsp;;)</span>
+	<span style="color: #0000ff;">for</span> <span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">int</span> i = <span style="color: #0000dd;">0</span>; i &lt; originalPortals.<span style="color: #00aabb;">Num</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>; i++ <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+		<span style="color: #339900;">// remove the first one from the list, it will move the rest (go backwards at least lazy man)</span>
+		file-&gt;portals.<span style="color: #00aabb;">RemoveIndex</span><span style="color: #000000;">&#40;</span> <span style="color: #0000dd;">0</span> <span style="color: #000000;">&#41;</span>;
+	<span style="color: #000000;">&#125;</span>
+	
+	<span style="color: #339900;">// if file-&gt;portals was resized, portals points to a place that has been deleted. </span>
+	portals.<span style="color: #00aabb;">list</span> = file-&gt;portals.<span style="color: #00aabb;">list</span>;
+	portals.<span style="color: #00aabb;">num</span> = file-&gt;portals.<span style="color: #00aabb;">num</span>;
+	portals.<span style="color: #00aabb;">size</span> = file-&gt;portals.<span style="color: #00aabb;">size</span>;
+	portals.<span style="color: #00aabb;">granularity</span> = file-&gt;portals.<span style="color: #00aabb;">granularity</span>;
+&nbsp;
+	<span style="color: #339900;">// reset the aas portals list back to the orignal</span>
+	file-&gt;portals.<span style="color: #00aabb;">list</span> = originalPortals.<span style="color: #00aabb;">list</span>;
+	file-&gt;portals.<span style="color: #00aabb;">size</span> = originalPortals.<span style="color: #00aabb;">size</span>;
+	file-&gt;portals.<span style="color: #00aabb;">num</span>= originalPortals.<span style="color: #00aabb;">num</span>;
+	file-&gt;portals.<span style="color: #00aabb;">granularity</span> = originalPortals.<span style="color: #00aabb;">granularity</span>;
+&nbsp;
+	<span style="color: #0000ff;">for</span> <span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">int</span> i = <span style="color: #0000dd;">0</span>; i &lt; originalPortalIndex.<span style="color: #00aabb;">Num</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>; i++ <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+		<span style="color: #339900;">// remove the first one from the list, it will move the rest (go backwards at least lazy man)</span>
+		file-&gt;portalIndex.<span style="color: #00aabb;">RemoveIndex</span><span style="color: #000000;">&#40;</span> <span style="color: #0000dd;">0</span> <span style="color: #000000;">&#41;</span>;
+	<span style="color: #000000;">&#125;</span>
+&nbsp;
+	<span style="color: #339900;">// if file-&gt;portalIndex was resized, portalIndex points to a place that has been deleted. </span>
+	portalIndex.<span style="color: #00aabb;">list</span> = file-&gt;portalIndex.<span style="color: #00aabb;">list</span>;
+	portalIndex.<span style="color: #00aabb;">num</span> = file-&gt;portalIndex.<span style="color: #00aabb;">num</span>;
+	portalIndex.<span style="color: #00aabb;">size</span> = file-&gt;portalIndex.<span style="color: #00aabb;">size</span>;
+	portalIndex.<span style="color: #00aabb;">granularity</span> = file-&gt;portalIndex.<span style="color: #00aabb;">granularity</span>;
+&nbsp;
+	<span style="color: #339900;">// reset the aas portalIndex list back to the orignal</span>
+	file-&gt;portalIndex.<span style="color: #00aabb;">list</span> = originalPortalIndex.<span style="color: #00aabb;">list</span>;
+	file-&gt;portalIndex.<span style="color: #00aabb;">size</span> = originalPortalIndex.<span style="color: #00aabb;">size</span>;
+	file-&gt;portalIndex.<span style="color: #00aabb;">num</span>= originalPortalIndex.<span style="color: #00aabb;">num</span>;
+	file-&gt;portalIndex.<span style="color: #00aabb;">granularity</span> = originalPortalIndex.<span style="color: #00aabb;">granularity</span>;
+&nbsp;
+	portals.<span style="color: #00aabb;">Clear</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>;
+	portalIndex.<span style="color: #00aabb;">Clear</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>;
+&nbsp;
+	<span style="color: #339900;">// for each reachability added unmanipulate aas file</span>
+	<span style="color: #0000ff;">int</span> numReach = reachabilities.<span style="color: #00aabb;">Num</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>;
+	
+	<span style="color: #0000ff;">for</span> <span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">int</span> i = <span style="color: #0000dd;">0</span>; i &lt; numReach; i++ <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+		idReachability *r = reachabilities<span style="color: #000000;">&#91;</span> i <span style="color: #000000;">&#93;</span>;
+		<span style="color: #339900;">// remove this reach from the list - reaches are added to end of the reach list so 0 represents no other reach in list</span>
+		<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> r-&gt;number &gt; <span style="color: #0000dd;">0</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+			aas-&gt;GetAreaReachability<span style="color: #000000;">&#40;</span> r-&gt;fromAreaNum, r-&gt;number - <span style="color: #0000dd;">1</span> <span style="color: #000000;">&#41;</span>-&gt;next = r-&gt;next;
+			<span style="color: #339900;">// removing the reach from the list above f's up the reach numbers - renumber now so if 2 reaches were added the next one through works</span>
+			<span style="color: #0000ff;">int</span> j = <span style="color: #0000dd;">0</span>;
+			<span style="color: #0000ff;">for</span> <span style="color: #000000;">&#40;</span> idReachability *reach = file-&gt;areas<span style="color: #000000;">&#91;</span>r-&gt;fromAreaNum<span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">reach</span>; reach; reach = reach-&gt;next, j++ <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+				reach-&gt;number = j;
+			<span style="color: #000000;">&#125;</span>
+		<span style="color: #000000;">&#125;</span> 
+		<span style="color: #0000ff;">else</span> <span style="color: #000000;">&#123;</span>
+			<span style="color: #339900;">// only one in list - tell area list is now empty</span>
+			file-&gt;areas<span style="color: #000000;">&#91;</span>r-&gt;fromAreaNum<span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">reach</span> = <span style="color: #0000ff;">NULL</span>;
+		<span style="color: #000000;">&#125;</span>
+		
+		<span style="color: #339900;">// rev_reach has no numbers</span>
+		<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> r == file-&gt;areas<span style="color: #000000;">&#91;</span>r-&gt;toAreaNum<span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">rev_reach</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+			<span style="color: #339900;">// only one in list, tell area</span>
+			file-&gt;areas<span style="color: #000000;">&#91;</span>r-&gt;toAreaNum<span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">rev_reach</span> = <span style="color: #0000ff;">NULL</span>;
+		<span style="color: #000000;">&#125;</span>
+		<span style="color: #0000ff;">else</span> <span style="color: #000000;">&#123;</span>
+			<span style="color: #339900;">// have to find the reach before me</span>
+			<span style="color: #0000ff;">for</span> <span style="color: #000000;">&#40;</span> idReachability *rev = file-&gt;areas<span style="color: #000000;">&#91;</span>r-&gt;toAreaNum<span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">rev_reach</span>; rev; rev = rev-&gt;rev_next <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+				<span style="color: #339900;">// if the next reach pointer points to the same thing i do? </span>
+				<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> r == rev-&gt;rev_next <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+					rev-&gt;rev_next = r-&gt;rev_next;
+					<span style="color: #0000ff;">break</span>;
+				<span style="color: #000000;">&#125;</span>
+			<span style="color: #000000;">&#125;</span>	
+		<span style="color: #000000;">&#125;</span>
+	<span style="color: #000000;">&#125;</span>
+	<span style="color: #339900;">// free memory allocated.</span>
+	reachabilities.<span style="color: #00aabb;">DeleteContents</span><span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">true</span> <span style="color: #000000;">&#41;</span>;
+	<span style="color: #0000ff;">file</span> = <span style="color: #0000ff;">NULL</span>;
+	aas = <span style="color: #0000ff;">NULL</span>;
+&nbsp;
+	<span style="color: #339900;">//OutputAASReachInfo( file );	</span>
+<span style="color: #000000;">&#125;</span></pre>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608025104/http://www.modwiki.net/w/index.php?title=Extending_the_Area_Awareness_System&amp;action=edit&amp;section=8" title="Edit section: Source Download and Mod Integration">edit</a>]</div><a name="Source_Download_and_Mod_Integration"></a><h2> Source Download and Mod Integration </h2>
+<p>The source can be downloaded from:
+</p><p><a href="/web/20080608025104/http://home.comcast.net/~matkatamibakundo/bots.src.zip" class='external free' title="http://home.comcast.net/~matkatamibakundo/bots.src.zip">http://home.comcast.net/~matkatamibakundo/bots.src.zip</a>
+</p><p>thanks to chuck at <a href="/web/20080608025104/http://home.comcast.net/~chuckdoodbmx/" class='external free' title="http://home.comcast.net/~chuckdoodbmx/">http://home.comcast.net/~chuckdoodbmx/</a> for hosting&nbsp;;)
+</p><p>To integrate this into your mod you can search for:
+</p>
+<pre>&nbsp;
+<span style="color: #339900;">#ifdef MOD_BOTS // cusTom3 - aas extensions</span></pre>
+<p>Every change necessary was wrapped in with that. After you have the AAS extensions integrated you will need to code the AI logic to use the elevators. The teleporters should just work&nbsp;;). Tinman has sabot using the plats and has scripted the logic necessary. You can check out his source when it is released if you need an example of how to do this.
+</p><p>Here are a couple of routines I knocked out to help with that effort.
+</p>
+<pre>&nbsp;
+<span style="color: #339900; font-style: italic;">/*
+================
+botAi::Event_IsUnderPlat
+================
+*/</span>
+<span style="color: #0000ff;">void</span> botAi::<span style="color: #00aabb;">Event_IsUnderPlat</span><span style="color: #000000;">&#40;</span> idEntity *ent <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+	<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> ent-&gt;IsType<span style="color: #000000;">&#40;</span> idPlat::<span style="color: #00aabb;">Type</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+		idPlat *plat = static_cast&lt;idPlat *&gt;<span style="color: #000000;">&#40;</span>ent<span style="color: #000000;">&#41;</span>;
+		<span style="color: #339900;">// this will represent the volume under the plat</span>
+		idBounds floorToPlat = plat-&gt;GetPhysics<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>-&gt;GetAbsBounds<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>;
+		
+		<span style="color: #339900;">// adjust the mins z value to bottom pos</span>
+		floorToPlat<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">z</span> = plat-&gt;GetPosition1<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">z</span>;  
+		<span style="color: #339900;">// adjust the maxs z value to top of plat minus arbitrary value to get below it  </span>
+		floorToPlat<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">z</span> = plat-&gt;GetPhysics<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>-&gt;GetAbsBounds<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>.<span style="color: #00aabb;">z</span> - <span style="color: #0000dd;">10</span>;
+&nbsp;
+		<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> ai_debugMove.<span style="color: #00aabb;">GetBool</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+        	gameRenderWorld-&gt;DebugBounds<span style="color: #000000;">&#40;</span> colorGreen, floorToPlat, vec3_origin, gameLocal.<span style="color: #00aabb;">msec</span>  <span style="color: #000000;">&#41;</span>;
+		<span style="color: #000000;">&#125;</span>
+		<span style="color: #339900;">// is player inside bounds just created?</span>
+		<span style="color: #0000ff;">bool</span> under =  floorToPlat.<span style="color: #00aabb;">IntersectsBounds</span><span style="color: #000000;">&#40;</span> physicsObject-&gt;GetAbsBounds<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span>;
+		<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> under &amp;&amp; ai_debugMove.<span style="color: #00aabb;">GetBool</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+			gameRenderWorld-&gt;DebugBounds<span style="color: #000000;">&#40;</span> colorYellow, physicsObject-&gt;GetAbsBounds<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>, vec3_origin, gameLocal.<span style="color: #00aabb;">msec</span>  <span style="color: #000000;">&#41;</span>;
+			<span style="color: #339900;">// Event_GetWaitPosition( ent ); was testing it, lol here only for visuals</span>
+		<span style="color: #000000;">&#125;</span>
+		idThread::<span style="color: #00aabb;">ReturnInt</span><span style="color: #000000;">&#40;</span> under <span style="color: #000000;">&#41;</span>;
+		<span style="color: #0000ff;">return</span>;
+	<span style="color: #000000;">&#125;</span>
+	idThread::<span style="color: #00aabb;">ReturnInt</span><span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">false</span> <span style="color: #000000;">&#41;</span>;
+<span style="color: #000000;">&#125;</span>
+&nbsp;
+&nbsp;
+<span style="color: #339900; font-style: italic;">/*
+================
+botAi::Event_GetWaitPosition
+&nbsp;
+Find a position out from under plat
+cusTom3 had this funny idea to draw a picture for the search arrays&nbsp;;)
+&nbsp;
+	4-----1-----5
+	|	    |			
+	|	    |		|
+	0	    2		|Y
+	|	    |		|____
+	|	    |			X
+	7-----3-----6
+================
+*/</span>
+<span style="color: #0000ff;">void</span> botAi::<span style="color: #00aabb;">Event_GetWaitPosition</span><span style="color: #000000;">&#40;</span> idEntity *ent <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+	idVec3 result = physicsObject-&gt;GetOrigin<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>;
+&nbsp;
+	<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> ent-&gt;IsType<span style="color: #000000;">&#40;</span> idPlat::<span style="color: #00aabb;">Type</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+		idPlat *plat = static_cast&lt;idPlat *&gt;<span style="color: #000000;">&#40;</span>ent<span style="color: #000000;">&#41;</span>;
+		
+		<span style="color: #339900;">// expand 24 for player bounding box and another 6 to get out past it</span>
+		idBounds bounds = plat-&gt;GetPhysics<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>-&gt;GetAbsBounds<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">Expand</span><span style="color: #000000;">&#40;</span> <span style="color: #0000dd;">30</span> <span style="color: #000000;">&#41;</span>;
+&nbsp;
+		<span style="color: #339900;">// rotate around the bounds looking for good spot to wait for plat</span>
+		idVec3 center = bounds.<span style="color: #00aabb;">GetCenter</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>;
+		<span style="color: #0000ff;">float</span> x<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">8</span><span style="color: #000000;">&#93;</span>, y<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">8</span><span style="color: #000000;">&#93;</span>, z;
+		x<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span> = bounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>; x<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span> = center<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>; x<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">2</span><span style="color: #000000;">&#93;</span> = bounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>; x<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">3</span><span style="color: #000000;">&#93;</span> = center<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>;
+		x<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">4</span><span style="color: #000000;">&#93;</span> = bounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>; x<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">5</span><span style="color: #000000;">&#93;</span> = bounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>; x<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">6</span><span style="color: #000000;">&#93;</span> = bounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>; x<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">7</span><span style="color: #000000;">&#93;</span> = bounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span>;
+		y<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span> = center<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>; y<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span> = bounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>; y<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">2</span><span style="color: #000000;">&#93;</span> = center<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>; y<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">3</span><span style="color: #000000;">&#93;</span> = bounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>;
+		y<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">4</span><span style="color: #000000;">&#93;</span> = bounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>; y<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">5</span><span style="color: #000000;">&#93;</span> = bounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>; y<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">6</span><span style="color: #000000;">&#93;</span> = bounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>; y<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">7</span><span style="color: #000000;">&#93;</span> = bounds<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span><span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>;
+		z = playerEnt-&gt;GetEyePosition<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">z</span>; <span style="color: #339900;">// not sure what z value would be good, trying eye level</span>
+		
+		idVec3 search;
+		<span style="color: #0000ff;">float</span> closest = idMath::<span style="color: #00aabb;">INFINITY</span>; <span style="color: #339900;">// biger than big</span>
+		<span style="color: #0000ff;">for</span> <span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">int</span> i = <span style="color: #0000dd;">0</span>; i &lt; <span style="color: #0000dd;">8</span>; i++ <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+			search<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">0</span><span style="color: #000000;">&#93;</span> = x<span style="color: #000000;">&#91;</span>i<span style="color: #000000;">&#93;</span>;
+			search<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span> = y<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">1</span><span style="color: #000000;">&#93;</span>;
+			search<span style="color: #000000;">&#91;</span><span style="color: #0000dd;">2</span><span style="color: #000000;">&#93;</span> = z;
+			<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> PointReachableAreaNum<span style="color: #000000;">&#40;</span> search <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+				<span style="color: #339900;">// found a reachable spot, if it is closer than the last one we found use it instead</span>
+				<span style="color: #0000ff;">float</span> distance = <span style="color: #000000;">&#40;</span> search - physicsObject-&gt;GetOrigin<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span>.<span style="color: #00aabb;">LengthSqr</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>;
+				<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> distance &lt; closest <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+					closest = distance;
+					result = search;
+				<span style="color: #000000;">&#125;</span>
+			<span style="color: #000000;">&#125;</span>
+		<span style="color: #000000;">&#125;</span>
+	<span style="color: #000000;">&#125;</span>
+	<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> ai_debugMove.<span style="color: #00aabb;">GetBool</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+		gameRenderWorld-&gt;DebugArrow<span style="color: #000000;">&#40;</span> colorCyan, physicsObject-&gt;GetOrigin<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>, result, <span style="color: #0000dd;">1</span><span style="color: #000000;">&#41;</span>;
+	<span style="color: #000000;">&#125;</span>
+	idThread::<span style="color: #00aabb;">ReturnVector</span><span style="color: #000000;">&#40;</span> result <span style="color: #000000;">&#41;</span>;
+<span style="color: #000000;">&#125;</span></pre>
+<p><b> Side Note: </b>
+The modifications have been made to the game-d3xp project so that bots will be able to run in vanilla d3 and roe expansion pack installs. Many modifications to the source were necessary to make the d3xp project buildable and functional without _D3XP and _CTF defined. If you would like to use these changes as well extract the zip over a clean 1.3 sdk src folder and open the bot.sln you should be good to go.
+</p><p>if you have any questions feel free to ask them up on d3w&nbsp;;)
+</p><div class="printfooter">
+Retrieved from "<a href="/web/20080608025104/http://www.modwiki.net/wiki/Extending_the_Area_Awareness_System">http://www.modwiki.net/wiki/Extending_the_Area_Awareness_System</a>"</div>
+			<div id="catlinks"><p class='catlinks'><a href="/web/20080608025104/http://www.modwiki.net/w/index.php?title=Special:Categories&amp;article=Extending_the_Area_Awareness_System" title="Special:Categories">Category</a>: <span dir='ltr'><a href="/web/20080608025104/http://www.modwiki.net/wiki/Category:Coding" title="Category:Coding">Coding</a></span><br /><hr /><a href="/web/20080608025104/http://www.modwiki.net/wiki/Category:Modwiki" title="Category:Modwiki">Modwiki</a> &gt; <a href="/web/20080608025104/http://www.modwiki.net/wiki/Category:Coding" title="Category:Coding">Coding</a></p></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Extending_the_Area_Awareness_System">Article</a></li>
+				 <li id="ca-talk" class="new"><a href="/web/20080608025104/http://www.modwiki.net/w/index.php?title=Talk:Extending_the_Area_Awareness_System&amp;action=edit">Discussion</a></li>
+				 <li id="ca-edit"><a href="/web/20080608025104/http://www.modwiki.net/w/index.php?title=Extending_the_Area_Awareness_System&amp;action=edit">Edit</a></li>
+				 <li id="ca-history"><a href="/web/20080608025104/http://www.modwiki.net/w/index.php?title=Extending_the_Area_Awareness_System&amp;action=history">History</a></li>
+		</ul>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/web/20080608025104/http://www.modwiki.net/w/index.php?title=Special:Userlogin&amp;returnto=Extending_the_Area_Awareness_System">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/web/20080608025104im_/http://www.modwiki.net/wiki/upload/wiki.png);" href="/web/20080608025104/http://www.modwiki.net/wiki/Main_Page" title="Main Page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class='portlet' id='p-Main'>
+		<h5>Main</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Main_Page">Main Page</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 4'>
+		<h5>id Tech 4</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Doom-3"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Doom_3">Doom 3</a></li>
+				<li id="n-Quake-4"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Quake_4">Quake 4</a></li>
+				<li id="n-Prey"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Prey">Prey</a></li>
+				<li id="n-ETQW"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Enemy_Territory:_Quake_Wars">ETQW</a></li>
+				<li id="n-RTCW-2"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Return_to_Castle_Wolfenstein_2">RTCW 2</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 5'>
+		<h5>id Tech 5</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Rage"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Rage">Rage</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Quick Links'>
+		<h5>Quick Links</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Console"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Console">Console</a></li>
+				<li id="n-Script-Events"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Scripting">Script Events</a></li>
+				<li id="n-Material-Keywords"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Material_%28decl%29">Material Keywords</a></li>
+				<li id="n-Modification-List"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Modlist">Modification List</a></li>
+				<li id="n-Tutorial-List"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Tutorial_list">Tutorial List</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Wiki'>
+		<h5>Wiki</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Open-tasks"><a href="/web/20080608025104/http://www.modwiki.net/wiki/modwiki:Open_tasks">Open tasks</a></li>
+				<li id="n-recentchanges"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Special:Recentchanges">Recent changes</a></li>
+				<li id="n-Style-guide"><a href="/web/20080608025104/http://www.modwiki.net/wiki/modwiki:Style_guide">Style guide</a></li>
+				<li id="n-help"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Help:Contents">Help</a></li>
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/web/20080608025104/http://www.modwiki.net/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" value="Search" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Special:Whatlinkshere/Extending_the_Area_Awareness_System">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Special:Recentchangeslinked/Extending_the_Area_Awareness_System">Related changes</a></li>
+<li id="t-upload"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Special:Upload">Upload file</a></li>
+<li id="t-specialpages"><a href="/web/20080608025104/http://www.modwiki.net/wiki/Special:Specialpages">Special pages</a></li>
+				<li id="t-print"><a href="/web/20080608025104/http://www.modwiki.net/w/index.php?title=Extending_the_Area_Awareness_System&amp;printable=yes">Printable version</a></li>				<li id="t-permalink"><a href="/web/20080608025104/http://www.modwiki.net/w/index.php?title=Extending_the_Area_Awareness_System&amp;oldid=2789">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="/web/20080608025104/http://www.mediawiki.org/"><img src="/web/20080608025104im_/http://www.modwiki.net/w/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="/web/20080608025104/http://www.gnu.org/copyleft/fdl.html"><img src="/web/20080608025104im_/http://www.modwiki.net/w/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+				<li id="lastmod"> This page was last modified 05:01, 1 October 2005.</li>
+				<li id="copyright">Content is available under <a href="/web/20080608025104/http://www.gnu.org/copyleft/fdl.html" class='external ' title="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.2</a>.</li>
+				<li id="privacy"><a href="/web/20080608025104/http://www.modwiki.net/wiki/modwiki:Privacy_policy" title="modwiki:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="/web/20080608025104/http://www.modwiki.net/wiki/modwiki:About" title="modwiki:About">About modwiki</a></li>
+				<li id="disclaimer"><a href="/web/20080608025104/http://www.modwiki.net/wiki/modwiki:General_disclaimer" title="modwiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+	<script type="text/javascript"> if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+<!-- Served by h982484 in 1.56 secs. -->
+</body></html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 2:51:04 Jun 8, 2008 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 4:02:08 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

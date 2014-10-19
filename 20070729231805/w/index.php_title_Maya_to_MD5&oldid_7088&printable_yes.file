@@ -1,0 +1,614 @@
+DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex,nofollow" />
+<meta name="keywords" content="Maya to MD5,Rich" />
+<link rel="shortcut icon" href="/web/20070729231805im_/http://www.modwiki.net/favicon.ico" />
+<link title="Creative Commons" type="application/rdf+xml" href="/w/index.php?title=Maya_to_MD5&amp;action=creativecommons" rel="meta" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<title>Maya to MD5 - modwiki</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20070729231805cs_/http://www.modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css"  href="/web/20070729231805cs_/http://www.modwiki.net/w/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/w/skins/monobook/IE70Fixes.css?1";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
+		<script type="text/javascript" src="/web/20070729231805js_/http://www.modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20070729231805js_/http://www.modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/web/20070729231805cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231805cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231805cs_/http://www.modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns-0 ltr">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app0.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/www.modwiki.net\/w\/index.php?title=Maya_to_MD5&oldid=7088&printable=yes";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "29";
+var displayMonth = "Jul";
+var displayYear = "2007";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;oldid=7088&amp;printable=yes" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20070729231805" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jun
+                       
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 23:18:05 Jul 29, 2007">JUL</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Aug
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_prv_off.png" alt="Previous capture" width="14" height="16" border="0" />
+                       
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 23:18:05 Jul 29, 2007">29</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2006
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 23:18:05 Jul 29, 2007">2007</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2008
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20070729231805*/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;oldid=7088&amp;printable=yes" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>1 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">29 Jul 07 - 29 Jul 07</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:6:000000100000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000_2014:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">Maya to MD5</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From modwiki</h3>
+			<div id="contentSub">Revision as of 22:50, 26 January 2007; <a href="/web/20070729231805/http://www.modwiki.net/wiki/Maya_to_MD5" title="Maya to MD5">Current revision</a><br /><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;direction=prev&amp;oldid=7088" title="Maya to MD5">?Older revision</a> | <a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;direction=next&amp;oldid=7088" title="Maya to MD5">Newer revision→</a></div>
+									<div id="jump-to-nav">Jump to: <a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;oldid=7088&amp;printable=yes#column-one">navigation</a>, <a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;oldid=7088&amp;printable=yes#searchInput">search</a></div>			<!-- start content -->
+			<p><i>At present this is pretty much a straight port of Goliath's PDF tutorial. It's the most concise document that I know of that details the process and should prove relatively easy to integrate into the wiki.</i>
+</p><p><i>I'll be stripping, revising, and moving information from this article throughout the wiki over the course of the next few days. I welcome any assistance on this. The general idea is to document everything there is to know about the conversion process and omit everything that bears relation to the task of modelling and texturing as that information is covered here in it's appropriate sections. The only exception is when that information has an impact on the conversion process in which case it should be condensed into a note.</i>
+</p><p>--<a href="/web/20070729231805/http://www.modwiki.net/wiki/User:Rich" title="User:Rich">Rich</a> 23:17, 26 January 2007 (CET)
+</p>
+<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class='toclevel-1'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;oldid=7088&amp;printable=yes#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;oldid=7088&amp;printable=yes#Setup_and_Assumptions"><span class="tocnumber">2</span> <span class="toctext">Setup and Assumptions</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;oldid=7088&amp;printable=yes#Utilities"><span class="tocnumber">3</span> <span class="toctext">Utilities</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;oldid=7088&amp;printable=yes#Setting_up_Maya_and_Doom3"><span class="tocnumber">4</span> <span class="toctext">Setting up Maya and Doom3</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;oldid=7088&amp;printable=yes#Avoiding_Export_Errors"><span class="tocnumber">4.1</span> <span class="toctext">Avoiding Export Errors</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;oldid=7088&amp;printable=yes#Doom3_Materials"><span class="tocnumber">5</span> <span class="toctext">Doom3 Materials</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;oldid=7088&amp;printable=yes#Doom3_Entities"><span class="tocnumber">6</span> <span class="toctext">Doom3 Entities</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;oldid=7088&amp;printable=yes#My_Buddy"><span class="tocnumber">7</span> <span class="toctext">My Buddy</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;oldid=7088&amp;printable=yes#UV_Maps.2C_The_Crappy_Way"><span class="tocnumber">8</span> <span class="toctext">UV Maps, The Crappy Way</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;oldid=7088&amp;printable=yes#In_Living_Color"><span class="tocnumber">9</span> <span class="toctext">In Living Color</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;oldid=7088&amp;printable=yes#Hypershade"><span class="tocnumber">9.1</span> <span class="toctext">Hypershade</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;oldid=7088&amp;printable=yes#Raw_Materials"><span class="tocnumber">10</span> <span class="toctext">Raw Materials</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;oldid=7088&amp;printable=yes#Finally.21"><span class="tocnumber">11</span> <span class="toctext">Finally!</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;oldid=7088&amp;printable=yes#Troubleshooting"><span class="tocnumber">12</span> <span class="toctext">Troubleshooting</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;oldid=7088&amp;printable=yes#MD5_Export_Failure"><span class="tocnumber">12.1</span> <span class="toctext">MD5 Export Failure</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;oldid=7088&amp;printable=yes#Model_Appears.2C_But_Uses_Ugly_.E2.80.9CDefault.E2.80.9D_Texture_and_Lighting_Is_Incorrect"><span class="tocnumber">12.2</span> <span class="toctext">Model Appears, But Uses Ugly “Default” Texture and Lighting Is Incorrect</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="Introduction"></a><h2>Introduction</h2>
+<p>I’ve just finished banging my head against a wall and, with the few brain cells remaining, have figured out how to get animated models into Doom3 with their proper textures applied using Maya. To save you time, energy, aspirin, and band-aids, here’s a quick tutorial on the process. This tutorial covers the following:
+</p>
+<ul><li> The basics of creating a UV map in Maya.
+</li><li> Creating a (crappy) normal map, specular map and diffuse map.
+</li><li> Using Maya’s Hypershade to properly apply the textures so that your animated model is textured and lit correctly in Doom3.
+</li></ul>
+<a name="Setup_and_Assumptions"></a><h2>Setup and Assumptions</h2>
+<p>This tutorial assumes the following:
+</p>
+<ul><li> You have Maya 4.5, 5.0 or 6.0. You must have one of these Maya versions in order to export your Maya models/animations into D3’s md5 mesh/anim formats using the exportmodels commands. If you have a different brand of 3D app, check out Doom3World.org to see if someone has created an export utility for your specific software.
+</li><li> You know how to model. If you don’t, this tutorial can still be followed if you open up Maya and create a polygon cube… there’s your model =). Otherwise, I suggest checking out SimplyMaya.Com and 3DBuzz.Com for some excellent video tutorials on how to model and animate with Maya.
+</li></ul>
+<a name="Utilities"></a><h2>Utilities</h2>
+<ul><li> ATI NormalMapper and NormalMapperUI Note that Doom3 can also render Normal maps via its renderbump function. However, it requires some extra material file editing and may cause problems for some. To avoid any complications, ATI’s utility will be used. Download and install the software according to the instructions. Then, open Maya and register and activate the plug-in that came with the ATI utlity that corresponds to your Maya version: Maya45NMFExport.mll is used for Maya 4.5, Maya50NMFExport.mll is used for Maya 5.0, etc.
+</li></ul>
+<a name="Setting_up_Maya_and_Doom3"></a><h2>Setting up Maya and Doom3</h2>
+<a name="Avoiding_Export_Errors"></a><h3>Avoiding Export Errors</h3>
+<p>If you’re having trouble being able to export your .mb or .ma files, here are a few pointers on getting Doom3 and Maya to play together.
+</p><p>First, make sure you have the right MayaImportx86.dll file. There is one file for each version of Maya (4.5, 5 and 6). Visit iddevnet.com to get the version you that corresponds to your Maya version.
+</p>
+<ul><li> <a href="/web/20070729231805/http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya45.zip" class='external free' title="http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya45.zip">http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya45.zip</a>
+</li><li> <a href="/web/20070729231805/http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya50.zip" class='external free' title="http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya50.zip">http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya50.zip</a>
+</li><li> <a href="/web/20070729231805/http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya60.zip" class='external free' title="http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya60.zip">http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya60.zip</a>
+</li></ul>
+<p>Second, make sure the Maya binary directory is added to your system path. This is done by default when installing Maya, but if it’s not, D3 will not know where to find the appropriate Maya files it needs to run the export routine when it creates MD5 files. In Windows XP, you can check this by:
+</p><p>Right-clicking on <i>My Computer</i> OR <i>Start Menu</i> ► <i>Control Panel</i> ► <i>Settings</i> ► <i>System</i>. This brings you to <i>System Properties</i>. Next, click on the <i>Advanced</i> tab. At the bottom of this dialog box, click the <i>Environment Variables</i> button. Under <i>System Variables</i>, highlight the <i>PATH</i> variable. Click Edit.
+</p><p>Make sure the variable value contains path information about your Maya installation. If this information is not here at all, you can add to the end of the path variable manually. First, type a semicolon (each PATH item is separated by a semi-colon) and then add the full path to the Maya binary directory.
+</p><p>Maya 4.5 and 5.0:
+</p>
+<pre>C:\path-to-your-Maya-installation\bin
+</pre>
+<p>Maya 6.0:
+</p>
+<pre>C:\path-to-your-Maya-6.0-installation\
+</pre>
+<p>Note the lack of the “bin” directory.
+</p>
+<a name="Doom3_Materials"></a><h2>Doom3 Materials</h2>
+<p>Doom3 gets its normal map, diffuse map, specular and any other shader-related information from material files. You’ll need to create one in order to bring everything together, although the specifics of material files and how they work are beyond the scope of this tutorial. Here’s a sample that you can use if you’re not familiar with them. Simply copy and paste the following text into a plaintext file called buddy.mtr and place it in your doom3/aolbuddy/materials folder.
+</p>
+<pre>// AOhelL Buddy Material File
+models/monsters/buddy/buddy
+{
+bumpmap models/monsters/buddy/buddy_local.tga
+diffusemap models/monsters/buddy/buddy.tga
+specularmap models/monsters/buddy/buddy_s.tga
+}
+</pre>
+<a name="Doom3_Entities"></a><h2>Doom3 Entities</h2>
+<p>Every monster, every light, every model you toss into doom is an entity. Since we’re going to be making an animated model that could possibly be used as a monster (“AOLinvaders?”, “AOLiens?” “Doom3, The Shores of AOhelL?”), we’ll also need to make our model into an entity. Here are the very basics for how to do this. A lot more can be done to give your model some additional functionality, but that’s beyond the scope of this tutorial.
+First, create a plaintext file called “buddy.def” and place it in the doom3/aolbuddy/def directory.
+Copy and paste the following into your buddy.def file:
+</p>
+<pre>// AOhelL Buddy Entity
+export buddy {
+options –game aolbuddy -sourcedir models/monsters/buddy/cycles -destdir models/md5/monsters/buddy
+mesh buddy_idle.mb -dest buddy
+anim buddy_idle.mb
+}
+// buddy model def
+model monster_buddy {
+mesh models/md5/monsters/buddy/buddy.md5mesh
+anim idle models/md5/monsters/buddy/buddy_idle.md5anim
+}
+// buddy entity def
+entityDef monster_buddy {
+"inherit" "monster_default"
+"scriptobject" "monster_zombie"
+// we’re not covering creating a new ai script file,
+// so just use the default zombie one for now...
+"model" "monster_buddy"
+"size" "32 32 68"
+"use_aas" "aas48"
+"team" "1"
+"rank" "0"
+"health" "25"
+// the values (upper_back, etc.) correspond to bone names
+// within your model. Use the asterisks (*) to specify
+// all child bones below the specified bone. Or, use
+// a minus and asterisks (-*) to specify a range of
+// bones NOT to include
+"damage_zone head" "*upper_back"
+"damage_zone chest" "*mid_back -*upper_back"
+"damage_zone left_arm" "*l_shoulderblade"
+"damage_zone right_arm" "*r_shoulderblade"
+"damage_zone legs" "*hip origin pelvis"
+"damage_scale head" "2"
+"anim" "idle"
+"mass" "50"
+}
+// EOF
+</pre>
+<p>Okay, this file warrants some explanation. First, we have the export directive, which tells Doom3 to try to create mesh and anim files if they don’t already exist. Any and all options are… well, optional. However, the –sourcedir and –destdir options are helpful for keeping your files organized. Next, the format of the export line is fairly self-explanatory, but here’s a quick overview of the syntax (the –dest parameter is optional):
+</p>
+<pre>&lt;exportType&gt; &lt;mayaModelOrAnim&gt; -dest &lt;newNameForMD5MeshOrAnim&gt;
+</pre>
+<p>In this example, when the export completes successfully, Doom3 will create two files: buddy.md5mesh and buddy_idle.md5anim. The mesh is given the filename “buddy” instead of “buddy_idle” by using the –dest parameter.
+</p><p>Next, we have the model definition. In it, we specify the mesh and animation names, and pair them with the corresponding .md5mesh and .md5anim files. The names given here are what you will use to refer to animations within the editor or elsewhere. In other words, your animation names recognized by Doom3 don’t necessarily have to be the same as your filenames. You can also use curly braces { . . . } after the path to your md5anim file to insert code that specifies events that should happen on particular frames of an animation. For example, if a monster should attack on the 16th frame of a melee_attack animation in order to cause damage at the exact frame in an animation that shows the monster’s arm outstretched in a punch, you can include that information here. Read through some other monster def files to see how this is done or to learn about this feature in more detail. This method also works to specify the animation frames when footstep sounds should be played, script functions should be called, etc.
+</p><p>And finally, we have the entity definition. Now, defining our AOhelL guy as an entity isn’t actually required in order to be able to test the model. However, these few additional lines will allow us to add an army of AOheL Buddies to a map via the map editor. Of course, again, this is a very stripped down entity, and it won’t have the brains to do much. In fact, all it will do is get the model into the game, stand there, and face you when you’re close enough.
+</p><p>That does it for all of the various text files needed. Now on to the fun stuff!
+</p>
+<a name="My_Buddy"></a><h2>My Buddy</h2>
+<p>The AOhelL Buddy can be made really easily. Basically, my version is a squashed poly cylinder for the head with a poly cube that has been beveled at the shoulders and extruded for the appendages. I kept it very simple for the purposes of this tutorial. If you want to see a quick visual overview of how Buddy was made, check the Appendix. Here’s Buddy, bones and all (without the origin):
+</p><p><br />
+For a great tutorial on skeleton setups, check out Building a Walk Cycle in Maya by Shawne Baines.
+</p><p>Three final steps before we move on: First, Doom3 works with Triangles. Our model here is in Quads. So, for compatibility’s sake, make sure to Triangulate your model. Select the head and the body and click Polygons ►Triangulate.
+</p><p>Second, make sure you have one final bone located at the model’s base. Think of this bone as something that will drag on the ground as the model moves around. Now rename this bone origin and make the parent/root bone of the entire hierarchy. Doom3 will use this for positional reference when animating the model. Note that we have NOT bound any bones to our model yet!
+</p><p>And third, select the head, then select the body and press P to parent the head to the body. That way, our Buddy won’t lose his head….
+</p>
+<a name="UV_Maps.2C_The_Crappy_Way"></a><h2>UV Maps, The Crappy Way</h2>
+<p>So now that we have our model built, boned and triangulated, so let’s add some color to it. Before we can do that, however, we need to create a UV map for our model. I’m going to take the easy way out in this tutorial, considering how simple our model is and that UV mapping is not the point of this tutorial. Therefore, I’ll just use Maya’s automatic mapping function. Select both the head and body:
+</p><p>Edit Polygons ► Texture ► Automatic Mapping (Options)
+In Options Panel: Spacing Presets: 1024 Map
+</p><p>This will create a UV map that will look quite disgusting. Opening the UV Texture Editor will allow you to view your UV mess… er map. Make sure both the head and body of Buddy are selected.
+</p><p>Window ► UV Texture Editor
+</p><p>If you don’t see anything but a blank graph, you either don’t have any objects selected or you didn’t create a UV map. Otherwise, you should see a nice jumble of lines. Now, as for the easy way out, I’m going to just resize the UVs so everything fits nicely. Normally, though, you would spend quite a lot of time refining your UV maps so they would be useful in a 2D paint program. Also, in a more complex model, simply scaling down the UV map is really not a good idea, as quite a lot of detail will be lost when it’s projected onto your model. Anyway, here as a before and after shot:
+</p><p>Original UV Map
+</p><p>UV Map Reorganized
+</p><p>Note: You can manipulate UVs by selecting an object, which will make its UVs appear in the UV Texture Editor. Then you can right-click over the UVs and choose UV from the Marking Menu. This will ensure that you’re editing the UVs and not the geometry itself. Now you can select, move, rotate and scale UVs just like anything else in Maya. Also, when dealing with Uvs, make sure you do NOT go beyond the +0.0 to +1.0 quadrant (upper right) of the graph. Anything outside these bounds will typically mess up what you’re trying to do.
+</p><p>Okay, so now you have a low-poly model with a UV Map. In order to create a Normal map, however, we’re going to need a high-poly version. Again, glossing over things for the sake of sticking to the point of the tutorial, all I did to create a “high-poly” model was to Polygons ► Smooth out the head portion of the Buddy model. Yup, it’s lame-tastic!
+</p><p>Now File ► Export your high- and low-poly models to the .nmf format (*.nmf should be listed in the file types as long as you’ve correctly installed the NMF plug-in that came with the ATI NormalMapper utility).
+</p><p>Now, open ATI’s NormalMapperUI. If it’s your first time running it, it will ask you to find the NormalMapper executable. Once that step is competed, you’ll be presented with the GUI. Under 3D Data Files, browse and locate your low- and high-poly models. Under Output File, set your Output Path to doom3/aolbuddy/models/monsters/buddy. Name the file buddy_local.tga. Under Antialiasing Amount, adjust the slider two ticks from the left (or at least so that it is not set on min). Click Create Normal Map. You should see a command prompt open and the utility will run. Once it is finished (or while it’s running) we need to make 3 more images. Open up Photoshop or your favorite image editor and create one 512x512 image with RGB 128, 128, 128. This is our specular map. Name this file buddy_s.tga and put it in your doom3/aolbuddy/models/monsters/buddy directory. Again, create a 512x512 image, but this time use RGB 237, 207, 43 and name the file buddy.tga, saving it to your doom3/aolbuddy/models/monsters/buddy directory. This is our diffuse map. If you want, you can get a bit more creative than just a bright, solid yellow color. Feel free to go wild with Photoshop or whatever utility you choose to create a detailed diffuse map. My favorite is DeepPaint 3D from Right Hemisphere. You now have all of the materials mentioned in the buddy.mtr file plus the buddy.tga. So, now we’re finally to the point of this whole tutorial… slapping all of this stuff together.
+</p>
+<a name="In_Living_Color"></a><h2>In Living Color</h2>
+<a name="Hypershade"></a><h3>Hypershade</h3>
+<p>Color, textures and shaders are all handled in Maya by the Hypershade utility. When you first start using it, it may be a little… mysterious. But, like most things in Maya, once you get a handle on it, it makes a whole lot of sense... hopefully. So let’s open the Hypershade:
+</p><p>Window ►Rendering Editors ► Hypershade
+</p><p>By default, Maya creates a lambert, a particleCloud and a shaderGlow material. Don’t remove or modify these, as they handle how newly created objects appear. You have been warned. The Hypershade is split into two main windows. On top are the elements that currently exist. On the bottom is your work area. Any single item that is being worked on will often exist in both places, so don’t get confused thinking you have multiple copies of everything. Also, as with most areas in Maya, the pan, zoom, etc. functions work just like they do elsewhere.
+</p>
+<a name="Raw_Materials"></a><h2>Raw Materials</h2>
+<p>First, we need to create a material… and by the way, this is the important part of the tutorial.
+</p><p>Click Create ► Materials ► Lambert
+</p><p>This will add lambert1 to the top and bottom sections of the Hypershade window. You can rename this material by holding CTRL + double-clicking on its name. I renamed mine “buddy” because I’m so amazingly witty. Double-click the new Lambert material to open the Attribute Editor. Under Lambert Attributes, click the input (checkered) box to the right of Color. This will open a new window, Create Render Node. Under 2D Textures, make sure that the “Normal” radio button is selected. Now click File. Ensure that the Filter Type is “Quadraic. Now, for Image Name, browse to your buddy.tga file and select it. Close the Attribute Editor.
+</p><p>Accoridng to iddevnet.com, Doom3 gets its material information from the “Diffuse” channel and not the “Color’ channel. However, I’ve tested it, and it does seem to work if you just fill out the Color channel information, like we did above. If you have problems, follow the steps above but use the Diffuse channel instead of Color.
+</p><p>Now that our material has been created, we just simply need to apply it to our model. Keeping the Hypershade window open, select the Buddy model pieces (head and body). Now, right-click on the buddy material we’ve created and choose “Apply Material to Selection”. The Buddy model should turn the same shade of yellow as the buddy material, indicating that the material has been applied.
+</p>
+<a name="Finally.21"></a><h2>Finally!</h2>
+<p>And, finally… we get to perform the last steps to actually getting this sucker into Doom3. First, we have to take care of a few compatibility issues regarding Doom3 model and animation exports. Select the Buddy model. Now:
+</p><p>Modify ► Freeze Transformations
+</p><p>And: Edit ► Delete By Type ► History
+</p><p>So again, make sure you have triangulated your mesh, performed Freeze Transformations, and then deleted the history. Without doing these three things in that order, your export will likely fail.
+</p><p>The last step in creating an animated model is to bind our bones to our model. Select the Buddy model and all of the bones. Then choose:
+</p><p>Skin ► Bind Skin ► Smooth Bind
+</p><p>Save the file as buddy_idle.mb in your doom3/aolbuddy/models/monsters/buddy directory.
+</p><p>A quick note about special bones and animated characters in Doom3: The origin bone should the root of your model. Check out any Doom3 monster in a model viewer that allows you to view bones to see how this should be done or open up a map with a monster in it and use the r_showSkel 1 console command to view the bone structure and names.
+</p><p>And now, the moment you’ve probably fallen asleep waiting to get to, reading through this long-assed tutorial… start Doom3 and run...
+</p>
+<pre>exportModels monster_buddy.def
+</pre>
+<p>...in the console. If all goes well, your model will be exported to the MD5 format, giving you a buddy.md5mesh and a buddy_idle.md5anim file. Since we used the –game option in our export definition, the shader path in the mesh that points to the Doom3 material information should be correct.
+</p><p>You can check for and/or fix this manually if you open up your md5mesh in a text editor and look for these lines (they should be just below your list of joints):
+</p>
+<pre>mesh {
+ // meshes: headshape, bodyshape
+shader "models/monsters/buddy/buddy"
+...
+}
+</pre>
+<p>Note how this shader “…” value in your mesh is the same as the first line in your buddy.mtr file. This is how Doom3 references the resources listed in the .mtr file with your model. If you have the same shader value as above, close the .md5mesh without making any changes. Otherwise, edit the shader value to match what is shown here.
+</p><p>To test your new creation, type reloadModels in the console and then load a map. Next, look up slightly so your Buddy doesn’t get created in the floor (or type “centerview” in the console). Now, bring down the console and type:
+</p>
+<pre>testmodel monster_buddy
+</pre>
+<p>You should see your brand new Buddy appear in all of his glory. He should be properly lit/shadowed and colored, too. If you happened to animate your model (I didn’t discuss it at all in the tutorial), you can cycle through your animations by typing “nextanim” in the console.
+</p><p>That’s about it for this tutorial. Read further for a few troubleshooting tips. I hope this tutorial helped make the whole process of getting an animated character into Doom3 a bit easier.
+</p><p>Good luck and happy modding!
+</p>
+<a name="Troubleshooting"></a><h2>Troubleshooting</h2>
+<p>If something doesn’t work correctly, here are a few things to check:
+</p>
+<a name="MD5_Export_Failure"></a><h3>MD5 Export Failure</h3>
+<p>The errors reported by the export process are fairly good at helping you track down a problem… so:
+</p><p>If D3 mentions something about UVs, you probably don’t have a UV map associated with your low-poly model.
+</p><p>If it says something about too many faces on your object, you probably forgot to triangulate (your model is using quads, which Doom3 can’t read).
+</p><p>If it says something about missing skin clusters, you probably forgot to bind your bones to your model’s skin.
+</p><p>If Doom3 crashes altogether, make sure that you performed a Modify ► Freeze Transformations, then Delete By Type ►History and then bound your bones to your model via Skin ► Bind Skin ► Smooth Bind.
+</p>
+<a name="Model_Appears.2C_But_Uses_Ugly_.E2.80.9CDefault.E2.80.9D_Texture_and_Lighting_Is_Incorrect"></a><h3>Model Appears, But Uses Ugly “Default” Texture and Lighting Is Incorrect</h3>
+<p>Check your material file. Honestly, though, just getting your model into Doom3 is 80% of the battle. In this case, you can also retrace your way through the Hypershade and “Raw Materials” sections of this document. No harm will be done if you completely delete the “buddy” material in Hypershade and start it over… believe me, I had to several times when I was figuring this stuff out.
+Note that Doom3 can be finicky about reloading/refreshing information. If you made changes to your model and they aren’t reflected, you can try one of the many reloadXXXX functions from the console. Or, when in doubt, restart Doom3.
+</p><div class="printfooter">
+Retrieved from "<a href="/web/20070729231805/http://www.modwiki.net/wiki/Maya_to_MD5">http://www.modwiki.net/wiki/Maya_to_MD5</a>"</div>
+						<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Maya_to_MD5">Article</a></li>
+				 <li id="ca-talk"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Talk:Maya_to_MD5">Discussion</a></li>
+				 <li id="ca-edit"><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;action=edit&amp;oldid=7088">Edit</a></li>
+				 <li id="ca-history"><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;action=history">History</a></li>
+		</ul>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Special:Userlogin&amp;returnto=Maya_to_MD5">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/web/20070729231805im_/http://www.modwiki.net/wiki/upload/wiki.png);" href="/web/20070729231805/http://www.modwiki.net/wiki/Main_Page" title="Main Page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class='portlet' id='p-Main'>
+		<h5>Main</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Main_Page">Main Page</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 4'>
+		<h5>id Tech 4</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Doom-3"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Doom_3">Doom 3</a></li>
+				<li id="n-Quake-4"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Quake_4">Quake 4</a></li>
+				<li id="n-Prey"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Prey">Prey</a></li>
+				<li id="n-ETQW"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Enemy_Territory:_Quake_Wars">ETQW</a></li>
+				<li id="n-RTCW-2"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Return_to_Castle_Wolfenstein_2">RTCW 2</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 5'>
+		<h5>id Tech 5</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Rage"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Rage">Rage</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Quick Links'>
+		<h5>Quick Links</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Console"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Console">Console</a></li>
+				<li id="n-Script-Events"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Scripting">Script Events</a></li>
+				<li id="n-Material-Keywords"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Material_%28decl%29">Material Keywords</a></li>
+				<li id="n-Modification-List"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Modlist">Modification List</a></li>
+				<li id="n-Tutorial-List"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Tutorial_list">Tutorial List</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Wiki'>
+		<h5>Wiki</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Open-tasks"><a href="/web/20070729231805/http://www.modwiki.net/wiki/modwiki:Open_tasks">Open tasks</a></li>
+				<li id="n-recentchanges"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Special:Recentchanges">Recent changes</a></li>
+				<li id="n-Style-guide"><a href="/web/20070729231805/http://www.modwiki.net/wiki/modwiki:Style_guide">Style guide</a></li>
+				<li id="n-help"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Help:Contents">Help</a></li>
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/web/20070729231805/http://www.modwiki.net/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" value="Search" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Special:Whatlinkshere/Maya_to_MD5">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Special:Recentchangeslinked/Maya_to_MD5">Related changes</a></li>
+<li id="t-upload"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Special:Upload">Upload file</a></li>
+<li id="t-specialpages"><a href="/web/20070729231805/http://www.modwiki.net/wiki/Special:Specialpages">Special pages</a></li>
+				<li id="t-print"><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Maya_to_MD5&amp;oldid=7088&amp;printable=yes&amp;printable=yes">Printable version</a></li>				<li id="t-ispermalink">Permanent link</li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="/web/20070729231805/http://www.mediawiki.org/"><img src="/web/20070729231805im_/http://www.modwiki.net/w/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="/web/20070729231805/http://www.gnu.org/copyleft/fdl.html"><img src="/web/20070729231805im_/http://www.modwiki.net/w/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+				<li id="copyright">Content is available under <a href="/web/20070729231805/http://www.gnu.org/copyleft/fdl.html" class='external ' title="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.2</a>.</li>
+				<li id="privacy"><a href="/web/20070729231805/http://www.modwiki.net/wiki/modwiki:Privacy_policy" title="modwiki:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="/web/20070729231805/http://www.modwiki.net/wiki/modwiki:About" title="modwiki:About">About modwiki</a></li>
+				<li id="disclaimer"><a href="/web/20070729231805/http://www.modwiki.net/wiki/modwiki:General_disclaimer" title="modwiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+	<script type="text/javascript"> if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+<!-- Served by h982484 in 0.24 secs. -->
+</body></html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 23:18:05 Jul 29, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 3:17:22 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

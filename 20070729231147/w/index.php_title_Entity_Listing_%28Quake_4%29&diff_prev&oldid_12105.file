@@ -1,0 +1,752 @@
+DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex,follow" />
+<meta name="keywords" content="Entity Listing (Quake 4),Aas128 (entity),Aas250 (entity),Aas32 (entity),Aas48 (entity),Aas96 (entity),Aas flood 128 (entity),Aas flood 250 (entity),Aas flood 32 (entity),Aas flood 48 (entity),Aas flood 96 (entity)" />
+<link rel="shortcut icon" href="/web/20070729231147im_/http://modwiki.net/favicon.ico" />
+<link title="Creative Commons" type="application/rdf+xml" href="/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;action=creativecommons" rel="meta" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<title>Entity Listing (Quake 4) - modwiki</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20070729231147cs_/http://modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/web/20070729231147cs_/http://modwiki.net/w/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/w/skins/monobook/IE70Fixes.css?1";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
+		<script type="text/javascript" src="/web/20070729231147js_/http://modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20070729231147js_/http://modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/web/20070729231147cs_/http://modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231147cs_/http://modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231147cs_/http://modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns-0 ltr">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app11.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/modwiki.net\/w\/index.php?title=Entity_Listing_%28Quake_4%29&diff=prev&oldid=12105";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "29";
+var displayMonth = "Jul";
+var displayYear = "2007";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;diff=prev&amp;oldid=12105" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20070729231147" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jun
+                       
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 23:11:47 Jul 29, 2007">JUL</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Aug
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_prv_off.png" alt="Previous capture" width="14" height="16" border="0" />
+                       
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 23:11:47 Jul 29, 2007">29</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2006
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 23:11:47 Jul 29, 2007">2007</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2008
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20070729231147*/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;diff=prev&amp;oldid=12105" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>1 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">29 Jul 07 - 29 Jul 07</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:6:000000100000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000_2014:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">Entity Listing (Quake 4)</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From modwiki</h3>
+			<div id="contentSub">(Difference between revisions)</div>
+									<div id="jump-to-nav">Jump to: <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;diff=prev&amp;oldid=12105#column-one">navigation</a>, <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;diff=prev&amp;oldid=12105#searchInput">search</a></div>			<!-- start content -->
+			
+			<table border='0' width='98%' cellpadding='0' cellspacing='4' class='diff'>
+			<tr>
+				<td colspan='2' width='50%' align='center' class='diff-otitle'><strong><a href='/web/20070729231147/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;oldid=12101'>Revision as of 09:15, 11 October 2007</a></strong><br /><a href="/web/20070729231147/http://modwiki.net/wiki/User:Rich" title="User:Rich">Rich</a>  (<a href="/web/20070729231147/http://modwiki.net/wiki/User_talk:Rich" title="User talk:Rich">Talk</a> | <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Special:Contributions&amp;target=Rich" title="Special:Contributions">contribs</a>)<br /> <span class='comment'>(Game specific mockup)</span><br /><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;diff=prev&amp;oldid=12101" title="Entity Listing (Quake 4)" id="differences-prevlink">? Previous diff</a></td>
+				<td colspan='2' width='50%' align='center' class='diff-ntitle'><strong><a href='/web/20070729231147/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;oldid=12105'>Revision as of 09:28, 11 October 2007</a></strong><br /><a href="/web/20070729231147/http://modwiki.net/wiki/User:Rich" title="User:Rich">Rich</a>  (<a href="/web/20070729231147/http://modwiki.net/wiki/User_talk:Rich" title="User talk:Rich">Talk</a> | <a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Special:Contributions&amp;target=Rich" title="Special:Contributions">contribs</a>) <br /> <span class='comment'>(Version and Categories)</span><br /><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;diff=next&amp;oldid=12105" title="Entity Listing (Quake 4)" id="differences-nextlink">Next diff →</a></td>
+			</tr>
+			<tr><td colspan="2" align="left"><strong>Line 11:</strong></td>
+<td colspan="2" align="left"><strong>Line 11:</strong></td></tr>
+<tr><td> </td><td class='diff-context'>For more detailed information on specific entities, including available key/value pairs, usage, and notes see the corresponding article listed below.</td><td> </td><td class='diff-context'>For more detailed information on specific entities, including available key/value pairs, usage, and notes see the corresponding article listed below.</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td>-</td><td class='diff-deletedline'>Existing Entities as of version 1.<span class="diffchange">3</span>.<span class="diffchange">XXXX</span>(1.<span class="diffchange">3</span>)</td><td>+</td><td class='diff-addedline'>Existing Entities as of version 1.<span class="diffchange">4</span>.<span class="diffchange">2</span>(1.<span class="diffchange">4</span>)</td></tr>
+<tr><td> </td><td class='diff-context'></td><td> </td><td class='diff-context'></td></tr>
+<tr><td> </td><td class='diff-context'>===A===</td><td> </td><td class='diff-context'>===A===</td></tr>
+<tr><td colspan="2" align="left"><strong>Line 1,814:</strong></td>
+<td colspan="2" align="left"><strong>Line 1,814:</strong></td></tr>
+<tr><td> </td><td class='diff-context'>* [[wpmod_rocketlauncher_homing_(entity) | wpmod_rocketlauncher_homing]]</td><td> </td><td class='diff-context'>* [[wpmod_rocketlauncher_homing_(entity) | wpmod_rocketlauncher_homing]]</td></tr>
+<tr><td> </td><td class='diff-context'>* [[wpmod_shotgun_ammo_(entity) | wpmod_shotgun_ammo]]</td><td> </td><td class='diff-context'>* [[wpmod_shotgun_ammo_(entity) | wpmod_shotgun_ammo]]</td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'></td></tr>
+<tr><td colspan="2">&nbsp;</td><td>+</td><td class='diff-addedline'>[[Category:Mapping]][[Category:Coding]][[Category:Declarations]]</td></tr>
+
+			</table>
+		<hr /><h2>Revision as of 09:28, 11 October 2007</h2>
+<div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;"><a href="/web/20070729231147/http://modwiki.net/wiki/Image:Q4square_bg.png" class="image" title="Image:Q4square_bg.png"><img src="/web/20070729231147im_/http://modwiki.net/w/images/6/69/Q4square_bg.png" alt="Image:Q4square_bg.png" width="50" height="50" longdesc="/wiki/Image:Q4square_bg.png" /></a> The information on this page is specific to <a href="/web/20070729231147/http://modwiki.net/wiki/Quake_4" title="Quake 4">Quake 4</a>.</div>
+<hr />
+<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class='toclevel-1'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;diff=prev&amp;oldid=12105#Inheritance_Overview"><span class="tocnumber">1</span> <span class="toctext">Inheritance Overview</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;diff=prev&amp;oldid=12105#Entities"><span class="tocnumber">2</span> <span class="toctext">Entities</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;diff=prev&amp;oldid=12105#A"><span class="tocnumber">2.1</span> <span class="toctext">A</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;diff=prev&amp;oldid=12105#B"><span class="tocnumber">2.2</span> <span class="toctext">B</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;diff=prev&amp;oldid=12105#C"><span class="tocnumber">2.3</span> <span class="toctext">C</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;diff=prev&amp;oldid=12105#D"><span class="tocnumber">2.4</span> <span class="toctext">D</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;diff=prev&amp;oldid=12105#E"><span class="tocnumber">2.5</span> <span class="toctext">E</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;diff=prev&amp;oldid=12105#F"><span class="tocnumber">2.6</span> <span class="toctext">F</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;diff=prev&amp;oldid=12105#H"><span class="tocnumber">2.7</span> <span class="toctext">H</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;diff=prev&amp;oldid=12105#I"><span class="tocnumber">2.8</span> <span class="toctext">I</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;diff=prev&amp;oldid=12105#L"><span class="tocnumber">2.9</span> <span class="toctext">L</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;diff=prev&amp;oldid=12105#M"><span class="tocnumber">2.10</span> <span class="toctext">M</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;diff=prev&amp;oldid=12105#N"><span class="tocnumber">2.11</span> <span class="toctext">N</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;diff=prev&amp;oldid=12105#O"><span class="tocnumber">2.12</span> <span class="toctext">O</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;diff=prev&amp;oldid=12105#P"><span class="tocnumber">2.13</span> <span class="toctext">P</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;diff=prev&amp;oldid=12105#R"><span class="tocnumber">2.14</span> <span class="toctext">R</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;diff=prev&amp;oldid=12105#S"><span class="tocnumber">2.15</span> <span class="toctext">S</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;diff=prev&amp;oldid=12105#T"><span class="tocnumber">2.16</span> <span class="toctext">T</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;diff=prev&amp;oldid=12105#V"><span class="tocnumber">2.17</span> <span class="toctext">V</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231147/http://modwiki.net/w/index.php?title=Entity_Listing_%28Quake_4%29&amp;diff=prev&amp;oldid=12105#W"><span class="tocnumber">2.18</span> <span class="toctext">W</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="Inheritance_Overview"></a><h2>Inheritance Overview</h2>
+<p>The following diagram depicts the inheritance of <a href="/web/20070729231147/http://modwiki.net/wiki/Entitydef_%28decl%29" title="Entitydef (decl)"> entities</a> all the way down to their root classes in the <a href="/web/20070729231147/http://modwiki.net/wiki/Coding" title="Coding"> game code</a>.
+</p><p><i>insert tree diagram here</i>
+</p>
+<a name="Entities"></a><h2>Entities</h2>
+<p>For more detailed information on specific entities, including available key/value pairs, usage, and notes see the corresponding article listed below.
+</p><p>Existing Entities as of version 1.4.2(1.4)
+</p>
+<a name="A"></a><h3>A</h3>
+<ul><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Aas128_%28entity%29" title="Aas128 (entity)"> aas128</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Aas250_%28entity%29" title="Aas250 (entity)"> aas250</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Aas32_%28entity%29" title="Aas32 (entity)"> aas32</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Aas48_%28entity%29" title="Aas48 (entity)"> aas48</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Aas96_%28entity%29" title="Aas96 (entity)"> aas96</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Aas_flood_128_%28entity%29" title="Aas flood 128 (entity)"> aas_flood_128</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Aas_flood_250_%28entity%29" title="Aas flood 250 (entity)"> aas_flood_250</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Aas_flood_32_%28entity%29" title="Aas flood 32 (entity)"> aas_flood_32</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Aas_flood_48_%28entity%29" title="Aas flood 48 (entity)"> aas_flood_48</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Aas_flood_96_%28entity%29" title="Aas flood 96 (entity)"> aas_flood_96</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Aas_types_%28entity%29" title="Aas types (entity)"> aas_types</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Activate_convoy2_cin_gev_%28entity%29" title="Activate convoy2 cin gev (entity)"> activate_convoy2_cin_gev</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Activate_convoy2_cin_walker_%28entity%29" title="Activate convoy2 cin walker (entity)"> activate_convoy2_cin_walker</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Activate_convoy2_monster_harvester_%28entity%29" title="Activate convoy2 monster harvester (entity)"> activate_convoy2_monster_harvester</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Actor_default_%28entity%29" title="Actor default (entity)"> actor_default</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ad_damage_strogg_flyer_bomb_direct_%28entity%29" title="Ad damage strogg flyer bomb direct (entity)"> ad_damage_strogg_flyer_bomb_direct</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ad_intro_char_marine_%28entity%29" title="Ad intro char marine (entity)"> ad_intro_char_marine</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ad_intro_char_marine_anderson_%28entity%29" title="Ad intro char marine anderson (entity)"> ad_intro_char_marine_anderson</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ad_intro_char_marine_bidwell_%28entity%29" title="Ad intro char marine bidwell (entity)"> ad_intro_char_marine_bidwell</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ad_intro_char_marine_cortez_%28entity%29" title="Ad intro char marine cortez (entity)"> ad_intro_char_marine_cortez</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ad_intro_char_marine_kane_%28entity%29" title="Ad intro char marine kane (entity)"> ad_intro_char_marine_kane</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ad_intro_char_marine_morris_%28entity%29" title="Ad intro char marine morris (entity)"> ad_intro_char_marine_morris</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ad_intro_char_marine_rhodes_%28entity%29" title="Ad intro char marine rhodes (entity)"> ad_intro_char_marine_rhodes</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ad_intro_char_marine_sledge_%28entity%29" title="Ad intro char marine sledge (entity)"> ad_intro_char_marine_sledge</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ad_intro_char_marine_strauss_%28entity%29" title="Ad intro char marine strauss (entity)"> ad_intro_char_marine_strauss</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ad_intro_char_marine_voss_%28entity%29" title="Ad intro char marine voss (entity)"> ad_intro_char_marine_voss</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ad_intro_debris_%28entity%29" title="Ad intro debris (entity)"> ad_intro_debris</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ad_intro_parts_%28entity%29" title="Ad intro parts (entity)"> ad_intro_parts</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ad_projectile_strafe_flyer_gravity_%28entity%29" title="Ad projectile strafe flyer gravity (entity)"> ad_projectile_strafe_flyer_gravity</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ad_projectile_strogg_flyer_bomb_%28entity%29" title="Ad projectile strogg flyer bomb (entity)"> ad_projectile_strogg_flyer_bomb</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ai_avoid_%28entity%29" title="Ai avoid (entity)"> ai_avoid</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ai_become_Aggressive_%28entity%29" title="Ai become Aggressive (entity)"> ai_become_Aggressive</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ai_become_Passive_%28entity%29" title="Ai become Passive (entity)"> ai_become_Passive</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ai_tactical_%28entity%29" title="Ai tactical (entity)"> ai_tactical</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ai_tether_behind_%28entity%29" title="Ai tether behind (entity)"> ai_tether_behind</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ai_tether_location_%28entity%29" title="Ai tether location (entity)"> ai_tether_location</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ai_tether_none_%28entity%29" title="Ai tether none (entity)"> ai_tether_none</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ai_tether_radius_%28entity%29" title="Ai tether radius (entity)"> ai_tether_radius</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ai_trigger_multiple_%28entity%29" title="Ai trigger multiple (entity)"> ai_trigger_multiple</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ai_trigger_once_%28entity%29" title="Ai trigger once (entity)"> ai_trigger_once</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ai_vehicle_driver_%28entity%29" title="Ai vehicle driver (entity)"> ai_vehicle_driver</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Airdefense_big_gun_%28entity%29" title="Airdefense big gun (entity)"> airdefense_big_gun</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Airdefense_char_marine_%28entity%29" title="Airdefense char marine (entity)"> airdefense_char_marine</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Airdefense_char_marine_hyperblaster_%28entity%29" title="Airdefense char marine hyperblaster (entity)"> airdefense_char_marine_hyperblaster</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Airdefense_char_marine_shotgun_%28entity%29" title="Airdefense char marine shotgun (entity)"> airdefense_char_marine_shotgun</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Airdefense_monster_grunt_%28entity%29" title="Airdefense monster grunt (entity)"> airdefense_monster_grunt</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Airdefense_projectile_bullet_%28entity%29" title="Airdefense projectile bullet (entity)"> airdefense_projectile_bullet</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Airdefense_sizzle_barrel_%28entity%29" title="Airdefense sizzle barrel (entity)"> airdefense_sizzle_barrel</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Airdefense_sizzle_barrel_burn_%28entity%29" title="Airdefense sizzle barrel burn (entity)"> airdefense_sizzle_barrel_burn</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Airdefense_sizzle_barrel_ignite_%28entity%29" title="Airdefense sizzle barrel ignite (entity)"> airdefense_sizzle_barrel_ignite</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_currentweapon_%28entity%29" title="Ammo currentweapon (entity)"> ammo_currentweapon</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_default_%28entity%29" title="Ammo default (entity)"> ammo_default</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_dmg_%28entity%29" title="Ammo dmg (entity)"> ammo_dmg</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_dmg_moveable_%28entity%29" title="Ammo dmg moveable (entity)"> ammo_dmg_moveable</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_dmg_mp_%28entity%29" title="Ammo dmg mp (entity)"> ammo_dmg_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_grenadelauncher_%28entity%29" title="Ammo grenadelauncher (entity)"> ammo_grenadelauncher</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_grenadelauncher_moveable_%28entity%29" title="Ammo grenadelauncher moveable (entity)"> ammo_grenadelauncher_moveable</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_grenadelauncher_mp_%28entity%29" title="Ammo grenadelauncher mp (entity)"> ammo_grenadelauncher_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_hyperblaster_%28entity%29" title="Ammo hyperblaster (entity)"> ammo_hyperblaster</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_hyperblaster_moveable_%28entity%29" title="Ammo hyperblaster moveable (entity)"> ammo_hyperblaster_moveable</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_hyperblaster_mp_%28entity%29" title="Ammo hyperblaster mp (entity)"> ammo_hyperblaster_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_lightninggun_%28entity%29" title="Ammo lightninggun (entity)"> ammo_lightninggun</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_lightninggun_moveable_%28entity%29" title="Ammo lightninggun moveable (entity)"> ammo_lightninggun_moveable</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_lightninggun_mp_%28entity%29" title="Ammo lightninggun mp (entity)"> ammo_lightninggun_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_machinegun_%28entity%29" title="Ammo machinegun (entity)"> ammo_machinegun</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_machinegun_moveable_%28entity%29" title="Ammo machinegun moveable (entity)"> ammo_machinegun_moveable</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_machinegun_mp_%28entity%29" title="Ammo machinegun mp (entity)"> ammo_machinegun_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_moveable_%28entity%29" title="Ammo moveable (entity)"> ammo_moveable</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_nailgun_%28entity%29" title="Ammo nailgun (entity)"> ammo_nailgun</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_nailgun_moveable_%28entity%29" title="Ammo nailgun moveable (entity)"> ammo_nailgun_moveable</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_nailgun_mp_%28entity%29" title="Ammo nailgun mp (entity)"> ammo_nailgun_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_napalmgun_%28entity%29" title="Ammo napalmgun (entity)"> ammo_napalmgun</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_napalmgun_moveable_%28entity%29" title="Ammo napalmgun moveable (entity)"> ammo_napalmgun_moveable</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_napalmgun_mp_%28entity%29" title="Ammo napalmgun mp (entity)"> ammo_napalmgun_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_railgun_%28entity%29" title="Ammo railgun (entity)"> ammo_railgun</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_railgun_moveable_%28entity%29" title="Ammo railgun moveable (entity)"> ammo_railgun_moveable</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_railgun_mp_%28entity%29" title="Ammo railgun mp (entity)"> ammo_railgun_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_rocketlauncher_%28entity%29" title="Ammo rocketlauncher (entity)"> ammo_rocketlauncher</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_rocketlauncher_moveable_%28entity%29" title="Ammo rocketlauncher moveable (entity)"> ammo_rocketlauncher_moveable</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_rocketlauncher_mp_%28entity%29" title="Ammo rocketlauncher mp (entity)"> ammo_rocketlauncher_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_shotgun_%28entity%29" title="Ammo shotgun (entity)"> ammo_shotgun</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_shotgun_moveable_%28entity%29" title="Ammo shotgun moveable (entity)"> ammo_shotgun_moveable</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_shotgun_mp_%28entity%29" title="Ammo shotgun mp (entity)"> ammo_shotgun_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_triggersize_MP_%28entity%29" title="Ammo triggersize MP (entity)"> ammo_triggersize_MP</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Ammo_triggersize_SP_%28entity%29" title="Ammo triggersize SP (entity)"> ammo_triggersize_SP</a>
+</li></ul>
+<a name="B"></a><h3>B</h3>
+<ul><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Bse_owner_%28entity%29" title="Bse owner (entity)"> bse_owner</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Building_b_char_marine_%28entity%29" title="Building b char marine (entity)"> building_b_char_marine</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Building_b_char_marine_medic_%28entity%29" title="Building b char marine medic (entity)"> building_b_char_marine_medic</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Building_b_char_marine_tech_%28entity%29" title="Building b char marine tech (entity)"> building_b_char_marine_tech</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Building_b_char_marine_unarmed_%28entity%29" title="Building b char marine unarmed (entity)"> building_b_char_marine_unarmed</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Building_b_monster_grunt_%28entity%29" title="Building b monster grunt (entity)"> building_b_monster_grunt</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Building_b_spawnOverrides_%28entity%29" title="Building b spawnOverrides (entity)"> building_b_spawnOverrides</a>
+</li></ul>
+<a name="C"></a><h3>C</h3>
+<ul><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_doctor_%28entity%29" title="Char doctor (entity)"> char_doctor</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_gunner_medlab_%28entity%29" title="Char gunner medlab (entity)"> char_gunner_medlab</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_kane_strogg_%28entity%29" title="Char kane strogg (entity)"> char_kane_strogg</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_kane_strogg_unarmed_%28entity%29" title="Char kane strogg unarmed (entity)"> char_kane_strogg_unarmed</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_%28entity%29" title="Char marine (entity)"> char_marine</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_arm_left_%28entity%29" title="Char marine arm left (entity)"> char_marine_arm_left</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_arm_right_%28entity%29" title="Char marine arm right (entity)"> char_marine_arm_right</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_base_%28entity%29" title="Char marine base (entity)"> char_marine_base</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_choppable_%28entity%29" title="Char marine choppable (entity)"> char_marine_choppable</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_combat_%28entity%29" title="Char marine combat (entity)"> char_marine_combat</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_elgar_%28entity%29" title="Char marine elgar (entity)"> char_marine_elgar</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_fatigues_%28entity%29" title="Char marine fatigues (entity)"> char_marine_fatigues</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_fatigues_unarmed_%28entity%29" title="Char marine fatigues unarmed (entity)"> char_marine_fatigues_unarmed</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_hyperblaster_%28entity%29" title="Char marine hyperblaster (entity)"> char_marine_hyperblaster</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_leg_left_%28entity%29" title="Char marine leg left (entity)"> char_marine_leg_left</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_leg_left_%28entity%29" title="Char marine leg left (entity)"> char_marine_leg_left</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_leg_right_%28entity%29" title="Char marine leg right (entity)"> char_marine_leg_right</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_malgar_%28entity%29" title="Char marine malgar (entity)"> char_marine_malgar</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_medic_%28entity%29" title="Char marine medic (entity)"> char_marine_medic</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_medic_armed_%28entity%29" title="Char marine medic armed (entity)"> char_marine_medic_armed</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_medic_extras_%28entity%29" title="Char marine medic extras (entity)"> char_marine_medic_extras</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_naked_%28entity%29" title="Char marine naked (entity)"> char_marine_naked</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_anderson_airdefense_%28entity%29" title="Char marine npc anderson airdefense (entity)"> char_marine_npc_anderson_airdefense</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_anderson_airdefense_intro_%28entity%29" title="Char marine npc anderson airdefense intro (entity)"> char_marine_npc_anderson_airdefense_intro</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_bidwell_airdefense_%28entity%29" title="Char marine npc bidwell airdefense (entity)"> char_marine_npc_bidwell_airdefense</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_cobrasquad_door_%28entity%29" title="Char marine npc cobrasquad door (entity)"> char_marine_npc_cobrasquad_door</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_cortez_airdefense_%28entity%29" title="Char marine npc cortez airdefense (entity)"> char_marine_npc_cortez_airdefense</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_cortez_core_%28entity%29" title="Char marine npc cortez core (entity)"> char_marine_npc_cortez_core</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_cortez_tram1_%28entity%29" title="Char marine npc cortez tram1 (entity)"> char_marine_npc_cortez_tram1</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_harper_core_%28entity%29" title="Char marine npc harper core (entity)"> char_marine_npc_harper_core</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_judkins_airdefense_%28entity%29" title="Char marine npc judkins airdefense (entity)"> char_marine_npc_judkins_airdefense</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_kane_core_%28entity%29" title="Char marine npc kane core (entity)"> char_marine_npc_kane_core</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_metcalf_airdefense_%28entity%29" title="Char marine npc metcalf airdefense (entity)"> char_marine_npc_metcalf_airdefense</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_miller_airdefense_%28entity%29" title="Char marine npc miller airdefense (entity)"> char_marine_npc_miller_airdefense</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_mills_storage2_%28entity%29" title="Char marine npc mills storage2 (entity)"> char_marine_npc_mills_storage2</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_morris_airdefense_%28entity%29" title="Char marine npc morris airdefense (entity)"> char_marine_npc_morris_airdefense</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_morris_core_%28entity%29" title="Char marine npc morris core (entity)"> char_marine_npc_morris_core</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_officer_core_%28entity%29" title="Char marine npc officer core (entity)"> char_marine_npc_officer_core</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_remitz_walker_%28entity%29" title="Char marine npc remitz walker (entity)"> char_marine_npc_remitz_walker</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_rhodes_airdefense_%28entity%29" title="Char marine npc rhodes airdefense (entity)"> char_marine_npc_rhodes_airdefense</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_rhodes_core_%28entity%29" title="Char marine npc rhodes core (entity)"> char_marine_npc_rhodes_core</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_ripkey_airdefense_%28entity%29" title="Char marine npc ripkey airdefense (entity)"> char_marine_npc_ripkey_airdefense</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_rutger_storage2_%28entity%29" title="Char marine npc rutger storage2 (entity)"> char_marine_npc_rutger_storage2</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_sasaki_recomp_%28entity%29" title="Char marine npc sasaki recomp (entity)"> char_marine_npc_sasaki_recomp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_sledge_airdefense_%28entity%29" title="Char marine npc sledge airdefense (entity)"> char_marine_npc_sledge_airdefense</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_sledge_core_%28entity%29" title="Char marine npc sledge core (entity)"> char_marine_npc_sledge_core</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_sledge_process1_%28entity%29" title="Char marine npc sledge process1 (entity)"> char_marine_npc_sledge_process1</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_sledge_process2_%28entity%29" title="Char marine npc sledge process2 (entity)"> char_marine_npc_sledge_process2</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_sledge_process3_%28entity%29" title="Char marine npc sledge process3 (entity)"> char_marine_npc_sledge_process3</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_strauss_core_%28entity%29" title="Char marine npc strauss core (entity)"> char_marine_npc_strauss_core</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_underwood_airdefense_%28entity%29" title="Char marine npc underwood airdefense (entity)"> char_marine_npc_underwood_airdefense</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_npc_voss_airdefense_%28entity%29" title="Char marine npc voss airdefense (entity)"> char_marine_npc_voss_airdefense</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_officer_%28entity%29" title="Char marine officer (entity)"> char_marine_officer</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_officer_unarmed_%28entity%29" title="Char marine officer unarmed (entity)"> char_marine_officer_unarmed</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_prisoner_%28entity%29" title="Char marine prisoner (entity)"> char_marine_prisoner</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_prisoner_unarmed_%28entity%29" title="Char marine prisoner unarmed (entity)"> char_marine_prisoner_unarmed</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_puccini_%28entity%29" title="Char marine puccini (entity)"> char_marine_puccini</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_shotgun_%28entity%29" title="Char marine shotgun (entity)"> char_marine_shotgun</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_tech_%28entity%29" title="Char marine tech (entity)"> char_marine_tech</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_tech_armed_%28entity%29" title="Char marine tech armed (entity)"> char_marine_tech_armed</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_tech_extras_%28entity%29" title="Char marine tech extras (entity)"> char_marine_tech_extras</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_tramCar_%28entity%29" title="Char marine tramCar (entity)"> char_marine_tramCar</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_tramCar_cortez_%28entity%29" title="Char marine tramCar cortez (entity)"> char_marine_tramCar_cortez</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_tramCar_lybeck_%28entity%29" title="Char marine tramCar lybeck (entity)"> char_marine_tramCar_lybeck</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_tramCar_process1_cortez_%28entity%29" title="Char marine tramCar process1 cortez (entity)"> char_marine_tramCar_process1_cortez</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marine_unarmed_%28entity%29" title="Char marine unarmed (entity)"> char_marine_unarmed</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_aa_generic_%28entity%29" title="Char marinehead aa generic (entity)"> char_marinehead_aa_generic</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_anderson_%28entity%29" title="Char marinehead anderson (entity)"> char_marinehead_anderson</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_anderson_client_%28entity%29" title="Char marinehead anderson client (entity)"> char_marinehead_anderson_client</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_anderson_mp_%28entity%29" title="Char marinehead anderson mp (entity)"> char_marinehead_anderson_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_bidwell_%28entity%29" title="Char marinehead bidwell (entity)"> char_marinehead_bidwell</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_bidwell_client_%28entity%29" title="Char marinehead bidwell client (entity)"> char_marinehead_bidwell_client</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_bidwell_mp_%28entity%29" title="Char marinehead bidwell mp (entity)"> char_marinehead_bidwell_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_cortez_%28entity%29" title="Char marinehead cortez (entity)"> char_marinehead_cortez</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_cortez_client_%28entity%29" title="Char marinehead cortez client (entity)"> char_marinehead_cortez_client</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_cortez_mp_%28entity%29" title="Char marinehead cortez mp (entity)"> char_marinehead_cortez_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_default_%28entity%29" title="Char marinehead default (entity)"> char_marinehead_default</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_default_client_%28entity%29" title="Char marinehead default client (entity)"> char_marinehead_default_client</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_doctor_masked_%28entity%29" title="Char marinehead doctor masked (entity)"> char_marinehead_doctor_masked</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_gen_african_american_%28entity%29" title="Char marinehead gen african american (entity)"> char_marinehead_gen_african_american</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_gen_african_american_2_%28entity%29" title="Char marinehead gen african american 2 (entity)"> char_marinehead_gen_african_american_2</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_gen_african_american_3_%28entity%29" title="Char marinehead gen african american 3 (entity)"> char_marinehead_gen_african_american_3</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_gen_asian_%28entity%29" title="Char marinehead gen asian (entity)"> char_marinehead_gen_asian</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_gen_asian_2_%28entity%29" title="Char marinehead gen asian 2 (entity)"> char_marinehead_gen_asian_2</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_gen_asian_3_%28entity%29" title="Char marinehead gen asian 3 (entity)"> char_marinehead_gen_asian_3</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_gen_white_%28entity%29" title="Char marinehead gen white (entity)"> char_marinehead_gen_white</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_gen_white_2_%28entity%29" title="Char marinehead gen white 2 (entity)"> char_marinehead_gen_white_2</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_gen_white_3_%28entity%29" title="Char marinehead gen white 3 (entity)"> char_marinehead_gen_white_3</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_gen_white_4_%28entity%29" title="Char marinehead gen white 4 (entity)"> char_marinehead_gen_white_4</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_general_harper_%28entity%29" title="Char marinehead general harper (entity)"> char_marinehead_general_harper</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_general_harper_client_%28entity%29" title="Char marinehead general harper client (entity)"> char_marinehead_general_harper_client</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_general_harper_mp_%28entity%29" title="Char marinehead general harper mp (entity)"> char_marinehead_general_harper_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_half_%28entity%29" title="Char marinehead half (entity)"> char_marinehead_half</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_helmet_%28entity%29" title="Char marinehead helmet (entity)"> char_marinehead_helmet</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_helmet_bright_client_%28entity%29" title="Char marinehead helmet bright client (entity)"> char_marinehead_helmet_bright_client</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_helmet_bright_mp_%28entity%29" title="Char marinehead helmet bright mp (entity)"> char_marinehead_helmet_bright_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_helmet_client_%28entity%29" title="Char marinehead helmet client (entity)"> char_marinehead_helmet_client</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_helmet_medic_%28entity%29" title="Char marinehead helmet medic (entity)"> char_marinehead_helmet_medic</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_helmet_mp_%28entity%29" title="Char marinehead helmet mp (entity)"> char_marinehead_helmet_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_helmet_tech_%28entity%29" title="Char marinehead helmet tech (entity)"> char_marinehead_helmet_tech</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_kane_%28entity%29" title="Char marinehead kane (entity)"> char_marinehead_kane</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_kane2_%28entity%29" title="Char marinehead kane2 (entity)"> char_marinehead_kane2</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_kane2_client_%28entity%29" title="Char marinehead kane2 client (entity)"> char_marinehead_kane2_client</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_kane2_mp_%28entity%29" title="Char marinehead kane2 mp (entity)"> char_marinehead_kane2_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_kane_mp_%28entity%29" title="Char marinehead kane mp (entity)"> char_marinehead_kane_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_kanestrg_%28entity%29" title="Char marinehead kanestrg (entity)"> char_marinehead_kanestrg</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_kanestrg_client_%28entity%29" title="Char marinehead kanestrg client (entity)"> char_marinehead_kanestrg_client</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_kanestrg_mp_%28entity%29" title="Char marinehead kanestrg mp (entity)"> char_marinehead_kanestrg_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_morris_%28entity%29" title="Char marinehead morris (entity)"> char_marinehead_morris</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_morris_client_%28entity%29" title="Char marinehead morris client (entity)"> char_marinehead_morris_client</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_morris_mp_%28entity%29" title="Char marinehead morris mp (entity)"> char_marinehead_morris_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_rhodes_%28entity%29" title="Char marinehead rhodes (entity)"> char_marinehead_rhodes</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_shot_%28entity%29" title="Char marinehead shot (entity)"> char_marinehead_shot</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_sledge_%28entity%29" title="Char marinehead sledge (entity)"> char_marinehead_sledge</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_strassa_%28entity%29" title="Char marinehead strassa (entity)"> char_marinehead_strassa</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_strassa_client_%28entity%29" title="Char marinehead strassa client (entity)"> char_marinehead_strassa_client</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_strassa_mp_%28entity%29" title="Char marinehead strassa mp (entity)"> char_marinehead_strassa_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_voss_%28entity%29" title="Char marinehead voss (entity)"> char_marinehead_voss</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_voss_client_%28entity%29" title="Char marinehead voss client (entity)"> char_marinehead_voss_client</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_voss_mp_%28entity%29" title="Char marinehead voss mp (entity)"> char_marinehead_voss_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Char_marinehead_voss_strogg_%28entity%29" title="Char marinehead voss strogg (entity)"> char_marinehead_voss_strogg</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Character_tube_marine_%28entity%29" title="Character tube marine (entity)"> character_tube_marine</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Character_tube_marine_%28entity%29" title="Character tube marine (entity)"> character_tube_marine</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Character_tube_marine_aftest_%28entity%29" title="Character tube marine aftest (entity)"> character_tube_marine_aftest</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Cin_E3_harvester_cam_%28entity%29" title="Cin E3 harvester cam (entity)"> cin_E3_harvester_cam</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Cin_convoy1_harv_cam_%28entity%29" title="Cin convoy1 harv cam (entity)"> cin_convoy1_harv_cam</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Cin_putra_doorsmash_cam_%28entity%29" title="Cin putra doorsmash cam (entity)"> cin_putra_doorsmash_cam</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Cin_putra_explode_cam_%28entity%29" title="Cin putra explode cam (entity)"> cin_putra_explode_cam</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Cin_waste_bb_cam_%28entity%29" title="Cin waste bb cam (entity)"> cin_waste_bb_cam</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Convoy2_char_marine_tech_%28entity%29" title="Convoy2 char marine tech (entity)"> convoy2_char_marine_tech</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Convoy2_cin_gev_%28entity%29" title="Convoy2 cin gev (entity)"> convoy2_cin_gev</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Convoy2_cin_walker_%28entity%29" title="Convoy2 cin walker (entity)"> convoy2_cin_walker</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Convoy2_monster_harvester_%28entity%29" title="Convoy2 monster harvester (entity)"> convoy2_monster_harvester</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Convoy2_monster_turret_bunker_%28entity%29" title="Convoy2 monster turret bunker (entity)"> convoy2_monster_turret_bunker</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Convoy_char_marine_%28entity%29" title="Convoy char marine (entity)"> convoy_char_marine</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Convoy_char_marine_unarmed_%28entity%29" title="Convoy char marine unarmed (entity)"> convoy_char_marine_unarmed</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Convoy_monster_turret_bunker_%28entity%29" title="Convoy monster turret bunker (entity)"> convoy_monster_turret_bunker</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Convoy_monster_turret_rocket_%28entity%29" title="Convoy monster turret rocket (entity)"> convoy_monster_turret_rocket</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Convoy_projectile_strogg_flyer_bomb_%28entity%29" title="Convoy projectile strogg flyer bomb (entity)"> convoy_projectile_strogg_flyer_bomb</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Convoy_projectile_turret_rocket_%28entity%29" title="Convoy projectile turret rocket (entity)"> convoy_projectile_turret_rocket</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Convoy_vehicle_flatbed_%28entity%29" title="Convoy vehicle flatbed (entity)"> convoy_vehicle_flatbed</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Convoy_vehicle_walker_%28entity%29" title="Convoy vehicle walker (entity)"> convoy_vehicle_walker</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Convoy_vehicle_walker_driver_%28entity%29" title="Convoy vehicle walker driver (entity)"> convoy_vehicle_walker_driver</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Convoy_vehicle_walker_weapon_rocket_%28entity%29" title="Convoy vehicle walker weapon rocket (entity)"> convoy_vehicle_walker_weapon_rocket</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Core1_monster_tactical_%28entity%29" title="Core1 monster tactical (entity)"> core1_monster_tactical</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Core_Brainstalk_%28entity%29" title="Core Brainstalk (entity)"> core_Brainstalk</a>
+</li></ul>
+<a name="D"></a><h3>D</h3>
+<ul><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_HugeExplosion_%28entity%29" title="Damage HugeExplosion (entity)"> damage_HugeExplosion</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_Smallexplosion_%28entity%29" title="Damage Smallexplosion (entity)"> damage_Smallexplosion</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_VagaryObject_%28entity%29" title="Damage VagaryObject (entity)"> damage_VagaryObject</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_acid_drip_%28entity%29" title="Damage acid drip (entity)"> damage_acid_drip</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_acidgun_%28entity%29" title="Damage acidgun (entity)"> damage_acidgun</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_bb_electrocute_%28entity%29" title="Damage bb electrocute (entity)"> damage_bb_electrocute</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_berserker_energyBurst_%28entity%29" title="Damage berserker energyBurst (entity)"> damage_berserker_energyBurst</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_berzerker_beam_%28entity%29" title="Damage berzerker beam (entity)"> damage_berzerker_beam</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_big_gun_direct_%28entity%29" title="Damage big gun direct (entity)"> damage_big_gun_direct</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_big_gun_splash_%28entity%29" title="Damage big gun splash (entity)"> damage_big_gun_splash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_big_htank_blaster_%28entity%29" title="Damage big htank blaster (entity)"> damage_big_htank_blaster</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_big_htank_direct_%28entity%29" title="Damage big htank direct (entity)"> damage_big_htank_direct</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_big_htank_splash_%28entity%29" title="Damage big htank splash (entity)"> damage_big_htank_splash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_blaster_%28entity%29" title="Damage blaster (entity)"> damage_blaster</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_blaster_charged_%28entity%29" title="Damage blaster charged (entity)"> damage_blaster_charged</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_blastersplash_charged_%28entity%29" title="Damage blastersplash charged (entity)"> damage_blastersplash_charged</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_bossbuddy_dmg_fly_%28entity%29" title="Damage bossbuddy dmg fly (entity)"> damage_bossbuddy_dmg_fly</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_bossbuddy_rocket_direct_%28entity%29" title="Damage bossbuddy rocket direct (entity)"> damage_bossbuddy_rocket_direct</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_bossbuddy_rocket_splash_%28entity%29" title="Damage bossbuddy rocket splash (entity)"> damage_bossbuddy_rocket_splash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_bullet_base_%28entity%29" title="Damage bullet base (entity)"> damage_bullet_base</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_cgc_shot_%28entity%29" title="Damage cgc shot (entity)"> damage_cgc_shot</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_cinematicFoom_%28entity%29" title="Damage cinematicFoom (entity)"> damage_cinematicFoom</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_convoy_rocket_direct_%28entity%29" title="Damage convoy rocket direct (entity)"> damage_convoy_rocket_direct</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_convoy_rocket_splash_%28entity%29" title="Damage convoy rocket splash (entity)"> damage_convoy_rocket_splash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_crush_%28entity%29" title="Damage crush (entity)"> damage_crush</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_dharv_nail_%28entity%29" title="Damage dharv nail (entity)"> damage_dharv_nail</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_dmg_fly_%28entity%29" title="Damage dmg fly (entity)"> damage_dmg_fly</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_dmg_mp_%28entity%29" title="Damage dmg mp (entity)"> damage_dmg_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_dmg_splash_mp_%28entity%29" title="Damage dmg splash mp (entity)"> damage_dmg_splash_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_exploding_barrel_large_%28entity%29" title="Damage exploding barrel large (entity)"> damage_exploding_barrel_large</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_explodingbarrel_%28entity%29" title="Damage explodingbarrel (entity)"> damage_explodingbarrel</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_explosion_%28entity%29" title="Damage explosion (entity)"> damage_explosion</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_explosion_push_%28entity%29" title="Damage explosion push (entity)"> damage_explosion_push</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_failed_transfer_bullet_%28entity%29" title="Damage failed transfer bullet (entity)"> damage_failed_transfer_bullet</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_fatalfall_%28entity%29" title="Damage fatalfall (entity)"> damage_fatalfall</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_fatalfall_mp_%28entity%29" title="Damage fatalfall mp (entity)"> damage_fatalfall_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_fatty_hook_%28entity%29" title="Damage fatty hook (entity)"> damage_fatty_hook</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_fire_15_%28entity%29" title="Damage fire 15 (entity)"> damage_fire_15</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_flyer_rocket_%28entity%29" title="Damage flyer rocket (entity)"> damage_flyer_rocket</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_flyer_rocket_splash_%28entity%29" title="Damage flyer rocket splash (entity)"> damage_flyer_rocket_splash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_gauntlet_%28entity%29" title="Damage gauntlet (entity)"> damage_gauntlet</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_generic_%28entity%29" title="Damage generic (entity)"> damage_generic</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_gev_bullet_%28entity%29" title="Damage gev bullet (entity)"> damage_gev_bullet</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_gev_collision_%28entity%29" title="Damage gev collision (entity)"> damage_gev_collision</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_gev_collision_self_%28entity%29" title="Damage gev collision self (entity)"> damage_gev_collision_self</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_gev_crash_%28entity%29" title="Damage gev crash (entity)"> damage_gev_crash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_gev_main_%28entity%29" title="Damage gev main (entity)"> damage_gev_main</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_gev_main_splash_%28entity%29" title="Damage gev main splash (entity)"> damage_gev_main_splash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_gib_%28entity%29" title="Damage gib (entity)"> damage_gib</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_gladiator_blaster_%28entity%29" title="Damage gladiator blaster (entity)"> damage_gladiator_blaster</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_gladiator_railgun_%28entity%29" title="Damage gladiator railgun (entity)"> damage_gladiator_railgun</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_grenadeDirect_mp_%28entity%29" title="Damage grenadeDirect mp (entity)"> damage_grenadeDirect_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_grenadeSplash_mp_%28entity%29" title="Damage grenadeSplash mp (entity)"> damage_grenadeSplash_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_grunt_bullet_%28entity%29" title="Damage grunt bullet (entity)"> damage_grunt_bullet</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_gunner_grenade_%28entity%29" title="Damage gunner grenade (entity)"> damage_gunner_grenade</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_gunner_grenade_splash_%28entity%29" title="Damage gunner grenade splash (entity)"> damage_gunner_grenade_splash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_gunner_nail_%28entity%29" title="Damage gunner nail (entity)"> damage_gunner_nail</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_hardfall_%28entity%29" title="Damage hardfall (entity)"> damage_hardfall</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_hardfall_mp_%28entity%29" title="Damage hardfall mp (entity)"> damage_hardfall_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_harv_claw_%28entity%29" title="Damage harv claw (entity)"> damage_harv_claw</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_harv_grenade_%28entity%29" title="Damage harv grenade (entity)"> damage_harv_grenade</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_harv_grenade_splash_%28entity%29" title="Damage harv grenade splash (entity)"> damage_harv_grenade_splash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_harv_nail_%28entity%29" title="Damage harv nail (entity)"> damage_harv_nail</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_harv_nail_splash_%28entity%29" title="Damage harv nail splash (entity)"> damage_harv_nail_splash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_harvester_direct_%28entity%29" title="Damage harvester direct (entity)"> damage_harvester_direct</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_harvester_rocket_direct_%28entity%29" title="Damage harvester rocket direct (entity)"> damage_harvester_rocket_direct</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_harvester_rocket_splash_%28entity%29" title="Damage harvester rocket splash (entity)"> damage_harvester_rocket_splash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_harvester_whip_splash_%28entity%29" title="Damage harvester whip splash (entity)"> damage_harvester_whip_splash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_htank_blaster_%28entity%29" title="Damage htank blaster (entity)"> damage_htank_blaster</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_htank_direct_%28entity%29" title="Damage htank direct (entity)"> damage_htank_direct</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_htank_splash_%28entity%29" title="Damage htank splash (entity)"> damage_htank_splash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_hyperblaster_%28entity%29" title="Damage hyperblaster (entity)"> damage_hyperblaster</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_hyperblaster_mp_%28entity%29" title="Damage hyperblaster mp (entity)"> damage_hyperblaster_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_hyperblaster_splash_%28entity%29" title="Damage hyperblaster splash (entity)"> damage_hyperblaster_splash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_hyperblaster_splash_mp_%28entity%29" title="Damage hyperblaster splash mp (entity)"> damage_hyperblaster_splash_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_ironMaiden_banshee_%28entity%29" title="Damage ironMaiden banshee (entity)"> damage_ironMaiden_banshee</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_iron_maiden_rocket_direct_%28entity%29" title="Damage iron maiden rocket direct (entity)"> damage_iron_maiden_rocket_direct</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_iron_maiden_rocket_splash_%28entity%29" title="Damage iron maiden rocket splash (entity)"> damage_iron_maiden_rocket_splash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_lightBreak_%28entity%29" title="Damage lightBreak (entity)"> damage_lightBreak</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_lightBreak2_%28entity%29" title="Damage lightBreak2 (entity)"> damage_lightBreak2</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_lightTank_fireball_direct_%28entity%29" title="Damage lightTank fireball direct (entity)"> damage_lightTank_fireball_direct</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_lightTank_fireball_splash_%28entity%29" title="Damage lightTank fireball splash (entity)"> damage_lightTank_fireball_splash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_lightTank_plasma_%28entity%29" title="Damage lightTank plasma (entity)"> damage_lightTank_plasma</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_lightTank_residualPlasma_%28entity%29" title="Damage lightTank residualPlasma (entity)"> damage_lightTank_residualPlasma</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_lightninggun_%28entity%29" title="Damage lightninggun (entity)"> damage_lightninggun</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_lightninggun_mp_%28entity%29" title="Damage lightninggun mp (entity)"> damage_lightninggun_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_machinegun_%28entity%29" title="Damage machinegun (entity)"> damage_machinegun</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_machinegun_flesh_%28entity%29" title="Damage machinegun flesh (entity)"> damage_machinegun_flesh</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_machinegun_mp_%28entity%29" title="Damage machinegun mp (entity)"> damage_machinegun_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_machinegun_zoom_%28entity%29" title="Damage machinegun zoom (entity)"> damage_machinegun_zoom</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_machinegun_zoom_flesh_%28entity%29" title="Damage machinegun zoom flesh (entity)"> damage_machinegun_zoom_flesh</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_machinegun_zoom_mp_%28entity%29" title="Damage machinegun zoom mp (entity)"> damage_machinegun_zoom_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_makron_cannon_%28entity%29" title="Damage makron cannon (entity)"> damage_makron_cannon</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_makron_dmg_fly_%28entity%29" title="Damage makron dmg fly (entity)"> damage_makron_dmg_fly</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_makron_grenade_splash_%28entity%29" title="Damage makron grenade splash (entity)"> damage_makron_grenade_splash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_makron_jr_cannon_%28entity%29" title="Damage makron jr cannon (entity)"> damage_makron_jr_cannon</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_makron_stomp_damage_%28entity%29" title="Damage makron stomp damage (entity)"> damage_makron_stomp_damage</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_marine_bullet_%28entity%29" title="Damage marine bullet (entity)"> damage_marine_bullet</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_marine_bullet_cortez_%28entity%29" title="Damage marine bullet cortez (entity)"> damage_marine_bullet_cortez</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_marine_hyperblaster_%28entity%29" title="Damage marine hyperblaster (entity)"> damage_marine_hyperblaster</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_marine_shotgun_bullet_%28entity%29" title="Damage marine shotgun bullet (entity)"> damage_marine_shotgun_bullet</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_mcc_ship_blast_%28entity%29" title="Damage mcc ship blast (entity)"> damage_mcc_ship_blast</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_moveable_burn_%28entity%29" title="Damage moveable burn (entity)"> damage_moveable_burn</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_moverCrush_%28entity%29" title="Damage moverCrush (entity)"> damage_moverCrush</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_nailDirect_mp_%28entity%29" title="Damage nailDirect mp (entity)"> damage_nailDirect_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_nailSplash_mp_%28entity%29" title="Damage nailSplash mp (entity)"> damage_nailSplash_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_napalmGlobEmit_%28entity%29" title="Damage napalmGlobEmit (entity)"> damage_napalmGlobEmit</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_napalmSplash_%28entity%29" title="Damage napalmSplash (entity)"> damage_napalmSplash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_network_guardian_jetwash_%28entity%29" title="Damage network guardian jetwash (entity)"> damage_network_guardian_jetwash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_network_guardian_rocket_direct_%28entity%29" title="Damage network guardian rocket direct (entity)"> damage_network_guardian_rocket_direct</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_network_guardian_rocket_guided_direct_%28entity%29" title="Damage network guardian rocket guided direct (entity)"> damage_network_guardian_rocket_guided_direct</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_network_guardian_rocket_guided_splash_%28entity%29" title="Damage network guardian rocket guided splash (entity)"> damage_network_guardian_rocket_guided_splash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_network_guardian_rocket_splash_%28entity%29" title="Damage network guardian rocket splash (entity)"> damage_network_guardian_rocket_splash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_noair_%28entity%29" title="Damage noair (entity)"> damage_noair</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_painTrigger_%28entity%29" title="Damage painTrigger (entity)"> damage_painTrigger</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_pellet_%28entity%29" title="Damage pellet (entity)"> damage_pellet</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_pellet_mp_%28entity%29" title="Damage pellet mp (entity)"> damage_pellet_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_phatride_bullet_%28entity%29" title="Damage phatride bullet (entity)"> damage_phatride_bullet</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_phatride_crash_%28entity%29" title="Damage phatride crash (entity)"> damage_phatride_crash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_phatride_main_%28entity%29" title="Damage phatride main (entity)"> damage_phatride_main</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_phatride_main_splash_%28entity%29" title="Damage phatride main splash (entity)"> damage_phatride_main_splash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_q1dm2lava_%28entity%29" title="Damage q1dm2lava (entity)"> damage_q1dm2lava</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_railgun_base_%28entity%29" title="Damage railgun base (entity)"> damage_railgun_base</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_repairbot_repair_%28entity%29" title="Damage repairbot repair (entity)"> damage_repairbot_repair</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_rocketDirect_mp_%28entity%29" title="Damage rocketDirect mp (entity)"> damage_rocketDirect_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_rocketSplash_mp_%28entity%29" title="Damage rocketSplash mp (entity)"> damage_rocketSplash_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_scientist_death_%28entity%29" title="Damage scientist death (entity)"> damage_scientist_death</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_scientist_grenande_%28entity%29" title="Damage scientist grenande (entity)"> damage_scientist_grenande</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_scientist_poison_%28entity%29" title="Damage scientist poison (entity)"> damage_scientist_poison</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_sentry_bullet_%28entity%29" title="Damage sentry bullet (entity)"> damage_sentry_bullet</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_sg_hov_bomb_%28entity%29" title="Damage sg hov bomb (entity)"> damage_sg_hov_bomb</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_sg_hov_bomb_splash_%28entity%29" title="Damage sg hov bomb splash (entity)"> damage_sg_hov_bomb_splash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_sg_hov_bullet_%28entity%29" title="Damage sg hov bullet (entity)"> damage_sg_hov_bullet</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_sg_hov_rocket_direct_%28entity%29" title="Damage sg hov rocket direct (entity)"> damage_sg_hov_rocket_direct</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_sg_hov_rocket_splash_%28entity%29" title="Damage sg hov rocket splash (entity)"> damage_sg_hov_rocket_splash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_sizzling_barrel_large_%28entity%29" title="Damage sizzling barrel large (entity)"> damage_sizzling_barrel_large</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_slimyTransfer_vomit_%28entity%29" title="Damage slimyTransfer vomit (entity)"> damage_slimyTransfer_vomit</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_slimyTransfer_vomit_residual_%28entity%29" title="Damage slimyTransfer vomit residual (entity)"> damage_slimyTransfer_vomit_residual</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_slimyTransfer_vomit_splash_%28entity%29" title="Damage slimyTransfer vomit splash (entity)"> damage_slimyTransfer_vomit_splash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_softfall_%28entity%29" title="Damage softfall (entity)"> damage_softfall</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_softfall_mp_%28entity%29" title="Damage softfall mp (entity)"> damage_softfall_mp</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_strafe_rocket_%28entity%29" title="Damage strafe rocket (entity)"> damage_strafe_rocket</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_strafe_rocket_splash_%28entity%29" title="Damage strafe rocket splash (entity)"> damage_strafe_rocket_splash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_streamprotector_rocket_direct_%28entity%29" title="Damage streamprotector rocket direct (entity)"> damage_streamprotector_rocket_direct</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_streamprotector_rocket_splash_%28entity%29" title="Damage streamprotector rocket splash (entity)"> damage_streamprotector_rocket_splash</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_strogg_fighter_blaster_%28entity%29" title="Damage strogg fighter blaster (entity)"> damage_strogg_fighter_blaster</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_strogg_flyer_blaster_%28entity%29" title="Damage strogg flyer blaster (entity)"> damage_strogg_flyer_blaster</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_strogg_flyer_bomb_%28entity%29" title="Damage strogg flyer bomb (entity)"> damage_strogg_flyer_bomb</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_strogg_marine_blaster_%28entity%29" title="Damage strogg marine blaster (entity)"> damage_strogg_marine_blaster</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_strogg_marine_bullet_%28entity%29" title="Damage strogg marine bullet (entity)"> damage_strogg_marine_bullet</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_strogg_marine_shotgun_%28entity%29" title="Damage strogg marine shotgun (entity)"> damage_strogg_marine_shotgun</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_suicide_%28entity%29" title="Damage suicide (entity)"> damage_suicide</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_tactical_blaster_%28entity%29" title="Damage tactical blaster (entity)"> damage_tactical_blaster</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_tactical_machinegun_%28entity%29" title="Damage tactical machinegun (entity)"> damage_tactical_machinegun</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_tactical_railgun_%28entity%29" title="Damage tactical railgun (entity)"> damage_tactical_railgun</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_tactical_shotgun_%28entity%29" title="Damage tactical shotgun (entity)"> damage_tactical_shotgun</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_telefrag_%28entity%29" title="Damage telefrag (entity)"> damage_telefrag</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_toxin_novehicle_1000_%28entity%29" title="Damage toxin novehicle 1000 (entity)"> damage_toxin_novehicle_1000</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_toxin_novehicle_25_%28entity%29" title="Damage toxin novehicle 25 (entity)"> damage_toxin_novehicle_25</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_tram_flyer_rocket_%28entity%29" title="Damage tram flyer rocket (entity)"> damage_tram_flyer_rocket</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_tramcar_explode_%28entity%29" title="Damage tramcar explode (entity)"> damage_tramcar_explode</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_tramgun_%28entity%29" title="Damage tramgun (entity)"> damage_tramgun</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_triggerhurt_1_%28entity%29" title="Damage triggerhurt 1 (entity)"> damage_triggerhurt_1</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_triggerhurt_10_%28entity%29" title="Damage triggerhurt 10 (entity)"> damage_triggerhurt_10</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_triggerhurt_100_%28entity%29" title="Damage triggerhurt 100 (entity)"> damage_triggerhurt_100</a>
+</li><li> <a href="/web/20070729231147/http://modwiki.net/wiki/Damage_triggerhurt_1000_%28entity%29" title="Damage trig">
+
+
+
+
+<!--
+     FILE ARCHIVED ON 23:11:47 Jul 29, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 2:40:50 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

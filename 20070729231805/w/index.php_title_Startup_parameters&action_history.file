@@ -1,0 +1,428 @@
+DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex,nofollow" />
+<link rel="shortcut icon" href="/web/20070729231805im_/http://modwiki.net/favicon.ico" />
+<link title="Creative Commons" type="application/rdf+xml" href="/w/index.php?title=Startup_parameters&amp;action=creativecommons" rel="meta" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<title>Startup parameters - History - modwiki</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20070729231805cs_/http://modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/web/20070729231805cs_/http://modwiki.net/w/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/w/skins/monobook/IE70Fixes.css?1";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
+		<script type="text/javascript" src="/web/20070729231805js_/http://modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20070729231805js_/http://modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/web/20070729231805cs_/http://modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231805cs_/http://modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231805cs_/http://modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns-0 ltr">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app14.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/modwiki.net\/w\/index.php?title=Startup_parameters&action=history";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "29";
+var displayMonth = "Jul";
+var displayYear = "2007";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://modwiki.net/w/index.php?title=Startup_parameters&amp;action=history" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20070729231805" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jun
+                       
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 23:18:05 Jul 29, 2007">JUL</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20071015114431/http://modwiki.net/w/index.php?title=Startup_parameters&amp;action=history" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="15 Oct 2007"><strong>OCT</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_prv_off.png" alt="Previous capture" width="14" height="16" border="0" />
+                       
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 23:18:05 Jul 29, 2007">29</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20071015114431/http://modwiki.net/w/index.php?title=Startup_parameters&amp;action=history" title="11:44:31 Oct 15, 2007" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2006
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 23:18:05 Jul 29, 2007">2007</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20091009212438/http://www.modwiki.net/w/index.php?title=Startup_parameters&amp;action=history" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="9 Oct 2009"><strong>2009</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20070729231805*/http://modwiki.net/w/index.php?title=Startup_parameters&amp;action=history" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>6 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">29 Jul 07 - 2 Jun 10</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:6:000000100100_2008:-1:000010000000_2009:-1:000000000101_2010:-1:000001000000_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000_2014:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">Startup parameters</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From modwiki</h3>
+			<div id="contentSub">Revision history</div>
+									<div id="jump-to-nav">Jump to: <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;action=history#column-one">navigation</a>, <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;action=history#searchInput">search</a></div>			<!-- start content -->
+			(Latest | Earliest) View (previous 50) (next 50) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;limit=20&amp;action=history" title="Startup parameters">20</a> | <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;limit=50&amp;action=history" title="Startup parameters">50</a> | <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;limit=100&amp;action=history" title="Startup parameters">100</a> | <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;limit=250&amp;action=history" title="Startup parameters">250</a> | <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;limit=500&amp;action=history" title="Startup parameters">500</a>).<p>Diff selection: mark the radio boxes of the versions to compare and hit enter or the button at the bottom.<br />
+Legend: (cur) = difference with current version,
+(last) = difference with preceding version, M = minor edit.
+</p><form action="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;" method="get"><input type='hidden' name='title' value="Startup_parameters" />
+<input class="historysubmit" type="submit" accesskey="v" title="See the differences between the two selected versions of this page. [alt-v]" value="Compare selected versions" /><ul id="pagehistory">
+<li>(cur) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=12136&amp;oldid=12135" title="Startup parameters">last</a>) <input type="radio" value="12136" style="visibility:hidden" name="oldid" /><input type="radio" value="12136" checked="checked" name="diff" /> <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;oldid=12136" title="Startup parameters">14:25, 11 October 2007</a> <span class='history-user'><a href="/web/20070729231805/http://modwiki.net/wiki/User:Mordenkainen" title="User:Mordenkainen">Mordenkainen</a></span> <span class="minor">m</span> <span class='comment'>(Fixed ETQW note position)</span></li>
+<li>(<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=12136&amp;oldid=12135" title="Startup parameters">cur</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=12135&amp;oldid=7109" title="Startup parameters">last</a>) <input type="radio" value="12135" checked="checked" name="oldid" /><input type="radio" value="12135" name="diff" /> <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;oldid=12135" title="Startup parameters">14:23, 11 October 2007</a> <span class='history-user'><a href="/web/20070729231805/http://modwiki.net/wiki/User:Mordenkainen" title="User:Mordenkainen">Mordenkainen</a></span> <span class='comment'>(removed KDE/GNOME placeholder text, reworded some parts, removed duplicate text, added ETQW path example)</span></li>
+<li>(<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=12136&amp;oldid=7109" title="Startup parameters">cur</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=7109&amp;oldid=6987" title="Startup parameters">last</a>) <input type="radio" value="7109" name="oldid" /><input type="radio" value="7109" name="diff" /> <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;oldid=7109" title="Startup parameters">20:55, 6 February 2007</a> <span class='history-user'><a href="/web/20070729231805/http://modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a></span> <span class='comment'>(Added double quotes to shortcuts, windows users need it)</span></li>
+<li>(<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=12136&amp;oldid=6987" title="Startup parameters">cur</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=6987&amp;oldid=6888" title="Startup parameters">last</a>) <input type="radio" value="6987" name="oldid" /><input type="radio" value="6987" name="diff" /> <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;oldid=6987" title="Startup parameters">00:08, 15 December 2006</a> <span class='history-user'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User:Kathaarsis&amp;action=edit" class="new" title="User:Kathaarsis">Kathaarsis</a></span> <span class='comment'>(<span class="autocomment"><a href="/web/20070729231805/http://modwiki.net/wiki/Startup_parameters#Launching_the_game_in_windowed_mode" title="Startup parameters">→</a>Launching the game in windowed mode</span>)</span></li>
+<li>(<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=12136&amp;oldid=6888" title="Startup parameters">cur</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=6888&amp;oldid=6887" title="Startup parameters">last</a>) <input type="radio" value="6888" name="oldid" /><input type="radio" value="6888" name="diff" /> <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;oldid=6888" title="Startup parameters">14:15, 16 November 2006</a> <span class='history-user'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User:AnthonyJ&amp;action=edit" class="new" title="User:AnthonyJ">AnthonyJ</a></span> <span class="minor">m</span> <span class='comment'>(Added connecting to a mod server example)</span></li>
+<li>(<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=12136&amp;oldid=6887" title="Startup parameters">cur</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=6887&amp;oldid=6175" title="Startup parameters">last</a>) <input type="radio" value="6887" name="oldid" /><input type="radio" value="6887" name="diff" /> <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;oldid=6887" title="Startup parameters">14:12, 16 November 2006</a> <span class='history-user'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User:AnthonyJ&amp;action=edit" class="new" title="User:AnthonyJ">AnthonyJ</a></span> <span class="minor">m</span> <span class='comment'>(Added the connect command)</span></li>
+<li>(<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=12136&amp;oldid=6175" title="Startup parameters">cur</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=6175&amp;oldid=6173" title="Startup parameters">last</a>) <input type="radio" value="6175" name="oldid" /><input type="radio" value="6175" name="diff" /> <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;oldid=6175" title="Startup parameters">15:55, 1 May 2006</a> <span class='history-user'><a href="/web/20070729231805/http://modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a></span> <span class='comment'>(Article restructured. Only specific WM's still need info on shortcuts)</span></li>
+<li>(<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=12136&amp;oldid=6173" title="Startup parameters">cur</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=6173&amp;oldid=6172" title="Startup parameters">last</a>) <input type="radio" value="6173" name="oldid" /><input type="radio" value="6173" name="diff" /> <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;oldid=6173" title="Startup parameters">22:02, 25 April 2006</a> <span class='history-user'><a href="/web/20070729231805/http://modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a></span> <span class='comment'>(<span class="autocomment"><a href="/web/20070729231805/http://modwiki.net/wiki/Startup_parameters#Linux" title="Startup parameters">→</a>Linux -</span> Added some further refinement, but mostly stubb headers)</span></li>
+<li>(<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=12136&amp;oldid=6172" title="Startup parameters">cur</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=6172&amp;oldid=6169" title="Startup parameters">last</a>) <input type="radio" value="6172" name="oldid" /><input type="radio" value="6172" name="diff" /> <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;oldid=6172" title="Startup parameters">21:38, 25 April 2006</a> <span class='history-user'><a href="/web/20070729231805/http://modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a></span> <span class='comment'>(<span class="autocomment"><a href="/web/20070729231805/http://modwiki.net/wiki/Startup_parameters#Windows" title="Startup parameters">→</a>Windows -</span> Making shortcuts should be clear, if not too much for newbies)</span></li>
+<li>(<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=12136&amp;oldid=6169" title="Startup parameters">cur</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=6169&amp;oldid=6168" title="Startup parameters">last</a>) <input type="radio" value="6169" name="oldid" /><input type="radio" value="6169" name="diff" /> <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;oldid=6169" title="Startup parameters">16:37, 22 April 2006</a> <span class='history-user'><a href="/web/20070729231805/http://modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a></span> <span class="minor">m</span> <span class='comment'>(Changed a title to simplify links pointing here)</span></li>
+<li>(<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=12136&amp;oldid=6168" title="Startup parameters">cur</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=6168&amp;oldid=5088" title="Startup parameters">last</a>) <input type="radio" value="6168" name="oldid" /><input type="radio" value="6168" name="diff" /> <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;oldid=6168" title="Startup parameters">16:34, 22 April 2006</a> <span class='history-user'><a href="/web/20070729231805/http://modwiki.net/wiki/User:Kamikazee" title="User:Kamikazee">Kamikazee</a></span> <span class='comment'>(First restructure steps, needs more content filled in later)</span></li>
+<li>(<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=12136&amp;oldid=5088" title="Startup parameters">cur</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=5088&amp;oldid=5087" title="Startup parameters">last</a>) <input type="radio" value="5088" name="oldid" /><input type="radio" value="5088" name="diff" /> <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;oldid=5088" title="Startup parameters">02:36, 10 December 2005</a> <span class='history-user'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User:TheHappyFriar&amp;action=edit" class="new" title="User:TheHappyFriar">TheHappyFriar</a></span> <span class='comment'>(added a useful shortcut (mine!))</span></li>
+<li>(<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=12136&amp;oldid=5087" title="Startup parameters">cur</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=5087&amp;oldid=4856" title="Startup parameters">last</a>) <input type="radio" value="5087" name="oldid" /><input type="radio" value="5087" name="diff" /> <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;oldid=5087" title="Startup parameters">22:43, 9 December 2005</a> <span class='history-user'><a href="/web/20070729231805/http://modwiki.net/wiki/User:Legshot" title="User:Legshot">Legshot</a></span> <span class='comment'>(<span class="autocomment"><a href="/web/20070729231805/http://modwiki.net/wiki/Startup_parameters#Tool_parameters" title="Startup parameters">→</a>Tool parameters</span>)</span></li>
+<li>(<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=12136&amp;oldid=4856" title="Startup parameters">cur</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=4856&amp;oldid=4811" title="Startup parameters">last</a>) <input type="radio" value="4856" name="oldid" /><input type="radio" value="4856" name="diff" /> <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;oldid=4856" title="Startup parameters">03:02, 15 November 2005</a> <span class='history-user'><a href="/web/20070729231805/http://modwiki.net/wiki/User:Democritus" title="User:Democritus">Democritus</a></span> <span class='comment'>(com_allowcheats is actually net_allowcheats)</span></li>
+<li>(<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=12136&amp;oldid=4811" title="Startup parameters">cur</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=4811&amp;oldid=4810" title="Startup parameters">last</a>) <input type="radio" value="4811" name="oldid" /><input type="radio" value="4811" name="diff" /> <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;oldid=4811" title="Startup parameters">23:43, 10 November 2005</a> <span class='history-user'><a href="/web/20070729231805/http://modwiki.net/wiki/User:Democritus" title="User:Democritus">Democritus</a></span> <span class='comment'>(added cheats)</span></li>
+<li>(<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=12136&amp;oldid=4810" title="Startup parameters">cur</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=4810&amp;oldid=4696" title="Startup parameters">last</a>) <input type="radio" value="4810" name="oldid" /><input type="radio" value="4810" name="diff" /> <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;oldid=4810" title="Startup parameters">23:38, 10 November 2005</a> <span class='history-user'><a href="/web/20070729231805/http://modwiki.net/wiki/User:Democritus" title="User:Democritus">Democritus</a></span> <span class='comment'>(<span class="autocomment"><a href="/web/20070729231805/http://modwiki.net/wiki/Startup_parameters#Tool_parameters" title="Startup parameters">→</a>Tool parameters</span>)</span></li>
+<li>(<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=12136&amp;oldid=4696" title="Startup parameters">cur</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=4696&amp;oldid=4695" title="Startup parameters">last</a>) <input type="radio" value="4696" name="oldid" /><input type="radio" value="4696" name="diff" /> <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;oldid=4696" title="Startup parameters">03:07, 1 November 2005</a> <span class='history-user'><a href="/web/20070729231805/http://modwiki.net/wiki/User:Democritus" title="User:Democritus">Democritus</a></span> <span class='comment'>(added fs_game_base)</span></li>
+<li>(<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=12136&amp;oldid=4695" title="Startup parameters">cur</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=4695&amp;oldid=4694" title="Startup parameters">last</a>) <input type="radio" value="4695" name="oldid" /><input type="radio" value="4695" name="diff" /> <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;oldid=4695" title="Startup parameters">02:54, 1 November 2005</a> <span class='history-user'><a href="/web/20070729231805/http://modwiki.net/wiki/User:Democritus" title="User:Democritus">Democritus</a></span> <span class='comment'>(adding category (modding))</span></li>
+<li>(<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=12136&amp;oldid=4694" title="Startup parameters">cur</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=4694&amp;oldid=4693" title="Startup parameters">last</a>) <input type="radio" value="4694" name="oldid" /><input type="radio" value="4694" name="diff" /> <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;oldid=4694" title="Startup parameters">02:53, 1 November 2005</a> <span class='history-user'><a href="/web/20070729231805/http://modwiki.net/wiki/User:Democritus" title="User:Democritus">Democritus</a></span> <span class='comment'>(adding little content)</span></li>
+<li>(<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=12136&amp;oldid=4693" title="Startup parameters">cur</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=4693&amp;oldid=4692" title="Startup parameters">last</a>) <input type="radio" value="4693" name="oldid" /><input type="radio" value="4693" name="diff" /> <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;oldid=4693" title="Startup parameters">02:46, 1 November 2005</a> <span class='history-user'><a href="/web/20070729231805/http://modwiki.net/wiki/User:Democritus" title="User:Democritus">Democritus</a></span> <span class="minor">m</span> <span class='comment'>(<span class="autocomment"><a href="/web/20070729231805/http://modwiki.net/wiki/Startup_parameters#Graphic_tweaks" title="Startup parameters">→</a>Graphic tweaks -</span> link typo)</span></li>
+<li>(<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=12136&amp;oldid=4692" title="Startup parameters">cur</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=4692&amp;oldid=4691" title="Startup parameters">last</a>) <input type="radio" value="4692" name="oldid" /><input type="radio" value="4692" name="diff" /> <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;oldid=4692" title="Startup parameters">02:46, 1 November 2005</a> <span class='history-user'><a href="/web/20070729231805/http://modwiki.net/wiki/User:Democritus" title="User:Democritus">Democritus</a></span> <span class='comment'>(refined content)</span></li>
+<li>(<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=12136&amp;oldid=4691" title="Startup parameters">cur</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=4691&amp;oldid=4690" title="Startup parameters">last</a>) <input type="radio" value="4691" name="oldid" /><input type="radio" value="4691" name="diff" /> <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;oldid=4691" title="Startup parameters">02:08, 1 November 2005</a> <span class='history-user'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User:Parsonsbear&amp;action=edit" class="new" title="User:Parsonsbear">Parsonsbear</a></span></li>
+<li>(<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=12136&amp;oldid=4690" title="Startup parameters">cur</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=4690&amp;oldid=4688" title="Startup parameters">last</a>) <input type="radio" value="4690" name="oldid" /><input type="radio" value="4690" name="diff" /> <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;oldid=4690" title="Startup parameters">02:08, 1 November 2005</a> <span class='history-user'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User:Parsonsbear&amp;action=edit" class="new" title="User:Parsonsbear">Parsonsbear</a></span> <span class='comment'>(<span class="autocomment"><a href="/web/20070729231805/http://modwiki.net/wiki/Startup_parameters#Tool_parameters" title="Startup parameters">→</a>Tool parameters</span>)</span></li>
+<li>(<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=12136&amp;oldid=4688" title="Startup parameters">cur</a>) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=4688&amp;oldid=4686" title="Startup parameters">last</a>) <input type="radio" value="4688" name="oldid" /><input type="radio" value="4688" name="diff" /> <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;oldid=4688" title="Startup parameters">23:30, 31 October 2005</a> <span class='history-user'><a href="/web/20070729231805/http://modwiki.net/wiki/User:Democritus" title="User:Democritus">Democritus</a></span> <span class="minor">m</span> <span class='comment'>(<span class="autocomment"><a href="/web/20070729231805/http://modwiki.net/wiki/Startup_parameters#Shortcut_basics" title="Startup parameters">→</a>Shortcut basics</span>)</span></li>
+<li>(<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;diff=12136&amp;oldid=4686" title="Startup parameters">cur</a>) (last) <input type="radio" value="4686" name="oldid" /><input type="radio" value="4686" name="diff" /> <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;oldid=4686" title="Startup parameters">23:27, 31 October 2005</a> <span class='history-user'><a href="/web/20070729231805/http://modwiki.net/wiki/User:Democritus" title="User:Democritus">Democritus</a></span> <span class='comment'>(NEW (help me))</span></li>
+</ul><input id="historysubmit" class="historysubmit" type="submit" accesskey="v" title="See the differences between the two selected versions of this page. [alt-v]" value="Compare selected versions" /></form>(Latest | Earliest) View (previous 50) (next 50) (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;limit=20&amp;action=history" title="Startup parameters">20</a> | <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;limit=50&amp;action=history" title="Startup parameters">50</a> | <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;limit=100&amp;action=history" title="Startup parameters">100</a> | <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;limit=250&amp;action=history" title="Startup parameters">250</a> | <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;limit=500&amp;action=history" title="Startup parameters">500</a>).<div class="printfooter">
+Retrieved from "<a href="/web/20070729231805/http://modwiki.net/wiki/Startup_parameters">http://modwiki.net/wiki/Startup_parameters</a>"</div>
+						<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="/web/20070729231805/http://modwiki.net/wiki/Startup_parameters">Article</a></li>
+				 <li id="ca-talk"><a href="/web/20070729231805/http://modwiki.net/wiki/Talk:Startup_parameters">Discussion</a></li>
+				 <li id="ca-edit"><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;action=edit">Edit</a></li>
+				 <li id="ca-history" class="selected"><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Startup_parameters&amp;action=history">History</a></li>
+		</ul>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Userlogin&amp;returnto=Startup_parameters">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/web/20070729231805im_/http://modwiki.net/wiki/upload/wiki.png);" href="/web/20070729231805/http://modwiki.net/wiki/Main_Page" title="Main Page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class='portlet' id='p-Main'>
+		<h5>Main</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/web/20070729231805/http://modwiki.net/wiki/Main_Page">Main Page</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 4'>
+		<h5>id Tech 4</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Doom-3"><a href="/web/20070729231805/http://modwiki.net/wiki/Doom_3">Doom 3</a></li>
+				<li id="n-Quake-4"><a href="/web/20070729231805/http://modwiki.net/wiki/Quake_4">Quake 4</a></li>
+				<li id="n-Prey"><a href="/web/20070729231805/http://modwiki.net/wiki/Prey">Prey</a></li>
+				<li id="n-ETQW"><a href="/web/20070729231805/http://modwiki.net/wiki/Enemy_Territory:_Quake_Wars">ETQW</a></li>
+				<li id="n-RTCW-2"><a href="/web/20070729231805/http://modwiki.net/wiki/Return_to_Castle_Wolfenstein_2">RTCW 2</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 5'>
+		<h5>id Tech 5</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Rage"><a href="/web/20070729231805/http://modwiki.net/wiki/Rage">Rage</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Quick Links'>
+		<h5>Quick Links</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Console"><a href="/web/20070729231805/http://modwiki.net/wiki/Console">Console</a></li>
+				<li id="n-Script-Events"><a href="/web/20070729231805/http://modwiki.net/wiki/Scripting">Script Events</a></li>
+				<li id="n-Material-Keywords"><a href="/web/20070729231805/http://modwiki.net/wiki/Material_%28decl%29">Material Keywords</a></li>
+				<li id="n-Modification-List"><a href="/web/20070729231805/http://modwiki.net/wiki/Modlist">Modification List</a></li>
+				<li id="n-Tutorial-List"><a href="/web/20070729231805/http://modwiki.net/wiki/Tutorial_list">Tutorial List</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Wiki'>
+		<h5>Wiki</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Open-tasks"><a href="/web/20070729231805/http://modwiki.net/wiki/modwiki:Open_tasks">Open tasks</a></li>
+				<li id="n-recentchanges"><a href="/web/20070729231805/http://modwiki.net/wiki/Special:Recentchanges">Recent changes</a></li>
+				<li id="n-Style-guide"><a href="/web/20070729231805/http://modwiki.net/wiki/modwiki:Style_guide">Style guide</a></li>
+				<li id="n-help"><a href="/web/20070729231805/http://modwiki.net/wiki/Help:Contents">Help</a></li>
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/web/20070729231805/http://modwiki.net/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" value="Search" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/web/20070729231805/http://modwiki.net/wiki/Special:Whatlinkshere/Startup_parameters">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/web/20070729231805/http://modwiki.net/wiki/Special:Recentchangeslinked/Startup_parameters">Related changes</a></li>
+<li id="t-upload"><a href="/web/20070729231805/http://modwiki.net/wiki/Special:Upload">Upload file</a></li>
+<li id="t-specialpages"><a href="/web/20070729231805/http://modwiki.net/wiki/Special:Specialpages">Special pages</a></li>
+			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="/web/20070729231805/http://www.mediawiki.org/"><img src="/web/20070729231805im_/http://modwiki.net/w/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="/web/20070729231805/http://www.gnu.org/copyleft/fdl.html"><img src="/web/20070729231805im_/http://modwiki.net/w/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+				<li id="privacy"><a href="/web/20070729231805/http://modwiki.net/wiki/modwiki:Privacy_policy" title="modwiki:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="/web/20070729231805/http://modwiki.net/wiki/modwiki:About" title="modwiki:About">About modwiki</a></li>
+				<li id="disclaimer"><a href="/web/20070729231805/http://modwiki.net/wiki/modwiki:General_disclaimer" title="modwiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+	<script type="text/javascript"> if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+<!-- Served by h982484 in 0.24 secs. -->
+</body></html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 23:18:05 Jul 29, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 1:53:12 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

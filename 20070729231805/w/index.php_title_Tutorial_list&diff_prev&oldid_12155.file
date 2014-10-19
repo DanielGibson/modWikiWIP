@@ -1,0 +1,726 @@
+DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex,follow" />
+<meta name="keywords" content="Tutorial list,Id Tech 4" />
+<link rel="shortcut icon" href="/web/20070729231805im_/http://modwiki.net/favicon.ico" />
+<link title="Creative Commons" type="application/rdf+xml" href="/w/index.php?title=Tutorial_list&amp;action=creativecommons" rel="meta" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<title>Tutorial list - modwiki</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20070729231805cs_/http://modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/web/20070729231805cs_/http://modwiki.net/w/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/w/skins/monobook/IE70Fixes.css?1";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
+		<script type="text/javascript" src="/web/20070729231805js_/http://modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20070729231805js_/http://modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/web/20070729231805cs_/http://modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231805cs_/http://modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231805cs_/http://modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns-0 ltr">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app1.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/www.modwiki.net\/w\/index.php?title=Tutorial_list&diff=prev&oldid=12155";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "29";
+var displayMonth = "Jul";
+var displayYear = "2007";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://www.modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20070729231805" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jun
+                       
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 23:18:05 Jul 29, 2007">JUL</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Aug
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_prv_off.png" alt="Previous capture" width="14" height="16" border="0" />
+                       
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 23:18:05 Jul 29, 2007">29</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2006
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 23:18:05 Jul 29, 2007">2007</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2008
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20070729231805*/http://www.modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>1 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">29 Jul 07 - 29 Jul 07</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:6:000000100000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000_2014:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">Tutorial list</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From modwiki</h3>
+			<div id="contentSub">(Difference between revisions)</div>
+									<div id="jump-to-nav">Jump to: <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#column-one">navigation</a>, <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#searchInput">search</a></div>			<!-- start content -->
+			
+			<table border='0' width='98%' cellpadding='0' cellspacing='4' class='diff'>
+			<tr>
+				<td colspan='2' width='50%' align='center' class='diff-otitle'><strong><a href='/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;oldid=12153'>Revision as of 08:09, 21 October 2007</a></strong><br /><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User:Fing&amp;action=edit" class="new" title="User:Fing">Fing</a>  (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Fing&amp;action=edit" class="new" title="User talk:Fing">Talk</a> | <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Contributions&amp;target=Fing" title="Special:Contributions">contribs</a>)<br /> <span class='comment'>(<span class="autocomment"><a href="/web/20070729231805/http://modwiki.net/wiki/Tutorial_list#Voldemorts_Tutorials" title="Tutorial list">→</a>Voldemorts Tutorials</span>)</span><br /><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12153" title="Tutorial list" id="differences-prevlink">? Previous diff</a></td>
+				<td colspan='2' width='50%' align='center' class='diff-ntitle'><strong><a href='/web/20070729231805/http://modwiki.net/wiki/Tutorial_list'>Current revision</a></strong><br /><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User:Fing&amp;action=edit" class="new" title="User:Fing">Fing</a>  (<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=User_talk:Fing&amp;action=edit" class="new" title="User talk:Fing">Talk</a> | <a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Contributions&amp;target=Fing" title="Special:Contributions">contribs</a>) <br /> <span class='comment'>(<span class="autocomment"><a href="/web/20070729231805/http://modwiki.net/wiki/Tutorial_list#Voldemorts_Tutorials" title="Tutorial list">→</a>Voldemorts Tutorials</span>)</span><br /></td>
+			</tr>
+			<tr><td colspan="2" align="left"><strong>Line 151:</strong></td>
+<td colspan="2" align="left"><strong>Line 151:</strong></td></tr>
+<tr><td> </td><td class='diff-context'>*[http://www.doom3world.org/phpbb2/viewtopic.php?t=9400 Alternative to Scripting Machinery]</td><td> </td><td class='diff-context'>*[http://www.doom3world.org/phpbb2/viewtopic.php?t=9400 Alternative to Scripting Machinery]</td></tr>
+<tr><td> </td><td class='diff-context'>*[http://www.doom3world.org/phpbb2/viewtopic.php?p=84076#84076 func_pendulom tut]</td><td> </td><td class='diff-context'>*[http://www.doom3world.org/phpbb2/viewtopic.php?p=84076#84076 func_pendulom tut]</td></tr>
+<tr><td>-</td><td class='diff-deletedline'>*<span class="diffchange">(</span>http://www.doom3world.org/phpbb2/viewtopic.php?p=84492#84492<span class="diffchange">)</span></td><td>+</td><td class='diff-addedline'>*<span class="diffchange">[</span>http://www.doom3world.org/phpbb2/viewtopic.php?p=84492#84492 <span class="diffchange">func_phantom_object and target influence]</span></td></tr>
+<tr><td> </td><td class='diff-context'>*(http://www.doom3world.org/phpbb2/viewtopic.php?t=9759)</td><td> </td><td class='diff-context'>*(http://www.doom3world.org/phpbb2/viewtopic.php?t=9759)</td></tr>
+<tr><td> </td><td class='diff-context'>*(http://www.doom3world.org/phpbb2/viewtopic.php?p=86265#86265)</td><td> </td><td class='diff-context'>*(http://www.doom3world.org/phpbb2/viewtopic.php?p=86265#86265)</td></tr>
+
+			</table>
+		<hr /><h2>Current revision</h2>
+<p>This page is a listing of tutorials for <a href="/web/20070729231805/http://modwiki.net/wiki/Id_Tech_4" title="Id Tech 4">id Tech 4</a> game modding located outside the wiki.
+</p>
+<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#Mapping_basics"><span class="tocnumber">1</span> <span class="toctext">Mapping basics</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#Video_tutorials"><span class="tocnumber">2</span> <span class="toctext">Video tutorials</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#Goliath.27s_video_tutorials"><span class="tocnumber">2.1</span> <span class="toctext">Goliath's video tutorials</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#Video_tutorials_by_MNeMiC"><span class="tocnumber">2.2</span> <span class="toctext">Video tutorials by MNeMiC</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#Brain_Trepaning.27s_level_editing_videos"><span class="tocnumber">2.3</span> <span class="toctext">Brain Trepaning's level editing videos</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#HTML.2FTXT_tutorials"><span class="tocnumber">3</span> <span class="toctext">HTML/TXT tutorials</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#Func_Static.27s_Tutorials"><span class="tocnumber">3.1</span> <span class="toctext">Func Static's Tutorials</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#BNA.21.27s_tutorials"><span class="tocnumber">3.2</span> <span class="toctext">BNA!'s tutorials</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#bb_matt.27s_tutorials"><span class="tocnumber">3.3</span> <span class="toctext">bb_matt's tutorials</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#Exitus.27s_Doom_3_tutorials"><span class="tocnumber">3.4</span> <span class="toctext">Exitus's Doom 3 tutorials</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#Method.27s_Tutorials"><span class="tocnumber">3.5</span> <span class="toctext">Method's Tutorials</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#NoMercy.27s_Tutorials"><span class="tocnumber">3.6</span> <span class="toctext">NoMercy's Tutorials</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#FreakyGaming.27s_Tutorials"><span class="tocnumber">3.7</span> <span class="toctext">FreakyGaming's Tutorials</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#Voldemorts_Tutorials"><span class="tocnumber">3.8</span> <span class="toctext">Voldemorts Tutorials</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#Paths_.2F_Nurbs"><span class="tocnumber">4</span> <span class="toctext">Paths / Nurbs</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#Lights_and_lighting_techniques"><span class="tocnumber">5</span> <span class="toctext">Lights and lighting techniques</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#Cinematics_and_camera_manipulation"><span class="tocnumber">6</span> <span class="toctext">Cinematics and camera manipulation</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#Old_Quake3_tutorials_relevant_to_Doom_3"><span class="tocnumber">6.1</span> <span class="toctext">Old Quake3 tutorials relevant to Doom 3</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#Tutorial_maps"><span class="tocnumber">7</span> <span class="toctext">Tutorial maps</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#GoliathVT.27s_trigger_tutorial"><span class="tocnumber">7.1</span> <span class="toctext">GoliathVT's trigger tutorial</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#GUI_scripting"><span class="tocnumber">8</span> <span class="toctext">GUI scripting</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#Zeh.27s_tutorials"><span class="tocnumber">8.1</span> <span class="toctext">Zeh's tutorials</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#Other_tutorials"><span class="tocnumber">8.2</span> <span class="toctext">Other tutorials</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#Level_scripting"><span class="tocnumber">9</span> <span class="toctext">Level scripting</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#rich_is_bored.27s_tutorials"><span class="tocnumber">9.1</span> <span class="toctext">rich_is_bored's tutorials</span></a></li>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#Particles_.2F_Particle_effects"><span class="tocnumber">9.2</span> <span class="toctext">Particles / Particle effects</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#Coding_with_the_SDK"><span class="tocnumber">10</span> <span class="toctext">Coding with the SDK</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#Trevor.27s_Tutorials"><span class="tocnumber">10.1</span> <span class="toctext">Trevor's Tutorials</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#Texture_creation"><span class="tocnumber">11</span> <span class="toctext">Texture creation</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#Modelling"><span class="tocnumber">12</span> <span class="toctext">Modelling</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;diff=prev&amp;oldid=12155#Brain_Trepaning.27s_modelling_videos_.283dsmax_.2F_gmax_related.29"><span class="tocnumber">12.1</span> <span class="toctext">Brain Trepaning's modelling videos (3dsmax / gmax related)</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=1" title="Edit section: Mapping basics">edit</a>]</div><a name="Mapping_basics"></a><h2>Mapping basics</h2>
+<ul><li><a href="/web/20070729231805/http://method.gamedesign.net/tips.htm" class='external text' title="http://method.gamedesign.net/tips.htm">Level Design Tips</a>
+</li><li><a href="/web/20070729231805/http://www.gamedesign.net/node/659" class='external text' title="http://www.gamedesign.net/node/659">Map DEF File</a>
+</li><li><a href="/web/20070729231805/http://www.gamedesign.net/node/510" class='external text' title="http://www.gamedesign.net/node/510">Doom3 CFG files</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=2" title="Edit section: Video tutorials">edit</a>]</div><a name="Video_tutorials"></a><h2>Video tutorials</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=3" title="Edit section: Goliath's video tutorials">edit</a>]</div><a name="Goliath.27s_video_tutorials"></a><h3>Goliath's video tutorials</h3>
+<ul><li><a href="/web/20070729231805/http://files.filefront.com/D3W_Vid_Tutorial_Editor_Intro/;7318030;/fileinfo.html" class='external text' title="http://files.filefront.com/D3W_Vid_Tutorial_Editor_Intro/;7318030;/fileinfo.html">Introduction to the Editor</a>
+</li><li><a href="/web/20070729231805/http://www.fileplanet.com/files/140000/144104.shtml" class='external text' title="http://www.fileplanet.com/files/140000/144104.shtml">Introduction to the Editor (FilePlanet Mirror)</a>
+</li><li><a href="/web/20070729231805/http://files.filefront.com/D3W+Video+Tutorial+++2+Rooms/;7317983;;/fileinfo.html" class='external text' title="http://files.filefront.com/D3W+Video+Tutorial+++2+Rooms/;7317983;;/fileinfo.html">Connecting Two Rooms, Creating Doors, Using Visportals</a>
+</li><li><a href="/web/20070729231805/http://files.filefront.com/D3W+Vid+Tutorial+Sound+Editor/;7318075;;/fileinfo.html" class='external text' title="http://files.filefront.com/D3W+Vid+Tutorial+Sound+Editor/;7318075;;/fileinfo.html">The Sound Editor</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=4" title="Edit section: Video tutorials by MNeMiC">edit</a>]</div><a name="Video_tutorials_by_MNeMiC"></a><h3>Video tutorials by MNeMiC</h3>
+<p>(please note, TSCC codec is required to view these, which you can get *<a href="/web/20070729231805/http://www.techsmith.com/products/studio/codecdownload.asp" class='external text' title="http://www.techsmith.com/products/studio/codecdownload.asp">here</a> )
+</p>
+<ul><li><a href="/web/20070729231805/http://www.mnemic.tk/" class='external text' title="http://www.mnemic.tk/">Various Video Tutorials</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=2922" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=2922">Basic Room Video Tutorial</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=2992" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=2992">Sliding Door Video Tutorial</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3309" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3309">Particle Smoke Video Tutorial</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3310" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3310">Turkey Game Video Tutorial</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=4267" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=4267">GUI Unlocking A Door Video Tutorial</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=4268" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=4268">Spawning A Pathfinding Monster</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=4269" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=4269">Triggering Sounds Video Tutorial</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=4411" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=4411">Breakable Glass Video Tutorial</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=4412" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=4412">Ladder Video Tutorial</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=4413" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=4413">Elevator Video Tutorial</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=4414" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=4414">Patch Handrail Video Tutorial</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=4474" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=4474">Mirror Video Tutorial</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=4475" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=4475">Terrain Video Tutorial</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=4476" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=4476">Skybox Video Tutorial</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=4513" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=4513">Custom Texture Creation Video Tutorial</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=5412" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=5412">Explosion Video Tutorial</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=5792" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=5792">Descending Trite Video Tutorial</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=5793" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=5793">Swinging Lights Video Tutorial</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=5794" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=5794">A Wallcrawling Monster Video Tutorial</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=5959" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=5959">Telporters Video Tutorial</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=5960" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=5960">Ragdolls Video Tutorial</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=5" title="Edit section: Brain Trepaning's level editing videos">edit</a>]</div><a name="Brain_Trepaning.27s_level_editing_videos"></a><h3>Brain Trepaning's level editing videos</h3>
+<ul><li><a href="/web/20070729231805/http://www.trepaning.com/d3Vids/d3Vids.htm" class='external text' title="http://www.trepaning.com/d3Vids/d3Vids.htm">Master List</a>
+<ul><li>How to Create a Room
+</li><li>How to Create Your Second Room
+</li><li>How to Optimize Your Map
+</li><li>How to Fix Leaks
+</li><li>How to Add a LevelShot to Your Map
+</li><li>How to Make Your Map a PK4 File
+</li><li>How to Make Curves
+</li><li>How To Safely Alter Original Doom 3 Content
+</li><li>How To Bring a Textured Mesh into Doom 3
+</li><li>How To Get a Multi-Textured Mesh into Doom 3
+</li><li>Multi Mesh and Texture Object from 3ds Max to Doom 3
+</li><li>Animated Prop Meshes for Doom 3
+</li><li>Changing Monster Meshes in Doom 3
+</li><li>Changing Monster Meshes in Doom 3 with GMAX
+</li><li>Creating Caves in DOOM 3
+</li><li>RenderBump for Doom 3
+</li><li>Blending Terrain Textures for DOOM 3
+</li></ul>
+</li></ul>
+<ul><li><a href="/web/20070729231805/http://www.3dbuzz.com/" class='external text' title="http://www.3dbuzz.com/">3DBuzz Doom3 Video Tutorials</a>
+</li></ul>
+<ul><li><a href="/web/20070729231805/http://www.planetdoom.com/leveled/videotuts/index.shtml" class='external text' title="http://www.planetdoom.com/leveled/videotuts/index.shtml">PlanetDoom Video Tutorials</a>
+<ul><li>Basic rooms
+</li><li>Map optimisation
+</li><li>Finding and fixing leaks
+</li><li>pk4 creation
+</li><li>Curve basics
+</li><li>etc.
+</li></ul>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=6" title="Edit section: HTML/TXT tutorials">edit</a>]</div><a name="HTML.2FTXT_tutorials"></a><h2>HTML/TXT tutorials</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=7" title="Edit section: Func Static's Tutorials">edit</a>]</div><a name="Func_Static.27s_Tutorials"></a><h3>Func Static's Tutorials</h3>
+<ul><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?p=108294" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?p=108294">Useing GUIs on level withoutany Models</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=8" title="Edit section: BNA!'s tutorials">edit</a>]</div><a name="BNA.21.27s_tutorials"></a><h3>BNA!'s tutorials</h3>
+<ul><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3016" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3016">Getting Started: your first box map</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3070" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3070">Connecting two rooms, doors, and visportals</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3214" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3214">Pipes and Patches</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=9" title="Edit section: bb_matt's tutorials">edit</a>]</div><a name="bb_matt.27s_tutorials"></a><h3>bb_matt's tutorials</h3>
+<ul><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=4556" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=4556">Patch Mesh Tutorial 1&nbsp;: Curved Hallway</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=4572" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=4572">Patch Mesh Tutorial 2&nbsp;: Bevel + Floor Trim</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=4808" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=4808">Patch Mesh Tutorial 3 | pipes 1, 90° bend</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=4868" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=4868">Patch Mesh Tutorial 4 | pipes 2, 45° bend</a>
+</li></ul>
+<ul><li><a href="/web/20070729231805/http://www.gamedesign.net/book/view/688" class='external text' title="http://www.gamedesign.net/book/view/688">Bending Cylinder Patches</a>
+</li></ul>
+<ul><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?p=73778#73778" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?p=73778#73778">Different/Custom Player Sounds per Surface</a>
+</li></ul>
+<ul><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=5620" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=5620">Mini text Tutorials based on MNeMiC Videos</a>
+</li></ul>
+<ul><li><a href="/web/20070729231805/http://blaze.spicelab.net/doom3/" class='external text' title="http://blaze.spicelab.net/doom3/">Various Mapping Basics on SpiceLab.Net</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3329" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3329">Creating Stairs</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3390" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3390">Texture Manipulation</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3261" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3261">Creating a Multiplayer Map</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3277" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3277">Tips on Wall Building and Positioning</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3231" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3231">Finding Leaks</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3181" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3181">Fun with Physics/Editing Ragdolls</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3264" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3264">Making Railings for Stairs</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=2981" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=2981">A bit about Ladders</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3185" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3185">Projected Lights</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3119" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3119">Receptionist from Mars City</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3204" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3204">Custom PDA Tutorial Part 1</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3283" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3283">Custom PDA Part 2: Security Clearance</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3182" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3182">Opening Doors with a GUI</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3021" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3021">Creating a "Turkey Smasher" Arcade Game</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3518" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3518">Making dead zombies come back to life</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3529" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3529">Throwing a ragdoll through glass</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3353" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3353">Liquids Tutorial</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3588" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3588">Glass and Breakable Glass</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3627" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3627">Vacuum/Outdoor Zones</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3629" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3629">Creating a Storage Cabinet</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3571" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3571">Sky **Assembling 6 textures to make a Doom3 skybox</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?p=31568#31568" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?p=31568#31568">Liquids in Doom3</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=4105" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=4105">Making an Alpha Channel (And making it work!)</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=4861" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=4861">Making a robot sentry that leads the player (video and text tutorial) </a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=5252" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=5252">Quick Tutorial: Curved Stairs</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=6038" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=6038">Teleporter tutorial</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=5482" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=5482">How to add a Levelshot to your Multiplayer Map</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=5708" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=5708">Making a Trite descend from the ceiling on a web</a> 
+</li></ul>
+<ul><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=6067" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=6067">Monsters on the Walls, Part 1</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=6853" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=6853">Monsters on the Walls, Part 2</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=10" title="Edit section: Exitus's Doom 3 tutorials">edit</a>]</div><a name="Exitus.27s_Doom_3_tutorials"></a><h3>Exitus's Doom 3 tutorials</h3>
+<ul><li><a href="/web/20070729231805/http://d3collective.hollosite.com/tutorials/" class='external text' title="http://d3collective.hollosite.com/tutorials/">Index</a> 
+</li><li><a href="/web/20070729231805/http://d3collective.hollosite.com/tutorials/impdoor/impdoor.html" class='external text' title="http://d3collective.hollosite.com/tutorials/impdoor/impdoor.html">Imp Door</a> 
+</li><li><a href="/web/20070729231805/http://d3collective.hollosite.com/tutorials/sentryloader/sentryloader.html" class='external text' title="http://d3collective.hollosite.com/tutorials/sentryloader/sentryloader.html">Sentry Loader</a> 
+</li><li><a href="/web/20070729231805/http://d3collective.hollosite.com/tutorials/objectives/objectives.html" class='external text' title="http://d3collective.hollosite.com/tutorials/objectives/objectives.html">Objectives</a>  
+</li><li><a href="/web/20070729231805/http://d3collective.hollosite.com/tutorials/locations/locations.html" class='external text' title="http://d3collective.hollosite.com/tutorials/locations/locations.html">Locations</a> 
+</li><li><a href="/web/20070729231805/http://d3collective.hollosite.com/tutorials/bloodstains/bloodstains.html" class='external text' title="http://d3collective.hollosite.com/tutorials/bloodstains/bloodstains.html">Blood Stains</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=11" title="Edit section: Method's Tutorials">edit</a>]</div><a name="Method.27s_Tutorials"></a><h3>Method's Tutorials</h3>
+<ul><li><a href="/web/20070729231805/http://methodonline.com/ld_process.htm" class='external text' title="http://methodonline.com/ld_process.htm">Level Design Process</a>
+</li><li><a href="/web/20070729231805/http://methodonline.com/tips.htm" class='external text' title="http://methodonline.com/tips.htm">Level Design Tips</a>
+</li><li><a href="/web/20070729231805/http://methodonline.com/ctf_tips.htm" class='external text' title="http://methodonline.com/ctf_tips.htm">CTF Level Design Tips</a>
+</li><li><a href="/web/20070729231805/http://methodonline.com/decals.htm" class='external text' title="http://methodonline.com/decals.htm">Alphabet Decals</a>
+</li><li><a href="/web/20070729231805/http://methodonline.com/patches.htm" class='external text' title="http://methodonline.com/patches.htm">Bending Cylinder Patches</a>
+</li><li><a href="/web/20070729231805/http://methodonline.com/def.htm" class='external text' title="http://methodonline.com/def.htm">Map DEF File</a>
+</li></ul>
+<ul><li><a href="/web/20070729231805/http://www.gamedesign.net/node/1188" class='external text' title="http://www.gamedesign.net/node/1188">Quake 4 Level Design FAQ</a>
+</li><li><a href="/web/20070729231805/http://www.gamedesign.net/node/1186" class='external text' title="http://www.gamedesign.net/node/1186">Quake 4 Ambient Light</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=12" title="Edit section: NoMercy's Tutorials">edit</a>]</div><a name="NoMercy.27s_Tutorials"></a><h3>NoMercy's Tutorials</h3>
+<ul><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=12067" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=12067">Creating Terrain Using 3dsmax</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=13" title="Edit section: FreakyGaming's Tutorials">edit</a>]</div><a name="FreakyGaming.27s_Tutorials"></a><h3>FreakyGaming's Tutorials</h3>
+<ul><li><a href="/web/20070729231805/http://doom.freakygaming.com/tutorials/record_avi_videos_in_doom_3.html" class='external text' title="http://doom.freakygaming.com/tutorials/record_avi_videos_in_doom_3.html">Record avi videos in Doom 3</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=14" title="Edit section: Voldemorts Tutorials">edit</a>]</div><a name="Voldemorts_Tutorials"></a><h3>Voldemorts Tutorials</h3>
+<ul><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=9400" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=9400">Alternative to Scripting Machinery</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?p=84076#84076" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?p=84076#84076">func_pendulom tut</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?p=84492#84492" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?p=84492#84492">func_phantom_object and target influence</a>
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=9759" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=9759">http://www.doom3world.org/phpbb2/viewtopic.php?t=9759</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?p=86265#86265" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?p=86265#86265">http://www.doom3world.org/phpbb2/viewtopic.php?p=86265#86265</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=9793" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=9793">http://www.doom3world.org/phpbb2/viewtopic.php?t=9793</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?p=86762#86762" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?p=86762#86762">http://www.doom3world.org/phpbb2/viewtopic.php?p=86762#86762</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?p=86816#86816" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?p=86816#86816">http://www.doom3world.org/phpbb2/viewtopic.php?p=86816#86816</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?p=86881#86881" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?p=86881#86881">http://www.doom3world.org/phpbb2/viewtopic.php?p=86881#86881</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?p=87681#87681" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?p=87681#87681">http://www.doom3world.org/phpbb2/viewtopic.php?p=87681#87681</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=9899" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=9899">http://www.doom3world.org/phpbb2/viewtopic.php?t=9899</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=9906" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=9906">http://www.doom3world.org/phpbb2/viewtopic.php?t=9906</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?p=88648#88648" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?p=88648#88648">http://www.doom3world.org/phpbb2/viewtopic.php?p=88648#88648</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?p=90341#90341" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?p=90341#90341">http://www.doom3world.org/phpbb2/viewtopic.php?p=90341#90341</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=10184" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=10184">http://www.doom3world.org/phpbb2/viewtopic.php?t=10184</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=10185" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=10185">http://www.doom3world.org/phpbb2/viewtopic.php?t=10185</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=10560" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=10560">http://www.doom3world.org/phpbb2/viewtopic.php?t=10560</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?p=94753#94753" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?p=94753#94753">http://www.doom3world.org/phpbb2/viewtopic.php?p=94753#94753</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=10562" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=10562">http://www.doom3world.org/phpbb2/viewtopic.php?t=10562</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?p=94792#94792" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?p=94792#94792">http://www.doom3world.org/phpbb2/viewtopic.php?p=94792#94792</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?p=94794#94794" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?p=94794#94794">http://www.doom3world.org/phpbb2/viewtopic.php?p=94794#94794</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=11239" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=11239">http://www.doom3world.org/phpbb2/viewtopic.php?t=11239</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?p=113520#113520" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?p=113520#113520">http://www.doom3world.org/phpbb2/viewtopic.php?p=113520#113520</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?p=112730#112730" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?p=112730#112730">http://www.doom3world.org/phpbb2/viewtopic.php?p=112730#112730</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=12624" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=12624">http://www.doom3world.org/phpbb2/viewtopic.php?t=12624</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=12637" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=12637">http://www.doom3world.org/phpbb2/viewtopic.php?t=12637</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=12639" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=12639">http://www.doom3world.org/phpbb2/viewtopic.php?t=12639</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=12695" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=12695">http://www.doom3world.org/phpbb2/viewtopic.php?t=12695</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?p=115339#115339" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?p=115339#115339">http://www.doom3world.org/phpbb2/viewtopic.php?p=115339#115339</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?p=115491#115491" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?p=115491#115491">http://www.doom3world.org/phpbb2/viewtopic.php?p=115491#115491</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?p=115498#115498" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?p=115498#115498">http://www.doom3world.org/phpbb2/viewtopic.php?p=115498#115498</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?p=115500#115500" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?p=115500#115500">http://www.doom3world.org/phpbb2/viewtopic.php?p=115500#115500</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=12723" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=12723">http://www.doom3world.org/phpbb2/viewtopic.php?t=12723</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=12755" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=12755">http://www.doom3world.org/phpbb2/viewtopic.php?t=12755</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=12756" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=12756">http://www.doom3world.org/phpbb2/viewtopic.php?t=12756</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?p=115883#115883" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?p=115883#115883">http://www.doom3world.org/phpbb2/viewtopic.php?p=115883#115883</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=12514&amp;highlight=patch" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=12514&amp;highlight=patch">http://www.doom3world.org/phpbb2/viewtopic.php?t=12514&amp;highlight=patch</a>)
+</li><li>(<a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?p=115893#115893" class='external free' title="http://www.doom3world.org/phpbb2/viewtopic.php?p=115893#115893">http://www.doom3world.org/phpbb2/viewtopic.php?p=115893#115893</a>)
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=15" title="Edit section: Paths / Nurbs">edit</a>]</div><a name="Paths_.2F_Nurbs"></a><h2>Paths / Nurbs</h2>
+<ul><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=5123" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=5123">Basic NURBS editing</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=6031" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=6031">Moveables following nurbs</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=7579" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=7579">BEERman's Multistop Rideable Train Tutorial</a> 
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=16" title="Edit section: Lights and lighting techniques">edit</a>]</div><a name="Lights_and_lighting_techniques"></a><h2>Lights and lighting techniques</h2>
+<ul><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=6306" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=6306">Projected Lights (With screenshots!)</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=6314" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=6314">Projected Lights, Part II **Custom Lights</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3263" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3263">Simple Destructable Lights</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?p=31668" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?p=31668">Swinging Lights Tutorial</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3366" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3366">Creating a Swinging Light</a> 
+</li><li><a href="/web/20070729231805/http://www.map-center.com/modules.php?name=Forums&amp;file=viewtopic&amp;t=4505#30260" class='external text' title="http://www.map-center.com/modules.php?name=Forums&amp;file=viewtopic&amp;t=4505#30260">Lighting Tips</a>  By Raven of Raven software.
+</li><li><a href="/web/20070729231805/http://articles.filefront.com/151" class='external text' title="http://articles.filefront.com/151">Scripting Light Switches</a> 
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=17" title="Edit section: Cinematics and camera manipulation">edit</a>]</div><a name="Cinematics_and_camera_manipulation"></a><h2>Cinematics and camera manipulation</h2>
+<ul><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=6176" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=6176">Cinematic with moving camera in editor</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=6356" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=6356">Monster Cam</a> 
+</li><li>Security Cameras **See GUI Scripting section below
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=18" title="Edit section: Old Quake3 tutorials relevant to Doom 3">edit</a>]</div><a name="Old_Quake3_tutorials_relevant_to_Doom_3"></a><h3>Old Quake3 tutorials relevant to Doom 3</h3>
+<ul><li><a href="/web/20070729231805/http://fps.brainerd.net/patchmesh.htm" class='external text' title="http://fps.brainerd.net/patchmesh.htm">Patch-Mesh 101 **extensive info on Patch Meshes **the exact same methods apply to Doom3 editing.</a> 
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=19" title="Edit section: Tutorial maps">edit</a>]</div><a name="Tutorial_maps"></a><h2>Tutorial maps</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=20" title="Edit section: GoliathVT's trigger tutorial">edit</a>]</div><a name="GoliathVT.27s_trigger_tutorial"></a><h3>GoliathVT's trigger tutorial</h3>
+<ul><li><a href="/web/20070729231805/http://files.filefront.com/Doom3+Trigger+Tutorial+Map/;4288682;;/fileinfo.html" class='external text' title="http://files.filefront.com/Doom3+Trigger+Tutorial+Map/;4288682;;/fileinfo.html">Interactive Trigger Tutorial Map</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=21" title="Edit section: GUI scripting">edit</a>]</div><a name="GUI_scripting"></a><h2>GUI scripting</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=22" title="Edit section: Zeh's tutorials">edit</a>]</div><a name="Zeh.27s_tutorials"></a><h3>Zeh's tutorials</h3>
+<ul><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3127" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3127">Tutorial 0: A GUI Script Primer</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3128" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3128">Tutorial 1: Your First GUI Script</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3158" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3158">Tutorial 2: Using the GUI Editor</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3241" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3241">Tutorial 3: Preparing and Importing Assets (cake status reporter #1)</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3606" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3606">Tutorial 4: Making Simple Interactions (cake status reporter #2)</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3868" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3868">Tutorial 5: Applying a GUI script to a map (cake status reporter #3)</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=5383" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=5383">Tutorial 6: Creating a new HUD GUI (classic DOOM HUD #1)</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=5486" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=5486">Tutorial 7: Creating basic HUD items (classic DOOM HUD #2)</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=5494" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=5494">Tutorial 8: Using named events (classic DOOM HUD #3)</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=5543" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=5543">Tutorial 9: Animating the marine face HUD (classic DOOM HUD #4)</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=11923" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=11923">Tutorial 10: Using custom fonts (classic DOOM HUD #5)</a>
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=11924" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=11924">Tutorial 11: Editing fonts (classic DOOM HUD #6)</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=23" title="Edit section: Other tutorials">edit</a>]</div><a name="Other_tutorials"></a><h3>Other tutorials</h3>
+<ul><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=973" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=973">Quick &amp; Dirty GUI Tutorial</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=2559" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=2559">GUI Command Reference (work in progress)</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3782" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3782">Security Camera Tutorial</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=7207" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=7207">Making Video GUIs</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=24" title="Edit section: Level scripting">edit</a>]</div><a name="Level_scripting"></a><h2>Level scripting</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=25" title="Edit section: rich_is_bored's tutorials">edit</a>]</div><a name="rich_is_bored.27s_tutorials"></a><h3>rich_is_bored's tutorials</h3>
+<ul><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3144" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3144">Tutorial 1: Scripting Primer</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3145" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3145">Tutorial 2: Mechanical Arm</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3235" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3235">Tutorial 3: Creating a Machine</a> 
+</li></ul>
+<ul><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3504" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3504">Custom GUI/HUD Data from Scripts</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=862" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=862">A Simple Rotating Door</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=2562" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=2562">Level Scripting Reference (work in progress)</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=1774" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=1774">Entity Scripting: How it works</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=847" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=847">Camera Tutorial</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=214" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=214">Custom gun: Hellfire Cannon</a> 
+</li><li><a href="/web/20070729231805/http://articles.filefront.com/151" class='external text' title="http://articles.filefront.com/151">Scripting Light Switches</a> 
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=26" title="Edit section: Particles / Particle effects">edit</a>]</div><a name="Particles_.2F_Particle_effects"></a><h3>Particles / Particle effects</h3>
+<ul><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=2488" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=2488">Particles &amp; Shapes</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3333" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3333">Particle Effects: The Editor</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3437" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3437">Particle Effects:  Using Custom Assets</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=1014" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=1014">Particle Syntax Reference</a> 
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=27" title="Edit section: Coding with the SDK">edit</a>]</div><a name="Coding_with_the_SDK"></a><h2>Coding with the SDK</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=28" title="Edit section: Trevor's Tutorials">edit</a>]</div><a name="Trevor.27s_Tutorials"></a><h3>Trevor's Tutorials</h3>
+<ul><li><a href="/web/20070729231805/http://a.parsons.edu/~evan/d3cc/tut01.html" class='external text' title="http://a.parsons.edu/~evan/d3cc/tut01.html">Doom 3 Coding Center Pt. 1</a>
+</li><li><a href="/web/20070729231805/http://a.parsons.edu/~evan/d3cc/tut02.html" class='external text' title="http://a.parsons.edu/~evan/d3cc/tut02.html">Doom 3 Coding Center Pt. 2</a>
+</li><li><a href="/web/20070729231805/http://a.parsons.edu/~evan/d3cc/tut03.html" class='external text' title="http://a.parsons.edu/~evan/d3cc/tut03.html">Doom 3 Coding Center Pt. 3</a>
+</li><li><a href="/web/20070729231805/http://a.parsons.edu/~evan/d3cc/tut05.html" class='external text' title="http://a.parsons.edu/~evan/d3cc/tut05.html">Doom 3 Coding Center Pt. 5</a>
+</li><li><a href="/web/20070729231805/http://a.parsons.edu/~evan/d3cc/tut08.html" class='external text' title="http://a.parsons.edu/~evan/d3cc/tut08.html">Doom 3 Coding Center Pt. 8</a>
+</li><li><a href="/web/20070729231805/http://a.parsons.edu/~evan/d3cc/tut09.html" class='external text' title="http://a.parsons.edu/~evan/d3cc/tut09.html">Doom 3 Coding Center Pt. 9</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=29" title="Edit section: Texture creation">edit</a>]</div><a name="Texture_creation"></a><h2>Texture creation</h2>
+<ul><li> <a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=482" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=482">Tutorial 1</a> 
+</li><li> <a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=483" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=483">Tutorial 2</a> 
+</li><li> <a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=563" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=563">Tutorial 3: Renderbump flat</a> 
+</li><li> <a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=1007" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=1007">Tutorial 4: Renderbump flat</a>
+</li><li> <a href="/web/20070729231805/http://www.methodonline.com/texture_tutorial.htm" class='external text' title="http://www.methodonline.com/texture_tutorial.htm">Texture Creation From Reference</a>
+</li><li> <a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=2573" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=2573">Info on Bumpmapping</a> 
+</li><li> <a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=2410" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=2410">Generating Bumpmaps from a PhotoSource</a> 
+</li><li> <a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=357" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=357">Texture Resources</a> 
+</li><li> <a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=6617" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=6617">Quick and Dirty Material Shader Primer</a>
+</li><li> <a href="/web/20070729231805/http://www.cadtutor.net/dd/photo/seamless/seamless.html" class='external text' title="http://www.cadtutor.net/dd/photo/seamless/seamless.html">Creating Seamless Tiles in Photoshop</a>
+</li><li> <a href="/web/20070729231805/http://www.scifi-meshes.com/forums/dojo/1493-seamless-textures-tutorial-part-1-organic.html" class='external text' title="http://www.scifi-meshes.com/forums/dojo/1493-seamless-textures-tutorial-part-1-organic.html">Creating Seamless Tiles in The GIMP</a>
+</li><li> <a href="/web/20070729231805/http://zarria.net/nrmphoto/nrmphoto.html" class='external text' title="http://zarria.net/nrmphoto/nrmphoto.html">How to make normal maps from real surfaces</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=30" title="Edit section: Modelling">edit</a>]</div><a name="Modelling"></a><h2>Modelling</h2>
+<ul><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=1914" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=1914">3dsmax exporter to md5</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=2884" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=2884">MD5 File Formats</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=3209" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3209">md5mesh to obj converter</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=1969" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=1969">Details about md5anim</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=2487" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=2487">Tutorial: Materials for an animated model</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=2550" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=2550">Weapon/items models</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=2492" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=2492">Information on Ragdolls</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=1884" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=1884">Modelling and Texturing Tutorial</a> 
+</li><li><a href="/web/20070729231805/http://www.doom3world.org/phpbb2/viewtopic.php?t=5133" class='external text' title="http://www.doom3world.org/phpbb2/viewtopic.php?t=5133">Creating the Plasma Tick **Part 1</a> 
+</li><li><a href="/web/20070729231805/http://a.parsons.edu/~evan/doom3/exportModelsD3.pdf" class='external text' title="http://a.parsons.edu/~evan/doom3/exportModelsD3.pdf">Exporting md5 files from Maya (pdf)</a> 
+</li><li><a href="/web/20070729231805/http://a.parsons.edu/~evan/doom3/ppmD3.zip" class='external text' title="http://a.parsons.edu/~evan/doom3/ppmD3.zip">Creating a Plugin Player Replacement (zip)</a>
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;section=31" title="Edit section: Brain Trepaning's modelling videos (3dsmax / gmax related)">edit</a>]</div><a name="Brain_Trepaning.27s_modelling_videos_.283dsmax_.2F_gmax_related.29"></a><h3>Brain Trepaning's modelling videos (3dsmax / gmax related)</h3>
+<ul><li><a href="/web/20070729231805/http://www.trepaning.com/d3Vids/d3Vids.htm" class='external text' title="http://www.trepaning.com/d3Vids/d3Vids.htm">Master List</a> 
+<ul><li>How To Bring a Textured Mesh into Doom 3
+</li><li>How To Get a Multi-Textured Mesh into Doom 3
+</li><li>Multi Mesh and Texture Object from 3ds Max to Doom 3
+</li><li>Animated Prop Meshes for Doom 3
+</li><li>Changing Monster Meshes in Doom 3
+</li><li>Changing Monster Meshes in Doom 3 with GMAX
+</li><li>Creating Caves in DOOM 3
+</li><li>Using RenderBump
+</li></ul>
+</li></ul>
+<div class="printfooter">
+Retrieved from "<a href="/web/20070729231805/http://modwiki.net/wiki/Tutorial_list">http://modwiki.net/wiki/Tutorial_list</a>"</div>
+			<div id="catlinks"><p class='catlinks'><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Categories&amp;article=Tutorial_list" title="Special:Categories">Category</a>: <span dir='ltr'><a href="/web/20070729231805/http://modwiki.net/wiki/Category:Tutorials" title="Category:Tutorials">Tutorials</a></span><br /><hr /><a href="/web/20070729231805/http://modwiki.net/wiki/Category:Modwiki" title="Category:Modwiki">Modwiki</a> &gt; <a href="/web/20070729231805/http://modwiki.net/wiki/Category:Help" title="Category:Help">Help</a> &gt; <a href="/web/20070729231805/http://modwiki.net/wiki/Category:Tutorials" title="Category:Tutorials">Tutorials</a></p></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="/web/20070729231805/http://modwiki.net/wiki/Tutorial_list">Article</a></li>
+				 <li id="ca-talk"><a href="/web/20070729231805/http://modwiki.net/wiki/Talk:Tutorial_list">Discussion</a></li>
+				 <li id="ca-edit"><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=edit&amp;oldid=12155">Edit</a></li>
+				 <li id="ca-history"><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Tutorial_list&amp;action=history">History</a></li>
+		</ul>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/web/20070729231805/http://modwiki.net/w/index.php?title=Special:Userlogin&amp;returnto=Tutorial_list">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/web/20070729231805im_/http://modwiki.net/wiki/upload/wiki.png);" href="/web/20070729231805/http://modwiki.net/wiki/Main_Page" title="Main Page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class='portlet' id='p-Main'>
+		<h5>Main</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/web/20070729231805/http://modwiki.net/wiki/Main_Page">Main Page</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 4'>
+		<h5>id Tech 4</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Doom-3"><a href="/web/20070729231805/http://modwiki.net/wiki/Doom_3">Doom 3</a></li>
+				<li id="n-Quake-4"><a href="/web/20070729231805/http://modwiki.net/wiki/Quake_4">Quake 4</a></li>
+				<li id="n-Prey"><a href="/web/20070729231805/http://modwiki.net/wiki/Prey">Prey</a></li>
+				<li id="n-ETQW"><a href="/web/20070729231805/http://modwiki.net/wiki/Enemy_Territory:_Quake_Wars">ETQW</a></li>
+				<li id="n-RTCW-2"><a href="/web/20070729231805/http://modwiki.net/wiki/Return_to_Castle_Wolfenstein_2">RTCW 2</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 5'>
+		<h5>id Tech 5</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Rage"><a href="/web/20070729231805/http://modwiki.net/wiki/Rage">Rage</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Quick Links'>
+		<h5>Quick Links</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Console"><a href="/web/20070729231805/http://modwiki.net/wiki/Console">Console</a></li>
+				<li id=>
+
+
+
+
+<!--
+     FILE ARCHIVED ON 23:18:05 Jul 29, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 2:40:57 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

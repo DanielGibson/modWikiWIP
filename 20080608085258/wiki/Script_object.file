@@ -1,0 +1,644 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Script object,$null entity (scripting),Entity,Finite State Machine (scripting),GetKey (script event),IdEntity (class),Script events,SpawnArgs,Spawn class,Thread (scripting),Base spawn class" />
+<link rel="shortcut icon" href="/web/20080608085258im_/http://www.modwiki.net/favicon.ico" />
+<link title="Creative Commons" type="application/rdf+xml" href="/w/index.php?title=Script_object&amp;action=creativecommons" rel="meta" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<title>Script object - modwiki</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20080608085258cs_/http://www.modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/web/20080608085258cs_/http://www.modwiki.net/w/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/w/skins/monobook/IE70Fixes.css?1";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
+		<script type="text/javascript" src="/web/20080608085258js_/http://www.modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20080608085258js_/http://www.modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/web/20080608085258cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20080608085258cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20080608085258cs_/http://www.modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns-0 ltr">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app13.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/www.modwiki.net\/wiki\/Script_object";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "8";
+var displayMonth = "Jun";
+var displayYear = "2008";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://www.modwiki.net/wiki/Script_object" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20080608085258" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       May
+                       
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 8:52:58 Jun 8, 2008">JUN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20091002103731/http://www.modwiki.net/wiki/Script_object" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="2 Oct 2009"><strong>OCT</strong></a>
+		                
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20080517162658/http://www.modwiki.net/wiki/Script_object" title="16:26:58 May 17, 2008" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+		                
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 8:52:58 Jun 8, 2008">8</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+		                <a href="/web/20091002103731/http://www.modwiki.net/wiki/Script_object" title="10:37:31 Oct 2, 2009" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wm_tb_nxt_on.png" alt="Next capture" width="14" height="16" border="0"/></a>
+		                
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2007
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 8:52:58 Jun 8, 2008">2008</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+		                <a href="/web/20091002103731/http://www.modwiki.net/wiki/Script_object" style="text-decoration:none;color:#33f;font-weight:bold;background-color:transparent;border:none;" title="2 Oct 2009"><strong>2009</strong></a>
+		                
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20080608085258*/http://www.modwiki.net/wiki/Script_object" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>7 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">17 May 08 - 15 Nov 12</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:000000000000_2008:5:000011000000_2009:-1:000000000101_2010:-1:010000000000_2011:-1:000000000000_2012:-1:000100000010_2013:-1:000000000000_2014:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">Script object</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From modwiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="/web/20080608085258/http://www.modwiki.net/wiki/Script_object#column-one">navigation</a>, <a href="/web/20080608085258/http://www.modwiki.net/wiki/Script_object#searchInput">search</a></div>			<!-- start content -->
+			<p>A script object is a way of organizing variables and functions that are related to an <a href="/web/20080608085258/http://www.modwiki.net/wiki/Entity" title="Entity">entity</a>. It is analogous to a class in object orientated programming terms.
+</p><p>It's uses are wide ranging from weapons and AI, to extending existing entities.
+</p><p>While an entities <a href="/web/20080608085258/http://www.modwiki.net/wiki/Spawn_class" title="Spawn class">spawn class</a> strongly defines run time behavior, script objects are generally used to create variation on on run time behavior within that framework.
+</p><p>The spawn class sets up and runs a script object if the key/value pair "scriptobject" is set to a valid object type on the entities <a href="/web/20080608085258/http://www.modwiki.net/wiki/SpawnArgs" title="SpawnArgs">spawnArgs</a>.
+</p>
+<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class='toclevel-1'><a href="/web/20080608085258/http://www.modwiki.net/wiki/Script_object#Working_on_objects"><span class="tocnumber">1</span> <span class="toctext">Working on objects</span></a></li>
+<li class='toclevel-1'><a href="/web/20080608085258/http://www.modwiki.net/wiki/Script_object#Declaration"><span class="tocnumber">2</span> <span class="toctext">Declaration</span></a></li>
+<li class='toclevel-1'><a href="/web/20080608085258/http://www.modwiki.net/wiki/Script_object#Function_Definition"><span class="tocnumber">3</span> <span class="toctext">Function Definition</span></a></li>
+<li class='toclevel-1'><a href="/web/20080608085258/http://www.modwiki.net/wiki/Script_object#Important_functions"><span class="tocnumber">4</span> <span class="toctext">Important functions</span></a></li>
+<li class='toclevel-1'><a href="/web/20080608085258/http://www.modwiki.net/wiki/Script_object#Example"><span class="tocnumber">5</span> <span class="toctext">Example</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20080608085258/http://www.modwiki.net/wiki/Script_object#Script"><span class="tocnumber">5.1</span> <span class="toctext">Script</span></a></li>
+<li class='toclevel-2'><a href="/web/20080608085258/http://www.modwiki.net/wiki/Script_object#Entity_set_up"><span class="tocnumber">5.2</span> <span class="toctext">Entity set up</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="/web/20080608085258/http://www.modwiki.net/wiki/Script_object#Example_Notes"><span class="tocnumber">6</span> <span class="toctext">Example Notes</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20080608085258/http://www.modwiki.net/wiki/Script_object#declare"><span class="tocnumber">6.1</span> <span class="toctext">declare</span></a></li>
+<li class='toclevel-2'><a href="/web/20080608085258/http://www.modwiki.net/wiki/Script_object#debug_print"><span class="tocnumber">6.2</span> <span class="toctext">debug print</span></a></li>
+<li class='toclevel-2'><a href="/web/20080608085258/http://www.modwiki.net/wiki/Script_object#type_check"><span class="tocnumber">6.3</span> <span class="toctext">type check</span></a></li>
+<li class='toclevel-2'><a href="/web/20080608085258/http://www.modwiki.net/wiki/Script_object#warning"><span class="tocnumber">6.4</span> <span class="toctext">warning</span></a></li>
+<li class='toclevel-2'><a href="/web/20080608085258/http://www.modwiki.net/wiki/Script_object#type_check_return"><span class="tocnumber">6.5</span> <span class="toctext">type check return</span></a></li>
+<li class='toclevel-2'><a href="/web/20080608085258/http://www.modwiki.net/wiki/Script_object#spawnargs_performance"><span class="tocnumber">6.6</span> <span class="toctext">spawnargs performance</span></a></li>
+<li class='toclevel-2'><a href="/web/20080608085258/http://www.modwiki.net/wiki/Script_object#run-time_function"><span class="tocnumber">6.7</span> <span class="toctext">run-time function</span></a></li>
+<li class='toclevel-2'><a href="/web/20080608085258/http://www.modwiki.net/wiki/Script_object#run_time_loop"><span class="tocnumber">6.8</span> <span class="toctext">run time loop</span></a></li>
+<li class='toclevel-2'><a href="/web/20080608085258/http://www.modwiki.net/wiki/Script_object#ETQW_event"><span class="tocnumber">6.9</span> <span class="toctext">ETQW event</span></a></li>
+<li class='toclevel-2'><a href="/web/20080608085258/http://www.modwiki.net/wiki/Script_object#functions_on_self"><span class="tocnumber">6.10</span> <span class="toctext">functions on self</span></a></li>
+<li class='toclevel-2'><a href="/web/20080608085258/http://www.modwiki.net/wiki/Script_object#waiting"><span class="tocnumber">6.11</span> <span class="toctext">waiting</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Script_object&amp;action=edit&amp;section=1" title="Edit section: Working on objects">edit</a>]</div><a name="Working_on_objects"></a><h2>Working on objects</h2>
+<p>In order to call a function of a script object a valid object pointer must be set up.
+</p><p>Example:
+</p>
+<pre>monster_base myMonster; 
+myMonster = <span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">getEntity</span><span style="color: #000000;">&#40;</span><span style="color: #666666;">"monster_sam"</span><span style="color: #000000;">&#41;</span>; /
+myMonster.<span style="color: #ff0000;">wake_on_trigger</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>;</pre>
+<p>Line 1 declares and object pointer of monster_base type. The script compiler will issue an <a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Error&amp;action=edit" class="new" title="Error">error</a> if there is no script object of that type.
+</p><p>Line 2 sets the pointer to an entity. For the sake of this example we are assuming the entity "monster_sam" is an entity running a script object of they type monster_base, or one that inherits monster_base.
+</p><p>An object pointer will be set to <a href="/web/20080608085258/http://www.modwiki.net/wiki/%24null_entity_%28scripting%29" title="$null entity (scripting)">$null_entity</a> if the entity you are trying to set the variable to does not have a object of that type.
+</p><p>Line 3 calls the object function wake_on_trigger(), which we know is a function defined in the script object monster_base. 
+If the function was not declared in the script object the script interpreter would issue a <a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Warning&amp;action=edit" class="new" title="Warning">warning</a>. TODO: find exact error/warning messages.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Script_object&amp;action=edit&amp;section=2" title="Edit section: Declaration">edit</a>]</div><a name="Declaration"></a><h2>Declaration</h2>
+<p>Syntax:
+</p>
+<pre><span style="color: #0000ff;">object</span> <span style="color: #000000;">&#91;</span>script <span style="color: #0000ff;">object</span> type<span style="color: #000000;">&#93;</span>&nbsp;: <span style="color: #000000;">&#91;</span>base script <span style="color: #0000ff;">object</span> type<span style="color: #000000;">&#93;</span> <span style="color: #000000;">&#123;</span>
+    <span style="color: #000000;">&#91;</span>function declaration<span style="color: #000000;">&#93;</span>
+&nbsp;
+    <span style="color: #000000;">&#91;</span>variable declaration<span style="color: #000000;">&#93;</span>
+    ...
+<span style="color: #000000;">&#125;</span></pre>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Script_object&amp;action=edit&amp;section=3" title="Edit section: Function Definition">edit</a>]</div><a name="Function_Definition"></a><h2>Function Definition</h2>
+<p>Syntax:
+</p>
+<pre><span style="color: #000000;">&#91;</span>return type<span style="color: #000000;">&#93;</span> <span style="color: #000000;">&#91;</span>script <span style="color: #0000ff;">object</span> type<span style="color: #000000;">&#93;</span>::<span style="color: #000000;">&#91;</span>function name<span style="color: #000000;">&#93;</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#91;</span>parameters<span style="color: #000000;">&#93;</span><span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+   ...
+<span style="color: #000000;">&#125;</span></pre>
+<ul><li>[script object type] - The name of the object type. Must be unique within compiled script
+</li><li>[base script object type] - The object type to inherit from.
+</li><li>Function declarations - declared in the normal way. Referred to as an object function.
+</li><li>Variable declarations - declared in the normal way. Referred to as a object variable.
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Script_object&amp;action=edit&amp;section=4" title="Edit section: Important functions">edit</a>]</div><a name="Important_functions"></a><h2>Important functions</h2>
+<p>A number of functions are called by the entitys <a href="/web/20080608085258/http://www.modwiki.net/wiki/Spawn_class" title="Spawn class">spawn class</a>.
+</p>
+<pre>init<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span></pre>
+<p>The script object constructor. A <a href="/web/20080608085258/http://www.modwiki.net/wiki/Thread_%28scripting%29" title="Thread (scripting)">thread</a> is created by the spawn class to run the init() script function at the end of the Spawn() function.
+</p><p>Use to set up initial state of the script object variables.
+</p><p><b>Note</b>: There is a bug in the scripting system where the init() function won't be able to call any functions of that object unless at least one variable is declared, or if the function in question is called through <a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Self_%28scripting%29&amp;action=edit" class="new" title="Self (scripting)">self</a>.callFunction([function]);
+</p>
+<pre>destroy<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span></pre>
+<p>Destructor. Called early on in the spawn class destructor when the entity is removed.
+</p><p>Use to clean up anything that the script object was managing, such as created threads and entities.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Script_object&amp;action=edit&amp;section=5" title="Edit section: Example">edit</a>]</div><a name="Example"></a><h2>Example</h2>
+<p>For this example the script object makes a light fade in and out for the life time of the entity. The time for the various stages is set up to be configurable via <a href="/web/20080608085258/http://www.modwiki.net/wiki/SpawnArgs" title="SpawnArgs">spawnArgs</a>.
+</p><p>It's a simple script, but we've tried to cram in as much important script object coding aspects as possible.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Script_object&amp;action=edit&amp;section=6" title="Edit section: Script">edit</a>]</div><a name="Script"></a><h3>Script</h3>
+<p>You'll see the currently broken note links to the example in the script, just look at the name of the link and find the note after the script.
+</p><p>TODO: find out if there is a way to escape wiki nonwikifying links in script/code tags.
+</p><p>To simplify things conceptually while working on a script we can think of the script object as being an entity that is running a script object of this type.
+</p>
+<pre>&nbsp;
+<span style="color: #339900; font-style: italic;">/***********************************************************************
+&nbsp;
+light_strobe
+A simple script object for use on entities of the spawn class idLight that fades in and out.
+&nbsp;
+***********************************************************************/</span>
+&nbsp;
+<span style="color: #0000ff;">object</span> light_strobe <span style="color: #000000;">&#123;</span> <span style="color: #339900;">// [[#declare]]</span>
+	<span style="color: #339900;">// declare functions</span>
+	<span style="color: #0000ff;">void</span> init<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>;
+	
+	<span style="color: #0000ff;">void</span> main<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>;
+	
+	<span style="color: #339900;">// declare variables</span>
+	<span style="color: #0000ff;">float</span> fadeOutTime;
+	<span style="color: #0000ff;">float</span> fadeInTime;
+	<span style="color: #0000ff;">float</span> delayTime;
+	
+	<span style="color: #0000ff;">boolean</span> run;
+<span style="color: #000000;">&#125;</span>;
+&nbsp;
+<span style="color: #339900; font-style: italic;">/*
+=====================
+light_strobe::init
+The first function called on entity spawn by the base spawn class
+Use it to set up the initial state of the script object
+=====================
+*/</span>
+<span style="color: #0000ff;">void</span> light_strobe::init<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+	<span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">println</span><span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">getTime</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span> + <span style="color: #666666;">" init()"</span> <span style="color: #000000;">&#41;</span>; <span style="color: #339900;">// [[#debug print]]</span>
+	
+	<span style="color: #339900;">// [[#type check]]</span>
+	<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">getKey</span><span style="color: #000000;">&#40;</span> <span style="color: #666666;">"spawnclass"</span> <span style="color: #000000;">&#41;</span>&nbsp;!= <span style="color: #666666;">"idLight"</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+	<span style="color: #339900;">// [[#warning]]</span>
+		<span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">warning</span><span style="color: #000000;">&#40;</span> <span style="color: #666666;">"script object 'light_strobe' requires a the spawn class 'idLight', the entity it is running on '"</span> + <span style="color: #0000ff;">getName</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span> + <span style="color: #666666;">"' is of type '"</span> + <span style="color: #0000ff;">getKey</span><span style="color: #000000;">&#40;</span> <span style="color: #666666;">"spawnclass"</span> <span style="color: #000000;">&#41;</span> + <span style="color: #666666;">"'"</span> <span style="color: #000000;">&#41;</span>;
+		return; <span style="color: #339900;">// [[#type check return]]</span>
+	<span style="color: #000000;">&#125;</span>
+&nbsp;
+	<span style="color: #339900;">// set up variables</span>
+	<span style="color: #339900;">// [[#spawnargs performance]]</span>
+	fadeOutTime = <span style="color: #0000ff;">getFloatKey</span><span style="color: #000000;">&#40;</span> <span style="color: #666666;">"fade_in_time"</span> <span style="color: #000000;">&#41;</span>;
+	fadeInTime = <span style="color: #0000ff;">getFloatKey</span><span style="color: #000000;">&#40;</span> <span style="color: #666666;">"fade_out_time"</span> <span style="color: #000000;">&#41;</span>;
+	delayTime = <span style="color: #0000ff;">getFloatKey</span><span style="color: #000000;">&#40;</span> <span style="color: #666666;">"delay_time"</span> <span style="color: #000000;">&#41;</span>;
+	<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> delayTime == <span style="color: #0000dd;">0</span> <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+		<span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">warning</span><span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">getName</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span> + <span style="color: #666666;">" - light_strobe - delay_time should be greater than 0"</span> <span style="color: #000000;">&#41;</span>;
+		delayTime = <span style="color: #0000dd;">1</span>;
+	<span style="color: #000000;">&#125;</span>
+	
+	
+	run = true; <span style="color: #339900;">// we are using this to control our loop in main.</span>
+	
+	<span style="color: #339900;">// [[#run time function]]</span>
+	main<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span>; 	
+<span style="color: #000000;">&#125;</span>
+&nbsp;
+<span style="color: #339900; font-style: italic;">/*
+=====================
+light_strobe::main
+=====================
+*/</span>
+<span style="color: #0000ff;">void</span> light_strobe::main<span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+	<span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">println</span><span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">getTime</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span> + <span style="color: #666666;">" main()"</span> <span style="color: #000000;">&#41;</span>; <span style="color: #339900;">// [[#debug print]]</span>
+	
+	<span style="color: #0000ff;">boolean</span> isOn = true; <span style="color: #339900;">// light starts on</span>
+&nbsp;
+	
+	<span style="color: #339900;">// [[#run time loop]]</span>
+	<span style="color: #0000ff;">while</span><span style="color: #000000;">&#40;</span> run <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span> <span style="color: #339900;">// we set run to true in init()</span>
+		<span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">println</span><span style="color: #000000;">&#40;</span> <span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">getTime</span><span style="color: #000000;">&#40;</span><span style="color: #000000;">&#41;</span> + <span style="color: #666666;">" loop top"</span> <span style="color: #000000;">&#41;</span>; <span style="color: #339900;">// [[#debug print]]</span>
+		<span style="color: #0000ff;">if</span> <span style="color: #000000;">&#40;</span> isOn <span style="color: #000000;">&#41;</span> <span style="color: #000000;">&#123;</span>
+			<span style="color: #339900;">//turnOff(); // [[#ETQW event]]</span>
+			<span style="color: #0000ff;">fadeOutLight</span><span style="color: #000000;">&#40;</span> fadeOutTime <span style="color: #000000;">&#41;</span>;
+			<span style="color: #339900;">//[[#functions on self]]</span>
+			isOn = false;
+		<span style="color: #000000;">&#125;</span> <span style="color: #0000ff;">else</span> <span style="color: #000000;">&#123;</span>
+			<span style="color: #339900;">//turnOn(); // [[#ETQW event]]</span>
+			<span style="color: #0000ff;">fadeInLight</span><span style="color: #000000;">&#40;</span> fadeInTime <span style="color: #000000;">&#41;</span>;
+			isOn = true;
+		<span style="color: #000000;">&#125;</span>
+				
+		<span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">wait</span><span style="color: #000000;">&#40;</span> delayTime <span style="color: #000000;">&#41;</span>;<span style="color: #339900;">// [[#waiting]]</span>
+	<span style="color: #000000;">&#125;</span>
+<span style="color: #000000;">&#125;</span>
+&nbsp;
+<span style="color: #339900;">// EOF</span></pre>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Script_object&amp;action=edit&amp;section=7" title="Edit section: Entity set up">edit</a>]</div><a name="Entity_set_up"></a><h3>Entity set up</h3>
+<p>Put script in scripts folder and include in main script.
+</p><p>Set up on a light entity with the following key/value pairs:
+</p>
+<pre><span style="color: #666666;">"scriptobject"</span> <span style="color: #666666;">"light_strobe"</span>
+&nbsp;
+<span style="color: #666666;">"delay_time"</span> <span style="color: #666666;">"2"</span>
+&nbsp;
+<span style="color: #666666;">"fade_in_time"</span> <span style="color: #666666;">"3"</span>
+&nbsp;
+<span style="color: #666666;">"fade_out_time"</span> <span style="color: #666666;">"1"</span></pre>
+<p>Note: While you could just add these keys to the <a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Map_entity&amp;action=edit" class="new" title="Map entity">map entity</a>, setting up an <a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=EntityDef_%28decl%29&amp;action=edit" class="new" title="EntityDef (decl)">entityDef</a> for a spawn class/script object combination is the best way to set defaults for spawnArgs.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Script_object&amp;action=edit&amp;section=8" title="Edit section: Example Notes">edit</a>]</div><a name="Example_Notes"></a><h2>Example Notes</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Script_object&amp;action=edit&amp;section=9" title="Edit section: declare">edit</a>]</div><a name="declare"></a><h3>declare</h3>
+<p>Here we are declaring our script object type to be called light_strobe. object types must be unique, a search through the script files shows there isn't any existing script object type called light_strobe.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Script_object&amp;action=edit&amp;section=10" title="Edit section: debug print">edit</a>]</div><a name="debug_print"></a><h3>debug print</h3>
+<p>Just to give an idea of what is going on while working on the script.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Script_object&amp;action=edit&amp;section=11" title="Edit section: type check">edit</a>]</div><a name="type_check"></a><h3>type check</h3>
+<p>Since we will be using <a href="/web/20080608085258/http://www.modwiki.net/wiki/Script_events" title="Script events">script events</a> - event calls to the <a href="/web/20080608085258/http://www.modwiki.net/wiki/Spawn_class" title="Spawn class">spawn class</a> - specific to an idLight spawn class we are doing some simple type checking to see if the entity this script object is running on is the right type.
+</p><p><a href="/web/20080608085258/http://www.modwiki.net/wiki/GetKey_%28script_event%29" title="GetKey (script event)">getKey</a> is an event defined in the <a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Base_spawn_class&amp;action=edit" class="new" title="Base spawn class">base spawn class</a> <a href="/web/20080608085258/http://www.modwiki.net/wiki/IdEntity_%28class%29" title="IdEntity (class)">idEntity</a>, so all spawn classes inherit it.
+</p><p>"spawnclass" is the key for the value in the <a href="/web/20080608085258/http://www.modwiki.net/wiki/SpawnArgs" title="SpawnArgs">spawnArgs</a> dictionary that declares the spawn class.
+</p><p>This is the only way to check for spawn class type in script, since there is only one general pointer type entity and object pointer types are only of script object type.
+</p><p>Note: since spawnArgs is a dictionary, accessing it is not as fast as operations on other data types, plus we are also doing a string comparing which is also an operation slower than operation on other data types, so this kind of type checking while useful, isn't something that should be done per frame.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Script_object&amp;action=edit&amp;section=12" title="Edit section: warning">edit</a>]</div><a name="warning"></a><h3>warning</h3>
+<p>We can decide how severe to be about this, here we are issuing a warning which will show in the console, if we wanted to be more strict we could call an Error to halt the game.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Script_object&amp;action=edit&amp;section=13" title="Edit section: type check return">edit</a>]</div><a name="type_check_return"></a><h3>type check return</h3>
+<p>Stop script object from continuing further. This won't prevent function calls on this script object, but in this case it will stop before our run time logic starts.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Script_object&amp;action=edit&amp;section=14" title="Edit section: spawnargs performance">edit</a>]</div><a name="spawnargs_performance"></a><h3>spawnargs performance</h3>
+<p>As previously noted, variables are faster than <a href="/web/20080608085258/http://www.modwiki.net/wiki/SpawnArgs" title="SpawnArgs">spawnArgs</a> access, so setting up variables with values from spawnArgs so they can be used later is a good idea.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Script_object&amp;action=edit&amp;section=15" title="Edit section: run-time function">edit</a>]</div><a name="run-time_function"></a><h3>run-time function</h3>
+<p>The base spawn class calls init() on start up, after init() is finished executing the script <a href="/web/20080608085258/http://www.modwiki.net/wiki/Thread_%28scripting%29" title="Thread (scripting)"> thread</a> is considered 'done'. The only code run on the object from that point would be from:
+</p><p>The spawn class calling a specific script function.
+</p><p>Another script <a href="/web/20080608085258/http://www.modwiki.net/wiki/Thread_%28scripting%29" title="Thread (scripting)">thread</a> calling a specific function.
+</p><p>In this object we are using a function called main to do run time logic, so it must be the last operation before init() exits.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Script_object&amp;action=edit&amp;section=16" title="Edit section: run time loop">edit</a>]</div><a name="run_time_loop"></a><h3>run time loop</h3>
+<p>Here we are trapping the function execution in a while loop, so the function doesn't exit and we can keep our run time code running.
+</p><p>Once run time script object behavior gets to a certain point of complexity it's better to plan a <a href="/web/20080608085258/http://www.modwiki.net/wiki/Finite_State_Machine_%28scripting%29" title="Finite State Machine (scripting)">Finite State Machine</a>.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Script_object&amp;action=edit&amp;section=17" title="Edit section: ETQW event">edit</a>]</div><a name="ETQW_event"></a><h3>ETQW event</h3>
+<div><a href="/web/20080608085258/http://www.modwiki.net/wiki/Image:Etqwsquare_25.png" class="image" title="Image:Etqwsquare_25.png"><img src="/web/20080608085258im_/http://www.modwiki.net/w/images/7/7e/Etqwsquare_25.png" alt="Image:Etqwsquare_25.png" width="25" height="25" longdesc="/wiki/Image:Etqwsquare_25.png" /></a> <b>Note:</b> Enemy Territory: Quake Wars only: <dl><dd><i>(Enemy Territory: Quake Wars does not have fadeIn and fadeOut events on the spawn class idLight, there are turnOn and turnOff events but as the names suggest, they do not fade over time.)</i></dd></dl></div>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Script_object&amp;action=edit&amp;section=18" title="Edit section: functions on self">edit</a>]</div><a name="functions_on_self"></a><h3>functions on self</h3>
+<p>All function calls without a specific <a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Pointer_%28scripting%29&amp;action=edit" class="new" title="Pointer (scripting)">pointer</a> will be checked to see if it's a function declared in the script object, or a script event on the the spawn class. TODO: find out order, not that it's important.
+</p><p>There is an equivalent way to call functions on the current entity that some prefer - <a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Self_%28scripting%29&amp;action=edit" class="new" title="Self (scripting)">self</a>.[function].
+</p><p>fadeOut is an event defined in the spawn class idLight, if this script object were to run on an entity of a different spawn class it would produce a warning. At least it would if it ever got to this point, but the spawn class type check in init() prevents that.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Script_object&amp;action=edit&amp;section=19" title="Edit section: waiting">edit</a>]</div><a name="waiting"></a><h3>waiting</h3>
+<p>Since we have trapped the function in a loop, at some point of execution we have to let the thread <a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Waiting_%28scripting%29&amp;action=edit" class="new" title="Waiting (scripting)">wait</a>, otherwise the thread would continue indefinitely, which may be fine for normal programs, but this a game, and there's the entire rest of the game to run.
+</p><p>If we wanted code to be run per frame the only wait in our code would be a waitFrame() here at the end of the loop.
+</p><div class="printfooter">
+Retrieved from "<a href="/web/20080608085258/http://www.modwiki.net/wiki/Script_object">http://www.modwiki.net/wiki/Script_object</a>"</div>
+			<div id="catlinks"><p class='catlinks'><a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Special:Categories&amp;article=Script_object" title="Special:Categories">Category</a>: <span dir='ltr'><a href="/web/20080608085258/http://www.modwiki.net/wiki/Category:Scripting" title="Category:Scripting">Scripting</a></span><br /><hr /><a href="/web/20080608085258/http://www.modwiki.net/wiki/Category:Modwiki" title="Category:Modwiki">Modwiki</a> &gt; <a href="/web/20080608085258/http://www.modwiki.net/wiki/Category:Scripting" title="Category:Scripting">Scripting</a></p></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="/web/20080608085258/http://www.modwiki.net/wiki/Script_object">Article</a></li>
+				 <li id="ca-talk" class="new"><a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Talk:Script_object&amp;action=edit">Discussion</a></li>
+				 <li id="ca-edit"><a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Script_object&amp;action=edit">Edit</a></li>
+				 <li id="ca-history"><a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Script_object&amp;action=history">History</a></li>
+		</ul>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Special:Userlogin&amp;returnto=Script_object">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/web/20080608085258im_/http://www.modwiki.net/wiki/upload/wiki.png);" href="/web/20080608085258/http://www.modwiki.net/wiki/Main_Page" title="Main Page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class='portlet' id='p-Main'>
+		<h5>Main</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/web/20080608085258/http://www.modwiki.net/wiki/Main_Page">Main Page</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 4'>
+		<h5>id Tech 4</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Doom-3"><a href="/web/20080608085258/http://www.modwiki.net/wiki/Doom_3">Doom 3</a></li>
+				<li id="n-Quake-4"><a href="/web/20080608085258/http://www.modwiki.net/wiki/Quake_4">Quake 4</a></li>
+				<li id="n-Prey"><a href="/web/20080608085258/http://www.modwiki.net/wiki/Prey">Prey</a></li>
+				<li id="n-ETQW"><a href="/web/20080608085258/http://www.modwiki.net/wiki/Enemy_Territory:_Quake_Wars">ETQW</a></li>
+				<li id="n-RTCW-2"><a href="/web/20080608085258/http://www.modwiki.net/wiki/Return_to_Castle_Wolfenstein_2">RTCW 2</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-id Tech 5'>
+		<h5>id Tech 5</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Rage"><a href="/web/20080608085258/http://www.modwiki.net/wiki/Rage">Rage</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Quick Links'>
+		<h5>Quick Links</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Console"><a href="/web/20080608085258/http://www.modwiki.net/wiki/Console">Console</a></li>
+				<li id="n-Script-Events"><a href="/web/20080608085258/http://www.modwiki.net/wiki/Scripting">Script Events</a></li>
+				<li id="n-Material-Keywords"><a href="/web/20080608085258/http://www.modwiki.net/wiki/Material_%28decl%29">Material Keywords</a></li>
+				<li id="n-Modification-List"><a href="/web/20080608085258/http://www.modwiki.net/wiki/Modlist">Modification List</a></li>
+				<li id="n-Tutorial-List"><a href="/web/20080608085258/http://www.modwiki.net/wiki/Tutorial_list">Tutorial List</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Wiki'>
+		<h5>Wiki</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Open-tasks"><a href="/web/20080608085258/http://www.modwiki.net/wiki/modwiki:Open_tasks">Open tasks</a></li>
+				<li id="n-recentchanges"><a href="/web/20080608085258/http://www.modwiki.net/wiki/Special:Recentchanges">Recent changes</a></li>
+				<li id="n-Style-guide"><a href="/web/20080608085258/http://www.modwiki.net/wiki/modwiki:Style_guide">Style guide</a></li>
+				<li id="n-help"><a href="/web/20080608085258/http://www.modwiki.net/wiki/Help:Contents">Help</a></li>
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/web/20080608085258/http://www.modwiki.net/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" value="Search" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/web/20080608085258/http://www.modwiki.net/wiki/Special:Whatlinkshere/Script_object">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/web/20080608085258/http://www.modwiki.net/wiki/Special:Recentchangeslinked/Script_object">Related changes</a></li>
+<li id="t-upload"><a href="/web/20080608085258/http://www.modwiki.net/wiki/Special:Upload">Upload file</a></li>
+<li id="t-specialpages"><a href="/web/20080608085258/http://www.modwiki.net/wiki/Special:Specialpages">Special pages</a></li>
+				<li id="t-print"><a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Script_object&amp;printable=yes">Printable version</a></li>				<li id="t-permalink"><a href="/web/20080608085258/http://www.modwiki.net/w/index.php?title=Script_object&amp;oldid=12537">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="/web/20080608085258/http://www.mediawiki.org/"><img src="/web/20080608085258im_/http://www.modwiki.net/w/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="/web/20080608085258/http://www.gnu.org/copyleft/fdl.html"><img src="/web/20080608085258im_/http://www.modwiki.net/w/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+				<li id="lastmod"> This page was last modified 20:42, 28 March 2008.</li>
+				<li id="copyright">Content is available under <a href="/web/20080608085258/http://www.gnu.org/copyleft/fdl.html" class='external ' title="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.2</a>.</li>
+				<li id="privacy"><a href="/web/20080608085258/http://www.modwiki.net/wiki/modwiki:Privacy_policy" title="modwiki:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="/web/20080608085258/http://www.modwiki.net/wiki/modwiki:About" title="modwiki:About">About modwiki</a></li>
+				<li id="disclaimer"><a href="/web/20080608085258/http://www.modwiki.net/wiki/modwiki:General_disclaimer" title="modwiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+	<script type="text/javascript"> if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+<!-- Served by h982484 in 0.41 secs. -->
+</body></html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 8:52:58 Jun 8, 2008 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 4:15:57 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

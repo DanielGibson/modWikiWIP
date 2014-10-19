@@ -1,0 +1,639 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Af (decl),AF editor,EditAFs" />
+<link rel="shortcut icon" href="/web/20070311193751im_/http://www.modwiki.net/favicon.ico" />
+<link title="Creative Commons" type="application/rdf+xml" href="/w/index.php?title=Af_%28decl%29&amp;action=creativecommons" rel="meta" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<title>Af (decl) - modwiki</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20070311193751cs_/http://www.modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css"  href="/web/20070311193751cs_/http://www.modwiki.net/w/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/w/skins/monobook/IE70Fixes.css?1";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
+		<script type="text/javascript" src="/web/20070311193751js_/http://www.modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20070311193751js_/http://www.modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/web/20070311193751cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070311193751cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070311193751cs_/http://www.modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns-0 ltr">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app16.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/www.modwiki.net\/w\/index.php?title=Af_%28decl%29&printable=yes";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "11";
+var displayMonth = "Mar";
+var displayYear = "2007";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;printable=yes" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20070311193751" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Feb
+                       
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 19:37:51 Mar 11, 2007">MAR</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Apr
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_prv_off.png" alt="Previous capture" width="14" height="16" border="0" />
+                       
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 19:37:51 Mar 11, 2007">11</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2006
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 19:37:51 Mar 11, 2007">2007</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2008
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20070311193751*/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;printable=yes" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>1 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">11 Mar 07 - 11 Mar 07</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:2:001000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000_2014:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">Af (decl)</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From modwiki</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">Jump to: <a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;printable=yes#column-one">navigation</a>, <a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;printable=yes#searchInput">search</a></div>			<!-- start content -->
+			<p>An articulated figure declaration defines the parameters for a ragdoll to react physically in the game. It's purpose is to assign collision bodies and joint restraints to the skeleton of an MD5mesh.
+</p>
+<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class='toclevel-1'><a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;printable=yes#Syntax"><span class="tocnumber">1</span> <span class="toctext">Syntax</span></a>
+<ul>
+<li class='toclevel-2'><a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;printable=yes#Settings"><span class="tocnumber">1.1</span> <span class="toctext">Settings</span></a></li>
+<li class='toclevel-2'><a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;printable=yes#Bodies"><span class="tocnumber">1.2</span> <span class="toctext">Bodies</span></a></li>
+<li class='toclevel-2'><a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;printable=yes#Joints"><span class="tocnumber">1.3</span> <span class="toctext">Joints</span></a>
+<ul>
+<li class='toclevel-3'><a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;printable=yes#Ball_and_Socket"><span class="tocnumber">1.3.1</span> <span class="toctext">Ball and Socket</span></a></li>
+<li class='toclevel-3'><a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;printable=yes#Universal_Joint"><span class="tocnumber">1.3.2</span> <span class="toctext">Universal Joint</span></a></li>
+<li class='toclevel-3'><a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;printable=yes#Hinge"><span class="tocnumber">1.3.3</span> <span class="toctext">Hinge</span></a></li>
+<li class='toclevel-3'><a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;printable=yes#Spring"><span class="tocnumber">1.3.4</span> <span class="toctext">Spring</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;printable=yes#Vector_Syntax"><span class="tocnumber">2</span> <span class="toctext">Vector Syntax</span></a></li>
+<li class='toclevel-1'><a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;printable=yes#Editing_Tools"><span class="tocnumber">3</span> <span class="toctext">Editing Tools</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;action=edit&amp;section=1" title="Edit section: Syntax">edit</a>]</div><a name="Syntax"></a><h2>Syntax</h2>
+<pre>articulatedFigure [name] {
+
+settings {
+ ...
+}
+
+body [name] {
+ ...
+}
+
+[jointType] [name] {
+ ...
+} 
+
+{
+</pre>
+<p>AF declarations are started with a header which consists of the keyword <i>articulatedFigure</i> followed by the <i>name</i> of the declaration. They are then followed by the body of the declaration which is enclosed in curly brackets.
+</p><p>The body of the declaration consists of three sections, settings, bodies, and joints.
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;action=edit&amp;section=2" title="Edit section: Settings">edit</a>]</div><a name="Settings"></a><h3>Settings</h3>
+<pre>settings {
+   key   parms
+}
+</pre>
+<p>The settings section contains keys and parameters that apply to the entire articulated figure.
+</p><p>The settings section is started with a header which consists of the keyword <i>settings</i> followed by the body. The body is enclosed in curly brackets.
+</p><p>The following keys are used in the body of this section...
+</p>
+<table style="width:75%" border="1" cellpadding="0" cellspacing="0">
+
+<tr style="background:#AA0000; color:white">
+<th> KEYWORD </th><th> DESCRIPTION
+</th></tr>
+<tr align="center">
+<td> mesh "md5mesh" </td><td> The md5 mesh used for the articulated figure
+</td></tr>
+<tr align="center">
+<td> anim "md5anim" </td><td> The initial animation (t-pose)
+</td></tr>
+<tr align="center">
+<td> skin "skin" </td><td> A skin to use
+</td></tr>
+<tr align="center">
+<td> friction &lt;linear&gt;, &lt;angular&gt;, &lt;contact&gt; </td><td> The default friction for all bodies. The linear and angular friction values specify the translational and rotational air friction. The contact friction value specifies the friction with contact surfaces. The friction values are usually in the range [0, 1].
+</td></tr>
+<tr align="center">
+<td> selfCollision 0/1 </td><td> The default setting for self collision detection
+</td></tr>
+<tr align="center">
+<td> suspendSpeed &lt;linear velocity&gt; &lt;angular velocity&gt; &lt;linear acceleration&gt; &lt;angular acceleration&gt; </td><td> The speed at which the articulated figure comes to rest. The specified linear and angular velocity is the maximum velocity at which the articulated figure may come to rest. The specified linear and angular acceleration is the maximum acceleration at which the articulated figure may come to rest.
+</td></tr>
+<tr align="center">
+<td> totalMass &lt;mass&gt; </td><td> The total mass of the articulated figure. If the total mass is set to a value greater than zero then the mass of each body is scaled such that the total mass of the articulated figure equals the given mass.
+</td></tr></table>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;action=edit&amp;section=3" title="Edit section: Bodies">edit</a>]</div><a name="Bodies"></a><h3>Bodies</h3>
+<pre>body [name] {
+   key   parms
+}
+</pre>
+<p>The bodies section contains a list of collision bodies and their respective keys and parameters.
+</p><p>Each collision body is started with a header which consists of the keyword <i>body</i> followed by the <i>name</i> of the collision body to be declared. They are then followed by the body of the declaration which is enclosed in curly brackets.
+</p><p>There can be multiple collision body declarations in the body section.
+</p><p>The following keys are used in the body of this section...
+</p>
+<table style="width:75%" border="1" cellpadding="0" cellspacing="0">
+
+<tr style="background:#AA0000; color:white">
+<th> KEYWORD </th><th> DESCRIPTION
+</th></tr>
+<tr align="center">
+<td> joint "joint name" </td><td> The joint the body modifies. There is always one body which modifies the origin joint of the skeletal model. The position and orientation of this body are used to move the whole skeletal model through the world. The joint key for this body is set to "origin".
+</td></tr>
+<tr align="center">
+<td> model [collision model] </td><td> A body can use several different collision models. Such a collision model is specified with the model key: model box( (min_x, min_y, min_z), (max_x, max_y, max_z) ) model octahedron( (min_x, min_y, min_z), (max_x, max_y, max_z) ) model dodecahedron( (min_x, min_y, min_z), (max_x, max_y, max_z) ) model cone( (min_x, min_y, min_z), (max_x, max_y, max_z), numSides ) model cylinder( (min_x, min_y, min_z), (max_x, max_y, max_z), numSides ) model bone( (start_x, start_y, start_z), (end_x, end_y, end_z), width ) model custom( "name" )
+</td></tr>
+<tr align="center">
+<td> origin ( x, y, z ) </td><td> The collision model has to be placed at the right position relative to the joint which is modified by the body. This key specifies the position of the center of the collision model.
+</td></tr>
+<tr align="center">
+<td> angles ( pitch, yaw, roll ) </td><td> The collision model can be rotated about it's origin with the angles key
+</td></tr>
+<tr align="center">
+<td> density &lt;value&gt; </td><td> The density of the collision model. The mass of the body equals the density times the volume of the collision model.
+</td></tr>
+<tr align="center">
+<td> friction &lt;linear&gt;, &lt;angular&gt;, &lt;contact&gt; </td><td> Different friction properties can be specified for each body. The linear and angular friction values specify the translational and rotational air friction. The contact friction value specifies the friction with contact surfaces. The friction values are usually in the range [0, 1].
+</td></tr>
+<tr align="center">
+<td> selfCollision 0/1 </td><td> Set self collision detection per body.
+</td></tr>
+<tr align="center">
+<td> containedjoints "jointlist" </td><td> Projectiles collide with the visual mesh of the skeletal model. For an impact position on the mesh the nearest joint of the skeletal model is taken. From this joint the impact is transferred to one of the bodies of the articulated figure. Each body has a list with joints that are more or less contained by the body. The impact near a joint is transferred to the body that contains the joint. A joint can only be contained by one body and each joint must be contained by a body. The joints contained by a body are specified with the containedjoints key.
+</td></tr></table>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;action=edit&amp;section=4" title="Edit section: Joints">edit</a>]</div><a name="Joints"></a><h3>Joints</h3>
+<pre>[jointType] [name] {
+   key   parms
+}
+</pre>
+<p>The joints section contains a list of joints and their respective parameters.
+</p><p>Each joint is started with a header which consists of a joint type descriptor that defines the joint type followed the <i>name</i> of the joint. This is then followed by the body which is enclosed in curly brackets.
+</p><p>There can be multiple joint declarations in the joint section.
+</p><p>The keys used in the body of this section vary depending on what jointType is specified...
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;action=edit&amp;section=5" title="Edit section: Ball and Socket">edit</a>]</div><a name="Ball_and_Socket"></a><h4>Ball and Socket</h4>
+<p>'Need an overview description for this jointType'
+</p>
+<table style="width:75%" border="1" cellpadding="0" cellspacing="0">
+
+<tr style="background:#AA0000; color:white">
+<th> KEYWORD </th><th> DESCRIPTION
+</th></tr>
+<tr align="center">
+<td> anchor ( x, y, z ) </td><td> Specifies the center of the ball (required)
+</td></tr>
+<tr align="center">
+<td> conelimit ( axis_x, axis_y, axis_z ), &lt;angle&gt;, ( shaft_x, shaft_y, shaft_z ) </td><td> Specifies a cone shaped limit. The cone axis is specified by the first vector. The angle of the cone at the top follows. The cone is attached to body2. Next a shaft is specified which is attached to body1 and is constrained to always stay within the cone.
+</td></tr>
+<tr align="center">
+<td> pyramidlimit ( axis1_x, axis1_y, axis1_z ), &lt;angle1&gt;, &lt;angle2&gt;, &lt;angle3&gt;, ( shaft_x, shaft_y, shaft_z ) </td><td> Specifies a pyramid shaped limit. The pyramid axis is specified by the first vectors. The first and second angle specify the angles at the top of the pyramid. The third angle specifies the rotation of the pyramid about the pyramid axis. The pyramid is attached to body2. Next a shaft is specified which is attached to body1 and is constrained to always stay within the pyramid.
+</td></tr>
+<tr align="center">
+<td> friction &lt;value&gt; </td><td> Specifies joint friction. The friction value is usually in the range [0, 1].
+</td></tr></table>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;action=edit&amp;section=6" title="Edit section: Universal Joint">edit</a>]</div><a name="Universal_Joint"></a><h4>Universal Joint</h4>
+<p>An universal joint works very similar to a ball and socket joint. However the rotation about two shafts attached to the bodies is also constrained.
+</p>
+<table style="width:75%" border="1" cellpadding="0" cellspacing="0">
+
+<tr style="background:#AA0000; color:white">
+<th> KEYWORD </th><th> DESCRIPTION
+</th></tr>
+<tr align="center">
+<td> anchor ( x, y, z ) </td><td> Specifies the anchor of the universal joint (required)
+</td></tr>
+<tr align="center">
+<td> shafts ( dir1_x, dir1_y, dir1_z ), ( dir2_x, dir2_y, dir2_z ) </td><td> Specifies the two shafts (required) The first shaft is attached to body1 and points into or towards body1. The second shaft is attached to body2 and points into or towards body2. The rotation of body1 relative to body2 about these shafts is constrained.
+</td></tr>
+<tr align="center">
+<td> conelimit ( axis_x, axis_y, axis_z ), angle </td><td> Specifies a cone shaped limit. The cone axis is specified by the first vector. The angle of the cone at the top follows. The cone is attached to body2. The first shaft attached to body1 is constrained to always stay within the cone.
+</td></tr>
+<tr align="center">
+<td> pyramidlimit ( axis1_x, axis1_y, axis1_z ), angle1, angle2, angle3 </td><td> Specifies a pyramid shaped limit. The pyramid axis is specified by the first vectors. The first and second angle specify angles at the top of the pyramid. The third angle specifies the rotation of the pyramid about the pyramid axis. The pyramid is attached to body2. The first shaft attached to body1 is constrained to always stay within the pyramid.
+</td></tr>
+<tr align="center">
+<td> friction &lt;value&gt; </td><td> Specifies joint friction. The friction value is usually in the range [0, 1].
+</td></tr></table>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;action=edit&amp;section=7" title="Edit section: Hinge">edit</a>]</div><a name="Hinge"></a><h4>Hinge</h4>
+<p>A hinge is specified by an anchor and a hinge axis about which the two bodies are allowed to rotate relative to each other.
+</p>
+<table style="width:75%" border="1" cellpadding="0" cellspacing="0">
+
+<tr style="background:#AA0000; color:white">
+<th> KEYWORD </th><th> DESCRIPTION
+</th></tr>
+<tr align="center">
+<td> anchor ( x, y, z ) </td><td> Specifies the anchor
+</td></tr>
+<tr align="center">
+<td> axis ( axis_x, axis_y, axis_z ) </td><td> Specifies the hinge axis
+</td></tr>
+<tr align="center">
+<td> limit angle1, angle2, angle3 </td><td> Specifies a V-shaped limit. The first angle specifies the center of the V-shaped limit. The angle which specifies the width of the V-shaped limit follows. The V-shape is attached to body2. Next a shaft is specified which is attached to body1 and is constrained to always stay within the V-shape. The orientation of this shaft is specified with the third angle.
+</td></tr>
+<tr align="center">
+<td> friction &lt;value&gt; </td><td> Specifies joint friction. The friction value is usually in the range [0, 1].
+</td></tr></table>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;action=edit&amp;section=8" title="Edit section: Spring">edit</a>]</div><a name="Spring"></a><h4>Spring</h4>
+<p>A spring is specified by two anchors, one on each constrained body.
+</p>
+<table style="width:75%" border="1" cellpadding="0" cellspacing="0">
+
+<tr style="background:#AA0000; color:white">
+<th> KEYWORD </th><th> DESCRIPTION
+</th></tr>
+<tr align="center">
+<td> anchor1 ( x, y, z ) </td><td> Specifies the first anchor
+</td></tr>
+<tr align="center">
+<td> anchor2 ( x, y, z ) </td><td> Specifies the second anchor
+</td></tr>
+<tr align="center">
+<td> friction &lt;value&gt; </td><td> Specifies joint friction. The friction value is usually in the range [0, 1].
+</td></tr>
+<tr align="center">
+<td> stretch &lt;value&gt; </td><td> Spring constant when the spring is stretched
+</td></tr>
+<tr align="center">
+<td> compress &lt;value&gt; </td><td> Spring constant when the spring is compressed
+</td></tr>
+<tr align="center">
+<td> damping &lt;value&gt; </td><td> Spring damping
+</td></tr>
+<tr align="center">
+<td> restLength &lt;value&gt; </td><td> Rest length of the spring
+</td></tr>
+<tr align="center">
+<td> minLength &lt;value&gt; </td><td> Minimum length of the spring
+</td></tr>
+<tr align="center">
+<td> maxLength &lt;value&gt; </td><td> Maximum length of the spring
+</td></tr></table>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;action=edit&amp;section=9" title="Edit section: Vector Syntax">edit</a>]</div><a name="Vector_Syntax"></a><h2>Vector Syntax</h2>
+<p>3D vectors are used to specify positions, directions and orientations of bodies and constraints. There are four ways to specify such a vector in a .af file
+</p>
+<table style="width:75%" border="1" cellpadding="0" cellspacing="0">
+
+<tr style="background:#AA0000; color:white">
+<th> KEYWORD </th><th> DESCRIPTION
+</th></tr>
+<tr align="center">
+<td> ( x, y, z ) </td><td> Position relative to the md5 origin
+</td></tr>
+<tr align="center">
+<td> joint( "joint name" ) </td><td> Position of a joint
+</td></tr>
+<tr align="center">
+<td> bonecenter( "start joint name", "end joint name" ) </td><td> Center of a bone between two joints
+</td></tr>
+<tr align="center">
+<td> bonedir( "start joint name", "end joint name" ) </td><td> Direction of a bone from one joint to another
+</td></tr></table>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;action=edit&amp;section=10" title="Edit section: Editing Tools">edit</a>]</div><a name="Editing_Tools"></a><h2>Editing Tools</h2>
+<p>Like other declaration types, articlulated figures can be edited in a text editor. However, the engine comes packaged with a built-in tool for editing these files. It can be accessed using the console command <a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=EditAFs&amp;action=edit" class="new" title="EditAFs">editAFs</a>.
+</p><p>Details on this tool's use can be found in the <a href="/web/20070311193751/http://www.modwiki.net/wiki/AF_editor" title="AF editor"> articulated figure editor</a> article.
+</p>
+<!-- Saved in parser cache with key modwiki:pcache:idhash:1680-0!1!0!0!!en!2 and timestamp 20070310202856 -->
+<div class="printfooter">
+Retrieved from "<a href="/web/20070311193751/http://www.modwiki.net/wiki/Af_%28decl%29">http://www.modwiki.net/wiki/Af_%28decl%29</a>"</div>
+			<div id="catlinks"><p class='catlinks'><a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Special:Categories&amp;article=Af_%28decl%29" title="Special:Categories">Category</a>: <span dir='ltr'><a href="/web/20070311193751/http://www.modwiki.net/wiki/Category:Declarations" title="Category:Declarations">Declarations</a></span><br /><hr /><a href="/web/20070311193751/http://www.modwiki.net/wiki/Category:Modwiki" title="Category:Modwiki">Modwiki</a> &gt; <a href="/web/20070311193751/http://www.modwiki.net/wiki/Category:Engine_reference" title="Category:Engine reference">Engine reference</a> &gt; <a href="/web/20070311193751/http://www.modwiki.net/wiki/Category:Declarations" title="Category:Declarations">Declarations</a></p></div>			<!-- end content -->
+			<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<ul>
+				 <li id="ca-nstab-main" class="selected"><a href="/web/20070311193751/http://www.modwiki.net/wiki/Af_%28decl%29">Article</a></li>
+				 <li id="ca-talk" class="new"><a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Talk:Af_%28decl%29&amp;action=edit">Discussion</a></li>
+				 <li id="ca-edit"><a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;action=edit">Edit</a></li>
+				 <li id="ca-history"><a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;action=history">History</a></li>
+		</ul>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Special:Userlogin&amp;returnto=Af_(decl)">Log in / create account</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(/web/20070311193751im_/http://www.modwiki.net/wiki/upload/wiki.png);" href="/web/20070311193751/http://www.modwiki.net/wiki/Main_Page" title="Main Page"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class='portlet' id='p-Main'>
+		<h5>Main</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/web/20070311193751/http://www.modwiki.net/wiki/Main_Page">Main Page</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Engine'>
+		<h5>Engine</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Doom-3"><a href="/web/20070311193751/http://www.modwiki.net/wiki/Doom_3">Doom 3</a></li>
+				<li id="n-Quake-4"><a href="/web/20070311193751/http://www.modwiki.net/wiki/Quake_4">Quake 4</a></li>
+				<li id="n-Prey"><a href="/web/20070311193751/http://www.modwiki.net/wiki/Prey">Prey</a></li>
+				<li id="n-ETQW"><a href="/web/20070311193751/http://www.modwiki.net/wiki/Enemy_Territory:_Quake_Wars">ETQW</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Quick Links'>
+		<h5>Quick Links</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Console"><a href="/web/20070311193751/http://www.modwiki.net/wiki/Console">Console</a></li>
+				<li id="n-Script-Events"><a href="/web/20070311193751/http://www.modwiki.net/wiki/Scripting">Script Events</a></li>
+				<li id="n-Material-Keywords"><a href="/web/20070311193751/http://www.modwiki.net/wiki/Material_%28decl%29">Material Keywords</a></li>
+				<li id="n-Modification-List"><a href="/web/20070311193751/http://www.modwiki.net/wiki/Modlist">Modification List</a></li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-Wiki'>
+		<h5>Wiki</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Open-tasks"><a href="/web/20070311193751/http://www.modwiki.net/wiki/modwiki:Open_tasks">Open tasks</a></li>
+				<li id="n-recentchanges"><a href="/web/20070311193751/http://www.modwiki.net/wiki/Special:Recentchanges">Recent changes</a></li>
+				<li id="n-Style-guide"><a href="/web/20070311193751/http://www.modwiki.net/wiki/modwiki:Style_guide">Style guide</a></li>
+				<li id="n-help"><a href="/web/20070311193751/http://www.modwiki.net/wiki/Help:Contents">Help</a></li>
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/web/20070311193751/http://www.modwiki.net/wiki/Special:Search" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" value="Search" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/web/20070311193751/http://www.modwiki.net/wiki/Special:Whatlinkshere/Af_%28decl%29">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/web/20070311193751/http://www.modwiki.net/wiki/Special:Recentchangeslinked/Af_%28decl%29">Related changes</a></li>
+<li id="t-upload"><a href="/web/20070311193751/http://www.modwiki.net/wiki/Special:Upload">Upload file</a></li>
+<li id="t-specialpages"><a href="/web/20070311193751/http://www.modwiki.net/wiki/Special:Specialpages">Special pages</a></li>
+				<li id="t-print"><a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;printable=yes&amp;printable=yes">Printable version</a></li>				<li id="t-permalink"><a href="/web/20070311193751/http://www.modwiki.net/w/index.php?title=Af_%28decl%29&amp;oldid=6513">Permanent link</a></li>			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="/web/20070311193751/http://www.mediawiki.org/"><img src="/web/20070311193751im_/http://www.modwiki.net/w/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="/web/20070311193751/http://www.gnu.org/copyleft/fdl.html"><img src="/web/20070311193751im_/http://www.modwiki.net/w/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+			<ul id="f-list">
+				<li id="lastmod"> This page was last modified 08:43, 27 June 2006.</li>
+				<li id="copyright">Content is available under <a href="/web/20070311193751/http://www.gnu.org/copyleft/fdl.html" class='external ' title="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.2</a>.</li>
+				<li id="privacy"><a href="/web/20070311193751/http://www.modwiki.net/wiki/modwiki:Privacy_policy" title="modwiki:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="/web/20070311193751/http://www.modwiki.net/wiki/modwiki:About" title="modwiki:About">About modwiki</a></li>
+				<li id="disclaimer"><a href="/web/20070311193751/http://www.modwiki.net/wiki/modwiki:General_disclaimer" title="modwiki:General disclaimer">Disclaimers</a></li>
+			</ul>
+		</div>
+	<script type="text/javascript"> if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+<!-- Served by h982484 in 0.16 secs. -->
+</body></html>
+
+
+
+
+
+<!--
+     FILE ARCHIVED ON 19:37:51 Mar 11, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 3:25:10 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->

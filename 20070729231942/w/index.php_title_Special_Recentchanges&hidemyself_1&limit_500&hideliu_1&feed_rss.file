@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="http://modwiki.net/w/skins/common/feed.css"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>modwiki - Recent changes [en]</title>
+		<link>http://modwiki.net/wiki/Special:Recentchanges</link>
+		<description>Track the most recent changes to the wiki on this page.</description>
+		<language>en</language>
+		<generator>MediaWiki 1.6.8</generator>
+		<lastBuildDate>Sun, 08 Jul 2007 07:59:40 GMT</lastBuildDate>
+		<item>
+			<title>Move (script event)</title>
+			<link>http://modwiki.net/wiki/Move_%28script_event%29</link>
+			<description>&lt;p&gt;added extensive notes&lt;/p&gt;
+
+			&lt;table border='0' width='98%' cellpadding='0' cellspacing='4' style=&quot;background-color: white;&quot;&gt;
+			&lt;tr&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Revision as of 06:44, 8 July 2007&lt;/td&gt;
+				&lt;td colspan='2' width='50%' align='center' style=&quot;background-color: white;&quot;&gt;Current revision&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 19:&lt;/strong&gt;&lt;/td&gt;
+&lt;td colspan=&quot;2&quot; align=&quot;left&quot;&gt;&lt;strong&gt;Line 19:&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt; SOUTH&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt; SOUTH&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;*[distance] - The amount of space to travel in game units.&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;*[distance] - The amount of space to travel in game units.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;| examples=&amp;lt;script&amp;gt;$my_entity.move( UP, 20 );&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;| examples=&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;move upwards 20 units&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&amp;lt;script&amp;gt;$my_entity.move( UP, 20 );&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&amp;lt;/script&amp;gt;&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td style=&quot;background: #eee; font-size: smaller;&quot;&gt;&amp;lt;/script&amp;gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td style=&quot;background: #ffa; font-size: smaller;&quot;&gt;| notes=This script event &lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;does not return any values&lt;/span&gt;. &lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;The example above will cause &lt;/span&gt;the entity to move &lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;upwards 20 units&lt;/span&gt;. Note that distance can be a positive or negative value; something like ( WEST, -20 ) will actually result in movement 20 units to the East.}}&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;| notes=This &lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;event is intended to move an entity along one of six principal directions in either world space or local space.&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&amp;#160;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;You can pass an arbitrary number to the &lt;/span&gt;script event &lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;but you'll find that it only affords you control over the heading&lt;/span&gt;. &lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;Vertical movement is restricted to either up or down with the exception of relative parameters, where direction is relative to the orientation of &lt;/span&gt;the &lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;entity.&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&amp;#160;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;That said, you could rotate your &lt;/span&gt;entity &lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;to face the intended path of travel you could tell it &lt;/span&gt;to move &lt;span style=&quot;color: red; font-weight: bold;&quot;&gt;forward and it would work as intended. This can prove to be tedious however and alternative script events like [[MoveTo_(script_event) | moveTo]] or [[MoveToPos_(script_event) | moveToPos]] may be more suitable&lt;/span&gt;.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;&amp;#160;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td colspan=&quot;2&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;+&lt;/td&gt;&lt;td style=&quot;background: #cfc; font-size: smaller;&quot;&gt;Note that distance can be a positive or negative value; something like ( WEST, -20 ) will actually result in movement 20 units to the East.}}&lt;/td&gt;&lt;/tr&gt;
+
+			&lt;/table&gt;
+		</description>
+			<pubDate>Sun, 08 Jul 2007 06:44:54 GMT</pubDate>			<dc:creator>Rich</dc:creator>			<comments>http://modwiki.net/wiki/Talk:Move_%28script_event%29</comments>		</item>
+		<item>
+			<title>Talk:Texturing</title>
+			<link>http://modwiki.net/wiki/Talk:Texturing</link>
+			<description>&lt;p&gt;/* Well... */&lt;/p&gt;
+
+			&lt;table border='0' width='98%' cellpadding='0' cellspacing='4' style=&quot;background-color: white;&quot;&gt;
+			&lt;tr&gt;
+				&lt;td colspan='2' width='50%' align='center'

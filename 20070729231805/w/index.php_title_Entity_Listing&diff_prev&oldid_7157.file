@@ -1,0 +1,2193 @@
+DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="robots" content="noindex,nofollow" />
+<meta name="keywords" content="Entity Listing" />
+<link rel="shortcut icon" href="/web/20070729231805im_/http://www.modwiki.net/favicon.ico" />
+<link title="Creative Commons" type="application/rdf+xml" href="/w/index.php?title=Entity_Listing&amp;action=creativecommons" rel="meta" />
+<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<title>Entity Listing - modwiki</title>
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20070729231805cs_/http://www.modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/web/20070729231805cs_/http://www.modwiki.net/w/skins/common/commonPrint.css" />
+		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
+		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
+		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
+		<!--[if IE 7]><style type="text/css">@import "/w/skins/monobook/IE70Fixes.css?1";</style><![endif]-->
+		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
+		<script type="text/javascript" src="/web/20070729231805js_/http://www.modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20070729231805js_/http://www.modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<style type="text/css">/*<![CDATA[*/
+@import "/web/20070729231805cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231805cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20070729231805cs_/http://www.modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+/*]]>*/</style>
+		<!-- Head Scripts -->
+			</head>
+<body  class="ns-0 ltr">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app13.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/www.modwiki.net\/w\/index.php?title=Entity_Listing&diff=prev&oldid=7157";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "29";
+var displayMonth = "Jul";
+var displayYear = "2007";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://www.modwiki.net/w/index.php?title=Entity_Listing&amp;diff=prev&amp;oldid=7157" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20070729231805" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jun
+                       
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 23:18:05 Jul 29, 2007">JUL</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Aug
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_prv_off.png" alt="Previous capture" width="14" height="16" border="0" />
+                       
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 23:18:05 Jul 29, 2007">29</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2006
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 23:18:05 Jul 29, 2007">2007</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2008
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20070729231805*/http://www.modwiki.net/w/index.php?title=Entity_Listing&amp;diff=prev&amp;oldid=7157" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>1 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">29 Jul 07 - 29 Jul 07</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:6:000000100000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000_2014:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+				<h1 class="firstHeading">Entity Listing</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">From modwiki</h3>
+			<div id="contentSub">(Difference between revisions)</div>
+									<div id="jump-to-nav">Jump to: <a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Entity_Listing&amp;diff=prev&amp;oldid=7157#column-one">navigation</a>, <a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Entity_Listing&amp;diff=prev&amp;oldid=7157#searchInput">search</a></div>			<!-- start content -->
+			<div class="firstrevisionheader" style="text-align: center"><strong></strong><br /><a href="/web/20070729231805/http://www.modwiki.net/wiki/User:Rich" title="User:Rich">Rich</a>  (<a href="/web/20070729231805/http://www.modwiki.net/wiki/User_talk:Rich" title="User talk:Rich">Talk</a> | <a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Special:Contributions&amp;target=Rich" title="Special:Contributions">contribs</a>)<br /> <span class='comment'>(Added WIP)</span><br /><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Entity_Listing&amp;diff=next&amp;oldid=7157" title="Entity Listing" id="differences-nextlink">Next diff →</a></div>
+<hr /><h2>Revision as of 07:01, 2 April 2007</h2>
+<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+<ul>
+<li class='toclevel-1'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Entity_Listing&amp;diff=prev&amp;oldid=7157#Entity_Listing"><span class="tocnumber">1</span> <span class="toctext">Entity Listing</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Entity_Listing&amp;diff=prev&amp;oldid=7157#Doom_3"><span class="tocnumber">2</span> <span class="toctext">Doom 3</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Entity_Listing&amp;diff=prev&amp;oldid=7157#Quake_4"><span class="tocnumber">3</span> <span class="toctext">Quake 4</span></a></li>
+<li class='toclevel-1'><a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Entity_Listing&amp;diff=prev&amp;oldid=7157#Prey"><span class="tocnumber">4</span> <span class="toctext">Prey</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Entity_Listing&amp;action=edit&amp;section=1" title="Edit section: Entity Listing">edit</a>]</div><a name="Entity_Listing"></a><h2>Entity Listing</h2>
+<p>This article will contain a list of all entities in each respective game.
+</p><p>Each entity will have it's own page with the following content...
+</p>
+<ul><li> A short description
+</li><li> A list of functional key/value pairs
+</li><li> Inheritance all the way down to it's spawnclass from the gamecode.
+</li><li> Any notes that don't fall into the above mentioned points.
+</li></ul>
+<p>At present each list has been compiled by grepping the corresponding /def folder for the keyword "entityDef".
+</p><p>Each of these lists needs to be cross referenced to remove duplicates and eventually they should be categorized. Probably by function. For example, triggers, targets, actors, ect...
+</p>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Entity_Listing&amp;action=edit&amp;section=2" title="Edit section: Doom 3">edit</a>]</div><a name="Doom_3"></a><h2>Doom 3</h2>
+<ul><li> aas_cyberdemon
+</li><li> aas_guardian
+</li><li> aas_mancubus
+</li><li> aas_sabaoth
+</li><li> aas_types
+</li><li> aas48
+</li><li> aas96
+</li><li> admin_bfgcase
+</li><li> admin_doorframe_pinkyattack
+</li><li> admin_imp1
+</li><li> admin_imp2
+</li><li> admin_impdoors
+</li><li> admin_overhear_cam
+</li><li> admin_overhear_campbell
+</li><li> admin_overhear_campbell_bfg
+</li><li> admin_overhear_campbell2
+</li><li> admin_overhear_player
+</li><li> admin_overhear_swann
+</li><li> admin_pinky_glassbreak
+</li><li> admin_pinkyattack_cam
+</li><li> admin_pinkyattack_pinky
+</li><li> admin_pinkyattack_shards
+</li><li> admin_railing_pinkyattack
+</li><li> admin_vent_swann
+</li><li> admin_wounded_marine
+</li><li> ai_attackcone
+</li><li> ai_attackcone_once
+</li><li> ai_attackcone_turret
+</li><li> ai_lostcombat
+</li><li> alphalabs1_cam
+</li><li> alphalabs1_helldoll
+</li><li> alphalabs1_imp
+</li><li> alphalabs1_labcoat_bald
+</li><li> alphalabs1_maggot1
+</li><li> alphalabs1_maggot2
+</li><li> alphalabs1_maggot3
+</li><li> alphalabs1_pentagramdood
+</li><li> alphalabs1_player
+</li><li> alphalabs2_cin_imp
+</li><li> alphalabs2_elevatorenv
+</li><li> alphalabs2_imp
+</li><li> alphalabs2_maggot
+</li><li> alphalabs2_marine_helmet_p90
+</li><li> alphalabs2_scientist1
+</li><li> alphalabs3_fragchamber_scientist
+</li><li> alphalabs3_fragchamber_scientist2
+</li><li> alphalabs3_fragchamber_skeleton
+</li><li> alphalabs3_vagaryintro_cam
+</li><li> alphalabs3_vagaryintro_player
+</li><li> alphalabs3_vagaryintro_vagary
+</li><li> ammo_belt_small
+</li><li> ammo_belt_small_mp
+</li><li> ammo_bfg_small
+</li><li> ammo_bullets_large
+</li><li> ammo_bullets_large_mp
+</li><li> ammo_bullets_small
+</li><li> ammo_bullets_small_mp
+</li><li> ammo_cells_large
+</li><li> ammo_cells_large_mp
+</li><li> ammo_cells_small
+</li><li> ammo_cells_small_mp
+</li><li> ammo_clip_large
+</li><li> ammo_clip_large_mp
+</li><li> ammo_clip_small
+</li><li> ammo_clip_small_mp
+</li><li> ammo_grenade_small
+</li><li> ammo_grenade_small_mp
+</li><li> ammo_names
+</li><li> ammo_rockets_large
+</li><li> ammo_rockets_large_mp
+</li><li> ammo_rockets_small
+</li><li> ammo_rockets_small_mp
+</li><li> ammo_shells_large
+</li><li> ammo_shells_large_mp
+</li><li> ammo_shells_small
+</li><li> ammo_shells_small_mp
+</li><li> ammo_types
+</li><li> archvile_flamewall
+</li><li> archvile_incinerate
+</li><li> blooper_betruger
+</li><li> blooper_hazguy
+</li><li> caverns_boulderbridge
+</li><li> caverns_bridge
+</li><li> caverns_bridgeback
+</li><li> caverns_bridgecrane
+</li><li> caverns_bridgefront
+</li><li> caverns_char_maint_scared
+</li><li> caverns_hellknight
+</li><li> caverns_hellknight2
+</li><li> caverns_hkwall
+</li><li> caverns_imp1
+</li><li> caverns_imp2
+</li><li> caverns_pinky
+</li><li> caverns_vagary1
+</li><li> caverns_vagary2
+</li><li> caverns_vagrocks
+</li><li> char_betruger
+</li><li> char_campbell
+</li><li> char_campbell_bfg
+</li><li> char_campbell_bfgcase
+</li><li> char_hazmat
+</li><li> char_labcoat_black
+</li><li> char_marine_asian_chair1
+</li><li> char_marine_young_chair1
+</li><li> char_poppy
+</li><li> char_security_goggles_pistol
+</li><li> char_sentry
+</li><li> char_sentry_flashlight
+</li><li> char_swann
+</li><li> character_default
+</li><li> cin_anim1_fatty
+</li><li> cin_anim1_pinky
+</li><li> cin_anim1_uacm
+</li><li> cin_anim2_fatty
+</li><li> cin_anim2_pinky
+</li><li> cin_anim3_fatty
+</li><li> cin_anim3_pinky
+</li><li> cin_anim5_fatty
+</li><li> cin_anim5_pinky
+</li><li> cin_anim9a_fatty
+</li><li> cin_anim9a_pinky
+</li><li> cin_anim9a_uacm	
+</li><li> cin_base
+</li><li> cin_chain_cam
+</li><li> cin_chain_uacm
+</li><li> cin_chain_zcc
+</li><li> cin_chain_zct
+</li><li> cin_e3bathroom_cam
+</li><li> cin_e3teaser_cam
+</li><li> cin_e3teaser_hk
+</li><li> cin_elevator_cam
+</li><li> cin_elevator_elev
+</li><li> cin_elevator_player
+</li><li> cin_fat_drag
+</li><li> cin_hk_hk
+</li><li> cin_hk_walkbydoor
+</li><li> cin_hkdeath_cam
+</li><li> cin_hkdeath_uac
+</li><li> cin_hkendroar_cam
+</li><li> cin_hkendroar_hk
+</li><li> cin_hkrip_cam
+</li><li> cin_hkrip_uac
+</li><li> cin_logo_cam
+</li><li> cin_mars_cam
+</li><li> cin_mars_flare
+</li><li> cin_pink_drag
+</li><li> cin_posess_cam
+</li><li> cin_posess_hk
+</li><li> cin_posess_imp
+</li><li> cin_posess_sec
+</li><li> cin_posess_skull
+</li><li> cin_posess_skull2
+</li><li> cin_posess_skull3
+</li><li> cin_posess_zsec
+</li><li> cin_posess2_cam
+</li><li> cin_posess3_cam
+</li><li> cin_posess5_cam
+</li><li> cin_shake
+</li><li> cin_shake_cam
+</li><li> cin_tele_cam
+</li><li> cin_tele_skull7
+</li><li> cin_toob
+</li><li> cin_toob_cam
+</li><li> cin_zombie_drag
+</li><li> comm1_sentry
+</li><li> comm1_sentry_blank
+</li><li> comm1_sentryloader
+</li><li> comm1_swann_video_cam
+</li><li> comm1_video_swann
+</li><li> commoutside_campbell
+</li><li> commoutside_camzombie_cam
+</li><li> commoutside_camzombie_zomb
+</li><li> commoutside_cin_sawyer
+</li><li> commoutside_fatty
+</li><li> commoutside_hellgoo1
+</li><li> commoutside_player
+</li><li> commoutside_sawintro_cam
+</li><li> commoutside_swann
+</li><li> commoutside_vehicle
+</li><li> cpu1_camphunt_cam
+</li><li> cpu1_camphunt_campbell
+</li><li> cpu1_monster_trite
+</li><li> cpu1_wounded_campbell	
+</li><li> cpuboss_cam
+</li><li> cpuboss_cin_player
+</li><li> cpuboss_cin_sabaoth
+</li><li> damage_archvilefirewall
+</li><li> damage_archvileincinerate
+</li><li> damage_bfg
+</li><li> damage_bfg_cinematic
+</li><li> damage_bfg_mp
+</li><li> damage_bfg_overcharge
+</li><li> damage_bfgFreq
+</li><li> damage_bfgFreq_cinematic
+</li><li> damage_bfgSplash
+</li><li> damage_bfgSplash_cinematic
+</li><li> damage_bfgSplash_mp
+</li><li> damage_bullet_chaingun
+</li><li> damage_bullet_chaingun_mp
+</li><li> damage_bullet_machinegun
+</li><li> damage_bullet_machinegun_mp
+</li><li> damage_bullet_pistol
+</li><li> damage_bullet_pistol_mp
+</li><li> damage_bullet_turret
+</li><li> damage_bullet_zsec_machinegun
+</li><li> damage_bullet_zsec_pistol
+</li><li> damage_bullet_zsec_shield
+</li><li> damage_bullet_zsec_shotgun
+</li><li> damage_cacodemon_fireball
+</li><li> damage_cacodemon_fireball_splash
+</li><li> damage_chainsaw
+</li><li> damage_chainsaw_mp
+</li><li> damage_co_electric_trac
+</li><li> damage_crush			
+</li><li> damage_CyberrocketDirect
+</li><li> damage_CyberRocketSplash
+</li><li> damage_explodingbarrel
+</li><li> damage_explodingbarrel_mp
+</li><li> damage_explosion
+</li><li> damage_fatalfall
+</li><li> damage_fatalfall_mp
+</li><li> damage_fireball_hellknight
+</li><li> damage_fireball_hellknight_splash
+</li><li> damage_fists
+</li><li> damage_fists_mp
+</li><li> damage_flashlight
+</li><li> damage_flashlight_mp
+</li><li> damage_fragchamberfog
+</li><li> damage_fragchamberpipe
+</li><li> damage_generic
+</li><li> damage_gib			
+</li><li> damage_grenadeDirect
+</li><li> damage_grenadeDirect_mp
+</li><li> damage_grenadeSplash
+</li><li> damage_grenadeSplash_inhand
+</li><li> damage_grenadeSplash_inhand_mp
+</li><li> damage_grenadeSplash_mp
+</li><li> damage_guardian_smash_direct
+</li><li> damage_guardian_smash_splash
+</li><li> damage_guardianCharge
+</li><li> damage_guardianHeadButt
+</li><li> damage_guardianPoundGround
+</li><li> damage_hardfall
+</li><li> damage_hardfall_mp
+</li><li> damage_HugeExplosion
+</li><li> damage_impfireball
+</li><li> damage_impfireball_splash
+</li><li> damage_lava
+</li><li> damage_lightBreak
+</li><li> damage_mancubusblast
+</li><li> damage_mancubusSplash
+</li><li> damage_moverCrush
+</li><li> damage_noair
+</li><li> damage_painTrigger
+</li><li> damage_plasmablast
+</li><li> damage_plasmablast_mp
+</li><li> damage_plasmatracer
+</li><li> damage_RevRocket
+</li><li> damage_RevRocketSplash
+</li><li> damage_rocketDirect
+</li><li> damage_rocketDirect_mp
+</li><li> damage_rocketSplash
+</li><li> damage_rocketSplash_mp
+</li><li> damage_sentry_bullet
+</li><li> damage_shotgun
+</li><li> damage_shotgun_mp
+</li><li> damage_Smallexplosion
+</li><li> damage_softfall
+</li><li> damage_softfall_mp
+</li><li> damage_soulblast
+</li><li> damage_soulblast_mp
+</li><li> damage_soulSplash
+</li><li> damage_soulSplash_mp
+</li><li> damage_suicide
+</li><li> damage_telefrag
+</li><li> damage_tick_explode
+</li><li> damage_triggerhurt_10
+</li><li> damage_triggerhurt_100
+</li><li> damage_triggerhurt_1000
+</li><li> damage_triggerhurt_15
+</li><li> damage_triggerhurt_25
+</li><li> damage_triggerhurt_5
+</li><li> damage_triggerhurt_50
+</li><li> damage_triggerhurt_75
+</li><li> damage_triggerhurt_toxin
+</li><li> damage_triggerhurt_toxin_1
+</li><li> damage_trite_explode
+</li><li> damage_VagaryObject
+</li><li> damage_vulgar_fireball
+</li><li> damage_vulgar_fireball_splash
+</li><li> damage_zombie_commando_cgun
+</li><li> debris_barrelpiece
+</li><li> debris_barrelpiece2
+</li><li> debris_barreltop
+</li><li> debris_barreltop2
+</li><li> debris_brass
+</li><li> debris_largeshrapnel
+</li><li> debris_shotgunbrass
+</li><li> debris_shrapnel
+</li><li> delta1_hellknight
+</li><li> delta1_reactor
+</li><li> delta1_sarge_video
+</li><li> delta1_sargevcd_cam
+</li><li> delta1_scipull
+</li><li> delta2a_cin_fatty
+</li><li> delta2a_commando
+</li><li> delta2a_fatty
+</li><li> delta2a_imp
+</li><li> delta2a_player
+</li><li> delta2a_player_scientist
+</li><li> delta2a_sci_tele_hell_visions_cam
+</li><li> delta2a_scientist
+</li><li> delta2a_scientist_cam
+</li><li> delta2a_scientist_return
+</li><li> delta2a_teleporter
+</li><li> delta2a_teleporter_cam
+</li><li> delta2a_zombie_office1
+</li><li> delta2a_zombie_office2
+</li><li> delta2b_cam
+</li><li> delta2b_hazmat
+</li><li> delta2b_imp
+</li><li> delta2b_keycardzombie
+</li><li> delta2b_roq2_cam
+</li><li> delta2b_roq3_cam
+</li><li> delta2b_tankimp
+</li><li> delta2b_tankimpwires	
+</li><li> delta2b_tankrev
+</li><li> delta2b_tankrevwires
+</li><li> delta2b_waterwires
+</li><li> delta3_betruger
+</li><li> delta4_betruger
+</li><li> delta4_cin_hazguy
+</li><li> delta4_cin_hk1
+</li><li> delta4_cin_hk2
+</li><li> delta4_cin_player
+</li><li> delta4_cin_player_start
+</li><li> delta4_cin_teleporter
+</li><li> delta4_hazguy
+</li><li> delta4_hkintro_cam
+</li><li> delta5_wounded_swann
+</li><li> ending_cam
+</li><li> ending_debris
+</li><li> enpro_campbell
+</li><li> enpro_cin_female
+</li><li> enpro_cin_lostsoul
+</li><li> enpro_cin_machinegun
+</li><li> enpro_cin_player
+</li><li> enpro_cin_wraith	
+</li><li> enpro_escape_cam
+</li><li> enpro_exit_cam
+</li><li> enpro_exit_helmet	
+</li><li> enpro_exit_imp1
+</li><li> enpro_exit_imp2	
+</li><li> enpro_exit_imp3	
+</li><li> enpro_glass_cam
+</li><li> enpro_keycard
+</li><li> enpro_lost_chair	
+</li><li> enpro_lost_spine	
+</li><li> enpro_lostintro_cam
+</li><li> enpro_monitor_cam
+</li><li> enpro_soldier1
+</li><li> enpro_soldier2
+</li><li> enpro_soldier3
+</li><li> enpro_soldier4
+</li><li> enpro_swann
+</li><li> enpro_tuberide_cam
+</li><li> enpro_wounded_cam
+</li><li> enpro_wounded_marine
+</li><li> enpro_wounded_marine2
+</li><li> enpro_wounded_player
+</li><li> env_airlockdoor
+</li><li> env_bfg_overcharge
+</li><li> env_bfgcase
+</li><li> env_bluesteampipe_128
+</li><li> env_buggy
+</li><li> env_cage_corpse
+</li><li> env_chain
+</li><li> env_crane
+</li><li> env_craneplatform_caverns1
+</li><li> env_curtain
+</li><li> env_dragtest
+</li><li> env_evilmeat
+</li><li> env_gibs_leftarm
+</li><li> env_gibs_leftleg
+</li><li> env_gibs_rtlolegstump
+</li><li> env_gibs_rtuplegstump
+</li><li> env_gibs_ruparmstub
+</li><li> env_gibs_spine
+</li><li> env_gibs_torso
+</li><li> env_grenade_explodeinhand
+</li><li> env_greysteampipe_128
+</li><li> env_hellcage_long
+</li><li> env_hellcage_medium
+</li><li> env_hellcage_short
+</li><li> env_hellchain
+</li><li> env_hires_steampipe
+</li><li> env_implanding
+</li><li> env_inviso
+</li><li> env_juglamp
+</li><li> env_locust
+</li><li> env_orangesteampipe_128
+</li><li> env_pinky_pipes
+</li><li> env_pipe_96
+</li><li> env_player_doommarine
+</li><li> env_playerandallguns
+</li><li> env_ragdoll_archvile
+</li><li> env_ragdoll_boney
+</li><li> env_ragdoll_cherub
+</li><li> env_ragdoll_commando
+</li><li> env_ragdoll_fatty
+</li><li> env_ragdoll_gibbable_base
+</li><li> env_ragdoll_hazmat
+</li><li> env_ragdoll_hellknight
+</li><li> env_ragdoll_imp
+</li><li> env_ragdoll_lab1
+</li><li> env_ragdoll_lab2
+</li><li> env_ragdoll_lab3
+</li><li> env_ragdoll_lab4
+</li><li> env_ragdoll_maint
+</li><li> env_ragdoll_marine_helmet
+</li><li> env_ragdoll_marine_stump
+</li><li> env_ragdoll_marine1
+</li><li> env_ragdoll_marine2
+</li><li> env_ragdoll_marine3
+</li><li> env_ragdoll_marine4
+</li><li> env_ragdoll_marine5
+</li><li> env_ragdoll_marine6
+</li><li> env_ragdoll_mummy
+</li><li> env_ragdoll_mummy_fixed
+</li><li> env_ragdoll_pinky
+</li><li> env_ragdoll_poppy
+</li><li> env_ragdoll_revenant
+</li><li> env_ragdoll_sentry
+</li><li> env_ragdoll_skeleton
+</li><li> env_ragdoll_skeleton2
+</li><li> env_ragdoll_suit1
+</li><li> env_ragdoll_suit2
+</li><li> env_ragdoll_suit3
+</li><li> env_ragdoll_tentacle
+</li><li> env_ragdoll_zfem
+</li><li> env_ragdoll_zmaint
+</li><li> env_ragdoll_zscientist1
+</li><li> env_ragdoll_zscientist2
+</li><li> env_ragdoll_zscientist3
+</li><li> env_ragdoll_zsecm
+</li><li> env_ragdoll_zsecp
+</li><li> env_ragdoll_zsecs
+</li><li> env_reactor
+</li><li> env_rope
+</li><li> env_sencpu
+</li><li> env_severed_zombie
+</li><li> env_skullgate
+</li><li> env_steampipe_a
+</li><li> env_steampipe_b
+</li><li> env_steampipe_c
+</li><li> env_storagecabinet
+</li><li> env_storagecabinet_openback
+</li><li> env_swing_tubearm
+</li><li> env_swinglight_long
+</li><li> env_swinglight_long_fixed
+</li><li> env_swinglight_long_wbulbs
+</li><li> env_swinglight_long_wbulbs_128
+</li><li> env_swinglight_long_wbulbs_192
+</li><li> env_swinglight_long_wbulbs_32
+</li><li> env_swinglight_long_wbulbs_fixed
+</li><li> env_swinglight_round
+</li><li> env_swinglight_sl128
+</li><li> env_swinglight_sl128_fixed
+</li><li> env_swinglight_sl64
+</li><li> env_web
+</li><li> env_wirea
+</li><li> env_wireb
+</li><li> env_wirec
+</li><li> env_xianbutton_1
+</li><li> env_xianbutton_2
+</li><li> env_xianbutton_3
+</li><li> env_zsci_corpse
+</li><li> func_aas_obstacle
+</li><li> func_aas_portal
+</li><li> func_activator
+</li><li> func_animate
+</li><li> func_beam
+</li><li> func_bobbing
+</li><li> func_camera_anim
+</li><li> func_cameraTarget
+</li><li> func_cameraview
+</li><li> func_clipmodel
+</li><li> func_damagable
+</li><li> func_damage
+</li><li> func_door
+</li><li> func_earthquake
+</li><li> func_elevator
+</li><li> func_emitter
+</li><li> func_explosion
+</li><li> func_forcefield
+</li><li> func_fracture
+</li><li> func_fx
+</li><li> func_group
+</li><li> func_itemremove
+</li><li> func_liquid
+</li><li> func_mover
+</li><li> func_mover_amodel
+</li><li> func_pendulum
+</li><li> func_phantom_objects
+</li><li> func_plat
+</li><li> func_portal
+</li><li> func_radiochatter
+</li><li> func_remove
+</li><li> func_riser
+</li><li> func_rotating
+</li><li> func_securitycamera
+</li><li> func_shaking
+</li><li> func_smoke
+</li><li> func_splat
+</li><li> func_splinemover
+</li><li> func_spring
+</li><li> func_static
+</li><li> func_teleporter
+</li><li> func_waitforbutton
+</li><li> guardian_poundground_explosion
+</li><li> hell_lstep
+</li><li> hell_rstep
+</li><li> hell1_cin_guardian
+</li><li> hell1_cin_player
+</li><li> hell1_guardiandeath_cam
+</li><li> hell1_guardianintro_cam
+</li><li> hell1_soulcube
+</li><li> hellhole_cam
+</li><li> hellhole_cin_cyberdemon
+</li><li> hellhole_cin_cyberdemon2
+</li><li> hellhole_cin_marine
+</li><li> hellhole_cin_npcplayer
+</li><li> hellhole_cin_player
+</li><li> hellhole_cin_player2
+</li><li> hellhole_cin_player3
+</li><li> hellhole_coffinbricks
+</li><li> hellhole_cyberbricks
+</li><li> hellhole_cyberdeathrocks
+</li><li> hellhole_imp
+</li><li> hellhole_lookmarine
+</li><li> hellhole_maggot
+</li><li> hellhole_pdamarine
+</li><li> hellhole_rescue_cam
+</li><li> hellhole_soulcube
+</li><li> hellhole_swann
+</li><li> hellhole_walkmarine
+</li><li> info_location
+</li><li> info_locationSeparator
+</li><li> info_player_deathmatch
+</li><li> info_player_start
+</li><li> info_player_teleport
+</li><li> info_vacuum
+</li><li> info_vacuumSeparator
+</li><li> intro_cam
+</li><li> intro_meat
+</li><li> intro_panel
+</li><li> intro_pinky
+</li><li> intro_scientist	
+</li><li> item_aircannister
+</li><li> item_armor_security
+</li><li> item_armor_security_mp
+</li><li> item_armor_shard
+</li><li> item_armor_shard_mp
+</li><li> item_backpack
+</li><li> item_battery
+</li><li> item_data_linker
+</li><li> item_default
+</li><li> item_generic
+</li><li> item_key_blue
+</li><li> item_key_red
+</li><li> item_key_yellow
+</li><li> item_keycard_aco
+</li><li> item_keycard_generic
+</li><li> item_medkit
+</li><li> item_medkit_mp
+</li><li> item_medkit_small
+</li><li> item_medkit_small_mp
+</li><li> item_objective
+</li><li> item_objectivecomplete
+</li><li> item_pda
+</li><li> item_videocd
+</li><li> light
+</li><li> maledict_debris1
+</li><li> maledict_world
+</li><li> marscity_char_maint_asian_pda
+</li><li> marscity_cinematic_betruger
+</li><li> marscity_cinematic_cam
+</li><li> marscity_cinematic_campbell	
+</li><li> marscity_cinematic_doctor
+</li><li> marscity_cinematic_player
+</li><li> marscity_cinematic_sarge
+</li><li> marscity_cinematic_sarge2
+</li><li> marscity_cinematic_security
+</li><li> marscity_cinematic_swann	
+</li><li> marscity_cinematic_victim
+</li><li> marscity_civilian_bathroom
+</li><li> marscity_civilian_hallway
+</li><li> marscity_civilian_kitchen
+</li><li> marscity_civilian1
+</li><li> marscity_civilian2
+</li><li> marscity_dufflebag
+</li><li> marscity_hangar
+</li><li> marscity_hangar_campbell	
+</li><li> marscity_hangar_player
+</li><li> marscity_hangar_swann	
+</li><li> marscity_ipn_news
+</li><li> marscity_labcoat_black
+</li><li> marscity_labcoat_monitor
+</li><li> marscity_labcoat_young
+</li><li> marscity_maint1_hallway	
+</li><li> marscity_maint2_hallway
+</li><li> marscity_marine_helmet_p90_directions_ver1
+</li><li> marscity_marine_helmet_p90_directions_ver2
+</li><li> marscity_marine_helmet_p90_walking
+</li><li> marscity_meeting_betruger
+</li><li> marscity_meeting_player
+</li><li> marscity_reception_player
+</li><li> marscity_receptionist
+</li><li> marscity_receptionist_start
+</li><li> marscity_receptionist2
+</li><li> marscity_receptionist3
+</li><li> marscity_sci_team_request
+</li><li> marscity_sci_team_request_cam
+</li><li> marscity_sec_checkin	
+</li><li> marscity_sec_window	
+</li><li> marscity_sec_window2
+</li><li> marscity_security_goggles_pda
+</li><li> marscity_security_machinegun
+</li><li> marscity_ship
+</li><li> marscity_ship2
+</li><li> marscity_ship3
+</li><li> marscity_smallpda
+</li><li> marscity_soldier_bald_pda
+</li><li> marscity_soldier_black
+</li><li> marscity_soldier_young_pda
+</li><li> marscity_suit_asian_chair
+</li><li> marscity_suit_asian_chair2
+</li><li> marscity_suit_chair
+</li><li> marscity_suit_officeguy1
+</li><li> marscity_suit_young_chair
+</li><li> marscity_suit_young2
+</li><li> marscity_walking_swann
+</li><li> marscity2_cin_fatty
+</li><li> marscity2_cin_imp
+</li><li> marscity2_hallway_marine
+</li><li> marscity2_hallway_zombie
+</li><li> marscity2_imp
+</li><li> marscity2_maint_ceiling
+</li><li> marscity2_sarge_cam
+</li><li> marscity2_video_sarge
+</li><li> marscity2_zombie_morgue
+</li><li> melee_archLeftClaw
+</li><li> melee_archRightClaw
+</li><li> melee_cacodemon
+</li><li> melee_cherubLeapAttack
+</li><li> melee_cherubLeftClaw
+</li><li> melee_cherubRightClaw
+</li><li> melee_commando_left
+</li><li> melee_commando_push
+</li><li> melee_commando_right
+</li><li> melee_commandoTentacle
+</li><li> melee_cyberdemon_kick
+</li><li> melee_hellknight_bite
+</li><li> melee_hellknightLeftClaw
+</li><li> melee_hellknightRightClaw
+</li><li> melee_impLeapAttack
+</li><li> melee_impLeftClaw
+</li><li> melee_impRightClaw
+</li><li> melee_lostsoul
+</li><li> melee_lostsoul_charge
+</li><li> melee_maggotLeapAttack
+</li><li> melee_magLeftClaw
+</li><li> melee_magRightClaw
+</li><li> melee_mancubus_stomp
+</li><li> melee_pinky_back
+</li><li> melee_pinky_left
+</li><li> melee_pinky_right
+</li><li> melee_revenant
+</li><li> melee_revenant_left
+</li><li> melee_revenant_left_down
+</li><li> melee_revenant_right	
+</li><li> melee_revenant_right_down
+</li><li> melee_revLeftClaw
+</li><li> melee_revRightClaw
+</li><li> melee_sabaoth
+</li><li> melee_tritebite1
+</li><li> melee_triteLeapAttack
+</li><li> melee_vagLeftClaw
+</li><li> melee_vagRightClaw
+</li><li> melee_vulgarLeapAttack
+</li><li> melee_vulgarLeftClaw
+</li><li> melee_vulgarRightClaw
+</li><li> melee_wraithCenterAttack
+</li><li> melee_wraithLeftClaw
+</li><li> melee_wraithRightClaw
+</li><li> melee_zombie_chainsaw
+</li><li> melee_zombie_fat_Left
+</li><li> melee_zombie_fat_Left2
+</li><li> melee_zombie_fat_Right
+</li><li> melee_zombie_fat_right_wrench
+</li><li> melee_zombie_maint_Left
+</li><li> melee_zombie_maint_Pull
+</li><li> melee_zombie_maint_Push
+</li><li> melee_zombie_maint_Right
+</li><li> monorail_crash_cam
+</li><li> monorail_crash_debris	
+</li><li> monorail_crashsight_player
+</li><li> monorail_raisecommando_betruger
+</li><li> monorail_raisecommando_cam
+</li><li> monorail_raisecommando_changer
+</li><li> monorail_raisecommando_marine1
+</li><li> monorail_raisecommando_zct
+</li><li> monorail_rider
+</li><li> monster_boss_cyberdemon
+</li><li> monster_boss_guardian
+</li><li> monster_boss_guardian_seeker	
+</li><li> monster_boss_guardian_spawner
+</li><li> monster_boss_maledict_cinematic
+</li><li> monster_boss_sabaoth
+</li><li> monster_boss_vagary
+</li><li> monster_default
+</li><li> monster_demon_archvile
+</li><li> monster_demon_cherub
+</li><li> monster_demon_d3xp_bruiser
+</li><li> monster_demon_hellknight
+</li><li> monster_demon_imp
+</li><li> monster_demon_imp_crawl_armdoor
+</li><li> monster_demon_imp_crawler
+</li><li> monster_demon_maggot
+</li><li> monster_demon_mancubus
+</li><li> monster_demon_pinky
+</li><li> monster_demon_revenant
+</li><li> monster_demon_sentry
+</li><li> monster_demon_tick
+</li><li> monster_demon_trite
+</li><li> monster_demon_vulgar
+</li><li> monster_demon_wraith
+</li><li> monster_flying_cacodemon
+</li><li> monster_flying_lostsoul
+</li><li> monster_turret
+</li><li> monster_turret_light
+</li><li> monster_zombie_base
+</li><li> monster_zombie_bernie
+</li><li> monster_zombie_boney
+</li><li> monster_zombie_chainsaw
+</li><li> monster_zombie_commando
+</li><li> monster_zombie_commando_cgun
+</li><li> monster_zombie_fat
+</li><li> monster_zombie_fat_eating
+</li><li> monster_zombie_fat_wrench
+</li><li> monster_zombie_fat2
+</li><li> monster_zombie_jumpsuit
+</li><li> monster_zombie_jumpsuit_influence
+</li><li> monster_zombie_jumpsuit_old
+</li><li> monster_zombie_labcoat_hanging
+</li><li> monster_zombie_labcoat_limb
+</li><li> monster_zombie_labcoat_neckstump
+</li><li> monster_zombie_labcoat_pipe
+</li><li> monster_zombie_labcoat_skinny
+</li><li> monster_zombie_maint
+</li><li> monster_zombie_maint_bald
+</li><li> monster_zombie_maint_fast
+</li><li> monster_zombie_maint_flashlight
+</li><li> monster_zombie_maint_no_jaw
+</li><li> monster_zombie_maint_nojaw
+</li><li> monster_zombie_maint_skinny
+</li><li> monster_zombie_maint_wrench
+</li><li> monster_zombie_maint2
+</li><li> monster_zombie_morgue
+</li><li> monster_zombie_sawyer
+</li><li> monster_zombie_suit_bloodymouth
+</li><li> monster_zombie_suit_neckstump
+</li><li> monster_zombie_suit_skinny
+</li><li> monster_zombie_tshirt_bald
+</li><li> monster_zombie_tshirt_blown
+</li><li> monster_zombie_zfem
+</li><li> monster_zsec_machinegun
+</li><li> monster_zsec_pistol
+</li><li> monster_zsec_pistol_slowfire
+</li><li> monster_zsec_shield
+</li><li> monster_zsec_shotgun
+</li><li> moveable_barrel1
+</li><li> moveable_barrel2
+</li><li> moveable_barrel3
+</li><li> moveable_base
+</li><li> moveable_base_barrel
+</li><li> moveable_base_boulder
+</li><li> moveable_base_brick
+</li><li> moveable_base_domino
+</li><li> moveable_base_fixed
+</li><li> moveable_beaker
+</li><li> moveable_blaptop
+</li><li> moveable_bottle1
+</li><li> moveable_burger
+</li><li> moveable_burgerboxclose
+</li><li> moveable_burgerboxopen
+</li><li> moveable_burningbarrel
+</li><li> moveable_burningtank
+</li><li> moveable_cannister
+</li><li> moveable_cartonbox1
+</li><li> moveable_cartonbox2
+</li><li> moveable_cartonbox3
+</li><li> moveable_cartonbox4
+</li><li> moveable_cartonbox5
+</li><li> moveable_cartonbox6
+</li><li> moveable_cartonbox7
+</li><li> moveable_cartonbox8
+</li><li> moveable_chair1
+</li><li> moveable_chair2
+</li><li> moveable_chair5
+</li><li> moveable_cokecan
+</li><li> moveable_compcart
+</li><li> moveable_computer
+</li><li> moveable_cone
+</li><li> moveable_desklamp
+</li><li> moveable_diamondbox
+</li><li> moveable_diamondbox_sm
+</li><li> moveable_explodingbarrel
+</li><li> moveable_explodingtank
+</li><li> moveable_filecabinet1
+</li><li> moveable_fireext
+</li><li> moveable_foamcup
+</li><li> moveable_gizmo1
+</li><li> moveable_gizmo2
+</li><li> moveable_gizmo3
+</li><li> moveable_guardian_brick
+</li><li> moveable_hangingmonitor
+</li><li> moveable_infusion
+</li><li> moveable_item_armor_security
+</li><li> moveable_item_bfg
+</li><li> moveable_item_bfg_mp
+</li><li> moveable_item_chaingun
+</li><li> moveable_item_chaingun_mp
+</li><li> moveable_item_chainsaw
+</li><li> moveable_item_chainsaw_mp
+</li><li> moveable_item_default
+</li><li> moveable_item_flashlight
+</li><li> moveable_item_grenades
+</li><li> moveable_item_grenades_mp
+</li><li> moveable_item_head_pork
+</li><li> moveable_item_helmet
+</li><li> moveable_item_lantern
+</li><li> moveable_item_lantern_world
+</li><li> moveable_item_left_waist_pork
+</li><li> moveable_item_lup_leg_pork
+</li><li> moveable_item_machinegun
+</li><li> moveable_item_machinegun_mp
+</li><li> moveable_item_medkit
+</li><li> moveable_item_pda
+</li><li> moveable_item_pelvis_pork
+</li><li> moveable_item_pistol
+</li><li> moveable_item_pistol_mp
+</li><li> moveable_item_plasmagun
+</li><li> moveable_item_plasmagun_mp
+</li><li> moveable_item_rocketlauncher
+</li><li> moveable_item_rocketlauncher_mp
+</li><li> moveable_item_rup_arm_pork
+</li><li> moveable_item_rup_leg_pork
+</li><li> moveable_item_rup2_leg_pork
+</li><li> moveable_item_shield
+</li><li> moveable_item_shotgun
+</li><li> moveable_item_shotgun_mp
+</li><li> moveable_item_skull_pork
+</li><li> moveable_item_tabletpc
+</li><li> moveable_item_torso_pork
+</li><li> moveable_keyboard1
+</li><li> moveable_kitchenchair
+</li><li> moveable_ktable
+</li><li> moveable_laptop
+</li><li> moveable_metalbox1
+</li><li> moveable_microscope
+</li><li> moveable_monitor
+</li><li> moveable_monitorflip
+</li><li> moveable_mop
+</li><li> moveable_mopbucket
+</li><li> moveable_normchair
+</li><li> moveable_paperwad
+</li><li> moveable_pc1
+</li><li> moveable_phone
+</li><li> moveable_plasticbin
+</li><li> moveable_plasticbinmini
+</li><li> moveable_plasticjar1
+</li><li> moveable_plasticjar2
+</li><li> moveable_spigotcan
+</li><li> moveable_tablecart1
+</li><li> moveable_tablecart2
+</li><li> moveable_tech_chair1
+</li><li> moveable_trashcan01
+</li><li> moveable_tray
+</li><li> moveable_utilitylamp
+</li><li> moveable_wrench
+</li><li> npc_base
+</li><li> path_anim
+</li><li> path_attack
+</li><li> path_conversation
+</li><li> path_conversation_listen
+</li><li> path_corner
+</li><li> path_cycleanim
+</li><li> path_default
+</li><li> path_headanim
+</li><li> path_hide
+</li><li> path_jump
+</li><li> path_lookat
+</li><li> path_sentry_ignore_player
+</li><li> path_sentry_lead_player
+</li><li> path_sentry_light_off
+</li><li> path_sentry_light_on
+</li><li> path_sentry_shutdown
+</li><li> path_sentry_unlock_door
+</li><li> path_show
+</li><li> path_talk
+</li><li> path_talk_primary
+</li><li> path_talk_secondary
+</li><li> path_talk_triggered
+</li><li> path_turn
+</li><li> path_wait
+</li><li> path_waitforheadanim
+</li><li> path_waitfortrigger
+</li><li> pda_alphalabs1_labcoat_bald
+</li><li> pda_alphalabs3_fragchamber_scientist2
+</li><li> pda_marscity_char_maint_asian_pda
+</li><li> pda_marscity_labcoat_black
+</li><li> pda_marscity_maint1_hallway
+</li><li> pda_marscity_security_goggles_pda
+</li><li> pda_marscity_soldier_bald_pda
+</li><li> pda_marscity_soldier_black
+</li><li> pda_marscity_soldier_young_pda
+</li><li> pda_underground_maint_young_daniel
+</li><li> pda_underground_security_helmet_mark
+</li><li> player_base
+</li><li> player_doommarine
+</li><li> player_doommarine_mp
+</li><li> powerup_adrenaline
+</li><li> powerup_berserk
+</li><li> powerup_chronocaust
+</li><li> powerup_haste
+</li><li> powerup_invisibility
+</li><li> powerup_invulnerability
+</li><li> powerup_irgoggles
+</li><li> powerup_megahealth
+</li><li> powerup_megasphere
+</li><li> powerup_soulsphere
+</li><li> preCacheExtras
+</li><li> projectile_bfg
+</li><li> projectile_bfg_cinematic
+</li><li> projectile_bfg_mp
+</li><li> projectile_bullet_machinegun
+</li><li> projectile_bullet_machinegun_mp
+</li><li> projectile_bullet_pistol
+</li><li> projectile_bullet_pistol_mp
+</li><li> projectile_bullet_shotgun
+</li><li> projectile_bullet_shotgun_mp
+</li><li> projectile_bullet_turret
+</li><li> projectile_bullet_zsec_machinegun
+</li><li> projectile_bullet_zsec_pistol
+</li><li> projectile_bullet_zsec_shield
+</li><li> projectile_bullet_zsec_shotgun
+</li><li> projectile_cacodemon_fireball
+</li><li> projectile_chaingunbullet
+</li><li> projectile_chaingunbullet_mp
+</li><li> projectile_cyber_rocket
+</li><li> projectile_fireball_hellknight
+</li><li> projectile_grenade
+</li><li> projectile_grenade_mp
+</li><li> projectile_guardian_smash
+</li><li> projectile_impfireball
+</li><li> projectile_mancubus_rocket
+</li><li> projectile_plasmablast
+</li><li> projectile_plasmablast_mp
+</li><li> projectile_plasmatracer
+</li><li> projectile_rev_rocket
+</li><li> projectile_rev_rocket_cinematic
+</li><li> projectile_rocket
+</li><li> projectile_rocket_mp
+</li><li> projectile_sabaoth_bfg
+</li><li> projectile_sentry_bullet
+</li><li> projectile_soulblast
+</li><li> projectile_vulgar_fireball
+</li><li> projectile_zombie_commando_cgun
+</li><li> prop_adrenaline
+</li><li> prop_big_cushy_chair
+</li><li> prop_cola
+</li><li> prop_dufflebag
+</li><li> prop_flashlight
+</li><li> prop_foamcup
+</li><li> prop_lftflashlight
+</li><li> prop_machinegun
+</li><li> prop_metal_kitchen_chair
+</li><li> prop_metal_lounge_chair
+</li><li> prop_pda
+</li><li> prop_pistol
+</li><li> prop_shotgun
+</li><li> prop_soft_desk_chair1
+</li><li> prop_soft_desk_chair2
+</li><li> prop_tabletpc
+</li><li> prop_wrench
+</li><li> recycling1_revintro_cam
+</li><li> recycling1_revintro_impact
+</li><li> recycling1_revintro_player
+</li><li> recycling1_revintro_player2
+</li><li> recycling1_revintro_rev
+</li><li> recycling1_skybridge
+</li><li> recycling2_imp1_cin
+</li><li> recycling2_imp2_cin
+</li><li> recycling2_imp3_cin	
+</li><li> recycling2_mancintro_cam
+</li><li> recycling2_mancintro_manc
+</li><li> recycling2_mancintro_pipes
+</li><li> recycling2_mancintro_player
+</li><li> recycling2_video_betruger
+</li><li> recycling2_video_cam
+</li><li> seeker_light1
+</li><li> seeker_light2
+</li><li> site3_floor
+</li><li> site3_hellknight
+</li><li> site3_roq_cam
+</li><li> site3_sci
+</li><li> sound_d3dm5_generator
+</li><li> sound_d3dm5_wind
+</li><li> sound_fragchamber_berserk
+</li><li> sound_fragchamber_bridge
+</li><li> sound_fragchamber_core
+</li><li> sound_fragchamber_generator
+</li><li> sound_fragchamber_klaxon
+</li><li> sound_fragchamber_lights
+</li><li> sound_fragchamber_rod
+</li><li> sound_fragchamber_secretSteam
+</li><li> sound_fragchamber_socket
+</li><li> sound_fragchamber_steam
+</li><li> sound_powerup_berserk
+</li><li> space_cam
+</li><li> space_planet
+</li><li> space_ship
+</li><li> space_stars
+</li><li> speaker
+</li><li> ss_cgw_cam
+</li><li> ss_cgw_gibs
+</li><li> ss_cgw_jump
+</li><li> ss_cgw_zsci
+</li><li> ss_cgw_zsci2
+</li><li> ss_ew_cam
+</li><li> ss_ew_fat
+</li><li> ss_ew_jump
+</li><li> ss_ew_maint
+</li><li> ss_gameprocamera
+</li><li> ss_hellknight
+</li><li> ss_hero_cam
+</li><li> ss_hero_player
+</li><li> ss_hero_player_chainsaw
+</li><li> ss_hero_player_machinegun
+</li><li> ss_hero_player_pistol
+</li><li> ss_hero_player_shotgun
+</li><li> ss_hero_player_shotgun2
+</li><li> ss_hk_cam
+</li><li> ss_hk_gamepro
+</li><li> ss_imp_gamepro
+</li><li> ss_pcg_cam
+</li><li> ss_pcg_hk
+</li><li> ss_pcg_player
+</li><li> ss_trite
+</li><li> ss_trite2
+</li><li> ss_trite3
+</li><li> ss_trite4
+</li><li> target_ai_followalternatepath1
+</li><li> target_ai_followalternatepath2
+</li><li> target_ai_followalternatepath3
+</li><li> target_callobjectfunction
+</li><li> target_enableStamina
+</li><li> target_enableweapons
+</li><li> target_endLevel
+</li><li> target_entity_fadein
+</li><li> target_entity_fadeout
+</li><li> target_entity_setcolor
+</li><li> target_FadeSoundClass
+</li><li> target_give
+</li><li> target_giveemail
+</li><li> target_givesecurity
+</li><li> target_levelTrigger
+</li><li> target_light_fadein
+</li><li> target_light_fadeout
+</li><li> target_lock
+</li><li> target_npc_talk
+</li><li> target_npc_talk_primary
+</li><li> target_npc_talk_secondary
+</li><li> target_npc_talk_triggered
+</li><li> target_null
+</li><li> target_primaryobjective
+</li><li> target_removeweapons
+</li><li> target_sessionCommand
+</li><li> target_setfov
+</li><li> target_setglobalparmtime
+</li><li> target_setinfluence
+</li><li> target_setkeyval
+</li><li> target_setmodel
+</li><li> target_setshaderparm
+</li><li> target_setshadertime
+</li><li> target_show
+</li><li> target_tip
+</li><li> test_labcoat_black
+</li><li> test_soldier
+</li><li> text
+</li><li> trigger_count
+</li><li> trigger_entityname
+</li><li> trigger_facing
+</li><li> trigger_fade
+</li><li> trigger_flashlight
+</li><li> trigger_guiOverlay
+</li><li> trigger_hurt
+</li><li> trigger_multiple
+</li><li> trigger_once
+</li><li> trigger_once_entityname
+</li><li> trigger_presize
+</li><li> trigger_relay
+</li><li> trigger_timer
+</li><li> trigger_touch
+</li><li> underground_choke_victim
+</li><li> underground_choke_zombie
+</li><li> underground_cin_pistol
+</li><li> underground_cin_player
+</li><li> underground_cin_player2
+</li><li> underground_cin_player3
+</li><li> underground_crazy_sci
+</li><li> underground_crazy_sci_cin
+</li><li> underground_crazy_zombie
+</li><li> underground_fatty
+</li><li> underground_hallway_skulls
+</li><li> underground_impcrawl_door
+</li><li> underground_impintro_cam
+</li><li> underground_impintro_imp
+</li><li> underground_impstairs
+</li><li> underground_invasion_bigskull
+</li><li> underground_invasion_cam
+</li><li> underground_invasion_chestskull
+</li><li> underground_invasion_labcoat
+</li><li> underground_invasion_labzombie
+</li><li> underground_invasion_ledge
+</li><li> underground_invasion_lightattacher
+</li><li> underground_invasion_littleskulls
+</li><li> underground_invasion_maintzombie
+</li><li> underground_invasion_pentagram
+</li><li> underground_invasion_security
+</li><li> underground_invasion_smallerskulls
+</li><li> underground_invasion_suit
+</li><li> underground_labcoat_young_todd
+</li><li> underground_maint_asian_eric
+</li><li> underground_maint_asian_eric2
+</li><li> underground_maint_bald_ross
+</li><li> underground_maint_old_charles
+</li><li> underground_maint_young_daniel
+</li><li> underground_mcu_pipes
+</li><li> underground_platform
+</li><li> underground_security_helmet_mark
+</li><li> underground_tunnel_imp
+</li><li> underground_window_security
+</li><li> underground_zintro_victim
+</li><li> underground_zintro_zombie
+</li><li> underground_zombie_maint_bald
+</li><li> underground_zsecshotgun
+</li><li> weapon_bfg
+</li><li> weapon_bfg_mp
+</li><li> weapon_chaingun
+</li><li> weapon_chaingun_mp
+</li><li> weapon_chainsaw
+</li><li> weapon_chainsaw_mp
+</li><li> weapon_fists
+</li><li> weapon_flashlight
+</li><li> weapon_handgrenade
+</li><li> weapon_handgrenade_mp
+</li><li> weapon_machinegun
+</li><li> weapon_machinegun_mp
+</li><li> weapon_pda
+</li><li> weapon_pistol
+</li><li> weapon_pistol_mp
+</li><li> weapon_plasmagun
+</li><li> weapon_plasmagun_mp
+</li><li> weapon_rocketlauncher
+</li><li> weapon_rocketlauncher_mp
+</li><li> weapon_shotgun
+</li><li> weapon_shotgun_mp
+</li><li> weapon_soulcube
+</li><li> worldspawn
+</li><li> wraith_spawneffect
+</li><li> zombie_default
+</li></ul>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20070729231805/http://www.modwiki.net/w/index.php?title=Entity_Listing&amp;action=edit&amp;section=3" title="Edit section: Quake 4">edit</a>]</div><a name="Quake_4"></a><h2>Quake 4</h2>
+<ul><li> aas_flood_128
+</li><li> aas_flood_250
+</li><li> aas_flood_32
+</li><li> aas_flood_48
+</li><li> aas_flood_96
+</li><li> aas_types
+</li><li> aas128
+</li><li> aas250
+</li><li> aas32
+</li><li> aas48
+</li><li> aas96
+</li><li> activate_convoy2_cin_gev
+</li><li> activate_convoy2_cin_walker
+</li><li> activate_convoy2_monster_harvester
+</li><li> actor_default
+</li><li> ad_damage_strogg_flyer_bomb_direct
+</li><li> ad_damage_strogg_flyer_bomb_splash
+</li><li> ad_intro_char_marine
+</li><li> ad_intro_char_marine_anderson
+</li><li> ad_intro_char_marine_bidwell
+</li><li> ad_intro_char_marine_cortez
+</li><li> ad_intro_char_marine_kane
+</li><li> ad_intro_char_marine_morris
+</li><li> ad_intro_char_marine_rhodes
+</li><li> ad_intro_char_marine_sledge
+</li><li> ad_intro_char_marine_strauss
+</li><li> ad_intro_char_marine_voss
+</li><li> ad_intro_debris
+</li><li> ad_intro_parts
+</li><li> ad_projectile_strafe_flyer_gravity
+</li><li> ad_projectile_strogg_flyer_bomb
+</li><li> ai_avoid
+</li><li> ai_become_Aggressive
+</li><li> ai_become_Passive
+</li><li> ai_tactical
+</li><li> ai_tether_behind
+</li><li> ai_tether_location
+</li><li> ai_tether_none
+</li><li> ai_tether_radius
+</li><li> ai_trigger_multiple
+</li><li> ai_trigger_once
+</li><li> ai_vehicle_driver
+</li><li> airdefense_big_gun
+</li><li> airdefense_char_marine
+</li><li> airdefense_char_marine_hyperblaster
+</li><li> airdefense_char_marine_shotgun
+</li><li> airdefense_monster_grunt
+</li><li> airdefense_projectile_bullet
+</li><li> airdefense_sizzle_barrel
+</li><li> airdefense_sizzle_barrel_burn
+</li><li> airdefense_sizzle_barrel_explode
+</li><li> airdefense_sizzle_barrel_ignite
+</li><li> ammo_currentweapon
+</li><li> ammo_default
+</li><li> ammo_dmg
+</li><li> ammo_dmg_moveable
+</li><li> ammo_dmg_mp
+</li><li> ammo_grenadelauncher
+</li><li> ammo_grenadelauncher_moveable
+</li><li> ammo_grenadelauncher_mp
+</li><li> ammo_hyperblaster
+</li><li> ammo_hyperblaster_moveable
+</li><li> ammo_hyperblaster_mp
+</li><li> ammo_lightninggun
+</li><li> ammo_lightninggun_moveable
+</li><li> ammo_lightninggun_mp
+</li><li> ammo_machinegun
+</li><li> ammo_machinegun_moveable
+</li><li> ammo_machinegun_mp
+</li><li> ammo_moveable	{
+</li><li> ammo_nailgun
+</li><li> ammo_nailgun_moveable
+</li><li> ammo_nailgun_mp
+</li><li> ammo_napalmgun
+</li><li> ammo_napalmgun_moveable
+</li><li> ammo_napalmgun_mp
+</li><li> ammo_railgun
+</li><li> ammo_railgun_moveable
+</li><li> ammo_railgun_mp
+</li><li> ammo_rocketlauncher
+</li><li> ammo_rocketlauncher_moveable
+</li><li> ammo_rocketlauncher_mp
+</li><li> ammo_shotgun
+</li><li> ammo_shotgun_moveable
+</li><li> ammo_shotgun_mp
+</li><li> ammo_triggersize_MP
+</li><li> ammo_triggersize_SP
+</li><li> ammo_types
+</li><li> bse_owner
+</li><li> building_b_char_marine
+</li><li> building_b_char_marine_medic
+</li><li> building_b_char_marine_tech
+</li><li> building_b_char_marine_unarmed
+</li><li> building_b_monster_grunt
+</li><li> building_b_spawnOverrides
+</li><li> BuyingGameBalanceConstants
+</li><li> char_doctor
+</li><li> char_gunner_medlab
+</li><li> char_kane_strogg
+</li><li> char_kane_strogg_unarmed
+</li><li> char_marine
+</li><li> char_marine_arm_left
+</li><li> char_marine_arm_right
+</li><li> char_marine_base
+</li><li> char_marine_choppable
+</li><li> char_marine_combat
+</li><li> char_marine_elgar
+</li><li> char_marine_fatigues
+</li><li> char_marine_fatigues_unarmed
+</li><li> char_marine_hyperblaster
+</li><li> char_marine_leg_left
+</li><li> char_marine_leg_left
+</li><li> char_marine_leg_right
+</li><li> char_marine_malgar
+</li><li> char_marine_medic
+</li><li> char_marine_medic_armed
+</li><li> char_marine_medic_extras
+</li><li> char_marine_naked
+</li><li> char_marine_npc_anderson_airdefense
+</li><li> char_marine_npc_anderson_airdefense_intro
+</li><li> char_marine_npc_bidwell_airdefense
+</li><li> char_marine_npc_cobrasquad_door
+</li><li> char_marine_npc_cortez_airdefense
+</li><li> char_marine_npc_cortez_core
+</li><li> char_marine_npc_cortez_tram1
+</li><li> char_marine_npc_harper_core
+</li><li> char_marine_npc_judkins_airdefense
+</li><li> char_marine_npc_kane_core
+</li><li> char_marine_npc_metcalf_airdefense
+</li><li> char_marine_npc_miller_airdefense
+</li><li> char_marine_npc_mills_storage2
+</li><li> char_marine_npc_morris_airdefense
+</li><li> char_marine_npc_morris_core
+</li><li> char_marine_npc_officer_core
+</li><li> char_marine_npc_remitz_walker
+</li><li> char_marine_npc_rhodes_airdefense
+</li><li> char_marine_npc_rhodes_core
+</li><li> char_marine_npc_ripkey_airdefense
+</li><li> char_marine_npc_rutger_storage2
+</li><li> char_marine_npc_sasaki_recomp
+</li><li> char_marine_npc_sledge_airdefense
+</li><li> char_marine_npc_sledge_core
+</li><li> char_marine_npc_sledge_process1
+</li><li> char_marine_npc_sledge_process2
+</li><li> char_marine_npc_sledge_process3
+</li><li> char_marine_npc_strauss_core
+</li><li> char_marine_npc_underwood_airdefense
+</li><li> char_marine_npc_voss_airdefense
+</li><li> char_marine_officer
+</li><li> char_marine_officer_unarmed
+</li><li> char_marine_prisoner
+</li><li> char_marine_prisoner_unarmed
+</li><li> char_marine_puccini
+</li><li> char_marine_shotgun
+</li><li> char_marine_tech
+</li><li> char_marine_tech_armed
+</li><li> char_marine_tech_extras
+</li><li> char_marine_tramCar
+</li><li> char_marine_tramCar_cortez
+</li><li> char_marine_tramCar_lybeck
+</li><li> char_marine_tramCar_process1_cortez
+</li><li> char_marine_unarmed
+</li><li> char_marinehead_aa_generic
+</li><li> char_marinehead_anderson
+</li><li> char_marinehead_anderson_client
+</li><li> char_marinehead_anderson_mp
+</li><li> char_marinehead_bidwell
+</li><li> char_marinehead_bidwell_client
+</li><li> char_marinehead_bidwell_mp
+</li><li> char_marinehead_cortez
+</li><li> char_marinehead_cortez_client
+</li><li> char_marinehead_cortez_mp
+</li><li> char_marinehead_default
+</li><li> char_marinehead_default_client
+</li><li> char_marinehead_doctor_masked
+</li><li> char_marinehead_gen_african_american
+</li><li> char_marinehead_gen_african_american_2
+</li><li> char_marinehead_gen_african_american_3
+</li><li> char_marinehead_gen_asian
+</li><li> char_marinehead_gen_asian_2
+</li><li> char_marinehead_gen_asian_3
+</li><li> char_marinehead_gen_white
+</li><li> char_marinehead_gen_white_2
+</li><li> char_marinehead_gen_white_3
+</li><li> char_marinehead_gen_white_4
+</li><li> char_marinehead_general_harper
+</li><li> char_marinehead_general_harper_client
+</li><li> char_marinehead_general_harper_mp
+</li><li> char_marinehead_half
+</li><li> char_marinehead_helmet
+</li><li> char_marinehead_helmet_bright_client
+</li><li> char_marinehead_helmet_bright_mp
+</li><li> char_marinehead_helmet_client
+</li><li> char_marinehead_helmet_medic
+</li><li> char_marinehead_helmet_mp
+</li><li> char_marinehead_helmet_tech
+</li><li> char_marinehead_kane
+</li><li> char_marinehead_kane_mp
+</li><li> char_marinehead_kane2
+</li><li> char_marinehead_kane2_client
+</li><li> char_marinehead_kane2_mp
+</li><li> char_marinehead_kanestrg
+</li><li> char_marinehead_kanestrg_client
+</li><li> char_marinehead_kanestrg_mp
+</li><li> char_marinehead_morris
+</li><li> char_marinehead_morris_client
+</li><li> char_marinehead_morris_mp
+</li><li> char_marinehead_rhodes
+</li><li> char_marinehead_shot
+</li><li> char_marinehead_sledge
+</li><li> char_marinehead_strassa
+</li><li> char_marinehead_strassa_client
+</li><li> char_marinehead_strassa_mp
+</li><li> char_marinehead_voss
+</li><li> char_marinehead_voss_client
+</li><li> char_marinehead_voss_mp
+</li><li> char_marinehead_voss_strogg
+</li><li> character_tube_marine
+</li><li> character_tube_marine
+</li><li> character_tube_marine_aftest
+</li><li> cin_airdefense_player_cam
+</li><li> cin_camera_intro_cin
+</li><li> cin_camera_intro_cin_B
+</li><li> cin_camera_iron_maiden
+</li><li> cin_camera_mcc1_briefing
+</li><li> cin_camera_mcc2_briefing
+</li><li> cin_camera_outro_cin
+</li><li> cin_camera_tactical_intro
+</li><li> cin_camera_test
+</li><li> cin_camera_test_rj
+</li><li> cin_camera2_outro_cin
+</li><li> cin_convoy1_harv_cam
+</li><li> cin_E3_harvester_cam
+</li><li> cin_flyer_crash_cam
+</li><li> cin_gunner_intro_cam
+</li><li> cin_hub2cam
+</li><li> cin_hub2cam2
+</li><li> cin_marine_breach_cam
+</li><li> cin_med_anderson
+</li><li> cin_med2_cam
+</li><li> cin_pleva1_cam
+</li><li> cin_putra_doorsmash_cam
+</li><li> cin_putra_explode_cam
+</li><li> cin_recomp_cam
+</li><li> cin_waste_bb_cam
+</li><li> convoy_char_marine
+</li><li> convoy_char_marine_unarmed
+</li><li> convoy_landmine
+</li><li> convoy_monster_turret_bunker
+</li><li> convoy_monster_turret_rocket
+</li><li> convoy_projectile_strogg_flyer_bomb
+</li><li> convoy_projectile_turret_rocket
+</li><li> convoy_vehicle_flatbed
+</li><li> convoy_vehicle_walker
+</li><li> convoy_vehicle_walker_driver
+</li><li> convoy_vehicle_walker_weapon_rocket
+</li><li> convoy2_char_marine_tech
+</li><li> convoy2_cin_gev
+</li><li> convoy2_cin_walker
+</li><li> convoy2_monster_harvester
+</li><li> convoy2_monster_turret_bunker
+</li><li> core_Brainstalk
+</li><li> core1_monster_tactical
+</li><li> damage_acid_drip
+</li><li> damage_acidgun
+</li><li> damage_ad_sizzle_explosion
+</li><li> damage_bb_electrocute
+</li><li> damage_berserker_energyBurst
+</li><li> damage_berzerker_beam
+</li><li> damage_big_gun_direct
+</li><li> damage_big_gun_splash
+</li><li> damage_big_htank_blaster
+</li><li> damage_big_htank_direct
+</li><li> damage_big_htank_splash
+</li><li> damage_blaster
+</li><li> damage_blaster_charged
+</li><li> damage_blastersplash_charged
+</li><li> damage_bossbuddy_dmg_fly
+</li><li> damage_bossbuddy_dmg_splash
+</li><li> damage_bossbuddy_rocket_direct
+</li><li> damage_bossbuddy_rocket_splash
+</li><li> damage_bullet
+</li><li> damage_bullet_base
+</li><li> damage_cgc_shot
+</li><li> damage_cinematicFoom
+</li><li> damage_convoy_rocket_direct
+</li><li> damage_convoy_rocket_splash
+</li><li> damage_crush
+</li><li> damage_dharv_nail
+</li><li> damage_dmg_fly
+</li><li> damage_dmg_mp
+</li><li> damage_dmg_splash
+</li><li> damage_dmg_splash_mp
+</li><li> damage_exploding_barrel_large
+</li><li> damage_exploding_barrel_small
+</li><li> damage_explodingbarrel
+</li><li> damage_explosion
+</li><li> damage_explosion_push
+</li><li> damage_failed_transfer_bullet
+</li><li> damage_fatalfall
+</li><li> damage_fatalfall_mp
+</li><li> damage_fatty_hook
+</li><li> damage_fire_15
+</li><li> damage_flyer_rocket
+</li><li> damage_flyer_rocket_splash
+</li><li> damage_gauntlet
+</li><li> damage_generic
+</li><li> damage_gev_bullet
+</li><li> damage_gev_collision
+</li><li> damage_gev_collision_self
+</li><li> damage_gev_crash
+</li><li> damage_gev_main
+</li><li> damage_gev_main_splash
+</li><li> damage_gib
+</li><li> damage_gladiator_blaster
+</li><li> damage_gladiator_railgun
+</li><li> damage_grenadeDirect
+</li><li> damage_grenadeDirect_mp
+</li><li> damage_grenadeSplash
+</li><li> damage_grenadeSplash_mp
+</li><li> damage_grunt_bullet
+</li><li> damage_gunner_grenade
+</li><li> damage_gunner_grenade_splash
+</li><li> damage_gunner_nail
+</li><li> damage_gunner_nailSplash
+</li><li> damage_hardfall
+</li><li> damage_hardfall_mp
+</li><li> damage_harv_claw
+</li><li> damage_harv_grenade
+</li><li> damage_harv_grenade_splash
+</li><li> damage_harv_nail
+</li><li> damage_harv_nail_splash
+</li><li> damage_harvester_direct
+</li><li> damage_harvester_rocket_direct
+</li><li> damage_harvester_rocket_splash
+</li><li> damage_harvester_whip_splash
+</li><li> damage_htank_blaster
+</li><li> damage_htank_direct
+</li><li> damage_htank_splash
+</li><li> damage_HugeExplosion
+</li><li> damage_hyperblaster
+</li><li> damage_hyperblaster_mp
+</li><li> damage_hyperblaster_splash
+</li><li> damage_hyperblaster_splash_mp
+</li><li> damage_iron_maiden_rocket_direct
+</li><li> damage_iron_maiden_rocket_splash
+</li><li> damage_ironMaiden_banshee
+</li><li> damage_lightBreak
+</li><li> damage_lightBreak2
+</li><li> damage_lightninggun
+</li><li> damage_lightninggun_mp
+</li><li> damage_lightTank_fireball_direct
+</li><li> damage_lightTank_fireball_splash
+</li><li> damage_lightTank_plasma
+</li><li> damage_lightTank_residualPlasma
+</li><li> damage_machinegun
+</li><li> damage_machinegun_flesh
+</li><li> damage_machinegun_mp
+</li><li> damage_machinegun_zoom
+</li><li> damage_machinegun_zoom_flesh
+</li><li> damage_machinegun_zoom_mp
+</li><li> damage_makron_cannon
+</li><li> damage_makron_dmg_fly
+</li><li> damage_makron_grenade_splash
+</li><li> damage_makron_jr_cannon
+</li><li> damage_makron_lightninggun
+</li><li> damage_makron_lightninggun_jr
+</li><li> damage_makron_stomp_damage
+</li><li> damage_marine_bullet
+</li><li> damage_marine_bullet_cortez
+</li><li> damage_marine_hyperblaster
+</li><li> damage_marine_shotgun_bullet
+</li><li> damage_mcc_ship_blast
+</li><li> damage_monster_base
+</li><li> damage_moveable_burn
+</li><li> damage_moverCrush
+</li><li> damage_nailDirect
+</li><li> damage_nailDirect_mp
+</li><li> damage_nailSplash
+</li><li> damage_nailSplash_mp
+</li><li> damage_napalmDirect
+</li><li> damage_napalmGlobDirect
+</li><li> damage_napalmGlobSplash
+</li><li> damage_napalmSplash
+</li><li> damage_network_guardian_jetwash
+</li><li> damage_network_guardian_rocket_direct
+</li><li> damage_network_guardian_rocket_guided_direct
+</li><li> damage_network_guardian_rocket_guided_splash
+</li><li> damage_network_guardian_rocket_splash
+</li><li> damage_noair
+</li><li> damage_painTrigger
+</li><li> damage_pellet
+</li><li> damage_pellet_mp
+</li><li> damage_phatride_bullet
+</li><li> damage_phatride_crash
+</li><li> damage_phatride_main
+</li><li> damage_phatride_main_splash
+</li><li> damage_q1dm2lava
+</li><li> damage_railgun
+</li><li> damage_railgun_base
+</li><li> damage_railgun_mp
+</li><li> damage_repairbot_repair
+</li><li> damage_rocketDirect
+</li><li> damage_rocketDirect_mp
+</li><li> damage_rocketSplash
+</li><li> damage_rocketSplash_mp
+</li><li> damage_scientist_death
+</li><li> damage_scientist_grenande
+</li><li> damage_scientist_poison
+</li><li> damage_sentry_bullet
+</li><li> damage_sg_hov_bomb
+</li><li> damage_sg_hov_bomb_splash
+</li><li> damage_sg_hov_bullet
+</li><li> damage_sg_hov_rocket_direct
+</li><li> damage_sg_hov_rocket_splash
+</li><li> damage_sizzling_barrel_large
+</li><li> damage_sizzling_barrel_small
+</li><li> damage_slimyTransfer_vomit
+</li><li> damage_slimyTransfer_vomit_residual
+</li><li> damage_slimyTransfer_vomit_splash
+</li><li> damage_Smallexplosion
+</li><li> damage_softfall
+</li><li> damage_softfall_mp
+</li><li> damage_strafe_rocket
+</li><li> damage_strafe_rocket_splash
+</li><li> damage_streamprotector_rocket_direct
+</li><li> damage_streamprotector_rocket_splash
+</li><li> damage_strogg_fighter_blaster
+</li><li> damage_strogg_flyer_blaster
+</li><li> damage_strogg_flyer_bomb
+</li><li> damage_strogg_marine_blaster
+</li><li> damage_strogg_marine_bullet
+</li><li> damage_strogg_marine_shotgun
+</li><li> damage_suicide
+</li><li> damage_tactical_blaster
+</li><li> damage_tactical_machinegun
+</li><li> damage_tactical_railgun
+</li><li> damage_tactical_shotgun
+</li><li> damage_telefrag
+</li><li> damage_toxin_novehicle_1000	{
+</li><li> damage_toxin_novehicle_25	{
+</li><li> damage_tram_flyer_rocket
+</li><li> damage_tramcar_explode
+</li><li> damage_tramgun
+</li><li> damage_triggerhurt_1
+</li><li> damage_triggerhurt_10
+</li><li> damage_triggerhurt_100
+</li><li> damage_triggerhurt_1000
+</li><li> damage_triggerhurt_15
+</li><li> damage_triggerhurt_25
+</li><li> damage_triggerhurt_5
+</li><li> damage_triggerhurt_50
+</li><li> damage_triggerhurt_75
+</li><li> damage_triggerhurt_toxin
+</li><li> damage_triggerhurt_toxin_1
+</li><li> damage_turret_blaster
+</li><li> damage_turret_bunker_blaster
+</li><li> damage_turret_bunker_blaster_weak
+</li><li> damage_turret_flying_blaster
+</li><li> damage_turret_rocket_direct
+</li><li> damage_turret_rocket_splash
+</li><li> damage_VagaryObject
+</li><li> damage_vehicle_flatbed_bullet
+</li><li> damage_vehicle_tramgun_bullet
+</li><li> damage_walker_crash
+</li><li> damage_walker_rocket
+</li><li> damage_walker_rocket_splash
+</li><li> damage_walkerCrush
+</li><li> debris_ad_barrel_top
+</li><li> debris_barrel_top
+</li><li> debris_brass
+</li><li> debris_brass_machinegun
+</li><li> debris_brass_shotgun
+</li><li> debris_chunk
+</li><li> debris_chunk_ad
+</li><li> debris_chunk_sm
+</li><li> debris_chunk_sm_ad
+</li><li> debris_chunk_sm2
+</li><li> debris_chunk_sm2_ad
+</li><li> debris_exploding_barrel_large_top
+</li><li> debris_exploding_barrel_small_top
+</li><li> debris_flatbed_back
+</li><li> debris_flatbed_back_hover
+</li><li> debris_flatbed_fin
+</li><li> debris_flatbed_front_hover
+</li><li> debris_flatbed_main
+</li><li> debris_FT_door
+</li><li> debris_FT_gun
+</li><li> debris_FT_pin
+</li><li> debris_fx_bit
+</li><li> debris_fx_bit_bgtrail
+</li><li> debris_fx_bit_medtrail
+</li><li> debris_gib
+</li><li> debris_gib_brain1
+</li><li> debris_gib_brain2
+</li><li> debris_gib_head
+</li><li> debris_gib_lup_leg
+</li><li> debris_gib_rup_arm
+</li><li> debris_gib_rup_leg
+</li><li> debris_gib_rup_leg2
+</li><li> debris_gib_torso
+</li><li> debris_gib_waist
+</li><li> debris_harvester_arm1
+</li><li> debris_harvester_arm2
+</li><li> debris_harvester_cap_side1
+</li><li> debris_harvester_cap_side2
+</li><li> debris_harvester_captop
+</li><li> debris_harvester_hook
+</li><li> debris_hornet_body
+</li><li> debris_hornet_engine
+</li><li> debris_hornet_head
+</li><li> debris_hornet_leg1
+</li><li> debris_hornet_leg2
+</li><li> debris_large_rock1
+</li><li> debris_large_rock2
+</li><li> debris_med_rock2
+</li><li> debris_mf_bit1
+</li><li> debris_mf_door
+</li><li> debris_mf_gun
+</li><li> debris_mf_wing
+</li><li> debris_mturret_barrel1
+</li><li> debris_mturret_barrel2
+</li><li> debris_mturret_base
+</li><li> debris_mturret_sensor
+</li><li> debris_pillar_bit1
+</li><li> debris_roller_joint1
+</li><li> debris_roller_joint2
+</li><li> debris_roller_top
+</li><li> debris_sizzling_barrel_large_top
+</li><li> debris_sizzling_barrel_small_top
+</li><li> debris_small_rock1a
+</li><li> debris_small_rock2
+</li><li> debris_space_bits
+</li><li> debris_tank_chunk1
+</li><li> debris_tank_chunk2
+</li><li> debris_tank_fin
+</li><li> debris_tank_turret
+</li><li> debris_tram_arm
+</li><li> debris_tram_base
+</li><li> debris_tram_shield
+</li><li> debris_tram_sleeve
+</li><li> debris_vehicle_flatbed_gunner_weapon
+</li><li> debris_walker_joint
+</li><li> debris_walker_main_body
+</li><li> debris_walker_main_gun
+</li><li> debris_walker_pipe
+</li><li> debris_walker_piston
+</li><li> debris_walker_rocket_launcher
+</li><li> debris_walker_upperleg
+</li><li> debug_jump
+</li><li> dispersal_char_marine
+</li><li> dispersal_monster_grunt
+</li><li> dispersal_monster_harvester
+</li><li> dispersal_monster_strogg_marine
+</li><li> dispersal_spawnOverrides
+</li><li> dispersal_stroggified_kane
+</li><li> dispersal_tactical_transfer
+</li><li> dispersal_tactical_transfer_rail
+</li><li> dispersal2_monster_gladiator
+</li><li> dispersal2_monster_grunt
+</li><li> dmg_nodamage	{
+</li><li> dmg_shellshock
+</li><li> dmg_shellshock_nohl
+</li><li> e3_char_marine_npc_peterson
+</li><li> e3mech_driver
+</li><li> e3mech_weapon_mgun
+</li><li> e3mech_weapon_rocket
+</li><li> env_acid_gun
+</li><li> env_af_hinge
+</li><li> env_af_hinge_tram
+</li><li> env_airdefense_pipes
+</li><li> env_autopsytable
+</li><li> env_barrel_arm
+</li><li> env_barrel_clamp
+</li><li> env_battery
+</li><li> env_battery1
+</li><li> env_battery2
+</li><li> env_belly_turret
+</li><li> env_bodypool
+</li><li> env_bodytable
+</li><li> env_brainstalk
+</li><li> env_breakthru_door
+</li><li> env_bridge_crush
+</li><li> env_burnhole
+</li><li> env_catscanner
+</li><li> env_catwalk
+</li><li> env_chain
+</li><li> env_chain_dispersal
+</li><li> env_chemical_vat
+</li><li> env_chemical_vat_door
+</li><li> env_conveyorpath1
+</li><li> env_convoy_hovertruck
+</li><li> env_convoy_pump
+</li><li> env_convoy_pump_small
+</li><li> env_convoy1_strogg_flyer
+</li><li> env_core_tunnel_collapse
+</li><li> env_crane
+</li><li> env_crucified
+</li><li> env_data_router
+</li><li> env_data_router_arms
+</li><li> env_data_router_cables
+</li><li> env_dead_chestwoundbody
+</li><li> env_dead_d_arm
+</li><li> env_dead_d_leg
+</li><li> env_dead_d_leg_clean
+</li><li> env_dead_half
+</li><li> env_dead_head_half
+</li><li> env_dead_head_shot
+</li><li> env_dead_no_arm
+</li><li> env_dead_no_leg
+</li><li> env_destroyer
+</li><li> env_destroyer_doors
+</li><li> env_destroyer_lod
+</li><li> env_dispersal_ceiling_panel
+</li><li> env_dispersal_chemical_vat
+</li><li> env_dispersal_digester1
+</li><li> env_dispersal_digester2
+</li><li> env_dispersal_fence
+</li><li> env_dispersal_fence_gladiator
+</li><li> env_dispersal_injector_arm
+</li><li> env_door_smash
+</li><li> env_dropship
+</li><li> env_dropship_interior
+</li><li> env_dropship_medlabs
+</li><li> env_dropship_mini
+</li><li> env_dropship_mini_B
+</li><li> env_elevator
+</li><li> env_fattydoor
+</li><li> env_flier_engine
+</li><li> env_flyer_dispersal
+</li><li> env_FT_empty1
+</li><li> env_fuel_mixer
+</li><li> env_generic_4barrel_arm
+</li><li> env_generic_barrel_arm
+</li><li> env_green_barrel
+</li><li> env_guardian_door
+</li><li> env_guiguy
+</li><li> env_gunner_medlab
+</li><li> env_hanging_body_1
+</li><li> env_hanging_body_2
+</li><li> env_hanglight_square
+</li><li> env_heartpump
+</li><li> env_heartpump_mp
+</li><li> env_hook_base
+</li><li> env_hooked_body
+</li><li> env_hover_truck
+</li><li> env_hover_truck_gun
+</li><li> env_intro_rocket
+</li><li> env_machine7
+</li><li> env_magnetic_arm
+</li><li> env_makron_door
+</li><li> env_marine_drop_pod
+</li><li> env_marine_emp
+</li><li> env_marine_emp
+</li><li> env_marinebreach_camera
+</li><li> env_marinebreach_holeplate
+</li><li> env_marinebreach_torchflare
+</li><li> env_marinebreach_turret
+</li><li> env_MCC_ship
+</li><li> env_meat_hook
+</li><li> env_medlabs_buzzarm
+</li><li> env_medlabs_injection_arm
+</li><li> env_medlabs_nanocyte_implant_arm
+</li><li> env_medlabs_needle_scanner
+</li><li> env_medlabs_railing
+</li><li> env_medlabs_registration
+</li><li> env_medlabs_scanner_arm
+</li><li> env_medlabs_tube_arms
+</li><li> env_medlabs_tube_four_arms
+</li><li> env_medlabs_tube_goo
+</li><li> env_medlabs_verification_arm
+</li><li> env_needlearm
+</li><li> env_phone
+</li><li> env_piston
+</li><li> env_pistonB
+</li><li> env_pod_crash
+</li><li> env_prisonlight
+</li><li> env_ragdoll_corpse_base
+</li><li> env_ragdoll_corpse_rotten
+</li><li> env_ragdoll_corpse_squishy
+</li><li> env_ragdoll_corpse_standard
+</li><li> env_ragdoll_grunt
+</li><li> env_ragdoll_marine
+</li><li> env_ragdoll_marine_conveyor
+</li><li> env_ragdoll_marine_fullgear
+</li><li> env_ragdoll_marine_meathook
+</li><li> env_ragdoll_marine_meathook2
+</li><li> env_ragdoll_marine_medic
+</li><li> env_ragdoll_marine_renner
+</li><li> env_ragdoll_marine_tech
+</li><li> env_ragdoll_strogg_marine
+</li><li> env_retracttank
+</li><li> env_roof_floor
+</li><li> env_roof_generator
+</li><li> env_sb_machinegun
+</li><li> env_shell_loader
+</li><li> env_shell_loader_mirrored
+</li><li> env_shocker
+</li><li> env_shocker_base
+</li><li> env_smashing_pipe
+</li><li> env_stomachpump01
+</li><li> env_stomachpump02
+</li><li> env_storage_casket_cin
+
+
+
+
+<!--
+     FILE ARCHIVED ON 23:18:05 Jul 29, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 2:45:15 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
