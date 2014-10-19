@@ -1,0 +1,553 @@
+
+<HTML>
+<HEAD>
+
+<script type="text/javascript" src="/static/js/analytics.js" ></script>
+<link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
+
+
+
+
+<TITLE>The Doom 3 Reference Page</TITLE>
+<LINK HREF="/web/20060615034603cs_/http://modwiki.net/styles/styles.css" REL="stylesheet" TYPE="text/css">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#0000CC" VLINK="#CC0000" CLASS="text">
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app17.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1420070399999;
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http:\/\/modwiki.net\/show.php?index=commands";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth = 475;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "15";
+var displayMonth = "Jun";
+var displayYear = "2006";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script>
+
+<style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style>
+<div id="wm-ipp" lang="en" class="__wb_banner_div" style="display:none; position:relative;padding:0 5px;min-height:70px;min-width:800px">
+
+
+<div id="wm-ipp-inside" class="__wb_banner_div" style="position:fixed;padding:0!important;margin:0!important;width:97%;min-width:780px;border:5px solid #000;border-top:none;background-image:url(/static/images/toolbar/wm_tb_bk_trns.png);text-align:center;-moz-box-shadow:1px 1px 3px #333;-webkit-box-shadow:1px 1px 3px #333;box-shadow:1px 1px 3px #333;font-size:11px!important;font-family:'Lucida Grande','Arial',sans-serif!important;">
+   <table style="border-collapse:collapse;margin:0;padding:0;width:100%;"><tbody><tr>
+   <td style="padding:10px;vertical-align:top;min-width:110px;">
+   <a href="/web/" title="Wayback Machine home page" style="background-color:transparent;border:none;"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"/></a>
+   </td>
+   <td style="padding:0!important;text-align:center;vertical-align:top;width:100%;">
+
+       <table style="border-collapse:collapse;margin:0 auto;padding:0;width:570px;"><tbody><tr>
+       <td style="padding:3px 0;" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb" style="margin:0!important;padding:0!important;"><input type="text" name="url" id="wmtbURL" value="http://modwiki.net/show.php?index=commands" style="width:400px;font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;" onfocus="javascript:this.focus();this.select();" /><input type="hidden" name="type" value="replay" /><input type="hidden" name="date" value="20060615034603" /><input type="submit" value="Go" style="font-size:11px;font-family:'Lucida Grande','Arial',sans-serif;margin-left:5px;width: inherit !important" /><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td style="vertical-align:bottom;padding:5px 0 0 0!important;" rowspan="2">
+           <table style="border-collapse:collapse;width:110px;color:#99a;font-family:'Helvetica','Lucida Grande','Arial',sans-serif;"><tbody>
+			
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr style="width:110px;height:16px;font-size:10px!important;">
+           	<td style="padding-right:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       May
+                       
+               </td>
+               <td id="displayMonthEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight:bold;text-transform:uppercase;width:34px;height:15px;padding-top:1px;text-align:center;" title="You are here: 3:46:03 Jun 15, 2006">JUN</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight:bold;text-transform:uppercase;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       Jul
+                       
+               </td>
+           </tr>
+
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr>
+               <td style="padding-right:9px;white-space:nowrap;overflow:visible;text-align:right!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_prv_off.png" alt="Previous capture" width="14" height="16" border="0" />
+                       
+               </td>
+               <td id="displayDayEl" style="background:#000;color:#ff0;width:34px;height:24px;padding:2px 0 0 0;text-align:center;font-size:24px;font-weight: bold;" title="You are here: 3:46:03 Jun 15, 2006">15</td>
+				<td style="padding-left:9px;white-space:nowrap;overflow:visible;text-align:left!important;vertical-align:middle!important;" nowrap="nowrap">
+               
+                       <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+                       
+			    </td>
+           </tr>
+
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr style="width:110px;height:13px;font-size:9px!important;">
+				<td style="padding-right:9px;font-size:11px!important;font-weight: bold;text-align:right;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2005
+                       
+               </td>
+               <td id="displayYearEl" style="background:#000;color:#ff0;font-size:11px!important;font-weight: bold;padding-top:1px;width:34px;height:13px;text-align:center;" title="You are here: 3:46:03 Jun 15, 2006">2006</td>
+				<td style="padding-left:9px;font-size:11px!important;font-weight: bold;white-space:nowrap;overflow:visible;" nowrap="nowrap">
+               
+                       2007
+                       
+				</td>
+           </tr>
+           </tbody></table>
+       </td>
+
+       </tr>
+       <tr>
+       <td style="vertical-align:middle;padding:0!important;">
+           <a href="/web/20060615034603*/http://modwiki.net/show.php?index=commands" style="color:#33f;font-size:11px;font-weight:bold;background-color:transparent;border:none;" title="See a list of every capture for this URL"><strong>1 captures</strong></a>
+           <div class="__wb_banner_div" style="margin:0!important;padding:0!important;color:#666;font-size:9px;padding-top:2px!important;white-space:nowrap;" title="Timespan for captures of this URL">15 Jun 06 - 15 Jun 06</div>
+       </td>
+       <td style="padding:0!important;">
+       <a style="position:relative; white-space:nowrap; width:475px;height:27px;" href="" id="wm-graph-anchor">
+       <div class="__wb_banner_div" id="wm-ipp-sparkline" style="position:relative; white-space:nowrap; width:475px;height:27px;background-color:#fff;cursor:pointer;border-right:1px solid #ccc;" title="Explore captures for this URL">
+			<img id="sparklineImgId" style="position:absolute; z-index:9012; top:0px; left:0px;"
+				onmouseover="showTrackers('inline');" 
+				onmouseout="showTrackers('none');"
+				onmousemove="trackMouseMove(event,this)"
+				alt="sparklines"
+				width="475"
+				height="27"
+				border="0"
+				src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:5:000001000000_2007:-1:000000000000_2008:-1:000000000000_2009:-1:000000000000_2010:-1:000000000000_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000_2014:-1:000000000000"></img>
+			<img id="wbMouseTrackYearImg" 
+				style="display:none; position:absolute; z-index:9010;"
+				width="25" 
+				height="27"
+				border="0"
+				src="/static/images/toolbar/transp-yellow-pixel.png"></img>
+			<img id="wbMouseTrackMonthImg"
+				style="display:none; position:absolute; z-index:9011; " 
+				width="2"
+				height="27" 
+				border="0"
+				src="/static/images/toolbar/transp-red-pixel.png"></img>
+       </div>
+		</a>
+
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td style="text-align:right;padding:5px;width:65px;font-size:11px!important;">
+       <a href="javascript:;" onclick="document.getElementById('wm-ipp').style.display='none';" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_close.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;margin-bottom:23px;background-color:transparent;border:none;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="display:block;padding-right:18px;background:url(/static/images/toolbar/wm_tb_help.png) no-repeat 100% 0;color:#33f;font-family:'Lucida Grande','Arial',sans-serif;background-color:transparent;border:none;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+
+</div>
+</div>
+<script type="text/javascript">
+ var wmDisclaimBanner = document.getElementById("wm-ipp");
+ if(wmDisclaimBanner != null) {
+   disclaimElement(wmDisclaimBanner);
+ }
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+ 
+<BLOCKQUOTE> 
+<table style="width: 900px; background-color: #FFFFE0; border: 1px dashed black; padding: 3px; width: 900px; margin-left: 0px; margin-right: 30px;" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td style="font-weight: bold; text-align: center; font-size: 16px;" class="textMenu">
+			This page is fast becoming obsolete and replaced with the <a href="/web/20060615034603/http://www.modwiki.net/">wiki</a>. Please visit it if you can't find the information you seek here. </td>
+	</tr>
+</table>
+<p></p>
+<TABLE WIDTH="900" BORDER="0" CELLPADDING="0" CELLSPACING="0" BGCOLOR="#000000"> 
+<TR> 
+<TD><TABLE WIDTH="100%"  BORDER="0" CELLSPACING="1" CELLPADDING="2"> 
+<TR> 
+<TD BGCOLOR="#990000" STYLE="color: #FFFFFF"><BLOCKQUOTE CLASS="textBig"><B>The Doom 3 Reference Page</B></BLOCKQUOTE></TD> 
+</TR> 
+<TR> 
+<TD BGCOLOR="#FFFFFF"><BLOCKQUOTE CLASS="textMenu">-- <A HREF="/web/20060615034603/http://modwiki.net/index.php">reference</A> | <A HREF="/web/20060615034603/http://modwiki.net/index.php?page=news">news</A> | <A HREF="/web/20060615034603/http://modwiki.net/index.php?page=links">links</A> --</BLOCKQUOTE></TD> 
+</TR> 
+<TR> 
+<TD BGCOLOR="#FFFFFF"><BLOCKQUOTE>
+<P><B><FONT SIZE="+3">Command Reference: </FONT></B></P>
+<BLOCKQUOTE>
+<P><B></A>Game commands:</B></P><P CLASS="text">1 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=aasStats">aasStats</A><BR>
+2 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=addarrow">addarrow</A><BR>
+3 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=addChatLine">addChatLine</A><BR>
+4 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=addline">addline</A><BR>
+5 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=bindRagdoll">bindRagdoll</A><BR>
+6 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=blinkline">blinkline</A><BR>
+7 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=centerview">centerview</A><BR>
+8 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=clearLights">clearLights</A><BR>
+9 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=clientDropWeapon">clientDropWeapon</A><BR>
+10 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=clientMessageMode">clientMessageMode</A><BR>
+11 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=clientVoiceChat">clientVoiceChat</A><BR>
+12 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=clientVoiceChatTeam">clientVoiceChatTeam</A><BR>
+13 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=closeViewNotes">closeViewNotes</A><BR>
+14 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=collisionModelInfo">collisionModelInfo</A><BR>
+15 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=damage">damage</A><BR>
+16 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=deleteSelected">deleteSelected</A><BR>
+17 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=disasmScript">disasmScript</A><BR>
+18 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=exportmodels">exportmodels</A><BR>
+19 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=game_memory">game_memory</A><BR>
+20 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=gameError">gameError</A><BR>
+21 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=gameKick">gameKick</A><BR>
+22 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=getviewpos">getviewpos</A><BR>
+23 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=give">give</A> - 1 suggestion<BR>
+24 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=god">god</A><BR>
+25 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=keepTestModel">keepTestModel</A><BR>
+26 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=kill">kill</A><BR>
+27 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=killMonsters">killMonsters</A><BR>
+28 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=killMoveables">killMoveables</A><BR>
+29 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=killRagdolls">killRagdolls</A><BR>
+30 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listActiveEntities">listActiveEntities</A><BR>
+31 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listAnims">listAnims</A><BR>
+32 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listClasses">listClasses</A><BR>
+33 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listCollisionModels">listCollisionModels</A><BR>
+34 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listEntities">listEntities</A><BR>
+35 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listLines">listLines</A><BR>
+36 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listModelDefs">listModelDefs</A><BR>
+37 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listMonsters">listMonsters</A><BR>
+38 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listSpawnArgs">listSpawnArgs</A><BR>
+39 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listThreads">listThreads</A><BR>
+40 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listTypeInfo">listTypeInfo</A><BR>
+41 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=nextAnim">nextAnim</A><BR>
+42 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=nextFrame">nextFrame</A><BR>
+43 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=nextGUI">nextGUI</A><BR>
+44 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=noclip">noclip</A><BR>
+45 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=notarget">notarget</A><BR>
+46 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=playerModel">playerModel</A><BR>
+47 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=popLight">popLight</A><BR>
+48 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=prevAnim">prevAnim</A><BR>
+49 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=prevFrame">prevFrame</A><BR>
+50 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=printModelDefs">printModelDefs</A><BR>
+51 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=recordViewNotes">recordViewNotes</A><BR>
+52 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=reexportmodels">reexportmodels</A><BR>
+53 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=reloadanims">reloadanims</A><BR>
+54 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=reloadScript">reloadScript</A><BR>
+55 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=remove">remove</A><BR>
+56 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=removeline">removeline</A><BR>
+57 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=saveLights">saveLights</A><BR>
+58 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=saveMoveables">saveMoveables</A><BR>
+59 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=saveParticles">saveParticles</A><BR>
+60 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=saveRagdolls">saveRagdolls</A><BR>
+61 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=saveSelected">saveSelected</A><BR>
+62 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=say">say</A><BR>
+63 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=sayTeam">sayTeam</A><BR>
+64 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=script">script</A><BR>
+65 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=serverForceReady">serverForceReady</A><BR>
+66 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=serverMapRestart">serverMapRestart</A><BR>
+67 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=serverNextMap">serverNextMap</A><BR>
+68 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=setviewpos">setviewpos</A><BR>
+69 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=showViewNotes">showViewNotes</A><BR>
+70 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=spawn">spawn</A><BR>
+71 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=teleport">teleport</A><BR>
+72 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=testAnim">testAnim</A><BR>
+73 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=testBlend">testBlend</A><BR>
+74 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=testBoneFx">testBoneFx</A><BR>
+75 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=testDamage">testDamage</A><BR>
+76 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=testDeath">testDeath</A><BR>
+77 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=testFx">testFx</A><BR>
+78 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=testLight">testLight</A><BR>
+79 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=testModel">testModel</A><BR>
+80 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=testParticleStopTime">testParticleStopTime</A><BR>
+81 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=testPointLight">testPointLight</A><BR>
+82 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=testSave">testSave</A><BR>
+83 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=testSaveGame">testSaveGame</A><BR>
+84 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=testShaderParm">testShaderParm</A><BR>
+85 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=testSkin">testSkin</A><BR>
+86 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=trigger">trigger</A><BR>
+87 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=unbindRagdoll">unbindRagdoll</A><BR>
+88 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=weaponSplat">weaponSplat</A><BR>
+89 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=where">where</A><BR>
+90 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=writeGameState">writeGameState</A><BR>
+</P><P><B>Renderer commands:</B></P><P CLASS="text">1 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=benchmark">benchmark</A><BR>
+2 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=combineCubeImages">combineCubeImages</A><BR>
+3 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=envshot">envshot</A><BR>
+4 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=gfxInfo">gfxInfo</A><BR>
+5 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listGuis">listGuis</A><BR>
+6 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listImages">listImages</A><BR>
+7 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listModels">listModels</A><BR>
+8 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listModes">listModes</A><BR>
+9 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listRenderEntityDefs">listRenderEntityDefs</A><BR>
+10 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listRenderLightDefs">listRenderLightDefs</A><BR>
+11 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listVertexCache">listVertexCache</A><BR>
+12 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=makeAmbientMap">makeAmbientMap</A><BR>
+13 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=MakeMegaTexture">MakeMegaTexture</A><BR>
+14 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=modulateLights">modulateLights</A><BR>
+15 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=printModel">printModel</A><BR>
+16 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=regenerateWorld">regenerateWorld</A><BR>
+17 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=reloadARBprograms">reloadARBprograms</A><BR>
+18 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=reloadCgPrograms">reloadCgPrograms</A><BR>
+19 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=reloadGuis">reloadGuis</A><BR>
+20 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=reloadImages">reloadImages</A><BR>
+21 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=reloadModels">reloadModels</A><BR>
+22 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=reloadSurface">reloadSurface</A><BR>
+23 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=reportImageDuplication">reportImageDuplication</A><BR>
+24 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=reportSurfaceAreas">reportSurfaceAreas</A><BR>
+25 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=screenshot">screenshot</A><BR>
+26 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=showInteractionMemory">showInteractionMemory</A><BR>
+27 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=showTriSurfMemory">showTriSurfMemory</A><BR>
+28 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=sizeDown">sizeDown</A><BR>
+29 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=sizeUp">sizeUp</A><BR>
+30 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=testImage">testImage</A><BR>
+31 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=testVideo">testVideo</A><BR>
+32 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=touchGui">touchGui</A><BR>
+33 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=touchModel">touchModel</A><BR>
+34 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=vid_restart">vid_restart</A><BR>
+</P><P><B>Sound commands:</B></P><P CLASS="text">1 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listSoundDecoders">listSoundDecoders</A><BR>
+2 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listSounds">listSounds</A><BR>
+3 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=reloadSounds">reloadSounds</A><BR>
+4 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=s_restart">s_restart</A><BR>
+5 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=testSound">testSound</A><BR>
+</P><P><B>System commands:</B></P><P CLASS="text">1 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=aviCmdDemo">aviCmdDemo</A><BR>
+2 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=aviDemo">aviDemo</A> - 1 comment<BR>
+3 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=aviGame">aviGame</A><BR>
+4 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=bind">bind</A><BR>
+5 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=bindunbindtwo">bindunbindtwo</A><BR>
+6 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=checkNewVersion">checkNewVersion</A><BR>
+7 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=clear">clear</A><BR>
+8 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=compressDemo">compressDemo</A><BR>
+9 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=conDump">conDump</A><BR>
+10 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=connect">connect</A><BR>
+11 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=crash">crash</A><BR>
+12 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=cvar_restart">cvar_restart</A><BR>
+13 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=demoShot">demoShot</A><BR>
+14 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=devmap">devmap</A><BR>
+15 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=dir">dir</A><BR>
+16 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=dirtree">dirtree</A><BR>
+17 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=disconnect">disconnect</A><BR>
+18 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=echo">echo</A><BR>
+19 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=error">error</A><BR>
+20 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=exec">exec</A><BR>
+21 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=execMachineSpec">execMachineSpec</A><BR>
+22 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=exit">exit</A><BR>
+23 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=exitCmdDemo">exitCmdDemo</A><BR>
+24 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=finishBuild">finishBuild</A><BR>
+25 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=freeze">freeze</A><BR>
+26 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=heartbeat">heartbeat</A><BR>
+27 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=help">help</A><BR>
+28 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=hitch">hitch</A><BR>
+29 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=in_restart">in_restart</A><BR>
+30 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=kick">kick</A><BR>
+31 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=LANScan">LANScan</A><BR>
+32 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listAF">listAF</A><BR>
+33 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listAudios">listAudios</A><BR>
+34 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listBinds">listBinds</A><BR>
+35 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listCmds">listCmds</A><BR>
+36 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listCvars">listCvars</A><BR>
+37 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listDecls">listDecls</A><BR>
+38 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listDictKeys">listDictKeys</A><BR>
+39 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listDictValues">listDictValues</A><BR>
+40 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listEmails">listEmails</A><BR>
+41 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listEntityDefs">listEntityDefs</A><BR>
+42 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listFX">listFX</A><BR>
+43 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listGameCmds">listGameCmds</A><BR>
+44 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listHuffmanFrequencies">listHuffmanFrequencies</A><BR>
+45 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listMaterials">listMaterials</A><BR>
+46 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listParticles">listParticles</A><BR>
+47 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listPDAs">listPDAs</A><BR>
+48 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listRendererCmds">listRendererCmds</A><BR>
+49 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listServers">listServers</A><BR>
+50 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listSkins">listSkins</A><BR>
+51 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listSoundCmds">listSoundCmds</A><BR>
+52 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listSoundShaders">listSoundShaders</A><BR>
+53 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listSystemCmds">listSystemCmds</A><BR>
+54 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listTables">listTables</A><BR>
+55 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listToolCmds">listToolCmds</A><BR>
+56 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=listVideos">listVideos</A><BR>
+57 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=loadGame">loadGame</A><BR>
+58 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=localizeGuis">localizeGuis</A><BR>
+59 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=localizeMaps">localizeMaps</A><BR>
+60 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=map">map</A><BR>
+61 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=memoryDump">memoryDump</A><BR>
+62 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=memoryDumpCompressed">memoryDumpCompressed</A><BR>
+63 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=nextMap">nextMap</A><BR>
+64 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=parse">parse</A><BR>
+65 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=path">path</A><BR>
+66 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=playCmdDemo">playCmdDemo</A><BR>
+67 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=playDemo">playDemo</A><BR>
+68 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=printAF">printAF</A><BR>
+69 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=printAudio">printAudio</A><BR>
+70 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=printEmail">printEmail</A><BR>
+71 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=printEntityDef">printEntityDef</A><BR>
+72 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=printFX">printFX</A><BR>
+73 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=printMaterial">printMaterial</A><BR>
+74 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=printParticle">printParticle</A><BR>
+75 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=printPDA">printPDA</A><BR>
+76 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=printSkin">printSkin</A><BR>
+77 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=printSoundShader">printSoundShader</A><BR>
+78 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=printTable">printTable</A><BR>
+79 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=printVideo">printVideo</A><BR>
+80 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=promptKey">promptKey</A><BR>
+81 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=quit">quit</A><BR>
+82 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=rcon">rcon</A><BR>
+83 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=reconnect">reconnect</A><BR>
+84 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=recordDemo">recordDemo</A><BR>
+85 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=reloadDecls">reloadDecls</A><BR>
+86 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=reloadEngine">reloadEngine</A><BR>
+87 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=reloadLanguage">reloadLanguage</A><BR>
+88 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=rescanSI">rescanSI</A><BR>
+89 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=reset">reset</A><BR>
+90 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=saveGame">saveGame</A><BR>
+91 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=serverInfo">serverInfo</A><BR>
+92 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=set">set</A><BR>
+93 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=seta">seta</A><BR>
+94 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=setMachineSpec">setMachineSpec</A><BR>
+95 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=sets">sets</A><BR>
+96 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=sett">sett</A><BR>
+97 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=setu">setu</A><BR>
+98 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=showDictMemory">showDictMemory</A><BR>
+99 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=showStringMemory">showStringMemory</A><BR>
+100 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=spawnServer">spawnServer</A><BR>
+101 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=startBuild">startBuild</A><BR>
+102 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=stopRecording">stopRecording</A><BR>
+103 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=takeViewNotes">takeViewNotes</A><BR>
+104 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=takeViewNotes2">takeViewNotes2</A><BR>
+105 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=testGUI">testGUI</A><BR>
+106 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=testmap">testmap</A><BR>
+107 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=testSIMD">testSIMD</A><BR>
+108 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=timeCmdDemo">timeCmdDemo</A><BR>
+109 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=timeDemo">timeDemo</A><BR>
+110 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=timeDemoQuit">timeDemoQuit</A><BR>
+111 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=toggle">toggle</A><BR>
+112 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=touch">touch</A><BR>
+113 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=touchFile">touchFile</A><BR>
+114 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=touchFileList">touchFileList</A><BR>
+115 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=unbind">unbind</A><BR>
+116 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=unbindall">unbindall</A><BR>
+117 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=updateUI">updateUI</A><BR>
+118 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=vstr">vstr</A><BR>
+119 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=wait">wait</A><BR>
+120 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=writeCmdDemo">writeCmdDemo</A><BR>
+121 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=writeConfig">writeConfig</A><BR>
+122 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=writePrecache">writePrecache</A><BR>
+</P><P><B>Tool commands:</B></P><P CLASS="text">1 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=debugger">debugger</A> - 1 comment<BR>
+2 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=dmap">dmap</A><BR>
+3 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=editAFs">editAFs</A><BR>
+4 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=editDecls">editDecls</A><BR>
+5 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=editGUIs">editGUIs</A><BR>
+6 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=editLights">editLights</A><BR>
+7 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=editor">editor</A><BR>
+8 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=editParticles">editParticles</A><BR>
+9 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=editPDAs">editPDAs</A><BR>
+10 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=editScripts">editScripts</A><BR>
+11 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=editSounds">editSounds</A><BR>
+12 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=renderbump">renderbump</A><BR>
+13 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=renderbumpFlat">renderbumpFlat</A><BR>
+14 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=roq">roq</A><BR>
+15 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=runAAS">runAAS</A><BR>
+16 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=runAASDir">runAASDir</A><BR>
+17 - <A HREF="/web/20060615034603/http://modwiki.net/show.php?command=runReach">runReach</A><BR>
+</P><A HREF="/web/20060615034603/http://modwiki.net/index.php">Back to the front page</A></BLOCKQUOTE><P>&nbsp;</P>
+</DIV></TD> 
+</TR> 
+<TR> 
+<TD BGCOLOR="#FFFFFF" CLASS="textCopyright">All information on this page is public domain, but if you use it somewhere please give credit. Page design and code &copy; <A HREF="mailto:johan@stroms.biz">iceheart</A> 2004-2005. </TD> 
+</TR> 
+</TABLE></TD> 
+</TR> 
+</TABLE> 
+</BLOCKQUOTE> 
+</BODY>
+</HTML>
+
+
+
+
+<!--
+     FILE ARCHIVED ON 3:46:03 Jun 15, 2006 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 1:04:09 Oct 19, 2014.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
