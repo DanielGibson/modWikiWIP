@@ -1,0 +1,542 @@
+<div id="globalWrapper">
+
+<div id="column-content">
+
+<div id="content">
+
+<span id="top"></span>
+= Coding =
+
+<div id="bodyContent">
+
+=== From modwiki ===
+
+<div id="contentSub">
+
+
+
+</div>
+<div id="jump-to-nav">
+
+Jump to: [[wiki/Coding#column-one|navigation]], [[wiki/Coding#searchInput|search]]
+
+</div>
+<div align="left" style="float:right; font-size: 17px;background: #FFFFEE; padding: 5px; border: 1px solid #000000; padding-left: 15px; padding-right: 15px; margin-left: 15px; margin-right: 15px; padding-bottom: 15px; width: 400px;">
+
+<div align="right" style="font-size: 10px; text-align=right;">
+
+[[wiki/Help:Reference_box|What's this?]]
+
+</div>
+<div>
+
+'''Coding quick reference'''
+
+</div>
+
+-----
+
+<span style="font-size: 14px"> </span>
+* [[wiki/How_to_build_the_SDK_on_Linux|How to build the SDK on Linux]]
+* [[wiki/How_to_build_the_SDK_on_OSX|How to build the SDK on OSX]]
+* [[wiki/How_to_build_the_SDK_on_Windows|How to build the SDK on Windows]]
+
+
+</div>
+All engines in the [[wiki/Id_Tech_4|id Tech 4]] family are written in C++, a high-level programming language. Coding, as it applies to id Tech 4 games, is the modification of the engine's public source code to extend upon its capabilities.
+
+{|
+|width="100%"|<div id="toctitle">
+
+== Contents ==
+
+
+</div>
+* [[wiki/Coding#Engine_code|<span class="tocnumber">1</span> <span class="toctext">Engine code</span>]]
+* [[wiki/Coding#Game_code|<span class="tocnumber">2</span> <span class="toctext">Game code</span>]]
+* [[wiki/Coding#The_SDK|<span class="tocnumber">3</span> <span class="toctext">The SDK</span>]]
+* [[wiki/Coding#Where_to_start|<span class="tocnumber">4</span> <span class="toctext">Where to start</span>]]
+* [[wiki/Coding#References|<span class="tocnumber">5</span> <span class="toctext">References</span>]]
+* [[wiki/Coding#Coding_tutorials|<span class="tocnumber">6</span> <span class="toctext">Coding tutorials</span>]]
+* [[wiki/Coding#Coding_Tools|<span class="tocnumber">7</span> <span class="toctext">Coding Tools</span>]]
+|}
+
+<div class="editsection" style="float:right;margin-left:5px;">
+
+[[[w/index.php?title=Coding&action=edit&section=1|edit]]]
+
+</div>
+== Engine code ==
+
+The engine code is available on a GPL v3 licence at [[[web/20120831010417/https://github.com/TTimo/doom3.gpl|[1]]]]
+
+Among other systems, the engine contains - the common framework, renderer, sound system, file system, network system.
+
+The compiled engine code is referred to as the engine executable.
+
+<div class="editsection" style="float:right;margin-left:5px;">
+
+[[[w/index.php?title=Coding&action=edit&section=2|edit]]]
+
+</div>
+== Game code ==
+
+Game code can be downloaded as part of the respective games SDK and is released under the SDK EULA.
+
+Among other systems, the game code contains - the main game logic, map loading, entity spawning, spawn classes, physics, networking.
+
+The compiled game code is referred to as the game binary. People often refer to the game code and the game binary interchangeably, also using such terms as the dll, or the SDK.
+
+The engine/game interface, or API, is described by idGame with local aspects in idGameLocal.
+
+There is version check done by the game engine on loading the game binary in order to enforce the API which halts the game with the error &quot;ERROR: wrong game DLL API version&quot;. Therefore each engine update or game patch is likely to 'break' compatibility of mods, necessitating the author to update the mod to the new game code.
+
+During development it can be handy to set[[wiki/Si_pure_%28cvar%29|si_pure]] to 0. This makes it possible to run the game with a modified game binary placed directly in the base directory. However, once you've finished making your code changes you should package the modified game binary for distribution as described in the ''how to'' articles linked at the top of this page.
+
+For more details on each file and class included in the SDK, and therefore what can and cannot be done, please read [[wiki/The_annotated_API|The annotated API]].
+
+<div class="editsection" style="float:right;margin-left:5px;">
+
+[[[w/index.php?title=Coding&action=edit&section=3|edit]]]
+
+</div>
+== The SDK ==
+
+This game code project in the SDK, allows modders the ability to compile a new game binary for different platforms - gamex86.dll/gamex86.so/gameppc.dylib file for windows/linux/mac respectively.
+
+* Download the [[web/20120831010417/ftp://ftp.idsoftware.com/idstuff/doom3/source/|Doom 3 SDK]] version 1.3.1
+* Download the [[web/20120831010417/ftp://ftp.idsoftware.com/idstuff/quake4/source|Quake 4 SDK]] version 1.4.2
+* Download the [[web/20120831010417/http://www.3drealms.com/prey/download.html#sdk|Prey SDK]]
+* Download the [[web/20120831010417/http://community.enemyterritory.com/index.php?q=node/262|ETQW SDK]] version 1.5
+
+Most of the SDKs support Visual Studio .NET 2003 and 2005 &quot;out of the box&quot;.
+
+<div class="editsection" style="float:right;margin-left:5px;">
+
+[[[w/index.php?title=Coding&action=edit&section=4|edit]]]
+
+</div>
+== Where to start ==
+
+So much code!
+
+As a starting point the idGameLocal::RunFrame() function can be considered the entry point or the systems &quot;main()&quot;.
+
+It is the part of the game loop called by the engine at 60Hz (30Hz for ETQW). Each call referred to as a [[w/index.php?title=Game_frame&action=edit|game frame]].
+
+The idGameLocal class handles main game aspects, loading map, setting up the main data structures, spawning and tracking [[wiki/Entity|entities]].
+
+idEntity is the base [[wiki/Spawn_class|spawn class]] that other entities are derived from.
+
+<div class="editsection" style="float:right;margin-left:5px;">
+
+[[[w/index.php?title=Coding&action=edit&section=5|edit]]]
+
+</div>
+== References ==
+
+* [[wiki/The_annotated_API|The annotated API]]
+* [[w/index.php?title=CVar_flags&action=edit|CVar flags]] (Description of the flags)
+* [[wiki/Server_query_protocol|Server query protocol]]
+
+<div class="editsection" style="float:right;margin-left:5px;">
+
+[[[w/index.php?title=Coding&action=edit&section=6|edit]]]
+
+</div>
+== Coding tutorials ==
+
+* [[wiki/Adding_a_custom_keyhandler|Adding a custom keyhandler]]
+* [[wiki/Beginner%27s_Tutorial_%28Part_1%29_Filetypes|Beginner's Tutorial (Part 1) Filetypes]]
+* [[wiki/Beginner%27s_Tutorial_%28Part_2%29_The_SDK|Beginner's Tutorial (Part 2) The SDK]]
+* [[wiki/How_to_build_the_SDK_on_Linux|How to build the SDK on Linux]]
+* [[wiki/How_to_build_the_SDK_on_OSX|How to build the SDK on OSX]]
+* [[wiki/How_to_build_the_SDK_on_Windows|How to build the SDK on Windows]]
+* [[wiki/How_to_add_custom_console_commands|How to add custom console commands]]
+* [[wiki/How_to_add_CVar%27s|How to add CVar's]]
+* [[wiki/Rendering_with_the_D3_renderengine|Rendering with the D3 renderengine]]
+* [[wiki/D3_Networking:_Basics|D3 Networking: Basics]]
+* [[wiki/D3_Networking:_Communication|D3 Networking: Communication]]
+* [[wiki/D3_Networking:_Setting_up_a_test_session|D3 Networking: Setting up a test session]]
+* [[w/index.php?title=D3_Networking:_Snapshot_synchronisation&action=edit|D3 Networking: Snapshot synchronisation]]
+* [[w/index.php?title=D3_Networking:_Server_and_client_side_events&action=edit|D3 Networking: Server and client side events]]
+* [[w/index.php?title=D3_Networking:_Server-_and_UserInfo&action=edit|D3 Networking: Server- and UserInfo]]
+* [[w/index.php?title=D3_Networking:_A_birth_and_death_of_an_entity&action=edit|D3 Networking: A birth and death of an entity]]
+* [[w/index.php?title=D3_Networking:_An_overview_of_the_architecture&action=edit|D3 Networking: An overview of the architecture]]
+* [[w/index.php?title=D3_Networking:_Delta_and_PVS-based_synchronisation&action=edit|D3 Networking: Delta and PVS-based synchronisation]]
+* [[w/index.php?title=D3_Networking:_Client-side_prediction&action=edit|D3 Networking: Client-side prediction]]
+* [[w/index.php?title=Q4_Networking:_Encoding_messages_like_snapshots&action=edit|Q4 Networking: Encoding messages like snapshots]]
+* [[w/index.php?title=Q4_Networking:_Deltifying_rockets_away&action=edit|Q4 Networking: Deltifying rockets away]]
+
+<div class="editsection" style="float:right;margin-left:5px;">
+
+[[[w/index.php?title=Coding&action=edit&section=7|edit]]]
+
+</div>
+== Coding Tools ==
+
+* [[web/20120831010417/http://lab.msdn.microsoft.com/express/visualc/default.aspx|MS Visual C++ Beta]] - [[web/20120831010417/http://www.doom3world.org/phpbb2/viewtopic.php?p=57046|Installation Notes]]
+
+<div class="printfooter">
+
+Retrieved from &quot;[[wiki/Coding|http://www.modwiki.net/wiki/Coding]]&quot;
+
+</div>
+<div id="catlinks">
+
+[[w/index.php?title=Special:Categories&article=Coding|Category]]: <span dir="ltr">[[wiki/Category:Coding|Coding]]</span><br />
+
+
+-----
+
+[[wiki/Category:Modwiki|Modwiki]] &gt; [[wiki/Category:Coding|Coding]]
+
+</div>
+<div class="visualClear">
+
+
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div id="column-one">
+
+<div id="p-cactions" class="portlet">
+
+===== Views =====
+
+<ul>
+<li><div id="ca-nstab-main">
+
+
+
+</div>
+[[wiki/Coding|Article]]</li>
+<li><div id="ca-talk">
+
+
+
+</div>
+[[wiki/Talk:Coding|Discussion]]</li>
+<li><div id="ca-edit">
+
+
+
+</div>
+[[w/index.php?title=Coding&action=edit|Edit]]</li>
+<li><div id="ca-history">
+
+
+
+</div>
+[[w/index.php?title=Coding&action=history|History]]</li></ul>
+
+
+</div>
+<div id="p-personal" class="portlet">
+
+===== Personal tools =====
+
+<div class="pBody">
+
+<ul>
+<li><div id="pt-login">
+
+
+
+</div>
+[[w/index.php?title=Special:Userlogin&returnto=Coding|Log in / create account]]</li></ul>
+
+
+</div>
+
+</div>
+<div id="p-logo" class="portlet">
+
+[[wiki/Main_Page|]]
+
+</div>
+<div id="p-Main" class="portlet">
+
+===== Main =====
+
+<div class="pBody">
+
+<ul>
+<li><div id="n-mainpage">
+
+
+
+</div>
+[[wiki/Main_Page|Main Page]]</li></ul>
+
+
+</div>
+
+</div>
+<div id="p-id Tech 4" class="portlet">
+
+===== id Tech 4 =====
+
+<div class="pBody">
+
+<ul>
+<li><div id="n-Doom-3">
+
+
+
+</div>
+[[wiki/Doom_3|Doom 3]]</li>
+<li><div id="n-Quake-4">
+
+
+
+</div>
+[[wiki/Quake_4|Quake 4]]</li>
+<li><div id="n-Prey">
+
+
+
+</div>
+[[wiki/Prey|Prey]]</li>
+<li><div id="n-ETQW">
+
+
+
+</div>
+[[wiki/Enemy_Territory:_Quake_Wars|ETQW]]</li>
+<li><div id="n-Wolfenstein">
+
+
+
+</div>
+[[wiki/Wolfenstein|Wolfenstein]]</li></ul>
+
+
+</div>
+
+</div>
+<div id="p-id Tech 5" class="portlet">
+
+===== id Tech 5 =====
+
+<div class="pBody">
+
+<ul>
+<li><div id="n-Rage">
+
+
+
+</div>
+[[wiki/Rage|Rage]]</li>
+<li><div id="n-Doom-4">
+
+
+
+</div>
+[[wiki/Doom_4|Doom 4]]</li></ul>
+
+
+</div>
+
+</div>
+<div id="p-Quick Links" class="portlet">
+
+===== Quick Links =====
+
+<div class="pBody">
+
+<ul>
+<li><div id="n-Console">
+
+
+
+</div>
+[[wiki/Console|Console]]</li>
+<li><div id="n-Script-Events">
+
+
+
+</div>
+[[wiki/Scripting|Script Events]]</li>
+<li><div id="n-Material-Keywords">
+
+
+
+</div>
+[[wiki/Material_%28decl%29|Material Keywords]]</li>
+<li><div id="n-Modification-List">
+
+
+
+</div>
+[[wiki/Modlist|Modification List]]</li>
+<li><div id="n-Tutorial-List">
+
+
+
+</div>
+[[wiki/Tutorial_list|Tutorial List]]</li></ul>
+
+
+</div>
+
+</div>
+<div id="p-Wiki" class="portlet">
+
+===== Wiki =====
+
+<div class="pBody">
+
+<ul>
+<li><div id="n-Open-tasks">
+
+
+
+</div>
+[[wiki/modwiki:Open_tasks|Open tasks]]</li>
+<li><div id="n-recentchanges">
+
+
+
+</div>
+[[wiki/Special:Recentchanges|Recent changes]]</li>
+<li><div id="n-Style-guide">
+
+
+
+</div>
+[[wiki/modwiki:Style_guide|Style guide]]</li>
+<li><div id="n-help">
+
+
+
+</div>
+[[wiki/Help:Contents|Help]]</li></ul>
+
+
+</div>
+
+</div>
+<div id="p-search" class="portlet">
+
+===== Search =====
+
+<div id="searchBody" class="pBody">
+
+<div>
+
+ 
+
+</div>
+
+</div>
+
+</div>
+<div id="p-tb" class="portlet">
+
+===== Toolbox =====
+
+<div class="pBody">
+
+<ul>
+<li><div id="t-whatlinkshere">
+
+
+
+</div>
+[[wiki/Special:Whatlinkshere/Coding|What links here]]</li>
+<li><div id="t-recentchangeslinked">
+
+
+
+</div>
+[[wiki/Special:Recentchangeslinked/Coding|Related changes]]</li>
+<li><div id="t-upload">
+
+
+
+</div>
+[[wiki/Special:Upload|Upload file]]</li>
+<li><div id="t-specialpages">
+
+
+
+</div>
+[[wiki/Special:Specialpages|Special pages]]</li>
+<li><div id="t-print">
+
+
+
+</div>
+[[w/index.php?title=Coding&printable=yes|Printable version]]</li>
+<li><div id="t-permalink">
+
+
+
+</div>
+[[w/index.php?title=Coding&oldid=26283|Permanent link]]</li></ul>
+
+
+</div>
+
+</div>
+
+</div>
+<div class="visualClear">
+
+
+
+</div>
+<div id="footer">
+
+<div id="f-poweredbyico">
+
+[[web/20120831010417/http://www.mediawiki.org/|[[Image:/w/skins/common/images/poweredby_mediawiki_88x31.png|MediaWiki]]]]
+
+</div>
+<div id="f-copyrightico">
+
+[[web/20120831010417/http://www.gnu.org/copyleft/fdl.html|[[Image:/w/skins/common/images/gnu-fdl.png|GNU Free Documentation License 1.2]]]]
+
+</div>
+<ul>
+<li><div id="lastmod">
+
+
+
+</div>
+This page was last modified 23:15, 23 November 2011.</li>
+<li><div id="copyright">
+
+
+
+</div>
+Content is available under [[web/20120831010417/http://www.gnu.org/copyleft/fdl.html|GNU Free Documentation License 1.2]].</li>
+<li><div id="privacy">
+
+
+
+</div>
+[[wiki/modwiki:Privacy_policy|Privacy policy]]</li>
+<li><div id="about">
+
+
+
+</div>
+[[wiki/modwiki:About|About modwiki]]</li>
+<li><div id="disclaimer">
+
+
+
+</div>
+[[wiki/modwiki:General_disclaimer|Disclaimers]]</li></ul>
+
+
+</div>
+
+</div>
