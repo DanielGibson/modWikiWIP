@@ -1,0 +1,148 @@
+ <div class="thumb tright">
+  <div style="width:182px;">
+   <a class="internal" href="Image:Gui_items_debug.gif" title="A Doom 3 in-game GUI with its items highlighted">
+    <img alt="A Doom 3 in-game GUI with its items highlighted" height="135" longdesc="/wiki/Image:Gui_items_debug.gif" src="/web/20120323012700im_/http://www.modwiki.net/w/images/thumb/0/0f/Gui_items_debug.gif/180px-Gui_items_debug.gif" width="180"/>
+   </a>
+   <div class="thumbcaption">
+    <div class="magnify" style="float:right">
+     <a class="internal" href="Image:Gui_items_debug.gif" title="Enlarge">
+      <img alt="Enlarge" height="11" src="/web/20120323012700im_/http://www.modwiki.net/w/skins/common/images/magnify-clip.png" width="15"/>
+     </a>
+    </div>
+    A Doom 3 in-game GUI with its items highlighted
+   </div>
+  </div>
+ </div>
+ Code wise,
+ <a href="GUIs" title="GUIs">
+  GUIs
+ </a>
+ are made of several different
+ <i>
+  items
+ </i>
+ , each of them performing a slightly different task, such as acting as a button, as a noninteractive image, or as on-screen text. There also several different
+ <i>
+  item types
+ </i>
+ to do specific tasks, such as selecting an option from a range of choices, rendering a 3D model on a GUI, or editing text.
+ <p>
+  Items are also officially called
+  <i>
+   windows
+  </i>
+  by
+  <a class="external text" href="http://www.iddevnet.com/doom3/guis.php" title="http://www.iddevnet.com/doom3/guis.php">
+   id Software's documentation
+  </a>
+  .
+ </p>
+ <p>
+  These items can be placed anywhere on a GUI, and can be nested - this can be useful to grouping items or to mask them. They also don't have to be always visible, so it's common to have hidden items that are displayed when certain events happen, or just items that are never shown but do specific programming tasks such as working as an event catalyzer or a virtual timeline that can be played.
+ </p>
+ <p>
+  Each item can have its own properties, some code with variables and events, and nested items. While the source code of each item can vary wildly depending on the task it's performing, the standard syntax for a GUI item would be something like this:
+ </p>
+ <pre><i>item_type</i> <i>name</i> {
+    <i>property_name</i> <i>property_value(s)</i>
+    <i>property_name</i> <i>property_value(s)</i>
+    ...
+
+    <i>variable_type</i> "<i>variable_name</i>" <i>value</i>
+    <i>variable_type</i> "<i>variable_name</i>" <i>value</i>
+    ...
+   
+    <i>event_name</i> {
+        <i>command_statement</i>
+        <i>command_statement</i>
+        ...
+    }
+
+    <i>nested_items</i>
+}
+</pre>
+ <p>
+  For example:
+ </p>
+ <pre>windowDef myMessage {
+   rect        0, 0, 300, 200
+   text        "Welcome!"
+}
+</pre>
+ <p>
+  While
+  <a href="WindowDef_%28GUI_item_type%29" title="WindowDef (GUI item type)">
+   windowDef
+  </a>
+  is the standard item type used, other types exist for some custom tasks.
+ </p>
+ <a name="Doom_3_item_types">
+ </a>
+ <h2>
+  Doom 3 item types
+ </h2>
+ <p>
+  These are the standard item types, available on the id Tech 4 engine.
+ </p>
+ <ul>
+  <li>
+   <a href="BindDef_%28GUI_item_type%29" title="BindDef (GUI item type)">
+    bindDef
+   </a>
+  </li>
+  <li>
+   <a href="ChoiceDef_%28GUI_item_type%29" title="ChoiceDef (GUI item type)">
+    choiceDef
+   </a>
+  </li>
+  <li>
+   <a href="EditDef_%28GUI_item_type%29" title="EditDef (GUI item type)">
+    editDef
+   </a>
+  </li>
+  <li>
+   <a href="ListDef_%28GUI_item_type%29" title="ListDef (GUI item type)">
+    listDef
+   </a>
+  </li>
+  <li>
+   <a href="RenderDef_%28GUI_item_type%29" title="RenderDef (GUI item type)">
+    renderDef
+   </a>
+  </li>
+  <li>
+   <a href="SliderDef_%28GUI_item_type%29" title="SliderDef (GUI item type)">
+    sliderDef
+   </a>
+  </li>
+  <li>
+   <a href="WindowDef_%28GUI_item_type%29" title="WindowDef (GUI item type)">
+    windowDef
+   </a>
+  </li>
+ </ul>
+ <a name="Quake_4_item_types">
+ </a>
+ <h2>
+  Quake 4 item types
+ </h2>
+ <p>
+  These are new item types, introduced by Raven Software on their version of the id Tech 4 engine. They work pretty much the same as the previous items, but obviously should only be used when creating GUIs for Quake 4.
+ </p>
+ <ul>
+  <li>
+   <a href="HtmlDef_%28GUI_item_type%29" title="HtmlDef (GUI item type)">
+    htmlDef
+   </a>
+  </li>
+  <li>
+   <a class="new" href="FieldDef_%28GUI_item_type%29" title="FieldDef (GUI item type)">
+    fieldDef
+   </a>
+  </li>
+  <li>
+   <a class="new" href="MarkerDef_%28GUI_item_type%29" title="MarkerDef (GUI item type)">
+    markerDef
+   </a>
+  </li>
+ </ul>

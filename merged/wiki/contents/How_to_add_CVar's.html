@@ -1,0 +1,210 @@
+ <p>
+  Adding a new
+  <a href="Console" title="Console">
+   console
+  </a>
+  variable (CVar):
+ </p>
+ <p>
+  The files that must be modified are /src/gamesys/syscvar.*
+ </p>
+ <p>
+  Let's use the example of adding a CVar to globally lower the volume of sounds that AI hear. We want to add a CVar called dm_ai_sndvol so we can adjust the volume of sounds that AI hear in realtime in the console.
+ </p>
+ <a name="Step_1._Add_a_declaration_of_the_CVar_in_.2Fsrc.2Fgamesys.2Fsyscvar.cpp">
+ </a>
+ <h2>
+  Step 1. Add a declaration of the CVar in /src/gamesys/syscvar.cpp
+ </h2>
+ <p>
+  Code:
+ </p>
+ <pre>idCVar cv_ai_sndvol( "dm_ai_sndvol", "0.0", CVAR_GAME | CVAR_ARCHIVE | CVAR_FLOAT,
+"Modifier to the volume of suspcious sounds that AI's hear.  Defaults to 0.0 dB" ); 
+</pre>
+ <p>
+  The syntax is:
+ </p>
+ <pre>idCVar &lt;SDK variable name&gt;( "&lt;variable name ingame&gt;", "&lt;default value&gt;", &lt;FLAGS&gt;, 
+"&lt;Brief description of the variable&gt;" ); 
+</pre>
+ <p>
+  Note that the default value is stored as a string. These things are parsed just like key/value pairs, so the name and default value are both strings.
+ </p>
+ <p>
+  <br/>
+ </p>
+ <a name="Type_Flags:">
+ </a>
+ <h3>
+  Type Flags:
+ </h3>
+ <p>
+  These flags define the CVar type. If one of them is not set on your CVar, it will default to type string.
+ </p>
+ <dl>
+  <dt>
+   CVAR_BOOL
+  </dt>
+  <dd>
+   Defines the CVar as a boolean variable.
+  </dd>
+  <dt>
+   CVAR_INTEGER
+  </dt>
+  <dd>
+   Defines the CVar as an integer variable.
+  </dd>
+  <dt>
+   CVAR_FLOAT
+  </dt>
+  <dd>
+   Defines the CVar as a float variable.
+  </dd>
+ </dl>
+ <a name="Info_Flags:">
+ </a>
+ <h3>
+  Info Flags:
+ </h3>
+ <dl>
+  <dt>
+   CVAR_GAME, CVAR_RENDERER
+  </dt>
+  <dd>
+   Identifies the CVar as having to do with the game, or having to do with the renderer. Since we can't add anything to the renderer, I'm guessing we'll always ue CVAR_GAME.
+  </dd>
+ </dl>
+ <dl>
+  <dt>
+   CVAR_ARCHIVE
+  </dt>
+  <dd>
+   If set, the value of this CVar will be stored to your DoomConfig.cfg file, and saved. When you next start the game, the CVar will have the same value, it will NOT go back to the default. (You can see what the default value was and set it back yourself by using listcvars &lt;the CVar&gt;).
+  </dd>
+ </dl>
+ <dl>
+  <dt>
+   CVAR_NETWORKSYNC
+  </dt>
+  <dd>
+   Probably means that in multiplayer games, this is read from the server, so individuals cannot change it to a different setting on their client. Examples include jump height, walking speed, etc.
+  </dd>
+ </dl>
+ <dl>
+  <dt>
+   CVAR_SERVERINFO
+  </dt>
+  <dd>
+   Server settings
+  </dd>
+ </dl>
+ <dl>
+  <dt>
+   CVAR_USERINFO
+  </dt>
+  <dd>
+   User settings
+  </dd>
+ </dl>
+ <dl>
+  <dt>
+   CVAR_INIT
+  </dt>
+  <dd>
+   Marks a cvar so that it can only be modified from the command line. See
+   <a href="Startup_parameters" title="Startup parameters">
+    Startup parameters
+   </a>
+   .
+  </dd>
+ </dl>
+ <dl>
+  <dt>
+   CVAR_ROM
+  </dt>
+  <dd>
+   Marks the CVar as read only. (Can be changed in binary code trough a certain function)
+  </dd>
+ </dl>
+ <dl>
+  <dt>
+   CVAR_NOCHEAT
+  </dt>
+  <dd>
+   Used to mark a CVar as a non-special one.
+  </dd>
+ </dl>
+ <p>
+  <b>
+   If no info flag is given, the CVar is marked as a cheat.
+  </b>
+ </p>
+ <p>
+  This is from the Id documentation on the matter:
+ </p>
+ <pre> CVars are always considered cheats except when CVAR_NOCHEAT, CVAR_INIT,
+ CVAR_ROM, CVAR_ARCHIVE, CVAR_USERINFO, CVAR_SERVERINFO or CVAR_NETWORKSYNC is set.
+</pre>
+ <a name="Step_2._Adding_extern_declaration_in_.2Fsrc.2Fgamesys.2Fsyscvar.h">
+ </a>
+ <h2>
+  Step 2. Adding extern declaration in /src/gamesys/syscvar.h
+ </h2>
+ <p>
+  Code:
+ </p>
+ <pre>extern idCVar cv_ai_sndvol; 
+</pre>
+ <p>
+  This step is pretty self explanatory, just add the extern declaration in syscvar.h. (Unfortunately, changing syscvar.h requires a recompile of all the src, since it is included in game_local.h, and that is included in pretty much everything.)
+ </p>
+ <a name="Step_3._Using_the_CVar_in_the_SDK">
+ </a>
+ <h2>
+  Step 3. Using the CVar in the SDK
+ </h2>
+ <p>
+  To set and read the variable: use the appropriate idCvar::Set* and idCVar::Get* functions, where the * is replaced with the CVar type that you declared before.
+ </p>
+ <p>
+  For example, suppose we want to use our cv_ai_sndvol in the code. Suppose we want to subtract it from some value InitialVolume.
+ </p>
+ <p>
+  Code:
+ </p>
+ <pre>float AdjustedVolume = InitialVolume - cv_ai_sndvol.GetFloat(); 
+</pre>
+ <p>
+  Similarly, to set it in the SDK; 
+Code:
+ </p>
+ <pre>cv_ai_sndvol.SetFloat( 5.0f ); 
+</pre>
+ <p>
+  Side note: Manipulating CVars ingame in the console:
+ </p>
+ <p>
+  To see a list of CVars ingame, use "
+  <a href="ListCvars_%28console_command%29" title="ListCvars (console command)">
+   listCvars
+  </a>
+  &lt;your search string&gt;" 
+To see a description of a CVar, use "listcvars -help &lt;your search string&gt;" 
+To see the current and default value of the CVar, just type the cvar name in the console. 
+To set the value of a CVar, use "
+  <a class="new" href="Set_%28Command%29" title="Set (Command)">
+   set (Command)
+  </a>
+  &lt;cvar name&gt; &lt;value&gt;"
+ </p>
+ <p>
+  You can also omit the "set" and just type "&lt;cvar name&gt; &lt;value&gt;" to set the value with less typing.
+ </p>
+ <p>
+  More info can be found in: 
+src/framework/cvarsystem.h
+ </p>
+ <p>
+  This file actually contains a lot of documentation in the form of comments.
+ </p>

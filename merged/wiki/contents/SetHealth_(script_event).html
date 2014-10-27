@@ -1,0 +1,137 @@
+ <a name="Game_class">
+ </a>
+ <h2>
+  Game class
+ </h2>
+ <p>
+  This event operates on an instance of the
+  <a href="Game_class" title="Game class">
+   game class
+  </a>
+  type
+  <a href="IdEntity_%28class%29" title="IdEntity (class)">
+   idEntity
+  </a>
+ </p>
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  Set the health of the associated entity via the health spawn argument. (i.e. item, NPC, etc.)
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <p>
+  void  setHealth(  float health )
+ </p>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   health
+  </li>
+ </ul>
+ <p>
+  A value which specifies the health of the associated entity.
+ </p>
+ <a name="Examples">
+ </a>
+ <h2>
+  Examples
+ </h2>
+ <pre> none</pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  Along with setting the health variable, the event has the following implementation for different games:
+ </p>
+ <div>
+  <a class="image" href="Image:D3square_25.png" title="Image:D3square_25.png">
+   <img alt="Image:D3square_25.png" height="25" longdesc="/wiki/Image:D3square_25.png" src="/web/20091212035603im_/http://www.modwiki.net/w/images/2/23/D3square_25.png" width="25"/>
+  </a>
+  <b>
+   Note:
+  </b>
+  Doom 3 only:
+  <dl>
+   <dd>
+    <i>
+     Is an event on idAI only: Calling this event will set the
+     <b>
+      takesdamage
+     </b>
+     flag of the entity to
+     <b>
+      true
+     </b>
+     .
+    </i>
+   </dd>
+  </dl>
+ </div>
+ <div>
+  <a class="image" href="Image:Q4square_25.png" title="Image:Q4square_25.png">
+   <img alt="Image:Q4square_25.png" height="25" longdesc="/wiki/Image:Q4square_25.png" src="/web/20091212035603im_/http://www.modwiki.net/w/images/e/e8/Q4square_25.png" width="25"/>
+  </a>
+  <b>
+   Note:
+  </b>
+  Quake 4 only:
+  <dl>
+   <dd>
+    <i>
+     Event on idEntity.
+    </i>
+    <p>
+     Event on idPlayer: clamps to max health.
+    </p>
+    Event on idAI: Calling this event will set the
+    <b>
+     takesdamage
+    </b>
+    flag of the entity to
+    <b>
+     true
+    </b>
+    .
+    <i>
+    </i>
+   </dd>
+  </dl>
+ </div>
+ <div>
+  <a class="image" href="Image:Etqwsquare_25.png" title="Image:Etqwsquare_25.png">
+   <img alt="Image:Etqwsquare_25.png" height="25" longdesc="/wiki/Image:Etqwsquare_25.png" src="/web/20091212035603im_/http://www.modwiki.net/w/images/7/7e/Etqwsquare_25.png" width="25"/>
+  </a>
+  <b>
+   Note:
+  </b>
+  Enemy Territory: Quake Wars only:
+  <dl>
+   <dd>
+    <i>
+     Event on idPlayer, calls script object function OnHealed if health is set greater than current and greater than 0.
+    </i>
+    <p>
+     Event on idProjectile.
+    </p>
+    sdScriptEntity: Calls script object function OnPostDamage
+    <i>
+    </i>
+   </dd>
+  </dl>
+ </div>
+ <p>
+  <br/>
+ </p>

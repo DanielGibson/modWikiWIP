@@ -1,0 +1,57 @@
+ <p>
+  This parameter is used to force the GUI renderer to assume a different aspect ratio for a particular item. So, if you have a GUI that doesn't fit into the 4:3 normal aspect ratio, you can still use it and have text with a perfect ratio.
+ </p>
+ <p>
+  I'm still unsure on how to use this, but apparently, it assumes the new height is the total height of the item. So a forceaspectheight of half your normal height would result on a tall-looking text.
+ </p>
+ <p>
+  Also, for this parameter to work, you must place a new, empty
+  <a href="WindowDef_%28GUI_item_type%29" title="WindowDef (GUI item type)">
+   windowDef
+  </a>
+  inside the item you're already using. This is because the parameter will only act on items that are considered
+  <i>
+   complex
+  </i>
+  items. More information
+  <a class="external text" href="https://web.archive.org/web/20121120041431/http://www.doom3world.org/phpbb2/viewtopic.php?t=3556" title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3556">
+   here
+  </a>
+  .
+ </p>
+ <p>
+  The value of this property cannot be changed at runtime.
+ </p>
+ <a name="Syntax">
+ </a>
+ <h2>
+  Syntax
+ </h2>
+ <pre>forceaspectheight <i>height</i>
+</pre>
+ <a name="Default_value">
+ </a>
+ <h2>
+  Default value
+ </h2>
+ <pre>480 (the same as the desktop item width instead?)
+</pre>
+ <a name="Example.28s.29">
+ </a>
+ <h2>
+  Example(s)
+ </h2>
+ <pre>Forceaspectheight	180
+windowDef TextComplex2 {
+	rect	0,0,0,0
+	visible	1
+}
+</pre>
+ <p>
+  <br/>
+ </p>
+ <p>
+ </p>
+ <p>
+ </p>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:1372-0!1!0!0!!en!2 and timestamp 20121119200906 -->

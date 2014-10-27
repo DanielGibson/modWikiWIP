@@ -1,0 +1,329 @@
+ <p>
+  <br/>
+ </p>
+ <a name="Prerequisites">
+ </a>
+ <h2>
+  Prerequisites
+ </h2>
+ <ul>
+  <li>
+   You must have Maya 4.5, 5.0, 6.0, 7.0 or 8.5
+  </li>
+  <li>
+   Quake 4 has been reported to have compatability issues with version 5.0 and 6.0 of MayaImportx86.dll
+  </li>
+ </ul>
+ <a name="Setting_up_Maya">
+ </a>
+ <h2>
+  Setting up Maya
+ </h2>
+ <p>
+  Download and extract the corresponding version of MayaImportx86.dll into your game's base directory. For instance, the correct location for Doom 3 is C:\Doom3\base or C:\Doom3. The important thing is that the EXE file finds the DLL, which is ensured if the DLL is next to the EXE, but it's possible to put it somewhere in your PATH as well.
+ </p>
+ <ul>
+  <li>
+   Maya 4.5:
+   <a class="external free" href="http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya45.zip" title="http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya45.zip">
+    http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya45.zip
+   </a>
+  </li>
+  <li>
+   Maya 5.0:
+   <a class="external free" href="http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya50.zip" title="http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya50.zip">
+    http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya50.zip
+   </a>
+  </li>
+  <li>
+   Maya 6.0:
+   <a class="external free" href="http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya60.zip" title="http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya60.zip">
+    http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya60.zip
+   </a>
+  </li>
+  <li>
+   Maya 7.0:
+   <a class="external free" href="https://web.archive.org/web/20120330175421/http://www.dramthethief.com/darkmod/files/MayaImportx86(Maya7).rar" title="http://www.dramthethief.com/darkmod/files/MayaImportx86(Maya7).rar">
+    http://www.dramthethief.com/darkmod/files/MayaImportx86(Maya7).rar
+   </a>
+  </li>
+  <li>
+   Maya 8.5:
+   <a class="external free" href="https://web.archive.org/web/20120330175421/http://www.dramthethief.com/darkmod/files/MayaImportx86(Maya85).zip" title="http://www.dramthethief.com/darkmod/files/MayaImportx86(Maya85).zip">
+    http://www.dramthethief.com/darkmod/files/MayaImportx86(Maya85).zip
+   </a>
+   (installation instructions included)
+  </li>
+ </ul>
+ <pre>[Note. For Vista64 the registry key mentioned in the above should be HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Alias|Wavefront\Maya]
+</pre>
+ <p>
+  Make sure that Maya's working path is defined in the PATH environment variable. This is done by default when installing Maya, but if for some reason it’s not, the engine will not know where to find the appropriate Maya files it needs to run the export routine.
+ </p>
+ <p>
+  In Windows XP, you can check and/or modify environment variables in the control panel under system properties.
+ </p>
+ <p>
+  <i>
+   Control Panel
+  </i>
+  &gt;
+  <i>
+   System
+  </i>
+  &gt;
+  <i>
+   Advanced
+  </i>
+  &gt;
+  <i>
+   Environment Variables
+  </i>
+ </p>
+ <p>
+  The list you should be concerned with is at the bottom. It is labeled as system variables.
+ </p>
+ <p>
+  Make sure the path variable's value contains the full working path of your Maya installation. If this information is not here at all, you can add to the end of the path variable manually by editing it. Simply add a semicolon to the end of the string (each PATH item is separated by a semi-colon) followed by the full path to Maya's executable.
+ </p>
+ <p>
+  For instance, if your path variable looked like this...
+ </p>
+ <pre>%SystemRoot%\system32;%SystemRoot%
+</pre>
+ <p>
+  ... after modification it would then look something like this...
+ </p>
+ <p>
+  Maya 4.5 and 5.0:
+ </p>
+ <pre>%SystemRoot%\system32;%SystemRoot%;C:\Maya\bin
+</pre>
+ <p>
+  Maya 6.0:
+ </p>
+ <pre>%SystemRoot%\system32;%SystemRoot%;C:\Maya
+</pre>
+ <p>
+  Maya 8.5
+ </p>
+ <pre>%SystemRoot%\system32;%SystemRoot%;C:\Program Files\Autodesk\Maya\bin
+</pre>
+ <p>
+  NOTE: Your installation directory may differ from the examples listed above.
+ </p>
+ <a name="Writing_the_corresponding_declarations">
+ </a>
+ <h2>
+  Writing the corresponding declarations
+ </h2>
+ <p>
+  You will need to write an export declaration to define what files and parameters to process for use with the exportModels command. For example...
+ </p>
+ <pre>export buddy {
+options –game aolbuddy -sourcedir models/monsters/buddy/cycles -destdir models/md5/monsters/buddy
+mesh buddy_idle.mb -dest buddy
+anim buddy_idle.mb
+}
+</pre>
+ <p>
+  The syntax of this type of declaration and it's various parameters and options are covered in the respective
+  <a href="Export_%28decl%29" title="Export (decl)">
+   export declarations
+  </a>
+  article.
+ </p>
+ <p>
+  You will also need to write a model declaration to test and/or use the resulting files in game. For example...
+ </p>
+ <pre>model monster_buddy {
+mesh models/md5/monsters/buddy/buddy.md5mesh
+anim idle models/md5/monsters/buddy/buddy_idle.md5anim
+}
+</pre>
+ <p>
+  Again, the syntax of this type of declaration and it's various parameters and options are covered in the respective
+  <a href="Model_%28decl%29" title="Model (decl)">
+   model declarations
+  </a>
+  article.
+ </p>
+ <a name="Model_Setup">
+ </a>
+ <h2>
+  Model Setup
+ </h2>
+ <ul>
+  <li>
+   Your model must be comprised of triangles. This can be accomplished by selecting the whole of your model and clicking
+   <i>
+    Polygons
+   </i>
+   &gt;
+   <i>
+    Triangulate
+   </i>
+   .
+  </li>
+ </ul>
+ <ul>
+  <li>
+   Your model must have an origin bone, preferably located at the model's base for ground based actors. Your model's skeletal hierarchy must be parented to the origin bone. In other words, the origin bone must be the root bone in your hierarchy. This bone must be created and linked in your skeletal hierarchy prior to binding the skeleton to the model.
+  </li>
+ </ul>
+ <ul>
+  <li>
+   You must ensure all discontinuous meshes are parented.
+  </li>
+ </ul>
+ <ul>
+  <li>
+   Your model must be UV mapped.
+  </li>
+ </ul>
+ <ul>
+  <li>
+   Your model must be assigned a lambert material via the Hypershade window. This material's filter type must be Quadratic and it must derive it's diffuse or color texture from an image map.
+  </li>
+ </ul>
+ <ul>
+  <li>
+   You must triangulate the mesh, freeze transformations, delete the history, and bind the skeleton to the model in that order.
+  </li>
+ </ul>
+ <ul>
+  <li>
+   You must save your model in .mb (Maya Binary) format.
+  </li>
+ </ul>
+ <a name="Conversion">
+ </a>
+ <h2>
+  Conversion
+ </h2>
+ <p>
+  Start the game, bring down the console and type...
+ </p>
+ <pre>exportModels [filename]
+</pre>
+ <p>
+  Filename refers to the declaration file containing your export declaration. For a more detailed description of the command and acceptable parameters visit the corresponding
+  <a href="Exportmodels_%28console_command%29" title="Exportmodels (console command)">
+   exportModels
+  </a>
+  article.
+ </p>
+ <p>
+  If all goes well, your model and animations will be exported to the MD5 format.
+ </p>
+ <a name="Testing">
+ </a>
+ <h2>
+  Testing
+ </h2>
+ <p>
+  Before testing it's good practice to ensure the resulting MD5mesh references the material shader you wish to use. You can verify that by opening the MD5mesh in a text editor and looking for the shader line. It will look something like so...
+ </p>
+ <pre>mesh {
+ // meshes: headshape, bodyshape
+shader "models/monsters/buddy/buddy"
+...
+}
+</pre>
+ <p>
+  To test your new creation, type
+  <a class="new" href="Reloadmodels_%28console_command%29" title="Reloadmodels (console command)">
+   reloadModels
+  </a>
+  in the console and then load a map. Next, center your view so that the test model is not spawned in the floor (or type
+  <a class="new" href="Centerview_%28console_command%29" title="Centerview (console command)">
+   centerview
+  </a>
+  in the console).
+ </p>
+ <p>
+  Now, bring down the console and type
+  <a class="new" href="Testmodel_%28console_command%29" title="Testmodel (console command)">
+   testModel
+  </a>
+  followed by the name of your model declaration.
+ </p>
+ <p>
+  Your model should appear properly lit and colored. If you happened to export and define animations for your model via the corresponding parameters in both your export and model declarations, you can cycle through these animations by typing
+  <a class="new" href="Nextanim_%28console_command%29" title="Nextanim (console command)">
+   nextAnim
+  </a>
+  in the console.
+ </p>
+ <a name="Troubleshooting">
+ </a>
+ <h2>
+  Troubleshooting
+ </h2>
+ <p>
+  If something doesn’t work correctly, here are a few things to check:
+ </p>
+ <a name="Common_Error_Messages">
+ </a>
+ <h3>
+  Common Error Messages
+ </h3>
+ <ul>
+  <li>
+   If the error message mentions something about UVs, you probably don’t have a UV map associated with your low-poly model.
+  </li>
+  <li>
+   If the error message mentions something about too many faces on your object, you probably forgot to triangulate (your model is using quads, which Doom3 can’t read).
+  </li>
+  <li>
+   If the error message mentions something about missing skin clusters, you probably forgot to bind your bones to your model’s skin.
+  </li>
+  <li>
+   If the game crashes altogether, make sure that you've triangulated your mesh, frozen transformations, deleted your history and bound your skeleton to your mesh in that order.
+  </li>
+ </ul>
+ <a name="Visual_Artifacts_and_Problems">
+ </a>
+ <h3>
+  Visual Artifacts and Problems
+ </h3>
+ <ul>
+  <li>
+   Restart the game to ensure any changes you've made to the model are reflected in game.
+  </li>
+  <li>
+   Check your material declaration and the corresponding reference in your MD5mesh for typos.
+  </li>
+  <li>
+   Ensure the model's material settings in Maya echo the settings suggested in this article's model setup section.
+  </li>
+  <li>
+   Ensure your model's normals are facing the correct direction.
+  </li>
+  <li>
+   Check to see the artifacts you're seeing correspond with the placement of your model's UV seams.
+  </li>
+ </ul>
+ <a name="Maya_8.5_Exporter_showing_an_Explorer_window_without_comment">
+ </a>
+ <h3>
+  Maya 8.5 Exporter showing an Explorer window without comment
+ </h3>
+ <p>
+  Applies to Maya 8.5 exporter: When D3 is bringing you a Explorer window to select a path, you're lacking an environment variable. Add this:
+ </p>
+ <ul>
+  <li>
+   Name:
+   <b>
+    MAYA_LOCATION
+   </b>
+  </li>
+  <li>
+   Value:
+   <b>
+    C:\Program Files\Autodesk\Maya8.5
+   </b>
+   (&lt;= your path to Maya's root folder)
+  </li>
+ </ul>

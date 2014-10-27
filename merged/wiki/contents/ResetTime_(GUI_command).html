@@ -1,0 +1,42 @@
+ <p>
+  Resets the time for a given item. This is used to "go back in time" and restart pieces of code executed on
+  <a href="OnTime_%28GUI_item_event%29" title="OnTime (GUI item event)">
+   onTime
+  </a>
+  event blocks.
+ </p>
+ <a name="Syntax">
+ </a>
+ <h2>
+  Syntax
+ </h2>
+ <pre>resetTime [[<i>item</i>] <i>time</i>]
+</pre>
+ <p>
+  <i>
+   item
+  </i>
+  is the name of the target
+  <a href="GUI_items" title="GUI items">
+   GUI item
+  </a>
+  that will have its time changed. If this parameter is omitted, the resetTime command applies to the current item (where this command running from).
+ </p>
+ <p>
+  <i>
+   time
+  </i>
+  is the new time that will be applied to the target item, in miliseconds. If this parameter is also omitted, it assumes time to be 0.
+ </p>
+ <a name="Example.28s.29">
+ </a>
+ <h2>
+  Example(s)
+ </h2>
+ <pre>resetTime "animHandler" "0";
+resetTime "10";
+</pre>
+ <p>
+  <br/>
+ </p>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:1468-0!1!0!0!!en!2 and timestamp 20121122072509 -->

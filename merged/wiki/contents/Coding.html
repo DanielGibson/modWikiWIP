@@ -1,0 +1,320 @@
+ <div align="left" style="float:right; font-size: 17px;background: #FFFFEE; padding: 5px; border: 1px solid #000000; padding-left: 15px; padding-right: 15px; margin-left: 15px; margin-right: 15px; padding-bottom: 15px; width: 400px;">
+  <div align="right" style="font-size: 10px; text-align=right;">
+   <a href="Help:Reference_box" title="Help:Reference box">
+    What's this?
+   </a>
+  </div>
+  <div>
+   <b>
+    Coding quick reference
+   </b>
+  </div>
+  <hr/>
+  <span style="font-size: 14px">
+   <ul>
+    <li>
+     <a href="How_to_build_the_SDK_on_Linux" title="How to build the SDK on Linux">
+      How to build the SDK on Linux
+     </a>
+    </li>
+    <li>
+     <a href="How_to_build_the_SDK_on_OSX" title="How to build the SDK on OSX">
+      How to build the SDK on OSX
+     </a>
+    </li>
+    <li>
+     <a href="How_to_build_the_SDK_on_Windows" title="How to build the SDK on Windows">
+      How to build the SDK on Windows
+     </a>
+    </li>
+   </ul>
+  </span>
+ </div>
+ <p>
+  All engines in the
+  <a href="Id_Tech_4" title="Id Tech 4">
+   id Tech 4
+  </a>
+  family are written in C++, a high-level programming language. Coding, as it applies to id Tech 4 games, is the modification of the engine's public source code to extend upon its capabilities.
+ </p>
+ <a name="Engine_code">
+ </a>
+ <h2>
+  Engine code
+ </h2>
+ <p>
+  The engine code is available on a GPL v3 licence at [
+  <a class="external autonumber" href="https://github.com/TTimo/doom3.gpl" title="https://github.com/TTimo/doom3.gpl">
+   [1]
+  </a>
+  ]
+ </p>
+ <p>
+  Among other systems, the engine contains - the common framework, renderer, sound system, file system, network system.
+ </p>
+ <p>
+  The compiled engine code is referred to as the engine executable.
+ </p>
+ <a name="Game_code">
+ </a>
+ <h2>
+  Game code
+ </h2>
+ <p>
+  Game code can be downloaded as part of the respective games SDK and is released under the SDK EULA.
+ </p>
+ <p>
+  Among other systems, the game code contains - the main game logic, map loading, entity spawning, spawn classes, physics, networking.
+ </p>
+ <p>
+  The compiled game code is referred to as the game binary.
+People often refer to the game code and the game binary interchangeably, also using such terms as the dll, or the SDK.
+ </p>
+ <p>
+  The engine/game interface, or API, is described by idGame with local aspects in idGameLocal.
+ </p>
+ <p>
+  There is version check done by the game engine on loading the game binary in order to enforce the API which halts the game with the error "ERROR: wrong game DLL API version". Therefore each engine update or game patch is likely to 'break' compatibility of mods, necessitating the author to update the mod to the new game code.
+ </p>
+ <p>
+  During development it can be handy to set
+  <a href="Si_pure_%28cvar%29" title="Si pure (cvar)">
+   si_pure
+  </a>
+  to 0. This makes it possible to run the game with a modified game binary placed directly in the base directory. However, once you've finished making your code changes you should package the modified game binary for distribution as described in the
+  <i>
+   how to
+  </i>
+  articles linked at the top of this page.
+ </p>
+ <p>
+  For more details on each file and class included in the SDK, and therefore what can and cannot be done, please read
+  <a href="The_annotated_API" title="The annotated API">
+   The annotated API
+  </a>
+  .
+ </p>
+ <a name="The_SDK">
+ </a>
+ <h2>
+  The SDK
+ </h2>
+ <p>
+  This game code project in the SDK, allows modders the ability to compile a new game binary for different platforms - gamex86.dll/gamex86.so/gameppc.dylib file for windows/linux/mac respectively.
+ </p>
+ <ul>
+  <li>
+   Download the
+   <a class="external text" href="ftp://ftp.idsoftware.com/idstuff/doom3/source/" title="ftp://ftp.idsoftware.com/idstuff/doom3/source/">
+    Doom 3 SDK
+   </a>
+   version 1.3.1
+  </li>
+  <li>
+   Download the
+   <a class="external text" href="ftp://ftp.idsoftware.com/idstuff/quake4/source" title="ftp://ftp.idsoftware.com/idstuff/quake4/source">
+    Quake 4 SDK
+   </a>
+   version 1.4.2
+  </li>
+  <li>
+   Download the
+   <a class="external text" href="https://web.archive.org/web/20120831010417/http://www.3drealms.com/prey/download.html#sdk" title="http://www.3drealms.com/prey/download.html#sdk">
+    Prey SDK
+   </a>
+  </li>
+  <li>
+   Download the
+   <a class="external text" href="https://web.archive.org/web/20120831010417/http://community.enemyterritory.com/index.php?q=node/262" title="http://community.enemyterritory.com/index.php?q=node/262">
+    ETQW SDK
+   </a>
+   version 1.5
+  </li>
+ </ul>
+ <p>
+  Most of the SDKs support Visual Studio .NET 2003 and 2005 "out of the box".
+ </p>
+ <a name="Where_to_start">
+ </a>
+ <h2>
+  Where to start
+ </h2>
+ <p>
+  So much code!
+ </p>
+ <p>
+  As a starting point the idGameLocal::RunFrame() function can be considered the entry point or the systems "main()".
+ </p>
+ <p>
+  It is the part of the game loop called by the engine at 60Hz (30Hz for ETQW). Each call referred to as a
+  <a class="new" href="Game_frame" title="Game frame">
+   game frame
+  </a>
+  .
+ </p>
+ <p>
+  The idGameLocal class handles main game aspects, loading map, setting up the main data structures, spawning and tracking
+  <a href="Entity" title="Entity">
+   entities
+  </a>
+  .
+ </p>
+ <p>
+  idEntity is the base
+  <a href="Spawn_class" title="Spawn class">
+   spawn class
+  </a>
+  that other entities are derived from.
+ </p>
+ <a name="References">
+ </a>
+ <h2>
+  References
+ </h2>
+ <ul>
+  <li>
+   <a href="The_annotated_API" title="The annotated API">
+    The annotated API
+   </a>
+  </li>
+  <li>
+   <a class="new" href="CVar_flags" title="CVar flags">
+    CVar flags
+   </a>
+   (Description of the flags)
+  </li>
+  <li>
+   <a href="Server_query_protocol" title="Server query protocol">
+    Server query protocol
+   </a>
+  </li>
+ </ul>
+ <a name="Coding_tutorials">
+ </a>
+ <h2>
+  Coding tutorials
+ </h2>
+ <ul>
+  <li>
+   <a href="Adding_a_custom_keyhandler" title="Adding a custom keyhandler">
+    Adding a custom keyhandler
+   </a>
+  </li>
+  <li>
+   <a href="Beginner%27s_Tutorial_%28Part_1%29_Filetypes" title="Beginner's Tutorial (Part 1) Filetypes">
+    Beginner's Tutorial (Part 1) Filetypes
+   </a>
+  </li>
+  <li>
+   <a href="Beginner%27s_Tutorial_%28Part_2%29_The_SDK" title="Beginner's Tutorial (Part 2) The SDK">
+    Beginner's Tutorial (Part 2) The SDK
+   </a>
+  </li>
+  <li>
+   <a href="How_to_build_the_SDK_on_Linux" title="How to build the SDK on Linux">
+    How to build the SDK on Linux
+   </a>
+  </li>
+  <li>
+   <a href="How_to_build_the_SDK_on_OSX" title="How to build the SDK on OSX">
+    How to build the SDK on OSX
+   </a>
+  </li>
+  <li>
+   <a href="How_to_build_the_SDK_on_Windows" title="How to build the SDK on Windows">
+    How to build the SDK on Windows
+   </a>
+  </li>
+  <li>
+   <a href="How_to_add_custom_console_commands" title="How to add custom console commands">
+    How to add custom console commands
+   </a>
+  </li>
+  <li>
+   <a href="How_to_add_CVar%27s" title="How to add CVar's">
+    How to add CVar's
+   </a>
+  </li>
+  <li>
+   <a href="Rendering_with_the_D3_renderengine" title="Rendering with the D3 renderengine">
+    Rendering with the D3 renderengine
+   </a>
+  </li>
+  <li>
+   <a href="D3_Networking:_Basics" title="D3 Networking: Basics">
+    D3 Networking: Basics
+   </a>
+  </li>
+  <li>
+   <a href="D3_Networking:_Communication" title="D3 Networking: Communication">
+    D3 Networking: Communication
+   </a>
+  </li>
+  <li>
+   <a href="D3_Networking:_Setting_up_a_test_session" title="D3 Networking: Setting up a test session">
+    D3 Networking: Setting up a test session
+   </a>
+  </li>
+  <li>
+   <a class="new" href="D3_Networking:_Snapshot_synchronisation" title="D3 Networking: Snapshot synchronisation">
+    D3 Networking: Snapshot synchronisation
+   </a>
+  </li>
+  <li>
+   <a class="new" href="D3_Networking:_Server_and_client_side_events" title="D3 Networking: Server and client side events">
+    D3 Networking: Server and client side events
+   </a>
+  </li>
+  <li>
+   <a class="new" href="D3_Networking:_Server-_and_UserInfo" title="D3 Networking: Server- and UserInfo">
+    D3 Networking: Server- and UserInfo
+   </a>
+  </li>
+  <li>
+   <a class="new" href="D3_Networking:_A_birth_and_death_of_an_entity" title="D3 Networking: A birth and death of an entity">
+    D3 Networking: A birth and death of an entity
+   </a>
+  </li>
+  <li>
+   <a class="new" href="D3_Networking:_An_overview_of_the_architecture" title="D3 Networking: An overview of the architecture">
+    D3 Networking: An overview of the architecture
+   </a>
+  </li>
+  <li>
+   <a class="new" href="D3_Networking:_Delta_and_PVS-based_synchronisation" title="D3 Networking: Delta and PVS-based synchronisation">
+    D3 Networking: Delta and PVS-based synchronisation
+   </a>
+  </li>
+  <li>
+   <a class="new" href="D3_Networking:_Client-side_prediction" title="D3 Networking: Client-side prediction">
+    D3 Networking: Client-side prediction
+   </a>
+  </li>
+  <li>
+   <a class="new" href="Q4_Networking:_Encoding_messages_like_snapshots" title="Q4 Networking: Encoding messages like snapshots">
+    Q4 Networking: Encoding messages like snapshots
+   </a>
+  </li>
+  <li>
+   <a class="new" href="Q4_Networking:_Deltifying_rockets_away" title="Q4 Networking: Deltifying rockets away">
+    Q4 Networking: Deltifying rockets away
+   </a>
+  </li>
+ </ul>
+ <a name="Coding_Tools">
+ </a>
+ <h2>
+  Coding Tools
+ </h2>
+ <ul>
+  <li>
+   <a class="external text" href="http://lab.msdn.microsoft.com/express/visualc/default.aspx" title="http://lab.msdn.microsoft.com/express/visualc/default.aspx">
+    MS Visual C++ Beta
+   </a>
+   -
+   <a class="external text" href="https://web.archive.org/web/20120831010417/http://www.doom3world.org/phpbb2/viewtopic.php?p=57046" title="http://www.doom3world.org/phpbb2/viewtopic.php?p=57046">
+    Installation Notes
+   </a>
+  </li>
+ </ul>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:998-0!1!0!0!!en!2 and timestamp 20120830204120 -->

@@ -1,0 +1,134 @@
+ <a name="Game_class">
+ </a>
+ <h2>
+  Game class
+ </h2>
+ <p>
+  This event operates on an instance of the
+  <a href="Game_class" title="Game class">
+   game class
+  </a>
+  type {{{gameclass}}}
+ </p>
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  Plays a specific sound shader on the channel and returns the length of the sound in seconds.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <p>
+  <i>
+   float
+  </i>
+  startSoundShader(
+  <i>
+   string
+  </i>
+  <b>
+   shaderName
+  </b>
+  ,
+  <i>
+   float
+  </i>
+  <b>
+   channel
+  </b>
+  )
+ </p>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   [sound] - The sound shader to play through this entity.
+  </li>
+  <li>
+   [channel] - The channel to play this sound on.
+  </li>
+ </ul>
+ <a name="Examples">
+ </a>
+ <h2>
+  Examples
+ </h2>
+ <pre><span style="color: #339900;">// This plays some long speech from the game which eminates from speaker1</span>
+ 
+<span style="color: #000055;">$speaker1</span>.<span style="color: #ff0000;">startSoundShader</span> <span style="color: #000000;">(</span><span style="color: #666666;">"admin_betruger_its_not_out_of_control"</span>, SND_CHANNEL_ANY<span style="color: #000000;">)</span>;</pre>
+ <pre><span style="color: #339900; font-style: italic;">/* Some of the shadersounds will automatically loop (they typically mention this fact in the name).
+This will play a looping crane sound from a mover, without needing a speaker binded to it. All
+the Doom 3 single player machinery scripts I have looked at use startSoundShader upon non-speaker
+entities like cranes and movers. */</span>
+ 
+<span style="color: #000055;">$mover1</span>.<span style="color: #ff0000;">startSoundShader</span> <span style="color: #000000;">(</span><span style="color: #666666;">"al3_crane_updown_loop"</span>, SND_CHANNEL_ANY<span style="color: #000000;">)</span>;</pre>
+ <pre><span style="color: #339900; font-style: italic;">/* This will play the speech as coming from the player, no matter where they move to. You can no
+doubt do this with monsters too, voiding the need to bind speakers to them in many cases. */</span>
+ 
+<span style="color: #000055;">$player1</span>.<span style="color: #ff0000;">startSoundShader</span> <span style="color: #000000;">(</span><span style="color: #666666;">"alphalabs1_labcoat_primary"</span>, SND_CHANNEL_ANY<span style="color: #000000;">)</span>;</pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  This script event does not return any values.
+ </p>
+ <p>
+  This is not the prefered method of playing a sound since you must ensure that the sound is loaded.
+ </p>
+ <p>
+  -1st param (string shaderName)
+ </p>
+ <p>
+  The shadernames are defined within sound shader files (typically .sndshd files) which are placed within base/sound/ (the doom3 game ones are found in pak003.pk3/sound). No path is necessary for the shadernames located directly in the sound directory.
+ </p>
+ <p>
+  -2nd param (float channel)
+Choose one of the possible channels as defined by doom_defs.script:
+ </p>
+ <pre>#define SND_CHANNEL_ANY     0
+#define SND_CHANNEL_VOICE   1
+#define SND_CHANNEL_VOICE2  2
+#define SND_CHANNEL_BODY    3
+#define SND_CHANNEL_BODY2   4
+#define SND_CHANNEL_BODY3   5
+#define SND_CHANNEL_WEAPON  6
+#define SND_CHANNEL_ITEM    7
+#define SND_CHANNEL_HEART   8
+#define SND_CHANNEL_PDA     9
+#define SND_CHANNEL_DEMONIC 10
+</pre>
+ <p>
+  If there is already a sound clip playing from the entity on the channel you choose, it will be cut off and replaced by the new one you specified in the 1st parameter.
+A special case is with SND_CHANNEL_ANY. Use of this channel seems to cause the sound to be played on any free channel.
+ </p>
+ <p>
+  You should use the function
+  <a class="new" href="CacheSoundShader_%28script_command%29sys.cacheSoundShader%28%29" title="CacheSoundShader (script command)sys.cacheSoundShader()">
+   cacheSoundShader (script command)sys.cacheSoundShader()
+  </a>
+  to cache each sound shader you wish to use. It seems to play the sound regardless, but unless you precache it when the map loads, you could get some glitches.
+ </p>
+ <p>
+  It seems that this can be called from any entity - including moving ones. Of course with a speaker entity you can set options such as volume, looping and occlusion. I cannot find a way of scripting these things.
+ </p>
+ <p>
+  You can use
+  <a class="new" href="StopSound_%28script_command%29" title="StopSound (script command)">
+   entity.stopSound()
+  </a>
+  to stop a sound.
+ </p>
+ <p>
+  <br/>
+ </p>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:1544-0!1!0!0!!en!2 and timestamp 20091216103720 -->

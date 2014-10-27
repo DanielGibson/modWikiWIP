@@ -1,0 +1,47 @@
+ <p>
+  The term spawnArgs (or
+  <i>
+   spawn arguments
+  </i>
+  ) refers to a dictionary - a list of key/value pairs - that an
+  <a href="Entity" title="Entity">
+   entity
+  </a>
+  uses to set up attributes or define behavior.
+ </p>
+ <p>
+  The spawnArgs dictionary is defined in the base
+  <a href="Spawn_class" title="Spawn class">
+   spawn class
+  </a>
+  <a href="IdEntity_%28class%29" title="IdEntity (class)">
+   idEntity
+  </a>
+  . Thus all spawn classes gain it via inheritance.
+ </p>
+ <p>
+  It is filled when an entity is spawned with the
+  <a href="Entitydef_%28decl%29" title="Entitydef (decl)">
+   entityDef
+  </a>
+  type and also the map entity dictionary. So it provides an easy way for a developer to modify aspects of the entity.
+ </p>
+ <p>
+  It is most commonly accessed by the entity via its
+  <a href="Spawn_class" title="Spawn class">
+   spawn class
+  </a>
+  or
+  <a href="Script_object" title="Script object">
+   script object
+  </a>
+  , but it may also be accessed via game logic, another entity, or level script. However, it should be noted that the most efficient use is to only read the values at entity spawn into variables.
+ </p>
+ <p>
+  In scripting the
+  <a href="GetKey_%28script_event%29" title="GetKey (script event)">
+   getKey
+  </a>
+  script events are used to access spawnArgs.
+ </p>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:8140-0!1!0!0!!en!2 and timestamp 20080828001132 -->

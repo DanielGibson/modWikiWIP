@@ -1,0 +1,87 @@
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  The
+  <b>
+   forceHighQuality
+  </b>
+  stage keyword causes the game to render the associated stage
+  <i>
+   without
+  </i>
+  using
+  <a href="Texturing#Compressed_and_Uncompressed" title="Texturing">
+   texture compression
+  </a>
+  in any quality mode. Without this keyword, the map would be compressed according to the defaults for the selected quality mode (bumpmaps only in High, bumpmaps and diffusemaps in Medium or Low).
+ </p>
+ <p>
+  This keyword is stronger than
+  <a href="Highquality_%28Material_stage_keyword%29" title="Highquality (Material stage keyword)">
+   highquality
+  </a>
+  which only affects Medium and High quality modes. It should only be used for textures that absolutely must never be compressed.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <pre>forceHighQuality
+</pre>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <p>
+  None.
+ </p>
+ <a name="Example">
+ </a>
+ <h2>
+  Example
+ </h2>
+ <p>
+  Forces the diffusemap stage to high quality:
+ </p>
+ <pre>{
+  blend diffusemap
+  map textures/path/to/image.tga
+  forceHighQuality
+}
+</pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  One place where you could use this keyword is the HUD.
+ </p>
+ <div>
+  <a class="image" href="Image:Q4square_25.png" title="Image:Q4square_25.png">
+   <img alt="Image:Q4square_25.png" height="25" longdesc="/wiki/Image:Q4square_25.png" src="/web/20080704133124im_/http://www.modwiki.net/w/images/e/e8/Q4square_25.png" width="25"/>
+  </a>
+  <b>
+   Note:
+  </b>
+  Quake 4 only:
+  <dl>
+   <dd>
+    <i>
+     This keyword does not work with
+     <a href="Image_ignoreHighQuality_%28cvar%29" title="Image ignoreHighQuality (cvar)">
+      image_ignoreHighQuality
+     </a>
+     set to 1. That may or not be the case with Doom 3.
+    </i>
+   </dd>
+  </dl>
+ </div>
+ <p>
+  <br/>
+ </p>

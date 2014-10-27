@@ -1,0 +1,88 @@
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  The
+  <b>
+   alpha
+  </b>
+  keyword multiples the alpha channel of the associated map by the given value. Use of this keyword only makes sense with
+  <a href="Blend_%28Material_stage_keyword%29" title="Blend (Material stage keyword)">
+   blend modes
+  </a>
+  that respond to alpha, such as the
+  <b>
+   blend
+  </b>
+  blend mode.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <pre>alpha &lt;alphaval&gt;
+</pre>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   <i>
+    alphaval
+   </i>
+   - the value by which the alpha channel of the image map should be multiplied
+  </li>
+ </ul>
+ <a name="Example">
+ </a>
+ <h2>
+  Example
+ </h2>
+ <p>
+  The following stage blends an image with an alpha value of half its original alpha channel
+ </p>
+ <pre>{
+   blend blend
+   map path/to/image.tga
+   alpha 0.5
+}
+</pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  An image with no transparency has an alpha channel of constant 1.0, therefore this keyword can be used even for images which contain no explicit alpha.
+ </p>
+ <p>
+  Photoshop 7 does not save transparency information into an alpha channel when dealing with targa images. You must download the updated
+  <a class="external text" href="http://www.adobe.com/support/downloads/detail.jsp?ftpID=1544" title="http://www.adobe.com/support/downloads/detail.jsp?ftpID=1544">
+   Targa export plugin
+  </a>
+  from
+  <a class="external text" href="http://www.adobe.com/" title="http://www.adobe.com">
+   Adobe
+  </a>
+  . All other versions of Photoshop work correctly.
+ </p>
+ <p>
+  <br/>
+  This keyword is particularly useful for controlling the strength of a
+  <a class="new" href="MirrorRenderMap" title="MirrorRenderMap">
+   mirrorRenderMap
+  </a>
+  or
+  <a class="new" href="CubeMap" title="CubeMap">
+   cubeMap
+  </a>
+  stage.
+ </p>
+ <p>
+  <br/>
+ </p>

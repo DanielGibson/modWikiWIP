@@ -1,0 +1,25 @@
+ <p>
+  In terms of scripting, a Finite State Machine, or FSM, is a method of organising code into different behaviors or states.
+ </p>
+ <p>
+  For script objects it's used to manage run time behavior, logic that runs for the lifetime of an entity, by breaking it into states.
+ </p>
+ <p>
+  Implementation wise the spawn class manages it's script object thread by rerunning the current state each frame (providing the thread hasn't been told to wait). Setting a new state simply passes the name of a script function declared to be the next state.
+ </p>
+ <p>
+  Various spawn classes have their own flavors of FSMs:
+ </p>
+ <p>
+  idWeapon - used to manage weapon states.
+ </p>
+ <p>
+  idActor - Has two FSMs, one for animation states, the other general purpose, which was used for AI states.
+ </p>
+ <p>
+  Since the form of FSM in the scripting system is very simple, it's possible to manually create a similar system in a script object for entities that do not support a FSM in their spawn class.
+ </p>
+ <p>
+  Quake 4 removed a lot of script events and created an expanded FSM for managing threads in game code.
+ </p>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:8146-0!1!0!0!!en!2 and timestamp 20121115081308 -->

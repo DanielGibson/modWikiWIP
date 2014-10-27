@@ -1,0 +1,46 @@
+ <p>
+  Runs a
+  <a href="Scripting" title="Scripting">
+   script
+  </a>
+  defined by the user. This is the real way to extend the GUI functionality: while you can create all kinds of fancy graphics on the GUI, it can't do much feature-wise. To integrate the GUI script with the rest of the game engine, you'll want to use this command to run external scripts or functions.
+ </p>
+ <p>
+  Notice that a script can also be called using the
+  <a href="Set_%28GUI_command%29" title="Set (GUI command)">
+   set
+  </a>
+  command with
+  <i>
+   cmd
+  </i>
+  and
+  <i>
+   runscript
+  </i>
+  parameters. id Software used this a lot on their code, as it allows you to call specific functions within scripts.
+ </p>
+ <a name="Syntax">
+ </a>
+ <h2>
+  Syntax
+ </h2>
+ <pre>runScript <i>script</i>
+</pre>
+ <p>
+  <i>
+   script
+  </i>
+  is the name of a script to run. On Doom 3, this is usually a reference to a GUI parameter defined on your map, so most GUI scripts can be reused.
+ </p>
+ <a name="Example.28s.29">
+ </a>
+ <h2>
+  Example(s)
+ </h2>
+ <pre>runScript "gui::gui_parm6";
+</pre>
+ <p>
+  <br/>
+ </p>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:1469-0!1!0!0!!en!2 and timestamp 20080704090023 -->

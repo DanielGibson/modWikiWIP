@@ -1,0 +1,77 @@
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  The
+  <b>
+   centerScale
+  </b>
+  keyword instructs Doom 3 to scale the texture in U and V dimensions using the specified factors. This keyword differs from the
+  <a href="Scale_%28Material_stage_keyword%29" title="Scale (Material stage keyword)">
+   scale
+  </a>
+  keyword in that it scales from the center as opposed to a corner.
+ </p>
+ <p>
+  The numbers given are the opposite of what might be expected - scaling by 2 causes the texture to be made
+  <i>
+   smaller
+  </i>
+  by a factor of 2, rather than bigger. In this sense the values could be considered "tiling" factors rather than scaling factors.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <pre>centerScale [U], [V]
+</pre>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   [U] - A floating point value that determines the texture scale on the U axis.
+  </li>
+  <li>
+   [V] - A floating point value that determines the texture scale on the V axis.
+  </li>
+ </ul>
+ <a name="Example">
+ </a>
+ <h2>
+  Example
+ </h2>
+ <p>
+  Tile a texture into a 2-by-2 grid relative to its original size.
+ </p>
+ <pre>{
+  blend diffusemap
+  map textures/path/to/image.tga
+  centerScale 2, 2
+}
+</pre>
+ <p>
+  Stretch a texture to ten times its original size (probably not a good idea).
+ </p>
+ <pre>{
+  blend diffusemap
+  map textures/path/to/image.tga
+  centerScale 0.1, 0.1
+}
+</pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  None.
+ </p>
+ <p>
+  <br/>
+ </p>

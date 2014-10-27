@@ -1,0 +1,2428 @@
+ <div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
+  <a class="image" href="Image:D3square_bg.png" title="Image:D3square_bg.png">
+   <img alt="Image:D3square_bg.png" height="50" longdesc="/wiki/Image:D3square_bg.png" src="/web/20121120055059im_/http://www.modwiki.net/w/images/c/cb/D3square_bg.png" width="50"/>
+  </a>
+  The information on this page is specific to
+  <a href="Doom_3" title="Doom 3">
+   Doom 3
+  </a>
+  .
+ </div>
+ <hr/>
+ <p>
+  Script events are commands used in Doom 3's native scripting language.
+ </p>
+ <p>
+  Existing script events as of version 1.3.1302 (1.3).
+ </p>
+ <a name="System_Events">
+ </a>
+ <h2>
+  System Events
+ </h2>
+ <p>
+  Events declared in
+  <a class="new" href="IdThread_%28class%29" title="IdThread (class)">
+   idThread
+  </a>
+  , accessible via
+  <a href="Scripting_basics#sys" title="Scripting basics">
+   sys
+  </a>
+  identifier.
+ </p>
+ <ul>
+  <li>
+   <a href="AngToForward_%28script_event%29" title="AngToForward (script event)">
+    angToForward
+   </a>
+  </li>
+  <li>
+   <a href="AngToRight_%28script_event%29" title="AngToRight (script event)">
+    angToRight
+   </a>
+  </li>
+  <li>
+   <a href="AngToUp_%28script_event%29" title="AngToUp (script event)">
+    angToUp
+   </a>
+  </li>
+  <li>
+   <a href="Assert_%28script_event%29" title="Assert (script event)">
+    assert
+   </a>
+  </li>
+  <li>
+   <a href="ClearPersistantArgs_%28script_event%29" title="ClearPersistantArgs (script event)">
+    clearPersistantArgs
+   </a>
+  </li>
+  <li>
+   <a href="ClearSignalThread_%28script_event%29" title="ClearSignalThread (script event)">
+    clearSignalThread
+   </a>
+  </li>
+  <li>
+   <a href="CopySpawnArgs_%28script_event%29" title="CopySpawnArgs (script event)">
+    copySpawnArgs
+   </a>
+  </li>
+  <li>
+   <a href="Cos_%28script_event%29" title="Cos (script event)">
+    cos
+   </a>
+  </li>
+  <li>
+   <a href="CrossProduct_%28script_event%29" title="CrossProduct (script event)">
+    CrossProduct
+   </a>
+  </li>
+  <li>
+   <a href="DebugArrow_%28script_event%29" title="DebugArrow (script event)">
+    debugArrow
+   </a>
+  </li>
+  <li>
+   <a href="DebugBounds_%28script_event%29" title="DebugBounds (script event)">
+    debugBounds
+   </a>
+  </li>
+  <li>
+   <a href="DebugCircle_%28script_event%29" title="DebugCircle (script event)">
+    debugCircle
+   </a>
+  </li>
+  <li>
+   <a href="DebugLine_%28script_event%29" title="DebugLine (script event)">
+    debugLine
+   </a>
+  </li>
+  <li>
+   <a href="DotProduct_%28script_event%29" title="DotProduct (script event)">
+    DotProduct
+   </a>
+  </li>
+  <li>
+   <a href="DrawText_%28script_event%29" title="DrawText (script event)">
+    drawText
+   </a>
+  </li>
+  <li>
+   <a href="Error_%28script_event%29" title="Error (script event)">
+    error
+   </a>
+  </li>
+  <li>
+   <a href="FadeIn_%28script_event%29" title="FadeIn (script event)">
+    fadeIn
+   </a>
+  </li>
+  <li>
+   <a href="FadeOut_%28script_event%29" title="FadeOut (script event)">
+    fadeOut
+   </a>
+  </li>
+  <li>
+   <a href="FadeTo_%28script_event%29" title="FadeTo (script event)">
+    fadeTo
+   </a>
+  </li>
+  <li>
+   <a href="FirstPerson_%28script_event%29" title="FirstPerson (script event)">
+    firstPerson
+   </a>
+  </li>
+  <li>
+   <a href="Getcvar_%28script_event%29" title="Getcvar (script event)">
+    getcvar
+   </a>
+  </li>
+  <li>
+   <a href="GetEntity_%28script_event%29" title="GetEntity (script event)">
+    getEntity
+   </a>
+  </li>
+  <li>
+   <a href="GetFrameTime_%28script_event%29" title="GetFrameTime (script event)">
+    getFrameTime
+   </a>
+  </li>
+  <li>
+   <a href="GetPersistantFloat_%28script_event%29" title="GetPersistantFloat (script event)">
+    getPersistantFloat
+   </a>
+  </li>
+  <li>
+   <a href="GetPersistantString_%28script_event%29" title="GetPersistantString (script event)">
+    getPersistantString
+   </a>
+  </li>
+  <li>
+   <a href="GetPersistantVector_%28script_event%29" title="GetPersistantVector (script event)">
+    getPersistantVector
+   </a>
+  </li>
+  <li>
+   <a href="GetTicsPerSecond_%28script_event%29" title="GetTicsPerSecond (script event)">
+    getTicsPerSecond
+   </a>
+  </li>
+  <li>
+   <a href="GetTime_%28script_event%29" title="GetTime (script event)">
+    getTime
+   </a>
+  </li>
+  <li>
+   <a href="GetTraceBody_%28script_event%29" title="GetTraceBody (script event)">
+    getTraceBody
+   </a>
+  </li>
+  <li>
+   <a href="GetTraceEndPos_%28script_event%29" title="GetTraceEndPos (script event)">
+    getTraceEndPos
+   </a>
+  </li>
+  <li>
+   <a href="GetTraceEntity_%28script_event%29" title="GetTraceEntity (script event)">
+    getTraceEntity
+   </a>
+  </li>
+  <li>
+   <a href="GetTraceFraction_%28script_event%29" title="GetTraceFraction (script event)">
+    getTraceFraction
+   </a>
+  </li>
+  <li>
+   <a href="GetTraceJoint_%28script_event%29" title="GetTraceJoint (script event)">
+    getTraceJoint
+   </a>
+  </li>
+  <li>
+   <a href="GetTraceNormal_%28script_event%29" title="GetTraceNormal (script event)">
+    getTraceNormal
+   </a>
+  </li>
+  <li>
+   <a href="InfluenceActive_%28script_event%29" title="InfluenceActive (script event)">
+    influenceActive
+   </a>
+  </li>
+  <li>
+   <a href="IsClient_%28script_event%29" title="IsClient (script event)">
+    isClient
+   </a>
+  </li>
+  <li>
+   <a href="IsMultiplayer_%28script_event%29" title="IsMultiplayer (script event)">
+    isMultiplayer
+   </a>
+  </li>
+  <li>
+   <a href="Killthread_%28script_event%29" title="Killthread (script event)">
+    killthread
+   </a>
+  </li>
+  <li>
+   <a href="Music_%28script_event%29" title="Music (script event)">
+    music
+   </a>
+  </li>
+  <li>
+   <a href="OnSignal_%28script_event%29" title="OnSignal (script event)">
+    onSignal
+   </a>
+  </li>
+  <li>
+   <a href="Pause_%28script_event%29" title="Pause (script event)">
+    pause
+   </a>
+  </li>
+  <li>
+   <a href="Print_%28script_event%29" title="Print (script event)">
+    print
+   </a>
+  </li>
+  <li>
+   <a href="Println_%28script_event%29" title="Println (script event)">
+    println
+   </a>
+  </li>
+  <li>
+   <a href="RadiusDamage_%28script_event%29" title="RadiusDamage (script event)">
+    radiusDamage
+   </a>
+  </li>
+  <li>
+   <a href="Random_%28script_event%29" title="Random (script event)">
+    random
+   </a>
+  </li>
+  <li>
+   <a href="Respawn_%28script_event%29" title="Respawn (script event)">
+    respawn
+   </a>
+  </li>
+  <li>
+   <a href="Say_%28script_event%29" title="Say (script event)">
+    say
+   </a>
+  </li>
+  <li>
+   <a href="SetCamera_%28script_event%29" title="SetCamera (script event)">
+    setCamera
+   </a>
+  </li>
+  <li>
+   <a href="Setcvar_%28script_event%29" title="Setcvar (script event)">
+    setcvar
+   </a>
+  </li>
+  <li>
+   <a href="SetPersistantArg_%28script_event%29" title="SetPersistantArg (script event)">
+    setPersistantArg
+   </a>
+  </li>
+  <li>
+   <a href="SetSpawnArg_%28script_event%29" title="SetSpawnArg (script event)">
+    setSpawnArg
+   </a>
+  </li>
+  <li>
+   <a href="Sin_%28script_event%29" title="Sin (script event)">
+    sin
+   </a>
+  </li>
+  <li>
+   <a href="Spawn_%28script_event%29" title="Spawn (script event)">
+    spawn
+   </a>
+  </li>
+  <li>
+   <a href="SpawnFloat_%28script_event%29" title="SpawnFloat (script event)">
+    SpawnFloat
+   </a>
+  </li>
+  <li>
+   <a href="SpawnString_%28script_event%29" title="SpawnString (script event)">
+    SpawnString
+   </a>
+  </li>
+  <li>
+   <a href="SpawnVector_%28script_event%29" title="SpawnVector (script event)">
+    SpawnVector
+   </a>
+  </li>
+  <li>
+   <a href="Sqrt_%28script_event%29" title="Sqrt (script event)">
+    sqrt
+   </a>
+  </li>
+  <li>
+   <a href="StrLeft_%28script_event%29" title="StrLeft (script event)">
+    strLeft
+   </a>
+  </li>
+  <li>
+   <a href="StrLength_%28script_event%29" title="StrLength (script event)">
+    strLength
+   </a>
+  </li>
+  <li>
+   <a href="StrMid_%28script_event%29" title="StrMid (script event)">
+    strMid
+   </a>
+  </li>
+  <li>
+   <a href="StrRight_%28script_event%29" title="StrRight (script event)">
+    strRight
+   </a>
+  </li>
+  <li>
+   <a href="StrSkip_%28script_event%29" title="StrSkip (script event)">
+    strSkip
+   </a>
+  </li>
+  <li>
+   <a href="StrToFloat_%28script_event%29" title="StrToFloat (script event)">
+    strToFloat
+   </a>
+  </li>
+  <li>
+   <a href="Terminate_%28script_event%29" title="Terminate (script event)">
+    terminate
+   </a>
+  </li>
+  <li>
+   <a href="Threadname_%28script_event%29" title="Threadname (script event)">
+    threadname
+   </a>
+  </li>
+  <li>
+   <a href="Trace_%28script_event%29" title="Trace (script event)">
+    trace
+   </a>
+  </li>
+  <li>
+   <a href="TracePoint_%28script_event%29" title="TracePoint (script event)">
+    tracePoint
+   </a>
+  </li>
+  <li>
+   <a href="Trigger_%28script_event%29" title="Trigger (script event)">
+    trigger
+   </a>
+  </li>
+  <li>
+   <a href="VecLength_%28script_event%29" title="VecLength (script event)">
+    vecLength
+   </a>
+  </li>
+  <li>
+   <a href="VecNormalize_%28script_event%29" title="VecNormalize (script event)">
+    vecNormalize
+   </a>
+  </li>
+  <li>
+   <a href="VecToAngles_%28script_event%29" title="VecToAngles (script event)">
+    VecToAngles
+   </a>
+  </li>
+  <li>
+   <a href="Wait_%28script_event%29" title="Wait (script event)">
+    wait
+   </a>
+  </li>
+  <li>
+   <a href="WaitFor_%28script_event%29" title="WaitFor (script event)">
+    waitFor
+   </a>
+  </li>
+  <li>
+   <a href="WaitForThread_%28script_event%29" title="WaitForThread (script event)">
+    waitForThread
+   </a>
+  </li>
+  <li>
+   <a href="WaitFrame_%28script_event%29" title="WaitFrame (script event)">
+    waitFrame
+   </a>
+  </li>
+  <li>
+   <a href="Warning_%28script_event%29" title="Warning (script event)">
+    warning
+   </a>
+  </li>
+ </ul>
+ <a name="Entity_Events">
+ </a>
+ <h2>
+  Entity Events
+ </h2>
+ <p>
+  Events declared in the
+  <a class="new" href="Base_spawn_class" title="Base spawn class">
+   base spawn class
+  </a>
+  <a href="IdEntity_%28class%29" title="IdEntity (class)">
+   idEntity
+  </a>
+ </p>
+ <p>
+  All entities have these events.
+ </p>
+ <ul>
+  <li>
+   <a href="Activate_%28script_event%29" title="Activate (script event)">
+    activate
+   </a>
+  </li>
+  <li>
+   <a href="ActivateTargets_%28script_event%29" title="ActivateTargets (script event)">
+    activateTargets
+   </a>
+  </li>
+  <li>
+   <a href="Bind_%28script_event%29" title="Bind (script event)">
+    bind
+   </a>
+  </li>
+  <li>
+   <a href="BindPosition_%28script_event%29" title="BindPosition (script event)">
+    bindPosition
+   </a>
+  </li>
+  <li>
+   <a href="BindToJoint_%28script_event%29" title="BindToJoint (script event)">
+    bindToJoint
+   </a>
+  </li>
+  <li>
+   <a href="CacheSoundShader_%28script_event%29" title="CacheSoundShader (script event)">
+    cacheSoundShader
+   </a>
+  </li>
+  <li>
+   <a href="CallFunction_%28script_event%29" title="CallFunction (script event)">
+    callFunction
+   </a>
+  </li>
+  <li>
+   <a href="ClearSignal_%28script_event%29" title="ClearSignal (script event)">
+    clearSignal
+   </a>
+  </li>
+  <li>
+   <a href="DistanceTo_%28script_event%29" title="DistanceTo (script event)">
+    distanceTo
+   </a>
+  </li>
+  <li>
+   <a href="DistanceToPoint_%28script_event%29" title="DistanceToPoint (script event)">
+    distanceToPoint
+   </a>
+  </li>
+  <li>
+   <a href="FadeSound_%28script_event%29" title="FadeSound (script event)">
+    fadeSound
+   </a>
+  </li>
+  <li>
+   <a href="GetAngles_%28script_event%29" title="GetAngles (script event)">
+    getAngles
+   </a>
+  </li>
+  <li>
+   <a href="GetAngularVelocity_%28script_event%29" title="GetAngularVelocity (script event)">
+    getAngularVelocity
+   </a>
+  </li>
+  <li>
+   <a href="GetColor_%28script_event%29" title="GetColor (script event)">
+    getColor
+   </a>
+  </li>
+  <li>
+   <a href="GetEntityKey_%28script_event%29" title="GetEntityKey (script event)">
+    getEntityKey
+   </a>
+  </li>
+  <li>
+   <a href="GetFloatKey_%28script_event%29" title="GetFloatKey (script event)">
+    getFloatKey
+   </a>
+  </li>
+  <li>
+   <a href="GetIntKey_%28script_event%29" title="GetIntKey (script event)">
+    getIntKey
+   </a>
+  </li>
+  <li>
+   <a href="GetKey_%28script_event%29" title="GetKey (script event)">
+    getKey
+   </a>
+  </li>
+  <li>
+   <a href="GetLinearVelocity_%28script_event%29" title="GetLinearVelocity (script event)">
+    getLinearVelocity
+   </a>
+  </li>
+  <li>
+   <a href="GetMaxs_%28script_event%29" title="GetMaxs (script event)">
+    getMaxs
+   </a>
+  </li>
+  <li>
+   <a href="GetMins_%28script_event%29" title="GetMins (script event)">
+    getMins
+   </a>
+  </li>
+  <li>
+   <a href="GetName_%28script_event%29" title="GetName (script event)">
+    getName
+   </a>
+  </li>
+  <li>
+   <a href="GetNextKey_%28script_event%29" title="GetNextKey (script event)">
+    getNextKey
+   </a>
+  </li>
+  <li>
+   <a href="GetOrigin_%28script_event%29" title="GetOrigin (script event)">
+    getOrigin
+   </a>
+  </li>
+  <li>
+   <a href="GetShaderParm_%28script_event%29" title="GetShaderParm (script event)">
+    getShaderParm
+   </a>
+  </li>
+  <li>
+   <a href="GetSize_%28script_event%29" title="GetSize (script event)">
+    getSize
+   </a>
+  </li>
+  <li>
+   <a href="GetTarget_%28script_event%29" title="GetTarget (script event)">
+    getTarget
+   </a>
+  </li>
+  <li>
+   <a href="GetVectorKey_%28script_event%29" title="GetVectorKey (script event)">
+    getVectorKey
+   </a>
+  </li>
+  <li>
+   <a href="GetWorldOrigin_%28script_event%29" title="GetWorldOrigin (script event)">
+    getWorldOrigin
+   </a>
+  </li>
+  <li>
+   <a href="HasFunction_%28script_event%29" title="HasFunction (script event)">
+    hasFunction
+   </a>
+  </li>
+  <li>
+   <a href="Hide_%28script_event%29" title="Hide (script event)">
+    hide
+   </a>
+  </li>
+  <li>
+   <a href="IsHidden_%28script_event%29" title="IsHidden (script event)">
+    isHidden
+   </a>
+  </li>
+  <li>
+   <a href="NumTargets_%28script_event%29" title="NumTargets (script event)">
+    numTargets
+   </a>
+  </li>
+  <li>
+   <a href="RandomTarget_%28script_event%29" title="RandomTarget (script event)">
+    randomTarget
+   </a>
+  </li>
+  <li>
+   <a href="Remove_%28script_event%29" title="Remove (script event)">
+    remove
+   </a>
+  </li>
+  <li>
+   <a href="RemoveBinds_%28script_event%29" title="RemoveBinds (script event)">
+    removeBinds
+   </a>
+  </li>
+  <li>
+   <a href="RestorePosition_%28script_event%29" title="RestorePosition (script event)">
+    restorePosition
+   </a>
+  </li>
+  <li>
+   <a href="SetAngles_%28script_event%29" title="SetAngles (script event)">
+    setAngles
+   </a>
+  </li>
+  <li>
+   <a href="SetAngularVelocity_%28script_event%29" title="SetAngularVelocity (script event)">
+    setAngularVelocity
+   </a>
+  </li>
+  <li>
+   <a href="SetColor_%28script_event%29" title="SetColor (script event)">
+    setColor
+   </a>
+  </li>
+  <li>
+   <a href="SetGuiFloat_%28script_event%29" title="SetGuiFloat (script event)">
+    setGuiFloat
+   </a>
+  </li>
+  <li>
+   <a href="SetGuiParm_%28script_event%29" title="SetGuiParm (script event)">
+    setGuiParm
+   </a>
+  </li>
+  <li>
+   <a href="SetKey_%28script_event%29" title="SetKey (script event)">
+    setKey
+   </a>
+  </li>
+  <li>
+   <a href="SetLinearVelocity_%28script_event%29" title="SetLinearVelocity (script event)">
+    setLinearVelocity
+   </a>
+  </li>
+  <li>
+   <a href="SetModel_%28script_event%29" title="SetModel (script event)">
+    setModel
+   </a>
+  </li>
+  <li>
+   <a href="SetName_%28script_event%29" title="SetName (script event)">
+    setName
+   </a>
+  </li>
+  <li>
+   <a href="SetNeverDormant_%28script_event%29" title="SetNeverDormant (script event)">
+    setNeverDormant
+   </a>
+  </li>
+  <li>
+   <a href="SetOrigin_%28script_event%29" title="SetOrigin (script event)">
+    setOrigin
+   </a>
+  </li>
+  <li>
+   <a href="SetOwner_%28script_event%29" title="SetOwner (script event)">
+    setOwner
+   </a>
+  </li>
+  <li>
+   <a href="SetShaderParm_%28script_event%29" title="SetShaderParm (script event)">
+    setShaderParm
+   </a>
+  </li>
+  <li>
+   <a href="SetShaderParms_%28script_event%29" title="SetShaderParms (script event)">
+    setShaderParms
+   </a>
+  </li>
+  <li>
+   <a href="SetSize_%28script_event%29" title="SetSize (script event)">
+    setSize
+   </a>
+  </li>
+  <li>
+   <a href="SetSkin_%28script_event%29" title="SetSkin (script event)">
+    setSkin
+   </a>
+  </li>
+  <li>
+   <a href="SetWorldOrigin_%28script_event%29" title="SetWorldOrigin (script event)">
+    setWorldOrigin
+   </a>
+  </li>
+  <li>
+   <a href="Show_%28script_event%29" title="Show (script event)">
+    show
+   </a>
+  </li>
+  <li>
+   <a href="StartFx_%28script_event%29" title="StartFx (script event)">
+    startFx
+   </a>
+  </li>
+  <li>
+   <a href="StartSound_%28script_event%29" title="StartSound (script event)">
+    startSound
+   </a>
+  </li>
+  <li>
+   <a href="StartSoundShader_%28script_event%29" title="StartSoundShader (script event)">
+    startSoundShader
+   </a>
+  </li>
+  <li>
+   <a href="StopSound_%28script_event%29" title="StopSound (script event)">
+    stopSound
+   </a>
+  </li>
+  <li>
+   <a href="Touches_%28script_event%29" title="Touches (script event)">
+    touches
+   </a>
+  </li>
+  <li>
+   <a href="Unbind_%28script_event%29" title="Unbind (script event)">
+    unbind
+   </a>
+  </li>
+  <li>
+   <a href="Wait_%28script_event%29" title="Wait (script event)">
+    wait
+   </a>
+  </li>
+  <li>
+   <a href="WaitFrame_%28script_event%29" title="WaitFrame (script event)">
+    waitFrame
+   </a>
+  </li>
+ </ul>
+ <a name="idActor_Events">
+ </a>
+ <h2>
+  idActor Events
+ </h2>
+ <p>
+  Events declared in the
+  <a href="Spawn_class" title="Spawn class">
+   spawn class
+  </a>
+  <a class="new" href="IdActor_%28class%29" title="IdActor (class)">
+   idActor
+  </a>
+ </p>
+ <ul>
+  <li>
+   <a class="new" href="AnimDistance_%28script_event%29" title="AnimDistance (script event)">
+    animDistance
+   </a>
+  </li>
+  <li>
+   <a class="new" href="AnimLength_%28script_event%29" title="AnimLength (script event)">
+    animLength
+   </a>
+  </li>
+  <li>
+   <a class="new" href="AnimState_%28script_event%29" title="AnimState (script event)">
+    animState
+   </a>
+  </li>
+  <li>
+   <a class="new" href="CheckAnim_%28script_event%29" title="CheckAnim (script event)">
+    checkAnim
+   </a>
+  </li>
+  <li>
+   <a class="new" href="ChooseAnim_%28script_event%29" title="ChooseAnim (script event)">
+    chooseAnim
+   </a>
+  </li>
+  <li>
+   <a href="ClosestEnemyToPoint_%28script_event%29" title="ClosestEnemyToPoint (script event)">
+    closestEnemyToPoint
+   </a>
+  </li>
+  <li>
+   <a href="DisableEyeFocus_%28script_event%29" title="DisableEyeFocus (script event)">
+    disableEyeFocus
+   </a>
+  </li>
+  <li>
+   <a href="DisablePain_%28script_event%29" title="DisablePain (script event)">
+    disablePain
+   </a>
+  </li>
+  <li>
+   <a href="EnableAnim_%28script_event%29" title="EnableAnim (script event)">
+    enableAnim
+   </a>
+  </li>
+  <li>
+   <a href="EnableEyeFocus_%28script_event%29" title="EnableEyeFocus (script event)">
+    enableEyeFocus
+   </a>
+  </li>
+  <li>
+   <a href="EnablePain_%28script_event%29" title="EnablePain (script event)">
+    enablePain
+   </a>
+  </li>
+  <li>
+   <a class="new" href="FinishAction_%28script_event%29" title="FinishAction (script event)">
+    finishAction
+   </a>
+  </li>
+  <li>
+   <a class="new" href="GetAnimState_%28script_event%29" title="GetAnimState (script event)">
+    getAnimState
+   </a>
+  </li>
+  <li>
+   <a href="GetHead_%28script_event%29" title="GetHead (script event)">
+    getHead
+   </a>
+  </li>
+  <li>
+   <a class="new" href="GetPainAnim_%28script_event%29" title="GetPainAnim (script event)">
+    getPainAnim
+   </a>
+  </li>
+  <li>
+   <a class="new" href="GetState_%28script_event%29" title="GetState (script event)">
+    getState
+   </a>
+  </li>
+  <li>
+   <a class="new" href="HasAnim_%28script_event%29" title="HasAnim (script event)">
+    hasAnim
+   </a>
+  </li>
+  <li>
+   <a href="HasEnemies_%28script_event%29" title="HasEnemies (script event)">
+    hasEnemies
+   </a>
+  </li>
+  <li>
+   <a href="IdleAnim_%28script_event%29" title="IdleAnim (script event)">
+    idleAnim
+   </a>
+  </li>
+  <li>
+   <a class="new" href="InAnimState_%28script_event%29" title="InAnimState (script event)">
+    inAnimState
+   </a>
+  </li>
+  <li>
+   <a href="NextEnemy_%28script_event%29" title="NextEnemy (script event)">
+    nextEnemy
+   </a>
+  </li>
+  <li>
+   <a href="OverrideAnim_%28script_event%29" title="OverrideAnim (script event)">
+    overrideAnim
+   </a>
+  </li>
+  <li>
+   <a href="PreventPain_%28script_event%29" title="PreventPain (script event)">
+    preventPain
+   </a>
+  </li>
+  <li>
+   <a href="SetAnimPrefix_%28script_event%29" title="SetAnimPrefix (script event)">
+    setAnimPrefix
+   </a>
+  </li>
+  <li>
+   <a href="SetConstraintPosition_%28script_event%29" title="SetConstraintPosition (script event)">
+    SetConstraintPosition
+   </a>
+  </li>
+  <li>
+   <a class="new" href="SetNextState_%28script_event%29" title="SetNextState (script event)">
+    setNextState
+   </a>
+  </li>
+  <li>
+   <a class="new" href="SetState_%28script_event%29" title="SetState (script event)">
+    setState
+   </a>
+  </li>
+  <li>
+   <a href="SetSyncedAnimWeight_%28script_event%29" title="SetSyncedAnimWeight (script event)">
+    setSyncedAnimWeight
+   </a>
+  </li>
+  <li>
+   <a href="StopAnim_%28script_event%29" title="StopAnim (script event)">
+    stopAnim
+   </a>
+  </li>
+ </ul>
+ <a name="idAFEntity_ClawFourFingers_Events">
+ </a>
+ <h2>
+  idAFEntity_ClawFourFingers Events
+ </h2>
+ <p>
+  Events declared in the
+  <a href="Spawn_class" title="Spawn class">
+   spawn class
+  </a>
+  <a class="new" href="IdAFEntity_ClawFourFingers_%28class%29" title="IdAFEntity ClawFourFingers (class)">
+   idAFEntity_ClawFourFingers
+  </a>
+ </p>
+ <ul>
+  <li>
+   <a href="SetFingerAngle_%28script_event%29" title="SetFingerAngle (script event)">
+    setFingerAngle
+   </a>
+  </li>
+  <li>
+   <a href="StopFingers_%28script_event%29" title="StopFingers (script event)">
+    stopFingers
+   </a>
+  </li>
+ </ul>
+ <a name="idAI_Events">
+ </a>
+ <h2>
+  idAI Events
+ </h2>
+ <p>
+  Events declared in the
+  <a href="Spawn_class" title="Spawn class">
+   spawn class
+  </a>
+  <a class="new" href="IdAI_%28class%29" title="IdAI (class)">
+   idAI
+  </a>
+ </p>
+ <ul>
+  <li>
+   <a class="new" href="AllowDamage_%28script_event%29" title="AllowDamage (script event)">
+    allowDamage
+   </a>
+  </li>
+  <li>
+   <a class="new" href="AllowHiddenMovement_%28script_event%29" title="AllowHiddenMovement (script event)">
+    allowHiddenMovement
+   </a>
+  </li>
+  <li>
+   <a class="new" href="AllowMovement_%28script_event%29" title="AllowMovement (script event)">
+    allowMovement
+   </a>
+  </li>
+  <li>
+   <a class="new" href="AnimTurn_%28script_event%29" title="AnimTurn (script event)">
+    animTurn
+   </a>
+  </li>
+  <li>
+   <a class="new" href="AttackBegin_%28script_event%29" title="AttackBegin (script event)">
+    attackBegin
+   </a>
+  </li>
+  <li>
+   <a class="new" href="AttackEnd_%28script_event%29" title="AttackEnd (script event)">
+    attackEnd
+   </a>
+  </li>
+  <li>
+   <a class="new" href="AttackMelee_%28script_event%29" title="AttackMelee (script event)">
+    attackMelee
+   </a>
+  </li>
+  <li>
+   <a class="new" href="AttackMissile_%28script_event%29" title="AttackMissile (script event)">
+    attackMissile
+   </a>
+  </li>
+  <li>
+   <a href="BecomeNonSolid_%28script_event%29" title="BecomeNonSolid (script event)">
+    becomeNonSolid
+   </a>
+  </li>
+  <li>
+   <a href="BecomeRagdoll_%28script_event%29" title="BecomeRagdoll (script event)">
+    becomeRagdoll
+   </a>
+  </li>
+  <li>
+   <a href="BecomeSolid_%28script_event%29" title="BecomeSolid (script event)">
+    becomeSolid
+   </a>
+  </li>
+  <li>
+   <a class="new" href="Burn_%28script_event%29" title="Burn (script event)">
+    burn
+   </a>
+  </li>
+  <li>
+   <a href="CanBecomeSolid_%28script_event%29" title="CanBecomeSolid (script event)">
+    canBecomeSolid
+   </a>
+  </li>
+  <li>
+   <a class="new" href="CanHitEnemy_%28script_event%29" title="CanHitEnemy (script event)">
+    canHitEnemy
+   </a>
+  </li>
+  <li>
+   <a class="new" href="CanHitEnemyFromAnim_%28script_event%29" title="CanHitEnemyFromAnim (script event)">
+    canHitEnemyFromAnim
+   </a>
+  </li>
+  <li>
+   <a class="new" href="CanHitEnemyFromJoint_%28script_event%29" title="CanHitEnemyFromJoint (script event)">
+    canHitEnemyFromJoint
+   </a>
+  </li>
+  <li>
+   <a class="new" href="CanReachEnemy_%28script_event%29" title="CanReachEnemy (script event)">
+    canReachEnemy
+   </a>
+  </li>
+  <li>
+   <a class="new" href="CanReachEntity_%28script_event%29" title="CanReachEntity (script event)">
+    canReachEntity
+   </a>
+  </li>
+  <li>
+   <a class="new" href="CanReachPosition_%28script_event%29" title="CanReachPosition (script event)">
+    canReachPosition
+   </a>
+  </li>
+  <li>
+   <a class="new" href="CanSee_%28script_event%29" title="CanSee (script event)">
+    canSee
+   </a>
+  </li>
+  <li>
+   <a class="new" href="ChargeAttack_%28script_event%29" title="ChargeAttack (script event)">
+    chargeAttack
+   </a>
+  </li>
+  <li>
+   <a class="new" href="ClearBurn_%28script_event%29" title="ClearBurn (script event)">
+    clearBurn
+   </a>
+  </li>
+  <li>
+   <a class="new" href="ClearEnemy_%28script_event%29" title="ClearEnemy (script event)">
+    clearEnemy
+   </a>
+  </li>
+  <li>
+   <a class="new" href="ClearFlyOffset_%28script_event%29" title="ClearFlyOffset (script event)">
+    clearFlyOffset
+   </a>
+  </li>
+  <li>
+   <a class="new" href="ClosestReachableEnemyOfEntity_%28script_event%29" title="ClosestReachableEnemyOfEntity (script event)">
+    closestReachableEnemyOfEntity
+   </a>
+  </li>
+  <li>
+   <a class="new" href="CreateMissile_%28script_event%29" title="CreateMissile (script event)">
+    createMissile
+   </a>
+  </li>
+  <li>
+   <a href="DirectDamage_%28script_event%29" title="DirectDamage (script event)">
+    directDamage
+   </a>
+  </li>
+  <li>
+   <a href="DisableAFPush_%28script_event%29" title="DisableAFPush (script event)">
+    disableAFPush
+   </a>
+  </li>
+  <li>
+   <a href="DisableClip_%28script_event%29" title="DisableClip (script event)">
+    disableClip
+   </a>
+  </li>
+  <li>
+   <a href="DisableGravity_%28script_event%29" title="DisableGravity (script event)">
+    disableGravity
+   </a>
+  </li>
+  <li>
+   <a href="EnableAFPush_%28script_event%29" title="EnableAFPush (script event)">
+    enableAFPush
+   </a>
+  </li>
+  <li>
+   <a href="EnableClip_%28script_event%29" title="EnableClip (script event)">
+    enableClip
+   </a>
+  </li>
+  <li>
+   <a href="EnableGravity_%28script_event%29" title="EnableGravity (script event)">
+    enableGravity
+   </a>
+  </li>
+  <li>
+   <a class="new" href="EnemyInCombatCone_%28script_event%29" title="EnemyInCombatCone (script event)">
+    enemyInCombatCone
+   </a>
+  </li>
+  <li>
+   <a class="new" href="EnemyPositionValid_%28script_event%29" title="EnemyPositionValid (script event)">
+    enemyPositionValid
+   </a>
+  </li>
+  <li>
+   <a class="new" href="EnemyRange_%28script_event%29" title="EnemyRange (script event)">
+    enemyRange
+   </a>
+  </li>
+  <li>
+   <a class="new" href="EnemyRange2D_%28script_event%29" title="EnemyRange2D (script event)">
+    enemyRange2D
+   </a>
+  </li>
+  <li>
+   <a class="new" href="EntityInAttackCone_%28script_event%29" title="EntityInAttackCone (script event)">
+    entityInAttackCone
+   </a>
+  </li>
+  <li>
+   <a class="new" href="FaceEnemy_%28script_event%29" title="FaceEnemy (script event)">
+    faceEnemy
+   </a>
+  </li>
+  <li>
+   <a class="new" href="FaceEntity_%28script_event%29" title="FaceEntity (script event)">
+    faceEntity
+   </a>
+  </li>
+  <li>
+   <a class="new" href="FacingIdeal_%28script_event%29" title="FacingIdeal (script event)">
+    facingIdeal
+   </a>
+  </li>
+  <li>
+   <a class="new" href="FindActorsInBounds_%28script_event%29" title="FindActorsInBounds (script event)">
+    findActorsInBounds
+   </a>
+  </li>
+  <li>
+   <a href="FindEnemy_%28script_event%29" title="FindEnemy (script event)">
+    findEnemy
+   </a>
+  </li>
+  <li>
+   <a class="new" href="FindEnemyAI_%28script_event%29" title="FindEnemyAI (script event)">
+    findEnemyAI
+   </a>
+  </li>
+  <li>
+   <a class="new" href="FindEnemyInCombatNodes_%28script_event%29" title="FindEnemyInCombatNodes (script event)">
+    findEnemyInCombatNodes
+   </a>
+  </li>
+  <li>
+   <a class="new" href="FireMissileAtTarget_%28script_event%29" title="FireMissileAtTarget (script event)">
+    fireMissileAtTarget
+   </a>
+  </li>
+  <li>
+   <a class="new" href="GetClosestHiddenTarget_%28script_event%29" title="GetClosestHiddenTarget (script event)">
+    getClosestHiddenTarget
+   </a>
+  </li>
+  <li>
+   <a class="new" href="GetCombatNode_%28script_event%29" title="GetCombatNode (script event)">
+    getCombatNode
+   </a>
+  </li>
+  <li>
+   <a class="new" href="GetCurrentYaw_%28script_event%29" title="GetCurrentYaw (script event)">
+    getCurrentYaw
+   </a>
+  </li>
+  <li>
+   <a href="GetEnemy_%28script_event%29" title="GetEnemy (script event)">
+    getEnemy
+   </a>
+  </li>
+  <li>
+   <a class="new" href="GetEnemyEyePos_%28script_event%29" title="GetEnemyEyePos (script event)">
+    getEnemyEyePos
+   </a>
+  </li>
+  <li>
+   <a class="new" href="GetEnemyPos_%28script_event%29" title="GetEnemyPos (script event)">
+    getEnemyPos
+   </a>
+  </li>
+  <li>
+   <a href="GetHealth_%28script_event%29" title="GetHealth (script event)">
+    getHealth
+   </a>
+  </li>
+  <li>
+   <a class="new" href="GetJumpVelocity_%28script_event%29" title="GetJumpVelocity (script event)">
+    getJumpVelocity
+   </a>
+  </li>
+  <li>
+   <a class="new" href="GetMoveType_%28script_event%29" title="GetMoveType (script event)">
+    getMoveType
+   </a>
+  </li>
+  <li>
+   <a class="new" href="GetObstacle_%28script_event%29" title="GetObstacle (script event)">
+    getObstacle
+   </a>
+  </li>
+  <li>
+   <a class="new" href="GetRandomTarget_%28script_event%29" title="GetRandomTarget (script event)">
+    getRandomTarget
+   </a>
+  </li>
+  <li>
+   <a class="new" href="GetReachableEntityPosition_%28script_event%29" title="GetReachableEntityPosition (script event)">
+    getReachableEntityPosition
+   </a>
+  </li>
+  <li>
+   <a class="new" href="GetTalkTarget_%28script_event%29" title="GetTalkTarget (script event)">
+    getTalkTarget
+   </a>
+  </li>
+  <li>
+   <a class="new" href="GetTurnDelta_%28script_event%29" title="GetTurnDelta (script event)">
+    getTurnDelta
+   </a>
+  </li>
+  <li>
+   <a class="new" href="GetTurnRate_%28script_event%29" title="GetTurnRate (script event)">
+    getTurnRate
+   </a>
+  </li>
+  <li>
+   <a class="new" href="HeardSound_%28script_event%29" title="HeardSound (script event)">
+    heardSound
+   </a>
+  </li>
+  <li>
+   <a class="new" href="IgnoreDamage_%28script_event%29" title="IgnoreDamage (script event)">
+    ignoreDamage
+   </a>
+  </li>
+  <li>
+   <a class="new" href="KickObstacles_%28script_event%29" title="KickObstacles (script event)">
+    kickObstacles
+   </a>
+  </li>
+  <li>
+   <a href="Kill_%28script_event%29" title="Kill (script event)">
+    kill
+   </a>
+  </li>
+  <li>
+   <a class="new" href="LaunchMissile_%28script_event%29" title="LaunchMissile (script event)">
+    launchMissile
+   </a>
+  </li>
+  <li>
+   <a class="new" href="LocateEnemy_%28script_event%29" title="LocateEnemy (script event)">
+    locateEnemy
+   </a>
+  </li>
+  <li>
+   <a href="LookAt_%28script_event%29" title="LookAt (script event)">
+    lookAt
+   </a>
+  </li>
+  <li>
+   <a class="new" href="LookAtEnemy_%28script_event%29" title="LookAtEnemy (script event)">
+    lookAtEnemy
+   </a>
+  </li>
+  <li>
+   <a class="new" href="MeleeAttackToJoint_%28script_event%29" title="MeleeAttackToJoint (script event)">
+    meleeAttackToJoint
+   </a>
+  </li>
+  <li>
+   <a href="MoveOutOfRange_%28script_event%29" title="MoveOutOfRange (script event)">
+    moveOutOfRange
+   </a>
+  </li>
+  <li>
+   <a class="new" href="MoveStatus_%28script_event%29" title="MoveStatus (script event)">
+    moveStatus
+   </a>
+  </li>
+  <li>
+   <a class="new" href="MoveToAttackPosition_%28script_event%29" title="MoveToAttackPosition (script event)">
+    moveToAttackPosition
+   </a>
+  </li>
+  <li>
+   <a class="new" href="MoveToCover_%28script_event%29" title="MoveToCover (script event)">
+    moveToCover
+   </a>
+  </li>
+  <li>
+   <a href="MoveToEnemy_%28script_event%29" title="MoveToEnemy (script event)">
+    moveToEnemy
+   </a>
+  </li>
+  <li>
+   <a class="new" href="MoveToEnemyHeight_%28script_event%29" title="MoveToEnemyHeight (script event)">
+    moveToEnemyHeight
+   </a>
+  </li>
+  <li>
+   <a class="new" href="MoveToEntity_%28script_event%29" title="MoveToEntity (script event)">
+    moveToEntity
+   </a>
+  </li>
+  <li>
+   <a class="new" href="MoveToPosition_%28script_event%29" title="MoveToPosition (script event)">
+    moveToPosition
+   </a>
+  </li>
+  <li>
+   <a class="new" href="MuzzleFlash_%28script_event%29" title="MuzzleFlash (script event)">
+    muzzleFlash
+   </a>
+  </li>
+  <li>
+   <a class="new" href="NumSmokeEmitters_%28script_event%29" title="NumSmokeEmitters (script event)">
+    numSmokeEmitters
+   </a>
+  </li>
+  <li>
+   <a class="new" href="PreBurn_%28script_event%29" title="PreBurn (script event)">
+    preBurn
+   </a>
+  </li>
+  <li>
+   <a class="new" href="PredictEnemyPos_%28script_event%29" title="PredictEnemyPos (script event)">
+    predictEnemyPos
+   </a>
+  </li>
+  <li>
+   <a class="new" href="PushPointIntoAAS_%28script_event%29" title="PushPointIntoAAS (script event)">
+    pushPointIntoAAS
+   </a>
+  </li>
+  <li>
+   <a class="new" href="RandomPath_%28script_event%29" title="RandomPath (script event)">
+    randomPath
+   </a>
+  </li>
+  <li>
+   <a class="new" href="RadiusDamageFromJoint_%28script_event%29" title="RadiusDamageFromJoint (script event)">
+    radiusDamageFromJoint
+   </a>
+  </li>
+  <li>
+   <a class="new" href="RestoreMove_%28script_event%29" title="RestoreMove (script event)">
+    restoreMove
+   </a>
+  </li>
+  <li>
+   <a class="new" href="SaveMove_%28script_event%29" title="SaveMove (script event)">
+    saveMove
+   </a>
+  </li>
+  <li>
+   <a class="new" href="SetBoneMod_%28script_event%29" title="SetBoneMod (script event)">
+    setBoneMod
+   </a>
+  </li>
+  <li>
+   <a href="SetEnemy_%28script_event%29" title="SetEnemy (script event)">
+    setEnemy
+   </a>
+  </li>
+  <li>
+   <a class="new" href="SetFlyOffset_%28script_event%29" title="SetFlyOffset (script event)">
+    setFlyOffset
+   </a>
+  </li>
+  <li>
+   <a class="new" href="SetFlySpeed_%28script_event%29" title="SetFlySpeed (script event)">
+    setFlySpeed
+   </a>
+  </li>
+  <li>
+   <a href="SetHealth_%28script_event%29" title="SetHealth (script event)">
+    setHealth
+   </a>
+  </li>
+  <li>
+   <a class="new" href="SetMoveType_%28script_event%29" title="SetMoveType (script event)">
+    setMoveType
+   </a>
+  </li>
+  <li>
+   <a class="new" href="SetSmokeVisibility_%28script_event%29" title="SetSmokeVisibility (script event)">
+    setSmokeVisibility
+   </a>
+  </li>
+  <li>
+   <a href="SetTalkState_%28script_event%29" title="SetTalkState (script event)">
+    setTalkState
+   </a>
+  </li>
+  <li>
+   <a class="new" href="SetTalkTarget_%28script_event%29" title="SetTalkTarget (script event)">
+    setTalkTarget
+   </a>
+  </li>
+  <li>
+   <a class="new" href="SetTurnRate_%28script_event%29" title="SetTurnRate (script event)">
+    setTurnRate
+   </a>
+  </li>
+  <li>
+   <a class="new" href="Shrivel_%28script_event%29" title="Shrivel (script event)">
+    shrivel
+   </a>
+  </li>
+  <li>
+   <a class="new" href="SlideTo_%28script_event%29" title="SlideTo (script event)">
+    slideTo
+   </a>
+  </li>
+  <li>
+   <a class="new" href="StopMove_%28script_event%29" title="StopMove (script event)">
+    stopMove
+   </a>
+  </li>
+  <li>
+   <a class="new" href="StopRagdoll_%28script_event%29" title="StopRagdoll (script event)">
+    stopRagdoll
+   </a>
+  </li>
+  <li>
+   <a href="StopThinking_%28script_event%29" title="StopThinking (script event)">
+    stopThinking
+   </a>
+  </li>
+  <li>
+   <a class="new" href="TestAnimAttack_%28script_event%29" title="TestAnimAttack (script event)">
+    testAnimAttack
+   </a>
+  </li>
+  <li>
+   <a class="new" href="TestAnimMove_%28script_event%29" title="TestAnimMove (script event)">
+    testAnimMove
+   </a>
+  </li>
+  <li>
+   <a class="new" href="TestAnimMoveTowardEnemy_%28script_event%29" title="TestAnimMoveTowardEnemy (script event)">
+    testAnimMoveTowardEnemy
+   </a>
+  </li>
+  <li>
+   <a class="new" href="TestChargeAttack_%28script_event%29" title="TestChargeAttack (script event)">
+    testChargeAttack
+   </a>
+  </li>
+  <li>
+   <a class="new" href="TestMeleeAttack_%28script_event%29" title="TestMeleeAttack (script event)">
+    testMeleeAttack
+   </a>
+  </li>
+  <li>
+   <a class="new" href="TestMoveToPosition_%28script_event%29" title="TestMoveToPosition (script event)">
+    testMoveToPosition
+   </a>
+  </li>
+  <li>
+   <a class="new" href="TravelDistanceBetweenEntities_%28script_event%29" title="TravelDistanceBetweenEntities (script event)">
+    travelDistanceBetweenEntities
+   </a>
+  </li>
+  <li>
+   <a class="new" href="TravelDistanceBetweenPoints_%28script_event%29" title="TravelDistanceBetweenPoints (script event)">
+    travelDistanceBetweenPoints
+   </a>
+  </li>
+  <li>
+   <a class="new" href="TravelDistanceToEntity_%28script_event%29" title="TravelDistanceToEntity (script event)">
+    travelDistanceToEntity
+   </a>
+  </li>
+  <li>
+   <a class="new" href="TravelDistanceToPoint_%28script_event%29" title="TravelDistanceToPoint (script event)">
+    travelDistanceToPoint
+   </a>
+  </li>
+  <li>
+   <a class="new" href="TurnTo_%28script_event%29" title="TurnTo (script event)">
+    turnTo
+   </a>
+  </li>
+  <li>
+   <a class="new" href="TurnToEntity_%28script_event%29" title="TurnToEntity (script event)">
+    turnToEntity
+   </a>
+  </li>
+  <li>
+   <a class="new" href="TurnToPos_%28script_event%29" title="TurnToPos (script event)">
+    turnToPos
+   </a>
+  </li>
+  <li>
+   <a class="new" href="WaitAction_%28script_event%29" title="WaitAction (script event)">
+    waitAction
+   </a>
+  </li>
+  <li>
+   <a class="new" href="WaitMove_%28script_event%29" title="WaitMove (script event)">
+    waitMove
+   </a>
+  </li>
+  <li>
+   <a class="new" href="WakeOnFlashlight_%28script_event%29" title="WakeOnFlashlight (script event)">
+    wakeOnFlashlight
+   </a>
+  </li>
+  <li>
+   <a class="new" href="Wander_%28script_event%29" title="Wander (script event)">
+    wander
+   </a>
+  </li>
+ </ul>
+ <a name="idAI_Vagary_Events">
+ </a>
+ <h3>
+  idAI_Vagary Events
+ </h3>
+ <p>
+  Events declared in the
+  <a href="Spawn_class" title="Spawn class">
+   spawn class
+  </a>
+  <a class="new" href="IdAI_Vagary_%28class%29" title="IdAI Vagary (class)">
+   idAI_Vagary
+  </a>
+ </p>
+ <ul>
+  <li>
+   <a class="new" href="Vagary_ChooseObjectToThrow_%28script_event%29" title="Vagary ChooseObjectToThrow (script event)">
+    vagary_ChooseObjectToThrow
+   </a>
+  </li>
+  <li>
+   <a class="new" href="Vagary_ThrowObjectAtEnemy_%28script_event%29" title="Vagary ThrowObjectAtEnemy (script event)">
+    vagary_ThrowObjectAtEnemy
+   </a>
+  </li>
+ </ul>
+ <a name="idAnimated_Events">
+ </a>
+ <h2>
+  idAnimated Events
+ </h2>
+ <p>
+  Events declared in the
+  <a href="Spawn_class" title="Spawn class">
+   spawn class
+  </a>
+  <a class="new" href="IdAnimated_%28class%29" title="IdAnimated (class)">
+   idAnimated
+  </a>
+ </p>
+ <ul>
+  <li>
+   <a href="LaunchMissiles_%28script_event%29" title="LaunchMissiles (script event)">
+    launchMissiles
+   </a>
+  </li>
+  <li>
+   <a href="LeftFoot_%28script_event%29" title="LeftFoot (script event)">
+    leftFoot
+   </a>
+  </li>
+  <li>
+   <a href="RightFoot_%28script_event%29" title="RightFoot (script event)">
+    rightFoot
+   </a>
+  </li>
+  <li>
+   <a href="StartRagdoll_%28script_event%29" title="StartRagdoll (script event)">
+    startRagdoll
+   </a>
+  </li>
+ </ul>
+ <a name="idAnimatedEntity_Events">
+ </a>
+ <h2>
+  idAnimatedEntity Events
+ </h2>
+ <p>
+  Events declared in the
+  <a href="Spawn_class" title="Spawn class">
+   spawn class
+  </a>
+  <a class="new" href="IdAnimatedEntity_%28class%29" title="IdAnimatedEntity (class)">
+   idAnimatedEntity
+  </a>
+ </p>
+ <ul>
+  <li>
+   <a href="ClearAllJoints_%28script_event%29" title="ClearAllJoints (script event)">
+    clearAllJoints
+   </a>
+  </li>
+  <li>
+   <a href="ClearJoint_%28script_event%29" title="ClearJoint (script event)">
+    clearJoint
+   </a>
+  </li>
+  <li>
+   <a href="GetJointAngle_%28script_event%29" title="GetJointAngle (script event)">
+    getJointAngle
+   </a>
+  </li>
+  <li>
+   <a href="GetJointHandle_%28script_event%29" title="GetJointHandle (script event)">
+    getJointHandle
+   </a>
+  </li>
+  <li>
+   <a href="GetJointPos_%28script_event%29" title="GetJointPos (script event)">
+    getJointPos
+   </a>
+  </li>
+  <li>
+   <a href="SetJointAngle_%28script_event%29" title="SetJointAngle (script event)">
+    setJointAngle
+   </a>
+  </li>
+  <li>
+   <a href="SetJointPos_%28script_event%29" title="SetJointPos (script event)">
+    setJointPos
+   </a>
+  </li>
+ </ul>
+ <a name="idCameraAnim_Events">
+ </a>
+ <h2>
+  idCameraAnim Events
+ </h2>
+ <p>
+  Events declared in the
+  <a href="Spawn_class" title="Spawn class">
+   spawn class
+  </a>
+  <a class="new" href="IdCameraAnim_%28class%29" title="IdCameraAnim (class)">
+   idCameraAnim
+  </a>
+ </p>
+ <ul>
+  <li>
+   <a href="Start_%28script_event%29" title="Start (script event)">
+    start
+   </a>
+  </li>
+  <li>
+   <a href="Stop_%28script_event%29" title="Stop (script event)">
+    stop
+   </a>
+  </li>
+ </ul>
+ <a name="idCombatNode_Events">
+ </a>
+ <h2>
+  idCombatNode Events
+ </h2>
+ <p>
+  Events declared in the
+  <a href="Spawn_class" title="Spawn class">
+   spawn class
+  </a>
+  <a class="new" href="IdCombatNode_%28class%29" title="IdCombatNode (class)">
+   idCombatNode
+  </a>
+ </p>
+ <ul>
+  <li>
+   <a href="MarkUsed_%28script_event%29" title="MarkUsed (script event)">
+    markUsed
+   </a>
+  </li>
+ </ul>
+ <a name="idDoor_Events">
+ </a>
+ <h2>
+  idDoor Events
+ </h2>
+ <p>
+  Events declared in the
+  <a href="Spawn_class" title="Spawn class">
+   spawn class
+  </a>
+  <a class="new" href="IdDoor_%28class%29" title="IdDoor (class)">
+   idDoor
+  </a>
+ </p>
+ <ul>
+  <li>
+   <a href="Close_%28script_event%29" title="Close (script event)">
+    close
+   </a>
+  </li>
+  <li>
+   <a href="Disable_%28script_event%29" title="Disable (script event)">
+    disable
+   </a>
+  </li>
+  <li>
+   <a href="Enable_%28script_event%29" title="Enable (script event)">
+    enable
+   </a>
+  </li>
+  <li>
+   <a href="IsLocked_%28script_event%29" title="IsLocked (script event)">
+    isLocked
+   </a>
+  </li>
+  <li>
+   <a href="IsOpen_%28script_event%29" title="IsOpen (script event)">
+    isOpen
+   </a>
+  </li>
+  <li>
+   <a href="Lock_%28script_event%29" title="Lock (script event)">
+    lock
+   </a>
+  </li>
+  <li>
+   <a href="Open_%28script_event%29" title="Open (script event)">
+    open
+   </a>
+  </li>
+ </ul>
+ <a name="idForcefield_Events">
+ </a>
+ <h2>
+  idForcefield Events
+ </h2>
+ <p>
+  Events declared in the
+  <a href="Spawn_class" title="Spawn class">
+   spawn class
+  </a>
+  <a class="new" href="IdForceField_%28class%29" title="IdForceField (class)">
+   idForceField
+  </a>
+ </p>
+ <ul>
+  <li>
+   <a href="Toggle_%28script_event%29" title="Toggle (script event)">
+    Toggle
+   </a>
+  </li>
+ </ul>
+ <a name="idLight_Events">
+ </a>
+ <h2>
+  idLight Events
+ </h2>
+ <p>
+  Events declared in the
+  <a href="Spawn_class" title="Spawn class">
+   spawn class
+  </a>
+  <a class="new" href="IdLight_%28class%29" title="IdLight (class)">
+   idLight
+  </a>
+ </p>
+ <ul>
+  <li>
+   <a href="FadeInLight_%28script_event%29" title="FadeInLight (script event)">
+    fadeInLight
+   </a>
+  </li>
+  <li>
+   <a href="FadeOutLight_%28script_event%29" title="FadeOutLight (script event)">
+    fadeOutLight
+   </a>
+  </li>
+  <li>
+   <a href="GetLightParm_%28script_event%29" title="GetLightParm (script event)">
+    getLightParm
+   </a>
+  </li>
+  <li>
+   <a href="Off_%28script_event%29" title="Off (script event)">
+    Off
+   </a>
+  </li>
+  <li>
+   <a href="On_%28script_event%29" title="On (script event)">
+    On
+   </a>
+  </li>
+  <li>
+   <a href="SetLightParm_%28script_event%29" title="SetLightParm (script event)">
+    setLightParm
+   </a>
+  </li>
+  <li>
+   <a href="SetLightParms_%28script_event%29" title="SetLightParms (script event)">
+    setLightParms
+   </a>
+  </li>
+  <li>
+   <a href="SetRadius_%28script_event%29" title="SetRadius (script event)">
+    setRadius
+   </a>
+  </li>
+  <li>
+   <a href="SetRadiusXYZ_%28script_event%29" title="SetRadiusXYZ (script event)">
+    setRadiusXYZ
+   </a>
+  </li>
+  <li>
+   <a href="SetShader_%28script_event%29" title="SetShader (script event)">
+    setShader
+   </a>
+  </li>
+ </ul>
+ <p>
+  <br/>
+ </p>
+ <a name="idMoveable_Events">
+ </a>
+ <h2>
+  idMoveable Events
+ </h2>
+ <p>
+  Events declared in the
+  <a href="Spawn_class" title="Spawn class">
+   spawn class
+  </a>
+  <a class="new" href="IdMoveAble_%28class%29" title="IdMoveAble (class)">
+   idMoveAble
+  </a>
+ </p>
+ <ul>
+  <li>
+   <a href="BecomeNonSolid_%28script_event%29" title="BecomeNonSolid (script event)">
+    becomeNonSolid
+   </a>
+  </li>
+  <li>
+   <a href="EnableDamage_%28script_event%29" title="EnableDamage (script event)">
+    enableDamage
+   </a>
+  </li>
+  <li>
+   <a href="IsAtRest_%28script_event%29" title="IsAtRest (script event)">
+    isAtRest
+   </a>
+  </li>
+ </ul>
+ <a name="idMover_Events">
+ </a>
+ <h2>
+  idMover Events
+ </h2>
+ <p>
+  Events declared in the
+  <a href="Spawn_class" title="Spawn class">
+   spawn class
+  </a>
+  <a class="new" href="IdMover_%28class%29" title="IdMover (class)">
+   idMover
+  </a>
+ </p>
+ <ul>
+  <li>
+   <a href="AccelSound_%28script_event%29" title="AccelSound (script event)">
+    accelSound
+   </a>
+  </li>
+  <li>
+   <a href="AccelTime_%28script_event%29" title="AccelTime (script event)">
+    accelTime
+   </a>
+  </li>
+  <li>
+   <a href="AccelTo_%28script_event%29" title="AccelTo (script event)">
+    accelTo
+   </a>
+  </li>
+  <li>
+   <a href="Bob_%28script_event%29" title="Bob (script event)">
+    bob
+   </a>
+  </li>
+  <li>
+   <a href="ClosePortal_%28script_event%29" title="ClosePortal (script event)">
+    closePortal
+   </a>
+  </li>
+  <li>
+   <a href="DecelSound_%28script_event%29" title="DecelSound (script event)">
+    decelSound
+   </a>
+  </li>
+  <li>
+   <a href="DecelTime_%28script_event%29" title="DecelTime (script event)">
+    decelTime
+   </a>
+  </li>
+  <li>
+   <a href="DecelTo_%28script_event%29" title="DecelTo (script event)">
+    decelTo
+   </a>
+  </li>
+  <li>
+   <a href="DisableSplineAngles_%28script_event%29" title="DisableSplineAngles (script event)">
+    disableSplineAngles
+   </a>
+  </li>
+  <li>
+   <a href="EnableSplineAngles_%28script_event%29" title="EnableSplineAngles (script event)">
+    enableSplineAngles
+   </a>
+  </li>
+  <li>
+   <a href="IsMoving_%28script_event%29" title="IsMoving (script event)">
+    isMoving
+   </a>
+  </li>
+  <li>
+   <a href="IsRotating_%28script_event%29" title="IsRotating (script event)">
+    isRotating
+   </a>
+  </li>
+  <li>
+   <a href="Move_%28script_event%29" title="Move (script event)">
+    move
+   </a>
+  </li>
+  <li>
+   <a href="MoveSound_%28script_event%29" title="MoveSound (script event)">
+    moveSound
+   </a>
+  </li>
+  <li>
+   <a href="MoveTo_%28script_event%29" title="MoveTo (script event)">
+    moveTo
+   </a>
+  </li>
+  <li>
+   <a href="MoveToPos_%28script_event%29" title="MoveToPos (script event)">
+    moveToPos
+   </a>
+  </li>
+  <li>
+   <a href="OpenPortal_%28script_event%29" title="OpenPortal (script event)">
+    openPortal
+   </a>
+  </li>
+  <li>
+   <a href="RemoveInitialSplineAngles_%28script_event%29" title="RemoveInitialSplineAngles (script event)">
+    removeInitialSplineAngles
+   </a>
+  </li>
+  <li>
+   <a href="Rotate_%28script_event%29" title="Rotate (script event)">
+    rotate
+   </a>
+  </li>
+  <li>
+   <a href="RotateDownTo_%28script_event%29" title="RotateDownTo (script event)">
+    rotateDownTo
+   </a>
+  </li>
+  <li>
+   <a href="RotateOnce_%28script_event%29" title="RotateOnce (script event)">
+    rotateOnce
+   </a>
+  </li>
+  <li>
+   <a href="RotateTo_%28script_event%29" title="RotateTo (script event)">
+    rotateTo
+   </a>
+  </li>
+  <li>
+   <a href="RotateUpTo_%28script_event%29" title="RotateUpTo (script event)">
+    rotateUpTo
+   </a>
+  </li>
+  <li>
+   <a href="Speed_%28script_event%29" title="Speed (script event)">
+    speed
+   </a>
+  </li>
+  <li>
+   <a href="StartSpline_%28script_event%29" title="StartSpline (script event)">
+    startSpline
+   </a>
+  </li>
+  <li>
+   <a href="StopMoving_%28script_event%29" title="StopMoving (script event)">
+    stopMoving
+   </a>
+  </li>
+  <li>
+   <a href="StopRotating_%28script_event%29" title="StopRotating (script event)">
+    stopRotating
+   </a>
+  </li>
+  <li>
+   <a href="StopSpline_%28script_event%29" title="StopSpline (script event)">
+    stopSpline
+   </a>
+  </li>
+  <li>
+   <a href="Sway_%28script_event%29" title="Sway (script event)">
+    sway
+   </a>
+  </li>
+  <li>
+   <a href="Time_%28script_event%29" title="Time (script event)">
+    time
+   </a>
+  </li>
+ </ul>
+ <a name="idPlayer_Events">
+ </a>
+ <h2>
+  idPlayer Events
+ </h2>
+ <p>
+  Events declared in the
+  <a href="Spawn_class" title="Spawn class">
+   spawn class
+  </a>
+  <a class="new" href="IdPlayer_%28class%29" title="IdPlayer (class)">
+   idPlayer
+  </a>
+ </p>
+ <ul>
+  <li>
+   <a href="DisableWeapon_%28script_event%29" title="DisableWeapon (script event)">
+    disableWeapon
+   </a>
+  </li>
+  <li>
+   <a href="EnableWeapon_%28script_event%29" title="EnableWeapon (script event)">
+    enableWeapon
+   </a>
+  </li>
+  <li>
+   <a href="GetButtons_%28script_event%29" title="GetButtons (script event)">
+    getButtons
+   </a>
+  </li>
+  <li>
+   <a href="GetCurrentWeapon_%28script_event%29" title="GetCurrentWeapon (script event)">
+    getCurrentWeapon
+   </a>
+  </li>
+  <li>
+   <a href="GetMove_%28script_event%29" title="GetMove (script event)">
+    getMove
+   </a>
+  </li>
+  <li>
+   <a href="GetPreviousWeapon_%28script_event%29" title="GetPreviousWeapon (script event)">
+    getPreviousWeapon
+   </a>
+  </li>
+  <li>
+   <a href="GetViewAngles_%28script_event%29" title="GetViewAngles (script event)">
+    getViewAngles
+   </a>
+  </li>
+  <li>
+   <a href="GetWeaponEntity_%28script_event%29" title="GetWeaponEntity (script event)">
+    getWeaponEntity
+   </a>
+  </li>
+  <li>
+   <a href="InPDA_%28script_event%29" title="InPDA (script event)">
+    inPDA
+   </a>
+  </li>
+  <li>
+   <a href="OpenPDA_%28script_event%29" title="OpenPDA (script event)">
+    openPDA
+   </a>
+  </li>
+  <li>
+   <a href="SelectWeapon_%28script_event%29" title="SelectWeapon (script event)">
+    selectWeapon
+   </a>
+  </li>
+ </ul>
+ <a name="idProjectile_Events">
+ </a>
+ <h2>
+  idProjectile Events
+ </h2>
+ <p>
+  Events declared in the
+  <a href="Spawn_class" title="Spawn class">
+   spawn class
+  </a>
+  <a class="new" href="IdProjectile_%28class%29" title="IdProjectile (class)">
+   idProjectile
+  </a>
+ </p>
+ <ul>
+  <li>
+   <a href="GetProjectileState_%28script_event%29" title="GetProjectileState (script event)">
+    getProjectileState
+   </a>
+  </li>
+ </ul>
+ <a name="idWeapon_Events">
+ </a>
+ <h2>
+  idWeapon Events
+ </h2>
+ <p>
+  Events declared in the
+  <a href="Spawn_class" title="Spawn class">
+   spawn class
+  </a>
+  <a class="new" href="IdWeapon_%28class%29" title="IdWeapon (class)">
+   idWeapon
+  </a>
+ </p>
+ <ul>
+  <li>
+   <a href="AddToClip_%28script_event%29" title="AddToClip (script event)">
+    addToClip
+   </a>
+  </li>
+  <li>
+   <a class="new" href="AllowDrop_%28script_event%29" title="AllowDrop (script event)">
+    allowDrop
+   </a>
+  </li>
+  <li>
+   <a class="new" href="AmmoAvailable_%28script_event%29" title="AmmoAvailable (script event)">
+    ammoAvailable
+   </a>
+  </li>
+  <li>
+   <a class="new" href="AmmoInClip_%28script_event%29" title="AmmoInClip (script event)">
+    ammoInClip
+   </a>
+  </li>
+  <li>
+   <a href="AnimDone_%28script_event%29" title="AnimDone (script event)">
+    animDone
+   </a>
+  </li>
+  <li>
+   <a class="new" href="AutoReload_%28script_event%29" title="AutoReload (script event)">
+    autoReload
+   </a>
+  </li>
+  <li>
+   <a href="ClipSize_%28script_event%29" title="ClipSize (script event)">
+    clipSize
+   </a>
+  </li>
+  <li>
+   <a class="new" href="CreateProjectile_%28script_event%29" title="CreateProjectile (script event)">
+    createProjectile
+   </a>
+  </li>
+  <li>
+   <a href="Flashlight_%28script_event%29" title="Flashlight (script event)">
+    flashlight
+   </a>
+  </li>
+  <li>
+   <a href="GetBlendFrames_%28script_event%29" title="GetBlendFrames (script event)">
+    getBlendFrames
+   </a>
+  </li>
+  <li>
+   <a class="new" href="GetOwner_%28script_event%29" title="GetOwner (script event)">
+    getOwner
+   </a>
+  </li>
+  <li>
+   <a class="new" href="GetWorldModel_%28script_event%29" title="GetWorldModel (script event)">
+    getWorldModel
+   </a>
+  </li>
+  <li>
+   <a class="new" href="IsInvisible_%28script_event%29" title="IsInvisible (script event)">
+    isInvisible
+   </a>
+  </li>
+  <li>
+   <a href="LaunchProjectiles_%28script_event%29" title="LaunchProjectiles (script event)">
+    launchProjectiles
+   </a>
+  </li>
+  <li>
+   <a class="new" href="Melee_%28script_event%29" title="Melee (script event)">
+    melee
+   </a>
+  </li>
+  <li>
+   <a class="new" href="NetEndReload_%28script_event%29" title="NetEndReload (script event)">
+    netEndReload
+   </a>
+  </li>
+  <li>
+   <a class="new" href="NetReload_%28script_event%29" title="NetReload (script event)">
+    netReload
+   </a>
+  </li>
+  <li>
+   <a class="new" href="NextWeapon_%28script_event%29" title="NextWeapon (script event)">
+    nextWeapon
+   </a>
+  </li>
+  <li>
+   <a href="PlayAnim_%28script_event%29" title="PlayAnim (script event)">
+    playAnim
+   </a>
+  </li>
+  <li>
+   <a href="PlayCycle_%28script_event%29" title="PlayCycle (script event)">
+    playCycle
+   </a>
+  </li>
+  <li>
+   <a href="SetBlendFrames_%28script_event%29" title="SetBlendFrames (script event)">
+    setBlendFrames
+   </a>
+  </li>
+  <li>
+   <a class="new" href="TotalAmmoCount_%28script_event%29" title="TotalAmmoCount (script event)">
+    totalAmmoCount
+   </a>
+  </li>
+  <li>
+   <a href="UseAmmo_%28script_event%29" title="UseAmmo (script event)">
+    useAmmo
+   </a>
+  </li>
+  <li>
+   <a class="new" href="WeaponHolstered_%28script_event%29" title="WeaponHolstered (script event)">
+    weaponHolstered
+   </a>
+  </li>
+  <li>
+   <a class="new" href="WeaponLowering_%28script_event%29" title="WeaponLowering (script event)">
+    weaponLowering
+   </a>
+  </li>
+  <li>
+   <a href="WeaponOutOfAmmo_%28script_event%29" title="WeaponOutOfAmmo (script event)">
+    weaponOutOfAmmo
+   </a>
+  </li>
+  <li>
+   <a href="WeaponReady_%28script_event%29" title="WeaponReady (script event)">
+    weaponReady
+   </a>
+  </li>
+  <li>
+   <a class="new" href="WeaponReloading_%28script_event%29" title="WeaponReloading (script event)">
+    weaponReloading
+   </a>
+  </li>
+  <li>
+   <a class="new" href="WeaponRising_%28script_event%29" title="WeaponRising (script event)">
+    weaponRising
+   </a>
+  </li>
+  <li>
+   <a href="WeaponState_%28script_event%29" title="WeaponState (script event)">
+    weaponState
+   </a>
+  </li>
+ </ul>
+ <a name="Utility_Functions">
+ </a>
+ <h2>
+  Utility Functions
+ </h2>
+ <p>
+  These functions can be found in
+  <i>
+   doom_util.script
+  </i>
+  .
+ </p>
+ <ul>
+  <li>
+   <a class="new" href="Abs_%28script_event%29" title="Abs (script event)">
+    abs
+   </a>
+  </li>
+  <li>
+   <a class="new" href="Anglemod180_%28script_event%29" title="Anglemod180 (script event)">
+    anglemod180
+   </a>
+  </li>
+  <li>
+   <a class="new" href="Anglemod360_%28script_event%29" title="Anglemod360 (script event)">
+    anglemod360
+   </a>
+  </li>
+  <li>
+   <a class="new" href="CalcTimeForRotationAroundEntity_%28script_event%29" title="CalcTimeForRotationAroundEntity (script event)">
+    CalcTimeForRotationAroundEntity
+   </a>
+  </li>
+  <li>
+   <a class="new" href="ClearSmoke_%28script_event%29" title="ClearSmoke (script event)">
+    clearSmoke
+   </a>
+  </li>
+  <li>
+   <a href="CrossFadeEnt_%28script_event%29" title="CrossFadeEnt (script event)">
+    crossFadeEnt
+   </a>
+  </li>
+  <li>
+   <a class="new" href="DelayRemove_%28script_event%29" title="DelayRemove (script event)">
+    delayRemove
+   </a>
+  </li>
+  <li>
+   <a class="new" href="DelayRemoveThread_%28script_event%29" title="DelayRemoveThread (script event)">
+    delayRemoveThread
+   </a>
+  </li>
+  <li>
+   <a class="new" href="DelayTime_%28script_event%29" title="DelayTime (script event)">
+    DelayTime
+   </a>
+  </li>
+  <li>
+   <a href="FadeInEnt_%28script_event%29" title="FadeInEnt (script event)">
+    fadeInEnt
+   </a>
+  </li>
+  <li>
+   <a href="FadeOutEnt_%28script_event%29" title="FadeOutEnt (script event)">
+    fadeOutEnt
+   </a>
+  </li>
+  <li>
+   <a class="new" href="Func_clipmodel_%28script_event%29" title="Func clipmodel (script event)">
+    func_clipmodel
+   </a>
+  </li>
+  <li>
+   <a class="new" href="Headlook_off_%28script_event%29" title="Headlook off (script event)">
+    headlook_off
+   </a>
+  </li>
+  <li>
+   <a class="new" href="Headlook_on_%28script_event%29" title="Headlook on (script event)">
+    headlook_on
+   </a>
+  </li>
+  <li>
+   <a class="new" href="InterpolateShaderParm_%28script_event%29" title="InterpolateShaderParm (script event)">
+    interpolateShaderParm
+   </a>
+  </li>
+  <li>
+   <a class="new" href="OverrideLegs_%28script_event%29" title="OverrideLegs (script event)">
+    overrideLegs
+   </a>
+  </li>
+  <li>
+   <a class="new" href="OverrideTorso_%28script_event%29" title="OverrideTorso (script event)">
+    overrideTorso
+   </a>
+  </li>
+  <li>
+   <a class="new" href="RandomDelay_%28script_event%29" title="RandomDelay (script event)">
+    RandomDelay
+   </a>
+  </li>
+  <li>
+   <a class="new" href="RandomTime_%28script_event%29" title="RandomTime (script event)">
+    RandomTime
+   </a>
+  </li>
+  <li>
+   <a class="new" href="SetShaderTime_%28script_event%29" title="SetShaderTime (script event)">
+    setShaderTime
+   </a>
+  </li>
+  <li>
+   <a class="new" href="Unpause_%28script_event%29" title="Unpause (script event)">
+    unpause
+   </a>
+  </li>
+  <li>
+   <a class="new" href="WaitForButtonPress_%28script_event%29" title="WaitForButtonPress (script event)">
+    waitForButtonPress
+   </a>
+  </li>
+ </ul>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:1311-0!1!0!0!!en!2 and timestamp 20121119100904 -->

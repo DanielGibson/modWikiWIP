@@ -1,0 +1,572 @@
+ <p>
+  An articulated figure declaration defines the parameters for a ragdoll to react physically in the game. It's purpose is to assign collision bodies and joint restraints to the skeleton of an MD5mesh. These declarations are used explicitly for ragdolls.
+ </p>
+ <a name="Syntax">
+ </a>
+ <h2>
+  Syntax
+ </h2>
+ <pre>articulatedFigure [name] {
+
+settings {
+ ...
+}
+
+body [name] {
+ ...
+}
+
+[jointType] [name] {
+ ...
+} 
+
+{
+</pre>
+ <p>
+  AF declarations are started with a header which consists of the keyword
+  <i>
+   articulatedFigure
+  </i>
+  followed by the
+  <i>
+   name
+  </i>
+  of the declaration. They are then followed by the body of the declaration which is enclosed in curly brackets.
+ </p>
+ <p>
+  The body of the declaration consists of three sections, settings, bodies, and joints.
+ </p>
+ <a name="Settings">
+ </a>
+ <h3>
+  Settings
+ </h3>
+ <pre>settings {
+   key   parms
+}
+</pre>
+ <p>
+  The settings section contains keys and parameters that apply to the entire articulated figure.
+ </p>
+ <p>
+  The settings section is started with a header which consists of the keyword
+  <i>
+   settings
+  </i>
+  followed by the body. The body is enclosed in curly brackets.
+ </p>
+ <p>
+  The following keys are used in the body of this section...
+ </p>
+ <table border="1" cellpadding="0" cellspacing="0" style="width:75%">
+  <tr style="background:#AA0000; color:white">
+   <th>
+    KEYWORD
+   </th>
+   <th>
+    DESCRIPTION
+   </th>
+  </tr>
+  <tr align="center">
+   <td>
+    mesh "md5mesh"
+   </td>
+   <td>
+    The md5 mesh used for the articulated figure
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    anim "md5anim"
+   </td>
+   <td>
+    The initial animation (t-pose)
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    skin "skin"
+   </td>
+   <td>
+    A skin to use
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    friction &lt;linear&gt;, &lt;angular&gt;, &lt;contact&gt;
+   </td>
+   <td>
+    The default friction for all bodies. The linear and angular friction values specify the translational and rotational air friction. The contact friction value specifies the friction with contact surfaces. The friction values are usually in the range [0, 1].
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    selfCollision 0/1
+   </td>
+   <td>
+    The default setting for self collision detection
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    suspendSpeed &lt;linear velocity&gt; &lt;angular velocity&gt; &lt;linear acceleration&gt; &lt;angular acceleration&gt;
+   </td>
+   <td>
+    The speed at which the articulated figure comes to rest. The specified linear and angular velocity is the maximum velocity at which the articulated figure may come to rest. The specified linear and angular acceleration is the maximum acceleration at which the articulated figure may come to rest.
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    totalMass &lt;mass&gt;
+   </td>
+   <td>
+    The total mass of the articulated figure. If the total mass is set to a value greater than zero then the mass of each body is scaled such that the total mass of the articulated figure equals the given mass.
+   </td>
+  </tr>
+ </table>
+ <a name="Bodies">
+ </a>
+ <h3>
+  Bodies
+ </h3>
+ <pre>body [name] {
+   key   parms
+}
+</pre>
+ <p>
+  The bodies section contains a list of collision bodies and their respective keys and parameters.
+ </p>
+ <p>
+  Each collision body is started with a header which consists of the keyword
+  <i>
+   body
+  </i>
+  followed by the
+  <i>
+   name
+  </i>
+  of the collision body to be declared. They are then followed by the body of the declaration which is enclosed in curly brackets.
+ </p>
+ <p>
+  There can be multiple collision body declarations in the body section.
+ </p>
+ <p>
+  The following keys are used in the body of this section...
+ </p>
+ <table border="1" cellpadding="0" cellspacing="0" style="width:75%">
+  <tr style="background:#AA0000; color:white">
+   <th>
+    KEYWORD
+   </th>
+   <th>
+    DESCRIPTION
+   </th>
+  </tr>
+  <tr align="center">
+   <td>
+    joint "joint name"
+   </td>
+   <td>
+    The joint the body modifies. There is always one body which modifies the origin joint of the skeletal model. The position and orientation of this body are used to move the whole skeletal model through the world. The joint key for this body is set to "origin".
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    model [collision model]
+   </td>
+   <td>
+    A body can use several different collision models. Such a collision model is specified with the model key: model box( (min_x, min_y, min_z), (max_x, max_y, max_z) ) model octahedron( (min_x, min_y, min_z), (max_x, max_y, max_z) ) model dodecahedron( (min_x, min_y, min_z), (max_x, max_y, max_z) ) model cone( (min_x, min_y, min_z), (max_x, max_y, max_z), numSides ) model cylinder( (min_x, min_y, min_z), (max_x, max_y, max_z), numSides ) model bone( (start_x, start_y, start_z), (end_x, end_y, end_z), width ) model custom( "name" )
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    origin ( x, y, z )
+   </td>
+   <td>
+    The collision model has to be placed at the right position relative to the joint which is modified by the body. This key specifies the position of the center of the collision model.
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    angles ( pitch, yaw, roll )
+   </td>
+   <td>
+    The collision model can be rotated about it's origin with the angles key
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    density &lt;value&gt;
+   </td>
+   <td>
+    The density of the collision model. The mass of the body equals the density times the volume of the collision model.
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    friction &lt;linear&gt;, &lt;angular&gt;, &lt;contact&gt;
+   </td>
+   <td>
+    Different friction properties can be specified for each body. The linear and angular friction values specify the translational and rotational air friction. The contact friction value specifies the friction with contact surfaces. The friction values are usually in the range [0, 1].
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    selfCollision 0/1
+   </td>
+   <td>
+    Set self collision detection per body.
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    containedjoints "jointlist"
+   </td>
+   <td>
+    Projectiles collide with the visual mesh of the skeletal model. For an impact position on the mesh the nearest joint of the skeletal model is taken. From this joint the impact is transferred to one of the bodies of the articulated figure. Each body has a list with joints that are more or less contained by the body. The impact near a joint is transferred to the body that contains the joint. A joint can only be contained by one body and each joint must be contained by a body. The joints contained by a body are specified with the containedjoints key.
+   </td>
+  </tr>
+ </table>
+ <a name="Joints">
+ </a>
+ <h3>
+  Joints
+ </h3>
+ <pre>[jointType] [name] {
+   key   parms
+}
+</pre>
+ <p>
+  The joints section contains a list of joints and their respective parameters.
+ </p>
+ <p>
+  Each joint is started with a header which consists of a joint type descriptor that defines the joint type followed the
+  <i>
+   name
+  </i>
+  of the joint. This is then followed by the body which is enclosed in curly brackets.
+ </p>
+ <p>
+  There can be multiple joint declarations in the joint section.
+ </p>
+ <p>
+  The keys used in the body of this section vary depending on what jointType is specified...
+ </p>
+ <a name="Ball_and_Socket">
+ </a>
+ <h4>
+  Ball and Socket
+ </h4>
+ <p>
+  'Need an overview description for this jointType'
+ </p>
+ <table border="1" cellpadding="0" cellspacing="0" style="width:75%">
+  <tr style="background:#AA0000; color:white">
+   <th>
+    KEYWORD
+   </th>
+   <th>
+    DESCRIPTION
+   </th>
+  </tr>
+  <tr align="center">
+   <td>
+    anchor ( x, y, z )
+   </td>
+   <td>
+    Specifies the center of the ball (required)
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    conelimit ( axis_x, axis_y, axis_z ), &lt;angle&gt;, ( shaft_x, shaft_y, shaft_z )
+   </td>
+   <td>
+    Specifies a cone shaped limit. The cone axis is specified by the first vector. The angle of the cone at the top follows. The cone is attached to body2. Next a shaft is specified which is attached to body1 and is constrained to always stay within the cone.
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    pyramidlimit ( axis1_x, axis1_y, axis1_z ), &lt;angle1&gt;, &lt;angle2&gt;, &lt;angle3&gt;, ( shaft_x, shaft_y, shaft_z )
+   </td>
+   <td>
+    Specifies a pyramid shaped limit. The pyramid axis is specified by the first vectors. The first and second angle specify the angles at the top of the pyramid. The third angle specifies the rotation of the pyramid about the pyramid axis. The pyramid is attached to body2. Next a shaft is specified which is attached to body1 and is constrained to always stay within the pyramid.
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    friction &lt;value&gt;
+   </td>
+   <td>
+    Specifies joint friction. The friction value is usually in the range [0, 1].
+   </td>
+  </tr>
+ </table>
+ <a name="Universal_Joint">
+ </a>
+ <h4>
+  Universal Joint
+ </h4>
+ <p>
+  An universal joint works very similar to a ball and socket joint. However the rotation about two shafts attached to the bodies is also constrained.
+ </p>
+ <table border="1" cellpadding="0" cellspacing="0" style="width:75%">
+  <tr style="background:#AA0000; color:white">
+   <th>
+    KEYWORD
+   </th>
+   <th>
+    DESCRIPTION
+   </th>
+  </tr>
+  <tr align="center">
+   <td>
+    anchor ( x, y, z )
+   </td>
+   <td>
+    Specifies the anchor of the universal joint (required)
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    shafts ( dir1_x, dir1_y, dir1_z ), ( dir2_x, dir2_y, dir2_z )
+   </td>
+   <td>
+    Specifies the two shafts (required) The first shaft is attached to body1 and points into or towards body1. The second shaft is attached to body2 and points into or towards body2. The rotation of body1 relative to body2 about these shafts is constrained.
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    conelimit ( axis_x, axis_y, axis_z ), angle
+   </td>
+   <td>
+    Specifies a cone shaped limit. The cone axis is specified by the first vector. The angle of the cone at the top follows. The cone is attached to body2. The first shaft attached to body1 is constrained to always stay within the cone.
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    pyramidlimit ( axis1_x, axis1_y, axis1_z ), angle1, angle2, angle3
+   </td>
+   <td>
+    Specifies a pyramid shaped limit. The pyramid axis is specified by the first vectors. The first and second angle specify angles at the top of the pyramid. The third angle specifies the rotation of the pyramid about the pyramid axis. The pyramid is attached to body2. The first shaft attached to body1 is constrained to always stay within the pyramid.
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    friction &lt;value&gt;
+   </td>
+   <td>
+    Specifies joint friction. The friction value is usually in the range [0, 1].
+   </td>
+  </tr>
+ </table>
+ <a name="Hinge">
+ </a>
+ <h4>
+  Hinge
+ </h4>
+ <p>
+  A hinge is specified by an anchor and a hinge axis about which the two bodies are allowed to rotate relative to each other.
+ </p>
+ <table border="1" cellpadding="0" cellspacing="0" style="width:75%">
+  <tr style="background:#AA0000; color:white">
+   <th>
+    KEYWORD
+   </th>
+   <th>
+    DESCRIPTION
+   </th>
+  </tr>
+  <tr align="center">
+   <td>
+    anchor ( x, y, z )
+   </td>
+   <td>
+    Specifies the anchor
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    axis ( axis_x, axis_y, axis_z )
+   </td>
+   <td>
+    Specifies the hinge axis
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    limit angle1, angle2, angle3
+   </td>
+   <td>
+    Specifies a V-shaped limit. The first angle specifies the center of the V-shaped limit. The angle which specifies the width of the V-shaped limit follows. The V-shape is attached to body2. Next a shaft is specified which is attached to body1 and is constrained to always stay within the V-shape. The orientation of this shaft is specified with the third angle.
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    friction &lt;value&gt;
+   </td>
+   <td>
+    Specifies joint friction. The friction value is usually in the range [0, 1].
+   </td>
+  </tr>
+ </table>
+ <a name="Spring">
+ </a>
+ <h4>
+  Spring
+ </h4>
+ <p>
+  A spring is specified by two anchors, one on each constrained body.
+ </p>
+ <table border="1" cellpadding="0" cellspacing="0" style="width:75%">
+  <tr style="background:#AA0000; color:white">
+   <th>
+    KEYWORD
+   </th>
+   <th>
+    DESCRIPTION
+   </th>
+  </tr>
+  <tr align="center">
+   <td>
+    anchor1 ( x, y, z )
+   </td>
+   <td>
+    Specifies the first anchor
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    anchor2 ( x, y, z )
+   </td>
+   <td>
+    Specifies the second anchor
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    friction &lt;value&gt;
+   </td>
+   <td>
+    Specifies joint friction. The friction value is usually in the range [0, 1].
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    stretch &lt;value&gt;
+   </td>
+   <td>
+    Spring constant when the spring is stretched
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    compress &lt;value&gt;
+   </td>
+   <td>
+    Spring constant when the spring is compressed
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    damping &lt;value&gt;
+   </td>
+   <td>
+    Spring damping
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    restLength &lt;value&gt;
+   </td>
+   <td>
+    Rest length of the spring
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    minLength &lt;value&gt;
+   </td>
+   <td>
+    Minimum length of the spring
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    maxLength &lt;value&gt;
+   </td>
+   <td>
+    Maximum length of the spring
+   </td>
+  </tr>
+ </table>
+ <a name="Vector_Syntax">
+ </a>
+ <h2>
+  Vector Syntax
+ </h2>
+ <p>
+  3D vectors are used to specify positions, directions and orientations of bodies and constraints. There are four ways to specify such a vector in a .af file
+ </p>
+ <table border="1" cellpadding="0" cellspacing="0" style="width:75%">
+  <tr style="background:#AA0000; color:white">
+   <th>
+    KEYWORD
+   </th>
+   <th>
+    DESCRIPTION
+   </th>
+  </tr>
+  <tr align="center">
+   <td>
+    ( x, y, z )
+   </td>
+   <td>
+    Position relative to the md5 origin
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    joint( "joint name" )
+   </td>
+   <td>
+    Position of a joint
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    bonecenter( "start joint name", "end joint name" )
+   </td>
+   <td>
+    Center of a bone between two joints
+   </td>
+  </tr>
+  <tr align="center">
+   <td>
+    bonedir( "start joint name", "end joint name" )
+   </td>
+   <td>
+    Direction of a bone from one joint to another
+   </td>
+  </tr>
+ </table>
+ <a name="Editing_Tools">
+ </a>
+ <h2>
+  Editing Tools
+ </h2>
+ <p>
+  Like other declaration types, articlulated figures can be edited in a text editor. However, the engine comes packaged with a built-in tool for editing these files. It can be accessed using the console command
+  <a class="new" href="EditAFs" title="EditAFs">
+   editAFs
+  </a>
+  .
+ </p>
+ <p>
+  Details on this tool's use can be found in the
+  <a href="AF_editor" title="AF editor">
+   articulated figure editor
+  </a>
+  article.
+ </p>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:1680-0!1!0!0!!en!2 and timestamp 20111130145240 -->

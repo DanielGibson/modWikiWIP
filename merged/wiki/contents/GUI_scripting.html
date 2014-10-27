@@ -1,0 +1,239 @@
+ <div align="left" style="float:right; font-size: 17px;background: #FFFFEE; padding: 5px; border: 1px solid #000000; padding-left: 15px; padding-right: 15px; margin-left: 15px; margin-right: 15px; padding-bottom: 15px; width: 400px;">
+  <div align="right" style="font-size: 10px; text-align=right;">
+   <a href="Help:Reference_box" title="Help:Reference box">
+    What's this?
+   </a>
+  </div>
+  <div>
+   <b>
+    GUI scripting quick reference
+   </b>
+  </div>
+  <hr/>
+  <span style="font-size: 14px">
+   <ul>
+    <li>
+     <a href="GUI_items" title="GUI items">
+      GUI items
+     </a>
+    </li>
+    <li>
+     <a href="GUI_item_properties" title="GUI item properties">
+      GUI item properties
+     </a>
+    </li>
+    <li>
+     <a href="GUI_variable_types" title="GUI variable types">
+      GUI variable types
+     </a>
+    </li>
+    <li>
+     <a href="GUI_item_events" title="GUI item events">
+      GUI item events
+     </a>
+    </li>
+    <li>
+     <a href="GUI_commands" title="GUI commands">
+      GUI commands
+     </a>
+    </li>
+   </ul>
+  </span>
+ </div>
+ <p>
+  GUI scripting is the system used on the
+  <a href="GUI_%28file_format%29" title="GUI (file format)">
+   GUI files
+  </a>
+  when creating
+  <a href="GUIs" title="GUIs">
+   GUIs
+  </a>
+  . The GUI scripting syntax is very different from the one featured on other scripting systems available on the engine. More than a programming language, it's a layout system, where you can create buttons and images that will be displayed; its scripting features are also quite limited, and oftenly, a developer has to resort to using external script (for example, some
+  <a href="Level_scripting" title="Level scripting">
+   level scripting
+  </a>
+  ) to add advanced features to a given GUI.
+ </p>
+ <p>
+  Still, it's a very powerful system to use, as it allows a multitude of new interactions inside the game and is quite easy to work with (you can change
+  <a href="GUI_%28file_format%29" title="GUI (file format)">
+   GUI
+  </a>
+  files externally and reload them inside the game without having to recompile or restart anything).
+ </p>
+ <p>
+  Also, notice that this system is a natural evolution of what's called the
+  <a class="external text" href="http://www.linux.ucla.edu/~phaethon/q3tamenu/q3tamenu.html" title="http://www.linux.ucla.edu/~phaethon/q3tamenu/q3tamenu.html">
+   Team Arena menu system
+  </a>
+  , a similar GUI system that has been available on id Software's Team Arena version of the Quake 3 engine.
+ </p>
+ <a name="General_schematics">
+ </a>
+ <h2>
+  General schematics
+ </h2>
+ <p>
+  A GUI script is composed of several different elements "windowDefs", "renderDefs" or other types of elements, refered on this wiki as "items". Each item is an screen element, whether visible or not, and it is used to build interface elements such as buttons, text fields, windows, menus and so on. Think of it as floating HTML elements, or Visual Basic elements, or Flash symbols/movieclips, or XUL box tags. It's an standard approach to
+  <a class="external text" href="http://en.wikipedia.org/wiki/User_interface_markup_language" title="http://en.wikipedia.org/wiki/User_interface_markup_language">
+   markup-based user interfaces
+  </a>
+  , although the Doom 3 GUI system syntax itself looks more like an script than a markup system.
+ </p>
+ <p>
+  This is a sample GUI script:
+ </p>
+ <pre>windowDef Desktop {
+    rect        0, 0, 640, 480
+    windowDef title {
+        rect        10, 10, 620, 460
+        visible     1
+        backcolor   0.7, 0.7, 0.7, 1
+        forecolor   1, 1, 1, 1
+        text        "Hello world."
+        textscale   1
+        font        "fonts/english"
+    }
+    windowDef button {
+        rect        110,110,420,260
+        visible     1
+        background  "assets/close"
+        matcolor    1, 1, 1, 1
+        float       "alreadyClicked" 0
+        onAction {
+           // Makes the title invisible
+            set "title::visible" "0";
+            set "button::alreadyClicked" "1";
+        }
+    }
+}
+</pre>
+ <p>
+  This example is a blank screen, with a "Hello world." text on top of it, and a button that hides the text. You can see there's one main windowDef (the
+  <a href="Desktop_GUI_item" title="Desktop GUI item">
+   Desktop GUI item
+  </a>
+  ) which always has a fixed name and size - it's the main document windowDef, let's say - and it contains several children windowDefs inside of it, which make up the elements on screen.
+ </p>
+ <a name="Reference">
+ </a>
+ <h2>
+  Reference
+ </h2>
+ <p>
+  The reference is meant to be a list of everything that can be done inside a GUI.
+ </p>
+ <ul>
+  <li>
+   <a href="GUI_items" title="GUI items">
+    Items
+   </a>
+   - Each GUI is made of several different items of different types.
+  </li>
+  <li>
+   <a href="GUI_item_properties" title="GUI item properties">
+    Item properties
+   </a>
+   - Each item can have a lot of properties define how they look like and how they act.
+  </li>
+  <li>
+   <a href="GUI_variable_types" title="GUI variable types">
+    Variables types
+   </a>
+   - Each item can also have additional variables.
+  </li>
+  <li>
+   <a href="GUI_item_events" title="GUI item events">
+    Events
+   </a>
+   - Items can have events that get called under certain conditions.
+  </li>
+  <li>
+   <a href="GUI_commands" title="GUI commands">
+    Commands
+   </a>
+   - And of course, items can have some commands for simple scripting.
+  </li>
+ </ul>
+ <a name="Additional_syntax">
+ </a>
+ <h2>
+  Additional syntax
+ </h2>
+ <p>
+  There are two special syntax cases:
+  <i>
+   comments
+  </i>
+  and
+  <i>
+   includes
+  </i>
+  .
+ </p>
+ <a name="Comments">
+ </a>
+ <h3>
+  Comments
+ </h3>
+ <p>
+  Comments are the classical
+  <i>
+   unusable
+  </i>
+  part of a GUI script. Lines marked as comments are completelly ignored by the game, so you can use comments to create special annotations on the script -- something you need to remember, something you need people that's messing with the code to know, something you want to turn off, etc. The GUI script accepts the two classical comment notations: "//" and "/* */".
+ </p>
+ <p>
+  The comment marker "//" is used on the beginning of lines you want to mark as comments. Everything from the "//" on is ignored, so you can use comments on lines with code to mention important information. Example:
+ </p>
+ <pre>// Makes the title invisible
+set "title::visible" "0";
+set "button::alreadyClicked" "1"; // So it'll remember not to execute anymore
+</pre>
+ <p>
+  And the comment markers "/* */" are used to start and end comment blocks. They're more fit to large pieces of text, or just multiline ones. Example:
+ </p>
+ <pre>/*
+War Is Peace
+Freedom Is Slavery
+Ignorance Is Strength
+*/
+</pre>
+ <p>
+  Remember that adding comments delimiters are the easiest way to "turn off" certain parts of the code - to "comment out" them - so it's pretty normal to see comment blocks which actually contain scripts.
+ </p>
+ <a name="Includes">
+ </a>
+ <h3>
+  Includes
+ </h3>
+ <p>
+  Includes exist to save on space and help reusing code. To do includes, use the
+  <i>
+   #include
+  </i>
+  keyword. With this keyword, you can include separate scripts (from other files) directly into your code -- when the script gets interpreted by the GUI system, it behaves as if the script it's referencing was included on that same line. For example,
+ </p>
+ <pre>#include "guis/gui_flicker.pd" 
+</pre>
+ <p>
+  It's the same as copying &amp; pasting the content of guis/gui_flicker.pd file on this line.
+ </p>
+ <p>
+  Using #include is great for organization and portability, and you can use it anywhere on your GUI script. It also works exactly like the #include statement in Flash's ActionScript.
+ </p>
+ <a name="External_links">
+ </a>
+ <h2>
+  External links
+ </h2>
+ <ul>
+  <li>
+   <a class="external text" href="http://www.iddevnet.com/doom3/guis.php" title="http://www.iddevnet.com/doom3/guis.php">
+    GUIs at iddevnet.com
+   </a>
+   - A lengthy explanation of the GUI system and its syntax. Very good resource.
+  </li>
+ </ul>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:1332-0!1!0!0!!en!2 and timestamp 20110906151357 -->

@@ -1,0 +1,92 @@
+ <a name="Overview">
+ </a>
+ <h2>
+  Overview
+ </h2>
+ <p>
+  Editing
+  <a class="new" href="MIP_Maps" title="MIP Maps">
+   MIP Maps
+  </a>
+  is done in the compressed (
+  <a href="DDS_%28file_format%29" title="DDS (file format)">
+   DDS
+  </a>
+  ) version of the image.  This tutorial will be using
+  <a class="external text" href="http://developer.nvidia.com/object/photoshop_dds_plugins.html" title="http://developer.nvidia.com/object/photoshop_dds_plugins.html">
+   NVIDIA's DDS plug-in for Photoshop
+  </a>
+  .  Authoring DDS files is, at this time, covered briefly in
+  <a href="Texturing" title="Texturing">
+   Texturing
+  </a>
+  .
+ </p>
+ <a name="Examination">
+ </a>
+ <h2>
+  Examination
+ </h2>
+ <p>
+  Open a DDS file in photoshop.  Assure that "Load MIP maps" is enabled.
+ </p>
+ <p>
+  <a class="image" href="Image:EditMIP_1_dialog.png" title="Image:EditMIP 1 dialog.png">
+   <img alt="Image:EditMIP 1 dialog.png" height="215" longdesc="/wiki/Image:EditMIP_1_dialog.png" src="/web/20121205221353im_/http://www.modwiki.net/w/images/d/dc/EditMIP_1_dialog.png" width="327"/>
+  </a>
+ </p>
+ <p>
+  The image with each MIP map level can now be seen.  Defects identified in game should be readily visible.  Depending on the compression method used, compression artifacts can be seen in just one MIP map, several, or all of them.
+ </p>
+ <p>
+  <a class="image" href="Image:EditMIP_2_MIPmaps.png" title="Image:EditMIP 2 MIPmaps.png">
+   <img alt="Image:EditMIP 2 MIPmaps.png" height="256" longdesc="/wiki/Image:EditMIP_2_MIPmaps.png" src="/web/20121205221353im_/http://www.modwiki.net/w/images/a/ac/EditMIP_2_MIPmaps.png" width="512"/>
+  </a>
+ </p>
+ <a name="Editing">
+ </a>
+ <h2>
+  Editing
+ </h2>
+ <p>
+  The advantage to NVIDIA's DDS plug-in is the loaded DDS file can be edited as is.  This might run counter to one's expectations, because the DDS format is described as a "lossy" format.  However, this isn't quite true.  While programs that save DDS files must utilize a lossy compression scheme, the format itself is losslessly compressed.  As long as we're not editing outside of the DDS format (DXT1 in this example), no loss of data should be observed (i.e. one shouldn't see compounding artifacts as is evident when opening, editing, and recompressing a
+  <a href="JPG_%28file_format%29" title="JPG (file format)">
+   jpg
+  </a>
+  image).
+ </p>
+ <p>
+  <a class="image" href="Image:EditMIP_3_edited.png" title="Image:EditMIP 3 edited.png">
+   <img alt="Image:EditMIP 3 edited.png" height="256" longdesc="/wiki/Image:EditMIP_3_edited.png" src="/web/20121205221353im_/http://www.modwiki.net/w/images/9/92/EditMIP_3_edited.png" width="512"/>
+  </a>
+ </p>
+ <a name="Saving">
+ </a>
+ <h2>
+  Saving
+ </h2>
+ <p>
+  Once the image has been edited to suit, save the image.  In the save dialog, be sure to enable "Use Existing MIP maps".  Make sure the correct format is selected (e.g. DXT1 for diffuse and specular, DXT5 for local).
+ </p>
+ <p>
+  <a class="image" href="Image:EditMIP_4_save.png" title="Image:EditMIP 4 save.png">
+   <img alt="Image:EditMIP 4 save.png" height="383" longdesc="/wiki/Image:EditMIP_4_save.png" src="/web/20121205221353im_/http://www.modwiki.net/w/images/3/31/EditMIP_4_save.png" width="579"/>
+  </a>
+ </p>
+ <a name="Result">
+ </a>
+ <h2>
+  Result
+ </h2>
+ <p>
+  The example would look like this in game:
+ </p>
+ <p>
+  <a class="image" href="Image:EditMIP_5_result.jpg" title="Image:EditMIP 5 result.jpg">
+   <img alt="Image:EditMIP 5 result.jpg" height="384" longdesc="/wiki/Image:EditMIP_5_result.jpg" src="/web/20121205221353im_/http://www.modwiki.net/w/images/7/77/EditMIP_5_result.jpg" width="512"/>
+  </a>
+ </p>
+ <p>
+  As you can see, anisotropic filtering results in a very smooth blend from one MIP map level to the next.  However, different video cards apply this filtering in different ways.  So please don't rely on MIP maps for large changes such we've done with this example.  It's usually best to reserve MIP map editing for corrections to compression errors, or slightly stylizing an image to give it more or less sharpness as its distance from the player increases.
+ </p>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:3740-0!1!0!0!!en!2 and timestamp 20121205151816 -->

@@ -1,0 +1,68 @@
+ <a name="Game_class">
+ </a>
+ <h2>
+  Game class
+ </h2>
+ <p>
+  This event operates on an instance of the
+  <a href="Game_class" title="Game class">
+   game class
+  </a>
+  type {{{gameclass}}}
+ </p>
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  Adds the specified amount of ammo to the player's clip.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <p>
+  <i>
+   void
+  </i>
+  addToClip(
+  <i>
+   value
+  </i>
+  )
+ </p>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   [value] - The amount of ammo to add to the player's clip.
+  </li>
+ </ul>
+ <a name="Examples">
+ </a>
+ <h2>
+  Examples
+ </h2>
+ <pre> 
+  <span style="color: #0000ff;">void</span>  weapon_bfg::Reload<span style="color: #000000;">(</span><span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
+        <span style="color: #0000ff;">weaponReloading</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span>;
+        <span style="color: #0000ff;">playAnim</span><span style="color: #000000;">(</span> ANIMCHANNEL_ALL, <span style="color: #666666;">"reload"</span> <span style="color: #000000;">)</span>;
+        waitUntil<span style="color: #000000;">(</span> <span style="color: #0000ff;">animDone</span><span style="color: #000000;">(</span> ANIMCHANNEL_ALL, BFG_RELOAD_TO_IDLE <span style="color: #000000;">)</span> <span style="color: #000000;">)</span>;
+        <span style="color: #0000ff;">addToClip</span><span style="color: #000000;">(</span> <span style="color: #0000ff;">clipSize</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span> <span style="color: #000000;">)</span>;
+        <span style="color: #0000ff;">weaponState</span><span style="color: #000000;">(</span> <span style="color: #666666;">"Idle"</span>, BFG_RELOAD_TO_IDLE <span style="color: #000000;">)</span>;</pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  This script event does not return any values.
+ </p>
+ <p>
+  <br/>
+ </p>

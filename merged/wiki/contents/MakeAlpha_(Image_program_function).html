@@ -1,0 +1,50 @@
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  This function will set the alpha channel of the specified image to an average of the red, green, and blue channels. The color channels will be set to white.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <pre>makeAlpha ([map])
+</pre>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   [map] - The image to be altered.
+  </li>
+ </ul>
+ <a name="Example">
+ </a>
+ <h2>
+  Example
+ </h2>
+ <p>
+  Convert the rgb image into an alpha channel...
+ </p>
+ <pre>textures/converted_alpha
+{       
+   blend gl_zero, gl_one_minus_src_alpha
+   map   makeAlpha(textures/decals/plasma_burn.tga)
+{
+</pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  None.
+ </p>
+ <p>
+  <br/>
+ </p>

@@ -1,0 +1,405 @@
+ <dl>
+  <dd>
+   <i>
+    The title given to this article is incorrect due to
+    <a class="extiw" href="http://en.wikipedia.org/wiki/Naming_conventions_%28technical_restrictions%29" title="wikipedia:Naming_conventions_(technical_restrictions)">
+     technical limitations
+    </a>
+    .  The correct title is
+    <b>
+     id Tech 4
+    </b>
+   </i>
+   .
+  </dd>
+ </dl>
+ <a name="History_and_features">
+ </a>
+ <h2>
+  History and features
+ </h2>
+ <p>
+  The id Tech 4 family was formerly referred to by its first representative, the "Doom 3 engine". It is only recently that id Software stopped using game names for their engine families and introduced the name "id Tech" for engine families going back to the Quake 2 engine. ("id Tech 1" does not seem to be used. It must also be noted that the corresponding family, the "Quake engine" cannot be licensed anymore.)
+ </p>
+ <p>
+  The Doom 3 engine was started by John Carmack after he finished working on the Quake 3 engine. Meanwhile, the rest of id Software was still working on the Quake 3: Team Arena expansion. The engine made its debut on August 2004 with the release of Doom 3.
+ </p>
+ <p>
+  id Tech 4 technology introduced several advantages over the available engines back then and even in the present:
+ </p>
+ <ul>
+  <li>
+   Unified lighting paradigm: every surface goes through the same rendering pipeline whether it is level geometry, a dynamic entity, a model, etc. leading to visual coherency.
+   </span>
+  </li>
+  <li>
+   Fully dynamic shadowing through robust stencil buffers for easy and predictable lighting conditions. Optionally, projected lights can be used to fake soft shadows.
+  </li>
+  <li>
+   Interactive, resolution-independent surfaces, called
+   <a href="GUIs" title="GUIs">
+    GUIs
+   </a>
+   . No more blurry computer screens, or limited toggle switches.
+  </li>
+  <li>
+   Very short map compilation times (measured in seconds even for large complex maps) rather than hours and using the same level of machines used for playing instead of having to use dedicated compilation farms like lightmap-based engines.
+  </li>
+  <li>
+   Built-in editors sharing the same renderer pipeline as the game.
+  </li>
+  <li>
+   Very little dependence on proprietary formats for greater flexibility when modding.
+  </li>
+  <li>
+   Strong and flexible scripting language that allows diverse effects from replicating native entity behaviour to changing
+   <a href="Console#CVars" title="Console">
+    CVars
+   </a>
+   in real-time. Maps no longer have to be boringly static.
+  </li>
+ </ul>
+ <a name="OpenGL">
+ </a>
+ <h3>
+  OpenGL
+ </h3>
+ <p>
+  The id Tech 4 renderer is based on the OpenGL API. OpenGL is graphics standard and development environment introduced by
+  <a class="external text" href="http://www.sgi.com/" title="http://www.sgi.com/">
+   SGI
+  </a>
+  in 1992. It's a multi-platform standard and in constant evolution through the OpenGL Architecture Review Board (ARB). For extended information see the
+  <a class="external text" href="http://www.opengl.org/" title="http://www.opengl.org/">
+   OpenGL Homepage
+  </a>
+  .
+ </p>
+ <a name="Structure">
+ </a>
+ <h2>
+  Structure
+ </h2>
+ <p>
+  id Tech 4 is effectively described by: the game engine, the
+  <a href="Coding#Game_code" title="Coding">
+   game binary
+  </a>
+  ,
+  <a href="Scripting" title="Scripting">
+   scripts
+  </a>
+  ,
+  <a href="Declarations" title="Declarations">
+   declarations
+  </a>
+  and assets, which together in a specific instance describe a game.
+ </p>
+ <a name="File_system">
+ </a>
+ <h3>
+  File system
+ </h3>
+ <p>
+  Loading of game binary, declaration files and assets are governed by the files system paths.
+ </p>
+ <p>
+  In order of "fall back" when searching for a given filename:
+ </p>
+ <ul>
+  <li>
+   fs_base - which points to the base folder. The base folder contains the files for the retail game.
+  </li>
+ </ul>
+ <ul>
+  <li>
+   fs_game_base - this was added in Doom3 1.3 to allow a fall back to the expansion pack for mods to be based off.
+  </li>
+ </ul>
+ <ul>
+  <li>
+   fs_game - the currently loaded mod folder.
+  </li>
+ </ul>
+ <p>
+  Ie when the file system (in game engine) tries to load a file it looks in fs_game first.
+If it can't find the file it tries to load the from fs_game_base, and then finally fs_base.
+ </p>
+ <p>
+  The engine loads the game binary which will then tell it what asset files to load, more often defined in declaration files than directly in code.
+ </p>
+ <p>
+  Files can be contained in .
+  <a href="PK4_%28file_format%29" title="PK4 (file format)">
+   PK4 files
+  </a>
+  files. The "pure system" allows enforcement of loading files contained in PK4s only as well as verifying checksums of PK4s as form of cheat protection for networked games.
+ </p>
+ <p>
+  Precedence of file loading from PK4s follows descending alphabetical order. Ie if a file of the same name exists in files pak000.pk4, pak001.pk4, the file system will hit pak001.pk4 first.
+ </p>
+ <a name="List_of_announced_games_making_use_of_id_Tech_4">
+ </a>
+ <h2>
+  List of announced games making use of id Tech 4
+ </h2>
+ <a name="Doom_3">
+ </a>
+ <h3>
+  <a href="Doom_3" title="Doom 3">
+   Doom 3
+  </a>
+ </h3>
+ <ul>
+  <li>
+   Oficial website:
+   <a class="external text" href="http://www.doom3.com/" title="http://www.doom3.com">
+    www.doom3.com
+   </a>
+  </li>
+  <li>
+   Latest version: 1.3.1 (merged codebase with Doom 3: Resurrection of Evil expansion). Since the original release, some functionality was added while deprecated and/or unused functionality was removed.
+   <ul>
+    <li>
+     1.3.1 adds Intel-Mac support.
+    </li>
+    <li>
+     All r_hdr_* and r_sb_*
+     <a href="Console#CVars" title="Console">
+      CVars
+     </a>
+     were removed in v1.3.
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <a name="Quake_4">
+ </a>
+ <h3>
+  <a href="Quake_4" title="Quake 4">
+   Quake 4
+  </a>
+ </h3>
+ <ul>
+  <li>
+   Official website:
+   <a class="external text" href="http://www.quake4game.com/" title="http://www.quake4game.com">
+    www.quake4game.com
+   </a>
+  </li>
+  <li>
+   Latest version: 1.4.2 (splits multiplayer game code to separate base folder q4mp, customizable tick rate, built-in http server for autodownloading and more).
+   <ul>
+    <li>
+     Added portal culling based on distance, static shadows, default ambient light value, AI and weapon scripts are folded into the game code; editors were improved, streamlined and split off the executable into their own library.
+    </li>
+    <li>
+     "Modest changes from Doom 3" - John Carmack
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <a name="Prey">
+ </a>
+ <h3>
+  <a href="Prey" title="Prey">
+   Prey
+  </a>
+ </h3>
+ <ul>
+  <li>
+   Official website:
+   <a class="external text" href="http://www.prey.com/" title="http://www.prey.com">
+    www.prey.com
+   </a>
+  </li>
+  <li>
+   Latest version: 1.3 (adds mac compatibility)
+   <ul>
+    <li>
+     Enhanced portal behaviour.
+    </li>
+    <li>
+     SMP (Multi-CPU) optimizations
+    </li>
+    <li>
+     Custom per-material surface interactions
+    </li>
+    <li>
+     Specular Exponent (Glossiness)
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <a name="Enemy_Territory:_Quake_Wars">
+ </a>
+ <h3>
+  <a href="Enemy_Territory:_Quake_Wars" title="Enemy Territory: Quake Wars">
+   Enemy Territory: Quake Wars
+  </a>
+ </h3>
+ <ul>
+  <li>
+   Official website:
+   <a class="external text" href="http://www.enemyterritory.com/" title="http://www.enemyterritory.com">
+    www.enemyterritory.com
+   </a>
+  </li>
+  <li>
+   Latest version: 1.0.10826.32242 (patch 1.1)
+   <ul>
+    <li>
+     MegaTexture functionality: totally new rendering technology developed by id Software that crunches millions of polygons and a gigabyte-scale texture into a single, seamless and untiled landscape with unique detail down to the square inch or the un-obscured distant horizon.
+    </li>
+    <li>
+     "ET:QW is a heavily modified Doom 3 game." - John Carmack
+    </li>
+    <li>
+     "The editor for ETQW is part of the game, currently, in the same way it is for Doom 3 (although it's been split off into a set of dlls rather than being part of the exe, unless I'm mistaken)." - Wils, Splash Damage
+    </li>
+    <li>
+     Each MegaTexture starts as a 5Gb source texture containing diffuse and bumpmap information and can be compressed to around 500Mb.
+    </li>
+    <li>
+     MegaTexture size is independent of terrain mesh area and its compression is user-selectable allowing for custom maps that are no larger in download size than DOOM 3 and Quake 4 custom maps.
+    </li>
+    <li>
+     Terrain is a mesh with no LoD and rendered fully to the horizon. Gaps in the mesh can be created to build caves and tunnels with standard geometry.
+    </li>
+    <li>
+     Includes more flexible
+     <a href="Visportal#Distance_based_visportals" title="Visportal">
+      distance-based visportals
+     </a>
+     than Quake 4 to section off entire buildings.
+    </li>
+    <li>
+     Models support native LoD using the same normalmap across levels.
+    </li>
+    <li>
+     "As of right now we support .ma, .obj, .lwo, .ase, and our own .surf format. If the engine can load it as a model, you can use it as a terrain model. Last I checked, we tended to use .lwo most frequently, followed by .obj."
+    </li>
+    <li>
+     "The ETQW map format (.world) is a new format that supports easily adding new primitive types, metadata such as grouping information, and arbitrary properties on everything. The base primitive data stored will be familiar:
+     <br/>
+     Faces have planes, a 2D texture matrix + offset, material, and texture bounds (a new little toy we've cooked up.) Patches have control points and UV data, as well as their own additional texturing info. The format also supports references to other .worlds (these can be nested inside of each other.)"
+    </li>
+    <li>
+     "You can import old format .maps. (Unless something breaks between now and release)"
+    </li>
+    <li>
+     There won't be a need to provide the .WORLD file with custom maps releases.
+    </li>
+    <li>
+     For performance reasons, there will be a strong incentive to processing map assets which the engine will handle. Examples include compressing textures, converting declarations to binary formats, unrolling templates, etc.
+    </li>
+    <li>
+     The GUI system is now fully exposed in the game SDK.
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <a name="Wolfenstein">
+ </a>
+ <h3>
+  <a href="Wolfenstein" title="Wolfenstein">
+   Wolfenstein
+  </a>
+ </h3>
+ <ul>
+  <li>
+   Official website:
+   <a class="external text" href="http://www.wolfenstein.com/" title="http://www.wolfenstein.com">
+    www.wolfenstein.com
+   </a>
+  </li>
+  <li>
+   Latest version: 1.1
+  </li>
+  <li>
+   Single player and Multiplayer are two seperate branches
+  </li>
+  <li>
+   Single player - evolved from Quake 4 branch.
+   <ul>
+    <li>
+     OpenGL renderer replaced with Directx 9 deferred renderer.
+    </li>
+    <li>
+     File streaming system labeled 'Streamtech' using
+     <a class="new" href="Stream_packs" title="Stream packs">
+      stream packs
+     </a>
+     .
+    </li>
+    <li>
+     UI using
+     <a class="external text" href="http://www.scaleform.com/" title="http://www.scaleform.com/">
+      Scaleform GFX
+     </a>
+    </li>
+    <li>
+     Physics handled by
+     <a class="external text" href="http://www.havok.com/" title="http://www.havok.com/">
+      Havok
+     </a>
+    </li>
+   </ul>
+  </li>
+  <li>
+   Multi player - evolved from ETQW branch.
+   <ul>
+    <li>
+     Can use MD5r models of single player format.
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <a name="Brink">
+ </a>
+ <h3>
+  <a class="new" href="Brink" title="Brink">
+   Brink
+  </a>
+ </h3>
+ <ul>
+  <li>
+   Official website:
+   <a class="external text" href="http://www.brinkthegame.com/" title="http://www.brinkthegame.com">
+    www.brinkthegame.com
+   </a>
+  </li>
+  <li>
+   Latest Patch? (Unspecified updater versions)
+   <ul>
+    <li>
+     Extended MegaTexture technology
+    </li>
+    <li>
+     OpenGL Deferred renderer (4 render targets)
+    </li>
+    <li>
+     Screen Space Ambient Occlusion
+    </li>
+    <li>
+     Shared Shadow Map
+    </li>
+    <li>
+     Color grading
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <a name="Prey_2">
+ </a>
+ <h3>
+  <a class="new" href="Prey_2" title="Prey 2">
+   Prey 2
+  </a>
+ </h3>
+ <ul>
+  <li>
+   To be determined
+  </li>
+ </ul>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:1256-0!1!0!0!!en!2 and timestamp 20121205144909 -->

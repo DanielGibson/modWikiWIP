@@ -1,0 +1,76 @@
+ <div class="boilerplate metadata" id="stub">
+  <i>
+   This article is a
+   <a class="external text" href="http://en.wikipedia.org/wiki/Perfect_stub_article" title="http://en.wikipedia.org/wiki/Perfect_stub_article">
+    stub
+   </a>
+   . You can help us by
+   <span class="plainlinks">
+    <a class="external text" href="AAS" title="http://www.modwiki.net/w/index.php?title=AAS&amp;action=edit">
+     expanding it
+    </a>
+   </span>
+   .
+  </i>
+ </div>
+ <p>
+  The Area Awareness System is the navigation system that the AI uses.
+ </p>
+ <p>
+  An AAS map is a simplified 3D map of the level compiled from the solid
+  <a href="Brush" title="Brush">
+   brush
+  </a>
+  work in the .map file.
+Areas are the most simplified volume so navigation within an
+  <a href="Area" title="Area">
+   Area
+  </a>
+  is simple point to point.
+  <a class="new" href="Reachabilities" title="Reachabilities">
+   Reachabilities
+  </a>
+  between Areas are then calculated.
+ </p>
+ <p>
+  Brushes with the material monster clip (a misnomer since it only clips the aas map, which isn't used for collision) are also read by the ass compiler.
+ </p>
+ <p>
+  As noted the aas compiler works on brushes, and ignores models an patches. There is an exception with patch support being a command line option, however with the common usage of using patches for decals it is not an efficient option.
+ </p>
+ <div>
+  <a class="image" href="Image:Etqwsquare_25.png" title="Image:Etqwsquare_25.png">
+   <img alt="Image:Etqwsquare_25.png" height="25" longdesc="/wiki/Image:Etqwsquare_25.png" src="/w/images/7/7e/Etqwsquare_25.png" width="25"/>
+  </a>
+  <b>
+   Note:
+  </b>
+  Enemy Territory: Quake Wars only:
+  <dl>
+   <dd>
+    <i>
+     The aas compiler has been extended to support compiling the terrain mesh into the aas.
+    </i>
+   </dd>
+  </dl>
+ </div>
+ <p>
+  One of the most useful cvars for debugging AAS maps is:
+  <a href="Aas_showAreas_%28cvar%29" title="Aas showAreas (cvar)">
+   Aas_showAreas
+  </a>
+ </p>
+ <p>
+  The aas compiler can be invoked with the
+  <a class="new" href="RunAAS_%28console_command%29" title="RunAAS (console command)">
+   runAAS (console command)
+  </a>
+  .
+ </p>
+ <p>
+  The aas compiler works by looking for "use_aas" keys on map entities to read the aas type. It creates a different aas map per aas type.
+It then flood fills from those entities, using the bounding size in the setting. For example: in Doom 3 the common sizes are aas48 - 48x48x82 for humanoid sized monsters and aas96 - 96x96x96 for larger, with very large boss monsters getting their own type.
+ </p>
+ <p>
+  In ETQW there are two types, one for players and another for vehicles.
+ </p>

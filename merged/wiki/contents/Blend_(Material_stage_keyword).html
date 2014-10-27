@@ -1,0 +1,392 @@
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  This keyword defines what blend mode should be used with this stage.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <pre>blend [mode]
+</pre>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   [mode] - A predefined blend mode or an
+   <a href="OpenGL_Blendmode_%28Materials%29" title="OpenGL Blendmode (Materials)">
+    explicit blend function
+   </a>
+   . A table of predefined blendmodes is at the bottom of this page.
+  </li>
+ </ul>
+ <a name="Example">
+ </a>
+ <h2>
+  Example
+ </h2>
+ <p>
+  None.
+ </p>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  Only the three standard light interaction blend modes, bumpmap, diffusemap, and specularmap, react to lights.
+ </p>
+ <p>
+  Explicit blend functions do not react to lighting. They are composited with the background in a similar manner to the way blend modes work in PhotoShop.
+ </p>
+ <p>
+  <br/>
+ </p>
+ <table class="mwstyle">
+  <caption>
+   <b>
+    Predefined Blendmodes
+   </b>
+  </caption>
+  <tr>
+   <th>
+    Parameter
+   </th>
+   <th>
+    Description
+   </th>
+   <th>
+    Reacts to Light
+   </th>
+   <th>
+    Example
+   </th>
+   <th>
+    Result
+   </th>
+  </tr>
+  <tr>
+   <td>
+    add
+   </td>
+   <td>
+    Additive Stage. Lightens underlying surfaces. Often used for glowing decals. Explicit blend function.
+   </td>
+   <td>
+    No
+   </td>
+   <td>
+    <div class="center">
+     <div class="thumb tnone">
+      <div style="width:102px;">
+       <a class="internal" href="Image:Add_Example.jpg" title="">
+        <img alt="" height="100" longdesc="/wiki/Image:Add_Example.jpg" src="/w/images/thumb/5/54/Add_Example.jpg/100px-Add_Example.jpg" width="100"/>
+       </a>
+       <div class="thumbcaption">
+        <div class="magnify" style="float:right">
+         <a class="internal" href="Image:Add_Example.jpg" title="Enlarge">
+          <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </td>
+   <td>
+    <div class="center">
+     <div class="thumb tnone">
+      <div style="width:150px;">
+       <a class="internal" href="Image:Add_Applied.jpg" title="">
+        <img alt="" height="100" longdesc="/wiki/Image:Add_Applied.jpg" src="/w/images/thumb/8/85/Add_Applied.jpg/148px-Add_Applied.jpg" width="148"/>
+       </a>
+       <div class="thumbcaption">
+        <div class="magnify" style="float:right">
+         <a class="internal" href="Image:Add_Applied.jpg" title="Enlarge">
+          <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    blend
+   </td>
+   <td>
+    Blend Stage. Blends with underlying surfaces. Often used for alpha transparent decals. The texture's alpha channel determines the blending. Explicit blend function.
+   </td>
+   <td>
+    No
+   </td>
+   <td>
+    <div class="center">
+     <div class="thumb tnone">
+      <div style="width:102px;">
+       <a class="internal" href="Image:Blend_Example.jpg" title="">
+        <img alt="" height="100" longdesc="/wiki/Image:Blend_Example.jpg" src="/w/images/thumb/7/73/Blend_Example.jpg/100px-Blend_Example.jpg" width="100"/>
+       </a>
+       <div class="thumbcaption">
+        <div class="magnify" style="float:right">
+         <a class="internal" href="Image:Blend_Example.jpg" title="Enlarge">
+          <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </td>
+   <td>
+    <div class="center">
+     <div class="thumb tnone">
+      <div style="width:150px;">
+       <a class="internal" href="Image:Blend_Applied.jpg" title="">
+        <img alt="" height="100" longdesc="/wiki/Image:Blend_Applied.jpg" src="/w/images/thumb/9/9b/Blend_Applied.jpg/148px-Blend_Applied.jpg" width="148"/>
+       </a>
+       <div class="thumbcaption">
+        <div class="magnify" style="float:right">
+         <a class="internal" href="Image:Blend_Applied.jpg" title="Enlarge">
+          <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    bumpmap
+   </td>
+   <td>
+    Bump Stage. Defines bump texture for use with per-pixel lighting.
+   </td>
+   <td>
+    Yes
+   </td>
+   <td>
+    <div class="center">
+     <div class="thumb tnone">
+      <div style="width:102px;">
+       <a class="internal" href="Image:Normal_example.jpg" title="">
+        <img alt="" height="100" longdesc="/wiki/Image:Normal_example.jpg" src="/w/images/thumb/a/a2/Normal_example.jpg/100px-Normal_example.jpg" width="100"/>
+       </a>
+       <div class="thumbcaption">
+        <div class="magnify" style="float:right">
+         <a class="internal" href="Image:Normal_example.jpg" title="Enlarge">
+          <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </td>
+   <td>
+    <div class="center">
+     <div class="thumb tnone">
+      <div style="width:150px;">
+       <a class="internal" href="Image:Bump_Applied.jpg" title="">
+        <img alt="" height="100" longdesc="/wiki/Image:Bump_Applied.jpg" src="/w/images/thumb/6/61/Bump_Applied.jpg/148px-Bump_Applied.jpg" width="148"/>
+       </a>
+       <div class="thumbcaption">
+        <div class="magnify" style="float:right">
+         <a class="internal" href="Image:Bump_Applied.jpg" title="Enlarge">
+          <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    diffusemap
+   </td>
+   <td>
+    Diffuse Stage. Defines diffuse texture for use with per-pixel lighting.
+   </td>
+   <td>
+    Yes
+   </td>
+   <td>
+    <div class="center">
+     <div class="thumb tnone">
+      <div style="width:102px;">
+       <a class="internal" href="Image:Diffuse_example.jpg" title="">
+        <img alt="" height="100" longdesc="/wiki/Image:Diffuse_example.jpg" src="/w/images/thumb/6/64/Diffuse_example.jpg/100px-Diffuse_example.jpg" width="100"/>
+       </a>
+       <div class="thumbcaption">
+        <div class="magnify" style="float:right">
+         <a class="internal" href="Image:Diffuse_example.jpg" title="Enlarge">
+          <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </td>
+   <td>
+    <div class="center">
+     <div class="thumb tnone">
+      <div style="width:150px;">
+       <a class="internal" href="Image:Diffuse_Applied.jpg" title="">
+        <img alt="" height="100" longdesc="/wiki/Image:Diffuse_Applied.jpg" src="/w/images/thumb/8/84/Diffuse_Applied.jpg/148px-Diffuse_Applied.jpg" width="148"/>
+       </a>
+       <div class="thumbcaption">
+        <div class="magnify" style="float:right">
+         <a class="internal" href="Image:Diffuse_Applied.jpg" title="Enlarge">
+          <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    filter
+   </td>
+   <td>
+    Filter Stage. Darkens underlying surfaces. Often used for blood decals. Explicit blend function.
+   </td>
+   <td>
+    No
+   </td>
+   <td>
+    <div class="center">
+     <div class="thumb tnone">
+      <div style="width:102px;">
+       <a class="internal" href="Image:Filter_Example.jpg" title="">
+        <img alt="" height="100" longdesc="/wiki/Image:Filter_Example.jpg" src="/w/images/thumb/e/ea/Filter_Example.jpg/100px-Filter_Example.jpg" width="100"/>
+       </a>
+       <div class="thumbcaption">
+        <div class="magnify" style="float:right">
+         <a class="internal" href="Image:Filter_Example.jpg" title="Enlarge">
+          <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </td>
+   <td>
+    <div class="center">
+     <div class="thumb tnone">
+      <div style="width:150px;">
+       <a class="internal" href="Image:Filter_Applied.jpg" title="">
+        <img alt="" height="100" longdesc="/wiki/Image:Filter_Applied.jpg" src="/w/images/thumb/2/2d/Filter_Applied.jpg/148px-Filter_Applied.jpg" width="148"/>
+       </a>
+       <div class="thumbcaption">
+        <div class="magnify" style="float:right">
+         <a class="internal" href="Image:Filter_Applied.jpg" title="Enlarge">
+          <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </td>
+  </tr>
+  <tr>
+   <td>
+    modulate
+   </td>
+   <td>
+    Modulation Stage. Explicit blend function.
+   </td>
+   <td>
+    No
+   </td>
+   <td>
+    Same As Filter
+   </td>
+   <td>
+    Same As Filter
+   </td>
+  </tr>
+  <tr>
+   <td>
+    none
+   </td>
+   <td>
+    Non-blending Stage. Explicit blend function.
+   </td>
+   <td>
+    No
+   </td>
+   <td>
+    NA
+   </td>
+   <td>
+    NA
+   </td>
+  </tr>
+  <tr>
+   <td>
+    specularmap
+   </td>
+   <td>
+    Specular Stage. Defines specular texture for use with per-pixel lighting.
+   </td>
+   <td>
+    Yes
+   </td>
+   <td>
+    <div class="center">
+     <div class="thumb tnone">
+      <div style="width:102px;">
+       <a class="internal" href="Image:Specular_example.jpg" title="">
+        <img alt="" height="100" longdesc="/wiki/Image:Specular_example.jpg" src="/w/images/thumb/d/dc/Specular_example.jpg/100px-Specular_example.jpg" width="100"/>
+       </a>
+       <div class="thumbcaption">
+        <div class="magnify" style="float:right">
+         <a class="internal" href="Image:Specular_example.jpg" title="Enlarge">
+          <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </td>
+   <td>
+    <div class="center">
+     <div class="thumb tnone">
+      <div style="width:150px;">
+       <a class="internal" href="Image:Specular_Applied.jpg" title="">
+        <img alt="" height="100" longdesc="/wiki/Image:Specular_Applied.jpg" src="/w/images/thumb/0/0a/Specular_Applied.jpg/148px-Specular_Applied.jpg" width="148"/>
+       </a>
+       <div class="thumbcaption">
+        <div class="magnify" style="float:right">
+         <a class="internal" href="Image:Specular_Applied.jpg" title="Enlarge">
+          <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </td>
+  </tr>
+ </table>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:1188-0!1!0!0!!en!2 and timestamp 20111227221338 -->

@@ -1,0 +1,140 @@
+ <a name="Game_class">
+ </a>
+ <h2>
+  Game class
+ </h2>
+ <p>
+  This event operates on an instance of the
+  <a href="Game_class" title="Game class">
+   game class
+  </a>
+  type {{{gameclass}}}
+ </p>
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  Returns the fraction of movement completed before the box from 'mins' to 'maxs' hits solid geometry
+// when moving from 'start' to 'end'. The 'passEntity' is considered non-solid during the move.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <p>
+  float  trace(  vector start, vector end, vector mins, vector maxs, float contents_mask, entity passEntity )
+ </p>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   [start] - The starting point for the trace operation.
+  </li>
+  <li>
+   [end] - The ending point for the trace operation.
+  </li>
+  <li>
+   [mins] - A point used in conjunction with
+   <b>
+    maxs
+   </b>
+   to define the size of the bounding box used.
+  </li>
+  <li>
+   [maxs] - A point used in conjunction with
+   <b>
+    mins
+   </b>
+   to define the size of the bounding box used.
+  </li>
+  <li>
+   [contents_mask] - A flag to define the types of surfaces to ignore. These masks are defined in doom_defs.script.
+   <ul>
+    <li>
+     MASK_ALL
+    </li>
+    <li>
+     MASK_SOLID
+    </li>
+    <li>
+     MASK_MONSTERSOLID
+    </li>
+    <li>
+     MASK_PLAYERSOLID
+    </li>
+    <li>
+     MASK_DEADSOLID
+    </li>
+    <li>
+     MASK_WATER
+    </li>
+    <li>
+     MASK_OPAQUE
+    </li>
+    <li>
+     MASK_SHOT_RENDERMODEL
+    </li>
+    <li>
+     MASK_SHOT_BOUNDINGBOX
+    </li>
+   </ul>
+  </li>
+  <li>
+   [passEntity] - An entity to ignore.
+  </li>
+ </ul>
+ <a name="Examples">
+ </a>
+ <h2>
+  Examples
+ </h2>
+ <pre><span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">trace</span><span style="color: #000000;">(</span> begin, send, '<span style="color: #0000dd;">0</span> <span style="color: #0000dd;">0</span> <span style="color: #0000dd;">0</span>', '<span style="color: #0000dd;">0</span> <span style="color: #0000dd;">0</span> <span style="color: #0000dd;">0</span>', MASK_SOLID|CONTENTS_RENDERMODEL, <span style="color: #000055;">$crane_hang</span> <span style="color: #000000;">)</span>;</pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  Once a trace has been issued, other special events can be called to return more detailed information about the trace. See the following articles...
+ </p>
+ <ul>
+  <li>
+   <a href="GetTraceBody_%28script_event%29" title="GetTraceBody (script event)">
+    getTraceBody
+   </a>
+  </li>
+  <li>
+   <a href="GetTraceEndPos_%28script_event%29" title="GetTraceEndPos (script event)">
+    getTraceEndPos
+   </a>
+  </li>
+  <li>
+   <a href="GetTraceEntity_%28script_event%29" title="GetTraceEntity (script event)">
+    getTraceEntity
+   </a>
+  </li>
+  <li>
+   <a href="GetTraceFraction_%28script_event%29" title="GetTraceFraction (script event)">
+    getTraceFraction
+   </a>
+  </li>
+  <li>
+   <a href="GetTraceJoint_%28script_event%29" title="GetTraceJoint (script event)">
+    getTraceJoint
+   </a>
+  </li>
+  <li>
+   <a href="GetTraceNormal_%28script_event%29" title="GetTraceNormal (script event)">
+    getTraceNormal
+   </a>
+  </li>
+ </ul>
+ <p>
+  <br/>
+ </p>

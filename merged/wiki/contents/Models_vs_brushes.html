@@ -1,0 +1,108 @@
+ <p>
+  Unlike previous games, where
+  <a href="Modelling" title="Modelling">
+   models
+  </a>
+  and level geometry had distinct and non-overlapping functions, the unified lighting model of
+  <a href="Id_Tech_4" title="Id Tech 4">
+   id Tech 4
+  </a>
+  gives
+  <a href="Mapping" title="Mapping">
+   mappers
+  </a>
+  an unprecedented level of choice in the techniques used to create geometry. Some mappers build almost everything in a 3D application, and use the level editors only to assemble pre-built models, whereas others prefer to create complex structures out of brushes and
+  <a href="Patch" title="Patch">
+   patches
+  </a>
+  avoiding 3D applications entirely.
+ </p>
+ <p>
+  The ideal division between the usage of models and in-editor geometry is a source of perpetual debate amongst mappers.
+ </p>
+ <a name="Considerations">
+ </a>
+ <h2>
+  Considerations
+ </h2>
+ <ul>
+  <li>
+   <b>
+    Optimisation
+   </b>
+   . Map geometry is automatically optimized during the compilation from brushes into triangles, while models require manual optimization before they are exported. This may result in an increased workload for the modeller, but also allows more control over the triangulation process than that afforded by brush compilation.
+  </li>
+  <li>
+   <b>
+    Sealing the void
+   </b>
+   . Imported models cannot seal the map from the void. This means that if models are used for general terrain and room structure, care must be taken to position caulk brushes appropriately to ensure that the map is sealed.
+  </li>
+  <li>
+   <b>
+    Vertex colour
+   </b>
+   . Models can provide vertex colours which are multiplied with the model texture to introduce low-frequency colour variation over the model surface. Brushes and patches do not support vertex colours.
+  </li>
+  <li>
+   <b>
+    Texturing
+   </b>
+   . Various texturing operations may vary in their ease-of-use between 3D applications and the level editors. For example, precisely aligning a hand-painted texture is far easier on a model (using a UV editing tool), whereas flowing a repeating texture along a curved patch may be more convenient in the editor.
+  </li>
+  <li>
+   <b>
+    Sizing flexibility
+   </b>
+   . Various unsatisfactory hacks notwithstanding, models cannot be resized in the editor once they have been imported. This means that the size needs to be correct at export, or else the surrounding brush geometry will need to be resized to match.
+  </li>
+  <li>
+   <b>
+    Personal preference
+   </b>
+   . Ultimately the decision to use models or in-editor construction is affected by the mapper's own preferences and skills with the various tools. 3D applications can be challenging to learn for new users, but experienced modellers may find the level editors to be limiting and prefer to make use of their existing skillset.
+  </li>
+ </ul>
+ <a name="Culling_of_models">
+ </a>
+ <h2>
+  Culling of models
+ </h2>
+ <div class="thumb tright">
+  <div style="width:182px;">
+   <a class="internal" href="Image:Bsp_vs_models_1.jpg" title="Visibility culling">
+    <img alt="Visibility culling" height="476" longdesc="/wiki/Image:Bsp_vs_models_1.jpg" src="/web/20111129052310im_/http://www.modwiki.net/w/images/thumb/e/e9/Bsp_vs_models_1.jpg/180px-Bsp_vs_models_1.jpg" width="180"/>
+   </a>
+   <div class="thumbcaption">
+    <div class="magnify" style="float:right">
+     <a class="internal" href="Image:Bsp_vs_models_1.jpg" title="Enlarge">
+      <img alt="Enlarge" height="11" src="/web/20111129052310im_/http://www.modwiki.net/w/skins/common/images/magnify-clip.png" width="15"/>
+     </a>
+    </div>
+    Visibility culling
+   </div>
+  </div>
+ </div>
+ <p>
+  Another consideration is that models behave differently with regards to
+  <a href="Visportal" title="Visportal">
+   visibility culling
+  </a>
+  than level geometry. The top part of image on the right shows a corridor with
+  <a href="R_showPortals_%28cvar%29" title="R showPortals (cvar)">
+   r_showPortals
+  </a>
+  1,
+  <a href="R_useScissor_%28cvar%29" title="R useScissor (cvar)">
+   r_useScissor
+  </a>
+  0 and
+  <a href="R_showTris_%28cvar%29" title="R showTris (cvar)">
+   r_showTris
+  </a>
+  2. In the red circle area you can see that the portal is green (i.e. open) and that the engine is rendering the alcove on the right. However, the alcove is empty. If you strafe left a bit (the lower part of the image) you can see that two boxes (which are two func_static) show up.
+ </p>
+ <p>
+  Despite the above, this functionality is a double-edged sword. Although in the above example, models will not show up until they're nearly visible and thus an advantage, other situations arise where the vis portal is closed but models may still be "visible" to the engine because a very small part of them are on the other side of the portal. Since they are models, they are not cut by the visportal and that's why they show in their entirety, because they are being drawn relative to their bounding box limits (the 'box' that contains the object). This can become a problem with big models that span visportals.
+ </p>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:2539-0!1!0!0!!en!2 and timestamp 20111128092540 -->

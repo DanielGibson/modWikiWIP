@@ -1,0 +1,315 @@
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  This command displays a list of
+  <a href="Console" title="Console">
+   CVars
+  </a>
+  and their current values.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <p>
+  At the console type...
+ </p>
+ <pre>listCvars [option] [search string]
+</pre>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   [option] - a flag that changes what is displayed with the list.
+   <ul>
+    <li>
+     -help - Displays a list of CVars and a short description of what they do.
+    </li>
+    <li>
+     -type - Displays a list of CVars and their type.
+    </li>
+    <li>
+     -flags - Displays a list of CVars and their flags.
+    </li>
+   </ul>
+  </li>
+  <li>
+   [search string] - A search string that narrows the list of CVars displayed to those that partially match the specified string.
+  </li>
+ </ul>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  This console command is very useful when writing an article for the CVars section of the wiki.
+ </p>
+ <p>
+  <br/>
+  The -flags output prints a line for each CVar, in the following format:
+ </p>
+ <pre>&lt;CVar name&gt;      &lt;type&gt; [&lt;usage&gt;] [UI] [SI] [ST] [CH] [IN] [RO] [AR] [?NS?] [MO]</pre>
+ <p>
+  The first parameter marks the data type, which can be one of the following:
+ </p>
+ <table class="mwstyle">
+  <tr>
+   <th>
+    Symbol
+   </th>
+   <th>
+    Code flag
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+  <tr>
+   <td>
+    S
+   </td>
+   <td>
+    No type flag
+   </td>
+   <td>
+    CVar is string type.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    B
+   </td>
+   <td>
+    CVAR_BOOL
+   </td>
+   <td>
+    CVar is boolean type.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    F
+   </td>
+   <td>
+    CVAR_FLOAT
+   </td>
+   <td>
+    CVar is float type.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    I
+   </td>
+   <td>
+    CVAR_SYSTEM
+   </td>
+   <td>
+    CVar is an integer type.
+   </td>
+  </tr>
+ </table>
+ <p>
+  The second parameter is either empty, or one of the following:
+ </p>
+ <table class="mwstyle">
+  <tr>
+   <th>
+    Symbol
+   </th>
+   <th>
+    Code flag
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+  <tr>
+   <td>
+    SYSTEM
+   </td>
+   <td>
+    CVAR_SYSTEM
+   </td>
+   <td>
+    CVar is used in the engine.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    RNDR
+   </td>
+   <td>
+    CVAR_RENDERER
+   </td>
+   <td>
+    CVar is used in the renderer.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    SND
+   </td>
+   <td>
+    CVAR_SOUND
+   </td>
+   <td>
+    CVar is used for the sound system.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    GUI
+   </td>
+   <td>
+    CVAR_GUI
+   </td>
+   <td>
+    CVar is used for a GUI.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    GAME
+   </td>
+   <td>
+    CVAR_GAME
+   </td>
+   <td>
+    CVar is used in the gamecode.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    TOOL
+   </td>
+   <td>
+    CVAR_TOOL
+   </td>
+   <td>
+    CVar is used for controlling a tool.
+   </td>
+  </tr>
+ </table>
+ <p>
+  The next flags either show up or won't according to the CVar's flags.
+ </p>
+ <table class="mwstyle">
+  <tr>
+   <th>
+    Symbol
+   </th>
+   <th>
+    Code flag
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+  <tr>
+   <td>
+    UI
+   </td>
+   <td>
+    CVAR_USERINFO
+   </td>
+   <td>
+    The CVar is sent to the server and is accessible from the menu.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    SI
+   </td>
+   <td>
+    CVAR_SERVERINFO
+   </td>
+   <td>
+    The CVar is received from the server and is accessible from the menu.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    ST
+   </td>
+   <td>
+    CVAR_STATIC
+   </td>
+   <td>
+    The CVar is statically declared, not created by the user.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CH
+   </td>
+   <td>
+   </td>
+   <td>
+    The CVar is considered a cheat.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    IN
+   </td>
+   <td>
+    CVAR_INIT
+   </td>
+   <td>
+    The CVar can only be set from the command-line.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    RO
+   </td>
+   <td>
+    CVAR_ROM
+   </td>
+   <td>
+    Only for display, cannot be changed by the user.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    AR
+   </td>
+   <td>
+    CVAR_ARCHIVE
+   </td>
+   <td>
+    The CVar will be saved to a config file.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    ?NS?
+   </td>
+   <td>
+    CVAR_NETWORKSYNC
+   </td>
+   <td>
+    The CVar is synced from the server to clients. (Never shows up in the output?)
+   </td>
+  </tr>
+  <tr>
+   <td>
+    MO
+   </td>
+   <td>
+    CVAR_MODIFIED
+   </td>
+   <td>
+    Flag is set when the variable is modified.
+   </td>
+  </tr>
+ </table>

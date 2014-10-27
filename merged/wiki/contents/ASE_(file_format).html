@@ -1,0 +1,150 @@
+ <a name="Overview">
+ </a>
+ <h2>
+  Overview
+ </h2>
+ <p>
+  ASE stands for Ascii Scene Export. This is an ascii text based format associated with 3DS Max. It is not limited to that application, but support in other applications is dependent on import/export scripts or plugins.
+ </p>
+ <p>
+  The Doom 3 engine uses the ASE format for static meshes.
+ </p>
+ <a name="Export">
+ </a>
+ <h2>
+  Export
+ </h2>
+ <ul>
+  <li>
+   <a class="external text" href="http://www.iddevnet.com/doom3/modelexport.php" title="http://www.iddevnet.com/doom3/modelexport.php">
+    iddevnet model export page
+   </a>
+  </li>
+  <li>
+   Maya can export ASE's using the ActorX plugin.
+  </li>
+  <li>
+   Blender via
+   <a class="external text" href="https://web.archive.org/web/20121205062642/http://www.doom3world.org/phpbb2/viewtopic.php?t=9275" title="http://www.doom3world.org/phpbb2/viewtopic.php?t=9275">
+    export plugin @doom3world
+   </a>
+  </li>
+ </ul>
+ <a name="File_Format_Syntax">
+ </a>
+ <h2>
+  File Format Syntax
+ </h2>
+ <p>
+  Format:
+The format is based on identifiers, as in:
+ </p>
+ <pre>*AN_IDENTIFIER
+</pre>
+ <p>
+  This is followed by zero or more values, or a subset of more identifiers surrounded by curly braces.
+ </p>
+ <p>
+  Most of the time when working with ASE's, you will find that you have to open them to manually link the materials to a specified
+  <a href="Material_%28decl%29" title="Material (decl)">
+   material shader
+  </a>
+  . For example, the format for the material list may look like this when exported from actorx:
+ </p>
+ <pre> *MATERIAL_LIST {
+   *MATERIAL_COUNT 2
+   *MATERIAL 0 {
+       *MATERIAL_NAME "myMaterial"
+       *MATERIAL_CLASS "Standard"
+       *MAP_DIFFUSE {
+           *MAP_CLASS "Bitmap"
+           *BITMAP "None"
+      }
+   }
+}
+</pre>
+ <p>
+  Where it says:
+ </p>
+ <pre>*BITMAP "none"
+</pre>
+ <p>
+  You must replace this with a reference to a doom material shader, like so:
+ </p>
+ <pre>*BITMAP "//base/models/mapobjects/myModel/myShader"
+</pre>
+ <p>
+  Occasionally, for some unknown reason this reference doesn't work in which case you should try...
+ </p>
+ <pre>*BITMAP "//purgatory/purgatory/models/mapobjects/myModel/myShader"
+</pre>
+ <p>
+  ...or...
+ </p>
+ <pre>*BITMAP "//doom3/base/models/mapobjects/myModel/myShader"
+</pre>
+ <div>
+  <a class="image" href="Image:Q4square_25.png" title="Image:Q4square_25.png">
+   <img alt="Image:Q4square_25.png" height="25" longdesc="/wiki/Image:Q4square_25.png" src="/w/images/e/e8/Q4square_25.png" width="25"/>
+  </a>
+  <b>
+   Note:
+  </b>
+  Quake 4 only:
+  <dl>
+   <dd>
+    <i>
+     instead of //base or //purgatory/purgatory Q4 seems to use C:\Ritual\Q4ritual\game\q4base
+    </i>
+    <pre>
+*BITMAP "C:\Ritual\Q4ritual\game\q4base\material\name"</pre>
+    <i>
+    </i>
+   </dd>
+  </dl>
+ </div>
+ <div>
+  <a class="image" href="Image:Etqwsquare_25.png" title="Image:Etqwsquare_25.png">
+   <img alt="Image:Etqwsquare_25.png" height="25" longdesc="/wiki/Image:Etqwsquare_25.png" src="/w/images/7/7e/Etqwsquare_25.png" width="25"/>
+  </a>
+  <b>
+   Note:
+  </b>
+  Enemy Territory: Quake Wars only:
+  <dl>
+   <dd>
+    <i>
+     use
+    </i>
+    <pre>*MATERIAL_NAME "<i>material/name</i>"
+</pre>
+    <p>
+     eg
+    </p>
+    *MATERIAL_NAME "
+    <i>
+     textures/models/mymodel
+    </i>
+    "
+    <i>
+    </i>
+   </dd>
+  </dl>
+ </div>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <ul>
+  <li>
+   Subpatch a.k.a. subdivision surfaces are not supported.
+  </li>
+  <li>
+   Models must be composed entirely of triangles.
+  </li>
+  <li>
+   Smoothing groups are ignored by the engine.
+  </li>
+ </ul>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:1039-0!1!0!0!!en!2 and timestamp 20121204200609 -->

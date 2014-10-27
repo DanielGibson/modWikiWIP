@@ -1,0 +1,79 @@
+ <a name="Game_class">
+ </a>
+ <h2>
+  Game class
+ </h2>
+ <p>
+  This event operates on an instance of the
+  <a href="Game_class" title="Game class">
+   game class
+  </a>
+  type {{{gameclass}}}
+ </p>
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  Sets a key on this entity's spawn args.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <p>
+  <i>
+   void
+  </i>
+  setKey(
+  <i>
+   string
+  </i>
+  <b>
+   key
+  </b>
+  ,
+  <i>
+   string
+  </i>
+  <b>
+   value
+  </b>
+  )
+ </p>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   [key] - The key to set the value of.
+  </li>
+  <li>
+   [value] - The value to set the key to.
+  </li>
+ </ul>
+ <a name="Examples">
+ </a>
+ <h2>
+  Examples
+ </h2>
+ <pre> 
+<span style="color: #000055;">$my_entity</span>.<span style="color: #ff0000;">setKey</span><span style="color: #000000;">(</span><span style="color: #666666;">"kung"</span>, <span style="color: #666666;">"fu"</span><span style="color: #000000;">)</span>;</pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  This script event does not return any values.
+ </p>
+ <p>
+  Note that most spawn args are evaluated when this entity spawns in, so this will not change the entity's behavior in most cases. This is chiefly for saving data the script needs in an entity for later retrieval.
+ </p>
+ <p>
+  <br/>
+ </p>

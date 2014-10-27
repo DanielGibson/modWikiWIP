@@ -1,0 +1,75 @@
+ <a name="Game_class">
+ </a>
+ <h2>
+  Game class
+ </h2>
+ <p>
+  This event operates on an instance of the
+  <a href="Game_class" title="Game class">
+   game class
+  </a>
+  type {{{gameclass}}}
+ </p>
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  This function causes an entity to continuously rotate N degrees in one second.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <p>
+  <i>
+   void
+  </i>
+  rotate(
+  <i>
+   vector
+  </i>
+  <b>
+   rotateAxis
+  </b>
+  )
+ </p>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <p>
+  [rotateAxis] - The axis around which the entity will rotate in order Y Z X.
+ </p>
+ <a name="Examples">
+ </a>
+ <h2>
+  Examples
+ </h2>
+ <pre><span style="color: #000055;">$my_entity</span>.<span style="color: #ff0000;">rotate</span><span style="color: #000000;">(</span> '<span style="color: #0000dd;">0</span> <span style="color: #0000dd;">0</span> <span style="color: #0000dd;">90</span>' <span style="color: #000000;">)</span>;</pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  This script event does not return any values. This event differs from
+  <a href="RotateOnce_%28script_event%29" title="RotateOnce (script event)">
+   rotateOnce
+  </a>
+  in that rotate will force an entity to continuing rotating for the duration of the game. The above example will cause the entity to complete a 90 degree rotation on the x-axis in one second then repeat endlessly. The
+  <a href="Time_%28script_event%29" title="Time (script event)">
+   time
+  </a>
+  function has no effect here except in combination with something like
+  <a href="DecelTime_%28script_event%29" title="DecelTime (script event)">
+   decelTime
+  </a>
+  when the time value will then define the duration that the entity continues to rotate.
+ </p>
+ <p>
+  <br/>
+ </p>

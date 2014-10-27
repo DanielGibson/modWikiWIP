@@ -1,0 +1,323 @@
+ <p>
+  To change the GUI state (properties and values) or execute a GUI client command.
+ </p>
+ <a name="State_change">
+ </a>
+ <h2>
+  State change
+ </h2>
+ <p>
+  Set a
+  <a href="GUI_item_properties" title="GUI item properties">
+   property
+  </a>
+  or a
+  <a href="GUI_variable_types" title="GUI variable types">
+   variable
+  </a>
+  to a given value. This is used to change the appearance or behavior of items during runtime. It doesn't work on all kinds of properties, though, as some of them can't be changed and are marked as so on the
+  <a href="GUI_item_properties" title="GUI item properties">
+   property
+  </a>
+  reference.
+ </p>
+ <a name="Syntax">
+ </a>
+ <h3>
+  Syntax
+ </h3>
+ <pre>set "property" "value";
+</pre>
+ <p>
+  <i>
+   property
+  </i>
+  is the name of a property in the current item, or a reference to a property on another item (through the "itemName::propertyName" syntax) or a reference to a key in the
+  <a class="new" href="GUI_state_dictionary" title="GUI state dictionary">
+   GUI state dictionary
+  </a>
+  ( through the "gui::keyName" syntax).
+ </p>
+ <p>
+  <i>
+   value
+  </i>
+  the new value that the property will carry.
+ </p>
+ <a name="Example.28s.29">
+ </a>
+ <h3>
+  Example(s)
+ </h3>
+ <pre>set "buttonTwo::visible" "0";
+set "livePan::rect" "0 0 640 200";
+set "text" "You have clicked me";
+set "gui::somestring" "How long";
+</pre>
+ <a name="Additional_Note">
+ </a>
+ <h4>
+  Additional Note
+ </h4>
+ <p>
+  If you are trying to set one property (property2 - the target property) equal to another property (property1 - the origional property you want to copy) you must reference the first property (property1) using the '$' marker. Using the $ marker lets the parser know that you are referencing another property, not just a string.
+ </p>
+ <pre>set "property2" "$property1";
+</pre>
+ <p>
+  <br/>
+ </p>
+ <a name="Command">
+ </a>
+ <h2>
+  Command
+ </h2>
+ <p>
+  Execute a gui command on the client. By using "cmd" as the first property, you tell the game to execute some action on the player's own game.
+Commands are case insensitive.
+Commands are either handled by the engine or passed on to the
+  <a href="Coding" title="Coding">
+   game code
+  </a>
+  , where there is further differentiation between menus and entities.
+ </p>
+ <a name="Engine_GUI_Commands">
+ </a>
+ <h3>
+  Engine GUI Commands
+ </h3>
+ <ul>
+  <li>
+   abort
+  </li>
+  <li>
+   checkKeys
+  </li>
+  <li>
+   CheckUpdate
+  </li>
+  <li>
+   exec
+  </li>
+  <li>
+   <a href="Startgame_%28GUI_command%29" title="Startgame (GUI command)">
+    startgame
+   </a>
+  </li>
+  <li>
+   FilterServers
+  </li>
+  <li>
+   LANConnect
+  </li>
+  <li>
+   loadBinds
+  </li>
+  <li>
+   loadGame
+  </li>
+  <li>
+   loadMod
+  </li>
+  <li>
+   MAPScan
+  </li>
+  <li>
+   music
+  </li>
+  <li>
+   note
+  </li>
+  <li>
+   punkbuster
+  </li>
+  <li>
+   RefreshServers
+  </li>
+  <li>
+   resetCvars
+  </li>
+  <li>
+   startMultiplayer
+  </li>
+  <li>
+   updateSaveGameInfo
+  </li>
+  <li>
+   UpdateServers
+  </li>
+ </ul>
+ <a name="Game_GUI_Commands">
+ </a>
+ <h3>
+  Game GUI Commands
+ </h3>
+ <a name="Menu">
+ </a>
+ <h4>
+  Menu
+ </h4>
+ <ul>
+  <li>
+   admin
+  </li>
+  <li>
+   bind
+  </li>
+  <li>
+   callVote
+  </li>
+  <li>
+   chatmessage
+  </li>
+  <li>
+   clearbind
+  </li>
+  <li>
+   click_maplist
+  </li>
+  <li>
+   close
+  </li>
+  <li>
+   disconnect
+  </li>
+  <li>
+   MAPScan
+  </li>
+  <li>
+   mpSkin
+  </li>
+  <li>
+   play
+  </li>
+  <li>
+   quit
+  </li>
+  <li>
+   readytoggle
+  </li>
+  <li>
+   sound
+  </li>
+  <li>
+   spectate
+  </li>
+  <li>
+   teamtoggle
+  </li>
+  <li>
+   video
+  </li>
+  <li>
+   voteno
+  </li>
+  <li>
+   voteyes
+  </li>
+ </ul>
+ <a name="Entity">
+ </a>
+ <h4>
+  Entity
+ </h4>
+ <ul>
+  <li>
+   <a href="Activate_%28GUI_command%29" title="Activate (GUI command)">
+    activate
+   </a>
+  </li>
+  <li>
+   close
+  </li>
+  <li>
+   <a href="Play_%28GUI_command%29" title="Play (GUI command)">
+    play
+   </a>
+  </li>
+  <li>
+   print
+  </li>
+  <li>
+   runscript
+  </li>
+  <li>
+   <a href="Setkeyval_%28GUI_command%29" title="Setkeyval (GUI command)">
+    setkeyval
+   </a>
+  </li>
+  <li>
+   setshaderparm
+  </li>
+  <li>
+   turkeyscore
+  </li>
+ </ul>
+ <a name="Player">
+ </a>
+ <h4>
+  Player
+ </h4>
+ <ul>
+  <li>
+   addhealth
+  </li>
+  <li>
+   close
+  </li>
+  <li>
+   playpdaaudio
+  </li>
+  <li>
+   playpdavideo
+  </li>
+  <li>
+   ready
+  </li>
+  <li>
+   stoppdaaudio
+  </li>
+  <li>
+   stoppdavideo
+  </li>
+  <li>
+   updatepda
+  </li>
+  <li>
+   updatepda2
+  </li>
+ </ul>
+ <a name="Elevator">
+ </a>
+ <h4>
+  Elevator
+ </h4>
+ <p>
+  changefloor
+ </p>
+ <a name="Syntax_2">
+ </a>
+ <h2>
+  Syntax
+ </h2>
+ <pre>set "cmd" <i>value</i>
+</pre>
+ <p>
+  <i>
+   value
+  </i>
+  is a gui command you want the game client to execute, with all parameters you may want to add to it.
+ </p>
+ <a name="Example.28s.29_2">
+ </a>
+ <h2>
+  Example(s)
+ </h2>
+ <pre>set "cmd" "resetCvars";
+set "cmd" "play guisounds_menuclickup";
+set "cmd" "runScript map_cpuboss::bridge_rotate_east ; play guisounds_action";
+</pre>
+ <p>
+  <br/>
+ </p>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:1470-0!1!0!0!!en!2 and timestamp 20100105203622 -->

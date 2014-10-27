@@ -1,0 +1,51 @@
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  This function will copy the red channel to the green, blue, and alpha channels. This will result in a greyscale image.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <pre>makeIntensity ([map])
+</pre>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   [map] - The image to be altered.
+  </li>
+ </ul>
+ <a name="Example">
+ </a>
+ <h2>
+  Example
+ </h2>
+ <p>
+  Convert the rgb image into an alpha channel...
+ </p>
+ <pre>textures/converted_grey
+{       
+   blend diffusemap
+   map   makeIntensity(textures/decals/plasma_burn.tga)
+{
+</pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  None.
+ </p>
+ <p>
+  <br/>
+ </p>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:1713-0!1!0!0!!en!2 and timestamp 20121120034149 -->

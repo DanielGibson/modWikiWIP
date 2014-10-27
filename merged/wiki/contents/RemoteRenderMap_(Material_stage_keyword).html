@@ -1,0 +1,64 @@
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  The
+  <b>
+   remoteRenderMap
+  </b>
+  keyword defines a buffer to render a remote image in to (for cameras). The entity this material is applied to has to support remote render views.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <pre>remoteRenderMap [width] [height]
+</pre>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   [width] = The width of the buffer
+  </li>
+  <li>
+   [height] = The height of the buffer
+  </li>
+ </ul>
+ <a name="Example">
+ </a>
+ <h2>
+  Example
+ </h2>
+ <p>
+  Render the view of a camera into a 128 by 128 buffer...
+ </p>
+ <pre>{
+   remoteRenderMap	128 128
+}
+</pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  The results produced by this keyword often times require manipulation via the
+  <a href="Translate_%28Material_stage_keyword%29" title="Translate (Material stage keyword)">
+   translate
+  </a>
+  and
+  <a href="Scale_%28Material_stage_keyword%29" title="Scale (Material stage keyword)">
+   scale
+  </a>
+  keywords to be useable.
+ </p>
+ <p>
+  <br/>
+ </p>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:3706-0!1!0!0!!en!2 and timestamp 20080724104339 -->

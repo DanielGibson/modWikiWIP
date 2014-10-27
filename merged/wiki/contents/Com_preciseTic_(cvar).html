@@ -1,0 +1,287 @@
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  This CVar enables/disables the running of multiple updates in a single tic to keep the main and async threads in sync.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <p>
+  At the console type...
+ </p>
+ <pre>com_preciseTic [bool]
+</pre>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   [bool]
+   <ul>
+    <li>
+     0 - Disable.
+    </li>
+    <li>
+     1 - Enable.
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <a name="Flags">
+ </a>
+ <h2>
+  Flags
+ </h2>
+ <table class="mwstyle">
+  <tr>
+   <th>
+    Flag
+   </th>
+   <th>
+    Enabled
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+  <tr>
+   <td>
+    CVAR_ALL
+   </td>
+   <td>
+   </td>
+   <td>
+    all flags
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_BOOL
+   </td>
+   <td>
+    X
+   </td>
+   <td>
+    variable is a boolean
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_INTEGER
+   </td>
+   <td>
+   </td>
+   <td>
+    variable is an integer
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_FLOAT
+   </td>
+   <td>
+   </td>
+   <td>
+    variable is a float
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_SYSTEM
+   </td>
+   <td>
+    X
+   </td>
+   <td>
+    system variable
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_RENDERER
+   </td>
+   <td>
+   </td>
+   <td>
+    renderer variable
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_SOUND
+   </td>
+   <td>
+   </td>
+   <td>
+    sound variable
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_GUI
+   </td>
+   <td>
+   </td>
+   <td>
+    gui variable
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_GAME
+   </td>
+   <td>
+   </td>
+   <td>
+    game variable
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_TOOL
+   </td>
+   <td>
+   </td>
+   <td>
+    tool variable
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_USERINFO
+   </td>
+   <td>
+   </td>
+   <td>
+    sent to servers, available to menu
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_SERVERINFO
+   </td>
+   <td>
+   </td>
+   <td>
+    sent from servers, available to menu
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_NETWORKSYNC
+   </td>
+   <td>
+   </td>
+   <td>
+    cvar is synced from the server to clients
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_STATIC
+   </td>
+   <td>
+    X
+   </td>
+   <td>
+    statically declared, not user created
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_CHEAT
+   </td>
+   <td>
+    X
+   </td>
+   <td>
+    variable is considered a cheat
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_NOCHEAT
+   </td>
+   <td>
+   </td>
+   <td>
+    variable is not considered a cheat
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_INIT
+   </td>
+   <td>
+   </td>
+   <td>
+    can only be set from the command-line
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_ROM
+   </td>
+   <td>
+   </td>
+   <td>
+    display only, cannot be set by user at all
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_ARCHIVE
+   </td>
+   <td>
+   </td>
+   <td>
+    set to cause it to be saved to a config file
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_MODIFIED
+   </td>
+   <td>
+    X
+   </td>
+   <td>
+    set when the variable is modified
+   </td>
+  </tr>
+ </table>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  There are two threads running in Doom 3, the main thread, and the 'async' thread. The main thread runs the game code, networking, physics, renderer, etc... The async thread takes care of sound if
+  <a href="Com_asyncSound_%28cvar%29" title="Com asyncSound (cvar)">
+   com_asyncSound
+  </a>
+  is 1 or 3 (windows &amp; linux), it also takes care of input if
+  <a href="Com_asyncInput_%28cvar%29" title="Com asyncInput (cvar)">
+   com_asyncInput
+  </a>
+  is 1 (it defaults to 0).
+ </p>
+ <p>
+  The async thread wakes up every 16 milliseconds (60fps) to run an update. If more than 16ms have elapsed since the last update, it will run multiple updates to catch up (for example if 51ms have elapsed, it will run 3 updates). Similarly, if the update is called too soon, it gets ignored. When com_preciseTic is set to 0, it skips this bit of logic and always runs a single update no matter what.
+ </p>
+ <p>
+  --from binaryc post @
+  <a class="external free" href="https://web.archive.org/web/20100407101237/http://www.doom3world.org/phpbb2/viewtopic.php?p=106823&amp;highlight=#106823" title="http://www.doom3world.org/phpbb2/viewtopic.php?p=106823&amp;highlight=#106823">
+   http://www.doom3world.org/phpbb2/viewtopic.php?p=106823&amp;highlight=#106823
+  </a>
+ </p>
+ <p>
+  <br/>
+ </p>

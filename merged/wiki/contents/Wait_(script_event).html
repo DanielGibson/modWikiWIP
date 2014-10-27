@@ -1,0 +1,86 @@
+ <a name="Game_class">
+ </a>
+ <h2>
+  Game class
+ </h2>
+ <p>
+  This event operates on an instance of the
+  <a href="Game_class" title="Game class">
+   game class
+  </a>
+  type
+  <a href="Thread_%28scripting%29" title="Thread (scripting)">
+   idThread
+  </a>
+  , accessible via
+  <a href="Scripting_basics#sys" title="Scripting basics">
+   sys
+  </a>
+  identifier.
+ </p>
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  Suspends execution of the current thread for the given number of seconds.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <p>
+  <i>
+   <a href="Data_types#void" title="Data types">
+    void
+   </a>
+  </i>
+  wait(
+  <i>
+   <a href="Data_types#float" title="Data types">
+    float
+   </a>
+  </i>
+  <b>
+   time
+  </b>
+  )
+ </p>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   [time] - The duration in seconds to suspend execution.
+  </li>
+ </ul>
+ <a name="Examples">
+ </a>
+ <h2>
+  Examples
+ </h2>
+ <pre> 
+<span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">wait</span><span style="color: #000000;">(</span><span style="color: #0000dd;">5</span><span style="color: #000000;">)</span>;</pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  <b>
+   time
+  </b>
+  parameter values less than one game frame are not recommended. See
+  <a href="Thread_%28scripting%29" title="Thread (scripting)">
+   threads
+  </a>
+  for more information.
+ </p>
+ <p>
+  <br/>
+ </p>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:1548-0!1!0!0!!en!2 and timestamp 20111227085656 -->

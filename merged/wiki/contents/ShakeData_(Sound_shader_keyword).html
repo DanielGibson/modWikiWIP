@@ -1,0 +1,127 @@
+ <div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
+  <a class="image" href="Image:Q4square_bg.png" title="Image:Q4square_bg.png">
+   <img alt="Image:Q4square_bg.png" height="50" longdesc="/wiki/Image:Q4square_bg.png" src="/web/20100522041408im_/http://www.modwiki.net/w/images/6/69/Q4square_bg.png" width="50"/>
+  </a>
+  The information on this page is specific to
+  <a href="Quake_4" title="Quake 4">
+   Quake 4
+  </a>
+  .
+ </div>
+ <hr/>
+ <p>
+  <br/>
+ </p>
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  The shakeData keyword defines the intensity and duration of a screen shake or light flicker when using the
+  <i>
+   <b>
+    shakes 1
+   </b>
+  </i>
+  sound shader keyword/value.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <pre>shakeData &lt;#&gt; &lt;data&gt;
+</pre>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   <i>
+    <b>
+     #
+    </b>
+   </i>
+   - order of the sound files in the sound shader.  Numbered 0 though n
+  </li>
+  <li>
+   <i>
+    <b>
+     data
+    </b>
+   </i>
+   - data string that defines the intensity of the sound (a being 0db z being max).  The length of this string indicated the length of the sound file.
+  </li>
+ </ul>
+ <a name="Examples">
+ </a>
+ <h2>
+  Examples
+ </h2>
+ <a name="Single_Sound_File_in_Shader">
+ </a>
+ <h3>
+  Single Sound File in Shader
+ </h3>
+ <pre>sound announce_general_sudden_death
+{
+	minDistance	40
+	maxDistance	400
+	volumeDb	10
+	global
+
+	sound/thf/announce/hellchick/sudden_death.wav
+	shakeData 0 bcfhfgdcjnklliceedccbaaaa
+}
+</pre>
+ <a name="Multiple_Sound_Files_in_Shader">
+ </a>
+ <h3>
+  Multiple Sound Files in Shader
+ </h3>
+ <pre>sound player_mp_footstep
+{
+	minDistance	80
+	maxDistance	1200
+	volumeDb	0
+	no_dups
+
+	sound/marine/player/steps/concrete_01
+	shakeData 0 padaaaaaaaa
+	sound/marine/player/steps/concrete_02
+	shakeData 1 hbdaaaabbaa
+	sound/marine/player/steps/concrete_03
+	shakeData 2 gaeaaaabaaa
+	sound/marine/player/steps/concrete_04
+	shakeData 3 mbcaaaaaaaa
+	sound/marine/player/steps/concrete_05
+	shakeData 4 nfaaaaacaa
+}
+</pre>
+ <p>
+  <br/>
+ </p>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  Doom3 analyzed the PCM output to generate light intensities and screen shakes. Quake 4 uses hardware playback (in OpenAL), and cannot access PCM data, so precalculation is required.
+ </p>
+ <p>
+  Creation of data strings for use with this keyword can be generated using the
+  <a class="new" href="ShakesGen_%28console_command%29" title="ShakesGen (console command)">
+   shakesGen
+  </a>
+  console command.  Use
+  <i>
+   <b>
+    shakesGen all
+   </b>
+  </i>
+  to compile shakeData for all sound shaders.  By default only sounds without any shakeData will be compiled.
+ </p>

@@ -1,0 +1,288 @@
+ <div class="boilerplate metadata" id="attention" style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa;">
+  <p>
+   <b>
+    This page is in urgent need of attention because:
+    <i>
+     Unfinished sections
+    </i>
+   </b>
+  </p>
+  <p>
+   If you disagree with this, please explain why on
+   <a href="Talk:Level_scripting" title="Talk:Level scripting">
+    its talk page
+   </a>
+   .
+  </p>
+ </div>
+ <div>
+  <a class="image" href="Image:Etqwsquare_25.png" title="Image:Etqwsquare_25.png">
+   <img alt="Image:Etqwsquare_25.png" height="25" longdesc="/wiki/Image:Etqwsquare_25.png" src="/web/20121205054547im_/http://www.modwiki.net/w/images/7/7e/Etqwsquare_25.png" width="25"/>
+  </a>
+  <b>
+   Note:
+  </b>
+  Enemy Territory: Quake Wars only:
+  <dl>
+   <dd>
+    <i>
+     ETQW uses a script object for it's map script. See
+     <a href="Script_object" title="Script object">
+      script object
+     </a>
+     ,
+     <a href="How_to_add_a_construction_objective" title="How to add a construction objective">
+      this tutorial
+     </a>
+     , or the splash damage wiki [
+     <a class="external autonumber" href="http://wiki.splashdamage.com/index.php/Barebones_Map_script" title="http://wiki.splashdamage.com/index.php/Barebones_Map_script">
+      [1]
+     </a>
+     ].
+    </i>
+   </dd>
+  </dl>
+ </div>
+ <p>
+  Level scripting refers to scripting that is parsed during a level runtime. Level scripting is a very powerful tool used to control various entities within a level. If you have played through Doom 3 you will have undoubtedly noticed the complex machinery with various moving parts, lights, and effects. Machines like this are just one example of level scripting. Listing all of the various examples of level scripts would be next to impossible as the power of level scripting is virtually endless. This section is dedicated to an overview of the syntax and power of level scripts.
+ </p>
+ <div align="left" style="float:right; font-size: 17px;background: #FFFFEE; padding: 5px; border: 1px solid #000000; padding-left: 15px; padding-right: 15px; margin-left: 15px; margin-right: 15px; padding-bottom: 15px; width: 400px;">
+  <div align="right" style="font-size: 10px; text-align=right;">
+   <a href="Help:Reference_box" title="Help:Reference box">
+    What's this?
+   </a>
+  </div>
+  <div>
+   <b>
+    Scripting quick reference
+   </b>
+  </div>
+  <hr/>
+  <span style="font-size: 14px">
+   <ul>
+    <li>
+     <a href="Script_events" title="Script events">
+      Script events
+     </a>
+    </li>
+   </ul>
+  </span>
+ </div>
+ <a name="Creating_the_.SCRIPT_File">
+ </a>
+ <h2>
+  Creating the .SCRIPT File
+ </h2>
+ <p>
+  It is important to first understand where the engine looks for the script. Level scripts should be placed in the map folder where the map is. The script file must be named exactly the same as the map file with a .SCRIPT file format instead of .MAP.
+ </p>
+ <ul>
+  <li>
+   Locate the map - it will most likely reside in Doom3\base\maps\
+  </li>
+  <li>
+   Find yourmap.map (where "yourmap" is the actual name of the map)
+  </li>
+  <li>
+   Create a file named yourmap.script (where "yourmap" is the actual name of the map)
+  </li>
+  <li>
+   Edit this .script file with your favorite script editor to begin level scripting.
+  </li>
+ </ul>
+ <a name="The_Basics">
+ </a>
+ <h2>
+  The Basics
+ </h2>
+ <a name="General_Syntax">
+ </a>
+ <h3>
+  General Syntax
+ </h3>
+ <p>
+  Level scripting syntax follows a similar syntax to that of C or JavaScript language. Refer to the
+  <a href="SCRIPT_%28file_format%29" title="SCRIPT (file format)">
+   SCRIPT file format
+  </a>
+  article for a basic overview of syntax and the
+  <a href="Scripting_basics" title="Scripting basics">
+   Scripting_basics
+  </a>
+  article for beginning scripting tutorials.
+ </p>
+ <a name="Example">
+ </a>
+ <h3>
+  Example
+ </h3>
+ <p>
+  Here is an example of a simple level script:
+ </p>
+ <pre><span style="color: #0000ff;">void</span> setup_objects<span style="color: #000000;">(</span><span style="color: #000000;">)</span>  <span style="color: #000000;">{</span>
+    <span style="color: #000055;">$fanblade</span>.<span style="color: #ff0000;">bind</span><span style="color: #000000;">(</span><span style="color: #000055;">$rotator</span><span style="color: #000000;">)</span>;
+<span style="color: #000000;">}</span>
+ 
+ 
+<span style="color: #0000ff;">void</span> main<span style="color: #000000;">(</span><span style="color: #000000;">)</span>  <span style="color: #000000;">{</span>
+    setup_objects<span style="color: #000000;">(</span><span style="color: #000000;">)</span>;
+<span style="color: #000000;">}</span></pre>
+ <p>
+  <br/>
+  With a basic understanding of scripting syntax, the above script breaks down as follows:
+ </p>
+ <ul>
+  <li>
+   We are first declaring a new function called setup_objects. The void indicates the type of variable the function will return -- in this case nothing.
+  </li>
+  <li>
+   We are referencing the entity called "fanblade" and telling it to bind itself to an entity called "rotator".
+  </li>
+  <li>
+   We then move onto the main function, which will tell the function setup_objects to run on level load.
+  </li>
+ </ul>
+ <p>
+  <br/>
+  It is important to note a few things in level scripting:
+ </p>
+ <ol>
+  <li>
+   The main() function is always called when a level loads.
+  </li>
+  <li>
+   You must declare any functions and/or global variables before you attempt to call them with main().
+  </li>
+ </ol>
+ <a name="A_Note_on_Variables_and_Functions">
+ </a>
+ <h3>
+  A Note on Variables and Functions
+ </h3>
+ <p>
+  Level scripts work with variables and functions as described in the
+  <a href="SCRIPT_%28file_format%29" title="SCRIPT (file format)">
+   SCRIPT_(file_format)
+  </a>
+  article and the
+  <a href="Scripting_basics" title="Scripting basics">
+   Scripting_basics
+  </a>
+  article.
+ </p>
+ <p>
+  <br/>
+ </p>
+ <a name="How_to_Interact_With_Level_Scripts">
+ </a>
+ <h2>
+  How to Interact With Level Scripts
+ </h2>
+ <p>
+  Level scripts are nothing unless we can interact with them as a player in the level. There are 3 primary ways to accomplish level-to-script interaction.
+ </p>
+ <a name="Triggers_in_the_Level">
+ </a>
+ <h3>
+  Triggers in the Level
+ </h3>
+ <p>
+  Every trigger (apart from trigger_fade and trigger_hurt) has a built in key/val pair for calling script functions. 
+The key/val is - call:script_function.
+ </p>
+ <p>
+  In the editor, double click on the call keyword within the entity dialog and fill in the name of the script function you wish to call. When the trigger is triggered the it will call that function. The function must be declared in the .script file before attempting this.
+ </p>
+ <p>
+  Note: You cannot pass arguments to a script function using a trigger. This is an unfortunate limitation - see
+  <a href="Level_scripting#hacking_around_limitations" title="">
+   hacking around limitations
+  </a>
+  for more details.
+ </p>
+ <a name="GUIs">
+ </a>
+ <h3>
+  GUIs
+ </h3>
+ <p>
+  In-game GUIs can function very much like triggers placed in the map. To call a script from a GUI first you must attach a GUI to a model or entity that supports a GUI display. Depending upon how the GUI was built, you must use a gui_parm with the name of a script function to call. Most GUIs will list which gui_parm is attached to which button.
+ </p>
+ <a name="Example_2">
+ </a>
+ <h4>
+  Example
+ </h4>
+ <p>
+  In the Doom 3 editor reference the gui guis/monorail/lower_klaxxon.gui.
+ </p>
+ <p>
+  Notice the comment on the gui:"runs the script in gui_parm6"
+ </p>
+ <p>
+  This means that on the entity that contains the GUI if you input a key/val of gui_parm6:myscript, the myscript function will be called whenever the GUI is clicked.
+ </p>
+ <a name="Notes">
+ </a>
+ <h4>
+  Notes
+ </h4>
+ <p>
+  GUIs are a different animal when it comes to scripting. GUI Scripting is beyond the scope of this article. While different buttons within a GUI can be made to call specific script functions, it is heavily dependent upon the type of GUI in use. You must refer to comments associated with a GUI to understand which gui_parms will call scripts. Later on it may be necessary to write a custom GUI to handle specific needs within a map. While GUIs come in all designs and functions the basic principle that a gui_parm must be used to call a script function remains true.
+ </p>
+ <p>
+  With that said, note that every GUI will be different and as such this article cannot provide enough examples for each GUI, the level creator must use his judgment and will to determine how each GUI will interact.
+ </p>
+ <a name="The_main.28.29_Function">
+ </a>
+ <h3>
+  The main() Function
+ </h3>
+ <p>
+  Lastly, as stated in the example, the main function may be used to call functions upon map load.
+ </p>
+ <a name="Extended_Examples">
+ </a>
+ <h2>
+  Extended Examples
+ </h2>
+ <p>
+  Examples needed
+ </p>
+ <a name="Hacking_Around_Limitations">
+ </a>
+ <h2>
+  Hacking Around Limitations
+ </h2>
+ <p>
+  To be created...
+ </p>
+ <p>
+  follows along the lines of:
+ </p>
+ <pre> 
+<span style="color: #0000ff;">void</span> setArea<span style="color: #000000;">(</span><span style="color: #0000ff;">entity</span> ent<span style="color: #000000;">)</span>
+<span style="color: #000000;">{</span>
+    area = ent.<span style="color: #ff0000;">getFloatKey</span><span style="color: #000000;">(</span><span style="color: #666666;">"area"</span><span style="color: #000000;">)</span>;
+ 
+    <span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">println</span><span style="color: #000000;">(</span><span style="color: #666666;">"Area: "</span> + area<span style="color: #000000;">)</span>;
+<span style="color: #000000;">}</span></pre>
+ <p>
+  <br/>
+ </p>
+ <div class="boilerplate metadata" id="stub">
+  <i>
+   This article is a
+   <a class="external text" href="http://en.wikipedia.org/wiki/Perfect_stub_article" title="http://en.wikipedia.org/wiki/Perfect_stub_article">
+    stub
+   </a>
+   . You can help us by
+   <span class="plainlinks">
+    <a class="external text" href="Level_scripting" title="http://www.modwiki.net/w/index.php?title=Level_scripting&amp;action=edit">
+     expanding it
+    </a>
+   </span>
+   .
+  </i>
+ </div>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:1319-0!1!0!0!!en!2 and timestamp 20121205055041 -->

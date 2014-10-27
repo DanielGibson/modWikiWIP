@@ -1,0 +1,66 @@
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  Attaches a
+  <a href="GUIs" title="GUIs">
+   GUI
+  </a>
+  to this material.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <p>
+  In the global section of your material shader type...
+ </p>
+ <pre>guisurf &lt;gui file&gt; | entity[2|3]
+</pre>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <dl>
+  <dt>
+   gui file
+  </dt>
+  <dd>
+   The path to the
+   <a href="GUI_%28file_format%29" title="GUI (file format)">
+    GUI file
+   </a>
+   to attach to the surface.
+  </dd>
+  <dt>
+   entity
+  </dt>
+  <dd>
+   Lets the mapper set the GUI file to be used on this material by selecting a GUI file for the entity which contains a surface with this material. (Check the "gui" key set on the entity.)
+  </dd>
+  <dt>
+   entity2, entity3
+  </dt>
+  <dd>
+   Same as
+   <b>
+    entity
+   </b>
+   , except that it will use the GUI file set with the "gui2" or "gui3" parameter.
+  </dd>
+ </dl>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  Rarely used. The prime example of a material using this keyword is common/entitygui and common/pda_gui.
+ </p>
+ <p>
+  <br/>
+ </p>

@@ -1,0 +1,220 @@
+ <div class="floatright">
+  <span>
+   <a class="image" href="Image:Patch_caulk.png" title="How to prevent leaks caused by patch meshes.">
+    <img alt="How to prevent leaks caused by patch meshes." height="317" longdesc="/wiki/Image:Patch_caulk.png" src="/web/20111214182356im_/http://www.modwiki.net/w/images/1/13/Patch_caulk.png" width="215"/>
+   </a>
+  </span>
+ </div>
+ <p>
+  A
+  <b>
+   patch
+  </b>
+  or
+  <b>
+   patch mesh
+  </b>
+  is a procedural surface defined by a number of
+  <i>
+   control points
+  </i>
+  which can be manipulated in three dimensions to form a multitude of simple or complex shapes. Curved patches are used to build pillars, domes, vaults, pipes, railings, columns or bevels, whilst more simple flat patches are used to apply decals.
+ </p>
+ <p>
+  Patches have two important properties when compared with brushes.
+ </p>
+ <ul>
+  <li>
+   Patches cannot be used to seal the void. If a patch is used on a wall, ceiling or floor, a brush with the
+   <a href="Caulk" title="Caulk">
+    caulk
+   </a>
+   texture must be placed behind it to prevent leaks.
+  </li>
+  <li>
+   Patches can only be viewed from one direction (unless the
+   <b>
+    <a href="TwoSided_%28Material_global_keyword%29" title="TwoSided (Material global keyword)">
+     twoSided
+    </a>
+   </b>
+   keyword is active in the material), so it is necessary to ensure they are placed the correct way round (inverting them if necessary with
+   <b>
+    Ctrl-I
+   </b>
+   ).
+  </li>
+ </ul>
+ <a name="Creating_a_simple_patch">
+ </a>
+ <h2>
+  Creating a simple patch
+ </h2>
+ <p>
+  A
+  <i>
+   simple patch mesh
+  </i>
+  is a basic rectangular patch with no initial curvature, and a user-selectable number of control points. Simple patch meshes can be used as-is to apply
+  <a href="Decal" title="Decal">
+   decals
+  </a>
+  , or modified through vertex editing to produce common architectural shapes such as arched doorways and roofs.
+ </p>
+ <ol>
+  <li>
+   Select the appropriate view with
+   <b>
+    Ctrl-Tab
+   </b>
+   . The patch will be created facing the viewport, so if the patch is supposed to lie flat on the ground, make sure you create it in Top view.
+  </li>
+  <li>
+   Click and drag to draw a brush. This will become the boundary of the patch (since patches are infinitely thin you do not need to worry about the third dimension of the brush).
+  </li>
+  <li>
+   From the
+   <b>
+    Patch
+   </b>
+   menu choose
+   <b>
+    Simple Patch Mesh...
+   </b>
+  </li>
+  <li>
+   Select the desired number of control points (minimum 3) in each dimension, and click OK to create the patch.
+  </li>
+ </ol>
+ <a name="Adjusting_the_control_points">
+ </a>
+ <h2>
+  Adjusting the control points
+ </h2>
+ <p>
+  Select a patch and press
+  <b>
+   V
+  </b>
+  to enter vertex editing mode. In this mode you can move any or all of the control points in three dimensions to control the shape and curvature of the patch. You can select more than one control point by dragging a box around them with the mouse (unlike with brush vertex editing), or by shift-clicking on a control point which alternately selects the whole row or column.
+ </p>
+ <a name="Subdividing_patches">
+ </a>
+ <h2>
+  Subdividing patches
+ </h2>
+ <div class="thumb tright">
+  <div style="width:258px;">
+   <a class="internal" href="Image:Patch_subdivision_sized.png" title="Subdividing a patch">
+    <img alt="Subdividing a patch" height="266" longdesc="/wiki/Image:Patch_subdivision_sized.png" src="/web/20111214182356im_/http://www.modwiki.net/w/images/8/8c/Patch_subdivision_sized.png" width="256"/>
+   </a>
+   <div class="thumbcaption">
+    <div class="magnify" style="float:right">
+     <a class="internal" href="Image:Patch_subdivision_sized.png" title="Enlarge">
+      <img alt="Enlarge" height="11" src="/web/20111214182356im_/http://www.modwiki.net/w/skins/common/images/magnify-clip.png" width="15"/>
+     </a>
+    </div>
+    Subdividing a patch
+   </div>
+  </div>
+ </div>
+ <p>
+  As with all surfaces, patches must be converted to flat triangles before being rendered by the graphics card. Although this is performed automatically by Doom 3, the default number of triangles used is quite high. In many cases it is advisable to reduce the number of polygons used through the
+  <b>
+   subdivide patch
+  </b>
+  functionality.
+ </p>
+ <ol>
+  <li>
+   Select a patch with
+   <b>
+    Shift-LMB
+   </b>
+  </li>
+  <li>
+   Hit
+   <b>
+    S
+   </b>
+   to bring up the Surface Inspector.
+  </li>
+  <li>
+   Enable the
+   <b>
+    Subdivide patch
+   </b>
+   checkbox, and use the sliders to choose the number of divisions to make in each direction.
+  </li>
+ </ol>
+ <p>
+  As subdivided patches are still smooth shaded, it is often possible to subdivide them into 3 or 4 sections without losing visual quality. Subdivided patches can also exhibit less texture distortion than non-divided ones.
+ </p>
+ <p>
+  <br style="clear:both;"/>
+ </p>
+ <a name="Thickening_patches">
+ </a>
+ <h2>
+  Thickening patches
+ </h2>
+ <p>
+  A newly-created patch is infinitely thin. For architectural detail such as arches or beams, a patch needs to be made into a three-dimensional object which can be viewed from all directions. The
+  <b>
+   thicken
+  </b>
+  tool is used for this purpose.
+ </p>
+ <div class="thumb tright">
+  <div style="width:322px;">
+   <a class="internal" href="Image:Thickpatch.jpg" title="Screenshots of a patch being thickened.">
+    <img alt="Screenshots of a patch being thickened." height="263" longdesc="/wiki/Image:Thickpatch.jpg" src="/web/20111214182356im_/http://www.modwiki.net/w/images/8/84/Thickpatch.jpg" width="320"/>
+   </a>
+   <div class="thumbcaption">
+    <div class="magnify" style="float:right">
+     <a class="internal" href="Image:Thickpatch.jpg" title="Enlarge">
+      <img alt="Enlarge" height="11" src="/web/20111214182356im_/http://www.modwiki.net/w/skins/common/images/magnify-clip.png" width="15"/>
+     </a>
+    </div>
+    Screenshots of a patch being thickened.
+   </div>
+  </div>
+ </div>
+ <ol>
+  <li>
+   Create the first patch which will define the shape of the object. For an archway or curved beam, this might be the front face of the shape.
+  </li>
+  <li>
+   With the patch selected, choose
+   <b>
+    Thicken...
+   </b>
+   from the
+   <b>
+    Patch
+   </b>
+   menu.
+  </li>
+  <li>
+   Enter the distance in editor units that the patch should be extruded, and choose whether or not to create "Seams". If seams are not created, only the front and back patches will be generated, otherwise a complete extrusion (front, back and side faces) will be performed.
+  </li>
+  <li>
+   Choose
+   <b>
+    OK
+   </b>
+   to create the thickened patch
+  </li>
+ </ol>
+ <p>
+  The thickened object is a
+  <a class="new" href="Func_static" title="Func static">
+   func_static
+  </a>
+  grouping of patches, that can be selected and manipulated as a single object. Individual patches within the object can be selected by cycling through them with the
+  <b>
+   TAB
+  </b>
+  key.
+ </p>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:1677-0!1!0!0!!en!2 and timestamp 20111213232545 -->

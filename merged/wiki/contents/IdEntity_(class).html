@@ -1,0 +1,682 @@
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  idEntity is the base
+  <a href="Spawn_class" title="Spawn class">
+   spawn class
+  </a>
+  of
+  <a href="Entity" title="Entity">
+   entities
+  </a>
+  .
+ </p>
+ <p>
+  All other spawn classes inherit its functions, variables and events, but may override them to produce different behavior than idEntity.
+ </p>
+ <a name="Spawn_Arguments">
+ </a>
+ <h2>
+  Spawn Arguments
+ </h2>
+ <p>
+  The following is a list of key/value pairs, also known as
+  <a href="SpawnArgs" title="SpawnArgs">
+   spawn arguments
+  </a>
+  , that function with this entity.
+  <br/>
+ </p>
+ <table class="listtable">
+  <tr>
+   <th>
+    KEY
+   </th>
+   <th>
+    DESCRIPTION
+   </th>
+  </tr>
+  <tr>
+   <td>
+    angle
+   </td>
+   <td>
+    Yaw angle of entity.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    bind
+   </td>
+   <td>
+    Entity to bind to.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    bindOrientated
+   </td>
+   <td>
+    Description not available.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    bindToBody
+   </td>
+   <td>
+    Description not available.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    bindToJoint
+   </td>
+   <td>
+    Description not available.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    bindanim
+   </td>
+   <td>
+    Description not available.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    cameraTarget
+   </td>
+   <td>
+    Description not available.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    cinematic
+   </td>
+   <td>
+    Description not available.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    classname
+   </td>
+   <td>
+    <a href="Entitydef_%28decl%29" title="Entitydef (decl)">
+     EntityDef
+    </a>
+    to load
+    <a href="SpawnArgs" title="SpawnArgs">
+     spawnArgs
+    </a>
+    from.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    clipmodel
+   </td>
+   <td>
+    Name of
+    <a class="new" href="Clip_model" title="Clip model">
+     clip model
+    </a>
+    to load.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    cone
+   </td>
+   <td>
+    Set up clip model as cone with this number of sides. Use mins/maxs to set bounds.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    cylinder
+   </td>
+   <td>
+    Set up
+    <a class="new" href="Clip_model" title="Clip model">
+     clip model
+    </a>
+    as cone with this number of sides. Use mins/maxs to set bounds.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    guiTarget
+   </td>
+   <td>
+    Description not available.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    health
+   </td>
+   <td>
+    Health.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    hide
+   </td>
+   <td>
+    Hide visual model and disable clip.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    maxs
+   </td>
+   <td>
+    Max bounds of
+    <a class="new" href="Clip_model" title="Clip model">
+     clip model
+    </a>
+    .
+   </td>
+  </tr>
+  <tr>
+   <td>
+    mins
+   </td>
+   <td>
+    Min bounds of
+    <a class="new" href="Clip_model" title="Clip model">
+     clip model
+    </a>
+    .
+   </td>
+  </tr>
+  <tr>
+   <td>
+    model
+   </td>
+   <td>
+    name of visual model.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    name
+   </td>
+   <td>
+    Unique name of entity.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    networkSync
+   </td>
+   <td>
+    Description not available.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    neverDormant
+   </td>
+   <td>
+    Description not available.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    noclipmodel
+   </td>
+   <td>
+    Do not set up a
+    <a class="new" href="Clip_model" title="Clip model">
+     clip model
+    </a>
+    .
+   </td>
+  </tr>
+  <tr>
+   <td>
+    origin
+   </td>
+   <td>
+    Initial world coordinates of entity.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    rotation
+   </td>
+   <td>
+    rotation matrix.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    scriptobject
+   </td>
+   <td>
+    Type of
+    <a href="Script_object" title="Script object">
+     script object
+    </a>
+    for entity to use.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    size
+   </td>
+   <td>
+    Size of
+    <a class="new" href="Clip_model" title="Clip model">
+     clip model
+    </a>
+    , alternative to mins/maxs.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    solidForTeam
+   </td>
+   <td>
+    Description not available.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    spawnclass
+   </td>
+   <td>
+    The
+    <a href="Spawn_class" title="Spawn class">
+     spawn class
+    </a>
+    type as string.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    target
+   </td>
+   <td>
+    Prefix, entity to add to
+    <a class="new" href="Targets" title="Targets">
+     target
+    </a>
+    list.
+   </td>
+  </tr>
+  <tr>
+   <td>
+    noDynamicInteractions
+   </td>
+   <td>
+    Don't create any light and shadow interactions for this entity after the level load is completed.
+   </td>
+  </tr>
+ </table>
+ <a name="Inheritance">
+ </a>
+ <h2>
+  Inheritance
+ </h2>
+ <p>
+  This entity is derived from the following:
+ </p>
+ <ul>
+  <li>
+   <i>
+    <a href="IdClass_%28class%29" title="IdClass (class)">
+     idClass
+    </a>
+   </i>
+   <ul>
+    <li>
+     <i>
+      <strong>
+       idEntity
+      </strong>
+     </i>
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <p>
+  <b>
+   Note
+  </b>
+  : Entries marked in italics are classes defined in the
+  <a href="Coding#Game_code" title="Coding">
+   game code
+  </a>
+  .
+ </p>
+ <a name="Events">
+ </a>
+ <h2>
+  Events
+ </h2>
+ <ul>
+  <li>
+   <a href="Activate_%28script_event%29" title="Activate (script event)">
+    activate
+   </a>
+  </li>
+  <li>
+   <a href="ActivateTargets_%28script_event%29" title="ActivateTargets (script event)">
+    activateTargets
+   </a>
+  </li>
+  <li>
+   <a href="Bind_%28script_event%29" title="Bind (script event)">
+    bind
+   </a>
+  </li>
+  <li>
+   <a href="BindPosition_%28script_event%29" title="BindPosition (script event)">
+    bindPosition
+   </a>
+  </li>
+  <li>
+   <a href="BindToJoint_%28script_event%29" title="BindToJoint (script event)">
+    bindToJoint
+   </a>
+  </li>
+  <li>
+   <a href="CacheSoundShader_%28script_event%29" title="CacheSoundShader (script event)">
+    cacheSoundShader
+   </a>
+  </li>
+  <li>
+   <a href="CallFunction_%28script_event%29" title="CallFunction (script event)">
+    callFunction
+   </a>
+  </li>
+  <li>
+   <a href="ClearSignal_%28script_event%29" title="ClearSignal (script event)">
+    clearSignal
+   </a>
+  </li>
+  <li>
+   <a href="DistanceTo_%28script_event%29" title="DistanceTo (script event)">
+    distanceTo
+   </a>
+  </li>
+  <li>
+   <a href="DistanceToPoint_%28script_event%29" title="DistanceToPoint (script event)">
+    distanceToPoint
+   </a>
+  </li>
+  <li>
+   <a href="FadeSound_%28script_event%29" title="FadeSound (script event)">
+    fadeSound
+   </a>
+  </li>
+  <li>
+   <a href="GetAngles_%28script_event%29" title="GetAngles (script event)">
+    getAngles
+   </a>
+  </li>
+  <li>
+   <a href="GetAngularVelocity_%28script_event%29" title="GetAngularVelocity (script event)">
+    getAngularVelocity
+   </a>
+  </li>
+  <li>
+   <a href="GetColor_%28script_event%29" title="GetColor (script event)">
+    getColor
+   </a>
+  </li>
+  <li>
+   <a href="GetEntityKey_%28script_event%29" title="GetEntityKey (script event)">
+    getEntityKey
+   </a>
+  </li>
+  <li>
+   <a href="GetFloatKey_%28script_event%29" title="GetFloatKey (script event)">
+    getFloatKey
+   </a>
+  </li>
+  <li>
+   <a href="GetIntKey_%28script_event%29" title="GetIntKey (script event)">
+    getIntKey
+   </a>
+  </li>
+  <li>
+   <a href="GetKey_%28script_event%29" title="GetKey (script event)">
+    getKey
+   </a>
+  </li>
+  <li>
+   <a href="GetLinearVelocity_%28script_event%29" title="GetLinearVelocity (script event)">
+    getLinearVelocity
+   </a>
+  </li>
+  <li>
+   <a href="GetMaxs_%28script_event%29" title="GetMaxs (script event)">
+    getMaxs
+   </a>
+  </li>
+  <li>
+   <a href="GetMins_%28script_event%29" title="GetMins (script event)">
+    getMins
+   </a>
+  </li>
+  <li>
+   <a href="GetName_%28script_event%29" title="GetName (script event)">
+    getName
+   </a>
+  </li>
+  <li>
+   <a href="GetNextKey_%28script_event%29" title="GetNextKey (script event)">
+    getNextKey
+   </a>
+  </li>
+  <li>
+   <a href="GetOrigin_%28script_event%29" title="GetOrigin (script event)">
+    getOrigin
+   </a>
+  </li>
+  <li>
+   <a href="GetShaderParm_%28script_event%29" title="GetShaderParm (script event)">
+    getShaderParm
+   </a>
+  </li>
+  <li>
+   <a href="GetSize_%28script_event%29" title="GetSize (script event)">
+    getSize
+   </a>
+  </li>
+  <li>
+   <a href="GetTarget_%28script_event%29" title="GetTarget (script event)">
+    getTarget
+   </a>
+  </li>
+  <li>
+   <a href="GetVectorKey_%28script_event%29" title="GetVectorKey (script event)">
+    getVectorKey
+   </a>
+  </li>
+  <li>
+   <a href="GetWorldOrigin_%28script_event%29" title="GetWorldOrigin (script event)">
+    getWorldOrigin
+   </a>
+  </li>
+  <li>
+   <a href="HasFunction_%28script_event%29" title="HasFunction (script event)">
+    hasFunction
+   </a>
+  </li>
+  <li>
+   <a href="Hide_%28script_event%29" title="Hide (script event)">
+    hide
+   </a>
+  </li>
+  <li>
+   <a href="IsHidden_%28script_event%29" title="IsHidden (script event)">
+    isHidden
+   </a>
+  </li>
+  <li>
+   <a href="NumTargets_%28script_event%29" title="NumTargets (script event)">
+    numTargets
+   </a>
+  </li>
+  <li>
+   <a href="RandomTarget_%28script_event%29" title="RandomTarget (script event)">
+    randomTarget
+   </a>
+  </li>
+  <li>
+   <a href="Remove_%28script_event%29" title="Remove (script event)">
+    remove
+   </a>
+  </li>
+  <li>
+   <a href="RemoveBinds_%28script_event%29" title="RemoveBinds (script event)">
+    removeBinds
+   </a>
+  </li>
+  <li>
+   <a href="RestorePosition_%28script_event%29" title="RestorePosition (script event)">
+    restorePosition
+   </a>
+  </li>
+  <li>
+   <a href="SetAngles_%28script_event%29" title="SetAngles (script event)">
+    setAngles
+   </a>
+  </li>
+  <li>
+   <a href="SetAngularVelocity_%28script_event%29" title="SetAngularVelocity (script event)">
+    setAngularVelocity
+   </a>
+  </li>
+  <li>
+   <a href="SetColor_%28script_event%29" title="SetColor (script event)">
+    setColor
+   </a>
+  </li>
+  <li>
+   <a href="SetGuiFloat_%28script_event%29" title="SetGuiFloat (script event)">
+    setGuiFloat
+   </a>
+  </li>
+  <li>
+   <a href="SetGuiParm_%28script_event%29" title="SetGuiParm (script event)">
+    setGuiParm
+   </a>
+  </li>
+  <li>
+   <a href="SetKey_%28script_event%29" title="SetKey (script event)">
+    setKey
+   </a>
+  </li>
+  <li>
+   <a href="SetLinearVelocity_%28script_event%29" title="SetLinearVelocity (script event)">
+    setLinearVelocity
+   </a>
+  </li>
+  <li>
+   <a href="SetModel_%28script_event%29" title="SetModel (script event)">
+    setModel
+   </a>
+  </li>
+  <li>
+   <a href="SetName_%28script_event%29" title="SetName (script event)">
+    setName
+   </a>
+  </li>
+  <li>
+   <a href="SetNeverDormant_%28script_event%29" title="SetNeverDormant (script event)">
+    setNeverDormant
+   </a>
+  </li>
+  <li>
+   <a href="SetOrigin_%28script_event%29" title="SetOrigin (script event)">
+    setOrigin
+   </a>
+  </li>
+  <li>
+   <a href="SetOwner_%28script_event%29" title="SetOwner (script event)">
+    setOwner
+   </a>
+  </li>
+  <li>
+   <a href="SetShaderParm_%28script_event%29" title="SetShaderParm (script event)">
+    setShaderParm
+   </a>
+  </li>
+  <li>
+   <a href="SetShaderParms_%28script_event%29" title="SetShaderParms (script event)">
+    setShaderParms
+   </a>
+  </li>
+  <li>
+   <a href="SetSize_%28script_event%29" title="SetSize (script event)">
+    setSize
+   </a>
+  </li>
+  <li>
+   <a href="SetSkin_%28script_event%29" title="SetSkin (script event)">
+    setSkin
+   </a>
+  </li>
+  <li>
+   <a href="SetWorldOrigin_%28script_event%29" title="SetWorldOrigin (script event)">
+    setWorldOrigin
+   </a>
+  </li>
+  <li>
+   <a href="Show_%28script_event%29" title="Show (script event)">
+    show
+   </a>
+  </li>
+  <li>
+   <a href="StartFx_%28script_event%29" title="StartFx (script event)">
+    startFx
+   </a>
+  </li>
+  <li>
+   <a href="StartSound_%28script_event%29" title="StartSound (script event)">
+    startSound
+   </a>
+  </li>
+  <li>
+   <a href="StartSoundShader_%28script_event%29" title="StartSoundShader (script event)">
+    startSoundShader
+   </a>
+  </li>
+  <li>
+   <a href="StopSound_%28script_event%29" title="StopSound (script event)">
+    stopSound
+   </a>
+  </li>
+  <li>
+   <a href="Touches_%28script_event%29" title="Touches (script event)">
+    touches
+   </a>
+  </li>
+  <li>
+   <a href="Unbind_%28script_event%29" title="Unbind (script event)">
+    unbind
+   </a>
+  </li>
+ </ul>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  Notes not available.
+ </p>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:8156-0!1!0!0!!en!2 and timestamp 20120229143848 -->

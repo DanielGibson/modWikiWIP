@@ -1,0 +1,79 @@
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  JPEG is an established lossy compression graphics file format. It operates on the concept that the human eye doesn't notice certain subtle changes in color, and that certain colors in these ranges can be removed from the image in order to allow it to be compressed to a smaller file size. The term "lossy" is given to the technique due to the fact that, by removing these ranges of color, the compressed image has lost some of the quality of the original image.
+ </p>
+ <p>
+  The high level of compression offered by this format made it very popular on the web. As the amount of data needed by games has grown larger and larger, this format has become useful in game development as well. It must be used with care, however, to ensure that the resulting in game textures do not suffer from too high of a loss in quality.
+ </p>
+ <p>
+  More information on the JPEG format can be found at
+  <a class="external free" href="http://www.ijg.org/" title="http://www.ijg.org">
+   http://www.ijg.org
+  </a>
+  .
+ </p>
+ <a name="General_File_Format_Specifications">
+ </a>
+ <h2>
+  General File Format Specifications
+ </h2>
+ <table border="1" cellpadding="0" cellspacing="0" style="text-align: center;">
+  <tr>
+   <th>
+    Type
+   </th>
+   <td>
+    Raster Image Format
+   </td>
+  </tr>
+  <tr>
+   <th>
+    Extension
+   </th>
+   <td>
+    *.JPG, *.JPEG
+   </td>
+  </tr>
+  <tr>
+   <th>
+    Compression
+   </th>
+   <td>
+    JPEG
+   </td>
+  </tr>
+  <tr>
+   <th>
+    Color Depth
+   </th>
+   <td>
+    24-bits
+   </td>
+  </tr>
+ </table>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  JPEG compression is lossy and results in artifacts. Because of this, it's recommended that you do not use JPEG images for your normal maps.
+ </p>
+ <p>
+  JPEG images do not support transparency or alpha channels. This makes them unsuitable for decals.
+ </p>
+ <p>
+  When saving JPEG files for use in Doom 3, be sure that you
+  <i>
+   do not
+  </i>
+  save using the "progressive compression" option in your
+  <a href="Texturing#Texturing_applications" title="Texturing">
+   image editor
+  </a>
+  . This will cause both the editor and the game to crash when it attempts to parse your image.
+ </p>

@@ -1,0 +1,198 @@
+ <p>
+  The Doom 3 engine uses
+  <b>
+   visportals
+  </b>
+  to determine which sections of the map need to be processed for rendering. Visportals allow the  engine to efficiently discard sections of the level that cannot possibly be seen from the current vantage point, thus avoiding wasted CPU and GPU time. The careful use of visportals is critical to the design of a playable level, as the performance of anything more complex than a few empty rooms will drop dramatically if visportals are not used.
+ </p>
+ <a name="How_visportals_work">
+ </a>
+ <h2>
+  How visportals work
+ </h2>
+ <p>
+  The basic function of a visportal is to discard geometry that cannot be seen through it. Visportals operate as invisible barriers that divide a level into zones, allowing the renderer to avoid drawing geometry in a zone that cannot be seen from the player's current vantage point.
+ </p>
+ <div class="floatleft">
+  <span>
+   <a class="image" href="Image:Visportalssized.png" title="">
+    <img alt="" height="308" longdesc="/wiki/Image:Visportalssized.png" src="/web/20121023101859im_/http://www.modwiki.net/w/images/1/13/Visportalssized.png" width="352"/>
+   </a>
+  </span>
+ </div>
+ <p>
+  As shown in the diagram, visportals "open" or "close" depending on whether they are within the player's field of view (they are also automatically closed if they are placed inside a
+  <a class="new" href="Func_door" title="Func door">
+   func_door
+  </a>
+  which is itself closed). In the situation depicted at the top, the portal is not on-screen and therefore it is closed, preventing any of the geometry in the upper room from being sent to the graphics card for rendering.
+ </p>
+ <p>
+  In the lower case, the portal
+  <i>
+   is
+  </i>
+  on-screen and is therefore open, causing all of the upper room's geometry to be batched and sent for rendering. An additional optimisation called
+  <b>
+   scissoring
+  </b>
+  prevents the pixel shader from running on surfaces that are not directly visible through the portal, however the geometry is still being processed.
+ </p>
+ <p>
+  It is important to note that
+  <i>
+   level geometry does not occlude visportals
+  </i>
+  . This means that a visportal will be calculated as "open" if it is within the player's field of view, even if it is not actually visible on-screen due to intermediate solid surfaces. The diagram on the right illustrates this point.
+ </p>
+ <div class="floatright">
+  <span>
+   <a class="image" href="Image:Visportals1sized.png" title="">
+    <img alt="" height="279" longdesc="/wiki/Image:Visportals1sized.png" src="/web/20121023101859im_/http://www.modwiki.net/w/images/a/a1/Visportals1sized.png" width="320"/>
+   </a>
+  </span>
+ </div>
+ <p>
+  In the first case the visportal is open due to its position within the player's field of view, even though the internal wall prevents the player from actually seeing the portal or anything behind it. Placing a second portal at the other end of the wall, as in the second situation, correctly occludes the upper portal and ensures that non-visible surfaces are not rendered.
+ </p>
+ <a name="Placing_a_visportal">
+ </a>
+ <h2>
+  Placing a visportal
+ </h2>
+ <p>
+  Visportals are created as brushes textured with the
+  <b>
+   textures/editor/visportal
+  </b>
+  material, as follows.
+ </p>
+ <ol>
+  <li>
+   Create a brush in the required position. One side of the brush will become the visportal, so ensure that the chosen side is placed correctly so as to completely seal the gap. Visportal zones
+   <i>
+    must
+   </i>
+   be airtight.
+  </li>
+  <li>
+   Select the brush with
+   <b>
+    Shift-LMB
+   </b>
+   and apply
+   <b>
+    textures/common/nodraw
+   </b>
+   to make all surfaces invisible.
+  </li>
+  <li>
+   Select the chosen visportal side with
+   <b>
+    Ctrl-Shift-LMB
+   </b>
+   in the 3D view to select the surface only. Apply
+   <b>
+    textures/editor/visportal
+   </b>
+   to create the portal.
+  </li>
+ </ol>
+ <p>
+  After compiling and running the map, you can check that the portal was created successfully by typing "
+  <a href="R_showPortals_%28cvar%29" title="R showPortals (cvar)">
+   r_showPortals
+  </a>
+  1" at the console. All visible portals will be outlined in green if they are open and red if they are closed. If the new portal does not show up, then it has not been placed correctly: it does not completely fit the corridor or doorway which it is in therefore not dividing the level into separate zones (i.e. there is another way around it that does not require passing through a portal).
+ </p>
+ <a name="Limitations">
+ </a>
+ <h2>
+  Limitations
+ </h2>
+ <p>
+  Visportals segment all triangles they are in contact with, generating extra polygons. This side effect must be taken into account if you are placing a visportal in contact in already highly tesselated areas. A visportal will only affect level geometry; entities that span a visportal will not be affected by it. See the
+  <a href="Models_vs_brushes" title="Models vs brushes">
+   models vs brushes
+  </a>
+  section.
+ </p>
+ <a name="Distance_based_visportals">
+ </a>
+ <h2>
+  <span align="absbottom">
+   <a class="image" href="Image:Q4square_25.png" title="Q4">
+    <img alt="Q4" height="25" longdesc="/wiki/Image:Q4square_25.png" src="/web/20121023101859im_/http://www.modwiki.net/w/images/e/e8/Q4square_25.png" width="25"/>
+   </a>
+   Distance based visportals
+  </span>
+ </h2>
+ <dl>
+  <dd>
+   <i>
+    The information in this section is specific to
+    <a href="Quake_4" title="Quake 4">
+     Quake 4
+    </a>
+    .
+   </i>
+  </dd>
+ </dl>
+ <p>
+  These are created with the "textures/editor/visportal_distance_*" materials. These portals will fade to black or to an
+  <a href="Portalimage_%28Material_global_keyword%29" title="Portalimage (Material global keyword)">
+   image
+  </a>
+  specified in a custom distance-visportal you create when the player is
+  <a href="Portaldistancenear_%28Material_global_keyword%29" title="Portaldistancenear (Material global keyword)">
+   x units away
+  </a>
+  from the portal and will close when the player is
+  <a href="Portaldistancefar_%28Material_global_keyword%29" title="Portaldistancefar (Material global keyword)">
+   y units away
+  </a>
+  from the portal, whether or not the portal should be open according to the general visportal rules described above.
+ </p>
+ <p>
+  To quickly test various distances you can create the following custom
+  <a href="Guide_%28decl%29" title="Guide (decl)">
+   guide
+  </a>
+  :
+ </p>
+ <pre>guide visportal_distance(NearParm, FarParm)
+{
+	description	"Surface fades to _black at near, closes at far"
+	qer_editorimage	textures/editor/visportal_fade.tga
+
+	areaportal
+	noshadows
+
+	portalImage		_black
+	portalDistanceNear	NearParm
+	portalDistanceFar	FarParm
+}
+</pre>
+ <p>
+  Then you can create various distance-based visportal
+  <a href="Material_%28decl%29" title="Material (decl)">
+   materials
+  </a>
+  with just one line, similar to:
+ </p>
+ <pre>guide textures/editor/visportal_512_768 visportal_distance("512", "768")
+</pre>
+ <a name="External_links">
+ </a>
+ <h2>
+  External links
+ </h2>
+ <p>
+  <a class="external text" href="http://iddevnet.com/doom3/visportals.php" title="http://iddevnet.com/doom3/visportals.php">
+   Official
+   <b>
+    iddevnet
+   </b>
+   explanation of visportals
+  </a>
+ </p>

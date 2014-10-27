@@ -1,0 +1,89 @@
+ <a name="Game_class">
+ </a>
+ <h2>
+  Game class
+ </h2>
+ <p>
+  This event operates on an instance of the
+  <a href="Game_class" title="Game class">
+   game class
+  </a>
+  type {{{gameclass}}}
+ </p>
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  Plays the sound specified by the snd_* key/value pair on the channel and returns the length of the sound.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <p>
+  <i>
+   float
+  </i>
+  startSound(
+  <i>
+   string
+  </i>
+  <b>
+   sound
+  </b>
+  ,
+  <i>
+   float
+  </i>
+  <b>
+   channel
+  </b>
+  ,
+  <i>
+   float
+  </i>
+  <b>
+   netSync
+  </b>
+  )
+ </p>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   [sound] - The sound to play from this entity.
+  </li>
+  <li>
+   [channel] - The channel to play this sound on.
+  </li>
+  <li>
+   [netSync] - Whether to play this sound across the network or not.
+  </li>
+ </ul>
+ <a name="Examples">
+ </a>
+ <h2>
+  Examples
+ </h2>
+ <pre> 
+<span style="color: #000055;">$my_entity</span>.<span style="color: #ff0000;">startSound</span><span style="color: #000000;">(</span><span style="color: #666666;">"snd_target_lost"</span>, <span style="color: #0000dd;">1</span>, <span style="color: #0000dd;">1</span><span style="color: #000000;">)</span>;</pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  This script event does not return any values.
+ </p>
+ <p>
+  This is the preferred method for playing sounds on an entity since it ensures that the sound is precached.
+ </p>
+ <p>
+  <br/>
+ </p>

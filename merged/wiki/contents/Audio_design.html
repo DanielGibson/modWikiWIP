@@ -1,0 +1,197 @@
+ <p>
+  Audio design is the art of creating audio-content for a game. This field is generally seperated into the following categories:
+ </p>
+ <dl>
+  <dt>
+   Sound Design
+  </dt>
+  <dd>
+   The creation of sound effects such as gun shots and audio-rumbling machinery to be used either as parts of actors and objects or as looping background sounds for the environment.
+  </dd>
+ </dl>
+ <dl>
+  <dt>
+   Musical Composition
+  </dt>
+  <dd>
+   The writing and creation of muscial tracks and scores for a game. This includes menu music, level tracks, sounds for credits, cutscenes etc. Depending on the scope of the game the musical design can become very complex.
+  </dd>
+ </dl>
+ <a name="Audio_Format">
+ </a>
+ <h2>
+  Audio Format
+ </h2>
+ <p>
+  All audio files used by the id Tech 4 engine employ either the .
+  <a href="OGG_%28file_format%29" title="OGG (file format)">
+   OGG
+  </a>
+  or the .
+  <a href="WAV_%28file_format%29" title="WAV (file format)">
+   WAV
+  </a>
+  file format. All valid sound files have to be either 1 (mono) or 2 (stereo) channel, 16 bit at 11025, 22050 or 44100 Hz.  Any sound made with the intention of being used for surround sound should be in mono.  Any sound intended to be used with
+  <a href="Shakes_%28Sound_shader_keyword%29" title="Shakes (Sound shader keyword)">
+   shakes
+  </a>
+  should be a .
+  <a href="WAV_%28file_format%29" title="WAV (file format)">
+   WAV
+  </a>
+  file if using Doom 3 (the game, not the engine).  If you are using Quake 4 an .
+  <a href="OGG_%28file_format%29" title="OGG (file format)">
+   OGG
+  </a>
+  is perfectly fine as long as you run
+  <a class="new" href="ShakesGen_%28console_command%29" title="ShakesGen (console command)">
+   shakesGen
+  </a>
+  to create the
+  <a href="ShakeData_%28Sound_shader_keyword%29" title="ShakeData (Sound shader keyword)">
+   shakeData
+  </a>
+  first.
+ </p>
+ <a name="Sound_Shaders">
+ </a>
+ <h2>
+  Sound Shaders
+ </h2>
+ <p>
+  Creating Sounds for the id Tech 4 engine has been refined compared to older games. This is similar to the
+  <a href="Texturing" title="Texturing">
+   Texturing
+  </a>
+  process which has become more complicated and powerful through the addition of
+  <a href="Material_%28decl%29" title="Material (decl)">
+   material shaders
+  </a>
+  . Something similar was introduced for sound design, the so called
+  <a href="Sound_%28decl%29" title="Sound (decl)">
+   sound shaders
+  </a>
+  which are contained within .
+  <a href="SNDSHD_%28file_format%29" title="SNDSHD (file format)">
+   SNDSHD
+  </a>
+  files.
+ </p>
+ <a name="Sound_Editor">
+ </a>
+ <h2>
+  Sound Editor
+ </h2>
+ <p>
+  Doom 3 includes an editor which allows sounds to be placed in a level, and immediately tested in game.  To launch the Sound Editor, type
+  <a href="EditSounds_%28console_command%29" title="EditSounds (console command)">
+   editSounds
+  </a>
+  in the console.  Sound Shaders
+  <a href="SNDSHD_%28file_format%29" title="SNDSHD (file format)">
+   SNDSHD
+  </a>
+  or individual sound files are played by speakers dropped in level by the player.  Some parameters of the Sound Shader are editable in the tool, and sounds can be manually triggered.  The s_drawSounds
+  <a href="S_drawSounds_%28cvar%29" title="S drawSounds (cvar)">
+   s_drawSounds
+  </a>
+  command is useful to view speakers already in the level.  These can be selected by placing your crosshairs over the speaker and pressing the mouse button.
+ </p>
+ <a name="Sound_Editing_Sites">
+ </a>
+ <h2>
+  Sound Editing Sites
+ </h2>
+ <ul>
+  <li>
+   <a class="external text" href="https://web.archive.org/web/20121120032622/http://voxfeminae.planetquake.gamespy.com/" title="http://voxfeminae.planetquake.gamespy.com/">
+    vox feminae
+   </a>
+   A sound website created by Raven's "Hellchick".  Includes sound tips, free sound samples and articles by several people in the game indsutry.
+  </li>
+  <li>
+   <a class="external text" href="http://www.soundsnap.com/" title="http://www.soundsnap.com/">
+    Sound Snap
+   </a>
+   A phenomenal resource of free to use sound effects.
+  </li>
+  <li>
+   <a class="external text" href="http://www.freesound.org/" title="http://www.freesound.org/">
+    Freesound
+   </a>
+   A large Creative Commons sample resource.
+  </li>
+  <li>
+   <a class="external text" href="http://www.acidplanet.com/" title="http://www.acidplanet.com/">
+    Acid Planet
+   </a>
+   They give away 8 royalty free sound loops every week.  They also include info on making your own music with Sony Acid software.
+  </li>
+  <li>
+   <a class="external text" href="http://www.sounddogs.com/" title="http://www.sounddogs.com/">
+    Sound Dogs
+   </a>
+   Large sound effects and royalty free music for online purchase.  Download samples and pay per channel, per quality, per length and per sample.
+  </li>
+  <li>
+   <a class="external text" href="http://www.soundrangers.com/" title="http://www.soundrangers.com/">
+    Sound Rangers
+   </a>
+   A collection of original, broadcast-quality sound effects and royalty-free music, optimized for interactive environments.
+  </li>
+ </ul>
+ <a name="Sound_Editing_Software">
+ </a>
+ <h2>
+  Sound Editing Software
+ </h2>
+ <p>
+  Many people pay thousands of dollars for top notch modeling/animation software while just looking for cheap/free audio software.  The Sony (formerly Sound Forge) line of audio software is top notch and it all comes in "Home" and "Profesional" versions.
+ </p>
+ <ul>
+  <li>
+   <a class="external text" href="http://www.sonymediasoftware.com/products/soundforgefamily.asp" title="http://www.sonymediasoftware.com/products/soundforgefamily.asp">
+    Sony Soundforge
+   </a>
+   Excellent two track sound editing software.  Used for mastering trimming and looping.
+  </li>
+  <li>
+   <a class="external text" href="http://www.sonymediasoftware.com/products/acidfamily.asp" title="http://www.sonymediasoftware.com/products/acidfamily.asp">
+    Sony Acid
+   </a>
+   Excellent loop based music creation.  Obtain free loops from Acid Planet.  There's even a free version of Acid for use.
+  </li>
+  <li>
+   <a class="external text" href="https://web.archive.org/web/20121120032622/http://www.sonymediasoftware.com/products/vegasfamily.asp" title="http://www.sonymediasoftware.com/products/vegasfamily.asp">
+    Sony Vegas
+   </a>
+   Excellent multi-track audio/video editor.
+  </li>
+  <li>
+   <a class="external text" href="http://audacity.sourceforge.net/" title="http://audacity.sourceforge.net/">
+    Audacity
+   </a>
+   The Free, Cross-Platform Sound Editor. Audacity is free, open source software for recording and editing sounds. It is available for Mac OS X, Microsoft Windows, GNU/Linux, and other operating systems.
+  </li>
+  <li>
+   <a class="external text" href="http://www.apple.com/logicstudio/" title="http://www.apple.com/logicstudio/">
+    Logic Studio
+   </a>
+   Apple's Logic Studio audio editing suite.  Comes with several virtual instruments, and a large sample library.
+  </li>
+  <li>
+   <a class="external text" href="http://www.steinberg.net/" title="http://www.steinberg.net/">
+    Cubase
+   </a>
+   Steinberg's Cubase audio editing application.   Professional Quality editing/mastering/tracking
+  </li>
+  <li>
+   <a class="external text" href="http://www.digidesign.com/" title="http://www.digidesign.com/">
+    ProTools
+   </a>
+   The industry standard for audio editing/recording.
+  </li>
+ </ul>
+ <p>
+ </p>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:2584-0!1!0!0!!en!2 and timestamp 20121119055152 -->

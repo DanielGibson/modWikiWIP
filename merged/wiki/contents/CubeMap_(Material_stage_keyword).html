@@ -1,0 +1,61 @@
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  The
+  <b>
+   cubeMap
+  </b>
+  keyword is used instead of a
+  <b>
+   map
+  </b>
+  keyword to specify that the associated stage should render a
+  <a href="Cube_maps" title="Cube maps">
+   cube map
+  </a>
+  rather than an ordinary image. Typically a cube map stage would be blended into a material to present the appearance of environmental reflection.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <pre>cubeMap env/name_without_prefix
+</pre>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <p>
+  The path to the cube map images should be given, including the name up to but not including the directional suffixes (_py, _ny, _nx etc)
+ </p>
+ <a name="Example">
+ </a>
+ <h2>
+  Example
+ </h2>
+ <p>
+  The following stage blends the env/gen2 environment map onto a material with an alpha value of 0.1.
+ </p>
+ <pre>{
+   blend blend
+   cubeMap env/gen2
+   alpha 0.1
+   texgen reflect
+}
+</pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  This keyword expects the six environment map images to use the filename suffixes _px, _py, _pz, _nx, _ny, and _nz.
+ </p>
+ <p>
+  <br/>
+ </p>

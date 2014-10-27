@@ -1,0 +1,246 @@
+ <div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
+  <a class="image" href="Image:Etqwsquare_bg.png" title="Image:Etqwsquare_bg.png">
+   <img alt="Image:Etqwsquare_bg.png" height="50" longdesc="/wiki/Image:Etqwsquare_bg.png" src="/web/20111217200936im_/http://www.modwiki.net/w/images/f/f9/Etqwsquare_bg.png" width="50"/>
+  </a>
+  The information on this page is specific to
+  <a href="Enemy_Territory:_Quake_Wars" title="Enemy Territory: Quake Wars">
+   Enemy Territory: Quake Wars
+  </a>
+  .
+ </div>
+ <hr/>
+ <p>
+  The Quake Wars bots work mainly on groups of bot_action entities specified in WorldEdit and managed via the map script.
+ </p>
+ <p>
+  The bot actions are basically hints on what types of goals are where, the bot AI pretty much decides what to do and when from the actions that are active. The designer basically helps keep things manageable by switching groups of action off and on as the objectives progress.
+ </p>
+ <p>
+  Note: While it has it's roots in the Fritzbot system, since navigation is handled by the
+  <a href="AAS" title="AAS">
+   AAS
+  </a>
+  system part of the grunt work for the designer in setting up navigation has been removed (well, shifted).
+ </p>
+ <a name="In_game">
+ </a>
+ <h2>
+  In game
+ </h2>
+ <p>
+  For a quick look at at bot actions in the retail maps use the cvars
+ </p>
+ <p>
+  <a href="Net_allowCheats_%28cvar%29" title="Net allowCheats (cvar)">
+   net_allowCheats
+  </a>
+  1
+ </p>
+ <p>
+  <a href="Bot_drawActions_%28cvar%29" title="Bot drawActions (cvar)">
+   bot_drawActions
+  </a>
+  1
+ </p>
+ <p>
+  and start a game against bots.
+ </p>
+ <a name="In_editor">
+ </a>
+ <h2>
+  In editor
+ </h2>
+ <p>
+  bot_action - looking through 'Available Keys' in the property editor for one of these entities is also informative. Or on the
+  <a class="external text" href="http://wiki.splashdamage.com/index.php/Entity_bot_action" title="http://wiki.splashdamage.com/index.php/Entity_bot_action">
+   splash damage wiki
+  </a>
+  (with some description of values missing).
+ </p>
+ <p>
+  The main key/values:
+ </p>
+ <p>
+  groupID -  number of the group. More about this later.
+humanGoal and stroggGoal - the number for the goal type, which is as follows.
+ </p>
+ <p>
+  From BotAI_Actions.h:
+ </p>
+ <pre>
+#	Name
+-1	ACTION_NULL
+0	ACTION_ROAM
+1	ACTION_CAMP,
+2	ACTION_DENY_SPAWNPOINT,		// deny the enemy from having a FDA here.
+3	ACTION_MAJOR_OBJ_BUILD,
+4	ACTION_MINOR_OBJ_BUILD,
+5	ACTION_PREVENT_BUILD,		// the opposite of ACTION_MAJOR_OBJ_BUILD/ACTION_MINOR_OBJ_BUILD
+6	ACTION_HE_CHARGE,
+7	ACTION_DEFUSE,			// the opposite of ACTION_DEFUSE
+8	ACTION_HACK,
+9	ACTION_PREVENT_HACK,		// the opposite of ACTION_HACK
+10	ACTION_STEAL,
+11	ACTION_PREVENT_STEAL,		// the opposite of ACTION_STEAL
+12	ACTION_SNIPE,
+13	ACTION_DELIVER,
+14	ACTION_LANDMINE,
+15	ACTION_FIRESUPPORT,		// a place for FOps to unleash firesupport
+16	ACTION_AIRCAN_HINT,
+17	ACTION_SMOKE_HINT,		// have coverts throw smoke at the obj, so their teammates can do it in peace.
+18	ACTION_NADE_HINT,
+19	ACTION_VEHICLE_CAMP,		// vehicle specific camp
+20	ACTION_VEHICLE_ROAM,		// vehicle specific roam
+21	ACTION_SUPPLY_HINT,
+22	ACTION_MCP_OUTPOST,
+23	ACTION_SHIELD_HINT,		// a good place to drop a shield.
+24	ACTION_TELEPORTER_HINT,	
+25	ACTION_FORWARD_SPAWN,		// forward deployment area
+26	ACTION_PREVENT_DELIVER,
+27	ACTION_DROP_DEPLOYABLE,		// team can drop a deployable here.
+28	ACTION_MCP_START,		// this is where the MCP begins its path.
+29	ACTION_DEFENSE_CAMP,		// HIGH priority camp location.
+30	ACTION_DEFENSE_MINE,
+31	ACTION_VEHICLE_GRAB,
+32	ACTION_THIRDEYE_HINT,
+33	ACTION_MG_NEST,
+34	ACTION_MG_NEST_BUILD,
+35	ACTION_FLYER_HIVE_LAUNCH,
+36	ACTION_FLYER_HIVE_TARGET,
+37	ACTION_FLYER_HIVE_HINT,
+38	ACTION_DROP_PRIORITY_DEPLOYABLE,
+39	ACTION_MCP_ROUTE_MARKER
+</pre>
+ <p>
+  A suggestion would be saving this list to a file, or keeping this page open because we'll be looking it up a lot.
+ </p>
+ <p>
+  Armed with this list and the information from property editor, looking at bot_drawactions makes more sense.
+ </p>
+ <p>
+  <br/>
+  bot_action entities are supported by:
+ </p>
+ <p>
+  bot_action_bbox - which are used to give a more specific area for the action to be done, for example mine laying area, airstrikes.
+ </p>
+ <p>
+  These are set up in seeming backward manner with the bbox targeting the bot_action entity.
+ </p>
+ <p>
+  bot_dynamic_obstacle - used for dynamic objective like bridge building and barrier destruction.
+ </p>
+ <p>
+  and more.
+ </p>
+ <p>
+  <br/>
+  It would be best to work through adding bot support for a map objective by objective, team by team.
+Plan out all the action groups first.
+Example from valley map script:
+ </p>
+ <pre>// Objective One - Build Bridge
+#define	VAL_OBJ_CONSTRUCT_BRIDGE			2
+#define VAL_GDF_ATTACK_BRIDGE				3
+#define	VAL_GDF_DEPLOY_BRIDGE				4
+#define	VAL_STROGG_DEFEND_BRIDGE			5
+#define VAL_STROGG_DEPLOY_BRIDGE			6</pre>
+ <p>
+  <br/>
+  A name for the action group is used in the map script, but a number is used for the groupID set on the bot_action entities in worldedit.
+ </p>
+ <p>
+  <br/>
+  The actions in the retail maps follow a basic grouping plan for each objective.
+ </p>
+ <p>
+  Group for the actual objective
+ </p>
+ <p>
+  Group for attacking teams actions
+ </p>
+ <p>
+  Group for attacking teams deploys
+ </p>
+ <p>
+  Group for defending teams actions
+ </p>
+ <p>
+  Group for defending teams deploys
+ </p>
+ <p>
+  <br/>
+  So on to adding the actions:
+ </p>
+ <p>
+  Again using valley as example (which can be adapted to sdks example map ).
+ </p>
+ <p>
+  VAL_OBJ_CONSTRUCT_BRIDGE ie groupID 2
+ </p>
+ <p>
+  This is actual objective can be focussed on one bot_action near the construction point and a bot_action_bbox around the actual build materials.
+ </p>
+ <p>
+  so we want ACTION_MAJOR_OBJ_BUILD ie 3
+ </p>
+ <p>
+  humanGoal 3
+ </p>
+ <p>
+  and ACTION_PREVENT_BUILD ie 5
+ </p>
+ <p>
+  stroggGoal 5
+ </p>
+ <p>
+  <br/>
+  For the others, attacking/defending team action groups are the variety of actions you think would help, looking at the list of action types to see the kind of goals available, camping, sniping, supply crates, mines, airstrikes.
+ </p>
+ <p>
+  Wandering through the retail maps with bot_drawactions, and filtering with the other bot_ cvars will help getting a handle on things.
+ </p>
+ <a name="Map_Scripting">
+ </a>
+ <h2>
+  Map Scripting
+ </h2>
+ <p>
+  The retail map scripts are essential study.
+ </p>
+ <p>
+  Bot setup for each objective is done along with the other objective scripting.
+ </p>
+ <p>
+  The main operations are switching off previous action groups and switching on the next.
+ </p>
+ <p>
+  objManager.activateBotActionGroup( VAL_OBJ_CONSTRUCT_BRIDGE );
+ </p>
+ <p>
+  Since a name has been defined to correspond to a groupID (or was it the other way round ) you can reference it this way.
+ </p>
+ <p>
+  Most of the other functions seem pretty self explanatory.
+ </p>
+ <a name="Building_the_aas">
+ </a>
+ <h2>
+  Building the aas
+ </h2>
+ <p>
+  Before the bots can even move around it needs a valid navigation map (
+  <a href="AAS" title="AAS">
+   AAS
+  </a>
+  ).
+ </p>
+ <p>
+  This is done in worldedit via the Compile-&gt;Custom Tool menu.
+ </p>
+ <p>
+  Expand + AAS
+ </p>
+ <p>
+  All types.
+ </p>

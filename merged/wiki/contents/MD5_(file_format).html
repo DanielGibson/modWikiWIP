@@ -1,0 +1,235 @@
+ <a name="Overview">
+ </a>
+ <h2>
+  Overview
+ </h2>
+ <p>
+  MD5 is a proprietary but open format specific to Doom 3 and allows models to be animated by the use of an internal skeleton. Generally two files are needed to make a functional MD5 model; md5mesh and md5anim. The 3rd, md5camera, allows the creation and use of complex camera paths used during cut scenes. See the different pages for syntax explanation
+ </p>
+ <dl>
+  <dt>
+   .
+   <a href="MD5MESH_%28file_format%29" title="MD5MESH (file format)">
+    MD5MESH
+   </a>
+  </dt>
+  <dd>
+   Low resolution polygonal mesh exported from a 3D application.
+  </dd>
+  <dt>
+   .
+   <a href="MD5ANIM_%28file_format%29" title="MD5ANIM (file format)">
+    MD5ANIM
+   </a>
+  </dt>
+  <dd>
+   Contains animation sequence data, the positions of bones etc. during animation.
+  </dd>
+  <dt>
+   .
+   <a href="MD5CAMERA_%28file_format%29" title="MD5CAMERA (file format)">
+    MD5CAMERA
+   </a>
+  </dt>
+  <dd>
+   Animated cameras for use in cut scenes.
+  </dd>
+ </dl>
+ <a name="Export">
+ </a>
+ <h2>
+  Export
+ </h2>
+ <p>
+  Maya 4.5 was the 3D package primarily used for the creation of animated characters during the development of Doom 3, Quake 4, and possibly Prey. Models were saved in .mb (Maya Binary) format and converted through the use of an
+  <a href="Export_%28decl%29" title="Export (decl)">
+   export declaration
+  </a>
+  , the console command
+  <a href="Exportmodels_%28console_command%29" title="Exportmodels (console command)">
+   exportModels
+  </a>
+  , and a DLL by the name of MayaImportx86.
+ </p>
+ <p>
+  It goes without saying that you stand the best chance for success if you follow the same workflow. However, there are third party tools and alternative versions of MayaImportx86.dll listed below you can use should you be working with a package other than Maya version 4.5.
+ </p>
+ <p>
+  It's also important to note that the alternate versions of MayaImportx86.dll were intended for use with Doom 3 and there have been reports that they do not function correctly with other Doom 3 engine based games. In other words, if you only have Quake 4 or Prey at your disposal, you may encounter some compatibility issues that have yet to be resolved. You may be forced to borrow a copy of Doom 3  for export purposes.
+ </p>
+ <p>
+  For a detailed overview of the conversion from
+  <a href="Maya_to_MD5" title="Maya to MD5">
+   Maya to MD5
+  </a>
+  please read the corresponding article.
+ </p>
+ <a name="Tools">
+ </a>
+ <h2>
+  Tools
+ </h2>
+ <p>
+  A list of useful developer and user-created tools for export and import of the various MD5 file formats follows.
+ </p>
+ <a name="Maya">
+ </a>
+ <h3>
+  Maya
+ </h3>
+ <ul>
+  <li>
+   <a class="external text" href="http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya45.zip" title="http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya45.zip">
+    MayaImportx86 version 4.5
+   </a>
+  </li>
+  <li>
+   <a class="external text" href="http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya50.zip" title="http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya50.zip">
+    MayaImportx86 version 5.0
+   </a>
+  </li>
+  <li>
+   <a class="external text" href="http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya60.zip" title="http://www.iddevnet.com/doom3/downloads/MayaImportx86_Maya60.zip">
+    MayaImportx86 version 6.0
+   </a>
+  </li>
+  <li>
+   <a class="external text" href="https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=6278" title="http://www.doom3world.org/phpbb2/viewtopic.php?t=6278">
+    MD5 to Maya Importer
+   </a>
+   - seith
+  </li>
+  <li>
+   <a class="external text" href="http://scripts.zbufferstudios.com/" title="http://scripts.zbufferstudios.com/">
+    Maya to MD5+mtr exporter by Chris 'hyperion_5' Edwards
+   </a>
+   - instructions and discussion *
+   <a class="external text" href="https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=19710" title="http://www.doom3world.org/phpbb2/viewtopic.php?t=19710">
+    here
+   </a>
+  </li>
+ </ul>
+ <a name="3d_Studio_Max">
+ </a>
+ <h3>
+  3d Studio Max
+ </h3>
+ <ul>
+  <li>
+   <a class="external text" href="https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=1914" title="http://www.doom3world.org/phpbb2/viewtopic.php?t=1914">
+    3D Studio Max to MD5 Exporter
+   </a>
+   - der_ton
+  </li>
+  <li>
+   <a class="external text" href="https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=4618" title="http://www.doom3world.org/phpbb2/viewtopic.php?t=4618">
+    3D Studio Max to Md5 Exporter
+   </a>
+   - BeRSeRKeR
+  </li>
+  <li>
+   <a class="external text" href="https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=3229" title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3229">
+    MD5 to 3D Studio Max Importer
+   </a>
+   - der_ton
+  </li>
+ </ul>
+ <a name="Blender">
+ </a>
+ <h3>
+  Blender
+ </h3>
+ <ul>
+  <li>
+   <a class="external text" href="https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=1711" title="http://www.doom3world.org/phpbb2/viewtopic.php?t=1711">
+    Blender to MD5 Exporter
+   </a>
+   - der_ton
+  </li>
+  <li>
+   <a class="external text" href="https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=6901" title="http://www.doom3world.org/phpbb2/viewtopic.php?t=6901">
+    MD5 to Blender Importer
+   </a>
+   - der_ton
+  </li>
+ </ul>
+ <a name="Lightwave">
+ </a>
+ <h3>
+  Lightwave
+ </h3>
+ <ul>
+  <li>
+   <a class="external text" href="https://web.archive.org/web/20121205072339/http://home.mindspring.com/~iclint/lightwave/lwplug.html" title="http://home.mindspring.com/~iclint/lightwave/lwplug.html">
+    Lightwave to MD5 Import/Export
+   </a>
+   - clintonman
+   <a class="external text" href="https://web.archive.org/web/20121205072339/http://home.mindspring.com/~iclint/lightwave/index.html" title="http://home.mindspring.com/~iclint/lightwave/index.html">
+    Tutorials
+   </a>
+  </li>
+  <li>
+   <a class="external text" href="https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=4595" title="http://www.doom3world.org/phpbb2/viewtopic.php?t=4595">
+    Lightwave to MD5 Exporter
+   </a>
+   - bozo
+  </li>
+  <li>
+   <a class="external text" href="https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=6493" title="http://www.doom3world.org/phpbb2/viewtopic.php?t=6493">
+    Lightwave to MD5Camera Exporter
+   </a>
+   - rich_is_bored &amp; der_ton
+  </li>
+ </ul>
+ <a name="Softimage">
+ </a>
+ <h3>
+  Softimage
+ </h3>
+ <ul>
+  <li>
+   <a class="external text" href="https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?p=79932#79932" title="http://www.doom3world.org/phpbb2/viewtopic.php?p=79932#79932">
+    XSI to MD5 Exporter
+   </a>
+   - senkusha
+  </li>
+ </ul>
+ <a name="DirectX">
+ </a>
+ <h3>
+  DirectX
+ </h3>
+ <ul>
+  <li>
+   <a class="external text" href="http://oddityinteractive.com/OddityEngine2/phpBB3/viewtopic.php?f=5&amp;p=18&amp;sid=216b7cae7a305a14d1074e259ce0f1cd#p18" title="http://oddityinteractive.com/OddityEngine2/phpBB3/viewtopic.php?f=5&amp;p=18&amp;sid=216b7cae7a305a14d1074e259ce0f1cd#p18">
+    XFile to MD5 Converter
+   </a>
+   - genetransfer
+  </li>
+ </ul>
+ <a name="Modelviewer">
+ </a>
+ <h3>
+  Modelviewer
+ </h3>
+ <ul>
+  <li>
+   <a class="external text" href="https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=1281" title="http://www.doom3world.org/phpbb2/viewtopic.php?t=1281">
+    MD5 ModelViewer
+   </a>
+   - der_ton
+  </li>
+  <li>
+   <a class="external text" href="https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=2305" title="http://www.doom3world.org/phpbb2/viewtopic.php?t=2305">
+    MD5 ModelViewer
+   </a>
+   - KPixel
+  </li>
+  <li>
+   <a class="external text" href="https://web.archive.org/web/20121205072339/http://www.doom3world.org/phpbb2/viewtopic.php?t=2552" title="http://www.doom3world.org/phpbb2/viewtopic.php?t=2552">
+    MD5 ModelViewer
+   </a>
+   - JayVee (Open Source!)
+  </li>
+ </ul>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:2236-0!1!0!0!!en!2 and timestamp 20121204133443 -->

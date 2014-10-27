@@ -1,0 +1,67 @@
+ <a name="Game_class">
+ </a>
+ <h2>
+  Game class
+ </h2>
+ <p>
+  This event operates on an instance of the
+  <a href="Game_class" title="Game class">
+   game class
+  </a>
+  type {{{gameclass}}}
+ </p>
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  Returns view control to the player entity.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <p>
+  <i>
+   void
+  </i>
+  firstPerson()
+ </p>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <p>
+  This script event does not accept parameters.
+ </p>
+ <a name="Examples">
+ </a>
+ <h2>
+  Examples
+ </h2>
+ <pre> 
+<span style="color: #0000ff;">void</span> cam_imp_start_<span style="color: #0000dd;">1</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span><span style="color: #000000;">{</span>
+ 
+    <span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">setCamera</span><span style="color: #000000;">(</span><span style="color: #000055;">$func_cameraview_imp_<span style="color: #0000dd;">1</span></span><span style="color: #000000;">)</span>; <span style="color: #339900;">//set view to the camera bound to an imp</span>
+    <span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">wait</span><span style="color: #000000;">(</span><span style="color: #0000dd;">4</span><span style="color: #000000;">)</span>; <span style="color: #339900;">//use this view for 4 seconds</span>
+    <span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">firstPerson</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span>; <span style="color: #339900;">//return to player's first person view</span>
+ 
+<span style="color: #000000;">}</span></pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  This script event does not return any values.
+ </p>
+ <p>
+  This is an excellent way to revert to first person view after using an alternate perspective, such as a camera view.
+ </p>
+ <p>
+  <br/>
+ </p>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:1661-0!1!0!0!!en!2 and timestamp 20091217150933 -->

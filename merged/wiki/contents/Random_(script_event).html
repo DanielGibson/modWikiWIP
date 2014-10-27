@@ -1,0 +1,69 @@
+ <a name="Game_class">
+ </a>
+ <h2>
+  Game class
+ </h2>
+ <p>
+  This event operates on an instance of the
+  <a href="Game_class" title="Game class">
+   game class
+  </a>
+  type {{{gameclass}}}
+ </p>
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  Returns a random value X where 0 &lt;= X &lt; range.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <p>
+  float  random(  float range )
+ </p>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   [range] - a number value that represents the largest possble value to be returned.
+  </li>
+ </ul>
+ <a name="Examples">
+ </a>
+ <h2>
+  Examples
+ </h2>
+ <p>
+  This example generates a random number between
+  <code>
+   min
+  </code>
+  and
+  <code>
+   max
+  </code>
+ </p>
+ <pre> 
+<span style="color: #0000ff;">float</span> min = <span style="color: #0000dd;">10</span>;
+<span style="color: #0000ff;">float</span> max = <span style="color: #0000dd;">20</span>;
+ 
+<span style="color: #0000ff;">float</span> rand = min + <span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">random</span><span style="color: #000000;">(</span>max - min<span style="color: #000000;">)</span>;</pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  Returns the same set of random numbers every time the game is run.  Just change the seed for a different set of numbers.
+ </p>
+ <p>
+  <br/>
+ </p>

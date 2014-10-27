@@ -1,0 +1,155 @@
+ <div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
+  <a class="image" href="Image:Q4square_bg.png" title="Image:Q4square_bg.png">
+   <img alt="Image:Q4square_bg.png" height="50" longdesc="/wiki/Image:Q4square_bg.png" src="/web/20111217182121im_/http://www.modwiki.net/w/images/6/69/Q4square_bg.png" width="50"/>
+  </a>
+  The information on this page is specific to
+  <a href="Quake_4" title="Quake 4">
+   Quake 4
+  </a>
+  .
+ </div>
+ <hr/>
+ <p>
+  This page describes the Quake 4 specific functionality of the built-in map editor. For general information common to all
+  <a href="Id_Tech_4" title="Id Tech 4">
+   id Tech 4
+  </a>
+  games' editors please see the
+  <a href="Map_editor" title="Map editor">
+   map editor
+  </a>
+  page. QuakeEdit can be started by typing "
+  <a href="Editor_%28console_command%29" title="Editor (console command)">
+   editor
+  </a>
+  " in the
+  <a href="Console" title="Console">
+   console
+  </a>
+  or by starting Quake 4 with "+editor" in the shortcut's target command parameters. The best way to start QuakeEdit is from its own shortcut. See
+  <a href="Startup_parameters#Launching_the_editor" title="Startup parameters">
+   launching the editor straight away
+  </a>
+  .
+ </p>
+ <a name="Requirements">
+ </a>
+ <h2>
+  Requirements
+ </h2>
+ <p>
+  Despite the fact that Quake 4 runs on other platforms, QuakeEdit requires Windows 2000/XP. It's recommended that QuakeEdit is run on machines with better performance than the minimum system requirements of the game unless you only want to edit small maps and that you have a three-button mouse. A suggested minimum system specification for editing maps would be:
+ </p>
+ <ul>
+  <li>
+   2Ghz CPU or equivalent
+  </li>
+  <li>
+   768mb RAM
+  </li>
+  <li>
+   A video card capable of displaying
+   <a href="Vertex_and_fragment_programs" title="Vertex and fragment programs">
+    vertex and fragment programs
+   </a>
+  </li>
+ </ul>
+ <a name="Troubleshooting">
+ </a>
+ <h2>
+  Troubleshooting
+ </h2>
+ <p>
+  This section describes bugs or peculiar behaviour of QuakeEdit and any known solutions. If you find a bug not covered here you might try quitting the editor, deleting the
+  <a href="CFG_%28file_format%29" title="CFG (file format)">
+   editor.cfg
+  </a>
+  file present in the /
+  <a href="Q4base_%28folder%29" title="Q4base (folder)">
+   q4base (folder)
+  </a>
+  folder and restarting the editor. This will revert the editor to its defaults. If you have a problem with the toolbar and this doesn't fix your problem try also deleting the "toolsx86.ini" file in your windows directory.
+ </p>
+ <a name="When_compiling_the_map_I_get_an_error">
+ </a>
+ <h3>
+  When compiling the map I get an error
+ </h3>
+ <p>
+  Please check the
+  <a href="Common_Mapping_Issues" title="Common Mapping Issues">
+   Common Mapping Issues
+  </a>
+  page for all known compiler error messages and solutions.
+ </p>
+ <a name="Grid_lines_don.27t_show_up">
+ </a>
+ <h3>
+  Grid lines don't show up
+ </h3>
+ <p>
+  Make sure
+  <a href="Antialiasing" title="Antialiasing">
+   antialiasing
+  </a>
+  is set to
+  <i>
+   Off
+  </i>
+  or
+  <i>
+   Application controlled
+  </i>
+  in your graphics driver control panel in Windows. Also make sure the
+  <a href="R_multiSamples_%28cvar%29" title="R multiSamples (cvar)">
+   in-game AA
+  </a>
+  is set to off too.
+ </p>
+ <a name="The_windows_taskbar_and_other_windows_are_too_bright">
+ </a>
+ <h3>
+  The windows taskbar and other windows are too bright
+ </h3>
+ <p>
+  Quake 4's brightness defaults to 1.2 so you should start QuakeEdit with "+set
+  <a href="R_brightness_%28cvar%29" title="R brightness (cvar)">
+   r_brightness
+  </a>
+  1".
+ </p>
+ <a name="X_doesn.27t_show_up_in_the_editor_but_does_in_the_game">
+ </a>
+ <h3>
+  X doesn't show up in the editor but does in the game
+ </h3>
+ <p>
+  Go to View &gt; Show and make sure X is selected.
+ </p>
+ <a name="The_main_view_is_very_sluggish_when_click-dragging">
+ </a>
+ <h3>
+  The main view is very sluggish when click-dragging
+ </h3>
+ <p>
+  Press F2 to bring up Quake 4, bring down the console, close the Quake 4 window in the cross button on the top right.
+ </p>
+ <a name="There_are_many_black_textures_in_the_texture_browser">
+ </a>
+ <h3>
+  There are many black textures in the texture browser
+ </h3>
+ <p>
+  Quake 4 comes with a lot of redundant, nonfunctional material shaders. The problem is that the declarations reference image files that were not shipped with the game.
+ </p>
+ <p>
+  At present no level editor, including the built in editor, validates each shader to ensure the images exist. This results in a texture browser where half the textures listed are of no use.
+ </p>
+ <p>
+  In the case of Doom 3, there is a workaround and the same solution could be applied to other games. Check
+  <a href="Eutectic%27s_clean_paks" title="Eutectic's clean paks">
+   eutectic's clean paks
+  </a>
+  for more details.
+ </p>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:2555-0!1!0!0!!en!2 and timestamp 20111216210837 -->

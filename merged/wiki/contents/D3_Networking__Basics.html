@@ -1,0 +1,158 @@
+ <a name="Doom3_Network_Architecture">
+ </a>
+ <h2>
+  Doom3 Network Architecture
+ </h2>
+ <p>
+  Doom3's network architecture is a client/server architecture, which means you have one server to which multiple clients are allowed to connect. The engine supports up to 32 players, however for performance reasons, the original Doom3 deathmatch allows only 4. (RoE increased this to 8 players.)
+ </p>
+ <a name="Dedicated_and_listening_Server">
+ </a>
+ <h3>
+  Dedicated and listening Server
+ </h3>
+ <p>
+  When setting up a server, one has the choice to make it a dedicated or a listening server.
+ </p>
+ <p>
+  A dedicated server is just a computer where the game is running in the background. A listening server on the other hand, is a server which has a local player running the game. The local player is mostly referred to as the
+  <i>
+   local client
+  </i>
+  .
+ </p>
+ <a name="Client.2C_server_and_the_lag">
+ </a>
+ <h3>
+  Client, server and the lag
+ </h3>
+ <p>
+  When coding multiplayer, it is important to note that only the server knows the
+  <i>
+   gamestate
+  </i>
+  and maintains the 'simulation' time. The client just receives the gamestate from the server. However, the client game does not receive every frame from the server (This would result in too much traffic) - rather it receives a frame every 50 milliseconds. To get a somewhat continuous looking feel, the client predicts what happens in between those frames coming from the server. This is called 'client side prediction'. However, the frames sent by the server may take different times to arrive, so the client needs to cope with that as well.
+ </p>
+ <p>
+  To illustrate the mechanism, look at this little example. Let's say the player wants to shoot at another player. On the networking side, the following things will happen:
+ </p>
+ <ol>
+  <li>
+   The client presses the  appropriate key, which is encoded in a structure called
+   <i>
+    usercmd
+   </i>
+   .
+  </li>
+  <li>
+   This structure (with all important key states) is sent to the server which calculates the actual hit, based on the position and orientation of the player and changes the
+   <i>
+    gamestate
+   </i>
+   .
+  </li>
+  <li>
+   The gamestate is retransmitted over the network to all clients. Transmitting stuff over the Internet may take some time due to the data taking different/slower routes. So if your connection is slow, it will take some time before your shot will change the gamestate and the result of your shot shows on your screen.
+  </li>
+ </ol>
+ <p>
+  Assuming the above mentioned 50 ms server-sided wait and an average client ping of 50, we can show the events in a table. Here we extended the previous example to 2 clients:
+ </p>
+ <table class="mwstyle">
+  <tr>
+   <th>
+    Servertime
+   </th>
+   <th>
+    Client 1
+   </th>
+   <th>
+    Client 2
+   </th>
+   <th>
+    Server
+   </th>
+  </tr>
+  <tr>
+   <td>
+    1
+   </td>
+   <td>
+    shoot
+   </td>
+   <td>
+    -
+   </td>
+   <td>
+    -
+   </td>
+  </tr>
+  <tr>
+   <td>
+    2
+   </td>
+   <td>
+    move
+    <br/>
+   </td>
+   <td>
+    -
+   </td>
+   <td>
+    process shot
+    <br/>
+    post shot
+   </td>
+  </tr>
+  <tr>
+   <td>
+    3
+   </td>
+   <td>
+    -
+    <br/>
+   </td>
+   <td>
+    get shot
+    <br/>
+    jump
+   </td>
+   <td>
+    process move
+    <br/>
+    post movement
+   </td>
+  </tr>
+  <tr>
+   <td>
+    4
+   </td>
+   <td>
+    get moved
+    <br/>
+   </td>
+   <td>
+    client 1 moved
+    <br/>
+   </td>
+   <td>
+    process jump
+    <br/>
+    post jump
+   </td>
+  </tr>
+  <tr>
+   <td>
+    5
+   </td>
+   <td>
+    client2 jumped
+   </td>
+   <td>
+    jump up
+   </td>
+   <td>
+    -
+   </td>
+  </tr>
+ </table>

@@ -1,0 +1,70 @@
+ <div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
+  <a class="image" href="Image:D3square_bg.png" title="Image:D3square_bg.png">
+   <img alt="Image:D3square_bg.png" height="50" longdesc="/wiki/Image:D3square_bg.png" src="/web/20080719231611im_/http://www.modwiki.net/w/images/c/cb/D3square_bg.png" width="50"/>
+  </a>
+  The information on this page is specific to
+  <a href="Doom_3" title="Doom 3">
+   Doom 3
+  </a>
+  .
+ </div>
+ <hr/>
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  The mask_center keywork only allows sound from the shader to be outbut through the center surround sound speaker in a 5.1 setup.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <pre>mask_center
+</pre>
+ <a name="Example">
+ </a>
+ <h2>
+  Example
+ </h2>
+ <pre>ship_engine_rumble
+{
+	mindistance 100
+	maxdistance 1000
+	volume 10
+	looping
+	mask_center
+	shakes .1
+	sound/last_stand/loop_rumble_center_b.wav
+}
+</pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  When this is in use, sound only comes from that channel when 5.1 surround is used.  If you use 2 channel (stereo) sound the channel will be muted and this sound will not be played.
+ </p>
+ <div>
+  <a class="image" href="Image:Q4square_25.png" title="Image:Q4square_25.png">
+   <img alt="Image:Q4square_25.png" height="25" longdesc="/wiki/Image:Q4square_25.png" src="/web/20080719231611im_/http://www.modwiki.net/w/images/e/e8/Q4square_25.png" width="25"/>
+  </a>
+  <b>
+   Note:
+  </b>
+  Quake 4 only:
+  <dl>
+   <dd>
+    <i>
+     Quake 4 uses
+     <a class="new" href="Center_%28Sound_shader_keyword%29" title="Center (Sound shader keyword)">
+      center
+     </a>
+     to do the same thing.
+    </i>
+   </dd>
+  </dl>
+ </div>

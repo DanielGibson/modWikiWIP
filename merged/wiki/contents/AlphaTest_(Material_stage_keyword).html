@@ -1,0 +1,83 @@
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  The
+  <b>
+   alphaTest
+  </b>
+  stage keyword makes parts of a diffuse map texture invisible depending on the alpha channel. If the alpha value of a pixel is less than the threshold given as the parameter to alphaTest, that pixel will not be drawn.
+ </p>
+ <p>
+  This is useful for rendering grids, gratings and so on, where parts of the texture must be transparent. It does
+  <i>
+   not
+  </i>
+  permit partial transparency of diffusemap textures.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <pre>alphaTest [cutoff]
+</pre>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   [cutoff] - the alpha value at which point the diffuse stage is drawn. Any values less than this are not drawn.
+  </li>
+ </ul>
+ <a name="Example">
+ </a>
+ <h2>
+  Example
+ </h2>
+ <p>
+  None.
+ </p>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  This is the only way for a diffuse stage to make use of alpha transparency.
+ </p>
+ <p>
+  The only other blend mode that allows for alpha transparency is blend and it does not recieve lighting.
+ </p>
+ <p>
+  Unfortunately alphatest is limited in that each pixel is either 100% opaque, or 100% transparent.
+ </p>
+ <p>
+  While alphaTest is a stage specific keyword, it has an effect on all stages. To counter that, use the  keyword
+  <a href="IgnoreAlphaTest_%28Material_stage_keyword%29" title="IgnoreAlphaTest (Material stage keyword)">
+   ignoreAlphaTest
+  </a>
+  in stages where you do not want to apply the alphaTest.
+ </p>
+ <p>
+  Photoshop 7 does not save transparency information into an alpha channel when dealing with targa images. You must download the updated
+  <a class="external text" href="http://www.adobe.com/support/downloads/detail.jsp?ftpID=1544" title="http://www.adobe.com/support/downloads/detail.jsp?ftpID=1544">
+   Targa export plugin
+  </a>
+  from
+  <a class="external text" href="http://www.adobe.com/" title="http://www.adobe.com">
+   Adobe
+  </a>
+  . All other versions of Photoshop work correctly.
+ </p>
+ <p>
+  Applying an alphatested material to a brush will make it so that the brush cannot be used to seal off the map from the void. This can be noticed when the pointfile line goes straight through a brush.
+ </p>
+ <p>
+  <br/>
+ </p>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:1260-0!1!0!0!!en!2 and timestamp 20080724014250 -->

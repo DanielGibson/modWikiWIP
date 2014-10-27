@@ -1,0 +1,37 @@
+ <a name="bool_idAI::ReachedPos.28_const_idVec3_.26pos.2C_const_moveCommand_t_moveCommand_.29_const">
+ </a>
+ <h2>
+  bool idAI::ReachedPos( const idVec3 &amp;pos, const moveCommand_t moveCommand ) const
+ </h2>
+ <p>
+  Not much here, a collision detection algorithm.
+ </p>
+ <pre> 
+<span style="color: #339900; font-style: italic;">/*
+=====================
+idAI::ReachedPos
+=====================
+*/</span>
+<span style="color: #339900;">// tests for collision detection with destination</span>
+<span style="color: #0000ff;">bool</span> idAI::<span style="color: #00aabb;">ReachedPos</span><span style="color: #000000;">(</span> <span style="color: #0000ff;">const</span> idVec3 &amp;pos, <span style="color: #0000ff;">const</span> moveCommand_t moveCommand <span style="color: #000000;">)</span> <span style="color: #0000ff;">const</span> <span style="color: #000000;">{</span>
+	<span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span> move.<span style="color: #00aabb;">moveType</span> == MOVETYPE_SLIDE <span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
+		idBounds bnds<span style="color: #000000;">(</span> idVec3<span style="color: #000000;">(</span> -<span style="color: #0000dd;">4</span>, -<span style="color: #0000dd;">4</span>.0f, -<span style="color: #0000dd;">8</span>.0f <span style="color: #000000;">)</span>, idVec3<span style="color: #000000;">(</span> <span style="color: #0000dd;">4</span>.0f, <span style="color: #0000dd;">4</span>.0f, <span style="color: #0000dd;">64</span>.0f <span style="color: #000000;">)</span> <span style="color: #000000;">)</span>;
+		bnds.<span style="color: #00aabb;">TranslateSelf</span><span style="color: #000000;">(</span> physicsObj.<span style="color: #00aabb;">GetOrigin</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span> <span style="color: #000000;">)</span>;	
+		<span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span> bnds.<span style="color: #00aabb;">ContainsPoint</span><span style="color: #000000;">(</span> pos <span style="color: #000000;">)</span> <span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
+			<span style="color: #0000ff;">return</span> <span style="color: #0000ff;">true</span>;
+		<span style="color: #000000;">}</span>
+	<span style="color: #000000;">}</span> <span style="color: #0000ff;">else</span> <span style="color: #000000;">{</span>
+		<span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span> <span style="color: #000000;">(</span> moveCommand == MOVE_TO_ENEMY <span style="color: #000000;">)</span> || <span style="color: #000000;">(</span> moveCommand == MOVE_TO_ENTITY <span style="color: #000000;">)</span> <span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
+			<span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span> physicsObj.<span style="color: #00aabb;">GetAbsBounds</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span>.<span style="color: #00aabb;">IntersectsBounds</span><span style="color: #000000;">(</span> idBounds<span style="color: #000000;">(</span> pos <span style="color: #000000;">)</span>.<span style="color: #00aabb;">Expand</span><span style="color: #000000;">(</span> <span style="color: #0000dd;">8</span>.0f <span style="color: #000000;">)</span> <span style="color: #000000;">)</span> <span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
+				<span style="color: #0000ff;">return</span> <span style="color: #0000ff;">true</span>;
+			<span style="color: #000000;">}</span>
+		<span style="color: #000000;">}</span> <span style="color: #0000ff;">else</span> <span style="color: #000000;">{</span>
+			idBounds bnds<span style="color: #000000;">(</span> idVec3<span style="color: #000000;">(</span> -<span style="color: #0000dd;">16</span>.<span style="color: #0000dd;">0</span>, -<span style="color: #0000dd;">16</span>.0f, -<span style="color: #0000dd;">8</span>.0f <span style="color: #000000;">)</span>, idVec3<span style="color: #000000;">(</span> <span style="color: #0000dd;">16</span>.<span style="color: #0000dd;">0</span>, <span style="color: #0000dd;">16</span>.0f, <span style="color: #0000dd;">64</span>.0f <span style="color: #000000;">)</span> <span style="color: #000000;">)</span>;
+			bnds.<span style="color: #00aabb;">TranslateSelf</span><span style="color: #000000;">(</span> physicsObj.<span style="color: #00aabb;">GetOrigin</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span> <span style="color: #000000;">)</span>;	
+			<span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span> bnds.<span style="color: #00aabb;">ContainsPoint</span><span style="color: #000000;">(</span> pos <span style="color: #000000;">)</span> <span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
+				<span style="color: #0000ff;">return</span> <span style="color: #0000ff;">true</span>;
+			<span style="color: #000000;">}</span>
+		<span style="color: #000000;">}</span>
+	<span style="color: #000000;">}</span>
+	<span style="color: #0000ff;">return</span> <span style="color: #0000ff;">false</span>;
+<span style="color: #000000;">}</span></pre>

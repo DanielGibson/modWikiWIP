@@ -1,0 +1,99 @@
+ <a name="Game_class">
+ </a>
+ <h2>
+  Game class
+ </h2>
+ <p>
+  This event operates on an instance of the
+  <a href="Game_class" title="Game class">
+   game class
+  </a>
+  type {{{gameclass}}}
+ </p>
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  Line drawing for debug visualization.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <p>
+  <i>
+   void
+  </i>
+  debugBounds(
+  <i>
+   vector
+  </i>
+  <b>
+   color
+  </b>
+  ,
+  <i>
+   vector
+  </i>
+  <b>
+   mins
+  </b>
+  ,
+  <i>
+   vector
+  </i>
+  <b>
+   maxs
+  </b>
+  ,
+  <i>
+   float
+  </i>
+  <b>
+   lifetime
+  </b>
+  )
+ </p>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   [color] - The color to draw the line.
+  </li>
+  <li>
+   [mins] - The minimum point for the bounding box.
+  </li>
+  <li>
+   [maxs] - The maximum point for the bounding box.
+  </li>
+  <li>
+   [lifetime] - The duration to display the line.
+  </li>
+ </ul>
+ <a name="Examples">
+ </a>
+ <h2>
+  Examples
+ </h2>
+ <pre> 
+<span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">debugBounds</span><span style="color: #000000;">(</span>'<span style="color: #0000dd;">1</span> <span style="color: #0000dd;">0</span> <span style="color: #0000dd;">0</span>', '<span style="color: #0000dd;">25</span> <span style="color: #0000dd;">49</span> <span style="color: #0000dd;">56</span>', '<span style="color: #0000dd;">54</span> <span style="color: #0000dd;">88</span> <span style="color: #0000dd;">79</span>', <span style="color: #0000dd;">1</span><span style="color: #000000;">)</span>;</pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  This script event does not return any values.
+ </p>
+ <p>
+  Lifetime of 0 == 1 frame.
+ </p>
+ <p>
+  <br/>
+ </p>

@@ -1,0 +1,429 @@
+ <div align="left" style="float:right; font-size: 17px;background: #FFFFEE; padding: 5px; border: 1px solid #000000; padding-left: 15px; padding-right: 15px; margin-left: 15px; margin-right: 15px; padding-bottom: 15px; width: 400px;">
+  <div align="right" style="font-size: 10px; text-align=right;">
+   <a href="Help:Reference_box" title="Help:Reference box">
+    What's this?
+   </a>
+  </div>
+  <div>
+   <b>
+    Mapping quick reference
+   </b>
+  </div>
+  <hr/>
+  <span style="font-size: 14px">
+   <ul>
+    <li>
+     <a href="Common_Mapping_Issues" title="Common Mapping Issues">
+      Common Mapping Issues
+     </a>
+    </li>
+    <li>
+     <a href="Optimising_maps" title="Optimising maps">
+      Optimising maps
+     </a>
+    </li>
+    <li>
+     <a href="DoomEdit_hotkeys" title="DoomEdit hotkeys">
+      Keyboard Shortcuts
+     </a>
+    </li>
+   </ul>
+   <p>
+    <b>
+     Entity Listings
+    </b>
+   </p>
+   <dl>
+    <dd>
+     <a class="image" href="Image:D3square_25.png" title="Image:D3square_25.png">
+      <img alt="Image:D3square_25.png" height="25" longdesc="/wiki/Image:D3square_25.png" src="/web/20121205052906im_/http://www.modwiki.net/w/images/2/23/D3square_25.png" width="25"/>
+     </a>
+     <a href="Entity_Listing_%28Doom_3%29" title="Entity Listing (Doom 3)">
+      Entity Listing (Doom 3)
+     </a>
+    </dd>
+    <dd>
+     <a class="image" href="Image:Q4square_25.png" title="Image:Q4square_25.png">
+      <img alt="Image:Q4square_25.png" height="25" longdesc="/wiki/Image:Q4square_25.png" src="/web/20121205052906im_/http://www.modwiki.net/w/images/e/e8/Q4square_25.png" width="25"/>
+     </a>
+     <a href="Entity_Listing_%28Quake_4%29" title="Entity Listing (Quake 4)">
+      Entity Listing (Quake 4)
+     </a>
+    </dd>
+    <dd>
+     <a class="image" href="Image:Preysquare_25.png" title="Image:Preysquare_25.png">
+      <img alt="Image:Preysquare_25.png" height="25" longdesc="/wiki/Image:Preysquare_25.png" src="/web/20121205052906im_/http://www.modwiki.net/w/images/b/ba/Preysquare_25.png" width="25"/>
+     </a>
+     <a href="Entity_Listing_%28Prey%29" title="Entity Listing (Prey)">
+      Entity Listing (Prey)
+     </a>
+    </dd>
+    <dd>
+     <a class="image" href="Image:Etqwsquare_25.png" title="Image:Etqwsquare_25.png">
+      <img alt="Image:Etqwsquare_25.png" height="25" longdesc="/wiki/Image:Etqwsquare_25.png" src="/web/20121205052906im_/http://www.modwiki.net/w/images/7/7e/Etqwsquare_25.png" width="25"/>
+     </a>
+     <a href="Entity_Listing_%28ETQW%29" title="Entity Listing (ETQW)">
+      Entity Listing (ETQW)
+     </a>
+    </dd>
+   </dl>
+  </span>
+ </div>
+ <p>
+  Mapping for
+  <a href="Id_Tech_4" title="Id Tech 4">
+   id Tech 4
+  </a>
+  games is based on 'additive' editing, whereby the level designer adds solid geometry to an empty "world", know as the
+  <b>
+   void
+  </b>
+  in Doom 3. This is contrasted with "subtractive" editing which is used in Unreal and its derivatives - in these games the world starts out solid and rooms are subtracted from it, with extra details such as pillars being added back.
+ </p>
+ <p>
+  Users of Unreal-based engines may initially find Doom 3 editing overly complex: instead of subtracting a simple room, it is necessary to create solid brushes for floor, ceiling and walls and make sure they do not leave any gaps. However, pure-additive geometry is simpler from the engine's perspective (since the order of brush creation is no longer critical), and completely eliminates the "BSP holes" that plague Unreal levels.
+ </p>
+ <a name="Map_Editing_Tools">
+ </a>
+ <h2>
+  Map Editing Tools
+ </h2>
+ <p>
+  Here are the known editing tools that can be used for creating maps for id Tech 4 engine games.
+ </p>
+ <ul>
+  <li>
+   <a href="Map_editor" title="Map editor">
+    Map editor
+   </a>
+   - Built-in Windows-only level editor.
+   <ul>
+    <li>
+     <a href="DoomEdit" title="DoomEdit">
+      DoomEdit
+     </a>
+     - Doom 3 map editor specific information.
+    </li>
+    <li>
+     <a href="QuakeEdit" title="QuakeEdit">
+      QuakeEdit
+     </a>
+     - Quake 4 map editor specific information.
+    </li>
+    <li>
+     <a class="new" href="PreyEdit" title="PreyEdit">
+      PreyEdit
+     </a>
+     - Prey map editor specific information.
+    </li>
+    <li>
+     <a class="new" href="EditWorld" title="EditWorld">
+      EditWorld
+     </a>
+     - ET:QW map editor specific information.
+    </li>
+   </ul>
+  </li>
+  <li>
+   <a class="external text" href="http://www.qeradiant.com/" title="http://www.qeradiant.com/">
+    GTKRadiant
+   </a>
+   - Open source, multi-platform editor.
+   <ul>
+    <li>
+     <a class="external text" href="http://darkradiant.sourceforge.net/" title="http://darkradiant.sourceforge.net/">
+      DarkRadiant
+     </a>
+     - GTKRadiant modification made for The Dark Mod (also works with vanilla Doom 3) with many fixes, usability improvements and new features.
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <a name="Components_of_a_map">
+ </a>
+ <h2>
+  Components of a map
+ </h2>
+ <p>
+  Any map will contain a number of standard elements, which are discussed below.
+ </p>
+ <a name="Brushes">
+ </a>
+ <h3>
+  Brushes
+ </h3>
+ <p>
+  <a href="Brush" title="Brush">
+   Brushes
+  </a>
+  are convex solids that form the basic geometry of a map - floors, ceilings, walls, and basic internal solids (such as steps or beams) that do not require a model are produced with brushes. At the very least, the outer hull of a map must be made from brushes since by default, they belong to the only
+  <a href="Entity" title="Entity">
+   entity
+  </a>
+  class (the worldspawn) capable of sealing the map from the void.
+ </p>
+ <p>
+  Aside from visual geometry, brushes can also be used to define volumes within a map with unique properties. This is done by applying
+  <a href="Special_Volume_Materials" title="Special Volume Materials">
+   special volume materials
+  </a>
+  (a.k.a. "common" materials) to their surface. An example would be the material
+  <i>
+   player_clip
+  </i>
+  which prevents the player from entering the designated volume.
+ </p>
+ <p>
+  If a user attempts to create a concave brush through a
+  <a href="CSG" title="CSG">
+   CSG
+  </a>
+  operation, the editor automatically fragments it to create a number of smaller convex brushes that combine to create the desired concave structure.
+ </p>
+ <a name="Entities">
+ </a>
+ <h3>
+  Entities
+ </h3>
+ <p>
+  <a href="Entity" title="Entity">
+   Entities
+  </a>
+  are functional objects placed in a map ("actors" to the Unreal mappers).
+  <a href="Light" title="Light">
+   Lights
+  </a>
+  , monsters, items, doors - anything which must do something as opposed to just constituting map geometry - are all examples of entities. Entities can be created in-editor from patches or brushes, while pre-defined entities can be added from the right-click context menu in the main editor window. Entities are inherently dynamic and can be controlled either by the
+  <a href="Coding" title="Coding">
+   game logic
+  </a>
+  or level
+  <a href="Scripting" title="Scripting">
+   scripts
+  </a>
+  .
+ </p>
+ <a name="Models">
+ </a>
+ <h4>
+  Models
+ </h4>
+ <p>
+  Objects that are too complex to create with brushes or patches can be
+  <a href="Modelling" title="Modelling">
+   modelled
+  </a>
+  in an external application and imported into Doom 3, in either .
+  <a href="ASE_%28file_format%29" title="ASE (file format)">
+   ASE
+  </a>
+  or .
+  <a href="LWO_%28file_format%29" title="LWO (file format)">
+   LWO
+  </a>
+  file formats as an entity. A static model can be used to represent anything from a key to a table to a large stone buttress, while an animated model is required for enemies, monsters or NPCs.
+ </p>
+ <p>
+  And despite the debate, models cannot be scaled by the engine. It is possible to scale them by carefully tweaking the rotation key/value pair, however the effect is only visual. The collision model does not scale with it.
+ </p>
+ <p>
+  Unreal users will be accustomed to creating almost all architectural detail with static models, due to problems caused by excessively-complex BSP geometry. This is not an issue for Doom 3, which uses a unified rendering model that makes no distinction between BSP and model-based polygons. See the
+  <a href="Modelling" title="Modelling">
+   modelling
+  </a>
+  section for more discussion of the model vs brush distinction. Although entities by default, with the inline flag a model entity that is not supposed to be dynamic can be turned into map geometry when the map is compiled.
+ </p>
+ <a name="Patches">
+ </a>
+ <h3>
+  Patches
+ </h3>
+ <p>
+  <a href="Patch" title="Patch">
+   Patches
+  </a>
+  are used to add rounded, curved or undulating surfaces to a map, which are not possible using brushes alone. They are defined using
+  <i>
+   Bezier curves
+  </i>
+  , and are smooth-shaded by the renderer.
+ </p>
+ <a name="Compiling_the_map">
+ </a>
+ <h2>
+  Compiling the map
+ </h2>
+ <p>
+  Before you can play a map you have to compile it. The easiest way is to select BSP &gt; BSP in the map editor, but you can also type "
+  <a href="Dmap_%28console_command%29" title="Dmap (console command)">
+   dmap
+  </a>
+  &lt;mymap&gt;" in the console. Doom 3 is different from previous id engines because it reads direct from .
+  <a href="MAP_%28file_format%29" title="MAP (file format)">
+   MAP
+  </a>
+  files without making computations for VIS and LIGHT, which are performed on-the-fly by the engine. However, you still need to 'compile' your maps to create a .
+  <a href="CM_%28file_format%29" title="CM (file format)">
+   CM
+  </a>
+  and a .
+  <a href="PROC_%28file_format%29" title="PROC (file format)">
+   PROC
+  </a>
+  which essentially makes solid geometry solid. Despite this, map compilation is very fast (measured in seconds).
+ </p>
+ <a name="Writing_a_declaration">
+ </a>
+ <h2>
+  Writing a declaration
+ </h2>
+ <p>
+  Before packaging a map for distribution you should create a
+  <a href="Mapdef_%28decl%29" title="Mapdef (decl)">
+   map declaration
+  </a>
+  , which will provide the engine with information like the working map name, supported game modes, and general memory consumption.
+ </p>
+ <p>
+  For more information about
+  <a href="Declarations" title="Declarations">
+   declarations
+  </a>
+  , like what they are, how they are created, or where they are stored, visit the corresponding article.
+ </p>
+ <a name="Advanced_Tutorials">
+ </a>
+ <h2>
+  Advanced Tutorials
+ </h2>
+ <ul>
+  <li>
+   <a href="How_to_add_a_sky" title="How to add a sky">
+    How to add a sky
+   </a>
+  </li>
+  <li>
+   <a href="How_to_add_a_terrain" title="How to add a terrain">
+    How to add a terrain
+   </a>
+  </li>
+  <li>
+   <a href="How_to_add_water" title="How to add water">
+    How to add water
+   </a>
+  </li>
+ </ul>
+ <a name="Prey_Advanced_Tutorials">
+ </a>
+ <h2>
+  <span align="absbottom">
+   <a class="image" href="Image:Preysquare_25.png" title="Image:Preysquare_25.png">
+    <img alt="Image:Preysquare_25.png" height="25" longdesc="/wiki/Image:Preysquare_25.png" src="/web/20121205052906im_/http://www.modwiki.net/w/images/b/ba/Preysquare_25.png" width="25"/>
+   </a>
+   Prey Advanced Tutorials
+  </span>
+ </h2>
+ <dl>
+  <dd>
+   <i>
+    The information in this section is specific to
+    <a href="Prey" title="Prey">
+     Prey
+    </a>
+    .
+   </i>
+  </dd>
+ </dl>
+ <ul>
+  <li>
+   <a class="external text" href="https://web.archive.org/web/20121205052906/http://www.3drealms.com/prey/wiki/index.php/Gravity_Volumes_Tutorial" title="http://www.3drealms.com/prey/wiki/index.php/Gravity_Volumes_Tutorial">
+    How to add gravity volumes
+   </a>
+  </li>
+  <li>
+   <a class="external text" href="https://web.archive.org/web/20121205052906/http://www.3drealms.com/prey/wiki/index.php/Portals_Tutorial" title="http://www.3drealms.com/prey/wiki/index.php/Portals_Tutorial">
+    How to add portals - freestanding
+   </a>
+  </li>
+  <li>
+   <a class="external text" href="https://web.archive.org/web/20121205052906/http://www.3drealms.com/prey/wiki/index.php/Crouch_Portals_Tutorial" title="http://www.3drealms.com/prey/wiki/index.php/Crouch_Portals_Tutorial">
+    How to add portals - surface
+   </a>
+  </li>
+  <li>
+   <a class="external text" href="https://web.archive.org/web/20121205052906/http://www.3drealms.com/prey/wiki/index.php/Wall_Walk_Tutorial" title="http://www.3drealms.com/prey/wiki/index.php/Wall_Walk_Tutorial">
+    How to add wall walking
+   </a>
+  </li>
+ </ul>
+ <a name="ETQW_Advanced_Tutorials">
+ </a>
+ <h2>
+  <span align="absbottom">
+   <a class="image" href="Image:Etqwsquare_25.png" title="Image:Etqwsquare_25.png">
+    <img alt="Image:Etqwsquare_25.png" height="25" longdesc="/wiki/Image:Etqwsquare_25.png" src="/web/20121205052906im_/http://www.modwiki.net/w/images/7/7e/Etqwsquare_25.png" width="25"/>
+   </a>
+   ETQW Advanced Tutorials
+  </span>
+ </h2>
+ <dl>
+  <dd>
+   <i>
+    The information in this section is specific to
+    <a href="Enemy_Territory:_Quake_Wars" title="Enemy Territory: Quake Wars">
+     Enemy Territory: Quake Wars
+    </a>
+    .
+   </i>
+  </dd>
+ </dl>
+ <ul>
+  <li>
+   <a href="How_to_add_localization_to_a_map" title="How to add localization to a map">
+    How to add localization to a map
+   </a>
+  </li>
+  <li>
+   <a href="How_to_add_a_construction_objective" title="How to add a construction objective">
+    How to add a construction objective
+   </a>
+  </li>
+  <li>
+   <a href="How_to_add_bot_support_to_a_map" title="How to add bot support to a map">
+    How to add bot support to a map
+   </a>
+  </li>
+ </ul>
+ <a name="See_also">
+ </a>
+ <h2>
+  See also
+ </h2>
+ <ul>
+  <li>
+   <a href="Common_Mapping_Issues" title="Common Mapping Issues">
+    Common Mapping Issues
+   </a>
+  </li>
+  <li>
+   <a href="Maps_%28folder%29" title="Maps (folder)">
+    Mapping filetypes
+   </a>
+  </li>
+  <li>
+   <a href="Models_vs_brushes" title="Models vs brushes">
+    Models vs brushes
+   </a>
+  </li>
+  <li>
+   <a href="Optimising_maps" title="Optimising maps">
+    Optimising maps
+   </a>
+  </li>
+  <li>
+   <a href="DoomEDIT_Categorised_Key_Bindings_and_Mouse_Controls" title="DoomEDIT Categorised Key Bindings and Mouse Controls">
+    DoomEDIT Categorised Key Bindings and Mouse Controls
+   </a>
+  </li>
+ </ul>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:928-0!1!0!0!!en!2 and timestamp 20121204142625 -->

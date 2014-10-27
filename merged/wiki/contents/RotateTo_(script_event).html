@@ -1,0 +1,96 @@
+ <a name="Game_class">
+ </a>
+ <h2>
+  Game class
+ </h2>
+ <p>
+  This event operates on an instance of the
+  <a href="Game_class" title="Game class">
+   game class
+  </a>
+  type {{{gameclass}}}
+ </p>
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  Causes an
+  <a href="Entity" title="Entity">
+   entity
+  </a>
+  to perform a rotation along a specified vector.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <p>
+  <i>
+   void
+  </i>
+  rotateTo(
+  <i>
+   vector
+  </i>
+  <b>
+   rotateAxis
+  </b>
+  )
+ </p>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   [rotateAxis] - The axis around which the entity will rotate.
+  </li>
+ </ul>
+ <a name="Examples">
+ </a>
+ <h2>
+  Examples
+ </h2>
+ <pre><span style="color: #000055;">$my_entity</span>.<span style="color: #ff0000;">rotateTo</span><span style="color: #000000;">(</span> '<span style="color: #0000dd;">0</span> <span style="color: #0000dd;">0</span> <span style="color: #0000dd;">90</span>' <span style="color: #000000;">)</span>;</pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  This script event does not return any values. This event differs from
+  <a href="RotateOnce_%28script_event%29" title="RotateOnce (script event)">
+   rotateOnce
+  </a>
+  in that this rotates an entity to a specific degree on the axis as opposed to adding to the current degree. The above example will cause the entity to rotate to 90 degrees on the z-axis from the entity's 0 angle for the duration that entity's
+  <a href="Time_%28script_event%29" title="Time (script event)">
+   time
+  </a>
+  is set to. If no time is set, the default is 1 second.
+ </p>
+ <p>
+  <br/>
+  An example of using .time,
+  <a href="AccelTime_%28script_event%29" title="AccelTime (script event)">
+   accelTime
+  </a>
+  ,
+  <a href="DecelTime_%28script_event%29" title="DecelTime (script event)">
+   decelTime
+  </a>
+  , and rotateOnce in a short script:
+ </p>
+ <pre><span style="color: #0000ff;">void</span> rotateCube <span style="color: #000000;">(</span><span style="color: #000000;">)</span>
+ <span style="color: #000000;">{</span>
+    <span style="color: #000055;">$cube</span>.<span style="color: #ff0000;">time</span> <span style="color: #000000;">(</span><span style="color: #0000dd;">5</span><span style="color: #000000;">)</span>;
+    <span style="color: #000055;">$cube</span>.<span style="color: #ff0000;">accelTime</span> <span style="color: #000000;">(</span><span style="color: #0000dd;">1</span><span style="color: #000000;">)</span>;
+    <span style="color: #000055;">$cube</span>.<span style="color: #ff0000;">decelTime</span> <span style="color: #000000;">(</span><span style="color: #0000dd;">2</span><span style="color: #000000;">)</span>;
+    <span style="color: #000055;">$cube</span>.<span style="color: #ff0000;">rotateTo</span> <span style="color: #000000;">(</span>'<span style="color: #0000dd;">0</span> <span style="color: #0000dd;">0</span> <span style="color: #0000dd;">180</span>'<span style="color: #000000;">)</span>;
+ <span style="color: #000000;">}</span></pre>
+ <p>
+  This script function will cause an entity named "cube" to rotate to 180 degrees on the Z-axis, within a time period of 5 seconds. The entity will take 1 second to accelerate to its top speed, it will rotate for 2 seconds at its top speed and finally it will spend 2 seconds to decelerate from its top speed to the stopped position.
+ </p>

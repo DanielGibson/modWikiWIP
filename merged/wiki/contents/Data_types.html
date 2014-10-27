@@ -1,0 +1,168 @@
+ <a name="Overview">
+ </a>
+ <h2>
+  Overview
+ </h2>
+ <p>
+  A data type specifies what type of data a variable can hold and must always be present at a variable's declaration.
+ </p>
+ <p>
+  The script parser uses this to speed up certain operations or complain about impossible operations.
+ </p>
+ <p>
+  For an introduction on declaring and using variables, see
+  <a href="Scripting_basics#Variables" title="Scripting basics">
+   Variables
+  </a>
+  .
+ </p>
+ <a name="Common_types">
+ </a>
+ <h2>
+  Common types
+ </h2>
+ <a name="float">
+ </a>
+ <h3>
+  float
+ </h3>
+ <p>
+  A float type variable can contain any number whether it's an
+  <a class="external text" href="http://en.wikipedia.org/wiki/Integer" title="http://en.wikipedia.org/wiki/Integer">
+   integer
+  </a>
+  or a
+  <a class="external text" href="http://en.wikipedia.org/wiki/Real_number" title="http://en.wikipedia.org/wiki/Real_number">
+   real number
+  </a>
+  .
+ </p>
+ <pre><span style="color: #0000ff;">float</span> my_var = <span style="color: #0000dd;">23</span>;
+<span style="color: #0000ff;">float</span> my_second_var = <span style="color: #0000dd;">0</span>.<span style="color: #0000dd;">5</span>;</pre>
+ <a name="vector">
+ </a>
+ <h3>
+  vector
+ </h3>
+ <p>
+  A vector type contains three float values, representing a vector. The engine uses this type to store map locations (vector from world origin to position), directions or angles.
+ </p>
+ <p>
+  When used in a normal assignment, the floats are in the order of 'X Y Z' indicating 3D space coordinates. To access one vector's axis component, append _x, _y, or _z to the variable's name. It should also be possible to use a vector's projection on 1 axis by using the same syntax.
+ </p>
+ <pre><span style="color: #0000ff;">vector</span> tempvector = '-<span style="color: #0000dd;">128</span> -<span style="color: #0000dd;">128</span> <span style="color: #0000dd;">0</span>';
+ 
+<span style="color: #339900;">// Changing the x axis value</span>
+tempvector_x = <span style="color: #0000dd;">10</span>;
+ 
+<span style="color: #339900;">// Assigning a projected vector to another vector</span>
+<span style="color: #0000ff;">vector</span> xcomp = tempvector_x;    <span style="color: #339900;">// xcomp = '10 0 0' </span>
+ </pre>
+ <p>
+  <b>
+   Note
+  </b>
+  : Vectors do not automatically convert to strings, and can't be set to equal floats. In these cases, the separate axis components need to be used.
+  <a class="external autonumber" href="http://www.iddevnet.com/quake4/ScriptVariable#vector" title="http://www.iddevnet.com/quake4/ScriptVariable#vector">
+   [1]
+  </a>
+ </p>
+ <a name="entity">
+ </a>
+ <h3>
+  entity
+ </h3>
+ <p>
+  An
+  <a href="Entity" title="Entity">
+   entity
+  </a>
+  reference. Everything in the world is an entity, so this type is used extensively. (See the info on
+  <a href="Scripting_basics#Entities" title="Scripting basics">
+   entities
+  </a>
+  in scripting basics)
+ </p>
+ <pre><span style="color: #0000ff;">entity</span> funcmover;
+funcmover = <span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">getEntity</span><span style="color: #000000;">(</span><span style="color: #666666;">"func_mover_1"</span><span style="color: #000000;">)</span>;</pre>
+ <a name="string">
+ </a>
+ <h3>
+  string
+ </h3>
+ <p>
+  A string type contains nothing more then text.
+ </p>
+ <pre><span style="color: #0000ff;">string</span> blabla = <span style="color: #666666;">"Put text here"</span>;</pre>
+ <p>
+  <b>
+   Note:
+  </b>
+  A string variable can be no longer than 256 characters.
+ </p>
+ <a name="boolean">
+ </a>
+ <h3>
+  boolean
+ </h3>
+ <p>
+  A boolean type contains a state, true or false. It can't be initialized at declaration, but the un-initialized variable will return zero and be interpreted as false.
+ </p>
+ <pre><span style="color: #0000ff;">boolean</span> flag;
+flag = <span style="color: #0000dd;">1</span>;
+flag = <span style="color: #0000dd;">0</span>;</pre>
+ <a name="void">
+ </a>
+ <h3>
+  void
+ </h3>
+ <p>
+  Void basically means
+  <i>
+   nothing
+  </i>
+  .
+ </p>
+ <p>
+  <b>
+   Only to be used with functions!
+  </b>
+ </p>
+ <a name="Special_types">
+ </a>
+ <h2>
+  Special types
+ </h2>
+ <a name="object">
+ </a>
+ <h3>
+  object
+ </h3>
+ <p>
+  Named base type of
+  <a href="Script_object" title="Script object">
+   script object
+  </a>
+  .
+Used for more advanced scripting techniques.
+ </p>
+ <a name=".5Bobject_type.5D">
+ </a>
+ <h3>
+  [object type]
+ </h3>
+ <p>
+  Combined entity reference and
+  <a href="Script_object" title="Script object">
+   script object
+  </a>
+  type reference. Will be set to
+  <a href="%24null_entity_%28scripting%29" title="$null entity (scripting)">
+   null
+  </a>
+  if the entity you are trying to set the reference to does not have a object of that type.
+ </p>
+ <pre>monster_base myMonster;
+myMonster = <span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">getEntity</span><span style="color: #000000;">(</span><span style="color: #666666;">"monster_sam"</span><span style="color: #000000;">)</span>;
+myMonster.<span style="color: #ff0000;">wake_on_trigger</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span>;</pre>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:3341-0!1!0!0!!en!2 and timestamp 20120418101014 -->

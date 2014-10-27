@@ -1,0 +1,112 @@
+ <p>
+  A script thread is the line of execution managed by the
+  <a href="Coding#Game_code" title="Coding">
+   game code
+  </a>
+  by the
+  <a href="Game_class" title="Game class">
+   game class
+  </a>
+  idThread.
+ </p>
+ <p>
+  It is typically created for a script function call from game code and deleted when that function exits.
+ </p>
+ <p>
+  A new thread is created when calling a function from within script via an entity reference to execute that function.
+ </p>
+ <p>
+  When an entity spawns with a script object set it will create a thread to execute the init() function.
+ </p>
+ <p>
+  <a href="Spawn_class" title="Spawn class">
+   spawn classes
+  </a>
+  with
+  <a href="Finite_State_Machine_%28scripting%29" title="Finite State Machine (scripting)">
+   FSMs
+  </a>
+  manage a thread for the current set state, running it each frame.
+ </p>
+ <p>
+  The
+  <b>
+   sys
+  </b>
+  identifier is used within a script to call events defined on the
+  <a href="Game_class" title="Game class">
+   game class
+  </a>
+  idThread, they are called on the idThread instance that is executing that part of the script. See System Events for respective game:
+  <a href="Script_events" title="Script events">
+   Script events
+  </a>
+  .
+ </p>
+ <p>
+  Threads can be created from within a script itself by using the
+  <b>
+   thread
+  </b>
+  identifier. There are also several events for managing threads from within script. See
+  <a href="Scripting_basics#Threads" title="Scripting basics">
+   Scripting basics#Threads
+  </a>
+  .
+ </p>
+ <a name="Wait">
+ </a>
+ <h2>
+  Wait
+ </h2>
+ <p>
+  Since threads are part of normal
+  <a href="Coding#Game_code" title="Coding">
+   game
+  </a>
+  execution, script authors using threads (including
+  <a href="Script_object" title="Script object">
+   script objects
+  </a>
+  ) to set up run time behavior must take note of letting threads execute for a long time without letting threads wait. Essentially letting the overall game execution continue.
+ </p>
+ <p>
+  Waiting suspends execution on the thread until the specified time.
+ </p>
+ <p>
+  While there is infinite loop protection, and a limit on events per frame, there may be other cases it won't catch and run time behavior should be planned accordingly.
+ </p>
+ <a name="Related_Script_Events">
+ </a>
+ <h3>
+  Related Script Events
+ </h3>
+ <ul>
+  <li>
+   <a href="Wait_%28script_event%29" title="Wait (script event)">
+    wait
+   </a>
+  </li>
+ </ul>
+ <ul>
+  <li>
+   <a href="WaitFrame_%28script_event%29" title="WaitFrame (script event)">
+    waitFrame
+   </a>
+  </li>
+ </ul>
+ <ul>
+  <li>
+   <a href="WaitFor_%28script_event%29" title="WaitFor (script event)">
+    waitFor
+   </a>
+  </li>
+ </ul>
+ <ul>
+  <li>
+   <a href="WaitForThread_%28script_event%29" title="WaitForThread (script event)">
+    waitForThread
+   </a>
+  </li>
+ </ul>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:8150-0!1!0!0!!en!2 and timestamp 20080829130221 -->

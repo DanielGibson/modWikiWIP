@@ -1,0 +1,54 @@
+ <a name="idAI::PointReachableAreaNum">
+ </a>
+ <h2>
+  <a href="Src/game/ai/AI.cpp_%28source_file%29" title="Src/game/ai/AI.cpp (source file)">
+   idAI
+  </a>
+  ::PointReachableAreaNum
+ </h2>
+ <p>
+  This method is a wrapper around what eventually leads to an engine call of the same name. it will do some prep work setting up and idBounds and travel flags and call into
+  <a class="new" href="IdAASLocal::PointReachableAreaNum" title="IdAASLocal::PointReachableAreaNum">
+   idAASLocal::PointReachableAreaNum
+  </a>
+ </p>
+ <pre> 
+<span style="color: #339900; font-style: italic;">/*
+=====================
+idAI::PointReachableAreaNum
+=====================
+*/</span>
+<span style="color: #0000ff;">int</span> idAI::<span style="color: #00aabb;">PointReachableAreaNum</span><span style="color: #000000;">(</span> <span style="color: #0000ff;">const</span> idVec3 &amp;pos, <span style="color: #0000ff;">const</span> <span style="color: #0000ff;">float</span> boundsScale <span style="color: #000000;">)</span> <span style="color: #0000ff;">const</span> <span style="color: #000000;">{</span>
+	<span style="color: #0000ff;">int</span> areaNum;
+	idVec3 size;
+	idBounds bounds;
+ 
+	<span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span> !aas <span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
+		<span style="color: #0000ff;">return</span> <span style="color: #0000dd;">0</span>;
+	<span style="color: #000000;">}</span>
+	<span style="color: #339900;">// set up the bounding box that is used for reachability</span>
+	size = aas-&gt;GetSettings<span style="color: #000000;">(</span><span style="color: #000000;">)</span>-&gt;boundingBoxes<span style="color: #000000;">[</span><span style="color: #0000dd;">0</span><span style="color: #000000;">]</span><span style="color: #000000;">[</span><span style="color: #0000dd;">1</span><span style="color: #000000;">]</span> * boundsScale;
+	bounds<span style="color: #000000;">[</span><span style="color: #0000dd;">0</span><span style="color: #000000;">]</span> = -size;
+	size.<span style="color: #00aabb;">z</span> = <span style="color: #0000dd;">32</span>.0f;
+	bounds<span style="color: #000000;">[</span><span style="color: #0000dd;">1</span><span style="color: #000000;">]</span> = size;
+ 
+	<span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span> move.<span style="color: #00aabb;">moveType</span> == MOVETYPE_FLY <span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
+		areaNum = aas-&gt;PointReachableAreaNum<span style="color: #000000;">(</span> pos, bounds, AREA_REACHABLE_WALK | AREA_REACHABLE_FLY <span style="color: #000000;">)</span>;
+	<span style="color: #000000;">}</span> <span style="color: #0000ff;">else</span> <span style="color: #000000;">{</span>
+		<span style="color: #339900;">// get </span>
+		areaNum = aas-&gt;PointReachableAreaNum<span style="color: #000000;">(</span> pos, bounds, AREA_REACHABLE_WALK <span style="color: #000000;">)</span>;
+	<span style="color: #000000;">}</span>
+ 
+	<span style="color: #0000ff;">return</span> areaNum;
+<span style="color: #000000;">}</span></pre>
+ <p>
+  Here is what brian at iddevnet had to say about PointReachableAreaNum
+ </p>
+ <p>
+  <cite>
+   It returns the closest reachable area to the specified point. 
+If the point is in a reachable area already, it just returns that point, 
+otherwise (for example if the given point is outside the world or inside some geometry) 
+it will scan the bounding box given searching for reachable areas.
+  </cite>
+ </p>

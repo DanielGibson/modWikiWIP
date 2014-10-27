@@ -1,0 +1,46 @@
+ <p>
+  The position and size of the item on the screen, in pixels in relation to a 640x480 "virtual" screen, counting from 0. The first two values are the top left corner of the windowdef, and the last two values are its width and height (see the
+  <a href="Invertrect_%28GUI_item_property%29" title="Invertrect (GUI item property)">
+   invertrect
+  </a>
+  property for an exception to this).
+ </p>
+ <p>
+  Also note that, in nested items, the
+  <i>
+   x
+  </i>
+  and
+  <i>
+   y
+  </i>
+  values are relative to the top left corner of the parent item, not the desktop (main)
+  <a href="WindowDef_%28GUI_item_type%29" title="WindowDef (GUI item type)">
+   windowDef
+  </a>
+  . Also, the parent item's border is taken into account, so 0, 0 in a child item would be the topmost, leftmost pixel that is not a border pixel inside of the parent item.
+ </p>
+ <a name="Syntax">
+ </a>
+ <h2>
+  Syntax
+ </h2>
+ <pre>rect <i>x</i>, <i>y</i>, <i>w</i>, <i>h</i>
+</pre>
+ <a name="Default_value">
+ </a>
+ <h2>
+  Default value
+ </h2>
+ <pre>Unknown
+</pre>
+ <a name="Example.28s.29">
+ </a>
+ <h2>
+  Example(s)
+ </h2>
+ <pre>rect 0, 0, 640, 480
+</pre>
+ <p>
+  <br/>
+ </p>

@@ -1,0 +1,64 @@
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  The
+  <b>
+   program
+  </b>
+  keyword is an alias for the keywords
+  <a href="FragmentProgram_%28Material_stage_keyword%29" title="FragmentProgram (Material stage keyword)">
+   fragmentProgram
+  </a>
+  and
+  <a href="VertexProgram_%28Material_stage_keyword%29" title="VertexProgram (Material stage keyword)">
+   vertexProgram
+  </a>
+  .
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <pre>program [prog]
+</pre>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   [prog] = The vfp file containing both the vertex and fragment programs to exectute.
+  </li>
+ </ul>
+ <a name="Example">
+ </a>
+ <h2>
+  Example
+ </h2>
+ <p>
+  Distorts the current frame using the normal map helmet_local.tga and heatHazeWithMaskAndVertex.vfp...
+ </p>
+ <pre>{
+   program         heatHazeWithMaskAndVertex.vfp
+   vertexParm      0               0                                          // texture scrolling
+   vertexParm      1               10                                         // magnitude of the distortion
+   fragmentMap     0               _currentRender
+   fragmentMap     1               models/characters/sarge2/helmet_local.tga  // the normal map for distortion
+}
+</pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  Not available.
+ </p>
+ <p>
+  <br/>
+ </p>

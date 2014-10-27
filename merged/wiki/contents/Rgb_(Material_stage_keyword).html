@@ -1,0 +1,63 @@
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  The
+  <b>
+   rgb
+  </b>
+  keyword multiples the red, green, and blue channels of the associated map by the given value.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <pre>rgb &lt;colorval&gt;
+</pre>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   <i>
+    colorval
+   </i>
+   - the value by which the red, green, and blue channels of the image map should be multiplied
+  </li>
+ </ul>
+ <a name="Example">
+ </a>
+ <h2>
+  Example
+ </h2>
+ <p>
+  The following stage reduces the intensity of the red, green, and blue channels by half.
+ </p>
+ <pre>{
+   map path/to/image.tga
+   rgb 0.5
+}
+</pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  This keyword is a shorthand way to acomplish the following...
+ </p>
+ <pre>{
+   map path/to/image.tga
+   red 0.5
+   green 0.5
+   blue 0.5
+}
+</pre>
+ <p>
+  <br/>
+ </p>

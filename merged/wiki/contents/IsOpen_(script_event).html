@@ -1,0 +1,66 @@
+ <a name="Game_class">
+ </a>
+ <h2>
+  Game class
+ </h2>
+ <p>
+  This event operates on an instance of the
+  <a href="Game_class" title="Game class">
+   game class
+  </a>
+  type {{{gameclass}}}
+ </p>
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  Returns true if the door is open.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <p>
+  float  isOpen( )
+ </p>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   tba
+  </li>
+ </ul>
+ <a name="Examples">
+ </a>
+ <h2>
+  Examples
+ </h2>
+ <pre><span style="color: #339900;">// Opens or closes a door depending on it's current state ...</span>
+ 
+<span style="color: #0000ff;">void</span> doorToggle<span style="color: #000000;">(</span>ent door<span style="color: #000000;">)</span>
+<span style="color: #000000;">{</span>
+        <span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span>door.<span style="color: #ff0000;">isOpen</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span><span style="color: #000000;">)</span>
+        <span style="color: #000000;">{</span>
+                door.<span style="color: #ff0000;">close</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span>;
+        <span style="color: #000000;">}</span> <span style="color: #0000ff;">else</span>  <span style="color: #000000;">{</span>
+                door.<span style="color: #ff0000;">open</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span>;
+        <span style="color: #000000;">}</span>
+<span style="color: #000000;">}</span></pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  This script event does not report the correct status for doors with the "start_open" key/value pair set to 1. Instead it reports true when the door is closed and vice versa.
+ </p>
+ <p>
+  <br/>
+ </p>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:2400-0!1!0!0!!en!2 and timestamp 20091207095854 -->

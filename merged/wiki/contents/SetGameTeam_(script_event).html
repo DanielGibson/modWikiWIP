@@ -1,0 +1,136 @@
+ <div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
+  <a class="image" href="Image:Etqwsquare_bg.png" title="Image:Etqwsquare_bg.png">
+   <img alt="Image:Etqwsquare_bg.png" height="50" longdesc="/wiki/Image:Etqwsquare_bg.png" src="/web/20081121044932im_/http://www.modwiki.net/w/images/f/f9/Etqwsquare_bg.png" width="50"/>
+  </a>
+  The information on this page is specific to
+  <a href="Enemy_Territory:_Quake_Wars" title="Enemy Territory: Quake Wars">
+   Enemy Territory: Quake Wars
+  </a>
+  .
+ </div>
+ <hr/>
+ <a name="Game_class">
+ </a>
+ <h2>
+  Game class
+ </h2>
+ <p>
+  This event operates on an instance of the
+  <a href="Game_class" title="Game class">
+   game class
+  </a>
+  type
+  <a href="IdEntity_%28class%29" title="IdEntity (class)">
+   idEntity
+  </a>
+  . Has spawn class specific implementation.
+ </p>
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  Calls SetGameTeam on entity's
+  <a href="Spawn_class" title="Spawn class">
+   spawn class
+  </a>
+  .
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <p>
+  <i>
+   void
+  </i>
+  setGameTeam(
+  <i>
+   object
+  </i>
+  team );
+ </p>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <p>
+  [team] - team object. Global object pointers for team objects are named
+  <b>
+   gdfTeam
+  </b>
+  and
+  <b>
+   stroggTeam
+  </b>
+  Can be set to
+  <a href="%24null_entity_%28scripting%29" title="$null entity (scripting)">
+   null
+  </a>
+  .
+ </p>
+ <a name="Examples">
+ </a>
+ <h2>
+  Examples
+ </h2>
+ <pre>someEntity.<span style="color: #ff0000;">setGameTeam</span><span style="color: #000000;">(</span> teamStrogg <span style="color: #000000;">)</span>;
+<span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">println</span><span style="color: #000000;">(</span> <span style="color: #666666;">"The strogg army grows ever more powerful"</span> <span style="color: #000000;">)</span>;</pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  Calls SetGameTeam on the entities
+  <a href="Spawn_class" title="Spawn class">
+   spawn class
+  </a>
+  . SetGameClass has spawn class specific implementations on the following:
+ </p>
+ <p>
+  <b>
+   idEntity
+  </b>
+  : Does nothing.
+ </p>
+ <p>
+  <b>
+   idActor
+  </b>
+  ,
+  <b>
+   idItem
+  </b>
+  ,
+  <b>
+   idProjectile
+  </b>
+  : Sets team.
+ </p>
+ <p>
+  <b>
+   idPlayer
+  </b>
+  : Sets team, calls OnSetTeam function on entities script object. Sets player to spectate if team is NULL.
+ </p>
+ <p>
+  <b>
+   sdScriptEntity
+  </b>
+  : Sets team, calls OnSetTeam function on entities script object. Many entities use this function to manage the change.
+ </p>
+ <p>
+  Has counterpart
+  <a href="GetGameTeam_%28script_event%29" title="GetGameTeam (script event)">
+   getGameTeam
+  </a>
+  .
+ </p>
+ <p>
+  <br/>
+ </p>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:8152-0!1!0!0!!en!2 and timestamp 20081121081138 -->

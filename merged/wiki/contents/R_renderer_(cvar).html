@@ -1,0 +1,295 @@
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  This CVar changes the hardware specific renderer backend used by the engine.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <p>
+  At the console type...
+ </p>
+ <pre>r_renderer [String]
+</pre>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   [String] - Name of the rendering path.
+   <ul>
+    <li>
+     Best - The engine automatically determines the best path to use.
+    </li>
+    <li>
+     ARB2 - Best quality path which enables the use of
+     <a href="Vertex_and_fragment_programs" title="Vertex and fragment programs">
+      vertex and fragment programs
+     </a>
+     . Needs an ATi Radeon 9500 or nVidia GeForce 5200 or better.
+    </li>
+    <li>
+     R200 - ATi specific. Needs an ATi Radeon 8500 or better.
+    </li>
+    <li>
+     NV20 - nVidia specific. Needs a nVidia GeForce 3 or better.
+    </li>
+    <li>
+     NV10 - nVidia specific. Needs a nVidia GeForce or better (but only nVidia GeForce 4 MX is officially supported by Doom 3).
+    </li>
+    <li>
+     ARB - Needs an ATi Radeon or nVidia GeForce or better (not officially supported by Doom 3)
+    </li>
+    <li>
+     Cg - nVidia specific. Needs a nVidia GeForce 5200 or better. (not officially supported by Doom 3).
+    </li>
+    <li>
+     Exp - Experimental path (not officially supported by Doom 3).
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <a name="Flags">
+ </a>
+ <h2>
+  Flags
+ </h2>
+ <table class="mwstyle">
+  <tr>
+   <th>
+    Flag
+   </th>
+   <th>
+    Enabled
+   </th>
+   <th>
+    Description
+   </th>
+  </tr>
+  <tr>
+   <td>
+    CVAR_ALL
+   </td>
+   <td>
+   </td>
+   <td>
+    all flags
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_BOOL
+   </td>
+   <td>
+   </td>
+   <td>
+    variable is a boolean
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_INTEGER
+   </td>
+   <td>
+   </td>
+   <td>
+    variable is an integer
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_FLOAT
+   </td>
+   <td>
+   </td>
+   <td>
+    variable is a float
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_SYSTEM
+   </td>
+   <td>
+   </td>
+   <td>
+    system variable
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_RENDERER
+   </td>
+   <td>
+    X
+   </td>
+   <td>
+    renderer variable
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_SOUND
+   </td>
+   <td>
+   </td>
+   <td>
+    sound variable
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_GUI
+   </td>
+   <td>
+   </td>
+   <td>
+    gui variable
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_GAME
+   </td>
+   <td>
+   </td>
+   <td>
+    game variable
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_TOOL
+   </td>
+   <td>
+   </td>
+   <td>
+    tool variable
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_USERINFO
+   </td>
+   <td>
+   </td>
+   <td>
+    sent to servers, available to menu
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_SERVERINFO
+   </td>
+   <td>
+   </td>
+   <td>
+    sent from servers, available to menu
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_NETWORKSYNC
+   </td>
+   <td>
+   </td>
+   <td>
+    cvar is synced from the server to clients
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_STATIC
+   </td>
+   <td>
+    X
+   </td>
+   <td>
+    statically declared, not user created
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_CHEAT
+   </td>
+   <td>
+   </td>
+   <td>
+    variable is considered a cheat
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_NOCHEAT
+   </td>
+   <td>
+    X
+   </td>
+   <td>
+    variable is not considered a cheat
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_INIT
+   </td>
+   <td>
+   </td>
+   <td>
+    can only be set from the command-line
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_ROM
+   </td>
+   <td>
+   </td>
+   <td>
+    display only, cannot be set by user at all
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_ARCHIVE
+   </td>
+   <td>
+    X
+   </td>
+   <td>
+    set to cause it to be saved to a config file
+   </td>
+  </tr>
+  <tr>
+   <td>
+    CVAR_MODIFIED
+   </td>
+   <td>
+   </td>
+   <td>
+    set when the variable is modified
+   </td>
+  </tr>
+ </table>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  You can use this CVar to test how your mod will look on other video cards. See also the
+  <a href="GfxInfo_%28console_command%29" title="GfxInfo (console command)">
+   gfxinfo
+  </a>
+  console command.
+ </p>
+ <p>
+  <br/>
+ </p>

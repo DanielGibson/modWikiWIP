@@ -1,0 +1,79 @@
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  This function will add the normals of two normal map images and normalize the result.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <pre>addnormals ([map_1], [map_2])
+</pre>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   [map_1] - The first of the two images to add.
+  </li>
+  <li>
+   [map_2] - The second of the two images to add.
+  </li>
+ </ul>
+ <a name="Example">
+ </a>
+ <h2>
+  Example
+ </h2>
+ <p>
+  Add two normal maps...
+ </p>
+ <p>
+  Combining both a height and a normal bump map using this function. This is the most common usage of addnormals.
+ </p>
+ <pre>textures/height_and_normal
+{
+   	bumpmap	addnormals ( textures/custom/image_1_local.tga, heightmap ( textures/custom/image_1_h.tga, 4 ))
+}
+</pre>
+ <p>
+  Adding two different normalmaps together.
+ </p>
+ <pre>textures/add_two
+{
+   {
+      blend bumpmap
+      map   addnormals(textures/custom/image_1.tga, textures/custom/image_2.tga)
+   }
+}
+</pre>
+ <p>
+  Add three or more normal maps by nesting...
+ </p>
+ <pre>textures/add_three
+{
+   {
+      blend bumpmap
+      map   addnormals(textures/custom/image_1.tga, addnormals(textures/custom/image_2.tga,
+                textures/custom/image_3.tga))
+   }
+}
+</pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  None.
+ </p>
+ <p>
+  <br/>
+ </p>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:1708-0!1!0!0!!en!2 and timestamp 20120402045421 -->

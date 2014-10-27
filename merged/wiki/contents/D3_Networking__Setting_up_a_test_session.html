@@ -1,0 +1,141 @@
+ <a name="Setup">
+ </a>
+ <h2>
+  Setup
+ </h2>
+ <p>
+  Well first of all there is a little problem with modifying the network code. After coding, you need to test it. That's not too easy, because you will need at least a dedicated server and one client. If you want to test it with two players, one client and one listen server would be nice. Cases exist where you even need two clients and one dedicated server!
+ </p>
+ <p>
+  The good news is: you don't need multiple computers to test your cool new network code. You can run all the stuff on one machine. Therefore we need to run the dedicated server using:
+ </p>
+ <pre>"doom3ded.exe" +set developer 1 +set fs_game yourmod +set si_pure 0 +exec server.cfg 
+</pre>
+ <p>
+  and the client using:
+ </p>
+ <pre>"doom3.exe" +set fs_game yourmod +set si_pure 0 +set developer 1 +set win_allowmultipleInstances 1
++set r_fullscreen 0 +com_allowConsole 1 +r_brightness 1 +r_mode 4 +connect localhost
+</pre>
+ <p>
+  So what does all this stuff do?
+ </p>
+ <dl>
+  <dt>
+   +set developer 1
+  </dt>
+  <dd>
+   Starts the game in developer mode. Very usefull for debugging stuff.
+  </dd>
+  <dt>
+   +set fs_game yourmod
+  </dt>
+  <dd>
+   Make the game load
+   <i>
+    yourmod
+   </i>
+   (Change
+   <i>
+    yourmod
+   </i>
+   with your mod's name, of course!)
+  </dd>
+  <dt>
+   +set si_pure 0
+  </dt>
+  <dd>
+   This one is very useful because you don't need to pak all your stuff into pak files. The game is now allowed to load custom files directly.
+  </dd>
+  <dt>
+   +exec server.cfg
+  </dt>
+  <dd>
+   Make the server run
+   <i>
+    server.cfg
+   </i>
+   which contains all the usefull settings and commands
+  </dd>
+  <dt>
+   +set win_allowmultipleInstances 1
+  </dt>
+  <dd>
+   Sets up Doom3 to allow running multiple instances of the game on one computer. This is really required, because we the server we just started counts as a running instance of Doom 3.
+  </dd>
+  <dt>
+   +set r_fullscreen 0
+  </dt>
+  <dd>
+   This one runs the game in windowed mode. Usefull to access the dedicated server while ingame.
+  </dd>
+  <dt>
+   +com_allowConsole 1
+  </dt>
+  <dd>
+   Add this Cvar to enable fast access to the console by pressing
+   <b>
+    ~
+   </b>
+   . (Or do your prefer pressing
+   <b>
+    Ctrl + Shift + ~
+   </b>
+   ?)
+  </dd>
+  <dt>
+   +r_brightness 1
+  </dt>
+  <dd>
+   Changes your game to the default brightness. Forget this and Windows will look so bright you could get snow blindness.
+  </dd>
+  <dt>
+   +r_mode 4
+  </dt>
+  <dd>
+   Sets up a default video mode. Presumably 800x600.
+  </dd>
+  <dt>
+   +connect localhost
+  </dt>
+  <dd>
+   Connects the game to the dedicated server we just started.
+  </dd>
+ </dl>
+ <p>
+  That's it, you should now have two instances of the game running! If this is not the case, take a look at the console of the server or the client. See what errors are printed and try fix it. (This may involve editing your server.cfg.)
+ </p>
+ <a name="Debug_Information">
+ </a>
+ <h2>
+  Debug Information
+ </h2>
+ <p>
+  Now let's a closer look at the Doom3 network code. Using the following CVars give you more details about the game engine and the current network traffic:
+ </p>
+ <dl>
+  <dt>
+   com_showAsyncstats 0|1
+  </dt>
+  <dd>
+   This one is engine related. It shows the current outgoing/incoming traffic. It is very useful for debugging, because you are able to see how much overall traffic your code generates. The important value ( on the client ) is the incoming traffic. In contrast to the outgoing traffic (mostly usercommands) your server side network code will directly influence in the incoming traffic rate. A rule of thumb: Just keep it below 6000 b/s and the mod should be running fine.
+  </dd>
+  <dt>
+   net_clientShowSnapshot 0|1|2|3
+  </dt>
+  <dd>
+   When enabled this one gives you info about the entities and the amount of traffic they generate. They are divided into three groups:
+   <ul>
+    <li>
+     Green - Entity is currently transmitting traffic
+    </li>
+    <li>
+     Yellow - Entity is a network entity, but not producing any traffic (gets deltified away - more on this later))
+    </li>
+    <li>
+     Grey - Entity is a map entitiy (spawns on the client, when the map is loaded)
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:3753-0!1!0!0!!en!2 and timestamp 20091224102527 -->

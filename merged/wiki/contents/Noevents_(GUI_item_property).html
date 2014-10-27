@@ -1,0 +1,38 @@
+ <p>
+  Whether or not
+  <a href="GUI_item_events" title="GUI item events">
+   events
+  </a>
+  will be ignored for this item; using a value of 1 makes sure events such as onMouseEnter won't get fired by this item. This is needed, for example, when you have decorative items on top of a button item - the topmost item would be the one receiving the mouse events (even if they haven't been declared), while the real button below it would be ignored. With noevents, mouse events will correctly be executed on the button item.
+ </p>
+ <p>
+  Using this property on an item can also disable events on all subitems that are nested inside of it (
+  <a class="external text" href="https://web.archive.org/web/20080905164004/http://www.doom3world.org/phpbb2/viewtopic.php?t=12275" title="http://www.doom3world.org/phpbb2/viewtopic.php?t=12275">
+   reference
+  </a>
+  ).
+ </p>
+ <a name="Syntax">
+ </a>
+ <h2>
+  Syntax
+ </h2>
+ <pre>noevents <i>flag</i>
+</pre>
+ <a name="Default_value">
+ </a>
+ <h2>
+  Default value
+ </h2>
+ <pre>0
+</pre>
+ <a name="Example.28s.29">
+ </a>
+ <h2>
+  Example(s)
+ </h2>
+ <pre>noevents 1
+</pre>
+ <p>
+  <br/>
+ </p>

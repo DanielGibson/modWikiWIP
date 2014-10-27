@@ -1,0 +1,60 @@
+ <div class="thumb tright">
+  <div style="width:122px;">
+   <a class="internal" href="Image:Gui_example_windowdef.png" title="windowDef example preview">
+    <img alt="windowDef example preview" height="116" longdesc="/wiki/Image:Gui_example_windowdef.png" src="/web/20121122033746im_/http://www.modwiki.net/w/images/thumb/9/93/Gui_example_windowdef.png/120px-Gui_example_windowdef.png" width="120"/>
+   </a>
+   <div class="thumbcaption">
+    <div class="magnify" style="float:right">
+     <a class="internal" href="Image:Gui_example_windowdef.png" title="Enlarge">
+      <img alt="Enlarge" height="11" src="/web/20121122033746im_/http://www.modwiki.net/w/skins/common/images/magnify-clip.png" width="15"/>
+     </a>
+    </div>
+    windowDef example preview
+   </div>
+  </div>
+ </div>
+ Pretty much the standard visual
+ <a href="GUI_items" title="GUI items">
+  item
+ </a>
+ type. When creating
+ <a href="GUIs" title="GUIs">
+  GUIs
+ </a>
+ , around 98% of the items you use in your script will be windowDefs. Also, all other item types work as extended windowDefs; from an OOP perspective, think of windowDef as a class and all other item types as being its subclasses.
+ <p>
+  All in all, a windowDef can contain text strings; it can act as a button; it can work as an static decoration graphic; it can work as an invisible element that serve other scripting purposes, such as containing a code execution timeline; it can also hold specific, separated data.
+ </p>
+ <a name="Additional_properties">
+ </a>
+ <h2>
+  Additional properties
+ </h2>
+ <p>
+  None
+ </p>
+ <a name="Example.28s.29">
+ </a>
+ <h2>
+  Example(s)
+ </h2>
+ <pre>windowDef myItem {
+	rect		18,12,236,226
+	visible		1
+	background	"textures/stripes"
+	matcolor	1, 1, 1, 1
+	backcolor	0.5, 0.5, 0.5, 1
+	bordersize	2
+	bordercolor	0.75, 0.75, 0.75, 1
+	matscalex	2
+	matscaley	2
+	forecolor	1, 0.5, 0.5, 0.9
+	text		"It was a dark and stormy night..."
+	textscale	1
+	font		"fonts/english"
+}
+</pre>
+ <p>
+  <br/>
+ </p>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:1345-0!1!0!0!!en!2 and timestamp 20121122034104 -->

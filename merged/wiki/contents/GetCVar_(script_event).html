@@ -1,0 +1,105 @@
+ <div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
+  <a class="image" href="Image:Etqwsquare_bg.png" title="Image:Etqwsquare_bg.png">
+   <img alt="Image:Etqwsquare_bg.png" height="50" longdesc="/wiki/Image:Etqwsquare_bg.png" src="/web/20080724104022im_/http://www.modwiki.net/w/images/f/f9/Etqwsquare_bg.png" width="50"/>
+  </a>
+  The information on this page is specific to
+  <a href="Enemy_Territory:_Quake_Wars" title="Enemy Territory: Quake Wars">
+   Enemy Territory: Quake Wars
+  </a>
+  .
+ </div>
+ <hr/>
+ <a name="Game_class">
+ </a>
+ <h2>
+  Game class
+ </h2>
+ <p>
+  This event operates on an instance of the
+  <a href="Game_class" title="Game class">
+   game class
+  </a>
+  type
+  <a href="Thread_%28scripting%29" title="Thread (scripting)">
+   idThread
+  </a>
+  , accessible via
+  <a href="Scripting_basics#sys" title="Scripting basics">
+   sys
+  </a>
+  identifier.
+ </p>
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  Returns an object for a
+  <a href="Console" title="Console">
+   cvar
+  </a>
+  that supports events for returning values.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <p>
+  <i>
+   <a href="Data_types#object" title="Data types">
+    object
+   </a>
+  </i>
+  getCVar(
+  <i>
+   <a href="Data_types#string" title="Data types">
+    string
+   </a>
+  </i>
+  <b>
+   name
+  </b>
+  ,
+  <i>
+   <a href="Data_types#string" title="Data types">
+    string
+   </a>
+  </i>
+  <b>
+   default
+  </b>
+  )
+ </p>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   [name] - Name of the cvar.
+  </li>
+  <li>
+   [default] - Default value to give the cvar if it doesn't already exist.
+  </li>
+ </ul>
+ <a name="Examples">
+ </a>
+ <h2>
+  Examples
+ </h2>
+ <pre><span style="color: #0000ff;">object</span> si_timeLimit = <span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">getCVar</span><span style="color: #000000;">(</span> <span style="color: #666666;">"si_timeLimit"</span> , <span style="color: #666666;">"20"</span> <span style="color: #000000;">)</span>;
+<span style="color: #0000ff;">float</span> <span style="color: #0000ff;">time</span> = si_timeLimit.<span style="color: #ff0000;">getFloat</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span>;</pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  ETQW 1.4 has a bug where it doesn't keep track of the objects returned, thus each call to getCVar will create a new object. This can lead to a situation where the game runs out of free objects.
+ </p>
+ <p>
+  <br/>
+ </p>

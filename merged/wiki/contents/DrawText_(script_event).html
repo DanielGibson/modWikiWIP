@@ -1,0 +1,127 @@
+ <a name="Game_class">
+ </a>
+ <h2>
+  Game class
+ </h2>
+ <p>
+  This event operates on an instance of the
+  <a href="Game_class" title="Game class">
+   game class
+  </a>
+  type {{{gameclass}}}
+ </p>
+ <a name="Description">
+ </a>
+ <h2>
+  Description
+ </h2>
+ <p>
+  Text drawing for debugging. align can be 0-left, 1-center, 2-right.
+ </p>
+ <a name="Usage">
+ </a>
+ <h2>
+  Usage
+ </h2>
+ <p>
+  <i>
+   void
+  </i>
+  drawText(
+  <i>
+   string
+  </i>
+  <b>
+   text
+  </b>
+  ,
+  <i>
+   vector
+  </i>
+  <b>
+   origin
+  </b>
+  ,
+  <i>
+   float
+  </i>
+  <b>
+   scale
+  </b>
+  ,
+  <i>
+   vector
+  </i>
+  <b>
+   color
+  </b>
+  ,
+  <i>
+   float
+  </i>
+  <b>
+   align
+  </b>
+  ,
+  <i>
+   float
+  </i>
+  <b>
+   lifetime
+  </b>
+  )
+ </p>
+ <a name="Parameters">
+ </a>
+ <h2>
+  Parameters
+ </h2>
+ <ul>
+  <li>
+   [text] - The text to draw.
+  </li>
+  <li>
+   [origin] - The point in space to draw the text.
+  </li>
+  <li>
+   [scale] - The size to draw the text.
+  </li>
+  <li>
+   [color] - The color to draw the text.
+  </li>
+  <li>
+   [align] - The alignment of the text.
+   <ul>
+    <li>
+     0 - left
+    </li>
+    <li>
+     1 - center
+    </li>
+    <li>
+     2 - right
+    </li>
+   </ul>
+  </li>
+  <li>
+   [lifetime] - The duration to display the text.
+  </li>
+ </ul>
+ <a name="Examples">
+ </a>
+ <h2>
+  Examples
+ </h2>
+ <pre> 
+<span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">drawText</span><span style="color: #000000;">(</span><span style="color: #666666;">"Yeah. I can see you right behind me making corrections."</span>, '<span style="color: #0000dd;">0</span> <span style="color: #0000dd;">5</span> <span style="color: #0000dd;">45</span>', <span style="color: #0000dd;">5</span>, '<span style="color: #0000dd;">1</span> <span style="color: #0000dd;">1</span> <span style="color: #0000dd;">1</span>', <span style="color: #0000dd;">1</span>, <span style="color: #0000dd;">1</span><span style="color: #000000;">)</span>;</pre>
+ <a name="Notes">
+ </a>
+ <h2>
+  Notes
+ </h2>
+ <p>
+  This script event does not return any values.
+ </p>
+ <p>
+  <br/>
+ </p>

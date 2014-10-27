@@ -1,0 +1,730 @@
+ <p>
+  Modelling, short for 3D modelling, is the creation of three-dimensional objects, so-called (3D) models. This is done by using a modelling suite: a program to create, manipulate and animate these models. These are then exported to different file formats to be used in the id Tech 4 engine where they portray objects and characters.
+ </p>
+ <a name="Model_Prerequisites">
+ </a>
+ <h2>
+  Model Prerequisites
+ </h2>
+ <p>
+  All models used by the engine must be constructed entirely of triangles. No subdivision surfaces, nurbs, splines, or anything of that sort is supported.
+ </p>
+ <a name="Model_types">
+ </a>
+ <h2>
+  Model types
+ </h2>
+ <p>
+  The engine generally differentiates between static and animated meshes. These two types use different file formats and serve different purposes.
+ </p>
+ <a name="Static_meshes">
+ </a>
+ <h3>
+  Static meshes
+ </h3>
+ <p>
+  Static meshes are 3D models that are not animated by the use of an internal skeleton. This means that these models do not change their geometry. Even though they are called static they can however still be moved, rotated and scaled by the engine. They are typically used to augment brushwork placed in a map, i.e. details that are traditionally difficult to make with brushwork will often be models. Examples of objects represented in this format are wall and floor panels, crates and pieces of debris.
+ </p>
+ <p>
+  Static meshes can be used for 'conditionally moveable objects'; that is, objects that do a specific function in game either by being directly triggered with trigger_
+  <i>
+   [function]
+  </i>
+  or indirectly using scripted events controlled from an external file; for instance a lift, falling debris or a door.
+ </p>
+ <p>
+  The file formats that the id Tech 4 engine loads for static meshes are:
+ </p>
+ <dl>
+  <dt>
+   .
+   <a href="ASE_%28file_format%29" title="ASE (file format)">
+    ASE
+   </a>
+  </dt>
+  <dd>
+   3DS Max ascii text based format
+  </dd>
+  <dt>
+   .
+   <a href="LWO_%28file_format%29" title="LWO (file format)">
+    LWO
+   </a>
+  </dt>
+  <dd>
+   native file format for Newtek's Lightwave
+  </dd>
+ </dl>
+ <a name="Moveable_Physics_Objects">
+ </a>
+ <h4>
+  Moveable Physics Objects
+ </h4>
+ <p>
+  Moveable physics objects are static meshes with the exception that they can be physically interacted with.
+ </p>
+ <p>
+  These objects require two models. A visual model and a
+  <a href="CM_%28file_format%29" title="CM (file format)">
+   collision mesh
+  </a>
+  both of which are assigned to a moveable_base entity.
+ </p>
+ <p>
+  To create a collision mesh for a custom moveable
+ </p>
+ <ol>
+  <li>
+   Load your visual model in the level editor as a func_static.
+  </li>
+  <li>
+   Build a hull of brushes around it.
+  </li>
+  <li>
+   Texture these brushes with textures/common/collision.
+  </li>
+  <li>
+   With all these brushes selected, create a func_clipmodel.
+  </li>
+  <li>
+   Adjust the origin of the func_clipmodel so that it matches that of your func_static.
+  </li>
+  <li>
+   With the func_clipmodel selected, click Selection &gt; Export &gt; To CM.
+  </li>
+ </ol>
+ <p>
+  <b>
+   Note:
+  </b>
+  When you create your moveable_base entity, it will not need an explicit reference to the clipmodel provided the *.CM file has the same name and is in the same folder as your visual model.
+ </p>
+ <a name="Animated_meshes">
+ </a>
+ <h3>
+  Animated meshes
+ </h3>
+ <p>
+  Animated meshes are allowed to deform themselves during the game. Examples of this type are first person weapons and player models. Animated models should be used within where more complex movements and actions are required than is possible to achieve using triggered models (scripted brushwork), but the use of which type will be dependent on what effect is trying to be achieved; for example a door could be a simple .ASE model which is 'bound' to the entity func_door allowing for a simple 'open' and 'close' action. Or as an MD5 the door could include a 'lock' which activates and plays an animated sequence before opening.
+ </p>
+ <p>
+  Animated meshes use the
+  <a href="MD5_%28file_format%29" title="MD5 (file format)">
+   MD5
+  </a>
+  file formats unique to the id Tech 4 engine. The format is split into:
+ </p>
+ <dl>
+  <dt>
+   .
+   <a href="MD5MESH_%28file_format%29" title="MD5MESH (file format)">
+    MD5MESH
+   </a>
+  </dt>
+  <dd>
+   Low resolution polygonal mesh exported from a 3D application.
+  </dd>
+  <dt>
+   .
+   <a href="MD5ANIM_%28file_format%29" title="MD5ANIM (file format)">
+    MD5ANIM
+   </a>
+  </dt>
+  <dd>
+   Contains animation sequence data, the positions of bones etc. during animation.
+  </dd>
+  <dt>
+   .
+   <a href="MD5CAMERA_%28file_format%29" title="MD5CAMERA (file format)">
+    MD5CAMERA
+   </a>
+  </dt>
+  <dd>
+   Animated cameras for use in cutscenes.
+  </dd>
+ </dl>
+ <p>
+  <b>
+   Note:
+  </b>
+  Animated meshes must have an "idle" animation defined in the
+  <a href="Modeldef_%28decl%29" title="Modeldef (decl)">
+   model declaration
+  </a>
+  in order to show up properly in the level editor.
+ </p>
+ <a name="Articulated_Figures">
+ </a>
+ <h4>
+  Articulated Figures
+ </h4>
+ <p>
+  Articulated figures are what is often called ragdolls. They are systems using the bone structure within the MD5 format to simulate physics by using joints and constraints. They are created by using a .MD5MESH file and an articulated figure definition. Further info on this topic can be found in the
+  <a href="Af_%28decl%29" title="Af (decl)">
+   AF declaration
+  </a>
+  article.
+ </p>
+ <a name="MD5.2FLWO.2FASE_Import.2FExport_Tools">
+ </a>
+ <h2>
+  MD5/LWO/ASE Import/Export Tools
+ </h2>
+ <p>
+  A list of available Modelling Programs can be found below along with the corresponding tools to assist in working with the model formats used by idTech 4 games.
+ </p>
+ <a name="3D_Studio_Max">
+ </a>
+ <h3>
+  3D Studio Max
+ </h3>
+ <ul>
+  <li>
+   <a class="external text" href="http://www.autodesk.com/" title="http://www.autodesk.com">
+    3D Studio Max
+   </a>
+  </li>
+ </ul>
+ <dl>
+  <dd>
+   <b>
+    MD5(anim/camera/mesh)
+   </b>
+   <ul>
+    <li>
+     <a class="external text" href="https://web.archive.org/web/20121117222041/http://www.doom3world.org/phpbb2/viewtopic.php?t=1914" title="http://www.doom3world.org/phpbb2/viewtopic.php?t=1914">
+      3D Studio Max to MD5 Exporter
+     </a>
+     - der_ton
+    </li>
+    <li>
+     <a class="external text" href="https://web.archive.org/web/20121117222041/http://www.doom3world.org/phpbb2/viewtopic.php?t=4618" title="http://www.doom3world.org/phpbb2/viewtopic.php?t=4618">
+      3D Studio Max to Md5 Exporter
+     </a>
+     - BeRSeRKeR
+    </li>
+    <li>
+     <a class="external text" href="https://web.archive.org/web/20121117222041/http://www.doom3world.org/phpbb2/viewtopic.php?t=3229" title="http://www.doom3world.org/phpbb2/viewtopic.php?t=3229">
+      MD5 to 3D Studio Max Importer
+     </a>
+     - der_ton
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <dl>
+  <dd>
+   <b>
+    LWO
+   </b>
+   <ul>
+    <li>
+     Add Links Here
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <dl>
+  <dd>
+   <b>
+    ASE
+   </b>
+   <ul>
+    <li>
+     Natively supported.
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <a name="Maya">
+ </a>
+ <h3>
+  Maya
+ </h3>
+ <ul>
+  <li>
+   <a class="external text" href="http://www.alias.com/" title="http://www.alias.com">
+    Maya
+   </a>
+  </li>
+ </ul>
+ <dl>
+  <dd>
+   <b>
+    MD5(anim/camera/mesh)
+   </b>
+   <ul>
+    <li>
+     <a href="Exportmodels_%28console_command%29" title="Exportmodels (console command)">
+      internal conversion by idTech 4 engine
+     </a>
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <dl>
+  <dd>
+   <b>
+    LWO
+   </b>
+   <ul>
+    <li>
+     Add Links Here
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <dl>
+  <dd>
+   <b>
+    ASE
+   </b>
+   <ul>
+    <li>
+     Add Links Here
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <a name="LightWave_3D">
+ </a>
+ <h3>
+  LightWave 3D
+ </h3>
+ <ul>
+  <li>
+   <a class="external text" href="http://www.newtek.com/" title="http://www.newtek.com">
+    LightWave 3D
+   </a>
+  </li>
+ </ul>
+ <dl>
+  <dd>
+   <b>
+    MD5(anim/camera/mesh)
+   </b>
+   <ul>
+    <li>
+     Add Links Here
+    </li>
+    <li>
+     <a class="external free" href="http://www.clintons3d.com/lightwave/lwplug.html" title="http://www.clintons3d.com/lightwave/lwplug.html">
+      http://www.clintons3d.com/lightwave/lwplug.html
+     </a>
+    </li>
+    <li>
+     <a class="external text" href="http://www.clintons3d.com/plugins/lightwave/index.html" title="http://www.clintons3d.com/plugins/lightwave/index.html">
+      Lightwave python scripts
+     </a>
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <dl>
+  <dd>
+   <b>
+    LWO
+   </b>
+   <ul>
+    <li>
+     Natively supported.
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <dl>
+  <dd>
+   <b>
+    ASE
+   </b>
+   <ul>
+    <li>
+     Add Links Here
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <a name="Modo">
+ </a>
+ <h3>
+  Modo
+ </h3>
+ <ul>
+  <li>
+   <a class="external text" href="http://www.modo3d.com/" title="http://www.modo3d.com">
+    Modo
+   </a>
+  </li>
+ </ul>
+ <dl>
+  <dd>
+   <b>
+    MD5(anim/camera/mesh)
+   </b>
+   <ul>
+    <li>
+     Add Links Here
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <dl>
+  <dd>
+   <b>
+    LWO
+   </b>
+   <ul>
+    <li>
+     Natively supported.
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <dl>
+  <dd>
+   <b>
+    ASE
+   </b>
+   <ul>
+    <li>
+     Add Links Here
+    </li>
+    <li>
+     <a class="external text" href="http://www.moddb.com/engines/unreal-engine-3/downloads/modo-ase-exporter-for-unreal-3" title="http://www.moddb.com/engines/unreal-engine-3/downloads/modo-ase-exporter-for-unreal-3">
+      Exporter
+     </a>
+     (Should export .ase file that works with Doom 3 as well as UE3.)
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <a name="Blender">
+ </a>
+ <h3>
+  Blender
+ </h3>
+ <ul>
+  <li>
+   <a class="external text" href="http://www.blender.org/" title="http://www.blender.org">
+    Blender
+   </a>
+   (Free!)
+  </li>
+ </ul>
+ <dl>
+  <dd>
+   <b>
+    MD5(anim/camera/mesh)
+   </b>
+   <ul>
+    <li>
+     <a class="external text" href="https://web.archive.org/web/20121117222041/http://doom3world.org/phpbb2/viewtopic.php?t=6901" title="http://doom3world.org/phpbb2/viewtopic.php?t=6901">
+      importer
+     </a>
+     (by der_ton) (needs both, md5mesh + md5anim files)
+    </li>
+    <li>
+     <a class="external text" href="https://web.archive.org/web/20121117222041/http://doom3world.org/phpbb2/viewtopic.php?t=1711" title="http://doom3world.org/phpbb2/viewtopic.php?t=1711">
+      exporter
+     </a>
+     (by der_ton)
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <div>
+  <a class="image" href="Image:Etqwsquare_25.png" title="Image:Etqwsquare_25.png">
+   <img alt="Image:Etqwsquare_25.png" height="25" longdesc="/wiki/Image:Etqwsquare_25.png" src="/web/20121117222041im_/http://www.modwiki.net/w/images/7/7e/Etqwsquare_25.png" width="25"/>
+  </a>
+  <b>
+   Note:
+  </b>
+  Enemy Territory: Quake Wars only:
+  <dl>
+   <dd>
+    <i>
+     In ETQW the md5anim files were compiled to binary animb files and md5anim files were not included in the SDK.
+    </i>
+   </dd>
+  </dl>
+ </div>
+ <p>
+  You may however convert the binary animb files from the animb folder (which is inside the generated folder inside the official pk4 game files) to md5anim files with
+  <a class="external text" href="http://www.splashdamage.com/forums/showthread.php/31253-Animb2MD5anim-amp-other-tools" title="http://www.splashdamage.com/forums/showthread.php/31253-Animb2MD5anim-amp-other-tools">
+   animb2md5anim
+  </a>
+  .
+ </p>
+ <dl>
+  <dd>
+   <b>
+    LWO
+   </b>
+   <ul>
+    <li>
+     Natively supported.
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <dl>
+  <dd>
+   <b>
+    ASE
+   </b>
+   <ul>
+    <li>
+     <a class="external text" href="https://web.archive.org/web/20121117222041/http://doom3world.org/phpbb2/viewtopic.php?t=15404" title="http://doom3world.org/phpbb2/viewtopic.php?t=15404">
+      importer
+     </a>
+     (by Goofos)
+    </li>
+    <li>
+     <a class="external text" href="https://web.archive.org/web/20121117222041/http://doom3world.org/phpbb2/viewtopic.php?t=9275" title="http://doom3world.org/phpbb2/viewtopic.php?t=9275">
+      exporter
+     </a>
+     (by Goofos)
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <a name="XSI">
+ </a>
+ <h3>
+  XSI
+ </h3>
+ <ul>
+  <li>
+   <a class="external text" href="http://www.softimage.com/" title="http://www.softimage.com">
+    XSI
+   </a>
+  </li>
+ </ul>
+ <dl>
+  <dd>
+   <b>
+    MD5(anim/camera/mesh)
+   </b>
+   <ul>
+    <li>
+     Add Links Here
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <dl>
+  <dd>
+   <b>
+    LWO
+   </b>
+   <ul>
+    <li>
+     Add Links Here
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <dl>
+  <dd>
+   <b>
+    ASE
+   </b>
+   <ul>
+    <li>
+     Add Links Here
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <a name="ZBrush">
+ </a>
+ <h3>
+  ZBrush
+ </h3>
+ <ul>
+  <li>
+   <a class="external text" href="http://www.pixologic.com/" title="http://www.pixologic.com">
+    ZBrush
+   </a>
+  </li>
+ </ul>
+ <dl>
+  <dd>
+   <b>
+    MD5(anim/camera/mesh)
+   </b>
+   <ul>
+    <li>
+     Add Links Here
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <dl>
+  <dd>
+   <b>
+    LWO
+   </b>
+   <ul>
+    <li>
+     Add Links Here
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <dl>
+  <dd>
+   <b>
+    ASE
+   </b>
+   <ul>
+    <li>
+     Add Links Here
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <a name="trueSpace">
+ </a>
+ <h3>
+  trueSpace
+ </h3>
+ <p>
+  The trueSpace website is gone, but the software can be downloaded from
+  <a class="external text" href="http://www.moddb.com/downloads/truespace-76" title="http://www.moddb.com/downloads/truespace-76">
+   Mod DB
+  </a>
+  .
+ </p>
+ <ul>
+  <li>
+   <a class="external text" href="http://www.caligari.com/" title="http://www.caligari.com">
+    trueSpace
+   </a>
+  </li>
+ </ul>
+ <dl>
+  <dd>
+   <b>
+    MD5(anim/camera/mesh)
+   </b>
+   <ul>
+    <li>
+     Add Links Here
+    </li>
+    <li>
+     <a class="external free" href="http://www.clintons3d.com/vr/truespace2doom3_scripts.html" title="http://www.clintons3d.com/vr/truespace2doom3_scripts.html">
+      http://www.clintons3d.com/vr/truespace2doom3_scripts.html
+     </a>
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <dl>
+  <dd>
+   <b>
+    LWO
+   </b>
+   <ul>
+    <li>
+     Add Links Here
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <dl>
+  <dd>
+   <b>
+    ASE
+   </b>
+   <ul>
+    <li>
+     Add Links Here
+    </li>
+    <li>
+     <a class="external free" href="http://www.clintons3d.com/plugins/truespace/importexport/index.html" title="http://www.clintons3d.com/plugins/truespace/importexport/index.html">
+      http://www.clintons3d.com/plugins/truespace/importexport/index.html
+     </a>
+    </li>
+   </ul>
+  </dd>
+ </dl>
+ <a name="Game_polycount_budget">
+ </a>
+ <h2>
+  Game polycount budget
+ </h2>
+ <p>
+  A polycount is the total number of individual polygons a model is made up of. These are usually limited for performance reasons as each triangle adds to the total rendering time for the model. For gaming engines the required count is that of triangled faces (so called tris').
+ </p>
+ <a name="Q4_Guidelines">
+ </a>
+ <h2>
+  <span align="absbottom">
+   <a class="image" href="Image:Q4square_25.png" title="Q4">
+    <img alt="Q4" height="25" longdesc="/wiki/Image:Q4square_25.png" src="/web/20121117222041im_/http://www.modwiki.net/w/images/e/e8/Q4square_25.png" width="25"/>
+   </a>
+   Q4 Guidelines
+  </span>
+ </h2>
+ <dl>
+  <dd>
+   <i>
+    The information in this section is specific to
+    <a href="Quake_4" title="Quake 4">
+     Quake 4
+    </a>
+    .
+   </i>
+  </dd>
+ </dl>
+ <p>
+  The following numbers are rough guidelines based on the numbers taken from the Quake 4 models. These numbers had been generated by importing different models and using the modelling software to list the amount of triangles.
+ </p>
+ <ul>
+  <li>
+   1st Person Weapon Total: 2000 - 2800
+   <ul>
+    <li>
+     Both Arms: 1300
+    </li>
+    <li>
+     Weapon (Faces not visible deleted): 700 - 1500
+    </li>
+   </ul>
+  </li>
+  <li>
+   3rd Person Player Total: 2500
+   <ul>
+    <li>
+     Player Body(Without Gun or Head): 1500
+    </li>
+    <li>
+     Player Head: 600
+    </li>
+    <li>
+     Player Head_up (high LOD model?): 800
+    </li>
+    <li>
+     Player World Weapon: 200-400
+    </li>
+   </ul>
+  </li>
+ </ul>
+ <p>
+  <br/>
+  Static models in Quake 4 may be moved/rotated along a path defined by a .playback as a func_playback.
+ </p>
+ <a name="See_also">
+ </a>
+ <h2>
+  See also
+ </h2>
+ <ul>
+  <li>
+   <a href="Models_vs_brushes" title="Models vs brushes">
+    Models vs brushes
+   </a>
+  </li>
+ </ul>
+ <!-- Saved in parser cache with key modwiki:pcache:idhash:993-0!1!0!0!!en!2 and timestamp 20121117222321 -->

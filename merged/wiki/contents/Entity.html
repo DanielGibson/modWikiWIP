@@ -1,0 +1,140 @@
+ <p>
+  <strong>
+   Entities
+  </strong>
+  are functional objects placed in a map ("actors" to the Unreal mappers).
+  <a href="Light" title="Light">
+   Lights
+  </a>
+  , monsters, items, doors, ect... are all examples of entities.
+ </p>
+ <p>
+  An entity is a combination of an
+  <a href="Entitydef_%28decl%29" title="Entitydef (decl)">
+   entityDef
+  </a>
+  type and a
+  <a href="Spawn_class" title="Spawn class">
+   spawn class
+  </a>
+  , and in many cases a
+  <a class="new" href="Map_entity_dictionary" title="Map entity dictionary">
+   map entity dictionary
+  </a>
+  and/or a
+  <a href="Script_object" title="Script object">
+   script object
+  </a>
+  . Entities also have a name unique from any other entity in the world.
+ </p>
+ <p>
+  People most commonly refer to an entity by the entityDef type.
+ </p>
+ <p>
+  Entities are dynamic are most commonly controlled by their spawn class or script object, but may be modified by game logic, other entities or level
+  <a class="new" href="Script_%28folder%29" title="Script (folder)">
+   scripts
+  </a>
+  .
+ </p>
+ <a name="Entity_Interactions">
+ </a>
+ <h2>
+  Entity Interactions
+ </h2>
+ <p>
+  Entity chains are the core of setting up interactions between entities in a map. By linking entities together one can instruct the game to perform an event when a specific condition is met. An example would be having a light turn on when the player enters a room.
+ </p>
+ <p>
+  One of the more common parent entities in a entity chain are simple triggers. They can be identified by the "trigger_" prefix in their name. These entities simply trigger their targets when the player comes in contact with their bounding box.
+ </p>
+ <p>
+  Most entities are capable of acting as triggers, even though they aren't classified as such. What condition an entity responds to varies from entity to entity. In the case of monsters, they will trigger any entities they are targeted to when they die.
+ </p>
+ <p>
+  A few select entities perform special actions when they are triggered. These entities can be identified by the "target_" prefix in their name. An example is the target_lock entity which will lock or unlock any targeted doors when it's triggered.
+ </p>
+ <p>
+  To assign targets to an entity, you simply add "target" key/value pairs using the entity inspector window. As an alternative, you can select the parent entity, followed by any intended target entities and connecting them using Selection &gt; Connect entities (CTRL + K).
+ </p>
+ <a name="Aditional_comments_concerning_Entity_Chaining">
+ </a>
+ <h2>
+  Aditional comments concerning Entity Chaining
+ </h2>
+ <p>
+  Entity chaining can be explained as a visual representation for event driven code.  A simplified translation of this would be, if x occurs then do y.  An example of such an event could be when a door opens, or when a monster is killed.  Lets look at such an example.  If player walks over an area then open a door, wait 3 seconds and flip on a light.  This is an event driven sequence.  Nothing occurs until the player walks over this spot.  If the player does not walk over the spot nothing will happen.  Lets look at one possible way that this might be set up.  First a trigger would need to be created.  In this example we will create a trigger_once entity.  The trigger_once would target the door. The door would in turn target a second trigger_once with the parameter
+ </p>
+ <p>
+  Wait 
+3
+ </p>
+ <p>
+  This would cause the trigger to wait 3 seconds before processing its commands.  This trigger would in turn target the light.  As you can see you have a chain of events occurring, these events are controlled by the prebuilt code functions.  These prebuilt code functions are refered to as entities in the game and have a graphical representation.
+It’s easiest if you remember that everything you do on a computer passes code behind the scenes.  An example is this webpage it is done by html code. That code basically says if you type in this address; present this text in this font in this format to the user.  The same is true for the Doom editor everything you do within it creates or executes code.  So entity chaining basically is processing a chain of logic with prebuilt functions.  Whether its shooting an enemy or picking up an object, you are creating an order of events to follow.  It’s always best to plan out the entire sequence before trying to build it.  In many cases several different entities can provide the same functionality.  An example is if you wanted a brush to rise up from the floor.  Several entities could be used for this to list a few..
+ </p>
+ <ol>
+  <li>
+   func_door  You could set the door to toggle positions.
+  </li>
+  <li>
+   func_riser  Simply triggering this would achieve the effect
+  </li>
+  <li>
+   func_bobbing  You could trigger it to stop with a func_activator
+  </li>
+  <li>
+   func_mover_amodel  Provide a vertical spline to travel
+  </li>
+ </ol>
+ <p>
+  etc…
+ </p>
+ <p>
+  In fact you could simply bind your brush to one of these instead of simply creating one out of a brush.  Often in coding there are multiple ways to achieve the same goal.  In fact all the functions provided by entities can be done with scripting inside the game engine.  Its up to you to decide what method is best for you.  For those not comfortable with scripting or more familiar with click and drag approaches, entity chaining might reduce development times.  Those individuals that are comfortable with scripting or text environments might find scripting easier.
+ </p>
+ <p>
+  <br/>
+ </p>
+ <a name="The_Worldspawn">
+ </a>
+ <h2>
+  The Worldspawn
+ </h2>
+ <p>
+  The worldspawn is a very specific type of entity. All maps must have one, and only one, worldspawn entity. Its purpose is to act as a container for every static brush in your map. If you get a "no worldspawn in map" message in the console when you try to load a map then, for some strange reason, the worldspawn information was lost and you must restore it.
+  <b>
+   Make a backup of your .
+   <a href="MAP_%28file_format%29" title="MAP (file format)">
+    MAP
+   </a>
+   file
+  </b>
+  and open the copy in a text editor and make sure it starts with:
+ </p>
+ <pre>Version 2 
+// entity 0 
+{ 
+"classname" "worldspawn" 
+...
+</pre>
+ <p>
+  If not, replace the first four lines with the above.
+ </p>
+ <a name="Worldspawn.27s_Call_property">
+ </a>
+ <h3>
+  Worldspawn's Call property
+ </h3>
+ <p>
+  Worldspawn's
+  <tt>
+   call
+  </tt>
+  property can be used to execute a script when the map starts.
+Note that worldspawn does not appear in the editor's entities list. To select worldspawn go to the Entity Inspector (hotkey '
+  <tt>
+   N
+  </tt>
+  ') and select the worldspawn class from the topmost dropdown.
+ </p>
