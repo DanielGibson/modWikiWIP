@@ -1,0 +1,34 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Get / Set the current leader.
+
+Usage
+-----
+
+void setLeader( entity leader )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+    // sets the player as leader for the npc
+    $npc_1.setLeader( $player1 );
+
+Notes
+-----
+
+Setting the leader to \$null\_entity will clear it.
+
+\
+

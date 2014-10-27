@@ -1,0 +1,36 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Sets the owner of this entity.
+
+Usage
+-----
+
+*void* setOwner( *entity* **owner** )
+
+Parameters
+----------
+
+-   [owner] - The owner to apply to this entity.
+
+Examples
+--------
+
+     
+    $my_entity.setOwner($player1);
+
+Notes
+-----
+
+This script event does not return any values.
+
+Entity's will never collide with their owner.
+
+\
+

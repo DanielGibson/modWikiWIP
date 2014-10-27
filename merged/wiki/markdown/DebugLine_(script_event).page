@@ -1,0 +1,40 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Line drawing for debug visualization.
+
+Usage
+-----
+
+*void* debugLine( *vector* **color** , *vector* **start** , *vector*
+**end** , *float* **lifetime** )
+
+Parameters
+----------
+
+-   [color] - The color to draw the line.
+-   [start] - The starting point of the line.
+-   [end] - The ending point of the line.
+-   [lifetime] - The duration to display the line.
+
+Examples
+--------
+
+     
+    sys.debugLine('0 1 0', '42 68 94', '98 54 12', 1);
+
+Notes
+-----
+
+This script event does not return any values.
+
+Lifetime of 0 == 1 frame.
+
+\
+

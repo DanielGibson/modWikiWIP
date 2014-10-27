@@ -1,0 +1,2524 @@
+<div align="left"
+style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
+
+![](/images/c/cb/D3square_bg.png) The information on this page is
+specific to [Doom 3](Doom_3 "Doom 3") .
+
+</div>
+
+------------------------------------------------------------------------
+
+Existing [CVars](Console "Console") as of version 1.3.1302 (1.3).
+
+GAME CVar's:
+------------
+
+  ------------------------------------ ------------------------------------
+  [aas\_goalArea](Aas_goalArea_%28cvar 
+  %29 "Aas goalArea (cvar)")           
+
+  [aas\_pullPlayer](Aas_pullPlayer_%28 
+  cvar%29 "Aas pullPlayer (cvar)")     
+
+  [aas\_randomPullPlayer](Aas_randomPu 
+  llPlayer_%28cvar%29 "Aas randomPullP 
+  layer (cvar)")                       
+
+  [aas\_showAreas](Aas_showAreas_%28cv 
+  ar%29 "Aas showAreas (cvar)")        
+
+  [aas\_showFlyPath](Aas_showFlyPath_% 
+  28cvar%29 "Aas showFlyPath (cvar)")  
+
+  [aas\_showHideArea](Aas_showHideArea 
+  _%28cvar%29 "Aas showHideArea (cvar) 
+  ")                                   
+
+  [aas\_showPath](Aas_showPath_%28cvar 
+  %29 "Aas showPath (cvar)")           
+
+  [aas\_showPushIntoArea](Aas_showPush 
+  IntoArea_%28cvar%29 "Aas showPushInt 
+  oArea (cvar)")                       
+
+  [aas\_showWallEdges](Aas_showWallEdg 
+  es_%28cvar%29 "Aas showWallEdges (cv 
+  ar)")                                
+
+  [aas\_test](Aas_test_%28cvar%29 "Aas 
+   test (cvar)")                       
+
+  [af\_contactFrictionScale](Af_contac ... scales the contact friction
+  tFrictionScale_%28cvar%29 "Af contac 
+  tFrictionScale (cvar)")              
+
+  [af\_forceFriction](Af_forceFriction ... force the given friction value
+  _%28cvar%29 "Af forceFriction (cvar) 
+  ")                                   
+
+  [af\_highlightBody](Af_highlightBody ... name of the body to highlight
+  _%28cvar%29 "Af highlightBody (cvar) 
+  ")                                   
+
+  [af\_highlightConstraint](Af_highlig ... name of the constraint to
+  htConstraint_%28cvar%29 "Af highligh highlight
+  tConstraint (cvar)")                 
+
+  [af\_jointFrictionScale](Af_jointFri ... scales the joint friction
+  ctionScale_%28cvar%29 "Af jointFrict 
+  ionScale (cvar)")                    
+
+  [af\_maxAngularVelocity](Af_maxAngul ... maximum angular velocity
+  arVelocity_%28cvar%29 "Af maxAngular 
+  Velocity (cvar)")                    
+
+  [af\_maxLinearVelocity](Af_maxLinear ... maximum linear velocity
+  Velocity_%28cvar%29 "Af maxLinearVel 
+  ocity (cvar)")                       
+
+  [af\_showActive](Af_showActive_%28cv ... show tree-like structures of
+  ar%29 "Af showActive (cvar)")        articulated figures not at rest
+
+  [af\_showBodies](Af_showBodies_%28cv ... show bodies
+  ar%29 "Af showBodies (cvar)")        
+
+  [af\_showBodyNames](Af_showBodyNames ... show body names
+  _%28cvar%29 "Af showBodyNames (cvar) 
+  ")                                   
+
+  [af\_showConstrainedBodies](Af_showC ... show the two bodies contrained
+  onstrainedBodies_%28cvar%29 "Af show by the highlighted constraint
+  ConstrainedBodies (cvar)")           
+
+  [af\_showConstraintNames](Af_showCon ... show constraint names
+  straintNames_%28cvar%29 "Af showCons 
+  traintNames (cvar)")                 
+
+  [af\_showConstraints](Af_showConstra ... show constraints
+  ints_%28cvar%29 "Af showConstraints  
+  (cvar)")                             
+
+  [af\_showInertia](Af_showInertia_%28 ... show the inertia tensor of each
+  cvar%29 "Af showInertia (cvar)")     body
+
+  [af\_showLimits](Af_showLimits_%28cv ... show joint limits
+  ar%29 "Af showLimits (cvar)")        
+
+  [af\_showMass](Af_showMass_%28cvar%2 ... show the mass of each body
+  9 "Af showMass (cvar)")              
+
+  [af\_showPrimaryOnly](Af_showPrimary ... show primary constraints only
+  Only_%28cvar%29 "Af showPrimaryOnly  
+  (cvar)")                             
+
+  [af\_showTimings](Af_showTimings_%28 ... show articulated figure cpu
+  cvar%29 "Af showTimings (cvar)")     usage
+
+  [af\_showTotalMass](Af_showTotalMass ... show the total mass of each
+  _%28cvar%29 "Af showTotalMass (cvar) articulated figure
+  ")                                   
+
+  [af\_showTrees](Af_showTrees_%28cvar ... show tree-like structures
+  %29 "Af showTrees (cvar)")           
+
+  [af\_showVelocity](Af_showVelocity_% ... show the velocity of each body
+  28cvar%29 "Af showVelocity (cvar)")  
+
+  [af\_skipFriction](Af_skipFriction_% ... skip friction
+  28cvar%29 "Af skipFriction (cvar)")  
+
+  [af\_skipLimits](Af_skipLimits_%28cv ... skip joint limits
+  ar%29 "Af skipLimits (cvar)")        
+
+  [af\_skipSelfCollision](Af_skipSelfC ... skip self collision detection
+  ollision_%28cvar%29 "Af skipSelfColl 
+  ision (cvar)")                       
+
+  [af\_testSolid](Af_testSolid_%28cvar ... test for bodies initially stuck
+  %29 "Af testSolid (cvar)")           in solid
+
+  [af\_timeScale](Af_timeScale_%28cvar ... scales the time
+  %29 "Af timeScale (cvar)")           
+
+  [af\_useImpulseFriction](Af_useImpul ... use impulse based contact
+  seFriction_%28cvar%29 "Af useImpulse friction
+  Friction (cvar)")                    
+
+  [af\_useJointImpulseFriction](Af_use ... use impulse based joint friction
+  JointImpulseFriction_%28cvar%29 "Af  
+  useJointImpulseFriction (cvar)")     
+
+  [af\_useLinearTime](Af_useLinearTime ... use linear time algorithm for
+  _%28cvar%29 "Af useLinearTime (cvar) tree-like structures
+  ")                                   
+
+  [af\_useSymmetry](Af_useSymmetry_%28 ... use constraint matrix symmetry
+  cvar%29 "Af useSymmetry (cvar)")     
+
+  [ai\_blockedFailSafe](Ai_blockedFail ... enable blocked fail safe
+  Safe_%28cvar%29 "Ai blockedFailSafe  handling
+  (cvar)")                             
+
+  [ai\_debugMove](Ai_debugMove_%28cvar ... draws movement information for
+  %29 "Ai debugMove (cvar)")           monsters
+
+  [ai\_debugScript](Ai_debugScript_%28 ... displays script calls for the
+  cvar%29 "Ai debugScript (cvar)")     specified monster entity number
+
+  [ai\_debugTrajectory](Ai_debugTrajec ... draws trajectory tests for
+  tory_%28cvar%29 "Ai debugTrajectory  monsters
+  (cvar)")                             
+
+  [ai\_showCombatNodes](Ai_showCombatN ... draws attack cones for monsters
+  odes_%28cvar%29 "Ai showCombatNodes  
+  (cvar)")                             
+
+  [ai\_showObstacleAvoidance](Ai_showO ... draws obstacle avoidance
+  bstacleAvoidance_%28cvar%29 "Ai show information for monsters. if 2,
+  ObstacleAvoidance (cvar)")           draws obstacles for player, as well
+
+  [ai\_showPaths](Ai_showPaths_%28cvar ... draws path\_\* entities
+  %29 "Ai showPaths (cvar)")           
+
+  [ai\_testPredictPath](Ai_testPredict 
+  Path_%28cvar%29 "Ai testPredictPath  
+  (cvar)")                             
+
+  [cl\_punkbuster](Cl_punkbuster_%28cv ... enables the PB client code
+  ar%29 "Cl punkbuster (cvar)")        
+
+  [cm\_backFaceCull](Cm_backFaceCull_% ... cull back facing polygons
+  28cvar%29 "Cm backFaceCull (cvar)")  
+
+  [cm\_debugCollision](Cm_debugCollisi ... debug the collision detection
+  on_%28cvar%29 "Cm debugCollision (cv 
+  ar)")                                
+
+  [cm\_drawColor](Cm_drawColor_%28cvar ... color used to draw the collision
+  %29 "Cm drawColor (cvar)")           models
+
+  [cm\_drawFilled](Cm_drawFilled_%28cv ... draw filled polygons
+  ar%29 "Cm drawFilled (cvar)")        
+
+  [cm\_drawInternal](Cm_drawInternal_% ... draw internal edges green
+  28cvar%29 "Cm drawInternal (cvar)")  
+
+  [cm\_drawMask](Cm_drawMask_%28cvar%2 ... collision mask
+  9 "Cm drawMask (cvar)")              
+
+  [cm\_drawNormals](Cm_drawNormals_%28 ... draw polygon and edge normals
+  cvar%29 "Cm drawNormals (cvar)")     
+
+  [cm\_testAngle](Cm_testAngle_%28cvar 
+  %29 "Cm testAngle (cvar)")           
+
+  [cm\_testBox](Cm_testBox_%28cvar%29  
+  "Cm testBox (cvar)")                 
+
+  [cm\_testBoxRotation](Cm_testBoxRota 
+  tion_%28cvar%29 "Cm testBoxRotation  
+  (cvar)")                             
+
+  [cm\_testCollision](Cm_testCollision 
+  _%28cvar%29 "Cm testCollision (cvar) 
+  ")                                   
+
+  [cm\_testLength](Cm_testLength_%28cv 
+  ar%29 "Cm testLength (cvar)")        
+
+  [cm\_testModel](Cm_testModel_%28cvar 
+  %29 "Cm testModel (cvar)")           
+
+  [cm\_testOrigin](Cm_testOrigin_%28cv 
+  ar%29 "Cm testOrigin (cvar)")        
+
+  [cm\_testRadius](Cm_testRadius_%28cv 
+  ar%29 "Cm testRadius (cvar)")        
+
+  [cm\_testRandomMany](Cm_testRandomMa 
+  ny_%28cvar%29 "Cm testRandomMany (cv 
+  ar)")                                
+
+  [cm\_testReset](Cm_testReset_%28cvar 
+  %29 "Cm testReset (cvar)")           
+
+  [cm\_testRotation](Cm_testRotation_% 
+  28cvar%29 "Cm testRotation (cvar)")  
+
+  [cm\_testTimes](Cm_testTimes_%28cvar 
+  %29 "Cm testTimes (cvar)")           
+
+  [cm\_testWalk](Cm_testWalk_%28cvar%2 
+  9 "Cm testWalk (cvar)")              
+
+  [g\_armorProtection](G_armorProtecti ... armor takes this percentage of
+  on_%28cvar%29 "G armorProtection (cv damage
+  ar)")                                
+
+  [g\_armorProtectionMP](G_armorProtec ... armor takes this percentage of
+  tionMP_%28cvar%29 "G armorProtection damage in mp
+  MP (cvar)")                          
+
+  [g\_balanceTDM](G_balanceTDM_%28cvar ... maintain even teams
+  %29 "G balanceTDM (cvar)")           
+
+  [g\_blobSize](G_blobSize_%28cvar%29  
+  "G blobSize (cvar)")                 
+
+  [g\_blobTime](G_blobTime_%28cvar%29  
+  "G blobTime (cvar)")                 
+
+  [g\_bloodEffects](G_bloodEffects_%28 ... show blood splats, sprays and
+  cvar%29 "G bloodEffects (cvar)")     gibs
+
+  [g\_cinematic](G_cinematic_%28cvar%2 ... skips updating entities that
+  9 "G cinematic (cvar)")              aren't marked 'cinematic' '1' during
+                                       cinematics
+
+  [g\_cinematicMaxSkipTime](G_cinemati ... \# of seconds to allow game to
+  cMaxSkipTime_%28cvar%29 "G cinematic run when skipping cinematic.
+  MaxSkipTime (cvar)")                 prevents lock-up when cinematic
+                                       doesn't end.
+
+  [g\_countDown](G_countDown_%28cvar%2 ... pregame countdown in seconds
+  9 "G countDown (cvar)")              
+
+  [g\_damageScale](G_damageScale_%28cv ... scale final damage on player by
+  ar%29 "G damageScale (cvar)")        this factor
+
+  [g\_debugAnim](G_debugAnim_%28cvar%2 ... displays information on which
+  9 "G debugAnim (cvar)")              animations are playing on the
+                                       specified entity number. set to -1
+                                       to disable.
+
+  [g\_debugBounds](G_debugBounds_%28cv ... checks for models with bounds \>
+  ar%29 "G debugBounds (cvar)")        2048
+
+  [g\_debugCinematic](G_debugCinematic ... used to debug cinematics
+  _%28cvar%29 "G debugCinematic (cvar) 
+  ")                                   
+
+  [g\_debugDamage](G_debugDamage_%28cv ... prints information to the
+  ar%29 "G debugDamage (cvar)")        console about the damage dealt to
+                                       players
+
+  [g\_debugMove](G_debugMove_%28cvar%2 
+  9 "G debugMove (cvar)")              
+
+  [g\_debugMover](G_debugMover_%28cvar 
+  %29 "G debugMover (cvar)")           
+
+  [g\_debugScript](G_debugScript_%28cv 
+  ar%29 "G debugScript (cvar)")        
+
+  [g\_debugTriggers](G_debugTriggers_% 
+  28cvar%29 "G debugTriggers (cvar)")  
+
+  [g\_debugWeapon](G_debugWeapon_%28cv 
+  ar%29 "G debugWeapon (cvar)")        
+
+  [g\_decals](G_decals_%28cvar%29 "G d ... show decals such as bullet holes
+  ecals (cvar)")                       
+
+  [g\_disasm](G_disasm_%28cvar%29 "G d ... disassemble script into
+  isasm (cvar)")                       base/script disasm.txt on the local
+                                       drive when script is compiled. See
+                                       [disasmScript](DisasmScript_%28conso
+                                       le_command%29 "DisasmScript (console
+                                        command)")
+                                       .
+
+  [g\_doubleVision](G_doubleVision_%28 ... show double vision when taking
+  cvar%29 "G doubleVision (cvar)")     damage
+
+  [g\_dragDamping](G_dragDamping_%28cv 
+  ar%29 "G dragDamping (cvar)")        
+
+  [g\_dragEntity](G_dragEntity_%28cvar ... allows dragging physics objects
+  %29 "G dragEntity (cvar)")           around by placing the crosshair over
+                                       them and holding the fire button
+
+  [g\_dragShowSelection](G_dragShowSel 
+  ection_%28cvar%29 "G dragShowSelecti 
+  on (cvar)")                          
+
+  [g\_dropItemRotation](G_dropItemRota 
+  tion_%28cvar%29 "G dropItemRotation  
+  (cvar)")                             
+
+  [g\_dvAmplitude](G_dvAmplitude_%28cv 
+  ar%29 "G dvAmplitude (cvar)")        
+
+  [g\_dvFrequency](G_dvFrequency_%28cv 
+  ar%29 "G dvFrequency (cvar)")        
+
+  [g\_dvTime](G_dvTime_%28cvar%29 "G d 
+  vTime (cvar)")                       
+
+  [g\_editEntityMode](G_editEntityMode ... 0 = off 1 = lights 2 = sounds 3
+  _%28cvar%29 "G editEntityMode (cvar) = articulated figures 4 = particle
+  ")                                   systems 5 = monsters 6 = entity
+                                       names 7 = entity models
+
+  [g\_exportMask](G_exportMask_%28cvar 
+  %29 "G exportMask (cvar)")           
+
+  [g\_flushSave](G_flushSave_%28cvar%2 ... 1 = don't buffer file writing
+  9 "G flushSave (cvar)")              for save games.
+
+  [g\_fov](G_fov_%28cvar%29 "G fov (cv 
+  ar)")                                
+
+  [g\_frametime](G_frametime_%28cvar%2 ... displays timing information for
+  9 "G frametime (cvar)")              each game frame
+
+  [g\_gameReviewPause](G_gameReviewPau ... scores review time in seconds
+  se_%28cvar%29 "G gameReviewPause (cv (at end game)
+  ar)")                                
+
+  [g\_gravity](G_gravity_%28cvar%29 "G 
+   gravity (cvar)")                    
+
+  [g\_gunX](G_gunX_%28cvar%29 "G gunX  
+  (cvar)")                             
+
+  [g\_gunY](G_gunY_%28cvar%29 "G gunY  
+  (cvar)")                             
+
+  [g\_gunZ](G_gunZ_%28cvar%29 "G gunZ  
+  (cvar)")                             
+
+  [g\_healthTakeAmt](G_healthTakeAmt_% ... how much health to take in
+  28cvar%29 "G healthTakeAmt (cvar)")  nightmare mode
+
+  [g\_healthTakeLimit](G_healthTakeLim ... how low can health get taken in
+  it_%28cvar%29 "G healthTakeLimit (cv nightmare mode
+  ar)")                                
+
+  [g\_healthTakeTime](G_healthTakeTime ... how often to take health in
+  _%28cvar%29 "G healthTakeTime (cvar) nightmare mode
+  ")                                   
+
+  [g\_kickAmplitude](G_kickAmplitude_% 
+  28cvar%29 "G kickAmplitude (cvar)")  
+
+  [g\_kickTime](G_kickTime_%28cvar%29  
+  "G kickTime (cvar)")                 
+
+  [g\_knockback](G_knockback_%28cvar%2 
+  9 "G knockback (cvar)")              
+
+  [g\_mapCycle](G_mapCycle_%28cvar%29  ... map cycling script for
+  "G mapCycle (cvar)")                 multiplayer games - see
+                                       mapcycle.scriptcfg
+
+  [g\_maxShowDistance](G_maxShowDistan 
+  ce_%28cvar%29 "G maxShowDistance (cv 
+  ar)")                                
+
+  [g\_monsters](G_monsters_%28cvar%29  
+  "G monsters (cvar)")                 
+
+  [g\_mpWeaponAngleScale](G_mpWeaponAn ... Control the weapon sway in MP
+  gleScale_%28cvar%29 "G mpWeaponAngle 
+  Scale (cvar)")                       
+
+  [g\_muzzleFlash](G_muzzleFlash_%28cv ... show muzzle flashes
+  ar%29 "G muzzleFlash (cvar)")        
+
+  [g\_nightmare](G_nightmare_%28cvar%2 ... if nightmare mode is allowed
+  9 "G nightmare (cvar)")              
+
+  [g\_password](G_password_%28cvar%29  ... game password
+  "G password (cvar)")                 
+
+  [g\_projectileLights](G_projectileLi ... show dynamic lights on
+  ghts_%28cvar%29 "G projectileLights  projectiles
+  (cvar)")                             
+
+  [g\_showActiveEntities](G_showActive ... draws boxes around thinking
+  Entities_%28cvar%29 "G showActiveEnt entities. dormant entities (outside
+  ities (cvar)")                       of pvs) are drawn yellow.
+                                       non-dormant are green.
+
+  [g\_showBrass](G_showBrass_%28cvar%2 ... enables ejected shells from
+  9 "G showBrass (cvar)")              weapon
+
+  [g\_showcamerainfo](G_showcamerainfo ... displays the current frame \#
+  _%28cvar%29 "G showcamerainfo (cvar) for the camera when playing
+  ")                                   cinematics
+
+  [g\_showCollisionModels](G_showColli 
+  sionModels_%28cvar%29 "G showCollisi 
+  onModels (cvar)")                    
+
+  [g\_showCollisionTraces](G_showColli 
+  sionTraces_%28cvar%29 "G showCollisi 
+  onTraces (cvar)")                    
+
+  [g\_showCollisionWorld](G_showCollis 
+  ionWorld_%28cvar%29 "G showCollision 
+  World (cvar)")                       
+
+  [g\_showEnemies](G_showEnemies_%28cv ... draws boxes around monsters that
+  ar%29 "G showEnemies (cvar)")        have targeted the the player
+
+  [g\_showEntityInfo](G_showEntityInfo ... draws entity info on the screen
+  _%28cvar%29 "G showEntityInfo (cvar) 
+  ")                                   
+
+  [g\_showHud](G_showHud_%28cvar%29 "G ... controls the display of the
+   showHud (cvar)")                    player's HUD
+
+  [g\_showPlayerShadow](G_showPlayerSh ... enables shadow of player model
+  adow_%28cvar%29 "G showPlayerShadow  
+  (cvar)")                             
+
+  [g\_showProjectilePct](G_showProject ... enables display of player hit
+  ilePct_%28cvar%29 "G showProjectileP percentage
+  ct (cvar)")                          
+
+  [g\_showPVS](G_showPVS_%28cvar%29 "G 
+   showPVS (cvar)")                    
+
+  [g\_showTargets](G_showTargets_%28cv ... draws entities and thier
+  ar%29 "G showTargets (cvar)")        targets. hidden entities are drawn
+                                       grey.
+
+  [g\_showTestModelFrame](G_showTestMo ... displays the current animation
+  delFrame_%28cvar%29 "G showTestModel and frame \# for testmodels
+  Frame (cvar)")                       
+
+  [g\_showTriggers](G_showTriggers_%28 ... draws trigger entities (orange)
+  cvar%29 "G showTriggers (cvar)")     and thier targets (green). disabled
+                                       triggers are drawn grey.
+
+  [g\_showviewpos](G_showviewpos_%28cv ... draws the player's location and
+  ar%29 "G showviewpos (cvar)")        view angles to the screen on a
+                                       regular basis
+
+  [g\_skill](G_skill_%28cvar%29 "G ski ... sets the difficulty level for
+  ll (cvar)")                          single player games
+
+  [g\_skipFX](G_skipFX_%28cvar%29 "G s 
+  kipFX (cvar)")                       
+
+  [g\_skipParticles](G_skipParticles_% 
+  28cvar%29 "G skipParticles (cvar)")  
+
+  [g\_skipViewEffects](G_skipViewEffec ... skip damage and other view
+  ts_%28cvar%29 "G skipViewEffects (cv effects
+  ar)")                                
+
+  [g\_spectatorChat](G_spectatorChat_% ... let spectators talk to everyone
+  28cvar%29 "G spectatorChat (cvar)")  during game
+
+  [g\_stopTime](G_stopTime_%28cvar%29  ... stops the game from increasing
+  "G stopTime (cvar)")                 the global **time** value
+
+  [g\_TDMArrows](G_TDMArrows_%28cvar%2 ... draw arrows over teammates in
+  9 "G TDMArrows (cvar)")              team deathmatch
+
+  [g\_testDeath](G_testDeath_%28cvar%2 ... stops the game from going to the
+  9 "G testDeath (cvar)")              "game over" screen
+
+  [g\_testHealthVision](G_testHealthVi 
+  sion_%28cvar%29 "G testHealthVision  
+  (cvar)")                             
+
+  [g\_testModelAnimate](G_testModelAni ... test model animation, 0 = cycle
+  mate_%28cvar%29 "G testModelAnimate  anim with origin reset 1 = cycle
+  (cvar)")                             anim with fixed origin 2 = cycle
+                                       anim with continuous origin 3 =
+                                       frame by frame with continuous
+                                       origin 4 = play anim once
+
+  [g\_testModelBlend](G_testModelBlend ... number of frames to blend
+  _%28cvar%29 "G testModelBlend (cvar) 
+  ")                                   
+
+  [g\_testModelRotate](G_testModelRota ... test model rotation speed
+  te_%28cvar%29 "G testModelRotate (cv 
+  ar)")                                
+
+  [g\_testParticle](G_testParticle_%28 ... test particle visualation, set
+  cvar%29 "G testParticle (cvar)")     by the particle editor
+
+  [g\_testParticleName](G_testParticle ... name of the particle being
+  Name_%28cvar%29 "G testParticleName  tested by the particle editor
+  (cvar)")                             
+
+  [g\_testPostProcess](G_testPostProce ... name of material to draw over
+  ss_%28cvar%29 "G testPostProcess (cv screen
+  ar)")                                
+
+  [g\_timeEntities](G_timeEntities_%28 ... when non-zero, shows entities
+  cvar%29 "G timeEntities (cvar)")     whose think functions exceeded the
+                                       \# of milliseconds specified
+
+  [g\_useDynamicProtection](G_useDynam ... scale damage and armor
+  icProtection_%28cvar%29 "G useDynami dynamically to keep the player alive
+  cProtection (cvar)")                 more often
+
+  [g\_vehicleForce](G_vehicleForce_%28 
+  cvar%29 "G vehicleForce (cvar)")     
+
+  [g\_vehicleSuspensionDamping](G_vehi 
+  cleSuspensionDamping_%28cvar%29 "G v 
+  ehicleSuspensionDamping (cvar)")     
+
+  [g\_vehicleSuspensionDown](G_vehicle 
+  SuspensionDown_%28cvar%29 "G vehicle 
+  SuspensionDown (cvar)")              
+
+  [g\_vehicleSuspensionKCompress](G_ve 
+  hicleSuspensionKCompress_%28cvar%29  
+  "G vehicleSuspensionKCompress (cvar) 
+  ")                                   
+
+  [g\_vehicleSuspensionUp](G_vehicleSu 
+  spensionUp_%28cvar%29 "G vehicleSusp 
+  ensionUp (cvar)")                    
+
+  [g\_vehicleTireFriction](G_vehicleTi 
+  reFriction_%28cvar%29 "G vehicleTire 
+  Friction (cvar)")                    
+
+  [g\_vehicleVelocity](G_vehicleVeloci 
+  ty_%28cvar%29 "G vehicleVelocity (cv 
+  ar)")                                
+
+  [g\_version](G_version_%28cvar%29 "G 
+   version (cvar)")                    
+
+  [g\_viewNodalX](G_viewNodalX_%28cvar 
+  %29 "G viewNodalX (cvar)")           
+
+  [g\_viewNodalZ](G_viewNodalZ_%28cvar 
+  %29 "G viewNodalZ (cvar)")           
+
+  [g\_voteFlags](G_voteFlags_%28cvar%2 ... vote flags. bit mask of votes
+  9 "G voteFlags (cvar)")              not allowed on this server
+
+  [gamedate](Gamedate_%28cvar%29 "Game ... the game code's compile date
+  date (cvar)")                        
+
+  [gamename](Gamename_%28cvar%29 "Game ... the title of the currently
+  name (cvar)")                        loaded game code
+
+  [ik\_debug](Ik_debug_%28cvar%29 "Ik  ... show IK debug lines
+  debug (cvar)")                       
+
+  [ik\_enable](Ik_enable_%28cvar%29 "I ... enable IK
+  k enable (cvar)")                    
+
+  [mod\_validSkins](Mod_validSkins_%28 ... valid skins for the game
+  cvar%29 "Mod validSkins (cvar)")     
+
+  [net\_clientPredictGUI](Net_clientPr ... test guis in networking without
+  edictGUI_%28cvar%29 "Net clientPredi prediction
+  ctGUI (cvar)")                       
+
+  [net\_clientShowSnapshot](Net_client 
+  ShowSnapshot_%28cvar%29 "Net clientS 
+  howSnapshot (cvar)")                 
+
+  [net\_clientShowSnapshotRadius](Net_ 
+  clientShowSnapshotRadius_%28cvar%29  
+  "Net clientShowSnapshotRadius (cvar) 
+  ")                                   
+
+  [net\_clientSmoothing](Net_clientSmo 
+  othing_%28cvar%29 "Net clientSmoothi 
+  ng (cvar)")                          
+
+  [password](Password_%28cvar%29 "Pass ... client password used when
+  word (cvar)")                        connecting
+
+  [pm\_air](Pm_air_%28cvar%29 "Pm air  ... how long in milliseconds the
+  (cvar)")                             player can go without air before he
+                                       starts taking damage
+
+  [pm\_bboxwidth](Pm_bboxwidth_%28cvar ... x/y size of player's bounding
+  %29 "Pm bboxwidth (cvar)")           box
+
+  [pm\_bobpitch](Pm_bobpitch_%28cvar%2 
+  9 "Pm bobpitch (cvar)")              
+
+  [pm\_bobroll](Pm_bobroll_%28cvar%29  
+  "Pm bobroll (cvar)")                 
+
+  [pm\_bobup](Pm_bobup_%28cvar%29 "Pm  
+  bobup (cvar)")                       
+
+  [pm\_crouchbob](Pm_crouchbob_%28cvar ... bob much faster when crouched
+  %29 "Pm crouchbob (cvar)")           
+
+  [pm\_crouchheight](Pm_crouchheight_% ... height of player's bounding box
+  28cvar%29 "Pm crouchheight (cvar)")  while crouched
+
+  [pm\_crouchrate](Pm_crouchrate_%28cv ... time it takes for player's view
+  ar%29 "Pm crouchrate (cvar)")        to change from standing to crouching
+
+  [pm\_crouchspeed](Pm_crouchspeed_%28 ... speed the player can move while
+  cvar%29 "Pm crouchspeed (cvar)")     crouched
+
+  [pm\_crouchviewheight](Pm_crouchview ... height of player's view while
+  height_%28cvar%29 "Pm crouchviewheig crouched
+  ht (cvar)")                          
+
+  [pm\_deadheight](Pm_deadheight_%28cv ... height of player's bounding box
+  ar%29 "Pm deadheight (cvar)")        while dead
+
+  [pm\_deadviewheight](Pm_deadviewheig ... height of player's view while
+  ht_%28cvar%29 "Pm deadviewheight (cv dead
+  ar)")                                
+
+  [pm\_jumpheight](Pm_jumpheight_%28cv ... approximate hieght the player
+  ar%29 "Pm jumpheight (cvar)")        can jump
+
+  [pm\_maxviewpitch](Pm_maxviewpitch_% ... amount player's view can look
+  28cvar%29 "Pm maxviewpitch (cvar)")  down
+
+  [pm\_minviewpitch](Pm_minviewpitch_% ... amount player's view can look up
+  28cvar%29 "Pm minviewpitch (cvar)")  (negative values are up)
+
+  [pm\_modelView](Pm_modelView_%28cvar ... draws camera from POV of player
+  %29 "Pm modelView (cvar)")           model (1 = always, 2 = when dead)
+
+  [pm\_noclipspeed](Pm_noclipspeed_%28 ... speed the player can move while
+  cvar%29 "Pm noclipspeed (cvar)")     in noclip
+
+  [pm\_normalheight](Pm_normalheight_% ... height of player's bounding box
+  28cvar%29 "Pm normalheight (cvar)")  while standing
+
+  [pm\_normalviewheight](Pm_normalview ... height of player's view while
+  height_%28cvar%29 "Pm normalviewheig standing
+  ht (cvar)")                          
+
+  [pm\_runbob](Pm_runbob_%28cvar%29 "P ... bob faster when running
+  m runbob (cvar)")                    
+
+  [pm\_runpitch](Pm_runpitch_%28cvar%2 
+  9 "Pm runpitch (cvar)")              
+
+  [pm\_runroll](Pm_runroll_%28cvar%29  
+  "Pm runroll (cvar)")                 
+
+  [pm\_runspeed](Pm_runspeed_%28cvar%2 ... speed the player can move while
+  9 "Pm runspeed (cvar)")              running
+
+  [pm\_spectatebbox](Pm_spectatebbox_% ... size of the spectator bounding
+  28cvar%29 "Pm spectatebbox (cvar)")  box
+
+  [pm\_spectatespeed](Pm_spectatespeed ... speed the player can move while
+  _%28cvar%29 "Pm spectatespeed (cvar) spectating
+  ")                                   
+
+  [pm\_stamina](Pm_stamina_%28cvar%29  ... length of time player can run
+  "Pm stamina (cvar)")                 
+
+  [pm\_staminarate](Pm_staminarate_%28 ... rate that player regains
+  cvar%29 "Pm staminarate (cvar)")     stamina. divide pm\_stamina by this
+                                       value to determine how long it takes
+                                       to fully recharge.
+
+  [pm\_staminathreshold](Pm_staminathr ... when stamina drops below this
+  eshold_%28cvar%29 "Pm staminathresho value, player gradually slows to a
+  ld (cvar)")                          walk
+
+  [pm\_stepsize](Pm_stepsize_%28cvar%2 ... maximum height the player can
+  9 "Pm stepsize (cvar)")              step up without jumping
+
+  [pm\_thirdPerson](Pm_thirdPerson_%28 ... enables third person view
+  cvar%29 "Pm thirdPerson (cvar)")     
+
+  [pm\_thirdPersonAngle](Pm_thirdPerso ... direction of camera from player
+  nAngle_%28cvar%29 "Pm thirdPersonAng in 3rd person in degrees (0 = behind
+  le (cvar)")                          player, 180 = in front)
+
+  [pm\_thirdPersonClip](Pm_thirdPerson ... clip third person view into
+  Clip_%28cvar%29 "Pm thirdPersonClip  world space
+  (cvar)")                             
+
+  [pm\_thirdPersonDeath](Pm_thirdPerso ... enables third person view when
+  nDeath_%28cvar%29 "Pm thirdPersonDea player dies
+  th (cvar)")                          
+
+  [pm\_thirdPersonHeight](Pm_thirdPers ... height of camera from normal
+  onHeight_%28cvar%29 "Pm thirdPersonH view height in 3rd person
+  eight (cvar)")                       
+
+  [pm\_thirdPersonRange](Pm_thirdPerso ... camera distance from player in
+  nRange_%28cvar%29 "Pm thirdPersonRan 3rd person
+  ge (cvar)")                          
+
+  [pm\_usecylinder](Pm_usecylinder_%28 ... use a cylinder approximation
+  cvar%29 "Pm usecylinder (cvar)")     instead of a bounding box for player
+                                       collision detection
+
+  [pm\_walkbob](Pm_walkbob_%28cvar%29  ... bob slowly when walking
+  "Pm walkbob (cvar)")                 
+
+  [pm\_walkspeed](Pm_walkspeed_%28cvar ... speed the player can move while
+  %29 "Pm walkspeed (cvar)")           walking
+
+  [rb\_showActive](Rb_showActive_%28cv ... show rigid bodies that are not
+  ar%29 "Rb showActive (cvar)")        at rest
+
+  [rb\_showBodies](Rb_showBodies_%28cv ... show rigid bodies
+  ar%29 "Rb showBodies (cvar)")        
+
+  [rb\_showInertia](Rb_showInertia_%28 ... show the inertia tensor of each
+  cvar%29 "Rb showInertia (cvar)")     rigid body
+
+  [rb\_showMass](Rb_showMass_%28cvar%2 ... show the mass of each rigid body
+  9 "Rb showMass (cvar)")              
+
+  [rb\_showTimings](Rb_showTimings_%28 ... show rigid body cpu usage
+  cvar%29 "Rb showTimings (cvar)")     
+
+  [rb\_showVelocity](Rb_showVelocity_% ... show the velocity of each rigid
+  28cvar%29 "Rb showVelocity (cvar)")  body
+
+  [si\_fragLimit](Si_fragLimit_%28cvar ... frag limit
+  %29 "Si fragLimit (cvar)")           
+
+  [si\_gameType](Si_gameType_%28cvar%2 ... game type - singleplayer,
+  9 "Si gameType (cvar)")              deathmatch, Tourney, Team DM or Last
+                                       Man
+
+  [si\_map](Si_map_%28cvar%29 "Si map  ... map to be played next on server
+  (cvar)")                             
+
+  [si\_maxPlayers](Si_maxPlayers_%28cv ... max number of players allowed on
+  ar%29 "Si maxPlayers (cvar)")        the server
+
+  [si\_name](Si_name_%28cvar%29 "Si na ... name of the server
+  me (cvar)")                          
+
+  [si\_pure](Si_pure_%28cvar%29 "Si pu ... server is pure and does not
+  re (cvar)")                          allow modified data
+
+  [si\_serverURL](Si_serverURL_%28cvar ... if the clients misses files,
+   "Si serverURL (cvar")               "kick" him to this page if the
+                                       server does not allow
+                                       auto-downloading
+
+  [si\_spectators](Si_spectators_%28cv ... allow spectators or require all
+  ar%29 "Si spectators (cvar)")        clients to play
+
+  [si\_teamDamage](Si_teamDamage_%28cv ... enable team damage
+  ar%29 "Si teamDamage (cvar)")        
+
+  [si\_timeLimit](Si_timeLimit_%28cvar ... time limit in minutes
+  %29 "Si timeLimit (cvar)")           
+
+  [si\_usePass](Si_usePass_%28cvar%29  ... enable client password checking
+  "Si usePass (cvar)")                 
+
+  [si\_warmup](Si_warmup_%28cvar%29 "S ... do pre-game warmup
+  i warmup (cvar)")                    
+
+  [sv\_punkbuster](Sv_punkbuster_%28cv ... enables the PB server code
+  ar%29 "Sv punkbuster (cvar)")        
+  ------------------------------------ ------------------------------------
+
+GAME UI Cvar's:
+---------------
+
+  ------------------------------------ ------------------------------------
+  [ui\_autoReload](Ui_autoReload_%28cv ... auto reload weapon
+  ar%29 "Ui autoReload (cvar)")        
+
+  [ui\_autoSwitch](Ui_autoSwitch_%28cv ... auto switch weapon
+  ar%29 "Ui autoSwitch (cvar)")        
+
+  [ui\_chat](Ui_chat_%28cvar%29 "Ui ch 
+  at (cvar)")                          
+
+  [ui\_name](Ui_name_%28cvar%29 "Ui na ... player name
+  me (cvar)")                          
+
+  [ui\_ready](Ui_ready_%28cvar%29 "Ui  ... player is ready to start playing
+  ready (cvar)")                       
+
+  [ui\_showGun](Ui_showGun_%28cvar%29  ... show gun
+  "Ui showGun (cvar)")                 
+
+  [ui\_skin](Ui_skin_%28cvar%29 "Ui sk ... player skin
+  in (cvar)")                          
+
+  [ui\_spectate](Ui_spectate_%28cvar%2 ... play or spectate
+  9 "Ui spectate (cvar)")              
+
+  [ui\_team](Ui_team_%28cvar%29 "Ui te ... player team
+  am (cvar)")                          
+  ------------------------------------ ------------------------------------
+
+\
+
+GUI CVar's:
+-----------
+
+  ------------------------------------ ------------------------------------
+  [gui\_configServerRate](Gui_configSe 
+  rverRate_%28cvar%29 "Gui configServe 
+  rRate (cvar)")                       
+
+  [gui\_debug](Gui_debug_%28cvar%29 "G 
+  ui debug (cvar)")                    
+
+  [gui\_edit](Gui_edit_%28cvar%29 "Gui 
+   edit (cvar)")                       
+
+  [gui\_filter\_game](Gui_filter_game_ 
+  %28cvar%29 "Gui filter game (cvar)") 
+
+  [gui\_filter\_gameType](Gui_filter_g ... Gametype filter
+  ameType_%28cvar%29 "Gui filter gameT 
+  ype (cvar)")                         
+
+  [gui\_filter\_idle](Gui_filter_idle_ 
+  %28cvar%29 "Gui filter idle (cvar)") 
+
+  [gui\_filter\_password](Gui_filter_p ... Password filter
+  assword_%28cvar%29 "Gui filter passw 
+  ord (cvar)")                         
+
+  [gui\_filter\_players](Gui_filter_pl ... Players filter
+  ayers_%28cvar%29 "Gui filter players 
+   (cvar)")                            
+
+  [gui\_mediumFontLimit](Gui_mediumFon 
+  tLimit_%28cvar%29 "Gui mediumFontLim 
+  it (cvar)")                          
+
+  [gui\_smallFontLimit](Gui_smallFontL 
+  imit_%28cvar%29 "Gui smallFontLimit  
+  (cvar)")                             
+  ------------------------------------ ------------------------------------
+
+\
+
+RNDR CVar's:
+------------
+
+  ------------------------------------ ------------------------------------
+  [image\_anisotropy](Image_anisotropy ... set the maximum texture
+  _%28cvar%29 "Image anisotropy (cvar) anisotropy if available
+  ")                                   
+
+  [image\_cacheMegs](Image_cacheMegs_% ... maximum MB set aside for
+  28cvar%29 "Image cacheMegs (cvar)")  temporary loading of full-sized
+                                       precompressed images
+
+  [image\_cacheMinK](Image_cacheMinK_% ... maximum KB of precompressed
+  28cvar%29 "Image cacheMinK (cvar)")  files to read at specification time
+
+  [image\_colorMipLevels](Image_colorM ... development aid to see texture
+  ipLevels_%28cvar%29 "Image colorMipL mip usage
+  evels (cvar)")                       
+
+  [image\_downSize](Image_downSize_%28 ... controls texture downsampling
+  cvar%29 "Image downSize (cvar)")     
+
+  [image\_downSizeBump](Image_downSize ... controls normal map downsampling
+  Bump_%28cvar%29 "Image downSizeBump  
+  (cvar)")                             
+
+  [image\_downSizeBumpLimit](Image_dow ... controls normal map downsample
+  nSizeBumpLimit_%28cvar%29 "Image dow limit
+  nSizeBumpLimit (cvar)")              
+
+  [image\_downSizeLimit](Image_downSiz ... controls diffuse map downsample
+  eLimit_%28cvar%29 "Image downSizeLim limit
+  it (cvar)")                          
+
+  [image\_downSizeSpecular](Image_down ... controls specular downsampling
+  SizeSpecular_%28cvar%29 "Image downS 
+  izeSpecular (cvar)")                 
+
+  [image\_downSizeSpecularLimit](Image ... controls specular downsampled
+  _downSizeSpecularLimit_%28cvar%29 "I limit
+  mage downSizeSpecularLimit (cvar)")  
+
+  [image\_filter](Image_filter_%28cvar ... changes texture filtering on
+  %29 "Image filter (cvar)")           mipmapped images
+
+  [image\_forceDownSize](Image_forceDo 
+  wnSize_%28cvar%29 "Image forceDownSi 
+  ze (cvar)")                          
+
+  [image\_ignoreHighQuality](Image_ign ... ignore high quality setting on
+  oreHighQuality_%28cvar%29 "Image ign materials
+  oreHighQuality (cvar)")              
+
+  [image\_lodbias](Image_lodbias_%28cv ... change lod bias on mipmapped
+  ar%29 "Image lodbias (cvar)")        images
+
+  [image\_preload](Image_preload_%28cv ... if 0, dynamically load all
+  ar%29 "Image preload (cvar)")        images
+
+  [image\_roundDown](Image_roundDown_% ... round bad sizes down to nearest
+  28cvar%29 "Image roundDown (cvar)")  power of two
+
+  [image\_showBackgroundLoads](Image_s ... 1 = print number of outstanding
+  howBackgroundLoads_%28cvar%29 "Image background loads
+   showBackgroundLoads (cvar)")        
+
+  [image\_useAllFormats](Image_useAllF ... allow alpha/intensity/luminance
+  ormats_%28cvar%29 "Image useAllForma luminance+alpha
+  ts (cvar)")                          
+
+  [image\_useCache](Image_useCache_%28 ... 1 = do background load image
+  cvar%29 "Image useCache (cvar)")     caching
+
+  [image\_useCompression](Image_useCom ... 0 = force everything to high
+  pression_%28cvar%29 "Image useCompre quality
+  ssion (cvar)")                       
+
+  [image\_useNormalCompression](Image_ ... 2 = use rxgb compression for
+  useNormalCompression_%28cvar%29 "Ima normal maps, 1 = use 256 color
+  ge useNormalCompression (cvar)")     compression for normal maps if
+                                       available
+
+  [image\_useOfflineCompression](Image ... write a batch file for offline
+  _useOfflineCompression_%28cvar%29 "I compression of DDS files
+  mage useOfflineCompression (cvar)")  
+
+  [image\_usePrecompressedTextures](Im ... use .dds files if present
+  age_usePrecompressedTextures_%28cvar 
+  %29 "Image usePrecompressedTextures  
+  (cvar)")                             
+
+  [image\_writeNormalTGA](Image_writeN ... write .tgas of the final normal
+  ormalTGA_%28cvar%29 "Image writeNorm maps for debugging
+  alTGA (cvar)")                       
+
+  [image\_writeNormalTGAPalletized](Im ... write .tgas of the final
+  age_writeNormalTGAPalletized_%28cvar palletized normal maps for debugging
+  %29 "Image writeNormalTGAPalletized  
+  (cvar)")                             
+
+  [image\_writePrecompressedTextures]( ... write .dds files if necessary
+  Image_writePrecompressedTextures_%28 
+  cvar%29 "Image writePrecompressedTex 
+  tures (cvar)")                       
+
+  [image\_writeTGA](Image_writeTGA_%28 ... write .tgas of the non normal
+  cvar%29 "Image writeTGA (cvar)")     maps for debugging
+
+  [r\_aspectRatio](R_aspectRatio_%28cv 
+  ar%29 "R aspectRatio (cvar)")        
+
+  [r\_brightness](R_brightness_%28cvar ... changes gamma tables
+  %29 "R brightness (cvar)")           
+
+  [r\_cgFragmentProfile](R_cgFragmentP ... arbfp1, fp30
+  rofile_%28cvar%29 "R cgFragmentProfi 
+  le (cvar)")                          
+
+  [r\_cgVertexProfile](R_cgVertexProfi ... arbvp1, vp20, vp30
+  le_%28cvar%29 "R cgVertexProfile (cv 
+  ar)")                                
+
+  [r\_checkBounds](R_checkBounds_%28cv ... compare all surface bounds with
+  ar%29 "R checkBounds (cvar)")        precalculated ones
+
+  [r\_clear](R_clear_%28cvar%29 "R cle ... force screen clear every frame,
+  ar (cvar)")                          1 = purple, 2 = black, 'r g b' =
+                                       custom
+
+  [r\_customHeight](R_customHeight_%28 ... custom screen height
+  cvar%29 "R customHeight (cvar)")     
+
+  [r\_customWidth](R_customWidth_%28cv ... custom screen width
+  ar%29 "R customWidth (cvar)")        
+
+  [r\_debugArrowStep](R_debugArrowStep ... step size of arrow cone line
+  _%28cvar%29 "R debugArrowStep (cvar) rotation in degrees
+  ")                                   
+
+  [r\_debugLineDepthTest](R_debugLineD ... perform depth test on debug
+  epthTest_%28cvar%29 "R debugLineDept lines
+  hTest (cvar)")                       
+
+  [r\_debugLineWidth](R_debugLineWidth ... width of debug lines
+  _%28cvar%29 "R debugLineWidth (cvar) 
+  ")                                   
+
+  [r\_debugPolygonFilled](R_debugPolyg ... draw a filled polygon
+  onFilled_%28cvar%29 "R debugPolygonF 
+  illed (cvar)")                       
+
+  [r\_debugRenderToTexture](R_debugRen 
+  derToTexture_%28cvar%29 "R debugRend 
+  erToTexture (cvar)")                 
+
+  [r\_demonstrateBug](R_demonstrateBug ... used during development to show
+  _%28cvar%29 "R demonstrateBug (cvar) IHV's their problems
+  ")                                   
+
+  [r\_displayRefresh](R_displayRefresh ... optional display refresh rate
+  _%28cvar%29 "R displayRefresh (cvar) option for vid mode
+  ")                                   
+
+  [r\_finish](R_finish_%28cvar%29 "R f ... force a call to glFinish() every
+  inish (cvar)")                       frame
+
+  [r\_flareSize](R_flareSize_%28cvar%2 ... scale the flare deforms from the
+  9 "R flareSize (cvar)")              material def
+
+  [r\_forceLoadImages](R_forceLoadImag ... draw all images to screen after
+  es_%28cvar%29 "R forceLoadImages (cv registration
+  ar)")                                
+
+  [r\_frontBuffer](R_frontBuffer_%28cv ... draw to front buffer for
+  ar%29 "R frontBuffer (cvar)")        debugging
+
+  [r\_fullscreen](R_fullscreen_%28cvar ... 0 = windowed, 1 = full screen
+  %29 "R fullscreen (cvar)")           
+
+  [r\_gamma](R_gamma_%28cvar%29 "R gam ... changes gamma tables
+  ma (cvar)")                          
+
+  [r\_glDriver](R_glDriver_%28cvar%29  ... "opengl32", etc.
+  "R glDriver (cvar)")                 
+
+  [r\_ignore](R_ignore_%28cvar%29 "R i ... used for random debugging
+  gnore (cvar)")                       without defining new vars
+
+  [r\_ignore2](R_ignore2_%28cvar%29 "R ... used for random debugging
+   ignore2 (cvar)")                    without defining new vars
+
+  [r\_ignoreGLErrors](R_ignoreGLErrors ... ignore GL errors
+  _%28cvar%29 "R ignoreGLErrors (cvar) 
+  ")                                   
+
+  [r\_inhibitFragmentProgram](R_inhibi ... ignore the fragment program
+  tFragmentProgram_%28cvar%29 "R inhib extension
+  itFragmentProgram (cvar)")           
+
+  [r\_jitter](R_jitter_%28cvar%29 "R j ... randomly subpixel jitter the
+  itter (cvar)")                       projection matrix
+
+  [r\_jointNameOffset](R_jointNameOffs ... offset of joint names when
+  et_%28cvar%29 "R jointNameOffset (cv r\_showskel is set to 1
+  ar)")                                
+
+  [r\_jointNameScale](R_jointNameScale ... size of joint names when
+  _%28cvar%29 "R jointNameScale (cvar) r\_showskel is set to 1
+  ")                                   
+
+  [r\_lightAllBackFaces](R_lightAllBac ... light all the back faces, even
+  kFaces_%28cvar%29 "R lightAllBackFac when they would be shadowed
+  es (cvar)")                          
+
+  [r\_lightScale](R_lightScale_%28cvar ... all light intensities are
+  %29 "R lightScale (cvar)")           multiplied by this
+
+  [r\_lightSourceRadius](R_lightSource ... for soft-shadow sampling
+  Radius_%28cvar%29 "R lightSourceRadi 
+  us (cvar)")                          
+
+  [r\_lockSurfaces](R_lockSurfaces_%28 ... allow moving the view point
+  cvar%29 "R lockSurfaces (cvar)")     without changing the composition of
+                                       the scene, including culling
+
+  [r\_logFile](R_logFile_%28cvar%29 "R ... number of frames to emit GL logs
+   logFile (cvar)")                    
+
+  [r\_materialOverride](R_materialOver ... overrides all materials
+  ride_%28cvar%29 "R materialOverride  
+  (cvar)")                             
+
+  [r\_megaTextureLevel](R_megaTextureL ... draw only a specific level
+  evel_%28cvar%29 "R megaTextureLevel  
+  (cvar)")                             
+
+  [r\_mergeModelSurfaces](R_mergeModel ... combine model surfaces with the
+  Surfaces_%28cvar%29 "R mergeModelSur same material
+  faces (cvar)")                       
+
+  [r\_mode](R_mode_%28cvar%29 "R mode  ... video mode number
+  (cvar)")                             
+
+  [r\_multiSamples](R_multiSamples_%28 ... number of antialiasing samples
+  cvar%29 "R multiSamples (cvar)")     
+
+  [r\_offsetfactor](R_offsetfactor_%28 ... polygon offset parameter
+  cvar%29 "R offsetfactor (cvar)")     
+
+  [r\_offsetunits](R_offsetunits_%28cv ... polygon offset parameter
+  ar%29 "R offsetunits (cvar)")        
+
+  [r\_orderIndexes](R_orderIndexes_%28 ... perform index reorganization to
+  cvar%29 "R orderIndexes (cvar)")     optimize vertex use
+
+  [r\_renderer](R_renderer_%28cvar%29  ... hardware specific renderer path
+  "R renderer (cvar)")                 to use
+
+  [r\_screenFraction](R_screenFraction ... for testing fill rate, the
+  _%28cvar%29 "R screenFraction (cvar) resolution of the entire screen can
+  ")                                   be changed
+
+  [r\_shadowPolygonFactor](R_shadowPol ... scale value for stencil shadow
+  ygonFactor_%28cvar%29 "R shadowPolyg drawing
+  onFactor (cvar)")                    
+
+  [r\_shadowPolygonOffset](R_shadowPol ... bias value added to depth test
+  ygonOffset_%28cvar%29 "R shadowPolyg for stencil shadow drawing
+  onOffset (cvar)")                    
+
+  [r\_shadows](R_shadows_%28cvar%29 "R ... enable shadows
+   shadows (cvar)")                    
+
+  [r\_showAlloc](R_showAlloc_%28cvar%2 ... report alloc/free counts
+  9 "R showAlloc (cvar)")              
+
+  [r\_showCull](R_showCull_%28cvar%29  ... report sphere and box culling
+  "R showCull (cvar)")                 stats
+
+  [r\_showDefs](R_showDefs_%28cvar%29  ... report the number of modeDefs
+  "R showDefs (cvar)")                 and lightDefs in view
+
+  [r\_showDemo](R_showDemo_%28cvar%29  ... report reads and writes to the
+  "R showDemo (cvar)")                 demo file
+
+  [r\_showDepth](R_showDepth_%28cvar%2 ... display the contents of the
+  9 "R showDepth (cvar)")              depth buffer and the depth range
+
+  [r\_showDominantTri](R_showDominantT ... draw lines from vertexes to
+  ri_%28cvar%29 "R showDominantTri (cv center of dominant triangles
+  ar)")                                
+
+  [r\_showDynamic](R_showDynamic_%28cv ... report stats on dynamic surface
+  ar%29 "R showDynamic (cvar)")        generation
+
+  [r\_showEdges](R_showEdges_%28cvar%2 ... draw the sil edges
+  9 "R showEdges (cvar)")              
+
+  [r\_showEntityScissors](R_showEntity ... show entity scissor rectangles
+  Scissors_%28cvar%29 "R showEntitySci 
+  ssors (cvar)")                       
+
+  [r\_showImages](R_showImages_%28cvar ... 1 = show all images instead of
+  %29 "R showImages (cvar)")           rendering, 2 = show in proportional
+                                       size
+
+  [r\_showIntensity](R_showIntensity_% ... draw the screen colors based on
+  28cvar%29 "R showIntensity (cvar)")  intensity, red = 0, green = 128,
+                                       blue = 255
+
+  [r\_showInteractionFrustums](R_showI ... 1 = show a frustum for each
+  nteractionFrustums_%28cvar%29 "R sho interaction, 2 = also draw lines to
+  wInteractionFrustums (cvar)")        light origin, 3 = also draw entity
+                                       bbox
+
+  [r\_showInteractions](R_showInteract ... report interaction generation
+  ions_%28cvar%29 "R showInteractions  activity
+  (cvar)")                             
+
+  [r\_showInteractionScissors](R_showI ... 1 = show screen rectangle which
+  nteractionScissors_%28cvar%29 "R sho contains the interaction frustum, 2
+  wInteractionScissors (cvar)")        = also draw construction lines
+
+  [r\_showLightCount](R_showLightCount ... 1 = colors surfaces based on
+  _%28cvar%29 "R showLightCount (cvar) light count, 2 = also count
+  ")                                   everything through walls, 3 = also
+                                       print overdraw
+
+  [r\_showLights](R_showLights_%28cvar ... 1 = just print volumes numbers,
+  %29 "R showLights (cvar)")           highlighting ones covering the view,
+                                       2 = also draw planes of each volume,
+                                       3 = also draw edges of each volume
+
+  [r\_showLightScale](R_showLightScale ... report the scale factor applied
+  _%28cvar%29 "R showLightScale (cvar) to drawing for overbrights
+  ")                                   
+
+  [r\_showLightScissors](R_showLightSc ... show light scissor rectangles
+  issors_%28cvar%29 "R showLightScisso 
+  rs (cvar)")                          
+
+  [r\_showMegaTexture](R_showMegaTextu ... display all the level images
+  re_%28cvar%29 "R showMegaTexture (cv 
+  ar)")                                
+
+  [r\_showMegaTextureLabels](R_showMeg ... draw colored blocks in each tile
+  aTextureLabels_%28cvar%29 "R showMeg 
+  aTextureLabels (cvar)")              
+
+  [r\_showMemory](R_showMemory_%28cvar ... print frame memory utilization
+  %29 "R showMemory (cvar)")           
+
+  [r\_showNormals](R_showNormals_%28cv ... draws wireframe normals
+  ar%29 "R showNormals (cvar)")        
+
+  [r\_showOverDraw](R_showOverDraw_%28 ... 1 = geometry overdraw, 2 = light
+  cvar%29 "R showOverDraw (cvar)")     interaction overdraw, 3 = geometry
+                                       and light interaction overdraw
+
+  [r\_showPortals](R_showPortals_%28cv ... draw portal outlines in color
+  ar%29 "R showPortals (cvar)")        based on passed / not passed
+
+  [r\_showPrimitives](R_showPrimitives ... report drawsurf/index/vertex
+  _%28cvar%29 "R showPrimitives (cvar) counts
+  ")                                   
+
+  [r\_showShadowCount](R_showShadowCou ... colors screen based on shadow
+  nt_%28cvar%29 "R showShadowCount (cv volume depth complexity, \>= 2 =
+  ar)")                                print overdraw count based on
+                                       stencil index values, 3 = only show
+                                       turboshadows, 4 = only show static
+                                       shadows
+
+  [r\_showShadows](R_showShadows_%28cv ... 1 = visualize the stencil shadow
+  ar%29 "R showShadows (cvar)")        volumes, 2 = draw filled in
+
+  [r\_showSilhouette](R_showSilhouette ... highlight edges that are casting
+  _%28cvar%29 "R showSilhouette (cvar) shadow planes
+  ")                                   
+
+  [r\_showSkel](R_showSkel_%28cvar%29  ... draw the skeleton when model
+  "R showSkel (cvar)")                 animates, 1 = draw model with
+                                       skeleton, 2 = draw skeleton only
+
+  [r\_showSmp](R_showSmp_%28cvar%29 "R ... show which end (front or back)
+   showSmp (cvar)")                    is blocking
+
+  [r\_showSurfaceInfo](R_showSurfaceIn ... show surface material name under
+  fo_%28cvar%29 "R showSurfaceInfo (cv crosshair
+  ar)")                                
+
+  [r\_showSurfaces](R_showSurfaces_%28 ... report surface/light/shadow
+  cvar%29 "R showSurfaces (cvar)")     counts
+
+  [r\_showTangentSpace](R_showTangentS ... shade triangles by tangent
+  pace_%28cvar%29 "R showTangentSpace  space, 1 = use 1st tangent vector, 2
+  (cvar)")                             = use 2nd tangent vector, 3 = use
+                                       normal vector
+
+  [r\_showTexturePolarity](R_showTextu ... shade triangles by texture area
+  rePolarity_%28cvar%29 "R showTexture polarity
+  Polarity (cvar)")                    
+
+  [r\_showTextureVectors](R_showTextur ... if \> 0 draw each triangles
+  eVectors_%28cvar%29 "R showTextureVe texture (tangent) vectors
+  ctors (cvar)")                       
+
+  [r\_showTrace](R_showTrace_%28cvar%2 ... show the intersection of an eye
+  9 "R showTrace (cvar)")              trace with the world
+
+  [r\_showTris](R_showTris_%28cvar%29  ... enables wireframe rendering of
+  "R showTris (cvar)")                 the world, 1 = only draw visible
+                                       ones, 2 = draw all front facing, 3 =
+                                       draw all
+
+  [r\_showUnsmoothedTangents](R_showUn ... if 1, put all nvidia register
+  smoothedTangents_%28cvar%29 "R showU combiner programming in display
+  nsmoothedTangents (cvar)")           lists
+
+  [r\_showUpdates](R_showUpdates_%28cv ... report entity and light updates
+  ar%29 "R showUpdates (cvar)")        and ref counts
+
+  [r\_showVertexCache](R_showVertexCac 
+  he_%28cvar%29 "R showVertexCache (cv 
+  ar)")                                
+
+  [r\_showVertexColor](R_showVertexCol ... draws all triangles with the
+  or_%28cvar%29 "R showVertexColor (cv solid vertex color
+  ar)")                                
+
+  [r\_showViewEntitys](R_showViewEntit ... 1 = displays the bounding boxes
+  ys_%28cvar%29 "R showViewEntitys (cv of all view models, 2 = print index
+  ar)")                                numbers
+
+  [r\_singleArea](R_singleArea_%28cvar ... only draw the portal area the
+  %29 "R singleArea (cvar)")           view is actually in
+
+  [r\_singleEntity](R_singleEntity_%28 ... suppress all but one entity
+  cvar%29 "R singleEntity (cvar)")     
+
+  [r\_singleLight](R_singleLight_%28cv ... suppress all but one light
+  ar%29 "R singleLight (cvar)")        
+
+  [r\_singleSurface](R_singleSurface_% ... suppress all but one surface on
+  28cvar%29 "R singleSurface (cvar)")  each entity
+
+  [r\_singleTriangle](R_singleTriangle ... only draw a single triangle per
+  _%28cvar%29 "R singleTriangle (cvar) primitive
+  ")                                   
+
+  [r\_skipAmbient](R_skipAmbient_%28cv ... bypasses all non-interaction
+  ar%29 "R skipAmbient (cvar)")        drawing
+
+  [r\_skipBackEnd](R_skipBackEnd_%28cv ... don't draw anything
+  ar%29 "R skipBackEnd (cvar)")        
+
+  [r\_skipBlendLights](R_skipBlendLigh ... skip all blend lights
+  ts_%28cvar%29 "R skipBlendLights (cv 
+  ar)")                                
+
+  [r\_skipBump](R_skipBump_%28cvar%29  ... uses a flat surface instead of
+  "R skipBump (cvar)")                 the bump map
+
+  [r\_skipCopyTexture](R_skipCopyTextu ... do all rendering, but don't
+  re_%28cvar%29 "R skipCopyTexture (cv actually copyTexSubImage2D
+  ar)")                                
+
+  [r\_skipDeforms](R_skipDeforms_%28cv ... leave all deform materials in
+  ar%29 "R skipDeforms (cvar)")        their original state
+
+  [r\_skipDiffuse](R_skipDiffuse_%28cv ... use black for diffuse
+  ar%29 "R skipDiffuse (cvar)")        
+
+  [r\_skipDynamicTextures](R_skipDynam ... don't dynamically create
+  icTextures_%28cvar%29 "R skipDynamic textures
+  Textures (cvar)")                    
+
+  [r\_skipFogLights](R_skipFogLights_% ... skip all fog lights
+  28cvar%29 "R skipFogLights (cvar)")  
+
+  [r\_skipFrontEnd](R_skipFrontEnd_%28 ... bypasses all front end work, but
+  cvar%29 "R skipFrontEnd (cvar)")     2D gui rendering still draws
+
+  [r\_skipGuiShaders](R_skipGuiShaders ... 1 = skip all gui elements on
+  _%28cvar%29 "R skipGuiShaders (cvar) surfaces, 2 = skip drawing but still
+  ")                                   handle events, 3 = draw but skip
+                                       events
+
+  [r\_skipInteractions](R_skipInteract ... skip all light/surface
+  ions_%28cvar%29 "R skipInteractions  interaction drawing
+  (cvar)")                             
+
+  [r\_skipLightScale](R_skipLightScale ... don't do any post-interaction
+  _%28cvar%29 "R skipLightScale (cvar) light scaling, makes things dim on
+  ")                                   low-dynamic range cards
+
+  [r\_skipMegaTexture](R_skipMegaTextu ... only use the lowest level image
+  re_%28cvar%29 "R skipMegaTexture (cv 
+  ar)")                                
+
+  [r\_skipNewAmbient](R_skipNewAmbient ... bypasses all vertex/fragment
+  _%28cvar%29 "R skipNewAmbient (cvar) program ambient drawing
+  ")                                   
+
+  [r\_skipOverlays](R_skipOverlays_%28 ... skip overlay surfaces
+  cvar%29 "R skipOverlays (cvar)")     
+
+  [r\_skipParticles](R_skipParticles_% ... 1 = skip all particle systems
+  28cvar%29 "R skipParticles (cvar)")  
+
+  [r\_skipPostProcess](R_skipPostProce ... skip all post-process renderings
+  ss_%28cvar%29 "R skipPostProcess (cv 
+  ar)")                                
+
+  [r\_skipRender](R_skipRender_%28cvar ... skip 3D rendering, but pass 2D
+  %29 "R skipRender (cvar)")           
+
+  [r\_skipRenderContext](R_skipRenderC ... NULL the rendering context
+  ontext_%28cvar%29 "R skipRenderConte during backend 3D rendering
+  xt (cvar)")                          
+
+  [r\_skipROQ](R_skipROQ_%28cvar%29 "R ... skip ROQ decoding
+   skipROQ (cvar)")                    
+
+  [r\_skipSpecular](R_skipSpecular_%28 ... use black for specular1
+  cvar%29 "R skipSpecular (cvar)")     
+
+  [r\_skipSubviews](R_skipSubviews_%28 ... 1 = don't render any gui
+  cvar%29 "R skipSubviews (cvar)")     elements on surfaces
+
+  [r\_skipSuppress](R_skipSuppress_%28 ... ignore the per-view suppressions
+  cvar%29 "R skipSuppress (cvar)")     
+
+  [r\_skipTranslucent](R_skipTransluce ... skip the translucent interaction
+  nt_%28cvar%29 "R skipTranslucent (cv rendering
+  ar)")                                
+
+  [r\_skipUpdates](R_skipUpdates_%28cv ... 1 = don't accept any entity or
+  ar%29 "R skipUpdates (cvar)")        light updates making everything
+                                       static
+
+  [r\_slopNormal](R_slopNormal_%28cvar ... merge normals that dot less than
+  %29 "R slopNormal (cvar)")           this
+
+  [r\_slopTexCoord](R_slopTexCoord_%28 ... merge texture coordinates this
+  cvar%29 "R slopTexCoord (cvar)")     far apart
+
+  [r\_slopVertex](R_slopVertex_%28cvar ... merge xyz coordinates this far
+  %29 "R slopVertex (cvar)")           apart
+
+  [r\_subviewOnly](R_subviewOnly_%28cv ... 1 = don't render main view,
+  ar%29 "R subviewOnly (cvar)")        allowing subviews to be debugged
+
+  [r\_swapInterval](R_swapInterval_%28 ... changes wglSwapIntarval
+  cvar%29 "R swapInterval (cvar)")     
+
+  [r\_terrainScale](R_terrainScale_%28 ... vertically scale USGS data
+  cvar%29 "R terrainScale (cvar)")     
+
+  [r\_testARBProgram](R_testARBProgram ... experiment with vertex/fragment
+  _%28cvar%29 "R testARBProgram (cvar) programs
+  ")                                   
+
+  [r\_testGamma](R_testGamma_%28cvar%2 ... if \> 0 draw a grid pattern to
+  9 "R testGamma (cvar)")              test gamma levels
+
+  [r\_testGammaBias](R_testGammaBias_% ... if \> 0 draw a grid pattern to
+  28cvar%29 "R testGammaBias (cvar)")  test gamma levels
+
+  [r\_testStepGamma](R_testStepGamma_% ... if \> 0 draw a grid pattern to
+  28cvar%29 "R testStepGamma (cvar)")  test gamma levels
+
+  [r\_useCachedDynamicModels](R_useCac ... cache snapshots of dynamic
+  hedDynamicModels_%28cvar%29 "R useCa models
+  chedDynamicModels (cvar)")           
+
+  [r\_useClippedLightScissors](R_useCl ... 0 = full screen when near
+  ippedLightScissors_%28cvar%29 "R use clipped, 1 = exact when near
+  ClippedLightScissors (cvar)")        clipped, 2 = exact always
+
+  [r\_useCombinerDisplayLists](R_useCo ... put all nvidia register combiner
+  mbinerDisplayLists_%28cvar%29 "R use programming in display lists
+  CombinerDisplayLists (cvar)")        
+
+  [r\_useConstantMaterials](R_useConst ... use pre-calculated material
+  antMaterials_%28cvar%29 "R useConsta registers if possible
+  ntMaterials (cvar)")                 
+
+  [r\_useCulling](R_useCulling_%28cvar ... 0 = none, 1 = sphere, 2 =
+  %29 "R useCulling (cvar)")           sphere + box
+
+  [r\_useDeferredTangents](R_useDeferr ... defer tangents calculations
+  edTangents_%28cvar%29 "R useDeferred after deform
+  Tangents (cvar)")                    
+
+  [r\_useDepthBoundsTest](R_useDepthBo ... use depth bounds test to reduce
+  undsTest_%28cvar%29 "R useDepthBound shadow fill
+  sTest (cvar)")                       
+
+  [r\_useEntityCallbacks](R_useEntityC ... if 0, issue the callback
+  allbacks_%28cvar%29 "R useEntityCall immediately at update time, rather
+  backs (cvar)")                       than defering
+
+  [r\_useEntityCulling](R_useEntityCul ... 0 = none, 1 = box
+  ling_%28cvar%29 "R useEntityCulling  
+  (cvar)")                             
+
+  [r\_useEntityScissors](R_useEntitySc ... 1 = use custom scissor rectangle
+  issors_%28cvar%29 "R useEntityScisso for each entity
+  rs (cvar)")                          
+
+  [r\_useExternalShadows](R_useExterna ... 1 = skip drawing caps when
+  lShadows_%28cvar%29 "R useExternalSh outside the light volume, 2 = force
+  adows (cvar)")                       to no caps for testing
+
+  [r\_useFrustumFarDistance](R_useFrus ... if != 0 force the view frustum
+  tumFarDistance_%28cvar%29 "R useFrus far distance to this distance
+  tumFarDistance (cvar)")              
+
+  [r\_useIndexBuffers](R_useIndexBuffe ... use ARB\_vertex\_buffer\_object
+  rs_%28cvar%29 "R useIndexBuffers (cv for indexes
+  ar)")                                
+
+  [r\_useInfiniteFarZ](R_useInfiniteFa ... use the no-far-clip-plane trick
+  rZ_%28cvar%29 "R useInfiniteFarZ (cv 
+  ar)")                                
+
+  [r\_useInteractionCulling](R_useInte ... 1 = cull interactions
+  ractionCulling_%28cvar%29 "R useInte 
+  ractionCulling (cvar)")              
+
+  [r\_useInteractionScissors](R_useInt ... 1 = use a custom scissor
+  eractionScissors_%28cvar%29 "R useIn rectangle for each shadow
+  teractionScissors (cvar)")           interaction, 2 = also crop using
+                                       portal scissors
+
+  [r\_useInteractionTable](R_useIntera ... create a full entityDefs \*
+  ctionTable_%28cvar%29 "R useInteract lightDefs table to make finding
+  ionTable (cvar)")                    interactions faster
+
+  [r\_useLightCulling](R_useLightCulli ... 0 = none, 1 = box, 2 = exact
+  ng_%28cvar%29 "R useLightCulling (cv clip of polyhedron faces, 3 = also
+  ar)")                                areas
+
+  [r\_useLightPortalFlow](R_useLightPo ... use a more precise area
+  rtalFlow_%28cvar%29 "R useLightPorta reference determination
+  lFlow (cvar)")                       
+
+  [r\_useLightScissors](R_useLightScis ... 1 = use custom scissor rectangle
+  sors_%28cvar%29 "R useLightScissors  for each light
+  (cvar)")                             
+
+  [r\_useNodeCommonChildren](R_useNode ... stop pushing reference bounds
+  CommonChildren_%28cvar%29 "R useNode early when possible
+  CommonChildren (cvar)")              
+
+  [r\_useNV20MonoLights](R_useNV20Mono ... use pass optimization for mono
+  Lights_%28cvar%29 "R useNV20MonoLigh lights
+  ts (cvar)")                          
+
+  [r\_useOptimizedShadows](R_useOptimi ... use the dmap generated static
+  zedShadows_%28cvar%29 "R useOptimize shadow volumes
+  dShadows (cvar)")                    
+
+  [r\_usePortals](R_usePortals_%28cvar ... 1 = use portals to perform area
+  %29 "R usePortals (cvar)")           culling, otherwise draw everything
+
+  [r\_usePreciseTriangleInteractions]( ... 1 = do winding clipping to
+  R_usePreciseTriangleInteractions_%28 determine if each ambiguous tri
+  cvar%29 "R usePreciseTriangleInterac should be lit
+  tions (cvar)")                       
+
+  [r\_useScissor](R_useScissor_%28cvar ... scissor clip as portals and
+  %29 "R useScissor (cvar)")           lights are processed
+
+  [r\_useShadowCulling](R_useShadowCul ... try to cull shadows from
+  ling_%28cvar%29 "R useShadowCulling  partially visible lights
+  (cvar)")                             
+
+  [r\_useShadowProjectedCull](R_useSha ... discard triangles outside light
+  dowProjectedCull_%28cvar%29 "R useSh volume before shadowing
+  adowProjectedCull (cvar)")           
+
+  [r\_useShadowSurfaceScissor](R_useSh ... scissor shadows by the scissor
+  adowSurfaceScissor_%28cvar%29 "R use rect of the interaction surfaces
+  ShadowSurfaceScissor (cvar)")        
+
+  [r\_useShadowVertexProgram](R_useSha ... do the shadow projection in the
+  dowVertexProgram_%28cvar%29 "R useSh vertex program on capable cards
+  adowVertexProgram (cvar)")           
+
+  [r\_useSilRemap](R_useSilRemap_%28cv ... consider verts with the same
+  ar%29 "R useSilRemap (cvar)")        XYZ, but different ST the same for
+                                       shadows
+
+  [r\_useStateCaching](R_useStateCachi ... avoid redundant state changes in
+  ng_%28cvar%29 "R useStateCaching (cv GL\_\*() calls
+  ar)")                                
+
+  [r\_useTripleTextureARB](R_useTriple ... cards with 3+ texture units do a
+  TextureARB_%28cvar%29 "R useTripleTe two pass instead of three pass
+  xtureARB (cvar)")                    
+
+  [r\_useTurboShadow](R_useTurboShadow ... use the infinite projection with
+  _%28cvar%29 "R useTurboShadow (cvar) W technique for dynamic shadows
+  ")                                   
+
+  [r\_useTwoSidedStencil](R_useTwoSide ... do stencil shadows in one pass
+  dStencil_%28cvar%29 "R useTwoSidedSt with different ops on each side
+  encil (cvar)")                       
+
+  [r\_useVertexBuffers](R_useVertexBuf ... use ARB\_vertex\_buffer\_object
+  fers_%28cvar%29 "R useVertexBuffers  for vertexes
+  (cvar)")                             
+
+  [r\_vertexBufferMegs](R_vertexBuffer 
+  Megs_%28cvar%29 "R vertexBufferMegs  
+  (cvar)")                             
+
+  [r\_znear](R_znear_%28cvar%29 "R zne ... near Z clip plane distance
+  ar (cvar)")                          
+  ------------------------------------ ------------------------------------
+
+\
+
+SND CVar's:
+-----------
+
+  ------------------------------------ ------------------------------------
+  [s\_clipVolumes](S_clipVolumes_%28cv 
+  ar%29 "S clipVolumes (cvar)")        
+
+  [s\_constantAmplitude](S_constantAmp 
+  litude_%28cvar%29 "S constantAmplitu 
+  de (cvar)")                          
+
+  [s\_decompressionLimit](S_decompress 
+  ionLimit_%28cvar%29 "S decompression 
+  Limit (cvar)")                       
+
+  [s\_doorDistanceAdd](S_doorDistanceA ... reduce sound volume with this
+  dd_%28cvar%29 "S doorDistanceAdd (cv distance when going through a door
+  ar)")                                
+
+  [s\_dotbias2](S_dotbias2_%28cvar%29  
+  "S dotbias2 (cvar)")                 
+
+  [s\_dotbias6](S_dotbias6_%28cvar%29  
+  "S dotbias6 (cvar)")                 
+
+  [s\_drawSounds](S_drawSounds_%28cvar 
+  %29 "S drawSounds (cvar)")           
+
+  [s\_enviroSuitCutoffFreq](S_enviroSu 
+  itCutoffFreq_%28cvar%29 "S enviroSui 
+  tCutoffFreq (cvar)")                 
+
+  [s\_enviroSuitCutoffQ](S_enviroSuitC 
+  utoffQ_%28cvar%29 "S enviroSuitCutof 
+  fQ (cvar)")                          
+
+  [s\_enviroSuitSkipLowpass](S_enviroS 
+  uitSkipLowpass_%28cvar%29 "S enviroS 
+  uitSkipLowpass (cvar)")              
+
+  [s\_enviroSuitSkipReverb](S_enviroSu 
+  itSkipReverb_%28cvar%29 "S enviroSui 
+  tSkipReverb (cvar)")                 
+
+  [s\_enviroSuitVolumeScale](S_enviroS 
+  uitVolumeScale_%28cvar%29 "S enviroS 
+  uitVolumeScale (cvar)")              
+
+  [s\_force22kHz](S_force22kHz_%28cvar 
+  %29 "S force22kHz (cvar)")           
+
+  [s\_globalFraction](S_globalFraction ... volume to all speakers when not
+  _%28cvar%29 "S globalFraction (cvar) spatialized
+  ")                                   
+
+  [s\_libOpenAL](S_libOpenAL_%28cvar%2 
+  9 "S libOpenAL (cvar)")              
+
+  [s\_maxSoundsPerShader](S_maxSoundsP 
+  erShader_%28cvar%29 "S maxSoundsPerS 
+  hader (cvar)")                       
+
+  [s\_meterTopTime](S_meterTopTime_%28 
+  cvar%29 "S meterTopTime (cvar)")     
+
+  [s\_minVolume2](S_minVolume2_%28cvar 
+  %29 "S minVolume2 (cvar)")           
+
+  [s\_minVolume6](S_minVolume6_%28cvar 
+  %29 "S minVolume6 (cvar)")           
+
+  [s\_muteEAXReverb](S_muteEAXReverb_% 
+  28cvar%29 "S muteEAXReverb (cvar)")  
+
+  [s\_noSound](S_noSound_%28cvar%29 "S 
+   noSound (cvar)")                    
+
+  [s\_numberOfSpeakers](S_numberOfSpea ... number of speakers
+  kers_%28cvar%29 "S numberOfSpeakers  
+  (cvar)")                             
+
+  [s\_playDefaultSound](S_playDefaultS ... play a beep for missing sounds
+  ound_%28cvar%29 "S playDefaultSound  
+  (cvar)")                             
+
+  [s\_quadraticFalloff](S_quadraticFal 
+  loff_%28cvar%29 "S quadraticFalloff  
+  (cvar)")                             
+
+  [s\_realTimeDecoding](S_realTimeDeco 
+  ding_%28cvar%29 "S realTimeDecoding  
+  (cvar)")                             
+
+  [s\_reverbFeedback](S_reverbFeedback 
+  _%28cvar%29 "S reverbFeedback (cvar) 
+  ")                                   
+
+  [s\_reverbTime](S_reverbTime_%28cvar 
+  %29 "S reverbTime (cvar)")           
+
+  [s\_reverse](S_reverse_%28cvar%29 "S 
+   reverse (cvar)")                    
+
+  [s\_showLevelMeter](S_showLevelMeter 
+  _%28cvar%29 "S showLevelMeter (cvar) 
+  ")                                   
+
+  [s\_showStartSound](S_showStartSound 
+  _%28cvar%29 "S showStartSound (cvar) 
+  ")                                   
+
+  [s\_singleEmitter](S_singleEmitter_% ... mute all sounds but this emitter
+  28cvar%29 "S singleEmitter (cvar)")  
+
+  [s\_skipHelltimeFX](S_skipHelltimeFX 
+  _%28cvar%29 "S skipHelltimeFX (cvar) 
+  ")                                   
+
+  [s\_slowAttenuate](S_slowAttenuate_% 
+  28cvar%29 "S slowAttenuate (cvar)")  
+
+  [s\_spatializationDecay](S_spatializ 
+  ationDecay_%28cvar%29 "S spatializat 
+  ionDecay (cvar)")                    
+
+  [s\_subFraction](S_subFraction_%28cv ... volume to subwoofer in 5.1
+  ar%29 "S subFraction (cvar)")        
+
+  [s\_useEAXReverb](S_useEAXReverb_%28 
+  cvar%29 "S useEAXReverb (cvar)")     
+
+  [s\_useOcclusion](S_useOcclusion_%28 
+  cvar%29 "S useOcclusion (cvar)")     
+
+  [s\_useOpenAL](S_useOpenAL_%28cvar%2 
+  9 "S useOpenAL (cvar)")              
+
+  [s\_volume\_dB](S_volume_dB_%28cvar% ... volume in dB
+  29 "S volume dB (cvar)")             
+  ------------------------------------ ------------------------------------
+
+\
+
+SYS CVar's:
+-----------
+
+  ------------------------------------ ------------------------------------
+  [com\_allowConsole](Com_allowConsole ... allow \~ to toggle console
+  _%28cvar%29 "Com allowConsole (cvar) 
+  ")                                   
+
+  [com\_asyncInput](Com_asyncInput_%28 ... sample input from the async
+  cvar%29 "Com asyncInput (cvar)")     thread
+
+  [com\_asyncSound](Com_asyncSound_%28 ... mix sound from the async thread
+  cvar%29 "Com asyncSound (cvar)")     
+
+  [com\_aviDemoHeight](Com_aviDemoHeig 
+  ht_%28cvar%29 "Com aviDemoHeight (cv 
+  ar)")                                
+
+  [com\_aviDemoSamples](Com_aviDemoSam 
+  ples_%28cvar%29 "Com aviDemoSamples  
+  (cvar)")                             
+
+  [com\_aviDemoTics](Com_aviDemoTics_% 
+  28cvar%29 "Com aviDemoTics (cvar)")  
+
+  [com\_aviDemoWidth](Com_aviDemoWidth 
+  _%28cvar%29 "Com aviDemoWidth (cvar) 
+  ")                                   
+
+  [com\_compressDemos](Com_compressDem 
+  os_%28cvar%29 "Com compressDemos (cv 
+  ar)")                                
+
+  [com\_compressSaveGame](Com_compress ... compress save games
+  SaveGame_%28cvar%29 "Com compressSav 
+  eGame (cvar)")                       
+
+  [com\_fixedTic](Com_fixedTic_%28cvar 
+  %29 "Com fixedTic (cvar)")           
+
+  [com\_forceGenericSIMD](Com_forceGen ... force generic platform
+  ericSIMD_%28cvar%29 "Com forceGeneri independent SIMD
+  cSIMD (cvar)")                       
+
+  [com\_guid](Com_guid_%28cvar%29 "Com 
+   guid (cvar)")                       
+
+  [com\_journal](Com_journal_%28cvar%2 ... 1 = record journal, 2 = play
+  9 "Com journal (cvar)")              back journal
+
+  [com\_logDemos](Com_logDemos_%28cvar 
+  %29 "Com logDemos (cvar)")           
+
+  [com\_machineSpec](Com_machineSpec_% ... hardware classification, -1 =
+  28cvar%29 "Com machineSpec (cvar)")  not detected, 0 = low quality, 1 =
+                                       medium quality, 2 = high quality, 3
+                                       = ultra quality
+
+  [com\_makingBuild](Com_makingBuild_% ... 1 when making a build
+  28cvar%29 "Com makingBuild (cvar)")  
+
+  [com\_memoryMarker](Com_memoryMarker ... used as a marker for memory
+  _%28cvar%29 "Com memoryMarker (cvar) stats
+  ")                                   
+
+  [com\_minTics](Com_minTics_%28cvar%2 
+  9 "Com minTics (cvar)")              
+
+  [com\_preciseTic](Com_preciseTic_%28 ... run one game tick every async
+  cvar%29 "Com preciseTic (cvar)")     thread update
+
+  [com\_preloadDemos](Com_preloadDemos 
+  _%28cvar%29 "Com preloadDemos (cvar) 
+  ")                                   
+
+  [com\_product\_lang\_ext](Com_produc 
+  t_lang_ext_%28cvar%29 "Com product l 
+  ang ext (cvar)")                     
+
+  [com\_purgeAll](Com_purgeAll_%28cvar ... purge everything between level
+  %29 "Com purgeAll (cvar)")           loads
+
+  [com\_showAngles](Com_showAngles_%28 
+  cvar%29 "Com showAngles (cvar)")     
+
+  [com\_showAsyncStats](Com_showAsyncS ... show async network stats
+  tats_%28cvar%29 "Com showAsyncStats  
+  (cvar)")                             
+
+  [com\_showDemo](Com_showDemo_%28cvar 
+  %29 "Com showDemo (cvar)")           
+
+  [com\_showFPS](Com_showFPS_%28cvar%2 ... show frames rendered per second
+  9 "Com showFPS (cvar)")              
+
+  [com\_showMemoryUsage](Com_showMemor ... show total and per frame memory
+  yUsage_%28cvar%29 "Com showMemoryUsa usage
+  ge (cvar)")                          
+
+  [com\_showSoundDecoders](Com_showSou ... show sound decoders
+  ndDecoders_%28cvar%29 "Com showSound 
+  Decoders (cvar)")                    
+
+  [com\_showTics](Com_showTics_%28cvar 
+  %29 "Com showTics (cvar)")           
+
+  [com\_skipGameDraw](Com_skipGameDraw 
+  _%28cvar%29 "Com skipGameDraw (cvar) 
+  ")                                   
+
+  [com\_skipRenderer](Com_skipRenderer ... skip the renderer completely
+  _%28cvar%29 "Com skipRenderer (cvar) 
+  ")                                   
+
+  [com\_speeds](Com_speeds_%28cvar%29  ... show engine timings
+  "Com speeds (cvar)")                 
+
+  [com\_timestampPrints](Com_timestamp ... print time with each console
+  Prints_%28cvar%29 "Com timestampPrin print, 1 = msec 2 = sec
+  ts (cvar)")                          
+
+  [com\_updateLoadSize](Com_updateLoad ... update the load size after
+  Size_%28cvar%29 "Com updateLoadSize  loading a map
+  (cvar)")                             
+
+  [com\_videoRam](Com_videoRam_%28cvar ... holds the last amount of
+  %29 "Com videoRam (cvar)")           detected video ram
+
+  [com\_wipeSeconds](Com_wipeSeconds_% 
+  28cvar%29 "Com wipeSeconds (cvar)")  
+
+  [con\_noPrint](Con_noPrint_%28cvar%2 ... print on the console but not
+  9 "Con noPrint (cvar)")              onscreen when console is pulled up
+
+  [con\_notifyTime](Con_notifyTime_%28 ... time messages are displayed
+  cvar%29 "Con notifyTime (cvar)")     onscreen when console is pulled up
+
+  [con\_speed](Con_speed_%28cvar%29 "C ... speed at which the console moves
+  on speed (cvar)")                    up and down
+
+  [decl\_show](Decl_show_%28cvar%29 "D ... set to 1 to print parses, 2 to
+  ecl show (cvar)")                    also print references
+
+  [developer](Developer_%28cvar%29 "De 
+  veloper (cvar)")                     
+
+  [fs\_basepath](Fs_basepath_%28cvar%2 
+  9 "Fs basepath (cvar)")              
+
+  [fs\_caseSensitiveOS](Fs_caseSensiti 
+  veOS_%28cvar%29 "Fs caseSensitiveOS  
+  (cvar)")                             
+
+  [fs\_cdpath](Fs_cdpath_%28cvar%29 "F 
+  s cdpath (cvar)")                    
+
+  [fs\_copyfiles](Fs_copyfiles_%28cvar 
+  %29 "Fs copyfiles (cvar)")           
+
+  [fs\_debug](Fs_debug_%28cvar%29 "Fs  
+  debug (cvar)")                       
+
+  [fs\_devpath](Fs_devpath_%28cvar%29  
+  "Fs devpath (cvar)")                 
+
+  [fs\_game](Fs_game_%28cvar%29 "Fs ga 
+  me (cvar)")                          
+
+  [fs\_game\_base](Fs_game_base_%28cva 
+  r%29 "Fs game base (cvar)")          
+
+  [fs\_restrict](Fs_restrict_%28cvar%2 
+  9 "Fs restrict (cvar)")              
+
+  [fs\_savepath](Fs_savepath_%28cvar%2 
+  9 "Fs savepath (cvar)")              
+
+  [fs\_searchAddons](Fs_searchAddons_% 
+  28cvar%29 "Fs searchAddons (cvar)")  
+
+  [in\_alwaysRun](In_alwaysRun_%28cvar ... always run (reverse \_speed
+  %29 "In alwaysRun (cvar)")           button) - only in MP
+
+  [in\_anglespeedkey](In_anglespeedkey ... angle change scale when holding
+  _%28cvar%29 "In anglespeedkey (cvar) down \_speed button
+  ")                                   
+
+  [in\_freeLook](In_freeLook_%28cvar%2 ... look around with mouse (reverse
+  9 "In freeLook (cvar)")              \_mlook button)
+
+  [in\_mouse](In_mouse_%28cvar%29 "In  ... enable mouse input
+  mouse (cvar)")                       
+
+  [in\_pitchspeed](In_pitchspeed_%28cv ... pitch change speed when holding
+  ar%29 "In pitchspeed (cvar)")        down look \_lookUp or \_lookDown
+                                       button
+
+  [in\_toggleCrouch](In_toggleCrouch_% 
+  28cvar%29 "In toggleCrouch (cvar)")  
+
+  [in\_toggleRun](In_toggleRun_%28cvar 
+  %29 "In toggleRun (cvar)")           
+
+  [in\_toggleZoom](In_toggleZoom_%28cv 
+  ar%29 "In toggleZoom (cvar)")        
+
+  [in\_yawspeed](In_yawspeed_%28cvar%2 ... yaw change speed when holding
+  9 "In yawspeed (cvar)")              down \_left or \_right button
+
+  [lcp\_showFailures](Lcp_showFailures ... show LCP solver failures
+  _%28cvar%29 "Lcp showFailures (cvar) 
+  ")                                   
+
+  [logFile](LogFile_%28cvar%29 "LogFil ... 1 = buffer log, 2 = flush after
+  e (cvar)")                           each print
+
+  [logFileName](LogFileName_%28cvar%29 ... name of log file, if empty,
+   "LogFileName (cvar)")               qconsole.log will be used
+
+  [m\_pitch](M_pitch_%28cvar%29 "M pit ... mouse pitch scale
+  ch (cvar)")                          
+
+  [m\_showMouseRate](M_showMouseRate_% ... shows mouse movement
+  28cvar%29 "M showMouseRate (cvar)")  
+
+  [m\_smooth](M_smooth_%28cvar%29 "M s ... number of samples blended for
+  mooth (cvar)")                       mouse viewing
+
+  [m\_strafeScale](M_strafeScale_%28cv ... mouse strafe movement scale
+  ar%29 "M strafeScale (cvar)")        
+
+  [m\_strafeSmooth](M_strafeSmooth_%28 ... number of samples blended for
+  cvar%29 "M strafeSmooth (cvar)")     mouse moving
+
+  [m\_yaw](M_yaw_%28cvar%29 "M yaw (cv ... mouse yaw scale
+  ar)")                                
+
+  [net\_allowCheats](Net_allowCheats_% ... Allow cheats in network game
+  28cvar%29 "Net allowCheats (cvar)")  
+
+  [net\_channelShowDrop](Net_channelSh ... show dropped packets
+  owDrop_%28cvar%29 "Net channelShowDr 
+  op (cvar)")                          
+
+  [net\_channelShowPackets](Net_channe ... show all packets
+  lShowPackets_%28cvar%29 "Net channel 
+  ShowPackets (cvar)")                 
+
+  [net\_clientDownload](Net_clientDown 
+  load_%28cvar%29 "Net clientDownload  
+  (cvar)")                             
+
+  [net\_clientLagOMeter](Net_clientLag 
+  OMeter_%28cvar%29 "Net clientLagOMet 
+  er (cvar)")                          
+
+  [net\_clientMaxPrediction](Net_clien 
+  tMaxPrediction_%28cvar%29 "Net clien 
+  tMaxPrediction (cvar)")              
+
+  [net\_clientMaxRate](Net_clientMaxRa ... maximum rate requested by client
+  te_%28cvar%29 "Net clientMaxRate (cv from server in bytes/sec
+  ar)")                                
+
+  [net\_clientPrediction](Net_clientPr ... additional client side
+  ediction_%28cvar%29 "Net clientPredi prediction in milliseconds
+  ction (cvar)")                       
+
+  [net\_clientRemoteConsoleAddress](Ne ... remote console address
+  t_clientRemoteConsoleAddress_%28cvar 
+  %29 "Net clientRemoteConsoleAddress  
+  (cvar)")                             
+
+  [net\_clientRemoteConsolePassword](N ... remote console password
+  et_clientRemoteConsolePassword_%28cv 
+  ar%29 "Net clientRemoteConsolePasswo 
+  rd (cvar)")                          
+
+  [net\_clientSelfSmoothing](Net_clien 
+  tSelfSmoothing_%28cvar%29 "Net clien 
+  tSelfSmoothing (cvar)")              
+
+  [net\_clientServerTimeout](Net_clien ... server time out in seconds
+  tServerTimeout_%28cvar%29 "Net clien 
+  tServerTimeout (cvar)")              
+
+  [net\_clientUsercmdBackup](Net_clien ... number of usercmds to resend
+  tUsercmdBackup_%28cvar%29 "Net clien 
+  tUsercmdBackup (cvar)")              
+
+  [net\_forceDrop](Net_forceDrop_%28cv ... percentage packet loss
+  ar%29 "Net forceDrop (cvar)")        
+
+  [net\_forceLatency](Net_forceLatency ... milliseconds latency
+  _%28cvar%29 "Net forceLatency (cvar) 
+  ")                                   
+
+  [net\_ip](Net_ip_%28cvar%29 "Net ip  ... local IP address
+  (cvar)")                             
+
+  [net\_LANServer](Net_LANServer_%28cv ... config LAN games only - affects
+  ar%29 "Net LANServer (cvar)")        clients and servers
+
+  [net\_master0](Net_master0_%28cvar%2 ... idnet master server address
+  9 "Net master0 (cvar)")              
+
+  [net\_master1](Net_master1_%28cvar%2 ... 1st master server address
+  9 "Net master1 (cvar)")              
+
+  [net\_master2](Net_master2_%28cvar%2 ... 2nd master server address
+  9 "Net master2 (cvar)")              
+
+  [net\_master3](Net_master3_%28cvar%2 ... 3rd master server address
+  9 "Net master3 (cvar)")              
+
+  [net\_master4](Net_master4_%28cvar%2 ... 4th master server address
+  9 "Net master4 (cvar)")              
+
+  [net\_port](Net_port_%28cvar%29 "Net ... local IP port number
+   port (cvar)")                       
+
+  [net\_serverAllowServerMod](Net_serv ... allow server-side mods
+  erAllowServerMod_%28cvar%29 "Net ser 
+  verAllowServerMod (cvar)")           
+
+  [net\_serverClientTimeout](Net_serve ... client time out in seconds
+  rClientTimeout_%28cvar%29 "Net serve 
+  rClientTimeout (cvar)")              
+
+  [net\_serverDedicated](Net_serverDed ... 1 = text console dedicated
+  icated_%28cvar%29 "Net serverDedicat server, 2 = graphical dedicated
+  ed (cvar)")                          server
+
+  [net\_serverDlBaseURL](Net_serverDlB 
+  aseURL_%28cvar%29 "Net serverDlBaseU 
+  RL (cvar)")                          
+
+  [net\_serverDlTable](Net_serverDlTab 
+  le_%28cvar%29 "Net serverDlTable (cv 
+  ar)")                                
+
+  [net\_serverDownload](Net_serverDown 
+  load_%28cvar%29 "Net serverDownload  
+  (cvar)")                             
+
+  [net\_serverDrawClient](Net_serverDr ... number of client for which to
+  awClient_%28cvar%29 "Net serverDrawC draw view on server
+  lient (cvar)")                       
+
+  [net\_serverMaxClientRate](Net_serve ... maximum rate to a client in
+  rMaxClientRate_%28cvar%29 "Net serve bytes/sec
+  rMaxClientRate (cvar)")              
+
+  [net\_serverMaxUsercmdRelay](Net_ser ... maximum number of usercmds from
+  verMaxUsercmdRelay_%28cvar%29 "Net s other clients the server relays to a
+  erverMaxUsercmdRelay (cvar)")        client
+
+  [net\_serverReloadEngine](Net_server ... perform a full reload on next
+  ReloadEngine_%28cvar%29 "Net serverR map restart (including flushing
+  eloadEngine (cvar)")                 referenced pak files) - decreased
+                                       if \> 0
+
+  [net\_serverRemoteConsolePassword](N ... remote console password
+  et_serverRemoteConsolePassword_%28cv 
+  ar%29 "Net serverRemoteConsolePasswo 
+  rd (cvar)")                          
+
+  [net\_serverSnapshotDelay](Net_serve ... delay between snapshots in
+  rSnapshotDelay_%28cvar%29 "Net serve milliseconds
+  rSnapshotDelay (cvar)")              
+
+  [net\_serverZombieTimeout](Net_serve ... disconnected client timeout in
+  rZombieTimeout_%28cvar%29 "Net serve seconds
+  rZombieTimeout (cvar)")              
+
+  [net\_socksEnabled](Net_socksEnabled 
+  _%28cvar%29 "Net socksEnabled (cvar) 
+  ")                                   
+
+  [net\_socksPassword](Net_socksPasswo 
+  rd_%28cvar%29 "Net socksPassword (cv 
+  ar)")                                
+
+  [net\_socksPort](Net_socksPort_%28cv 
+  ar%29 "Net socksPort (cvar)")        
+
+  [net\_socksServer](Net_socksServer_% 
+  28cvar%29 "Net socksServer (cvar)")  
+
+  [net\_socksUsername](Net_socksUserna 
+  me_%28cvar%29 "Net socksUsername (cv 
+  ar)")                                
+
+  [net\_verbose](Net_verbose_%28cvar%2 ... 1 = verbose output, 2 = even
+  9 "Net verbose (cvar)")              more verbose output
+
+  [sensitivity](Sensitivity_%28cvar%29 ... mouse view sensitivity
+   "Sensitivity (cvar)")               
+
+  [si\_idleServer](Si_idleServer_%28cv 
+  ar%29 "Si idleServer (cvar)")        
+
+  [si\_version](Si_version_%28cvar%29  ... engine version
+  "Si version (cvar)")                 
+
+  [sys\_arch](Sys_arch_%28cvar%29 "Sys 
+   arch (cvar)")                       
+
+  [sys\_cpustring](Sys_cpustring_%28cv 
+  ar%29 "Sys cpustring (cvar)")        
+
+  [sys\_lang](Sys_lang_%28cvar%29 "Sys 
+   lang (cvar)")                       
+
+  [timescale](Timescale_%28cvar%29 "Ti ... scales the time
+  mescale (cvar)")                     
+
+  [win\_allowAltTab](Win_allowAltTab_% 
+  28cvar%29 "Win allowAltTab (cvar)")  
+
+  [win\_allowMultipleInstances](Win_al ... allow multiple instances running
+  lowMultipleInstances_%28cvar%29 "Win concurrently
+   allowMultipleInstances (cvar)")     
+
+  [win\_notaskkeys](Win_notaskkeys_%28 ... disable windows task keys
+  cvar%29 "Win notaskkeys (cvar)")     
+
+  [win\_outputDebugString](Win_outputD 
+  ebugString_%28cvar%29 "Win outputDeb 
+  ugString (cvar)")                    
+
+  [win\_outputEditString](Win_outputEd 
+  itString_%28cvar%29 "Win outputEditS 
+  tring (cvar)")                       
+
+  [win\_timerUpdate](Win_timerUpdate_% ... allows the game to be updated
+  28cvar%29 "Win timerUpdate (cvar)")  while dragging the window
+
+  [win\_username](Win_username_%28cvar ... windows user name
+  %29 "Win username (cvar)")           
+
+  [win\_viewlog](Win_viewlog_%28cvar%2 
+  9 "Win viewlog (cvar)")              
+
+  [win\_xpos](Win_xpos_%28cvar%29 "Win ... horizontal position of window
+   xpos (cvar)")                       
+
+  [win\_ypos](Win_ypos_%28cvar%29 "Win ... vertical position of window
+   ypos (cvar)")                       
+  ------------------------------------ ------------------------------------
+
+\
+
+TOOL CVar's:
+------------
+
+  ------------------------------------ ------------------------------------
+  [EntityPlacement](EntityPlacement_%2 
+  8cvar%29 "EntityPlacement (cvar)")   
+
+  [radiant\_ALTEdgeDrag](Radiant_ALTEd 
+  geDrag_%28cvar%29 "Radiant ALTEdgeDr 
+  ag (cvar)")                          
+
+  [radiant\_AngleSpeed](Radiant_AngleS 
+  peed_%28cvar%29 "Radiant AngleSpeed  
+  (cvar)")                             
+
+  [radiant\_Autosave](Radiant_Autosave 
+  _%28cvar%29 "Radiant Autosave (cvar) 
+  ")                                   
+
+  [radiant\_AutosaveMinutes](Radiant_A 
+  utosaveMinutes_%28cvar%29 "Radiant A 
+  utosaveMinutes (cvar)")              
+
+  [radiant\_camerawindow](Radiant_came 
+  rawindow_%28cvar%29 "Radiant cameraw 
+  indow (cvar)")                       
+
+  [radiant\_CamXYUpdate](Radiant_CamXY 
+  Update_%28cvar%29 "Radiant CamXYUpda 
+  te (cvar)")                          
+
+  [radiant\_ChaseMouse](Radiant_ChaseM 
+  ouse_%28cvar%29 "Radiant ChaseMouse  
+  (cvar)")                             
+
+  [radiant\_CubicClipping](Radiant_Cub 
+  icClipping_%28cvar%29 "Radiant Cubic 
+  Clipping (cvar)")                    
+
+  [radiant\_CubicScale](Radiant_CubicS 
+  cale_%28cvar%29 "Radiant CubicScale  
+  (cvar)")                             
+
+  [radiant\_entityMode](Radiant_entity 
+  Mode_%28cvar%29 "Radiant entityMode  
+  (cvar)")                             
+
+  [radiant\_EntityShow](Radiant_Entity 
+  Show_%28cvar%29 "Radiant EntityShow  
+  (cvar)")                             
+
+  [radiant\_HiColorTextures](Radiant_H 
+  iColorTextures_%28cvar%29 "Radiant H 
+  iColorTextures (cvar)")              
+
+  [radiant\_InspectorDockedDialogs](Ra 
+  diant_InspectorDockedDialogs_%28cvar 
+  %29 "Radiant InspectorDockedDialogs  
+  (cvar)")                             
+
+  [radiant\_InspectorsWindow](Radiant_ 
+  InspectorsWindow_%28cvar%29 "Radiant 
+   InspectorsWindow (cvar)")           
+
+  [radiant\_LastMap](Radiant_LastMap_% 
+  28cvar%29 "Radiant LastMap (cvar)")  
+
+  [radiant\_LastProject](Radiant_LastP 
+  roject_%28cvar%29 "Radiant LastProje 
+  ct (cvar)")                          
+
+  [radiant\_LoadLast](Radiant_LoadLast 
+  _%28cvar%29 "Radiant LoadLast (cvar) 
+  ")                                   
+
+  [radiant\_LoadLastMap](Radiant_LoadL 
+  astMap_%28cvar%29 "Radiant LoadLastM 
+  ap (cvar)")                          
+
+  [radiant\_LoadShaders](Radiant_LoadS 
+  haders_%28cvar%29 "Radiant LoadShade 
+  rs (cvar)")                          
+
+  [radiant\_MainWindowPlace](Radiant_M 
+  ainWindowPlace_%28cvar%29 "Radiant M 
+  ainWindowPlace (cvar)")              
+
+  [radiant\_ModelPath](Radiant_ModelPa 
+  th_%28cvar%29 "Radiant ModelPath (cv 
+  ar)")                                
+
+  [radiant\_MoveSpeed](Radiant_MoveSpe 
+  ed_%28cvar%29 "Radiant MoveSpeed (cv 
+  ar)")                                
+
+  [radiant\_NewFaceGrab](Radiant_NewFa 
+  ceGrab_%28cvar%29 "Radiant NewFaceGr 
+  ab (cvar)")                          
+
+  [radiant\_NewLightStyle](Radiant_New 
+  LightStyle_%28cvar%29 "Radiant NewLi 
+  ghtStyle (cvar)")                    
+
+  [radiant\_NewMapFormat](Radiant_NewM 
+  apFormat_%28cvar%29 "Radiant NewMapF 
+  ormat (cvar)")                       
+
+  [radiant\_NewRightClick](Radiant_New 
+  RightClick_%28cvar%29 "Radiant NewRi 
+  ghtClick (cvar)")                    
+
+  [radiant\_NewTextureWindowStuff](Rad 
+  iant_NewTextureWindowStuff_%28cvar%2 
+  9 "Radiant NewTextureWindowStuff (cv 
+  ar)")                                
+
+  [radiant\_NewVertex](Radiant_NewVert 
+  ex_%28cvar%29 "Radiant NewVertex (cv 
+  ar)")                                
+
+  [radiant\_NoClamp](Radiant_NoClamp_% 
+  28cvar%29 "Radiant NoClamp (cvar)")  
+
+  [radiant\_NoStipple](Radiant_NoStipp 
+  le_%28cvar%29 "Radiant NoStipple (cv 
+  ar)")                                
+
+  [radiant\_QE4Paint](Radiant_QE4Paint 
+  _%28cvar%29 "Radiant QE4Paint (cvar) 
+  ")                                   
+
+  [radiant\_QE4StyleWindows](Radiant_Q 
+  E4StyleWindows_%28cvar%29 "Radiant Q 
+  E4StyleWindows (cvar)")              
+
+  [radiant\_RadiantMapPath](Radiant_Ra 
+  diantMapPath_%28cvar%29 "Radiant Rad 
+  iantMapPath (cvar)")                 
+
+  [radiant\_RotateLock](Radiant_Rotate 
+  Lock_%28cvar%29 "Radiant RotateLock  
+  (cvar)")                             
+
+  [radiant\_Rotation](Radiant_Rotation 
+  _%28cvar%29 "Radiant Rotation (cvar) 
+  ")                                   
+
+  [radiant\_RunBefore](Radiant_RunBefo 
+  re_%28cvar%29 "Radiant RunBefore (cv 
+  ar)")                                
+
+  [radiant\_SavedInfo](Radiant_SavedIn 
+  fo_%28cvar%29 "Radiant SavedInfo (cv 
+  ar)")                                
+
+  [radiant\_SelectWholeEntitiesKey](Ra 
+  diant_SelectWholeEntitiesKey_%28cvar 
+  %29 "Radiant SelectWholeEntitiesKey  
+  (cvar)")                             
+
+  [radiant\_SizePainting](Radiant_Size 
+  Painting_%28cvar%29 "Radiant SizePai 
+  nting (cvar)")                       
+
+  [radiant\_Snapshots](Radiant_Snapsho 
+  ts_%28cvar%29 "Radiant Snapshots (cv 
+  ar)")                                
+
+  [radiant\_SnapT](Radiant_SnapT_%28cv 
+  ar%29 "Radiant SnapT (cvar)")        
+
+  [radiant\_StatusPointSize](Radiant_S 
+  tatusPointSize_%28cvar%29 "Radiant S 
+  tatusPointSize (cvar)")              
+
+  [radiant\_SwitchClipKey](Radiant_Swi 
+  tchClipKey_%28cvar%29 "Radiant Switc 
+  hClipKey (cvar)")                    
+
+  [radiant\_TextureLock](Radiant_Textu 
+  reLock_%28cvar%29 "Radiant TextureLo 
+  ck (cvar)")                          
+
+  [radiant\_TextureQuality](Radiant_Te 
+  xtureQuality_%28cvar%29 "Radiant Tex 
+  tureQuality (cvar)")                 
+
+  [radiant\_TextureScale](Radiant_Text 
+  ureScale_%28cvar%29 "Radiant Texture 
+  Scale (cvar)")                       
+
+  [radiant\_TextureScrollbar](Radiant_ 
+  TextureScrollbar_%28cvar%29 "Radiant 
+   TextureScrollbar (cvar)")           
+
+  [radiant\_texwindow](Radiant_texwind 
+  ow_%28cvar%29 "Radiant texwindow (cv 
+  ar)")                                
+
+  [radiant\_UndoLevels](Radiant_UndoLe 
+  vels_%28cvar%29 "Radiant UndoLevels  
+  (cvar)")                             
+
+  [radiant\_UseDisplayLists](Radiant_U 
+  seDisplayLists_%28cvar%29 "Radiant U 
+  seDisplayLists (cvar)")              
+
+  [radiant\_UseGLLighting](Radiant_Use 
+  GLLighting_%28cvar%29 "Radiant UseGL 
+  Lighting (cvar)")                    
+
+  [radiant\_UseTextureBar](Radiant_Use 
+  TextureBar_%28cvar%29 "Radiant UseTe 
+  xtureBar (cvar)")                    
+
+  [radiant\_WideToolBar](Radiant_WideT 
+  oolBar_%28cvar%29 "Radiant WideToolB 
+  ar (cvar)")                          
+
+  [radiant\_xywindow](Radiant_xywindow 
+  _%28cvar%29 "Radiant xywindow (cvar) 
+  ")                                   
+
+  [radiant\_xzwindow](Radiant_xzwindow 
+  _%28cvar%29 "Radiant xzwindow (cvar) 
+  ")                                   
+
+  [radiant\_XZVIS](Radiant_XZVIS_%28cv 
+  ar%29 "Radiant XZVIS (cvar)")        
+
+  [radiant\_yzwindow](Radiant_yzwindow 
+  _%28cvar%29 "Radiant yzwindow (cvar) 
+  ")                                   
+
+  [radiant\_YZVIS](Radiant_YZVIS_%28cv 
+  ar%29 "Radiant YZVIS (cvar)")        
+
+  [radiant\_ZClipBottom](Radiant_ZClip 
+  Bottom_%28cvar%29 "Radiant ZClipBott 
+  om (cvar)")                          
+
+  [radiant\_ZClipEnabled](Radiant_ZCli 
+  pEnabled_%28cvar%29 "Radiant ZClipEn 
+  abled (cvar)")                       
+
+  [radiant\_ZClipTop](Radiant_ZClipTop 
+  _%28cvar%29 "Radiant ZClipTop (cvar) 
+  ")                                   
+
+  [radiant\_zwindow](Radiant_zwindow_% 
+  28cvar%29 "Radiant zwindow (cvar)")  
+
+  [radiant\_ZVIS](Radiant_ZVIS_%28cvar 
+  %29 "Radiant ZVIS (cvar)")           
+  ------------------------------------ ------------------------------------
+
+\
+
+Uncategorized CVar's:
+---------------------
+
+  ------------------------------------ ------------------------------------
+  [bearTurretAngle](BearTurretAngle_%2 
+  8cvar%29 "BearTurretAngle (cvar)")   
+
+  [bearTurretForce](BearTurretForce_%2 
+  8cvar%29 "BearTurretForce (cvar)")   
+  ------------------------------------ ------------------------------------
+
+\
+
+Removed CVar's:
+---------------
+
+  ----------------------------------------------------------------------------------------------- ----------------------------------------------------------
+  [r\_hdr\_bloomFraction](R_hdr_bloomFraction_%28cvar%29 "R hdr bloomFraction (cvar)")            ... fraction to smear across neighbors
+  [r\_hdr\_exposure](R_hdr_exposure_%28cvar%29 "R hdr exposure (cvar)")                           ... maximum light scale
+  [r\_hdr\_gamma](R_hdr_gamma_%28cvar%29 "R hdr gamma (cvar)")                                    ... monitor gamma power
+  [r\_hdr\_monitorDither](R_hdr_monitorDither_%28cvar%29 "R hdr monitorDither (cvar)")            ... random dither in monitor space
+  [r\_hdr\_useFloats](R_hdr_useFloats_%28cvar%29 "R hdr useFloats (cvar)")                        ... use a floating point rendering buffer
+  [r\_sb\_biasScale](R_sb_biasScale_%28cvar%29 "R sb biasScale (cvar)")                           ... scale factor for jitter bias
+  [r\_sb\_frustomFOV](R_sb_frustomFOV_%28cvar%29 "R sb frustomFOV (cvar)")                        ... oversize FOV for point light side matching
+  [r\_sb\_jitterScale](R_sb_jitterScale_%28cvar%29 "R sb jitterScale (cvar)")                     ... scale factor for jitter offset
+  [r\_sb\_lightResolution](R_sb_lightResolution_%28cvar%29 "R sb lightResolution (cvar)")         ... Pixel dimensions for each shadow buffer, 64 - 2048
+  [r\_sb\_linearFilter](R_sb_linearFilter_%28cvar%29 "R sb linearFilter (cvar)")                  ... use GL\_LINEAR instead of GL\_NEAREST on shadow maps
+  [r\_sb\_noShadows](R_sb_noShadows_%28cvar%29 "R sb noShadows (cvar)")                           ... don't draw any occluders
+  [r\_sb\_occluderFacing](R_sb_occluderFacing_%28cvar%29 "R sb occluderFacing (cvar)")            ... 0 = front faces, 1 = back faces, 2 = midway between
+  [r\_sb\_polyOfsFactor](R_sb_polyOfsFactor_%28cvar%29 "R sb polyOfsFactor (cvar)")               ... polygonOffset factor for drawing shadow buffer
+  [r\_sb\_polyOfsUnits](R_sb_polyOfsUnits_%28cvar%29 "R sb polyOfsUnits (cvar)")                  ... polygonOffset units for drawing shadow buffer
+  [r\_sb\_randomize](R_sb_randomize_%28cvar%29 "R sb randomize (cvar)")                           ... randomly offset jitter texture each draw
+  [r\_sb\_samples](R_sb_samples_%28cvar%29 "R sb samples (cvar)")                                 ... 0, 1, 4, or 16
+  [r\_sb\_screenSpaceShadow](R_sb_screenSpaceShadow_%28cvar%29 "R sb screenSpaceShadow (cvar)")   ... build shadows in screen space instead of on surfaces
+  [r\_sb\_showFrustumPixels](R_sb_showFrustumPixels_%28cvar%29 "R sb showFrustumPixels (cvar)")   ... color the pixels contained in the frustum
+  [r\_sb\_singleSide](R_sb_singleSide_%28cvar%29 "R sb singleSide (cvar)")                        ... only draw a single side (0-5) of point lights
+  [r\_sb\_useCulling](R_sb_useCulling_%28cvar%29 "R sb useCulling (cvar)")                        ... cull geometry to individual side frustums
+  [r\_sb\_usePbuffer](R_sb_usePbuffer_%28cvar%29 "R sb usePbuffer (cvar)")                        ... draw offscreen
+  [r\_sb\_viewResolution](R_sb_viewResolution_%28cvar%29 "R sb viewResolution (cvar)")            ... Width of screen space shadow sampling
+  ----------------------------------------------------------------------------------------------- ----------------------------------------------------------
+
+

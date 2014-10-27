@@ -1,0 +1,36 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Specifies the amount of time an object will take to perform its
+movement.
+
+Usage
+-----
+
+*void* time( *float* **duration** )
+
+Parameters
+----------
+
+-   [duration] - Duration of the movement in seconds.
+
+Examples
+--------
+
+    $my_entity.time(3);
+
+Notes
+-----
+
+This script event does not return any values. The example above will
+cause the entity to take 3 seconds to perform whichever movement command
+comes after its time is set.
+
+\
+

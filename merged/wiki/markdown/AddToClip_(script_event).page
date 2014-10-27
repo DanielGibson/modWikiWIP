@@ -1,0 +1,39 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Adds the specified amount of ammo to the player's clip.
+
+Usage
+-----
+
+*void* addToClip( *value* )
+
+Parameters
+----------
+
+-   [value] - The amount of ammo to add to the player's clip.
+
+Examples
+--------
+
+     
+      void  weapon_bfg::Reload() {
+            weaponReloading();
+            playAnim( ANIMCHANNEL_ALL, "reload" );
+            waitUntil( animDone( ANIMCHANNEL_ALL, BFG_RELOAD_TO_IDLE ) );
+            addToClip( clipSize() );
+            weaponState( "Idle", BFG_RELOAD_TO_IDLE );
+
+Notes
+-----
+
+This script event does not return any values.
+
+\
+

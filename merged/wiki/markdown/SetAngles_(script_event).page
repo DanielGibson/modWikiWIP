@@ -1,0 +1,34 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Sets the current orientation of this entity (relative to bind parent if
+any).
+
+Usage
+-----
+
+*void* setAngles( *vector* **angles** )
+
+Parameters
+----------
+
+-   [angles] - The orientation to set this entity to.
+
+Examples
+--------
+
+    $my_entity.setAngles( '20 51 42' );
+
+Notes
+-----
+
+This script event does not return any values.
+
+\
+

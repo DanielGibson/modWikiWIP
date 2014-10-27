@@ -1,0 +1,35 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Returns an up vector for the given Euler angles.
+
+Usage
+-----
+
+*vector* angToUp( *vector* **angles** )
+
+Parameters
+----------
+
+-   [angles] - A vector who's components correspond with heading, pitch,
+    and bank.
+
+Examples
+--------
+
+     
+    upVec = sys.angToUp('12 56 78');
+
+Notes
+-----
+
+This script event returns an up vector.
+
+\
+

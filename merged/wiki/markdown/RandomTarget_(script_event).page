@@ -1,0 +1,36 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Returns a random targeted entity.
+
+Usage
+-----
+
+*entity* randomTarget( *string* ignoreName )
+
+Parameters
+----------
+
+-   [ignoreName] - The name of an entity to ignore.
+
+Examples
+--------
+
+     
+    $my_entity.randomTarget("player");
+
+Notes
+-----
+
+This script event returns a random targeted entity as an entity.
+
+Pass an entity name as ignoreName to skip that entity.
+
+\
+

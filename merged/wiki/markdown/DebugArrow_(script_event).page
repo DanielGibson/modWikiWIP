@@ -1,0 +1,41 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Line drawing for debug visualization.
+
+Usage
+-----
+
+*void* debugArrow( *vector* **color** , *vector* **start** , *vector*
+**end** , *float* **size** , *float* **lifetime** )
+
+Parameters
+----------
+
+-   [color] - The color to draw the arrow.
+-   [start] - The starting point of the arrow.
+-   [end] - The ending point of the arrow.
+-   [size] - The size of the arrow.
+-   [lifetime] - The duration to display the arrow.
+
+Examples
+--------
+
+     
+    sys.debugArrow('0 0 1', '68 84 58', '87 87 54', 4, 1);
+
+Notes
+-----
+
+This script event does not return any values.
+
+Lifetime of 0 == 1 frame.
+
+\
+

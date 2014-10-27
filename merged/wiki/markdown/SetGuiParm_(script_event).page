@@ -1,0 +1,35 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Sets a parameter on this entity's GUI.
+
+Usage
+-----
+
+*void* setGuiParm( *string* **key** , *string* **value** )
+
+Parameters
+----------
+
+-   [key] - The parameter to assign a value to.
+-   [value] - The value to assign to the key.
+
+Examples
+--------
+
+     
+    $my_entity.setGuiParm("floor", "District Admin");
+
+Notes
+-----
+
+This script event does not return any values.
+
+\
+

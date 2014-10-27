@@ -1,0 +1,35 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Returns a forward vector for the given Euler angles.
+
+Usage
+-----
+
+*vector* angToForward( *vector* **angles** )
+
+Parameters
+----------
+
+-   [angles] - A vector that's indivudual components correspond with
+    heading, pitch, and bank angles.
+
+Examples
+--------
+
+     
+    fwdVec = sys.angToForward('50 64 21');
+
+Notes
+-----
+
+This script event returns a forward vector.
+
+\
+

@@ -1,0 +1,43 @@
+<div align="left"
+style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
+
+![](/images/6/69/Q4square_bg.png) The information on this page is
+specific to [Quake 4](Quake_4 "Quake 4") .
+
+</div>
+
+------------------------------------------------------------------------
+
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Removes an entity from the current entity's list of targets
+
+Usage
+-----
+
+*void* removeTarget( *entity* **ent** )
+
+Parameters
+----------
+
+-   [ent] - Target to remove.
+
+Examples
+--------
+
+    $my_entity.removeTarget( $my_entity_2 );
+
+Notes
+-----
+
+This script event does not return any values.
+
+\
+

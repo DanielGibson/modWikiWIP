@@ -1,0 +1,34 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Issues an error to the console.
+
+Usage
+-----
+
+*void* error( *string* **text** )
+
+Parameters
+----------
+
+-   [text] - The text message to display in the console.
+
+Examples
+--------
+
+     
+    sys.error("Still there?");
+
+Notes
+-----
+
+This script event does not return any values.
+
+\
+

@@ -1,0 +1,34 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Returns the distance of this entity to a point.
+
+Usage
+-----
+
+*float* distanceToPoint( *vector* **point** )
+
+Parameters
+----------
+
+-   [point] - The point in space to trace the distance to.
+
+Examples
+--------
+
+     
+    $my_entity.distanceToPoint('120 52 10');
+
+Notes
+-----
+
+This script event returns the distance to a point as a float.
+
+\
+

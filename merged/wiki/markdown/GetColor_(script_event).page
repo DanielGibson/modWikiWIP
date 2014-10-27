@@ -1,0 +1,34 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Gets the color of this entity (shader parms Parm0, Parm1, Parm2).
+
+Usage
+-----
+
+*vector* getColor()
+
+Parameters
+----------
+
+This script event does not accept parameters.
+
+Examples
+--------
+
+     
+    color = $my_entity.getColor();
+
+Notes
+-----
+
+This script event returns the color of this entity as a vector.
+
+\
+

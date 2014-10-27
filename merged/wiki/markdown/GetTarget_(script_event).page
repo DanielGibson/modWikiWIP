@@ -1,0 +1,34 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Returns the requested target entity.
+
+Usage
+-----
+
+*entity* getTarget( *float* num )
+
+Parameters
+----------
+
+-   [num] - The target number to return.
+
+Examples
+--------
+
+     
+    $my_entity.getTarget(1);
+
+Notes
+-----
+
+This script returns the specified target value as an entity.
+
+\
+

@@ -1,0 +1,2743 @@
+<div align="left"
+style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
+
+![](/images/c/cb/D3square_bg.png) The information on this page is
+specific to [Doom 3](Doom_3 "Doom 3") .
+
+</div>
+
+------------------------------------------------------------------------
+
+Inheritance Overview
+--------------------
+
+The following diagram depicts the inheritance of
+[entities](Entitydef_%28decl%29 "Entitydef (decl)") all the way down to
+their root classes in the [game code](Coding "Coding") .
+
+-   **FullscreenFX**
+-   **FullscreenFXManager**
+-   **FullscreenFX\_Bloom**
+-   **FullscreenFX\_DoubleVision**
+-   **FullscreenFX\_EnviroSuit**
+-   **FullscreenFX\_Helltime**
+-   **FullscreenFX\_InfluenceVision**
+-   **FullscreenFX\_Multiplayer**
+-   **FullscreenFX\_Warp**
+-   **FxFader**
+-   **SetTimeState**
+-   aas48
+-   aas96
+-   aas\_cyberdemon
+-   aas\_guardian
+-   aas\_mancubus
+-   aas\_sabaoth
+-   aas\_types
+-   ammo\_names
+-   ammo\_types
+-   damage\_CyberRocketSplash
+-   damage\_CyberrocketDirect
+-   damage\_HugeExplosion
+-   damage\_RevRocket
+-   damage\_RevRocketSplash
+-   damage\_Smallexplosion
+-   damage\_VagaryObject
+-   damage\_archvilefirewall
+-   damage\_archvileincinerate
+-   damage\_bfg
+    -   damage\_bfg\_cinematic
+    -   damage\_bfg\_mp
+-   damage\_bfgFreq
+    -   damage\_bfgFreq\_cinematic
+-   damage\_bfgSplash
+    -   damage\_bfgSplash\_cinematic
+    -   damage\_bfgSplash\_mp
+-   damage\_bfg\_overcharge
+-   damage\_bullet\_chaingun
+    -   damage\_bullet\_chaingun\_mp
+-   damage\_bullet\_machinegun
+    -   damage\_bullet\_machinegun\_mp
+-   damage\_bullet\_pistol
+    -   damage\_bullet\_pistol\_mp
+-   damage\_bullet\_turret
+-   damage\_bullet\_zsec\_machinegun
+-   damage\_bullet\_zsec\_pistol
+-   damage\_bullet\_zsec\_shield
+-   damage\_bullet\_zsec\_shotgun
+-   damage\_cacodemon\_fireball
+-   damage\_cacodemon\_fireball\_splash
+-   damage\_chainsaw
+    -   damage\_chainsaw\_mp
+-   damage\_co\_electric\_trac
+-   damage\_crush
+-   damage\_explodingbarrel
+    -   damage\_explodingbarrel\_mp
+-   damage\_explosion
+-   damage\_fatalfall
+    -   damage\_fatalfall\_mp
+-   damage\_fireball\_hellknight
+-   damage\_fireball\_hellknight\_splash
+-   damage\_fists
+    -   damage\_fists\_mp
+-   damage\_flashlight
+    -   damage\_flashlight\_mp
+-   damage\_fragchamberfog
+-   damage\_fragchamberpipe
+-   damage\_generic
+-   damage\_gib
+-   damage\_grenadeDirect
+    -   damage\_grenadeDirect\_mp
+-   damage\_grenadeSplash
+    -   damage\_grenadeSplash\_inhand
+    -   damage\_grenadeSplash\_mp
+        -   damage\_grenadeSplash\_inhand\_mp
+-   damage\_guardianCharge
+-   damage\_guardianHeadButt
+-   damage\_guardianPoundGround
+-   damage\_guardian\_smash\_direct
+-   damage\_guardian\_smash\_splash
+-   damage\_hardfall
+    -   damage\_hardfall\_mp
+-   damage\_impfireball
+-   damage\_impfireball\_splash
+-   damage\_lava
+-   damage\_lightBreak
+-   damage\_mancubusSplash
+-   damage\_mancubusblast
+-   damage\_moverCrush
+-   damage\_noair
+-   damage\_painTrigger
+-   damage\_plasmablast
+    -   damage\_plasmablast\_mp
+-   damage\_plasmatracer
+-   damage\_rocketDirect
+    -   damage\_rocketDirect\_mp
+-   damage\_rocketSplash
+    -   damage\_rocketSplash\_mp
+-   damage\_sentry\_bullet
+-   damage\_shotgun
+    -   damage\_shotgun\_mp
+-   damage\_softfall
+    -   damage\_softfall\_mp
+-   damage\_soulSplash
+    -   damage\_soulSplash\_mp
+-   damage\_soulblast
+    -   damage\_soulblast\_mp
+-   damage\_suicide
+-   damage\_telefrag
+-   damage\_tick\_explode
+-   damage\_triggerhurt\_10
+-   damage\_triggerhurt\_100
+-   damage\_triggerhurt\_1000
+-   damage\_triggerhurt\_15
+-   damage\_triggerhurt\_25
+-   damage\_triggerhurt\_5
+-   damage\_triggerhurt\_50
+-   damage\_triggerhurt\_75
+-   damage\_triggerhurt\_toxin
+-   damage\_triggerhurt\_toxin\_1
+-   damage\_trite\_explode
+-   damage\_vulgar\_fireball
+-   damage\_vulgar\_fireball\_splash
+-   damage\_zombie\_commando\_cgun
+-   env\_ragdoll\_gibbable\_base
+    -   env\_ragdoll\_boney
+    -   env\_ragdoll\_fatty
+    -   env\_ragdoll\_lab1
+    -   env\_ragdoll\_lab2
+    -   env\_ragdoll\_lab3
+    -   env\_ragdoll\_lab4
+    -   env\_ragdoll\_maint
+    -   env\_ragdoll\_marine1
+    -   env\_ragdoll\_marine2
+    -   env\_ragdoll\_marine3
+    -   env\_ragdoll\_marine4
+    -   env\_ragdoll\_marine5
+    -   env\_ragdoll\_marine6
+    -   env\_ragdoll\_marine\_helmet
+    -   env\_ragdoll\_suit1
+    -   env\_ragdoll\_suit2
+    -   env\_ragdoll\_suit3
+    -   env\_ragdoll\_zmaint
+    -   env\_ragdoll\_zscientist1
+    -   env\_ragdoll\_zscientist2
+    -   env\_ragdoll\_zscientist3
+    -   env\_ragdoll\_zsecm
+    -   env\_ragdoll\_zsecp
+    -   env\_ragdoll\_zsecs
+-   func\_clipmodel
+-   func\_group
+-   **function\_t**
+-   **idAAS**
+-   **idAASFindAreaOutOfRange**
+-   **idAASFindAttackPosition**
+-   **idAASFindCover**
+-   **idAASLocal**
+-   **idAF**
+-   **idAFBody**
+-   **idAFConstraint**
+-   **idAFConstraint\_BallAndSocketJoint**
+-   **idAFConstraint\_BallAndSocketJointFriction**
+-   **idAFConstraint\_ConeLimit**
+-   **idAFConstraint\_Contact**
+-   **idAFConstraint\_ContactFriction**
+-   **idAFConstraint\_CylindricalJoint**
+-   **idAFConstraint\_Fixed**
+-   **idAFConstraint\_Hinge**
+-   **idAFConstraint\_HingeFriction**
+-   **idAFConstraint\_HingeSteering**
+-   **idAFConstraint\_Line**
+-   **idAFConstraint\_Plane**
+-   **idAFConstraint\_PyramidLimit**
+-   **idAFConstraint\_Slider**
+-   **idAFConstraint\_Spring**
+-   **idAFConstraint\_Suspension**
+-   **idAFConstraint\_UniversalJoint**
+-   **idAFConstraint\_UniversalJointFriction**
+-   **idAFPoseJointMod**
+-   **idAFTree**
+-   **idAngles**
+-   **idAnim**
+-   **idAnimBlend**
+-   **idAnimManager**
+-   **idAnimState**
+-   **idAnimator**
+-   **idBase64**
+-   **idBitMsg**
+-   **idBitMsgDelta**
+-   **idBounds**
+-   **idBox**
+-   **idCQuat**
+-   **idCVar**
+-   **idCamera**
+    -   **idCameraAnim**
+        -   admin\_overhear\_cam
+        -   admin\_pinkyattack\_cam
+        -   alphalabs1\_cam
+        -   alphalabs3\_vagaryintro\_cam
+        -   cin\_chain\_cam
+        -   cin\_e3bathroom\_cam
+        -   cin\_e3teaser\_cam
+        -   cin\_elevator\_cam
+        -   cin\_hkdeath\_cam
+        -   cin\_hkendroar\_cam
+        -   cin\_hkrip\_cam
+        -   cin\_logo\_cam
+        -   cin\_mars\_cam
+        -   cin\_posess2\_cam
+        -   cin\_posess3\_cam
+        -   cin\_posess5\_cam
+        -   cin\_posess\_cam
+        -   cin\_shake\_cam
+        -   cin\_tele\_cam
+        -   cin\_toob\_cam
+        -   comm1\_swann\_video\_cam
+        -   commoutside\_camzombie\_cam
+        -   commoutside\_sawintro\_cam
+        -   cpu1\_camphunt\_cam
+        -   cpuboss\_cam
+        -   delta1\_sargevcd\_cam
+        -   delta2a\_sci\_tele\_hell\_visions\_cam
+        -   delta2a\_scientist\_cam
+        -   delta2a\_teleporter\_cam
+        -   delta2b\_cam
+        -   delta2b\_roq2\_cam
+        -   delta2b\_roq3\_cam
+        -   delta4\_hkintro\_cam
+        -   ending\_cam
+        -   enpro\_escape\_cam
+        -   enpro\_exit\_cam
+        -   enpro\_glass\_cam
+        -   enpro\_lostintro\_cam
+        -   enpro\_monitor\_cam
+        -   enpro\_tuberide\_cam
+        -   enpro\_wounded\_cam
+        -   func\_camera\_anim
+        -   hell1\_guardiandeath\_cam
+        -   hell1\_guardianintro\_cam
+        -   hellhole\_cam
+        -   hellhole\_rescue\_cam
+        -   intro\_cam
+        -   marscity2\_sarge\_cam
+        -   marscity\_cinematic\_cam
+        -   marscity\_sci\_team\_request\_cam
+        -   monorail\_crash\_cam
+        -   monorail\_raisecommando\_cam
+        -   recycling1\_revintro\_cam
+        -   recycling2\_mancintro\_cam
+        -   recycling2\_video\_cam
+        -   site3\_roq\_cam
+        -   space\_cam
+        -   ss\_cgw\_cam
+        -   ss\_ew\_cam
+        -   ss\_gameprocamera
+        -   ss\_hero\_cam
+        -   ss\_hk\_cam
+        -   ss\_pcg\_cam
+        -   underground\_impintro\_cam
+        -   underground\_invasion\_cam
+    -   **idCameraView**
+        -   func\_cameraview
+-   **idClass**
+    -   **idForce**
+        -   **idForce\_Constant**
+        -   **idForce\_Drag**
+        -   **idForce\_Field**
+        -   **idForce\_Grab**
+        -   **idForce\_Spring**
+    -   **idThread**
+-   **idClip**
+-   **idClipModel**
+-   **idCmdArgs**
+-   **idCompiler**
+-   **idComplex**
+-   **idDebugGraph**
+-   **idDeclModelDef**
+-   **idDict**
+-   **idDragEntity**
+-   **idDrawVert**
+-   **idEditEntities**
+-   **idEntity**
+    -   **idActivator**
+        -   func\_activator
+    -   **idAnimatedEntity**
+        -   env\_bfg\_overcharge
+        -   env\_grenade\_explodeinhand
+        -   **idAFAttachment**
+        -   **idAFEntity\_Base**
+            -   **idAFEntity\_ClawFourFingers**
+                -   env\_crane
+            -   **idAFEntity\_Gibbable**
+                -   **idAFEntity\_Generic**
+                    -   env\_craneplatform\_caverns1
+                    -   env\_curtain
+                    -   env\_evilmeat
+                    -   env\_gibs\_leftarm
+                    -   env\_gibs\_leftleg
+                    -   env\_gibs\_rtlolegstump
+                    -   env\_gibs\_rtuplegstump
+                    -   env\_gibs\_ruparmstub
+                    -   env\_gibs\_spine
+                    -   env\_gibs\_torso
+                    -   env\_hellcage\_long
+                    -   env\_hellcage\_medium
+                    -   env\_hellcage\_short
+                    -   env\_hellchain
+                    -   env\_juglamp
+                    -   env\_pipe\_96
+                    -   env\_player\_doommarine
+                    -   env\_ragdoll\_archvile
+                    -   env\_ragdoll\_cherub
+                    -   env\_ragdoll\_commando
+                    -   env\_ragdoll\_hazmat
+                    -   env\_ragdoll\_hellknight
+                    -   env\_ragdoll\_imp
+                    -   env\_ragdoll\_mummy
+                    -   env\_ragdoll\_mummy\_fixed
+                    -   env\_ragdoll\_pinky
+                    -   env\_ragdoll\_poppy
+                    -   env\_ragdoll\_revenant
+                    -   env\_ragdoll\_sentry
+                    -   env\_ragdoll\_skeleton
+                        -   env\_ragdoll\_skeleton2
+                    -   env\_ragdoll\_zfem
+                    -   env\_rope
+                    -   env\_swing\_tubearm
+                    -   env\_swinglight\_long
+                    -   env\_swinglight\_long\_fixed
+                    -   env\_swinglight\_long\_wbulbs
+                    -   env\_swinglight\_long\_wbulbs\_128
+                    -   env\_swinglight\_long\_wbulbs\_192
+                    -   env\_swinglight\_long\_wbulbs\_32
+                    -   env\_swinglight\_long\_wbulbs\_fixed
+                    -   env\_swinglight\_round
+                    -   env\_swinglight\_sl128
+                    -   env\_swinglight\_sl128\_fixed
+                    -   env\_swinglight\_sl64
+                    -   env\_web
+                    -   env\_wirea
+                    -   env\_wireb
+                    -   env\_wirec
+                    -   env\_xianbutton\_1
+                    -   env\_xianbutton\_2
+                    -   env\_xianbutton\_3
+                    -   underground\_platform
+                -   **idAFEntity\_WithAttachedHead**
+                    -   env\_ragdoll\_marine\_stump
+                    -   **idAFEntity\_Harvest**
+                -   **idActor**
+                    -   **idAI**
+                        -   character\_default
+                            -   admin\_wounded\_marine
+                            -   char\_campbell\_bfg
+                                -   admin\_overhear\_campbell2
+                                -   admin\_overhear\_campbell\_bfg
+                                -   char\_campbell\_bfgcase
+                                    -   admin\_overhear\_campbell
+                                    -   marscity\_cinematic\_campbell
+                                    -   marscity\_hangar\_campbell
+                                -   commoutside\_campbell
+                                -   enpro\_campbell
+                            -   char\_poppy
+                            -   char\_sentry
+                                -   char\_sentry\_flashlight
+                                -   comm1\_sentry
+                            -   comm1\_video\_swann
+                            -   cpu1\_camphunt\_campbell
+                            -   delta5\_wounded\_swann
+                            -   enpro\_wounded\_player
+                            -   hellhole\_swann
+                            -   npc\_base
+                                -   admin\_overhear\_swann
+                                -   admin\_vent\_swann
+                                -   alphalabs1\_labcoat\_bald
+                                -   alphalabs2\_marine\_helmet\_p90
+                                -   alphalabs2\_scientist1
+                                -   alphalabs3\_fragchamber\_scientist
+                                -   alphalabs3\_fragchamber\_scientist2
+                                -   alphalabs3\_fragchamber\_skeleton
+                                -   blooper\_betruger
+                                -   caverns\_char\_maint\_scared
+                                -   char\_betruger
+                                -   char\_campbell
+                                -   char\_hazmat
+                                    -   delta4\_hazguy
+                                -   char\_labcoat\_black
+                                -   char\_marine\_asian\_chair1
+                                -   char\_marine\_young\_chair1
+                                -   char\_security\_goggles\_pistol
+                                -   char\_swann
+                                    -   commoutside\_swann
+                                    -   enpro\_swann
+                                -   cpu1\_wounded\_campbell
+                                -   delta1\_sarge\_video
+                                -   delta2a\_scientist
+                                -   delta2a\_scientist\_return
+                                -   delta2b\_hazmat
+                                -   delta3\_betruger
+                                -   delta4\_betruger
+                                -   enpro\_soldier1
+                                -   enpro\_soldier2
+                                -   enpro\_soldier3
+                                -   enpro\_soldier4
+                                -   enpro\_wounded\_marine
+                                -   enpro\_wounded\_marine2
+                                -   hellhole\_cin\_marine
+                                -   hellhole\_cin\_npcplayer
+                                -   hellhole\_lookmarine
+                                -   hellhole\_pdamarine
+                                -   hellhole\_walkmarine
+                                -   marscity2\_hallway\_marine
+                                -   marscity2\_maint\_ceiling
+                                -   marscity2\_video\_sarge
+                                -   marscity\_char\_maint\_asian\_pda
+                                -   marscity\_cinematic\_betruger
+                                -   marscity\_cinematic\_doctor
+                                -   marscity\_cinematic\_player
+                                -   marscity\_cinematic\_sarge
+                                -   marscity\_cinematic\_sarge2
+                                -   marscity\_cinematic\_security
+                                -   marscity\_cinematic\_swann
+                                -   marscity\_cinematic\_victim
+                                -   marscity\_civilian1
+                                -   marscity\_civilian2
+                                -   marscity\_civilian\_bathroom
+                                -   marscity\_civilian\_hallway
+                                -   marscity\_civilian\_kitchen
+                                -   marscity\_hangar\_player
+                                -   marscity\_hangar\_swann
+                                -   marscity\_ipn\_news
+                                -   marscity\_labcoat\_black
+                                -   marscity\_labcoat\_monitor
+                                -   marscity\_labcoat\_young
+                                -   marscity\_maint1\_hallway
+                                -   marscity\_maint2\_hallway
+                                -   marscity\_meeting\_betruger
+                                -   marscity\_meeting\_player
+                                -   marscity\_reception\_player
+                                -   marscity\_receptionist
+                                -   marscity\_receptionist2
+                                    -   marscity\_receptionist3
+                                -   marscity\_receptionist\_start
+                                -   marscity\_sci\_team\_request
+                                -   marscity\_sec\_checkin
+                                -   marscity\_sec\_window
+                                -   marscity\_sec\_window2
+                                -   marscity\_security\_goggles\_pda
+                                -   marscity\_security\_machinegun
+                                -   marscity\_soldier\_bald\_pda
+                                -   marscity\_soldier\_black
+                                -   marscity\_soldier\_young\_pda
+                                -   marscity\_suit\_asian\_chair
+                                -   marscity\_suit\_asian\_chair2
+                                -   marscity\_suit\_officeguy1
+                                -   marscity\_suit\_young2
+                                -   marscity\_suit\_young\_chair
+                                -   marscity\_walking\_swann
+                                -   monorail\_raisecommando\_betruger
+                                -   monorail\_raisecommando\_changer
+                                -   monorail\_raisecommando\_marine1
+                                -   monorail\_rider
+                                -   site3\_sci
+                                -   test\_labcoat\_black
+                                -   underground\_choke\_victim
+                                -   underground\_choke\_zombie
+                                -   underground\_crazy\_sci
+                                -   underground\_crazy\_sci\_cin
+                                -   underground\_invasion\_labcoat
+                                -   underground\_invasion\_security
+                                -   underground\_invasion\_suit
+                                -   underground\_labcoat\_young\_todd
+                                -   underground\_maint\_asian\_eric
+                                -   underground\_maint\_asian\_eric2
+                                -   underground\_maint\_bald\_ross
+                                -   underground\_maint\_old\_charles
+                                -   underground\_maint\_young\_daniel
+                                -   underground\_security\_helmet\_mark
+                                -   underground\_window\_security
+                                -   underground\_zintro\_victim
+                                -   underground\_zintro\_zombie
+                            -   recycling2\_video\_betruger
+                            -   underground\_cin\_player
+                            -   underground\_cin\_player3
+                        -   **idAI\_Vagary**
+                        -   monster\_boss\_guardian\_spawner
+                        -   monster\_default
+                            -   hell1\_cin\_guardian
+                            -   monster\_boss\_cyberdemon
+                                -   hellhole\_cin\_cyberdemon
+                                -   hellhole\_cin\_cyberdemon2
+                            -   monster\_boss\_guardian
+                            -   monster\_boss\_guardian\_seeker
+                            -   monster\_boss\_sabaoth
+                            -   monster\_boss\_vagary
+                                -   caverns\_vagary1
+                                -   caverns\_vagary2
+                            -   monster\_demon\_archvile
+                            -   monster\_demon\_cherub
+                            -   monster\_demon\_d3xp\_bruiser
+                            -   monster\_demon\_hellknight
+                                -   caverns\_hellknight2
+                                -   delta1\_hellknight
+                                -   site3\_hellknight
+                            -   monster\_demon\_imp
+                                -   admin\_imp1
+                                -   admin\_imp2
+                                -   alphalabs2\_imp
+                                -   caverns\_imp1
+                                -   caverns\_imp2
+                                -   delta2a\_imp
+                                -   delta2b\_imp
+                                -   hellhole\_imp
+                                -   marscity2\_imp
+                                -   underground\_tunnel\_imp
+                            -   monster\_demon\_imp\_crawler
+                            -   monster\_demon\_maggot
+                                -   alphalabs1\_maggot3
+                                -   alphalabs2\_maggot
+                                -   hellhole\_maggot
+                            -   monster\_demon\_mancubus
+                            -   monster\_demon\_pinky
+                                -   admin\_pinky\_glassbreak
+                            -   monster\_demon\_revenant
+                            -   monster\_demon\_sentry
+                            -   monster\_demon\_tick
+                            -   monster\_demon\_trite
+                                -   cpu1\_monster\_trite
+                                -   ss\_trite
+                                -   ss\_trite2
+                                -   ss\_trite3
+                                -   ss\_trite4
+                            -   monster\_demon\_vulgar
+                            -   monster\_demon\_wraith
+                            -   monster\_flying\_cacodemon
+                            -   monster\_flying\_lostsoul
+                            -   monster\_turret
+                                -   monster\_turret\_light
+                            -   monster\_zombie\_commando\_cgun
+                            -   zombie\_default
+                                -   commoutside\_camzombie\_zomb
+                                -   monster\_zombie\_base
+                                    -   delta2b\_keycardzombie
+                                    -   monster\_zombie\_jumpsuit
+                                    -   monster\_zombie\_labcoat\_hanging
+                                    -   monster\_zombie\_labcoat\_limb
+                                    -   monster\_zombie\_labcoat\_neckstump
+                                    -   monster\_zombie\_labcoat\_pipe
+                                    -   monster\_zombie\_labcoat\_skinny
+                                    -   monster\_zombie\_maint\_bald
+                                        -   delta2a\_zombie\_office1
+                                        -   delta2a\_zombie\_office2
+                                        -   underground\_crazy\_zombie
+                                        -   underground\_fatty
+                                    -   monster\_zombie\_maint\_no\_jaw
+                                        -   underground\_invasion\_maintzombie
+                                    -   monster\_zombie\_maint\_nojaw
+                                    -   monster\_zombie\_maint\_skinny
+                                    -   monster\_zombie\_maint\_wrench
+                                    -   monster\_zombie\_suit\_bloodymouth
+                                    -   monster\_zombie\_suit\_neckstump
+                                    -   monster\_zombie\_suit\_skinny
+                                        -   marscity2\_hallway\_zombie
+                                    -   monster\_zombie\_tshirt\_bald
+                                    -   monster\_zombie\_tshirt\_blown
+                                    -   underground\_invasion\_labzombie
+                                    -   underground\_zombie\_maint\_bald
+                                -   monster\_zombie\_bernie
+                                -   monster\_zombie\_boney
+                                -   monster\_zombie\_chainsaw
+                                -   monster\_zombie\_commando
+                                    -   delta2a\_commando
+                                -   monster\_zombie\_fat
+                                    -   delta2a\_fatty
+                                    -   monster\_zombie\_fat2
+                                    -   monster\_zombie\_fat\_wrench
+                                -   monster\_zombie\_jumpsuit\_old
+                                -   monster\_zombie\_maint
+                                    -   monster\_zombie\_maint2
+                                    -   monster\_zombie\_maint\_fast
+                                -   monster\_zombie\_maint\_flashlight
+                                -   monster\_zombie\_morgue
+                                    -   marscity2\_zombie\_morgue
+                                -   monster\_zombie\_sawyer
+                                -   monster\_zombie\_zfem
+                                -   monster\_zsec\_pistol
+                                    -   monster\_zsec\_pistol\_slowfire
+                                    -   monster\_zsec\_shotgun
+                                        -   monster\_zsec\_machinegun
+                                        -   monster\_zsec\_shield
+                                        -   underground\_zsecshotgun
+                    -   **idPlayer**
+                        -   player\_base
+                            -   player\_doommarine
+                            -   player\_doommarine\_mp
+                -   **idAnimated**
+                    -   alphalabs1\_player
+                    -   caverns\_boulderbridge
+                    -   caverns\_bridge
+                    -   caverns\_bridgeback
+                    -   caverns\_bridgecrane
+                    -   caverns\_bridgefront
+                    -   caverns\_hellknight
+                    -   caverns\_hkwall
+                    -   caverns\_pinky
+                    -   caverns\_vagrocks
+                    -   cin\_mars\_flare
+                    -   comm1\_sentry\_blank
+                    -   comm1\_sentryloader
+                    -   commoutside\_cin\_sawyer
+                    -   commoutside\_hellgoo1
+                    -   commoutside\_player
+                    -   delta1\_reactor
+                    -   delta1\_scipull
+                    -   enpro\_keycard
+                    -   env\_airlockdoor
+                    -   env\_cage\_corpse
+                    -   env\_dragtest
+                    -   env\_implanding
+                    -   env\_inviso
+                    -   env\_pinky\_pipes
+                    -   env\_playerandallguns
+                    -   env\_ragdoll\_tentacle
+                    -   env\_reactor
+                    -   env\_sencpu
+                    -   env\_severed\_zombie
+                    -   env\_skullgate
+                    -   env\_storagecabinet
+                    -   env\_storagecabinet\_openback
+                    -   env\_zsci\_corpse
+                    -   func\_animate
+                        -   cin\_base
+                            -   admin\_bfgcase
+                            -   admin\_doorframe\_pinkyattack
+                            -   admin\_impdoors
+                            -   admin\_overhear\_player
+                            -   admin\_pinkyattack\_pinky
+                            -   admin\_pinkyattack\_shards
+                            -   admin\_railing\_pinkyattack
+                            -   alphalabs1\_helldoll
+                            -   alphalabs1\_imp
+                            -   alphalabs1\_maggot1
+                            -   alphalabs1\_maggot2
+                            -   alphalabs1\_pentagramdood
+                            -   alphalabs2\_cin\_imp
+                            -   alphalabs2\_elevatorenv
+                            -   alphalabs3\_vagaryintro\_player
+                            -   alphalabs3\_vagaryintro\_vagary
+                            -   blooper\_hazguy
+                            -   cin\_anim1\_fatty
+                            -   cin\_anim1\_pinky
+                            -   cin\_anim1\_uacm
+                            -   cin\_anim2\_fatty
+                            -   cin\_anim2\_pinky
+                            -   cin\_anim3\_fatty
+                            -   cin\_anim3\_pinky
+                            -   cin\_anim5\_fatty
+                            -   cin\_anim5\_pinky
+                            -   cin\_anim9a\_fatty
+                            -   cin\_anim9a\_pinky
+                            -   cin\_anim9a\_uacm
+                            -   cin\_chain\_uacm
+                            -   cin\_chain\_zcc
+                            -   cin\_chain\_zct
+                            -   cin\_e3teaser\_hk
+                            -   cin\_elevator\_elev
+                            -   cin\_elevator\_player
+                            -   cin\_fat\_drag
+                            -   cin\_hk\_hk
+                            -   cin\_hk\_walkbydoor
+                            -   cin\_hkdeath\_uac
+                            -   cin\_hkendroar\_hk
+                            -   cin\_hkrip\_uac
+                            -   cin\_pink\_drag
+                            -   cin\_posess\_hk
+                            -   cin\_posess\_imp
+                            -   cin\_posess\_sec
+                            -   cin\_posess\_skull
+                            -   cin\_posess\_skull2
+                            -   cin\_posess\_skull3
+                            -   cin\_posess\_zsec
+                            -   cin\_shake
+                            -   cin\_tele\_skull7
+                            -   cin\_toob
+                            -   cin\_zombie\_drag
+                            -   commoutside\_fatty
+                            -   commoutside\_vehicle
+                            -   cpuboss\_cin\_player
+                            -   cpuboss\_cin\_sabaoth
+                            -   delta2a\_cin\_fatty
+                            -   delta2a\_player
+                            -   delta2a\_player\_scientist
+                            -   delta2a\_teleporter
+                            -   delta2b\_tankimp
+                            -   delta2b\_tankimpwires
+                            -   delta2b\_tankrev
+                            -   delta2b\_tankrevwires
+                            -   delta2b\_waterwires
+                            -   delta4\_cin\_hazguy
+                            -   delta4\_cin\_hk1
+                            -   delta4\_cin\_hk2
+                            -   delta4\_cin\_player
+                            -   delta4\_cin\_player\_start
+                            -   delta4\_cin\_teleporter
+                            -   ending\_debris
+                            -   enpro\_cin\_female
+                            -   enpro\_cin\_lostsoul
+                            -   enpro\_cin\_machinegun
+                            -   enpro\_cin\_player
+                            -   enpro\_cin\_wraith
+                            -   enpro\_exit\_helmet
+                            -   enpro\_exit\_imp1
+                            -   enpro\_exit\_imp2
+                            -   enpro\_exit\_imp3
+                            -   enpro\_lost\_chair
+                            -   enpro\_lost\_spine
+                            -   env\_bfgcase
+                            -   hell1\_cin\_player
+                            -   hell1\_soulcube
+                            -   hell\_lstep
+                            -   hell\_rstep
+                            -   hellhole\_cin\_player
+                            -   hellhole\_cin\_player2
+                            -   hellhole\_cin\_player3
+                            -   hellhole\_coffinbricks
+                            -   hellhole\_cyberbricks
+                            -   hellhole\_cyberdeathrocks
+                            -   hellhole\_soulcube
+                            -   intro\_meat
+                            -   intro\_panel
+                            -   intro\_pinky
+                            -   marscity2\_cin\_fatty
+                            -   marscity2\_cin\_imp
+                            -   marscity\_dufflebag
+                            -   marscity\_hangar
+                            -   marscity\_ship
+                            -   marscity\_ship2
+                            -   marscity\_ship3
+                            -   marscity\_smallpda
+                            -   marscity\_suit\_chair
+                            -   monorail\_crash\_debris
+                            -   monorail\_crashsight\_player
+                            -   monorail\_raisecommando\_zct
+                            -   monster\_boss\_maledict\_cinematic
+                            -   monster\_demon\_imp\_crawl\_armdoor
+                            -   monster\_zombie\_fat\_eating
+                            -   monster\_zombie\_jumpsuit\_influence
+                            -   prop\_adrenaline
+                            -   prop\_big\_cushy\_chair
+                            -   prop\_cola
+                            -   prop\_dufflebag
+                            -   prop\_flashlight
+                            -   prop\_foamcup
+                            -   prop\_lftflashlight
+                            -   prop\_machinegun
+                            -   prop\_metal\_kitchen\_chair
+                            -   prop\_metal\_lounge\_chair
+                            -   prop\_pda
+                            -   prop\_pistol
+                            -   prop\_shotgun
+                            -   prop\_soft\_desk\_chair1
+                            -   prop\_soft\_desk\_chair2
+                            -   prop\_tabletpc
+                            -   prop\_wrench
+                            -   recycling1\_revintro\_impact
+                            -   recycling1\_revintro\_player
+                            -   recycling1\_revintro\_player2
+                            -   recycling1\_revintro\_rev
+                            -   recycling1\_skybridge
+                            -   recycling2\_imp1\_cin
+                            -   recycling2\_imp2\_cin
+                            -   recycling2\_imp3\_cin
+                            -   recycling2\_mancintro\_player
+                            -   space\_planet
+                            -   space\_ship
+                            -   space\_stars
+                            -   ss\_cgw\_gibs
+                            -   ss\_cgw\_jump
+                            -   ss\_cgw\_zsci
+                            -   ss\_cgw\_zsci2
+                            -   ss\_ew\_fat
+                            -   ss\_ew\_jump
+                            -   ss\_ew\_maint
+                            -   ss\_hellknight
+                            -   ss\_hero\_player
+                            -   ss\_hero\_player\_chainsaw
+                            -   ss\_hero\_player\_machinegun
+                            -   ss\_hero\_player\_pistol
+                            -   ss\_hero\_player\_shotgun
+                            -   ss\_hero\_player\_shotgun2
+                            -   ss\_hk\_gamepro
+                            -   ss\_imp\_gamepro
+                            -   ss\_pcg\_hk
+                            -   ss\_pcg\_player
+                            -   underground\_cin\_pistol
+                            -   underground\_cin\_player2
+                            -   underground\_hallway\_skulls
+                            -   underground\_impcrawl\_door
+                            -   underground\_impstairs
+                            -   underground\_invasion\_bigskull
+                            -   underground\_invasion\_chestskull
+                            -   underground\_invasion\_ledge
+                            -   underground\_invasion\_lightattacher
+                            -   underground\_invasion\_littleskulls
+                            -   underground\_invasion\_pentagram
+                            -   underground\_invasion\_smallerskulls
+                    -   maledict\_debris1
+                    -   maledict\_world
+                    -   recycling2\_mancintro\_manc
+                    -   recycling2\_mancintro\_pipes
+                    -   site3\_floor
+                    -   test\_soldier
+                    -   underground\_impintro\_imp
+                    -   underground\_mcu\_pipes
+            -   **idAFEntity\_SteamPipe**
+                -   env\_bluesteampipe\_128
+                -   env\_greysteampipe\_128
+                -   env\_hires\_steampipe
+                -   env\_orangesteampipe\_128
+                -   env\_steampipe\_a
+                -   env\_steampipe\_b
+                -   env\_steampipe\_c
+            -   **idAFEntity\_Vehicle**
+                -   **idAFEntity\_VehicleFourWheels**
+                    -   env\_buggy
+                -   **idAFEntity\_VehicleSimple**
+                -   **idAFEntity\_VehicleSixWheels**
+                    -   env\_locust
+                    -   **idAFEntity\_VehicleAutomated**
+        -   **idTestModel**
+        -   **idWeapon**
+    -   **idBeam**
+        -   func\_beam
+    -   **idBrittleFracture**
+        -   func\_fracture
+    -   **idCombatNode**
+        -   ai\_attackcone
+        -   ai\_attackcone\_once
+        -   ai\_attackcone\_turret
+    -   **idCursor3D**
+    -   **idDamagable**
+        -   func\_damagable
+    -   **idDebris**
+        -   debris\_barrelpiece
+        -   debris\_barrelpiece2
+        -   debris\_barreltop
+        -   debris\_barreltop2
+        -   debris\_brass
+        -   debris\_largeshrapnel
+        -   debris\_shotgunbrass
+        -   debris\_shrapnel
+    -   **idEarthQuake**
+        -   func\_earthquake
+    -   **idEntityFx**
+        -   func\_fx
+        -   **idTeleporter**
+            -   func\_teleporter
+    -   **idExplodable**
+        -   func\_explosion
+    -   **idForceField**
+        -   func\_forcefield
+    -   **idFuncAASObstacle**
+        -   func\_aas\_obstacle
+    -   **idFuncAASPortal**
+        -   func\_aas\_portal
+    -   **idFuncMountedObject**
+        -   **idFuncMountedWeapon**
+    -   **idFuncPortal**
+        -   func\_portal
+    -   **idFuncRadioChatter**
+        -   func\_radiochatter
+    -   **idFuncSmoke**
+        -   func\_smoke
+    -   **idGrabber**
+    -   **idHarvestable**
+    -   **idItem**
+        -   ammo\_belt\_small
+            -   ammo\_belt\_small\_mp
+        -   ammo\_bfg\_small
+        -   ammo\_bullets\_large
+            -   ammo\_bullets\_large\_mp
+        -   ammo\_bullets\_small
+            -   ammo\_bullets\_small\_mp
+        -   ammo\_cells\_large
+            -   ammo\_cells\_large\_mp
+        -   ammo\_cells\_small
+            -   ammo\_cells\_small\_mp
+        -   ammo\_clip\_large
+            -   ammo\_clip\_large\_mp
+        -   ammo\_clip\_small
+            -   ammo\_clip\_small\_mp
+        -   ammo\_grenade\_small
+            -   ammo\_grenade\_small\_mp
+        -   ammo\_rockets\_large
+            -   ammo\_rockets\_large\_mp
+        -   ammo\_rockets\_small
+            -   ammo\_rockets\_small\_mp
+        -   ammo\_shells\_large
+            -   ammo\_shells\_large\_mp
+        -   ammo\_shells\_small
+            -   ammo\_shells\_small\_mp
+        -   **idItemPowerup**
+            -   powerup\_adrenaline
+            -   powerup\_berserk
+            -   powerup\_haste
+            -   powerup\_invisibility
+            -   powerup\_irgoggles
+            -   powerup\_megahealth
+        -   **idItemTeam**
+        -   **idMoveableItem**
+            -   **idMoveablePDAItem**
+        -   **idObjective**
+        -   **idPDAItem**
+        -   **idVideoCDItem**
+        -   item\_default
+            -   item\_aircannister
+            -   item\_armor\_security
+                -   item\_armor\_security\_mp
+                -   moveable\_item\_armor\_security
+            -   item\_armor\_shard
+                -   item\_armor\_shard\_mp
+            -   item\_backpack
+            -   item\_battery
+            -   item\_data\_linker
+            -   item\_generic
+            -   item\_key\_blue
+            -   item\_key\_red
+            -   item\_key\_yellow
+            -   item\_keycard\_aco
+            -   item\_keycard\_generic
+            -   item\_medkit
+                -   item\_medkit\_mp
+                -   moveable\_item\_medkit
+            -   item\_medkit\_small
+                -   item\_medkit\_small\_mp
+            -   item\_objective
+            -   item\_objectivecomplete
+            -   item\_pda
+                -   moveable\_item\_pda
+                    -   pda\_alphalabs1\_labcoat\_bald
+                    -   pda\_alphalabs3\_fragchamber\_scientist2
+                    -   pda\_marscity\_char\_maint\_asian\_pda
+                    -   pda\_marscity\_labcoat\_black
+                    -   pda\_marscity\_maint1\_hallway
+                    -   pda\_marscity\_security\_goggles\_pda
+                    -   pda\_marscity\_soldier\_bald\_pda
+                    -   pda\_marscity\_soldier\_black
+                    -   pda\_marscity\_soldier\_young\_pda
+                    -   pda\_underground\_maint\_young\_daniel
+                    -   pda\_underground\_security\_helmet\_mark
+            -   item\_videocd
+            -   moveable\_item\_default
+                -   moveable\_item\_head\_pork
+                -   moveable\_item\_helmet
+                -   moveable\_item\_lantern
+                -   moveable\_item\_lantern\_world
+                -   moveable\_item\_left\_waist\_pork
+                -   moveable\_item\_lup\_leg\_pork
+                -   moveable\_item\_pelvis\_pork
+                -   moveable\_item\_rup2\_leg\_pork
+                -   moveable\_item\_rup\_arm\_pork
+                -   moveable\_item\_rup\_leg\_pork
+                -   moveable\_item\_shield
+                -   moveable\_item\_skull\_pork
+                -   moveable\_item\_tabletpc
+                -   moveable\_item\_torso\_pork
+        -   powerup\_chronocaust
+        -   powerup\_invulnerability
+        -   powerup\_megasphere
+        -   powerup\_soulsphere
+        -   weapon\_bfg
+            -   moveable\_item\_bfg
+                -   moveable\_item\_bfg\_mp
+            -   weapon\_bfg\_mp
+        -   weapon\_chaingun
+            -   moveable\_item\_chaingun
+                -   moveable\_item\_chaingun\_mp
+            -   weapon\_chaingun\_mp
+        -   weapon\_chainsaw
+            -   moveable\_item\_chainsaw
+                -   moveable\_item\_chainsaw\_mp
+            -   weapon\_chainsaw\_mp
+        -   weapon\_flashlight
+            -   moveable\_item\_flashlight
+        -   weapon\_handgrenade
+            -   moveable\_item\_grenades
+                -   moveable\_item\_grenades\_mp
+            -   weapon\_handgrenade\_mp
+        -   weapon\_machinegun
+            -   moveable\_item\_machinegun
+                -   moveable\_item\_machinegun\_mp
+            -   weapon\_machinegun\_mp
+        -   weapon\_pda
+        -   weapon\_pistol
+            -   moveable\_item\_pistol
+                -   moveable\_item\_pistol\_mp
+            -   weapon\_pistol\_mp
+        -   weapon\_plasmagun
+            -   moveable\_item\_plasmagun
+                -   moveable\_item\_plasmagun\_mp
+            -   weapon\_plasmagun\_mp
+        -   weapon\_rocketlauncher
+            -   moveable\_item\_rocketlauncher
+                -   moveable\_item\_rocketlauncher\_mp
+            -   weapon\_rocketlauncher\_mp
+        -   weapon\_shotgun
+            -   moveable\_item\_shotgun
+                -   moveable\_item\_shotgun\_mp
+            -   weapon\_shotgun\_mp
+        -   weapon\_soulcube
+    -   **idItemRemover**
+        -   func\_itemremove
+        -   **idObjectiveComplete**
+    -   **idLight**
+        -   light
+            -   seeker\_light1
+            -   seeker\_light2
+    -   **idLiquid**
+        -   func\_liquid
+    -   **idLocationEntity**
+        -   info\_location
+    -   **idLocationSeparatorEntity**
+        -   info\_locationSeparator
+    -   **idMoveable**
+        -   **idBarrel**
+            -   **idExplodingBarrel**
+                -   moveable\_burningbarrel
+                -   moveable\_burningtank
+                -   moveable\_explodingbarrel
+                -   moveable\_explodingtank
+        -   moveable\_base
+            -   moveable\_base\_barrel
+                -   moveable\_barrel1
+                -   moveable\_barrel3
+                -   moveable\_cannister
+            -   moveable\_base\_boulder
+            -   moveable\_base\_brick
+                -   moveable\_guardian\_brick
+            -   moveable\_base\_domino
+            -   moveable\_base\_fixed
+                -   moveable\_barrel2
+                -   moveable\_beaker
+                -   moveable\_blaptop
+                -   moveable\_bottle1
+                -   moveable\_burger
+                -   moveable\_burgerboxclose
+                -   moveable\_burgerboxopen
+                -   moveable\_cartonbox1
+                -   moveable\_cartonbox2
+                -   moveable\_cartonbox3
+                -   moveable\_cartonbox4
+                -   moveable\_cartonbox5
+                -   moveable\_cartonbox6
+                -   moveable\_cartonbox7
+                -   moveable\_cartonbox8
+                -   moveable\_chair1
+                -   moveable\_chair2
+                -   moveable\_chair5
+                -   moveable\_cokecan
+                -   moveable\_compcart
+                -   moveable\_computer
+                -   moveable\_cone
+                -   moveable\_desklamp
+                -   moveable\_diamondbox
+                -   moveable\_diamondbox\_sm
+                -   moveable\_filecabinet1
+                -   moveable\_fireext
+                -   moveable\_foamcup
+                -   moveable\_gizmo1
+                -   moveable\_gizmo2
+                -   moveable\_gizmo3
+                -   moveable\_hangingmonitor
+                -   moveable\_infusion
+                -   moveable\_keyboard1
+                -   moveable\_kitchenchair
+                -   moveable\_ktable
+                -   moveable\_laptop
+                -   moveable\_metalbox1
+                -   moveable\_microscope
+                -   moveable\_monitor
+                -   moveable\_monitorflip
+                -   moveable\_mop
+                -   moveable\_mopbucket
+                -   moveable\_normchair
+                -   moveable\_paperwad
+                -   moveable\_pc1
+                -   moveable\_phone
+                -   moveable\_plasticbin
+                -   moveable\_plasticbinmini
+                -   moveable\_plasticjar1
+                -   moveable\_plasticjar2
+                -   moveable\_spigotcan
+                -   moveable\_tablecart1
+                -   moveable\_tablecart2
+                -   moveable\_tech\_chair1
+                -   moveable\_trashcan01
+                -   moveable\_tray
+                -   moveable\_utilitylamp
+            -   moveable\_wrench
+    -   **idMover**
+        -   func\_mover
+            -   func\_cameraTarget
+            -   func\_mover\_amodel
+        -   **idElevator**
+            -   func\_elevator
+    -   **idMover\_Binary**
+        -   **idDoor**
+            -   func\_door
+        -   **idPlat**
+            -   func\_plat
+    -   **idMover\_Periodic**
+        -   **idBobber**
+            -   func\_bobbing
+        -   **idPendulum**
+            -   func\_pendulum
+        -   **idRiser**
+            -   func\_riser
+        -   **idRotater**
+            -   func\_rotating
+    -   **idMultiModelAF**
+        -   **idChain**
+            -   env\_chain
+    -   **idPathCorner**
+        -   path\_default
+            -   path\_anim
+            -   path\_attack
+            -   path\_conversation
+            -   path\_conversation\_listen
+            -   path\_corner
+            -   path\_cycleanim
+            -   path\_headanim
+            -   path\_hide
+            -   path\_jump
+            -   path\_lookat
+            -   path\_show
+            -   path\_talk
+            -   path\_talk\_primary
+            -   path\_talk\_secondary
+            -   path\_talk\_triggered
+            -   path\_turn
+            -   path\_wait
+            -   path\_waitforheadanim
+            -   path\_waitfortrigger
+        -   path\_sentry\_ignore\_player
+        -   path\_sentry\_lead\_player
+        -   path\_sentry\_light\_off
+        -   path\_sentry\_light\_on
+        -   path\_sentry\_shutdown
+        -   path\_sentry\_unlock\_door
+    -   **idPhantomObjects**
+        -   func\_phantom\_objects
+    -   **idPlayerStart**
+        -   info\_player\_deathmatch
+        -   info\_player\_start
+        -   info\_player\_teleport
+    -   **idPortalSky**
+    -   **idProjectile**
+        -   **idBFGProjectile**
+            -   projectile\_bfg
+                -   projectile\_bfg\_cinematic
+                -   projectile\_bfg\_mp
+                -   projectile\_sabaoth\_bfg
+        -   **idGuidedProjectile**
+            -   **idSoulCubeMissile**
+                -   projectile\_soulblast
+            -   projectile\_rev\_rocket
+                -   projectile\_rev\_rocket\_cinematic
+        -   projectile\_bullet\_machinegun
+            -   projectile\_bullet\_machinegun\_mp
+        -   projectile\_bullet\_pistol
+            -   projectile\_bullet\_pistol\_mp
+        -   projectile\_bullet\_shotgun
+            -   projectile\_bullet\_shotgun\_mp
+        -   projectile\_bullet\_turret
+        -   projectile\_bullet\_zsec\_machinegun
+        -   projectile\_bullet\_zsec\_pistol
+        -   projectile\_bullet\_zsec\_shield
+        -   projectile\_bullet\_zsec\_shotgun
+        -   projectile\_cacodemon\_fireball
+        -   projectile\_chaingunbullet
+            -   projectile\_chaingunbullet\_mp
+        -   projectile\_cyber\_rocket
+        -   projectile\_fireball\_hellknight
+        -   projectile\_grenade
+            -   projectile\_grenade\_mp
+        -   projectile\_guardian\_smash
+        -   projectile\_impfireball
+        -   projectile\_mancubus\_rocket
+        -   projectile\_plasmablast
+            -   projectile\_plasmablast\_mp
+        -   projectile\_plasmatracer
+        -   projectile\_rocket
+            -   projectile\_rocket\_mp
+        -   projectile\_sentry\_bullet
+        -   projectile\_vulgar\_fireball
+        -   projectile\_zombie\_commando\_cgun
+    -   **idSecurityCamera**
+        -   func\_securitycamera
+    -   **idShaking**
+        -   func\_shaking
+    -   **idShockwave**
+    -   **idSound**
+        -   sound\_d3dm5\_generator
+        -   sound\_d3dm5\_wind
+        -   sound\_fragchamber\_secretSteam
+        -   speaker
+    -   **idSpawnableEntity**
+        -   ai\_lostcombat
+        -   guardian\_poundground\_explosion
+        -   wraith\_spawneffect
+    -   **idSplinePath**
+        -   func\_splinemover
+    -   **idSpring**
+        -   func\_spring
+    -   **idStaticEntity**
+        -   func\_static
+            -   func\_emitter
+                -   func\_splat
+        -   **idFuncEmitter**
+            -   **idFuncSplat**
+    -   **idTarget**
+        -   **idTarget\_CallObjectFunction**
+            -   target\_ai\_followalternatepath1
+            -   target\_ai\_followalternatepath2
+            -   target\_ai\_followalternatepath3
+            -   target\_callobjectfunction
+            -   target\_npc\_talk
+            -   target\_npc\_talk\_primary
+            -   target\_npc\_talk\_secondary
+            -   target\_npc\_talk\_triggered
+        -   **idTarget\_Damage**
+            -   func\_damage
+        -   **idTarget\_EnableLevelWeapons**
+            -   target\_enableweapons
+        -   **idTarget\_EnableStamina**
+            -   target\_enableStamina
+        -   **idTarget\_FadeEntity**
+            -   target\_entity\_fadein
+            -   target\_entity\_fadeout
+            -   target\_entity\_setcolor
+        -   **idTarget\_FadeSoundClass**
+            -   target\_FadeSoundClass
+        -   **idTarget\_Give**
+            -   target\_give
+        -   **idTarget\_GiveEmail**
+            -   target\_giveemail
+        -   **idTarget\_GiveSecurity**
+            -   target\_givesecurity
+        -   **idTarget\_LevelTrigger**
+            -   target\_levelTrigger
+        -   **idTarget\_LightFadeIn**
+            -   target\_light\_fadein
+        -   **idTarget\_LightFadeOut**
+            -   target\_light\_fadeout
+        -   **idTarget\_LockDoor**
+            -   target\_lock
+        -   **idTarget\_Remove**
+            -   func\_remove
+        -   **idTarget\_RemoveWeapons**
+            -   target\_removeweapons
+        -   **idTarget\_SessionCommand**
+            -   target\_sessionCommand
+        -   **idTarget\_SetFov**
+            -   target\_setfov
+        -   **idTarget\_SetGlobalShaderTime**
+            -   target\_setglobalparmtime
+        -   **idTarget\_SetInfluence**
+            -   target\_setinfluence
+        -   **idTarget\_SetKeyVal**
+            -   target\_setkeyval
+        -   **idTarget\_SetModel**
+            -   target\_setmodel
+        -   **idTarget\_SetPrimaryObjective**
+            -   target\_primaryobjective
+        -   **idTarget\_SetShaderParm**
+            -   target\_setshaderparm
+        -   **idTarget\_SetShaderTime**
+            -   target\_setshadertime
+        -   **idTarget\_Show**
+            -   target\_show
+        -   **idTarget\_Tip**
+            -   target\_tip
+        -   **idTarget\_WaitForButton**
+            -   func\_waitforbutton
+        -   target\_null
+    -   **idTarget\_EndLevel**
+        -   target\_endLevel
+    -   **idTextEntity**
+        -   text
+    -   **idTrigger**
+        -   **idTrigger\_Count**
+            -   trigger\_count
+        -   **idTrigger\_EntityName**
+            -   trigger\_entityname
+            -   trigger\_once\_entityname
+        -   **idTrigger\_Fade**
+            -   trigger\_fade
+        -   **idTrigger\_Hurt**
+            -   archvile\_flamewall
+            -   archvile\_incinerate
+            -   trigger\_hurt
+        -   **idTrigger\_Multi**
+            -   **idTrigger\_Flag**
+            -   trigger\_facing
+            -   trigger\_flashlight
+            -   trigger\_multiple
+            -   trigger\_once
+            -   trigger\_presize
+            -   trigger\_relay
+        -   **idTrigger\_Timer**
+            -   trigger\_timer
+        -   **idTrigger\_Touch**
+            -   trigger\_touch
+    -   **idVacuumEntity**
+        -   info\_vacuum
+    -   **idVacuumSeparatorEntity**
+        -   info\_vacuumSeparator
+    -   **idWorldspawn**
+        -   worldspawn
+-   **idEvent**
+-   **idEventDef**
+-   **idEventQueue**
+-   **idExportJoint**
+-   **idExportMesh**
+-   **idExportModel**
+-   **idExportOptions**
+-   **idFixedWinding**
+-   **idFrustum**
+-   **idGameEdit**
+-   **idGameLocal**
+-   **idHashIndex**
+-   **idHeap**
+-   **idIK**
+-   **idIK\_Reach**
+-   **idIK\_Walk**
+-   **idInterpreter**
+-   **idInventory**
+-   **idJointMat**
+-   **idLCP**
+-   **idLCP\_Square**
+-   **idLCP\_Symmetric**
+-   **idLangDict**
+-   **idLexer**
+-   **idLib**
+-   **idMD5Anim**
+-   **idMapBrush**
+-   **idMapBrushSide**
+-   **idMapEntity**
+-   **idMapFile**
+-   **idMapPatch**
+-   **idMat2**
+-   **idMat3**
+-   **idMat4**
+-   **idMat5**
+-   **idMat6**
+-   **idMatX**
+-   **idMath**
+-   **idMayaExport**
+-   **idModelExport**
+-   **idMoveState**
+-   **idMultiplayerGame**
+-   **idODE\_Euler**
+-   **idODE\_Midpoint**
+-   **idODE\_RK4**
+-   **idODE\_RK4Adaptive**
+-   **idPVS**
+-   **idParser**
+-   **idPhysics**
+    -   **idPhysics\_Base**
+        -   **idPhysics\_AF**
+        -   **idPhysics\_Actor**
+            -   **idPhysics\_Monster**
+            -   **idPhysics\_Player**
+        -   **idPhysics\_Parametric**
+        -   **idPhysics\_RigidBody**
+    -   **idPhysics\_Static**
+    -   **idPhysics\_StaticMulti**
+-   **idPlane**
+-   **idPlaneSet**
+-   **idPlayerIcon**
+-   **idPlayerView**
+-   **idPluecker**
+-   **idPolar3**
+-   **idPolynomial**
+-   **idProgram**
+-   **idPush**
+-   **idQuat**
+-   **idRandom**
+-   **idRandom2**
+-   **idRestoreGame**
+-   **idRotation**
+-   **idRoutingCache**
+-   **idSIMD**
+-   **idSIMD\_3DNow**
+-   **idSIMD\_AltiVec**
+-   **idSIMD\_Generic**
+-   **idSIMD\_MMX**
+-   **idSIMD\_SSE**
+-   **idSIMD\_SSE2**
+-   **idSIMD\_SSE3**
+-   **idSaveGame**
+-   **idScriptObject**
+-   **idSmokeParticles**
+-   **idSphere**
+-   **idStr**
+-   **idStrList**
+-   **idStrPool**
+-   **idSurface**
+-   **idSurface\_Patch**
+-   **idSurface\_Polytope**
+-   **idSurface\_SweptSpline**
+-   **idTimer**
+-   **idTimerReport**
+-   **idToken**
+-   **idTokenizer**
+-   **idTraceModel**
+-   **idTypeDef**
+-   **idTypeInfo**
+-   **idTypeInfoTools**
+-   **idVarDef**
+-   **idVarDefName**
+-   **idVec2**
+-   **idVec3**
+-   **idVec4**
+-   **idVec5**
+-   **idVec6**
+-   **idVecX**
+-   **idWinding**
+-   **idWinding2D**
+-   intro\_scientist
+-   melee\_archLeftClaw
+-   melee\_archRightClaw
+-   melee\_cacodemon
+-   melee\_cherubLeapAttack
+-   melee\_cherubLeftClaw
+-   melee\_cherubRightClaw
+-   melee\_commandoTentacle
+-   melee\_commando\_left
+-   melee\_commando\_push
+-   melee\_commando\_right
+-   melee\_cyberdemon\_kick
+-   melee\_hellknightLeftClaw
+-   melee\_hellknightRightClaw
+-   melee\_hellknight\_bite
+-   melee\_impLeapAttack
+-   melee\_impLeftClaw
+-   melee\_impRightClaw
+-   melee\_lostsoul
+-   melee\_lostsoul\_charge
+-   melee\_magLeftClaw
+-   melee\_magRightClaw
+-   melee\_maggotLeapAttack
+-   melee\_mancubus\_stomp
+-   melee\_pinky\_back
+-   melee\_pinky\_left
+-   melee\_pinky\_right
+-   melee\_revLeftClaw
+-   melee\_revRightClaw
+-   melee\_revenant
+-   melee\_revenant\_left
+-   melee\_revenant\_left\_down
+-   melee\_revenant\_right
+-   melee\_revenant\_right\_down
+-   melee\_sabaoth
+-   melee\_triteLeapAttack
+-   melee\_tritebite1
+-   melee\_vagLeftClaw
+-   melee\_vagRightClaw
+-   melee\_vulgarLeapAttack
+-   melee\_vulgarLeftClaw
+-   melee\_vulgarRightClaw
+-   melee\_wraithCenterAttack
+-   melee\_wraithLeftClaw
+-   melee\_wraithRightClaw
+-   melee\_zombie\_chainsaw
+-   melee\_zombie\_fat\_Left
+-   melee\_zombie\_fat\_Left2
+-   melee\_zombie\_fat\_Right
+-   melee\_zombie\_fat\_right\_wrench
+-   melee\_zombie\_maint\_Left
+-   melee\_zombie\_maint\_Pull
+-   melee\_zombie\_maint\_Push
+-   melee\_zombie\_maint\_Right
+-   **nameofclass**
+-   **pathNode\_s**
+-   preCacheExtras
+-   trigger\_guiOverlay
+-   weapon\_fists
+
+Entities
+--------
+
+For more detailed information on specific entities, including available
+key/value pairs, usage, and notes see the corresponding article listed
+below.
+
+Existing Entities as of version 1.3.1.1304(1.3)
+
+### A
+
+-   [aas48](Aas48_%28entity%29 "Aas48 (entity)")
+-   [aas96](Aas96_%28entity%29 "Aas96 (entity)")
+-   [aas\_cyberdemon](Aas_cyberdemon_%28entity%29 "Aas cyberdemon (entity)")
+-   [aas\_guardian](Aas_guardian_%28entity%29 "Aas guardian (entity)")
+-   [aas\_mancubus](Aas_mancubus_%28entity%29 "Aas mancubus (entity)")
+-   [aas\_sabaoth](Aas_sabaoth_%28entity%29 "Aas sabaoth (entity)")
+-   [aas\_types](Aas_types_%28entity%29 "Aas types (entity)")
+-   [admin\_bfgcase](Admin_bfgcase_%28entity%29 "Admin bfgcase (entity)")
+-   [admin\_doorframe\_pinkyattack](Admin_doorframe_pinkyattack_%28entity%29 "Admin doorframe pinkyattack (entity)")
+-   [admin\_imp1](Admin_imp1_%28entity%29 "Admin imp1 (entity)")
+-   [admin\_imp2](Admin_imp2_%28entity%29 "Admin imp2 (entity)")
+-   [admin\_impdoors](Admin_impdoors_%28entity%29 "Admin impdoors (entity)")
+-   [admin\_overhear\_cam](Admin_overhear_cam_%28entity%29 "Admin overhear cam (entity)")
+-   [admin\_overhear\_campbell](Admin_overhear_campbell_%28entity%29 "Admin overhear campbell (entity)")
+-   [admin\_overhear\_campbell2](Admin_overhear_campbell2_%28entity%29 "Admin overhear campbell2 (entity)")
+-   [admin\_overhear\_campbell\_bfg](Admin_overhear_campbell_bfg_%28entity%29 "Admin overhear campbell bfg (entity)")
+-   [admin\_overhear\_player](Admin_overhear_player_%28entity%29 "Admin overhear player (entity)")
+-   [admin\_overhear\_swann](Admin_overhear_swann_%28entity%29 "Admin overhear swann (entity)")
+-   [admin\_pinky\_glassbreak](Admin_pinky_glassbreak_%28entity%29 "Admin pinky glassbreak (entity)")
+-   [admin\_pinkyattack\_cam](Admin_pinkyattack_cam_%28entity%29 "Admin pinkyattack cam (entity)")
+-   [admin\_pinkyattack\_pinky](Admin_pinkyattack_pinky_%28entity%29 "Admin pinkyattack pinky (entity)")
+-   [admin\_pinkyattack\_shards](Admin_pinkyattack_shards_%28entity%29 "Admin pinkyattack shards (entity)")
+-   [admin\_railing\_pinkyattack](Admin_railing_pinkyattack_%28entity%29 "Admin railing pinkyattack (entity)")
+-   [admin\_vent\_swann](Admin_vent_swann_%28entity%29 "Admin vent swann (entity)")
+-   [admin\_wounded\_marine](Admin_wounded_marine_%28entity%29 "Admin wounded marine (entity)")
+-   [ai\_attackcone](Ai_attackcone_%28entity%29 "Ai attackcone (entity)")
+-   [ai\_attackcone\_once](Ai_attackcone_once_%28entity%29 "Ai attackcone once (entity)")
+-   [ai\_attackcone\_turret](Ai_attackcone_turret_%28entity%29 "Ai attackcone turret (entity)")
+-   [ai\_lostcombat](Ai_lostcombat_%28entity%29 "Ai lostcombat (entity)")
+-   [alphalabs1\_cam](Alphalabs1_cam_%28entity%29 "Alphalabs1 cam (entity)")
+-   [alphalabs1\_helldoll](Alphalabs1_helldoll_%28entity%29 "Alphalabs1 helldoll (entity)")
+-   [alphalabs1\_imp](Alphalabs1_imp_%28entity%29 "Alphalabs1 imp (entity)")
+-   [alphalabs1\_labcoat\_bald](Alphalabs1_labcoat_bald_%28entity%29 "Alphalabs1 labcoat bald (entity)")
+-   [alphalabs1\_maggot1](Alphalabs1_maggot1_%28entity%29 "Alphalabs1 maggot1 (entity)")
+-   [alphalabs1\_maggot2](Alphalabs1_maggot2_%28entity%29 "Alphalabs1 maggot2 (entity)")
+-   [alphalabs1\_maggot3](Alphalabs1_maggot3_%28entity%29 "Alphalabs1 maggot3 (entity)")
+-   [alphalabs1\_pentagramdood](Alphalabs1_pentagramdood_%28entity%29 "Alphalabs1 pentagramdood (entity)")
+-   [alphalabs1\_player](Alphalabs1_player_%28entity%29 "Alphalabs1 player (entity)")
+-   [alphalabs2\_cin\_imp](Alphalabs2_cin_imp_%28entity%29 "Alphalabs2 cin imp (entity)")
+-   [alphalabs2\_elevatorenv](Alphalabs2_elevatorenv_%28entity%29 "Alphalabs2 elevatorenv (entity)")
+-   [alphalabs2\_imp](Alphalabs2_imp_%28entity%29 "Alphalabs2 imp (entity)")
+-   [alphalabs2\_maggot](Alphalabs2_maggot_%28entity%29 "Alphalabs2 maggot (entity)")
+-   [alphalabs2\_marine\_helmet\_p90](Alphalabs2_marine_helmet_p90_%28entity%29 "Alphalabs2 marine helmet p90 (entity)")
+-   [alphalabs2\_scientist1](Alphalabs2_scientist1_%28entity%29 "Alphalabs2 scientist1 (entity)")
+-   [alphalabs3\_fragchamber\_scientist](Alphalabs3_fragchamber_scientist_%28entity%29 "Alphalabs3 fragchamber scientist (entity)")
+-   [alphalabs3\_fragchamber\_scientist2](Alphalabs3_fragchamber_scientist2_%28entity%29 "Alphalabs3 fragchamber scientist2 (entity)")
+-   [alphalabs3\_fragchamber\_skeleton](Alphalabs3_fragchamber_skeleton_%28entity%29 "Alphalabs3 fragchamber skeleton (entity)")
+-   [alphalabs3\_vagaryintro\_cam](Alphalabs3_vagaryintro_cam_%28entity%29 "Alphalabs3 vagaryintro cam (entity)")
+-   [alphalabs3\_vagaryintro\_player](Alphalabs3_vagaryintro_player_%28entity%29 "Alphalabs3 vagaryintro player (entity)")
+-   [alphalabs3\_vagaryintro\_vagary](Alphalabs3_vagaryintro_vagary_%28entity%29 "Alphalabs3 vagaryintro vagary (entity)")
+-   [ammo\_belt\_small](Ammo_belt_small_%28entity%29 "Ammo belt small (entity)")
+-   [ammo\_belt\_small\_mp](Ammo_belt_small_mp_%28entity%29 "Ammo belt small mp (entity)")
+-   [ammo\_bfg\_small](Ammo_bfg_small_%28entity%29 "Ammo bfg small (entity)")
+-   [ammo\_bullets\_large](Ammo_bullets_large_%28entity%29 "Ammo bullets large (entity)")
+-   [ammo\_bullets\_large\_mp](Ammo_bullets_large_mp_%28entity%29 "Ammo bullets large mp (entity)")
+-   [ammo\_bullets\_small](Ammo_bullets_small_%28entity%29 "Ammo bullets small (entity)")
+-   [ammo\_bullets\_small\_mp](Ammo_bullets_small_mp_%28entity%29 "Ammo bullets small mp (entity)")
+-   [ammo\_cells\_large](Ammo_cells_large_%28entity%29 "Ammo cells large (entity)")
+-   [ammo\_cells\_large\_mp](Ammo_cells_large_mp_%28entity%29 "Ammo cells large mp (entity)")
+-   [ammo\_cells\_small](Ammo_cells_small_%28entity%29 "Ammo cells small (entity)")
+-   [ammo\_cells\_small\_mp](Ammo_cells_small_mp_%28entity%29 "Ammo cells small mp (entity)")
+-   [ammo\_clip\_large](Ammo_clip_large_%28entity%29 "Ammo clip large (entity)")
+-   [ammo\_clip\_large\_mp](Ammo_clip_large_mp_%28entity%29 "Ammo clip large mp (entity)")
+-   [ammo\_clip\_small](Ammo_clip_small_%28entity%29 "Ammo clip small (entity)")
+-   [ammo\_clip\_small\_mp](Ammo_clip_small_mp_%28entity%29 "Ammo clip small mp (entity)")
+-   [ammo\_grenade\_small](Ammo_grenade_small_%28entity%29 "Ammo grenade small (entity)")
+-   [ammo\_grenade\_small\_mp](Ammo_grenade_small_mp_%28entity%29 "Ammo grenade small mp (entity)")
+-   [ammo\_names](Ammo_names_%28entity%29 "Ammo names (entity)")
+-   [ammo\_rockets\_large](Ammo_rockets_large_%28entity%29 "Ammo rockets large (entity)")
+-   [ammo\_rockets\_large\_mp](Ammo_rockets_large_mp_%28entity%29 "Ammo rockets large mp (entity)")
+-   [ammo\_rockets\_small](Ammo_rockets_small_%28entity%29 "Ammo rockets small (entity)")
+-   [ammo\_rockets\_small\_mp](Ammo_rockets_small_mp_%28entity%29 "Ammo rockets small mp (entity)")
+-   [ammo\_shells\_large](Ammo_shells_large_%28entity%29 "Ammo shells large (entity)")
+-   [ammo\_shells\_large\_mp](Ammo_shells_large_mp_%28entity%29 "Ammo shells large mp (entity)")
+-   [ammo\_shells\_small](Ammo_shells_small_%28entity%29 "Ammo shells small (entity)")
+-   [ammo\_shells\_small\_mp](Ammo_shells_small_mp_%28entity%29 "Ammo shells small mp (entity)")
+-   [ammo\_types](Ammo_types_%28entity%29 "Ammo types (entity)")
+-   [archvile\_flamewall](Archvile_flamewall_%28entity%29 "Archvile flamewall (entity)")
+-   [archvile\_incinerate](Archvile_incinerate_%28entity%29 "Archvile incinerate (entity)")
+
+### B
+
+-   [blooper\_betruger](Blooper_betruger_%28entity%29 "Blooper betruger (entity)")
+-   [blooper\_hazguy](Blooper_hazguy_%28entity%29 "Blooper hazguy (entity)")
+
+### C
+
+-   [caverns\_boulderbridge](Caverns_boulderbridge_%28entity%29 "Caverns boulderbridge (entity)")
+-   [caverns\_bridge](Caverns_bridge_%28entity%29 "Caverns bridge (entity)")
+-   [caverns\_bridgeback](Caverns_bridgeback_%28entity%29 "Caverns bridgeback (entity)")
+-   [caverns\_bridgecrane](Caverns_bridgecrane_%28entity%29 "Caverns bridgecrane (entity)")
+-   [caverns\_bridgefront](Caverns_bridgefront_%28entity%29 "Caverns bridgefront (entity)")
+-   [caverns\_char\_maint\_scared](Caverns_char_maint_scared_%28entity%29 "Caverns char maint scared (entity)")
+-   [caverns\_hellknight](Caverns_hellknight_%28entity%29 "Caverns hellknight (entity)")
+-   [caverns\_hellknight2](Caverns_hellknight2_%28entity%29 "Caverns hellknight2 (entity)")
+-   [caverns\_hkwall](Caverns_hkwall_%28entity%29 "Caverns hkwall (entity)")
+-   [caverns\_imp1](Caverns_imp1_%28entity%29 "Caverns imp1 (entity)")
+-   [caverns\_imp2](Caverns_imp2_%28entity%29 "Caverns imp2 (entity)")
+-   [caverns\_pinky](Caverns_pinky_%28entity%29 "Caverns pinky (entity)")
+-   [caverns\_vagary1](Caverns_vagary1_%28entity%29 "Caverns vagary1 (entity)")
+-   [caverns\_vagary2](Caverns_vagary2_%28entity%29 "Caverns vagary2 (entity)")
+-   [caverns\_vagrocks](Caverns_vagrocks_%28entity%29 "Caverns vagrocks (entity)")
+-   [char\_betruger](Char_betruger_%28entity%29 "Char betruger (entity)")
+-   [char\_campbell](Char_campbell_%28entity%29 "Char campbell (entity)")
+-   [char\_campbell\_bfg](Char_campbell_bfg_%28entity%29 "Char campbell bfg (entity)")
+-   [char\_campbell\_bfgcase](Char_campbell_bfgcase_%28entity%29 "Char campbell bfgcase (entity)")
+-   [char\_hazmat](Char_hazmat_%28entity%29 "Char hazmat (entity)")
+-   [char\_labcoat\_black](Char_labcoat_black_%28entity%29 "Char labcoat black (entity)")
+-   [char\_marine\_asian\_chair1](Char_marine_asian_chair1_%28entity%29 "Char marine asian chair1 (entity)")
+-   [char\_marine\_young\_chair1](Char_marine_young_chair1_%28entity%29 "Char marine young chair1 (entity)")
+-   [char\_poppy](Char_poppy_%28entity%29 "Char poppy (entity)")
+-   [char\_security\_goggles\_pistol](Char_security_goggles_pistol_%28entity%29 "Char security goggles pistol (entity)")
+-   [char\_sentry](Char_sentry_%28entity%29 "Char sentry (entity)")
+-   [char\_sentry\_flashlight](Char_sentry_flashlight_%28entity%29 "Char sentry flashlight (entity)")
+-   [char\_swann](Char_swann_%28entity%29 "Char swann (entity)")
+-   [character\_default](Character_default_%28entity%29 "Character default (entity)")
+-   [cin\_anim1\_fatty](Cin_anim1_fatty_%28entity%29 "Cin anim1 fatty (entity)")
+-   [cin\_anim1\_pinky](Cin_anim1_pinky_%28entity%29 "Cin anim1 pinky (entity)")
+-   [cin\_anim1\_uacm](Cin_anim1_uacm_%28entity%29 "Cin anim1 uacm (entity)")
+-   [cin\_anim2\_fatty](Cin_anim2_fatty_%28entity%29 "Cin anim2 fatty (entity)")
+-   [cin\_anim2\_pinky](Cin_anim2_pinky_%28entity%29 "Cin anim2 pinky (entity)")
+-   [cin\_anim3\_fatty](Cin_anim3_fatty_%28entity%29 "Cin anim3 fatty (entity)")
+-   [cin\_anim3\_pinky](Cin_anim3_pinky_%28entity%29 "Cin anim3 pinky (entity)")
+-   [cin\_anim5\_fatty](Cin_anim5_fatty_%28entity%29 "Cin anim5 fatty (entity)")
+-   [cin\_anim5\_pinky](Cin_anim5_pinky_%28entity%29 "Cin anim5 pinky (entity)")
+-   [cin\_anim9a\_fatty](Cin_anim9a_fatty_%28entity%29 "Cin anim9a fatty (entity)")
+-   [cin\_anim9a\_pinky](Cin_anim9a_pinky_%28entity%29 "Cin anim9a pinky (entity)")
+-   [cin\_anim9a\_uacm](Cin_anim9a_uacm_%28entity%29 "Cin anim9a uacm (entity)")
+-   [cin\_base](Cin_base_%28entity%29 "Cin base (entity)")
+-   [cin\_chain\_cam](Cin_chain_cam_%28entity%29 "Cin chain cam (entity)")
+-   [cin\_chain\_uacm](Cin_chain_uacm_%28entity%29 "Cin chain uacm (entity)")
+-   [cin\_chain\_zcc](Cin_chain_zcc_%28entity%29 "Cin chain zcc (entity)")
+-   [cin\_chain\_zct](Cin_chain_zct_%28entity%29 "Cin chain zct (entity)")
+-   [cin\_e3bathroom\_cam](Cin_e3bathroom_cam_%28entity%29 "Cin e3bathroom cam (entity)")
+-   [cin\_e3teaser\_cam](Cin_e3teaser_cam_%28entity%29 "Cin e3teaser cam (entity)")
+-   [cin\_e3teaser\_hk](Cin_e3teaser_hk_%28entity%29 "Cin e3teaser hk (entity)")
+-   [cin\_elevator\_cam](Cin_elevator_cam_%28entity%29 "Cin elevator cam (entity)")
+-   [cin\_elevator\_elev](Cin_elevator_elev_%28entity%29 "Cin elevator elev (entity)")
+-   [cin\_elevator\_player](Cin_elevator_player_%28entity%29 "Cin elevator player (entity)")
+-   [cin\_fat\_drag](Cin_fat_drag_%28entity%29 "Cin fat drag (entity)")
+-   [cin\_hk\_hk](Cin_hk_hk_%28entity%29 "Cin hk hk (entity)")
+-   [cin\_hk\_walkbydoor](Cin_hk_walkbydoor_%28entity%29 "Cin hk walkbydoor (entity)")
+-   [cin\_hkdeath\_cam](Cin_hkdeath_cam_%28entity%29 "Cin hkdeath cam (entity)")
+-   [cin\_hkdeath\_uac](Cin_hkdeath_uac_%28entity%29 "Cin hkdeath uac (entity)")
+-   [cin\_hkendroar\_cam](Cin_hkendroar_cam_%28entity%29 "Cin hkendroar cam (entity)")
+-   [cin\_hkendroar\_hk](Cin_hkendroar_hk_%28entity%29 "Cin hkendroar hk (entity)")
+-   [cin\_hkrip\_cam](Cin_hkrip_cam_%28entity%29 "Cin hkrip cam (entity)")
+-   [cin\_hkrip\_uac](Cin_hkrip_uac_%28entity%29 "Cin hkrip uac (entity)")
+-   [cin\_logo\_cam](Cin_logo_cam_%28entity%29 "Cin logo cam (entity)")
+-   [cin\_mars\_cam](Cin_mars_cam_%28entity%29 "Cin mars cam (entity)")
+-   [cin\_mars\_flare](Cin_mars_flare_%28entity%29 "Cin mars flare (entity)")
+-   [cin\_pink\_drag](Cin_pink_drag_%28entity%29 "Cin pink drag (entity)")
+-   [cin\_posess2\_cam](Cin_posess2_cam_%28entity%29 "Cin posess2 cam (entity)")
+-   [cin\_posess3\_cam](Cin_posess3_cam_%28entity%29 "Cin posess3 cam (entity)")
+-   [cin\_posess5\_cam](Cin_posess5_cam_%28entity%29 "Cin posess5 cam (entity)")
+-   [cin\_posess\_cam](Cin_posess_cam_%28entity%29 "Cin posess cam (entity)")
+-   [cin\_posess\_hk](Cin_posess_hk_%28entity%29 "Cin posess hk (entity)")
+-   [cin\_posess\_imp](Cin_posess_imp_%28entity%29 "Cin posess imp (entity)")
+-   [cin\_posess\_sec](Cin_posess_sec_%28entity%29 "Cin posess sec (entity)")
+-   [cin\_posess\_skull](Cin_posess_skull_%28entity%29 "Cin posess skull (entity)")
+-   [cin\_posess\_skull2](Cin_posess_skull2_%28entity%29 "Cin posess skull2 (entity)")
+-   [cin\_posess\_skull3](Cin_posess_skull3_%28entity%29 "Cin posess skull3 (entity)")
+-   [cin\_posess\_zsec](Cin_posess_zsec_%28entity%29 "Cin posess zsec (entity)")
+-   [cin\_shake](Cin_shake_%28entity%29 "Cin shake (entity)")
+-   [cin\_shake\_cam](Cin_shake_cam_%28entity%29 "Cin shake cam (entity)")
+-   [cin\_tele\_cam](Cin_tele_cam_%28entity%29 "Cin tele cam (entity)")
+-   [cin\_tele\_skull7](Cin_tele_skull7_%28entity%29 "Cin tele skull7 (entity)")
+-   [cin\_toob](Cin_toob_%28entity%29 "Cin toob (entity)")
+-   [cin\_toob\_cam](Cin_toob_cam_%28entity%29 "Cin toob cam (entity)")
+-   [cin\_zombie\_drag](Cin_zombie_drag_%28entity%29 "Cin zombie drag (entity)")
+-   [comm1\_sentry](Comm1_sentry_%28entity%29 "Comm1 sentry (entity)")
+-   [comm1\_sentry\_blank](Comm1_sentry_blank_%28entity%29 "Comm1 sentry blank (entity)")
+-   [comm1\_sentryloader](Comm1_sentryloader_%28entity%29 "Comm1 sentryloader (entity)")
+-   [comm1\_swann\_video\_cam](Comm1_swann_video_cam_%28entity%29 "Comm1 swann video cam (entity)")
+-   [comm1\_video\_swann](Comm1_video_swann_%28entity%29 "Comm1 video swann (entity)")
+-   [commoutside\_campbell](Commoutside_campbell_%28entity%29 "Commoutside campbell (entity)")
+-   [commoutside\_camzombie\_cam](Commoutside_camzombie_cam_%28entity%29 "Commoutside camzombie cam (entity)")
+-   [commoutside\_camzombie\_zomb](Commoutside_camzombie_zomb_%28entity%29 "Commoutside camzombie zomb (entity)")
+-   [commoutside\_cin\_sawyer](Commoutside_cin_sawyer_%28entity%29 "Commoutside cin sawyer (entity)")
+-   [commoutside\_fatty](Commoutside_fatty_%28entity%29 "Commoutside fatty (entity)")
+-   [commoutside\_hellgoo1](Commoutside_hellgoo1_%28entity%29 "Commoutside hellgoo1 (entity)")
+-   [commoutside\_player](Commoutside_player_%28entity%29 "Commoutside player (entity)")
+-   [commoutside\_sawintro\_cam](Commoutside_sawintro_cam_%28entity%29 "Commoutside sawintro cam (entity)")
+-   [commoutside\_swann](Commoutside_swann_%28entity%29 "Commoutside swann (entity)")
+-   [commoutside\_vehicle](Commoutside_vehicle_%28entity%29 "Commoutside vehicle (entity)")
+-   [cpu1\_camphunt\_cam](Cpu1_camphunt_cam_%28entity%29 "Cpu1 camphunt cam (entity)")
+-   [cpu1\_camphunt\_campbell](Cpu1_camphunt_campbell_%28entity%29 "Cpu1 camphunt campbell (entity)")
+-   [cpu1\_monster\_trite](Cpu1_monster_trite_%28entity%29 "Cpu1 monster trite (entity)")
+-   [cpu1\_wounded\_campbell](Cpu1_wounded_campbell_%28entity%29 "Cpu1 wounded campbell (entity)")
+-   [cpuboss\_cam](Cpuboss_cam_%28entity%29 "Cpuboss cam (entity)")
+-   [cpuboss\_cin\_player](Cpuboss_cin_player_%28entity%29 "Cpuboss cin player (entity)")
+-   [cpuboss\_cin\_sabaoth](Cpuboss_cin_sabaoth_%28entity%29 "Cpuboss cin sabaoth (entity)")
+
+### D
+
+-   [damage\_CyberRocketSplash](Damage_CyberRocketSplash_%28entity%29 "Damage CyberRocketSplash (entity)")
+-   [damage\_CyberrocketDirect](Damage_CyberrocketDirect_%28entity%29 "Damage CyberrocketDirect (entity)")
+-   [damage\_HugeExplosion](Damage_HugeExplosion_%28entity%29 "Damage HugeExplosion (entity)")
+-   [damage\_RevRocket](Damage_RevRocket_%28entity%29 "Damage RevRocket (entity)")
+-   [damage\_RevRocketSplash](Damage_RevRocketSplash_%28entity%29 "Damage RevRocketSplash (entity)")
+-   [damage\_Smallexplosion](Damage_Smallexplosion_%28entity%29 "Damage Smallexplosion (entity)")
+-   [damage\_VagaryObject](Damage_VagaryObject_%28entity%29 "Damage VagaryObject (entity)")
+-   [damage\_archvilefirewall](Damage_archvilefirewall_%28entity%29 "Damage archvilefirewall (entity)")
+-   [damage\_archvileincinerate](Damage_archvileincinerate_%28entity%29 "Damage archvileincinerate (entity)")
+-   [damage\_bfg](Damage_bfg_%28entity%29 "Damage bfg (entity)")
+-   [damage\_bfgFreq](Damage_bfgFreq_%28entity%29 "Damage bfgFreq (entity)")
+-   [damage\_bfgFreq\_cinematic](Damage_bfgFreq_cinematic_%28entity%29 "Damage bfgFreq cinematic (entity)")
+-   [damage\_bfgSplash](Damage_bfgSplash_%28entity%29 "Damage bfgSplash (entity)")
+-   [damage\_bfgSplash\_cinematic](Damage_bfgSplash_cinematic_%28entity%29 "Damage bfgSplash cinematic (entity)")
+-   [damage\_bfgSplash\_mp](Damage_bfgSplash_mp_%28entity%29 "Damage bfgSplash mp (entity)")
+-   [damage\_bfg\_cinematic](Damage_bfg_cinematic_%28entity%29 "Damage bfg cinematic (entity)")
+-   [damage\_bfg\_mp](Damage_bfg_mp_%28entity%29 "Damage bfg mp (entity)")
+-   [damage\_bfg\_overcharge](Damage_bfg_overcharge_%28entity%29 "Damage bfg overcharge (entity)")
+-   [damage\_bullet\_chaingun](Damage_bullet_chaingun_%28entity%29 "Damage bullet chaingun (entity)")
+-   [damage\_bullet\_chaingun\_mp](Damage_bullet_chaingun_mp_%28entity%29 "Damage bullet chaingun mp (entity)")
+-   [damage\_bullet\_machinegun](Damage_bullet_machinegun_%28entity%29 "Damage bullet machinegun (entity)")
+-   [damage\_bullet\_machinegun\_mp](Damage_bullet_machinegun_mp_%28entity%29 "Damage bullet machinegun mp (entity)")
+-   [damage\_bullet\_pistol](Damage_bullet_pistol_%28entity%29 "Damage bullet pistol (entity)")
+-   [damage\_bullet\_pistol\_mp](Damage_bullet_pistol_mp_%28entity%29 "Damage bullet pistol mp (entity)")
+-   [damage\_bullet\_turret](Damage_bullet_turret_%28entity%29 "Damage bullet turret (entity)")
+-   [damage\_bullet\_zsec\_machinegun](Damage_bullet_zsec_machinegun_%28entity%29 "Damage bullet zsec machinegun (entity)")
+-   [damage\_bullet\_zsec\_pistol](Damage_bullet_zsec_pistol_%28entity%29 "Damage bullet zsec pistol (entity)")
+-   [damage\_bullet\_zsec\_shield](Damage_bullet_zsec_shield_%28entity%29 "Damage bullet zsec shield (entity)")
+-   [damage\_bullet\_zsec\_shotgun](Damage_bullet_zsec_shotgun_%28entity%29 "Damage bullet zsec shotgun (entity)")
+-   [damage\_cacodemon\_fireball](Damage_cacodemon_fireball_%28entity%29 "Damage cacodemon fireball (entity)")
+-   [damage\_cacodemon\_fireball\_splash](Damage_cacodemon_fireball_splash_%28entity%29 "Damage cacodemon fireball splash (entity)")
+-   [damage\_chainsaw](Damage_chainsaw_%28entity%29 "Damage chainsaw (entity)")
+-   [damage\_chainsaw\_mp](Damage_chainsaw_mp_%28entity%29 "Damage chainsaw mp (entity)")
+-   [damage\_co\_electric\_trac](Damage_co_electric_trac_%28entity%29 "Damage co electric trac (entity)")
+-   [damage\_crush](Damage_crush_%28entity%29 "Damage crush (entity)")
+-   [damage\_explodingbarrel](Damage_explodingbarrel_%28entity%29 "Damage explodingbarrel (entity)")
+-   [damage\_explodingbarrel\_mp](Damage_explodingbarrel_mp_%28entity%29 "Damage explodingbarrel mp (entity)")
+-   [damage\_explosion](Damage_explosion_%28entity%29 "Damage explosion (entity)")
+-   [damage\_fatalfall](Damage_fatalfall_%28entity%29 "Damage fatalfall (entity)")
+-   [damage\_fatalfall\_mp](Damage_fatalfall_mp_%28entity%29 "Damage fatalfall mp (entity)")
+-   [damage\_fireball\_hellknight](Damage_fireball_hellknight_%28entity%29 "Damage fireball hellknight (entity)")
+-   [damage\_fireball\_hellknight\_splash](Damage_fireball_hellknight_splash_%28entity%29 "Damage fireball hellknight splash (entity)")
+-   [damage\_fists](Damage_fists_%28entity%29 "Damage fists (entity)")
+-   [damage\_fists\_mp](Damage_fists_mp_%28entity%29 "Damage fists mp (entity)")
+-   [damage\_flashlight](Damage_flashlight_%28entity%29 "Damage flashlight (entity)")
+-   [damage\_flashlight\_mp](Damage_flashlight_mp_%28entity%29 "Damage flashlight mp (entity)")
+-   [damage\_fragchamberfog](Damage_fragchamberfog_%28entity%29 "Damage fragchamberfog (entity)")
+-   [damage\_fragchamberpipe](Damage_fragchamberpipe_%28entity%29 "Damage fragchamberpipe (entity)")
+-   [damage\_generic](Damage_generic_%28entity%29 "Damage generic (entity)")
+-   [damage\_gib](Damage_gib_%28entity%29 "Damage gib (entity)")
+-   [damage\_grenadeDirect](Damage_grenadeDirect_%28entity%29 "Damage grenadeDirect (entity)")
+-   [damage\_grenadeDirect\_mp](Damage_grenadeDirect_mp_%28entity%29 "Damage grenadeDirect mp (entity)")
+-   [damage\_grenadeSplash](Damage_grenadeSplash_%28entity%29 "Damage grenadeSplash (entity)")
+-   [damage\_grenadeSplash\_inhand](Damage_grenadeSplash_inhand_%28entity%29 "Damage grenadeSplash inhand (entity)")
+-   [damage\_grenadeSplash\_inhand\_mp](Damage_grenadeSplash_inhand_mp_%28entity%29 "Damage grenadeSplash inhand mp (entity)")
+-   [damage\_grenadeSplash\_mp](Damage_grenadeSplash_mp_%28entity%29 "Damage grenadeSplash mp (entity)")
+-   [damage\_guardianCharge](Damage_guardianCharge_%28entity%29 "Damage guardianCharge (entity)")
+-   [damage\_guardianHeadButt](Damage_guardianHeadButt_%28entity%29 "Damage guardianHeadButt (entity)")
+-   [damage\_guardianPoundGround](Damage_guardianPoundGround_%28entity%29 "Damage guardianPoundGround (entity)")
+-   [damage\_guardian\_smash\_direct](Damage_guardian_smash_direct_%28entity%29 "Damage guardian smash direct (entity)")
+-   [damage\_guardian\_smash\_splash](Damage_guardian_smash_splash_%28entity%29 "Damage guardian smash splash (entity)")
+-   [damage\_hardfall](Damage_hardfall_%28entity%29 "Damage hardfall (entity)")
+-   [damage\_hardfall\_mp](Damage_hardfall_mp_%28entity%29 "Damage hardfall mp (entity)")
+-   [damage\_impfireball](Damage_impfireball_%28entity%29 "Damage impfireball (entity)")
+-   [damage\_impfireball\_splash](Damage_impfireball_splash_%28entity%29 "Damage impfireball splash (entity)")
+-   [damage\_lava](Damage_lava_%28entity%29 "Damage lava (entity)")
+-   [damage\_lightBreak](Damage_lightBreak_%28entity%29 "Damage lightBreak (entity)")
+-   [damage\_mancubusSplash](Damage_mancubusSplash_%28entity%29 "Damage mancubusSplash (entity)")
+-   [damage\_mancubusblast](Damage_mancubusblast_%28entity%29 "Damage mancubusblast (entity)")
+-   [damage\_moverCrush](Damage_moverCrush_%28entity%29 "Damage moverCrush (entity)")
+-   [damage\_noair](Damage_noair_%28entity%29 "Damage noair (entity)")
+-   [damage\_painTrigger](Damage_painTrigger_%28entity%29 "Damage painTrigger (entity)")
+-   [damage\_plasmablast](Damage_plasmablast_%28entity%29 "Damage plasmablast (entity)")
+-   [damage\_plasmablast\_mp](Damage_plasmablast_mp_%28entity%29 "Damage plasmablast mp (entity)")
+-   [damage\_plasmatracer](Damage_plasmatracer_%28entity%29 "Damage plasmatracer (entity)")
+-   [damage\_rocketDirect](Damage_rocketDirect_%28entity%29 "Damage rocketDirect (entity)")
+-   [damage\_rocketDirect\_mp](Damage_rocketDirect_mp_%28entity%29 "Damage rocketDirect mp (entity)")
+-   [damage\_rocketSplash](Damage_rocketSplash_%28entity%29 "Damage rocketSplash (entity)")
+-   [damage\_rocketSplash\_mp](Damage_rocketSplash_mp_%28entity%29 "Damage rocketSplash mp (entity)")
+-   [damage\_sentry\_bullet](Damage_sentry_bullet_%28entity%29 "Damage sentry bullet (entity)")
+-   [damage\_shotgun](Damage_shotgun_%28entity%29 "Damage shotgun (entity)")
+-   [damage\_shotgun\_mp](Damage_shotgun_mp_%28entity%29 "Damage shotgun mp (entity)")
+-   [damage\_softfall](Damage_softfall_%28entity%29 "Damage softfall (entity)")
+-   [damage\_softfall\_mp](Damage_softfall_mp_%28entity%29 "Damage softfall mp (entity)")
+-   [damage\_soulSplash](Damage_soulSplash_%28entity%29 "Damage soulSplash (entity)")
+-   [damage\_soulSplash\_mp](Damage_soulSplash_mp_%28entity%29 "Damage soulSplash mp (entity)")
+-   [damage\_soulblast](Damage_soulblast_%28entity%29 "Damage soulblast (entity)")
+-   [damage\_soulblast\_mp](Damage_soulblast_mp_%28entity%29 "Damage soulblast mp (entity)")
+-   [damage\_suicide](Damage_suicide_%28entity%29 "Damage suicide (entity)")
+-   [damage\_telefrag](Damage_telefrag_%28entity%29 "Damage telefrag (entity)")
+-   [damage\_tick\_explode](Damage_tick_explode_%28entity%29 "Damage tick explode (entity)")
+-   [damage\_triggerhurt\_10](Damage_triggerhurt_10_%28entity%29 "Damage triggerhurt 10 (entity)")
+-   [damage\_triggerhurt\_100](Damage_triggerhurt_100_%28entity%29 "Damage triggerhurt 100 (entity)")
+-   [damage\_triggerhurt\_1000](Damage_triggerhurt_1000_%28entity%29 "Damage triggerhurt 1000 (entity)")
+-   [damage\_triggerhurt\_15](Damage_triggerhurt_15_%28entity%29 "Damage triggerhurt 15 (entity)")
+-   [damage\_triggerhurt\_25](Damage_triggerhurt_25_%28entity%29 "Damage triggerhurt 25 (entity)")
+-   [damage\_triggerhurt\_5](Damage_triggerhurt_5_%28entity%29 "Damage triggerhurt 5 (entity)")
+-   [damage\_triggerhurt\_50](Damage_triggerhurt_50_%28entity%29 "Damage triggerhurt 50 (entity)")
+-   [damage\_triggerhurt\_75](Damage_triggerhurt_75_%28entity%29 "Damage triggerhurt 75 (entity)")
+-   [damage\_triggerhurt\_toxin](Damage_triggerhurt_toxin_%28entity%29 "Damage triggerhurt toxin (entity)")
+-   [damage\_triggerhurt\_toxin\_1](Damage_triggerhurt_toxin_1_%28entity%29 "Damage triggerhurt toxin 1 (entity)")
+-   [damage\_trite\_explode](Damage_trite_explode_%28entity%29 "Damage trite explode (entity)")
+-   [damage\_vulgar\_fireball](Damage_vulgar_fireball_%28entity%29 "Damage vulgar fireball (entity)")
+-   [damage\_vulgar\_fireball\_splash](Damage_vulgar_fireball_splash_%28entity%29 "Damage vulgar fireball splash (entity)")
+-   [damage\_zombie\_commando\_cgun](Damage_zombie_commando_cgun_%28entity%29 "Damage zombie commando cgun (entity)")
+-   [debris\_barrelpiece](Debris_barrelpiece_%28entity%29 "Debris barrelpiece (entity)")
+-   [debris\_barrelpiece2](Debris_barrelpiece2_%28entity%29 "Debris barrelpiece2 (entity)")
+-   [debris\_barreltop](Debris_barreltop_%28entity%29 "Debris barreltop (entity)")
+-   [debris\_barreltop2](Debris_barreltop2_%28entity%29 "Debris barreltop2 (entity)")
+-   [debris\_brass](Debris_brass_%28entity%29 "Debris brass (entity)")
+-   [debris\_largeshrapnel](Debris_largeshrapnel_%28entity%29 "Debris largeshrapnel (entity)")
+-   [debris\_shotgunbrass](Debris_shotgunbrass_%28entity%29 "Debris shotgunbrass (entity)")
+-   [debris\_shrapnel](Debris_shrapnel_%28entity%29 "Debris shrapnel (entity)")
+-   [delta1\_hellknight](Delta1_hellknight_%28entity%29 "Delta1 hellknight (entity)")
+-   [delta1\_reactor](Delta1_reactor_%28entity%29 "Delta1 reactor (entity)")
+-   [delta1\_sarge\_video](Delta1_sarge_video_%28entity%29 "Delta1 sarge video (entity)")
+-   [delta1\_sargevcd\_cam](Delta1_sargevcd_cam_%28entity%29 "Delta1 sargevcd cam (entity)")
+-   [delta1\_scipull](Delta1_scipull_%28entity%29 "Delta1 scipull (entity)")
+-   [delta2a\_cin\_fatty](Delta2a_cin_fatty_%28entity%29 "Delta2a cin fatty (entity)")
+-   [delta2a\_commando](Delta2a_commando_%28entity%29 "Delta2a commando (entity)")
+-   [delta2a\_fatty](Delta2a_fatty_%28entity%29 "Delta2a fatty (entity)")
+-   [delta2a\_imp](Delta2a_imp_%28entity%29 "Delta2a imp (entity)")
+-   [delta2a\_player](Delta2a_player_%28entity%29 "Delta2a player (entity)")
+-   [delta2a\_player\_scientist](Delta2a_player_scientist_%28entity%29 "Delta2a player scientist (entity)")
+-   [delta2a\_sci\_tele\_hell\_visions\_cam](Delta2a_sci_tele_hell_visions_cam_%28entity%29 "Delta2a sci tele hell visions cam (entity)")
+-   [delta2a\_scientist](Delta2a_scientist_%28entity%29 "Delta2a scientist (entity)")
+-   [delta2a\_scientist\_cam](Delta2a_scientist_cam_%28entity%29 "Delta2a scientist cam (entity)")
+-   [delta2a\_scientist\_return](Delta2a_scientist_return_%28entity%29 "Delta2a scientist return (entity)")
+-   [delta2a\_teleporter](Delta2a_teleporter_%28entity%29 "Delta2a teleporter (entity)")
+-   [delta2a\_teleporter\_cam](Delta2a_teleporter_cam_%28entity%29 "Delta2a teleporter cam (entity)")
+-   [delta2a\_zombie\_office1](Delta2a_zombie_office1_%28entity%29 "Delta2a zombie office1 (entity)")
+-   [delta2a\_zombie\_office2](Delta2a_zombie_office2_%28entity%29 "Delta2a zombie office2 (entity)")
+-   [delta2b\_cam](Delta2b_cam_%28entity%29 "Delta2b cam (entity)")
+-   [delta2b\_hazmat](Delta2b_hazmat_%28entity%29 "Delta2b hazmat (entity)")
+-   [delta2b\_imp](Delta2b_imp_%28entity%29 "Delta2b imp (entity)")
+-   [delta2b\_keycardzombie](Delta2b_keycardzombie_%28entity%29 "Delta2b keycardzombie (entity)")
+-   [delta2b\_roq2\_cam](Delta2b_roq2_cam_%28entity%29 "Delta2b roq2 cam (entity)")
+-   [delta2b\_roq3\_cam](Delta2b_roq3_cam_%28entity%29 "Delta2b roq3 cam (entity)")
+-   [delta2b\_tankimp](Delta2b_tankimp_%28entity%29 "Delta2b tankimp (entity)")
+-   [delta2b\_tankimpwires](Delta2b_tankimpwires_%28entity%29 "Delta2b tankimpwires (entity)")
+-   [delta2b\_tankrev](Delta2b_tankrev_%28entity%29 "Delta2b tankrev (entity)")
+-   [delta2b\_tankrevwires](Delta2b_tankrevwires_%28entity%29 "Delta2b tankrevwires (entity)")
+-   [delta2b\_waterwires](Delta2b_waterwires_%28entity%29 "Delta2b waterwires (entity)")
+-   [delta3\_betruger](Delta3_betruger_%28entity%29 "Delta3 betruger (entity)")
+-   [delta4\_betruger](Delta4_betruger_%28entity%29 "Delta4 betruger (entity)")
+-   [delta4\_cin\_hazguy](Delta4_cin_hazguy_%28entity%29 "Delta4 cin hazguy (entity)")
+-   [delta4\_cin\_hk1](Delta4_cin_hk1_%28entity%29 "Delta4 cin hk1 (entity)")
+-   [delta4\_cin\_hk2](Delta4_cin_hk2_%28entity%29 "Delta4 cin hk2 (entity)")
+-   [delta4\_cin\_player](Delta4_cin_player_%28entity%29 "Delta4 cin player (entity)")
+-   [delta4\_cin\_player\_start](Delta4_cin_player_start_%28entity%29 "Delta4 cin player start (entity)")
+-   [delta4\_cin\_teleporter](Delta4_cin_teleporter_%28entity%29 "Delta4 cin teleporter (entity)")
+-   [delta4\_hazguy](Delta4_hazguy_%28entity%29 "Delta4 hazguy (entity)")
+-   [delta4\_hkintro\_cam](Delta4_hkintro_cam_%28entity%29 "Delta4 hkintro cam (entity)")
+-   [delta5\_wounded\_swann](Delta5_wounded_swann_%28entity%29 "Delta5 wounded swann (entity)")
+
+### E
+
+-   [ending\_cam](Ending_cam_%28entity%29 "Ending cam (entity)")
+-   [ending\_debris](Ending_debris_%28entity%29 "Ending debris (entity)")
+-   [enpro\_campbell](Enpro_campbell_%28entity%29 "Enpro campbell (entity)")
+-   [enpro\_cin\_female](Enpro_cin_female_%28entity%29 "Enpro cin female (entity)")
+-   [enpro\_cin\_lostsoul](Enpro_cin_lostsoul_%28entity%29 "Enpro cin lostsoul (entity)")
+-   [enpro\_cin\_machinegun](Enpro_cin_machinegun_%28entity%29 "Enpro cin machinegun (entity)")
+-   [enpro\_cin\_player](Enpro_cin_player_%28entity%29 "Enpro cin player (entity)")
+-   [enpro\_cin\_wraith](Enpro_cin_wraith_%28entity%29 "Enpro cin wraith (entity)")
+-   [enpro\_escape\_cam](Enpro_escape_cam_%28entity%29 "Enpro escape cam (entity)")
+-   [enpro\_exit\_cam](Enpro_exit_cam_%28entity%29 "Enpro exit cam (entity)")
+-   [enpro\_exit\_helmet](Enpro_exit_helmet_%28entity%29 "Enpro exit helmet (entity)")
+-   [enpro\_exit\_imp1](Enpro_exit_imp1_%28entity%29 "Enpro exit imp1 (entity)")
+-   [enpro\_exit\_imp2](Enpro_exit_imp2_%28entity%29 "Enpro exit imp2 (entity)")
+-   [enpro\_exit\_imp3](Enpro_exit_imp3_%28entity%29 "Enpro exit imp3 (entity)")
+-   [enpro\_glass\_cam](Enpro_glass_cam_%28entity%29 "Enpro glass cam (entity)")
+-   [enpro\_keycard](Enpro_keycard_%28entity%29 "Enpro keycard (entity)")
+-   [enpro\_lost\_chair](Enpro_lost_chair_%28entity%29 "Enpro lost chair (entity)")
+-   [enpro\_lost\_spine](Enpro_lost_spine_%28entity%29 "Enpro lost spine (entity)")
+-   [enpro\_lostintro\_cam](Enpro_lostintro_cam_%28entity%29 "Enpro lostintro cam (entity)")
+-   [enpro\_monitor\_cam](Enpro_monitor_cam_%28entity%29 "Enpro monitor cam (entity)")
+-   [enpro\_soldier1](Enpro_soldier1_%28entity%29 "Enpro soldier1 (entity)")
+-   [enpro\_soldier2](Enpro_soldier2_%28entity%29 "Enpro soldier2 (entity)")
+-   [enpro\_soldier3](Enpro_soldier3_%28entity%29 "Enpro soldier3 (entity)")
+-   [enpro\_soldier4](Enpro_soldier4_%28entity%29 "Enpro soldier4 (entity)")
+-   [enpro\_swann](Enpro_swann_%28entity%29 "Enpro swann (entity)")
+-   [enpro\_tuberide\_cam](Enpro_tuberide_cam_%28entity%29 "Enpro tuberide cam (entity)")
+-   [enpro\_wounded\_cam](Enpro_wounded_cam_%28entity%29 "Enpro wounded cam (entity)")
+-   [enpro\_wounded\_marine](Enpro_wounded_marine_%28entity%29 "Enpro wounded marine (entity)")
+-   [enpro\_wounded\_marine2](Enpro_wounded_marine2_%28entity%29 "Enpro wounded marine2 (entity)")
+-   [enpro\_wounded\_player](Enpro_wounded_player_%28entity%29 "Enpro wounded player (entity)")
+-   [env\_airlockdoor](Env_airlockdoor_%28entity%29 "Env airlockdoor (entity)")
+-   [env\_bfg\_overcharge](Env_bfg_overcharge_%28entity%29 "Env bfg overcharge (entity)")
+-   [env\_bfgcase](Env_bfgcase_%28entity%29 "Env bfgcase (entity)")
+-   [env\_bluesteampipe\_128](Env_bluesteampipe_128_%28entity%29 "Env bluesteampipe 128 (entity)")
+-   [env\_buggy](Env_buggy_%28entity%29 "Env buggy (entity)")
+-   [env\_cage\_corpse](Env_cage_corpse_%28entity%29 "Env cage corpse (entity)")
+-   [env\_chain](Env_chain_%28entity%29 "Env chain (entity)")
+-   [env\_crane](Env_crane_%28entity%29 "Env crane (entity)")
+-   [env\_craneplatform\_caverns1](Env_craneplatform_caverns1_%28entity%29 "Env craneplatform caverns1 (entity)")
+-   [env\_curtain](Env_curtain_%28entity%29 "Env curtain (entity)")
+-   [env\_dragtest](Env_dragtest_%28entity%29 "Env dragtest (entity)")
+-   [env\_evilmeat](Env_evilmeat_%28entity%29 "Env evilmeat (entity)")
+-   [env\_gibs\_leftarm](Env_gibs_leftarm_%28entity%29 "Env gibs leftarm (entity)")
+-   [env\_gibs\_leftleg](Env_gibs_leftleg_%28entity%29 "Env gibs leftleg (entity)")
+-   [env\_gibs\_rtlolegstump](Env_gibs_rtlolegstump_%28entity%29 "Env gibs rtlolegstump (entity)")
+-   [env\_gibs\_rtuplegstump](Env_gibs_rtuplegstump_%28entity%29 "Env gibs rtuplegstump (entity)")
+-   [env\_gibs\_ruparmstub](Env_gibs_ruparmstub_%28entity%29 "Env gibs ruparmstub (entity)")
+-   [env\_gibs\_spine](Env_gibs_spine_%28entity%29 "Env gibs spine (entity)")
+-   [env\_gibs\_torso](Env_gibs_torso_%28entity%29 "Env gibs torso (entity)")
+-   [env\_grenade\_explodeinhand](Env_grenade_explodeinhand_%28entity%29 "Env grenade explodeinhand (entity)")
+-   [env\_greysteampipe\_128](Env_greysteampipe_128_%28entity%29 "Env greysteampipe 128 (entity)")
+-   [env\_hellcage\_long](Env_hellcage_long_%28entity%29 "Env hellcage long (entity)")
+-   [env\_hellcage\_medium](Env_hellcage_medium_%28entity%29 "Env hellcage medium (entity)")
+-   [env\_hellcage\_short](Env_hellcage_short_%28entity%29 "Env hellcage short (entity)")
+-   [env\_hellchain](Env_hellchain_%28entity%29 "Env hellchain (entity)")
+-   [env\_hires\_steampipe](Env_hires_steampipe_%28entity%29 "Env hires steampipe (entity)")
+-   [env\_implanding](Env_implanding_%28entity%29 "Env implanding (entity)")
+-   [env\_inviso](Env_inviso_%28entity%29 "Env inviso (entity)")
+-   [env\_juglamp](Env_juglamp_%28entity%29 "Env juglamp (entity)")
+-   [env\_locust](Env_locust_%28entity%29 "Env locust (entity)")
+-   [env\_orangesteampipe\_128](Env_orangesteampipe_128_%28entity%29 "Env orangesteampipe 128 (entity)")
+-   [env\_pinky\_pipes](Env_pinky_pipes_%28entity%29 "Env pinky pipes (entity)")
+-   [env\_pipe\_96](Env_pipe_96_%28entity%29 "Env pipe 96 (entity)")
+-   [env\_player\_doommarine](Env_player_doommarine_%28entity%29 "Env player doommarine (entity)")
+-   [env\_playerandallguns](Env_playerandallguns_%28entity%29 "Env playerandallguns (entity)")
+-   [env\_ragdoll\_archvile](Env_ragdoll_archvile_%28entity%29 "Env ragdoll archvile (entity)")
+-   [env\_ragdoll\_boney](Env_ragdoll_boney_%28entity%29 "Env ragdoll boney (entity)")
+-   [env\_ragdoll\_cherub](Env_ragdoll_cherub_%28entity%29 "Env ragdoll cherub (entity)")
+-   [env\_ragdoll\_commando](Env_ragdoll_commando_%28entity%29 "Env ragdoll commando (entity)")
+-   [env\_ragdoll\_fatty](Env_ragdoll_fatty_%28entity%29 "Env ragdoll fatty (entity)")
+-   [env\_ragdoll\_gibbable\_base](Env_ragdoll_gibbable_base_%28entity%29 "Env ragdoll gibbable base (entity)")
+-   [env\_ragdoll\_hazmat](Env_ragdoll_hazmat_%28entity%29 "Env ragdoll hazmat (entity)")
+-   [env\_ragdoll\_hellknight](Env_ragdoll_hellknight_%28entity%29 "Env ragdoll hellknight (entity)")
+-   [env\_ragdoll\_imp](Env_ragdoll_imp_%28entity%29 "Env ragdoll imp (entity)")
+-   [env\_ragdoll\_lab1](Env_ragdoll_lab1_%28entity%29 "Env ragdoll lab1 (entity)")
+-   [env\_ragdoll\_lab2](Env_ragdoll_lab2_%28entity%29 "Env ragdoll lab2 (entity)")
+-   [env\_ragdoll\_lab3](Env_ragdoll_lab3_%28entity%29 "Env ragdoll lab3 (entity)")
+-   [env\_ragdoll\_lab4](Env_ragdoll_lab4_%28entity%29 "Env ragdoll lab4 (entity)")
+-   [env\_ragdoll\_maint](Env_ragdoll_maint_%28entity%29 "Env ragdoll maint (entity)")
+-   [env\_ragdoll\_marine1](Env_ragdoll_marine1_%28entity%29 "Env ragdoll marine1 (entity)")
+-   [env\_ragdoll\_marine2](Env_ragdoll_marine2_%28entity%29 "Env ragdoll marine2 (entity)")
+-   [env\_ragdoll\_marine3](Env_ragdoll_marine3_%28entity%29 "Env ragdoll marine3 (entity)")
+-   [env\_ragdoll\_marine4](Env_ragdoll_marine4_%28entity%29 "Env ragdoll marine4 (entity)")
+-   [env\_ragdoll\_marine5](Env_ragdoll_marine5_%28entity%29 "Env ragdoll marine5 (entity)")
+-   [env\_ragdoll\_marine6](Env_ragdoll_marine6_%28entity%29 "Env ragdoll marine6 (entity)")
+-   [env\_ragdoll\_marine\_helmet](Env_ragdoll_marine_helmet_%28entity%29 "Env ragdoll marine helmet (entity)")
+-   [env\_ragdoll\_marine\_stump](Env_ragdoll_marine_stump_%28entity%29 "Env ragdoll marine stump (entity)")
+-   [env\_ragdoll\_mummy](Env_ragdoll_mummy_%28entity%29 "Env ragdoll mummy (entity)")
+-   [env\_ragdoll\_mummy\_fixed](Env_ragdoll_mummy_fixed_%28entity%29 "Env ragdoll mummy fixed (entity)")
+-   [env\_ragdoll\_pinky](Env_ragdoll_pinky_%28entity%29 "Env ragdoll pinky (entity)")
+-   [env\_ragdoll\_poppy](Env_ragdoll_poppy_%28entity%29 "Env ragdoll poppy (entity)")
+-   [env\_ragdoll\_revenant](Env_ragdoll_revenant_%28entity%29 "Env ragdoll revenant (entity)")
+-   [env\_ragdoll\_sentry](Env_ragdoll_sentry_%28entity%29 "Env ragdoll sentry (entity)")
+-   [env\_ragdoll\_skeleton](Env_ragdoll_skeleton_%28entity%29 "Env ragdoll skeleton (entity)")
+-   [env\_ragdoll\_skeleton2](Env_ragdoll_skeleton2_%28entity%29 "Env ragdoll skeleton2 (entity)")
+-   [env\_ragdoll\_suit1](Env_ragdoll_suit1_%28entity%29 "Env ragdoll suit1 (entity)")
+-   [env\_ragdoll\_suit2](Env_ragdoll_suit2_%28entity%29 "Env ragdoll suit2 (entity)")
+-   [env\_ragdoll\_suit3](Env_ragdoll_suit3_%28entity%29 "Env ragdoll suit3 (entity)")
+-   [env\_ragdoll\_tentacle](Env_ragdoll_tentacle_%28entity%29 "Env ragdoll tentacle (entity)")
+-   [env\_ragdoll\_zfem](Env_ragdoll_zfem_%28entity%29 "Env ragdoll zfem (entity)")
+-   [env\_ragdoll\_zmaint](Env_ragdoll_zmaint_%28entity%29 "Env ragdoll zmaint (entity)")
+-   [env\_ragdoll\_zscientist1](Env_ragdoll_zscientist1_%28entity%29 "Env ragdoll zscientist1 (entity)")
+-   [env\_ragdoll\_zscientist2](Env_ragdoll_zscientist2_%28entity%29 "Env ragdoll zscientist2 (entity)")
+-   [env\_ragdoll\_zscientist3](Env_ragdoll_zscientist3_%28entity%29 "Env ragdoll zscientist3 (entity)")
+-   [env\_ragdoll\_zsecm](Env_ragdoll_zsecm_%28entity%29 "Env ragdoll zsecm (entity)")
+-   [env\_ragdoll\_zsecp](Env_ragdoll_zsecp_%28entity%29 "Env ragdoll zsecp (entity)")
+-   [env\_ragdoll\_zsecs](Env_ragdoll_zsecs_%28entity%29 "Env ragdoll zsecs (entity)")
+-   [env\_reactor](Env_reactor_%28entity%29 "Env reactor (entity)")
+-   [env\_rope](Env_rope_%28entity%29 "Env rope (entity)")
+-   [env\_sencpu](Env_sencpu_%28entity%29 "Env sencpu (entity)")
+-   [env\_severed\_zombie](Env_severed_zombie_%28entity%29 "Env severed zombie (entity)")
+-   [env\_skullgate](Env_skullgate_%28entity%29 "Env skullgate (entity)")
+-   [env\_steampipe\_a](Env_steampipe_a_%28entity%29 "Env steampipe a (entity)")
+-   [env\_steampipe\_b](Env_steampipe_b_%28entity%29 "Env steampipe b (entity)")
+-   [env\_steampipe\_c](Env_steampipe_c_%28entity%29 "Env steampipe c (entity)")
+-   [env\_storagecabinet](Env_storagecabinet_%28entity%29 "Env storagecabinet (entity)")
+-   [env\_storagecabinet\_openback](Env_storagecabinet_openback_%28entity%29 "Env storagecabinet openback (entity)")
+-   [env\_swing\_tubearm](Env_swing_tubearm_%28entity%29 "Env swing tubearm (entity)")
+-   [env\_swinglight\_long](Env_swinglight_long_%28entity%29 "Env swinglight long (entity)")
+-   [env\_swinglight\_long\_fixed](Env_swinglight_long_fixed_%28entity%29 "Env swinglight long fixed (entity)")
+-   [env\_swinglight\_long\_wbulbs](Env_swinglight_long_wbulbs_%28entity%29 "Env swinglight long wbulbs (entity)")
+-   [env\_swinglight\_long\_wbulbs\_128](Env_swinglight_long_wbulbs_128_%28entity%29 "Env swinglight long wbulbs 128 (entity)")
+-   [env\_swinglight\_long\_wbulbs\_192](Env_swinglight_long_wbulbs_192_%28entity%29 "Env swinglight long wbulbs 192 (entity)")
+-   [env\_swinglight\_long\_wbulbs\_32](Env_swinglight_long_wbulbs_32_%28entity%29 "Env swinglight long wbulbs 32 (entity)")
+-   [env\_swinglight\_long\_wbulbs\_fixed](Env_swinglight_long_wbulbs_fixed_%28entity%29 "Env swinglight long wbulbs fixed (entity)")
+-   [env\_swinglight\_round](Env_swinglight_round_%28entity%29 "Env swinglight round (entity)")
+-   [env\_swinglight\_sl128](Env_swinglight_sl128_%28entity%29 "Env swinglight sl128 (entity)")
+-   [env\_swinglight\_sl128\_fixed](Env_swinglight_sl128_fixed_%28entity%29 "Env swinglight sl128 fixed (entity)")
+-   [env\_swinglight\_sl64](Env_swinglight_sl64_%28entity%29 "Env swinglight sl64 (entity)")
+-   [env\_web](Env_web_%28entity%29 "Env web (entity)")
+-   [env\_wirea](Env_wirea_%28entity%29 "Env wirea (entity)")
+-   [env\_wireb](Env_wireb_%28entity%29 "Env wireb (entity)")
+-   [env\_wirec](Env_wirec_%28entity%29 "Env wirec (entity)")
+-   [env\_xianbutton\_1](Env_xianbutton_1_%28entity%29 "Env xianbutton 1 (entity)")
+-   [env\_xianbutton\_2](Env_xianbutton_2_%28entity%29 "Env xianbutton 2 (entity)")
+-   [env\_xianbutton\_3](Env_xianbutton_3_%28entity%29 "Env xianbutton 3 (entity)")
+-   [env\_zsci\_corpse](Env_zsci_corpse_%28entity%29 "Env zsci corpse (entity)")
+
+### F
+
+-   [func\_aas\_obstacle](Func_aas_obstacle_%28entity%29 "Func aas obstacle (entity)")
+-   [func\_aas\_portal](Func_aas_portal_%28entity%29 "Func aas portal (entity)")
+-   [func\_activator](Func_activator_%28entity%29 "Func activator (entity)")
+-   [func\_animate](Func_animate_%28entity%29 "Func animate (entity)")
+-   [func\_beam](Func_beam_%28entity%29 "Func beam (entity)")
+-   [func\_bobbing](Func_bobbing_%28entity%29 "Func bobbing (entity)")
+-   [func\_cameraTarget](Func_cameraTarget_%28entity%29 "Func cameraTarget (entity)")
+-   [func\_camera\_anim](Func_camera_anim_%28entity%29 "Func camera anim (entity)")
+-   [func\_cameraview](Func_cameraview_%28entity%29 "Func cameraview (entity)")
+-   [func\_clipmodel](Func_clipmodel_%28entity%29 "Func clipmodel (entity)")
+-   [func\_damagable](Func_damagable_%28entity%29 "Func damagable (entity)")
+-   [func\_damage](Func_damage_%28entity%29 "Func damage (entity)")
+-   [func\_door](Func_door_%28entity%29 "Func door (entity)")
+-   [func\_earthquake](Func_earthquake_%28entity%29 "Func earthquake (entity)")
+-   [func\_elevator](Func_elevator_%28entity%29 "Func elevator (entity)")
+-   [func\_emitter](Func_emitter_%28entity%29 "Func emitter (entity)")
+-   [func\_explosion](Func_explosion_%28entity%29 "Func explosion (entity)")
+-   [func\_forcefield](Func_forcefield_%28entity%29 "Func forcefield (entity)")
+-   [func\_fracture](Func_fracture_%28entity%29 "Func fracture (entity)")
+-   [func\_fx](Func_fx_%28entity%29 "Func fx (entity)")
+-   [func\_group](Func_group_%28entity%29 "Func group (entity)")
+-   [func\_itemremove](Func_itemremove_%28entity%29 "Func itemremove (entity)")
+-   [func\_liquid](Func_liquid_%28entity%29 "Func liquid (entity)")
+-   [func\_mover](Func_mover_%28entity%29 "Func mover (entity)")
+-   [func\_mover\_amodel](Func_mover_amodel_%28entity%29 "Func mover amodel (entity)")
+-   [func\_pendulum](Func_pendulum_%28entity%29 "Func pendulum (entity)")
+-   [func\_phantom\_objects](Func_phantom_objects_%28entity%29 "Func phantom objects (entity)")
+-   [func\_plat](Func_plat_%28entity%29 "Func plat (entity)")
+-   [func\_portal](Func_portal_%28entity%29 "Func portal (entity)")
+-   [func\_radiochatter](Func_radiochatter_%28entity%29 "Func radiochatter (entity)")
+-   [func\_remove](Func_remove_%28entity%29 "Func remove (entity)")
+-   [func\_riser](Func_riser_%28entity%29 "Func riser (entity)")
+-   [func\_rotating](Func_rotating_%28entity%29 "Func rotating (entity)")
+-   [func\_securitycamera](Func_securitycamera_%28entity%29 "Func securitycamera (entity)")
+-   [func\_shaking](Func_shaking_%28entity%29 "Func shaking (entity)")
+-   [func\_smoke](Func_smoke_%28entity%29 "Func smoke (entity)")
+-   [func\_splat](Func_splat_%28entity%29 "Func splat (entity)")
+-   [func\_splinemover](Func_splinemover_%28entity%29 "Func splinemover (entity)")
+-   [func\_spring](Func_spring_%28entity%29 "Func spring (entity)")
+-   [func\_static](Func_static_%28entity%29 "Func static (entity)")
+-   [func\_teleporter](Func_teleporter_%28entity%29 "Func teleporter (entity)")
+-   [func\_waitforbutton](Func_waitforbutton_%28entity%29 "Func waitforbutton (entity)")
+
+### G
+
+-   [guardian\_poundground\_explosion](Guardian_poundground_explosion_%28entity%29 "Guardian poundground explosion (entity)")
+
+### H
+
+-   [hell1\_cin\_guardian](Hell1_cin_guardian_%28entity%29 "Hell1 cin guardian (entity)")
+-   [hell1\_cin\_player](Hell1_cin_player_%28entity%29 "Hell1 cin player (entity)")
+-   [hell1\_guardiandeath\_cam](Hell1_guardiandeath_cam_%28entity%29 "Hell1 guardiandeath cam (entity)")
+-   [hell1\_guardianintro\_cam](Hell1_guardianintro_cam_%28entity%29 "Hell1 guardianintro cam (entity)")
+-   [hell1\_soulcube](Hell1_soulcube_%28entity%29 "Hell1 soulcube (entity)")
+-   [hell\_lstep](Hell_lstep_%28entity%29 "Hell lstep (entity)")
+-   [hell\_rstep](Hell_rstep_%28entity%29 "Hell rstep (entity)")
+-   [hellhole\_cam](Hellhole_cam_%28entity%29 "Hellhole cam (entity)")
+-   [hellhole\_cin\_cyberdemon](Hellhole_cin_cyberdemon_%28entity%29 "Hellhole cin cyberdemon (entity)")
+-   [hellhole\_cin\_cyberdemon2](Hellhole_cin_cyberdemon2_%28entity%29 "Hellhole cin cyberdemon2 (entity)")
+-   [hellhole\_cin\_marine](Hellhole_cin_marine_%28entity%29 "Hellhole cin marine (entity)")
+-   [hellhole\_cin\_npcplayer](Hellhole_cin_npcplayer_%28entity%29 "Hellhole cin npcplayer (entity)")
+-   [hellhole\_cin\_player](Hellhole_cin_player_%28entity%29 "Hellhole cin player (entity)")
+-   [hellhole\_cin\_player2](Hellhole_cin_player2_%28entity%29 "Hellhole cin player2 (entity)")
+-   [hellhole\_cin\_player3](Hellhole_cin_player3_%28entity%29 "Hellhole cin player3 (entity)")
+-   [hellhole\_coffinbricks](Hellhole_coffinbricks_%28entity%29 "Hellhole coffinbricks (entity)")
+-   [hellhole\_cyberbricks](Hellhole_cyberbricks_%28entity%29 "Hellhole cyberbricks (entity)")
+-   [hellhole\_cyberdeathrocks](Hellhole_cyberdeathrocks_%28entity%29 "Hellhole cyberdeathrocks (entity)")
+-   [hellhole\_imp](Hellhole_imp_%28entity%29 "Hellhole imp (entity)")
+-   [hellhole\_lookmarine](Hellhole_lookmarine_%28entity%29 "Hellhole lookmarine (entity)")
+-   [hellhole\_maggot](Hellhole_maggot_%28entity%29 "Hellhole maggot (entity)")
+-   [hellhole\_pdamarine](Hellhole_pdamarine_%28entity%29 "Hellhole pdamarine (entity)")
+-   [hellhole\_rescue\_cam](Hellhole_rescue_cam_%28entity%29 "Hellhole rescue cam (entity)")
+-   [hellhole\_soulcube](Hellhole_soulcube_%28entity%29 "Hellhole soulcube (entity)")
+-   [hellhole\_swann](Hellhole_swann_%28entity%29 "Hellhole swann (entity)")
+-   [hellhole\_walkmarine](Hellhole_walkmarine_%28entity%29 "Hellhole walkmarine (entity)")
+
+### I
+
+-   [info\_location](Info_location_%28entity%29 "Info location (entity)")
+-   [info\_locationSeparator](Info_locationSeparator_%28entity%29 "Info locationSeparator (entity)")
+-   [info\_player\_deathmatch](Info_player_deathmatch_%28entity%29 "Info player deathmatch (entity)")
+-   [info\_player\_start](Info_player_start_%28entity%29 "Info player start (entity)")
+-   [info\_player\_teleport](Info_player_teleport_%28entity%29 "Info player teleport (entity)")
+-   [info\_vacuum](Info_vacuum_%28entity%29 "Info vacuum (entity)")
+-   [info\_vacuumSeparator](Info_vacuumSeparator_%28entity%29 "Info vacuumSeparator (entity)")
+-   [intro\_cam](Intro_cam_%28entity%29 "Intro cam (entity)")
+-   [intro\_meat](Intro_meat_%28entity%29 "Intro meat (entity)")
+-   [intro\_panel](Intro_panel_%28entity%29 "Intro panel (entity)")
+-   [intro\_pinky](Intro_pinky_%28entity%29 "Intro pinky (entity)")
+-   [intro\_scientist](Intro_scientist_%28entity%29 "Intro scientist (entity)")
+-   [item\_aircannister](Item_aircannister_%28entity%29 "Item aircannister (entity)")
+-   [item\_armor\_security](Item_armor_security_%28entity%29 "Item armor security (entity)")
+-   [item\_armor\_security\_mp](Item_armor_security_mp_%28entity%29 "Item armor security mp (entity)")
+-   [item\_armor\_shard](Item_armor_shard_%28entity%29 "Item armor shard (entity)")
+-   [item\_armor\_shard\_mp](Item_armor_shard_mp_%28entity%29 "Item armor shard mp (entity)")
+-   [item\_backpack](Item_backpack_%28entity%29 "Item backpack (entity)")
+-   [item\_battery](Item_battery_%28entity%29 "Item battery (entity)")
+-   [item\_data\_linker](Item_data_linker_%28entity%29 "Item data linker (entity)")
+-   [item\_default](Item_default_%28entity%29 "Item default (entity)")
+-   [item\_generic](Item_generic_%28entity%29 "Item generic (entity)")
+-   [item\_key\_blue](Item_key_blue_%28entity%29 "Item key blue (entity)")
+-   [item\_key\_red](Item_key_red_%28entity%29 "Item key red (entity)")
+-   [item\_key\_yellow](Item_key_yellow_%28entity%29 "Item key yellow (entity)")
+-   [item\_keycard\_aco](Item_keycard_aco_%28entity%29 "Item keycard aco (entity)")
+-   [item\_keycard\_generic](Item_keycard_generic_%28entity%29 "Item keycard generic (entity)")
+-   [item\_medkit](Item_medkit_%28entity%29 "Item medkit (entity)")
+-   [item\_medkit\_mp](Item_medkit_mp_%28entity%29 "Item medkit mp (entity)")
+-   [item\_medkit\_small](Item_medkit_small_%28entity%29 "Item medkit small (entity)")
+-   [item\_medkit\_small\_mp](Item_medkit_small_mp_%28entity%29 "Item medkit small mp (entity)")
+-   [item\_objective](Item_objective_%28entity%29 "Item objective (entity)")
+-   [item\_objectivecomplete](Item_objectivecomplete_%28entity%29 "Item objectivecomplete (entity)")
+-   [item\_pda](Item_pda_%28entity%29 "Item pda (entity)")
+-   [item\_videocd](Item_videocd_%28entity%29 "Item videocd (entity)")
+
+### L
+
+-   [light](Light_%28entity%29 "Light (entity)")
+
+### M
+
+-   [maledict\_debris1](Maledict_debris1_%28entity%29 "Maledict debris1 (entity)")
+-   [maledict\_world](Maledict_world_%28entity%29 "Maledict world (entity)")
+-   [marscity2\_cin\_fatty](Marscity2_cin_fatty_%28entity%29 "Marscity2 cin fatty (entity)")
+-   [marscity2\_cin\_imp](Marscity2_cin_imp_%28entity%29 "Marscity2 cin imp (entity)")
+-   [marscity2\_hallway\_marine](Marscity2_hallway_marine_%28entity%29 "Marscity2 hallway marine (entity)")
+-   [marscity2\_hallway\_zombie](Marscity2_hallway_zombie_%28entity%29 "Marscity2 hallway zombie (entity)")
+-   [marscity2\_imp](Marscity2_imp_%28entity%29 "Marscity2 imp (entity)")
+-   [marscity2\_maint\_ceiling](Marscity2_maint_ceiling_%28entity%29 "Marscity2 maint ceiling (entity)")
+-   [marscity2\_sarge\_cam](Marscity2_sarge_cam_%28entity%29 "Marscity2 sarge cam (entity)")
+-   [marscity2\_video\_sarge](Marscity2_video_sarge_%28entity%29 "Marscity2 video sarge (entity)")
+-   [marscity2\_zombie\_morgue](Marscity2_zombie_morgue_%28entity%29 "Marscity2 zombie morgue (entity)")
+-   [marscity\_char\_maint\_asian\_pda](Marscity_char_maint_asian_pda_%28entity%29 "Marscity char maint asian pda (entity)")
+-   [marscity\_cinematic\_betruger](Marscity_cinematic_betruger_%28entity%29 "Marscity cinematic betruger (entity)")
+-   [marscity\_cinematic\_cam](Marscity_cinematic_cam_%28entity%29 "Marscity cinematic cam (entity)")
+-   [marscity\_cinematic\_campbell](Marscity_cinematic_campbell_%28entity%29 "Marscity cinematic campbell (entity)")
+-   [marscity\_cinematic\_doctor](Marscity_cinematic_doctor_%28entity%29 "Marscity cinematic doctor (entity)")
+-   [marscity\_cinematic\_player](Marscity_cinematic_player_%28entity%29 "Marscity cinematic player (entity)")
+-   [marscity\_cinematic\_sarge](Marscity_cinematic_sarge_%28entity%29 "Marscity cinematic sarge (entity)")
+-   [marscity\_cinematic\_sarge2](Marscity_cinematic_sarge2_%28entity%29 "Marscity cinematic sarge2 (entity)")
+-   [marscity\_cinematic\_security](Marscity_cinematic_security_%28entity%29 "Marscity cinematic security (entity)")
+-   [marscity\_cinematic\_swann](Marscity_cinematic_swann_%28entity%29 "Marscity cinematic swann (entity)")
+-   [marscity\_cinematic\_victim](Marscity_cinematic_victim_%28entity%29 "Marscity cinematic victim (entity)")
+-   [marscity\_civilian1](Marscity_civilian1_%28entity%29 "Marscity civilian1 (entity)")
+-   [marscity\_civilian2](Marscity_civilian2_%28entity%29 "Marscity civilian2 (entity)")
+-   [marscity\_civilian\_bathroom](Marscity_civilian_bathroom_%28entity%29 "Marscity civilian bathroom (entity)")
+-   [marscity\_civilian\_hallway](Marscity_civilian_hallway_%28entity%29 "Marscity civilian hallway (entity)")
+-   [marscity\_civilian\_kitchen](Marscity_civilian_kitchen_%28entity%29 "Marscity civilian kitchen (entity)")
+-   [marscity\_dufflebag](Marscity_dufflebag_%28entity%29 "Marscity dufflebag (entity)")
+-   [marscity\_hangar](Marscity_hangar_%28entity%29 "Marscity hangar (entity)")
+-   [marscity\_hangar\_campbell](Marscity_hangar_campbell_%28entity%29 "Marscity hangar campbell (entity)")
+-   [marscity\_hangar\_player](Marscity_hangar_player_%28entity%29 "Marscity hangar player (entity)")
+-   [marscity\_hangar\_swann](Marscity_hangar_swann_%28entity%29 "Marscity hangar swann (entity)")
+-   [marscity\_ipn\_news](Marscity_ipn_news_%28entity%29 "Marscity ipn news (entity)")
+-   [marscity\_labcoat\_black](Marscity_labcoat_black_%28entity%29 "Marscity labcoat black (entity)")
+-   [marscity\_labcoat\_monitor](Marscity_labcoat_monitor_%28entity%29 "Marscity labcoat monitor (entity)")
+-   [marscity\_labcoat\_young](Marscity_labcoat_young_%28entity%29 "Marscity labcoat young (entity)")
+-   [marscity\_maint1\_hallway](Marscity_maint1_hallway_%28entity%29 "Marscity maint1 hallway (entity)")
+-   [marscity\_maint2\_hallway](Marscity_maint2_hallway_%28entity%29 "Marscity maint2 hallway (entity)")
+-   [marscity\_meeting\_betruger](Marscity_meeting_betruger_%28entity%29 "Marscity meeting betruger (entity)")
+-   [marscity\_meeting\_player](Marscity_meeting_player_%28entity%29 "Marscity meeting player (entity)")
+-   [marscity\_reception\_player](Marscity_reception_player_%28entity%29 "Marscity reception player (entity)")
+-   [marscity\_receptionist](Marscity_receptionist_%28entity%29 "Marscity receptionist (entity)")
+-   [marscity\_receptionist2](Marscity_receptionist2_%28entity%29 "Marscity receptionist2 (entity)")
+-   [marscity\_receptionist3](Marscity_receptionist3_%28entity%29 "Marscity receptionist3 (entity)")
+-   [marscity\_receptionist\_start](Marscity_receptionist_start_%28entity%29 "Marscity receptionist start (entity)")
+-   [marscity\_sci\_team\_request](Marscity_sci_team_request_%28entity%29 "Marscity sci team request (entity)")
+-   [marscity\_sci\_team\_request\_cam](Marscity_sci_team_request_cam_%28entity%29 "Marscity sci team request cam (entity)")
+-   [marscity\_sec\_checkin](Marscity_sec_checkin_%28entity%29 "Marscity sec checkin (entity)")
+-   [marscity\_sec\_window](Marscity_sec_window_%28entity%29 "Marscity sec window (entity)")
+-   [marscity\_sec\_window2](Marscity_sec_window2_%28entity%29 "Marscity sec window2 (entity)")
+-   [marscity\_security\_goggles\_pda](Marscity_security_goggles_pda_%28entity%29 "Marscity security goggles pda (entity)")
+-   [marscity\_security\_machinegun](Marscity_security_machinegun_%28entity%29 "Marscity security machinegun (entity)")
+-   [marscity\_ship](Marscity_ship_%28entity%29 "Marscity ship (entity)")
+-   [marscity\_ship2](Marscity_ship2_%28entity%29 "Marscity ship2 (entity)")
+-   [marscity\_ship3](Marscity_ship3_%28entity%29 "Marscity ship3 (entity)")
+-   [marscity\_smallpda](Marscity_smallpda_%28entity%29 "Marscity smallpda (entity)")
+-   [marscity\_soldier\_bald\_pda](Marscity_soldier_bald_pda_%28entity%29 "Marscity soldier bald pda (entity)")
+-   [marscity\_soldier\_black](Marscity_soldier_black_%28entity%29 "Marscity soldier black (entity)")
+-   [marscity\_soldier\_young\_pda](Marscity_soldier_young_pda_%28entity%29 "Marscity soldier young pda (entity)")
+-   [marscity\_suit\_asian\_chair](Marscity_suit_asian_chair_%28entity%29 "Marscity suit asian chair (entity)")
+-   [marscity\_suit\_asian\_chair2](Marscity_suit_asian_chair2_%28entity%29 "Marscity suit asian chair2 (entity)")
+-   [marscity\_suit\_chair](Marscity_suit_chair_%28entity%29 "Marscity suit chair (entity)")
+-   [marscity\_suit\_officeguy1](Marscity_suit_officeguy1_%28entity%29 "Marscity suit officeguy1 (entity)")
+-   [marscity\_suit\_young2](Marscity_suit_young2_%28entity%29 "Marscity suit young2 (entity)")
+-   [marscity\_suit\_young\_chair](Marscity_suit_young_chair_%28entity%29 "Marscity suit young chair (entity)")
+-   [marscity\_walking\_swann](Marscity_walking_swann_%28entity%29 "Marscity walking swann (entity)")
+-   [melee\_archLeftClaw](Melee_archLeftClaw_%28entity%29 "Melee archLeftClaw (entity)")
+-   [melee\_archRightClaw](Melee_archRightClaw_%28entity%29 "Melee archRightClaw (entity)")
+-   [melee\_cacodemon](Melee_cacodemon_%28entity%29 "Melee cacodemon (entity)")
+-   [melee\_cherubLeapAttack](Melee_cherubLeapAttack_%28entity%29 "Melee cherubLeapAttack (entity)")
+-   [melee\_cherubLeftClaw](Melee_cherubLeftClaw_%28entity%29 "Melee cherubLeftClaw (entity)")
+-   [melee\_cherubRightClaw](Melee_cherubRightClaw_%28entity%29 "Melee cherubRightClaw (entity)")
+-   [melee\_commandoTentacle](Melee_commandoTentacle_%28entity%29 "Melee commandoTentacle (entity)")
+-   [melee\_commando\_left](Melee_commando_left_%28entity%29 "Melee commando left (entity)")
+-   [melee\_commando\_push](Melee_commando_push_%28entity%29 "Melee commando push (entity)")
+-   [melee\_commando\_right](Melee_commando_right_%28entity%29 "Melee commando right (entity)")
+-   [melee\_cyberdemon\_kick](Melee_cyberdemon_kick_%28entity%29 "Melee cyberdemon kick (entity)")
+-   [melee\_hellknightLeftClaw](Melee_hellknightLeftClaw_%28entity%29 "Melee hellknightLeftClaw (entity)")
+-   [melee\_hellknightRightClaw](Melee_hellknightRightClaw_%28entity%29 "Melee hellknightRightClaw (entity)")
+-   [melee\_hellknight\_bite](Melee_hellknight_bite_%28entity%29 "Melee hellknight bite (entity)")
+-   [melee\_impLeapAttack](Melee_impLeapAttack_%28entity%29 "Melee impLeapAttack (entity)")
+-   [melee\_impLeftClaw](Melee_impLeftClaw_%28entity%29 "Melee impLeftClaw (entity)")
+-   [melee\_impRightClaw](Melee_impRightClaw_%28entity%29 "Melee impRightClaw (entity)")
+-   [melee\_lostsoul](Melee_lostsoul_%28entity%29 "Melee lostsoul (entity)")
+-   [melee\_lostsoul\_charge](Melee_lostsoul_charge_%28entity%29 "Melee lostsoul charge (entity)")
+-   [melee\_magLeftClaw](Melee_magLeftClaw_%28entity%29 "Melee magLeftClaw (entity)")
+-   [melee\_magRightClaw](Melee_magRightClaw_%28entity%29 "Melee magRightClaw (entity)")
+-   [melee\_maggotLeapAttack](Melee_maggotLeapAttack_%28entity%29 "Melee maggotLeapAttack (entity)")
+-   [melee\_mancubus\_stomp](Melee_mancubus_stomp_%28entity%29 "Melee mancubus stomp (entity)")
+-   [melee\_pinky\_back](Melee_pinky_back_%28entity%29 "Melee pinky back (entity)")
+-   [melee\_pinky\_left](Melee_pinky_left_%28entity%29 "Melee pinky left (entity)")
+-   [melee\_pinky\_right](Melee_pinky_right_%28entity%29 "Melee pinky right (entity)")
+-   [melee\_revLeftClaw](Melee_revLeftClaw_%28entity%29 "Melee revLeftClaw (entity)")
+-   [melee\_revRightClaw](Melee_revRightClaw_%28entity%29 "Melee revRightClaw (entity)")
+-   [melee\_revenant](Melee_revenant_%28entity%29 "Melee revenant (entity)")
+-   [melee\_revenant\_left](Melee_revenant_left_%28entity%29 "Melee revenant left (entity)")
+-   [melee\_revenant\_left\_down](Melee_revenant_left_down_%28entity%29 "Melee revenant left down (entity)")
+-   [melee\_revenant\_right](Melee_revenant_right_%28entity%29 "Melee revenant right (entity)")
+-   [melee\_revenant\_right\_down](Melee_revenant_right_down_%28entity%29 "Melee revenant right down (entity)")
+-   [melee\_sabaoth](Melee_sabaoth_%28entity%29 "Melee sabaoth (entity)")
+-   [melee\_triteLeapAttack](Melee_triteLeapAttack_%28entity%29 "Melee triteLeapAttack (entity)")
+-   [melee\_tritebite1](Melee_tritebite1_%28entity%29 "Melee tritebite1 (entity)")
+-   [melee\_vagLeftClaw](Melee_vagLeftClaw_%28entity%29 "Melee vagLeftClaw (entity)")
+-   [melee\_vagRightClaw](Melee_vagRightClaw_%28entity%29 "Melee vagRightClaw (entity)")
+-   [melee\_vulgarLeapAttack](Melee_vulgarLeapAttack_%28entity%29 "Melee vulgarLeapAttack (entity)")
+-   [melee\_vulgarLeftClaw](Melee_vulgarLeftClaw_%28entity%29 "Melee vulgarLeftClaw (entity)")
+-   [melee\_vulgarRightClaw](Melee_vulgarRightClaw_%28entity%29 "Melee vulgarRightClaw (entity)")
+-   [melee\_wraithCenterAttack](Melee_wraithCenterAttack_%28entity%29 "Melee wraithCenterAttack (entity)")
+-   [melee\_wraithLeftClaw](Melee_wraithLeftClaw_%28entity%29 "Melee wraithLeftClaw (entity)")
+-   [melee\_wraithRightClaw](Melee_wraithRightClaw_%28entity%29 "Melee wraithRightClaw (entity)")
+-   [melee\_zombie\_chainsaw](Melee_zombie_chainsaw_%28entity%29 "Melee zombie chainsaw (entity)")
+-   [melee\_zombie\_fat\_Left](Melee_zombie_fat_Left_%28entity%29 "Melee zombie fat Left (entity)")
+-   [melee\_zombie\_fat\_Left2](Melee_zombie_fat_Left2_%28entity%29 "Melee zombie fat Left2 (entity)")
+-   [melee\_zombie\_fat\_Right](Melee_zombie_fat_Right_%28entity%29 "Melee zombie fat Right (entity)")
+-   [melee\_zombie\_fat\_right\_wrench](Melee_zombie_fat_right_wrench_%28entity%29 "Melee zombie fat right wrench (entity)")
+-   [melee\_zombie\_maint\_Left](Melee_zombie_maint_Left_%28entity%29 "Melee zombie maint Left (entity)")
+-   [melee\_zombie\_maint\_Pull](Melee_zombie_maint_Pull_%28entity%29 "Melee zombie maint Pull (entity)")
+-   [melee\_zombie\_maint\_Push](Melee_zombie_maint_Push_%28entity%29 "Melee zombie maint Push (entity)")
+-   [melee\_zombie\_maint\_Right](Melee_zombie_maint_Right_%28entity%29 "Melee zombie maint Right (entity)")
+-   [monorail\_crash\_cam](Monorail_crash_cam_%28entity%29 "Monorail crash cam (entity)")
+-   [monorail\_crash\_debris](Monorail_crash_debris_%28entity%29 "Monorail crash debris (entity)")
+-   [monorail\_crashsight\_player](Monorail_crashsight_player_%28entity%29 "Monorail crashsight player (entity)")
+-   [monorail\_raisecommando\_betruger](Monorail_raisecommando_betruger_%28entity%29 "Monorail raisecommando betruger (entity)")
+-   [monorail\_raisecommando\_cam](Monorail_raisecommando_cam_%28entity%29 "Monorail raisecommando cam (entity)")
+-   [monorail\_raisecommando\_changer](Monorail_raisecommando_changer_%28entity%29 "Monorail raisecommando changer (entity)")
+-   [monorail\_raisecommando\_marine1](Monorail_raisecommando_marine1_%28entity%29 "Monorail raisecommando marine1 (entity)")
+-   [monorail\_raisecommando\_zct](Monorail_raisecommando_zct_%28entity%29 "Monorail raisecommando zct (entity)")
+-   [monorail\_rider](Monorail_rider_%28entity%29 "Monorail rider (entity)")
+-   [monster\_boss\_cyberdemon](Monster_boss_cyberdemon_%28entity%29 "Monster boss cyberdemon (entity)")
+-   [monster\_boss\_guardian](Monster_boss_guardian_%28entity%29 "Monster boss guardian (entity)")
+-   [monster\_boss\_guardian\_seeker](Monster_boss_guardian_seeker_%28entity%29 "Monster boss guardian seeker (entity)")
+-   [monster\_boss\_guardian\_spawner](Monster_boss_guardian_spawner_%28entity%29 "Monster boss guardian spawner (entity)")
+-   [monster\_boss\_maledict\_cinematic](Monster_boss_maledict_cinematic_%28entity%29 "Monster boss maledict cinematic (entity)")
+-   [monster\_boss\_sabaoth](Monster_boss_sabaoth_%28entity%29 "Monster boss sabaoth (entity)")
+-   [monster\_boss\_vagary](Monster_boss_vagary_%28entity%29 "Monster boss vagary (entity)")
+-   [monster\_default](Monster_default_%28entity%29 "Monster default (entity)")
+-   [monster\_demon\_archvile](Monster_demon_archvile_%28entity%29 "Monster demon archvile (entity)")
+-   [monster\_demon\_cherub](Monster_demon_cherub_%28entity%29 "Monster demon cherub (entity)")
+-   [monster\_demon\_d3xp\_bruiser](Monster_demon_d3xp_bruiser_%28entity%29 "Monster demon d3xp bruiser (entity)")
+-   [monster\_demon\_hellknight](Monster_demon_hellknight_%28entity%29 "Monster demon hellknight (entity)")
+-   [monster\_demon\_imp](Monster_demon_imp_%28entity%29 "Monster demon imp (entity)")
+-   [monster\_demon\_imp\_crawl\_armdoor](Monster_demon_imp_crawl_armdoor_%28entity%29 "Monster demon imp crawl armdoor (entity)")
+-   [monster\_demon\_imp\_crawler](Monster_demon_imp_crawler_%28entity%29 "Monster demon imp crawler (entity)")
+-   [monster\_demon\_maggot](Monster_demon_maggot_%28entity%29 "Monster demon maggot (entity)")
+-   [monster\_demon\_mancubus](Monster_demon_mancubus_%28entity%29 "Monster demon mancubus (entity)")
+-   [monster\_demon\_pinky](Monster_demon_pinky_%28entity%29 "Monster demon pinky (entity)")
+-   [monster\_demon\_revenant](Monster_demon_revenant_%28entity%29 "Monster demon revenant (entity)")
+-   [monster\_demon\_sentry](Monster_demon_sentry_%28entity%29 "Monster demon sentry (entity)")
+-   [monster\_demon\_tick](Monster_demon_tick_%28entity%29 "Monster demon tick (entity)")
+-   [monster\_demon\_trite](Monster_demon_trite_%28entity%29 "Monster demon trite (entity)")
+-   [monster\_demon\_vulgar](Monster_demon_vulgar_%28entity%29 "Monster demon vulgar (entity)")
+-   [monster\_demon\_wraith](Monster_demon_wraith_%28entity%29 "Monster demon wraith (entity)")
+-   [monster\_flying\_cacodemon](Monster_flying_cacodemon_%28entity%29 "Monster flying cacodemon (entity)")
+-   [monster\_flying\_lostsoul](Monster_flying_lostsoul_%28entity%29 "Monster flying lostsoul (entity)")
+-   [monster\_turret](Monster_turret_%28entity%29 "Monster turret (entity)")
+-   [monster\_turret\_light](Monster_turret_light_%28entity%29 "Monster turret light (entity)")
+-   [monster\_zombie\_base](Monster_zombie_base_%28entity%29 "Monster zombie base (entity)")
+-   [monster\_zombie\_bernie](Monster_zombie_bernie_%28entity%29 "Monster zombie bernie (entity)")
+-   [monster\_zombie\_boney](Monster_zombie_boney_%28entity%29 "Monster zombie boney (entity)")
+-   [monster\_zombie\_chainsaw](Monster_zombie_chainsaw_%28entity%29 "Monster zombie chainsaw (entity)")
+-   [monster\_zombie\_commando](Monster_zombie_commando_%28entity%29 "Monster zombie commando (entity)")
+-   [monster\_zombie\_commando\_cgun](Monster_zombie_commando_cgun_%28entity%29 "Monster zombie commando cgun (entity)")
+-   [monster\_zombie\_fat](Monster_zombie_fat_%28entity%29 "Monster zombie fat (entity)")
+-   [monster\_zombie\_fat2](Monster_zombie_fat2_%28entity%29 "Monster zombie fat2 (entity)")
+-   [monster\_zombie\_fat\_eating](Monster_zombie_fat_eating_%28entity%29 "Monster zombie fat eating (entity)")
+-   [monster\_zombie\_fat\_wrench](Monster_zombie_fat_wrench_%28entity%29 "Monster zombie fat wrench (entity)")
+-   [monster\_zombie\_jumpsuit](Monster_zombie_jumpsuit_%28entity%29 "Monster zombie jumpsuit (entity)")
+-   [monster\_zombie\_jumpsuit\_influence](Monster_zombie_jumpsuit_influence_%28entity%29 "Monster zombie jumpsuit influence (entity)")
+-   [monster\_zombie\_jumpsuit\_old](Monster_zombie_jumpsuit_old_%28entity%29 "Monster zombie jumpsuit old (entity)")
+-   [monster\_zombie\_labcoat\_hanging](Monster_zombie_labcoat_hanging_%28entity%29 "Monster zombie labcoat hanging (entity)")
+-   [monster\_zombie\_labcoat\_limb](Monster_zombie_labcoat_limb_%28entity%29 "Monster zombie labcoat limb (entity)")
+-   [monster\_zombie\_labcoat\_neckstump](Monster_zombie_labcoat_neckstump_%28entity%29 "Monster zombie labcoat neckstump (entity)")
+-   [monster\_zombie\_labcoat\_pipe](Monster_zombie_labcoat_pipe_%28entity%29 "Monster zombie labcoat pipe (entity)")
+-   [monster\_zombie\_labcoat\_skinny](Monster_zombie_labcoat_skinny_%28entity%29 "Monster zombie labcoat skinny (entity)")
+-   [monster\_zombie\_maint](Monster_zombie_maint_%28entity%29 "Monster zombie maint (entity)")
+-   [monster\_zombie\_maint2](Monster_zombie_maint2_%28entity%29 "Monster zombie maint2 (entity)")
+-   [monster\_zombie\_maint\_bald](Monster_zombie_maint_bald_%28entity%29 "Monster zombie maint bald (entity)")
+-   [monster\_zombie\_maint\_fast](Monster_zombie_maint_fast_%28entity%29 "Monster zombie maint fast (entity)")
+-   [monster\_zombie\_maint\_flashlight](Monster_zombie_maint_flashlight_%28entity%29 "Monster zombie maint flashlight (entity)")
+-   [monster\_zombie\_maint\_no\_jaw](Monster_zombie_maint_no_jaw_%28entity%29 "Monster zombie maint no jaw (entity)")
+-   [monster\_zombie\_maint\_nojaw](Monster_zombie_maint_nojaw_%28entity%29 "Monster zombie maint nojaw (entity)")
+-   [monster\_zombie\_maint\_skinny](Monster_zombie_maint_skinny_%28entity%29 "Monster zombie maint skinny (entity)")
+-   [monster\_zombie\_maint\_wrench](Monster_zombie_maint_wrench_%28entity%29 "Monster zombie maint wrench (entity)")
+-   [monster\_zombie\_morgue](Monster_zombie_morgue_%28entity%29 "Monster zombie morgue (entity)")
+-   [monster\_zombie\_sawyer](Monster_zombie_sawyer_%28entity%29 "Monster zombie sawyer (entity)")
+-   [monster\_zombie\_suit\_bloodymouth](Monster_zombie_suit_bloodymouth_%28entity%29 "Monster zombie suit bloodymouth (entity)")
+-   [monster\_zombie\_suit\_neckstump](Monster_zombie_suit_neckstump_%28entity%29 "Monster zombie suit neckstump (entity)")
+-   [monster\_zombie\_suit\_skinny](Monster_zombie_suit_skinny_%28entity%29 "Monster zombie suit skinny (entity)")
+-   [monster\_zombie\_tshirt\_bald](Monster_zombie_tshirt_bald_%28entity%29 "Monster zombie tshirt bald (entity)")
+-   [monster\_zombie\_tshirt\_blown](Monster_zombie_tshirt_blown_%28entity%29 "Monster zombie tshirt blown (entity)")
+-   [monster\_zombie\_zfem](Monster_zombie_zfem_%28entity%29 "Monster zombie zfem (entity)")
+-   [monster\_zsec\_machinegun](Monster_zsec_machinegun_%28entity%29 "Monster zsec machinegun (entity)")
+-   [monster\_zsec\_pistol](Monster_zsec_pistol_%28entity%29 "Monster zsec pistol (entity)")
+-   [monster\_zsec\_pistol\_slowfire](Monster_zsec_pistol_slowfire_%28entity%29 "Monster zsec pistol slowfire (entity)")
+-   [monster\_zsec\_shield](Monster_zsec_shield_%28entity%29 "Monster zsec shield (entity)")
+-   [monster\_zsec\_shotgun](Monster_zsec_shotgun_%28entity%29 "Monster zsec shotgun (entity)")
+-   [moveable\_barrel1](Moveable_barrel1_%28entity%29 "Moveable barrel1 (entity)")
+-   [moveable\_barrel2](Moveable_barrel2_%28entity%29 "Moveable barrel2 (entity)")
+-   [moveable\_barrel3](Moveable_barrel3_%28entity%29 "Moveable barrel3 (entity)")
+-   [moveable\_base](Moveable_base_%28entity%29 "Moveable base (entity)")
+-   [moveable\_base\_barrel](Moveable_base_barrel_%28entity%29 "Moveable base barrel (entity)")
+-   [moveable\_base\_boulder](Moveable_base_boulder_%28entity%29 "Moveable base boulder (entity)")
+-   [moveable\_base\_brick](Moveable_base_brick_%28entity%29 "Moveable base brick (entity)")
+-   [moveable\_base\_domino](Moveable_base_domino_%28entity%29 "Moveable base domino (entity)")
+-   [moveable\_base\_fixed](Moveable_base_fixed_%28entity%29 "Moveable base fixed (entity)")
+-   [moveable\_beaker](Moveable_beaker_%28entity%29 "Moveable beaker (entity)")
+-   [moveable\_blaptop](Moveable_blaptop_%28entity%29 "Moveable blaptop (entity)")
+-   [moveable\_bottle1](Moveable_bottle1_%28entity%29 "Moveable bottle1 (entity)")
+-   [moveable\_burger](Moveable_burger_%28entity%29 "Moveable burger (entity)")
+-   [moveable\_burgerboxclose](Moveable_burgerboxclose_%28entity%29 "Moveable burgerboxclose (entity)")
+-   [moveable\_burgerboxopen](Moveable_burgerboxopen_%28entity%29 "Moveable burgerboxopen (entity)")
+-   [moveable\_burningbarrel](Moveable_burningbarrel_%28entity%29 "Moveable burningbarrel (entity)")
+-   [moveable\_burningtank](Moveable_burningtank_%28entity%29 "Moveable burningtank (entity)")
+-   [moveable\_cannister](Moveable_cannister_%28entity%29 "Moveable cannister (entity)")
+-   [moveable\_cartonbox1](Moveable_cartonbox1_%28entity%29 "Moveable cartonbox1 (entity)")
+-   [moveable\_cartonbox2](Moveable_cartonbox2_%28entity%29 "Moveable cartonbox2 (entity)")
+-   [moveable\_cartonbox3](Moveable_cartonbox3_%28entity%29 "Moveable cartonbox3 (entity)")
+-   [moveable\_cartonbox4](Moveable_cartonbox4_%28entity%29 "Moveable cartonbox4 (entity)")
+-   [moveable\_cartonbox5](Moveable_cartonbox5_%28entity%29 "Moveable cartonbox5 (entity)")
+-   [moveable\_cartonbox6](Moveable_cartonbox6_%28entity%29 "Moveable cartonbox6 (entity)")
+-   [moveable\_cartonbox7](Moveable_cartonbox7_%28entity%29 "Moveable cartonbox7 (entity)")
+-   [moveable\_cartonbox8](Moveable_cartonbox8_%28entity%29 "Moveable cartonbox8 (entity)")
+-   [moveable\_chair1](Moveable_chair1_%28entity%29 "Moveable chair1 (entity)")
+-   [moveable\_chair2](Moveable_chair2_%28entity%29 "Moveable chair2 (entity)")
+-   [moveable\_chair5](Moveable_chair5_%28entity%29 "Moveable chair5 (entity)")
+-   [moveable\_cokecan](Moveable_cokecan_%28entity%29 "Moveable cokecan (entity)")
+-   [moveable\_compcart](Moveable_compcart_%28entity%29 "Moveable compcart (entity)")
+-   [moveable\_computer](Moveable_computer_%28entity%29 "Moveable computer (entity)")
+-   [moveable\_cone](Moveable_cone_%28entity%29 "Moveable cone (entity)")
+-   [moveable\_desklamp](Moveable_desklamp_%28entity%29 "Moveable desklamp (entity)")
+-   [moveable\_diamondbox](Moveable_diamondbox_%28entity%29 "Moveable diamondbox (entity)")
+-   [moveable\_diamondbox\_sm](Moveable_diamondbox_sm_%28entity%29 "Moveable diamondbox sm (entity)")
+-   [moveable\_explodingbarrel](Moveable_explodingbarrel_%28entity%29 "Moveable explodingbarrel (entity)")
+-   [moveable\_explodingtank](Moveable_explodingtank_%28entity%29 "Moveable explodingtank (entity)")
+-   [moveable\_filecabinet1](Moveable_filecabinet1_%28entity%29 "Moveable filecabinet1 (entity)")
+-   [moveable\_fireext](Moveable_fireext_%28entity%29 "Moveable fireext (entity)")
+-   [moveable\_foamcup](Moveable_foamcup_%28entity%29 "Moveable foamcup (entity)")
+-   [moveable\_gizmo1](Moveable_gizmo1_%28entity%29 "Moveable gizmo1 (entity)")
+-   [moveable\_gizmo2](Moveable_gizmo2_%28entity%29 "Moveable gizmo2 (entity)")
+-   [moveable\_gizmo3](Moveable_gizmo3_%28entity%29 "Moveable gizmo3 (entity)")
+-   [moveable\_guardian\_brick](Moveable_guardian_brick_%28entity%29 "Moveable guardian brick (entity)")
+-   [moveable\_hangingmonitor](Moveable_hangingmonitor_%28entity%29 "Moveable hangingmonitor (entity)")
+-   [moveable\_infusion](Moveable_infusion_%28entity%29 "Moveable infusion (entity)")
+-   [moveable\_item\_armor\_security](Moveable_item_armor_security_%28entity%29 "Moveable item armor security (entity)")
+-   [moveable\_item\_bfg](Moveable_item_bfg_%28entity%29 "Moveable item bfg (entity)")
+-   [moveable\_item\_bfg\_mp](Moveable_item_bfg_mp_%28entity%29 "Moveable item bfg mp (entity)")
+-   [moveable\_item\_chaingun](Moveable_item_chaingun_%28entity%29 "Moveable item chaingun (entity)")
+-   [moveable\_item\_chaingun\_mp](Moveable_item_chaingun_mp_%28entity%29 "Moveable item chaingun mp (entity)")
+-   [moveable\_item\_chainsaw](Moveable_item_chainsaw_%28entity%29 "Moveable item chainsaw (entity)")
+-   [moveable\_item\_chainsaw\_mp](Moveable_item_chainsaw_mp_%28entity%29 "Moveable item chainsaw mp (entity)")
+-   [moveable\_item\_default](Moveable_item_default_%28entity%29 "Moveable item default (entity)")
+-   [moveable\_item\_flashlight](Moveable_item_flashlight_%28entity%29 "Moveable item flashlight (entity)")
+-   [moveable\_item\_grenades](Moveable_item_grenades_%28entity%29 "Moveable item grenades (entity)")
+-   [moveable\_item\_grenades\_mp](Moveable_item_grenades_mp_%28entity%29 "Moveable item grenades mp (entity)")
+-   [moveable\_item\_head\_pork](Moveable_item_head_pork_%28entity%29 "Moveable item head pork (entity)")
+-   [moveable\_item\_helmet](Moveable_item_helmet_%28entity%29 "Moveable item helmet (entity)")
+-   [moveable\_item\_lantern](Moveable_item_lantern_%28entity%29 "Moveable item lantern (entity)")
+-   [moveable\_item\_lantern\_world](Moveable_item_lantern_world_%28entity%29 "Moveable item lantern world (entity)")
+-   [moveable\_item\_left\_waist\_pork](Moveable_item_left_waist_pork_%28entity%29 "Moveable item left waist pork (entity)")
+-   [moveable\_item\_lup\_leg\_pork](Moveable_item_lup_leg_pork_%28entity%29 "Moveable item lup leg pork (entity)")
+-   [moveable\_item\_machinegun](Moveable_item_machinegun_%28entity%29 "Moveable item machinegun (entity)")
+-   [moveable\_item\_machinegun\_mp](Moveable_item_machinegun_mp_%28entity%29 "Moveable item machinegun mp (entity)")
+-   [moveable\_item\_medkit](Moveable_item_medkit_%28entity%29 "Moveable item medkit (entity)")
+-   [moveable\_item\_pda](Moveable_item_pda_%28entity%29 "Moveable item pda (entity)")
+-   [moveable\_item\_pelvis\_pork](Moveable_item_pelvis_pork_%28entity%29 "Moveable item pelvis pork (entity)")
+-   [moveable\_item\_pistol](Moveable_item_pistol_%28entity%29 "Moveable item pistol (entity)")
+-   [moveable\_item\_pistol\_mp](Moveable_item_pistol_mp_%28entity%29 "Moveable item pistol mp (entity)")
+-   [moveable\_item\_plasmagun](Moveable_item_plasmagun_%28entity%29 "Moveable item plasmagun (entity)")
+-   [moveable\_item\_plasmagun\_mp](Moveable_item_plasmagun_mp_%28entity%29 "Moveable item plasmagun mp (entity)")
+-   [moveable\_item\_rocketlauncher](Moveable_item_rocketlauncher_%28entity%29 "Moveable item rocketlauncher (entity)")
+-   [moveable\_item\_rocketlauncher\_mp](Moveable_item_rocketlauncher_mp_%28entity%29 "Moveable item rocketlauncher mp (entity)")
+-   [moveable\_item\_rup2\_leg\_pork](Moveable_item_rup2_leg_pork_%28entity%29 "Moveable item rup2 leg pork (entity)")
+-   [moveable\_item\_rup\_arm\_pork](Moveable_item_rup_arm_pork_%28entity%29 "Moveable item rup arm pork (entity)")
+-   [moveable\_item\_rup\_leg\_pork](Moveable_item_rup_leg_pork_%28entity%29 "Moveable item rup leg pork (entity)")
+-   [moveable\_item\_shield](Moveable_item_shield_%28entity%29 "Moveable item shield (entity)")
+-   [moveable\_item\_shotgun](Moveable_item_shotgun_%28entity%29 "Moveable item shotgun (entity)")
+-   [moveable\_item\_shotgun\_mp](Moveable_item_shotgun_mp_%28entity%29 "Moveable item shotgun mp (entity)")
+-   [moveable\_item\_skull\_pork](Moveable_item_skull_pork_%28entity%29 "Moveable item skull pork (entity)")
+-   [moveable\_item\_tabletpc](Moveable_item_tabletpc_%28entity%29 "Moveable item tabletpc (entity)")
+-   [moveable\_item\_torso\_pork](Moveable_item_torso_pork_%28entity%29 "Moveable item torso pork (entity)")
+-   [moveable\_keyboard1](Moveable_keyboard1_%28entity%29 "Moveable keyboard1 (entity)")
+-   [moveable\_kitchenchair](Moveable_kitchenchair_%28entity%29 "Moveable kitchenchair (entity)")
+-   [moveable\_ktable](Moveable_ktable_%28entity%29 "Moveable ktable (entity)")
+-   [moveable\_laptop](Moveable_laptop_%28entity%29 "Moveable laptop (entity)")
+-   [moveable\_metalbox1](Moveable_metalbox1_%28entity%29 "Moveable metalbox1 (entity)")
+-   [moveable\_microscope](Moveable_microscope_%28entity%29 "Moveable microscope (entity)")
+-   [moveable\_monitor](Moveable_monitor_%28entity%29 "Moveable monitor (entity)")
+-   [moveable\_monitorflip](Moveable_monitorflip_%28entity%29 "Moveable monitorflip (entity)")
+-   [moveable\_mop](Moveable_mop_%28entity%29 "Moveable mop (entity)")
+-   [moveable\_mopbucket](Moveable_mopbucket_%28entity%29 "Moveable mopbucket (entity)")
+-   [moveable\_normchair](Moveable_normchair_%28entity%29 "Moveable normchair (entity)")
+-   [moveable\_paperwad](Moveable_paperwad_%28entity%29 "Moveable paperwad (entity)")
+-   [moveable\_pc1](Moveable_pc1_%28entity%29 "Moveable pc1 (entity)")
+-   [moveable\_phone](Moveable_phone_%28entity%29 "Moveable phone (entity)")
+-   [moveable\_plasticbin](Moveable_plasticbin_%28entity%29 "Moveable plasticbin (entity)")
+-   [moveable\_plasticbinmini](Moveable_plasticbinmini_%28entity%29 "Moveable plasticbinmini (entity)")
+-   [moveable\_plasticjar1](Moveable_plasticjar1_%28entity%29 "Moveable plasticjar1 (entity)")
+-   [moveable\_plasticjar2](Moveable_plasticjar2_%28entity%29 "Moveable plasticjar2 (entity)")
+-   [moveable\_spigotcan](Moveable_spigotcan_%28entity%29 "Moveable spigotcan (entity)")
+-   [moveable\_tablecart1](Moveable_tablecart1_%28entity%29 "Moveable tablecart1 (entity)")
+-   [moveable\_tablecart2](Moveable_tablecart2_%28entity%29 "Moveable tablecart2 (entity)")
+-   [moveable\_tech\_chair1](Moveable_tech_chair1_%28entity%29 "Moveable tech chair1 (entity)")
+-   [moveable\_trashcan01](Moveable_trashcan01_%28entity%29 "Moveable trashcan01 (entity)")
+-   [moveable\_tray](Moveable_tray_%28entity%29 "Moveable tray (entity)")
+-   [moveable\_utilitylamp](Moveable_utilitylamp_%28entity%29 "Moveable utilitylamp (entity)")
+-   [moveable\_wrench](Moveable_wrench_%28entity%29 "Moveable wrench (entity)")
+
+### N
+
+-   [npc\_base](Npc_base_%28entity%29 "Npc base (entity)")
+
+### P
+
+-   [path\_anim](Path_anim_%28entity%29 "Path anim (entity)")
+-   [path\_attack](Path_attack_%28entity%29 "Path attack (entity)")
+-   [path\_conversation](Path_conversation_%28entity%29 "Path conversation (entity)")
+-   [path\_conversation\_listen](Path_conversation_listen_%28entity%29 "Path conversation listen (entity)")
+-   [path\_corner](Path_corner_%28entity%29 "Path corner (entity)")
+-   [path\_cycleanim](Path_cycleanim_%28entity%29 "Path cycleanim (entity)")
+-   [path\_default](Path_default_%28entity%29 "Path default (entity)")
+-   [path\_headanim](Path_headanim_%28entity%29 "Path headanim (entity)")
+-   [path\_hide](Path_hide_%28entity%29 "Path hide (entity)")
+-   [path\_jump](Path_jump_%28entity%29 "Path jump (entity)")
+-   [path\_lookat](Path_lookat_%28entity%29 "Path lookat (entity)")
+-   [path\_sentry\_ignore\_player](Path_sentry_ignore_player_%28entity%29 "Path sentry ignore player (entity)")
+-   [path\_sentry\_lead\_player](Path_sentry_lead_player_%28entity%29 "Path sentry lead player (entity)")
+-   [path\_sentry\_light\_off](Path_sentry_light_off_%28entity%29 "Path sentry light off (entity)")
+-   [path\_sentry\_light\_on](Path_sentry_light_on_%28entity%29 "Path sentry light on (entity)")
+-   [path\_sentry\_shutdown](Path_sentry_shutdown_%28entity%29 "Path sentry shutdown (entity)")
+-   [path\_sentry\_unlock\_door](Path_sentry_unlock_door_%28entity%29 "Path sentry unlock door (entity)")
+-   [path\_show](Path_show_%28entity%29 "Path show (entity)")
+-   [path\_talk](Path_talk_%28entity%29 "Path talk (entity)")
+-   [path\_talk\_primary](Path_talk_primary_%28entity%29 "Path talk primary (entity)")
+-   [path\_talk\_secondary](Path_talk_secondary_%28entity%29 "Path talk secondary (entity)")
+-   [path\_talk\_triggered](Path_talk_triggered_%28entity%29 "Path talk triggered (entity)")
+-   [path\_turn](Path_turn_%28entity%29 "Path turn (entity)")
+-   [path\_wait](Path_wait_%28entity%29 "Path wait (entity)")
+-   [path\_waitforheadanim](Path_waitforheadanim_%28entity%29 "Path waitforheadanim (entity)")
+-   [path\_waitfortrigger](Path_waitfortrigger_%28entity%29 "Path waitfortrigger (entity)")
+-   [pda\_alphalabs1\_labcoat\_bald](Pda_alphalabs1_labcoat_bald_%28entity%29 "Pda alphalabs1 labcoat bald (entity)")
+-   [pda\_alphalabs3\_fragchamber\_scientist2](Pda_alphalabs3_fragchamber_scientist2_%28entity%29 "Pda alphalabs3 fragchamber scientist2 (entity)")
+-   [pda\_marscity\_char\_maint\_asian\_pda](Pda_marscity_char_maint_asian_pda_%28entity%29 "Pda marscity char maint asian pda (entity)")
+-   [pda\_marscity\_labcoat\_black](Pda_marscity_labcoat_black_%28entity%29 "Pda marscity labcoat black (entity)")
+-   [pda\_marscity\_maint1\_hallway](Pda_marscity_maint1_hallway_%28entity%29 "Pda marscity maint1 hallway (entity)")
+-   [pda\_marscity\_security\_goggles\_pda](Pda_marscity_security_goggles_pda_%28entity%29 "Pda marscity security goggles pda (entity)")
+-   [pda\_marscity\_soldier\_bald\_pda](Pda_marscity_soldier_bald_pda_%28entity%29 "Pda marscity soldier bald pda (entity)")
+-   [pda\_marscity\_soldier\_black](Pda_marscity_soldier_black_%28entity%29 "Pda marscity soldier black (entity)")
+-   [pda\_marscity\_soldier\_young\_pda](Pda_marscity_soldier_young_pda_%28entity%29 "Pda marscity soldier young pda (entity)")
+-   [pda\_underground\_maint\_young\_daniel](Pda_underground_maint_young_daniel_%28entity%29 "Pda underground maint young daniel (entity)")
+-   [pda\_underground\_security\_helmet\_mark](Pda_underground_security_helmet_mark_%28entity%29 "Pda underground security helmet mark (entity)")
+-   [player\_base](Player_base_%28entity%29 "Player base (entity)")
+-   [player\_doommarine](Player_doommarine_%28entity%29 "Player doommarine (entity)")
+-   [player\_doommarine\_mp](Player_doommarine_mp_%28entity%29 "Player doommarine mp (entity)")
+-   [powerup\_adrenaline](Powerup_adrenaline_%28entity%29 "Powerup adrenaline (entity)")
+-   [powerup\_berserk](Powerup_berserk_%28entity%29 "Powerup berserk (entity)")
+-   [powerup\_chronocaust](Powerup_chronocaust_%28entity%29 "Powerup chronocaust (entity)")
+-   [powerup\_haste](Powerup_haste_%28entity%29 "Powerup haste (entity)")
+-   [powerup\_invisibility](Powerup_invisibility_%28entity%29 "Powerup invisibility (entity)")
+-   [powerup\_invulnerability](Powerup_invulnerability_%28entity%29 "Powerup invulnerability (entity)")
+-   [powerup\_irgoggles](Powerup_irgoggles_%28entity%29 "Powerup irgoggles (entity)")
+-   [powerup\_megahealth](Powerup_megahealth_%28entity%29 "Powerup megahealth (entity)")
+-   [powerup\_megasphere](Powerup_megasphere_%28entity%29 "Powerup megasphere (entity)")
+-   [powerup\_soulsphere](Powerup_soulsphere_%28entity%29 "Powerup soulsphere (entity)")
+-   [preCacheExtras](PreCacheExtras_%28entity%29 "PreCacheExtras (entity)")
+-   [projectile\_bfg](Projectile_bfg_%28entity%29 "Projectile bfg (entity)")
+-   [projectile\_bfg\_cinematic](Projectile_bfg_cinematic_%28entity%29 "Projectile bfg cinematic (entity)")
+-   [projectile\_bfg\_mp](Projectile_bfg_mp_%28entity%29 "Projectile bfg mp (entity)")
+-   [projectile\_bullet\_machinegun](Projectile_bullet_machinegun_%28entity%29 "Projectile bullet machinegun (entity)")
+-   [projectile\_bullet\_machinegun\_mp](Projectile_bullet_machinegun_mp_%28entity%29 "Projectile bullet machinegun mp (entity)")
+-   [projectile\_bullet\_pistol](Projectile_bullet_pistol_%28entity%29 "Projectile bullet pistol (entity)")
+-   [projectile\_bullet\_pistol\_mp](Projectile_bullet_pistol_mp_%28entity%29 "Projectile bullet pistol mp (entity)")
+-   [projectile\_bullet\_shotgun](Projectile_bullet_shotgun_%28entity%29 "Projectile bullet shotgun (entity)")
+-   [projectile\_bullet\_shotgun\_mp](Projectile_bullet_shotgun_mp_%28entity%29 "Projectile bullet shotgun mp (entity)")
+-   [projectile\_bullet\_turret](Projectile_bullet_turret_%28entity%29 "Projectile bullet turret (entity)")
+-   [projectile\_bullet\_zsec\_machinegun](Projectile_bullet_zsec_machinegun_%28entity%29 "Projectile bullet zsec machinegun (entity)")
+-   [projectile\_bullet\_zsec\_pistol](Projectile_bullet_zsec_pistol_%28entity%29 "Projectile bullet zsec pistol (entity)")
+-   [projectile\_bullet\_zsec\_shield](Projectile_bullet_zsec_shield_%28entity%29 "Projectile bullet zsec shield (entity)")
+-   [projectile\_bullet\_zsec\_shotgun](Projectile_bullet_zsec_shotgun_%28entity%29 "Projectile bullet zsec shotgun (entity)")
+-   [projectile\_cacodemon\_fireball](Projectile_cacodemon_fireball_%28entity%29 "Projectile cacodemon fireball (entity)")
+-   [projectile\_chaingunbullet](Projectile_chaingunbullet_%28entity%29 "Projectile chaingunbullet (entity)")
+-   [projectile\_chaingunbullet\_mp](Projectile_chaingunbullet_mp_%28entity%29 "Projectile chaingunbullet mp (entity)")
+-   [projectile\_cyber\_rocket](Projectile_cyber_rocket_%28entity%29 "Projectile cyber rocket (entity)")
+-   [projectile\_fireball\_hellknight](Projectile_fireball_hellknight_%28entity%29 "Projectile fireball hellknight (entity)")
+-   [projectile\_grenade](Projectile_grenade_%28entity%29 "Projectile grenade (entity)")
+-   [projectile\_grenade\_mp](Projectile_grenade_mp_%28entity%29 "Projectile grenade mp (entity)")
+-   [projectile\_guardian\_smash](Projectile_guardian_smash_%28entity%29 "Projectile guardian smash (entity)")
+-   [projectile\_impfireball](Projectile_impfireball_%28entity%29 "Projectile impfireball (entity)")
+-   [projectile\_mancubus\_rocket](Projectile_mancubus_rocket_%28entity%29 "Projectile mancubus rocket (entity)")
+-   [projectile\_plasmablast](Projectile_plasmablast_%28entity%29 "Projectile plasmablast (entity)")
+-   [projectile\_plasmablast\_mp](Projectile_plasmablast_mp_%28entity%29 "Projectile plasmablast mp (entity)")
+-   [projectile\_plasmatracer](Projectile_plasmatracer_%28entity%29 "Projectile plasmatracer (entity)")
+-   [projectile\_rev\_rocket](Projectile_rev_rocket_%28entity%29 "Projectile rev rocket (entity)")
+-   [projectile\_rev\_rocket\_cinematic](Projectile_rev_rocket_cinematic_%28entity%29 "Projectile rev rocket cinematic (entity)")
+-   [projectile\_rocket](Projectile_rocket_%28entity%29 "Projectile rocket (entity)")
+-   [projectile\_rocket\_mp](Projectile_rocket_mp_%28entity%29 "Projectile rocket mp (entity)")
+-   [projectile\_sabaoth\_bfg](Projectile_sabaoth_bfg_%28entity%29 "Projectile sabaoth bfg (entity)")
+-   [projectile\_sentry\_bullet](Projectile_sentry_bullet_%28entity%29 "Projectile sentry bullet (entity)")
+-   [projectile\_soulblast](Projectile_soulblast_%28entity%29 "Projectile soulblast (entity)")
+-   [projectile\_vulgar\_fireball](Projectile_vulgar_fireball_%28entity%29 "Projectile vulgar fireball (entity)")
+-   [projectile\_zombie\_commando\_cgun](Projectile_zombie_commando_cgun_%28entity%29 "Projectile zombie commando cgun (entity)")
+-   [prop\_adrenaline](Prop_adrenaline_%28entity%29 "Prop adrenaline (entity)")
+-   [prop\_big\_cushy\_chair](Prop_big_cushy_chair_%28entity%29 "Prop big cushy chair (entity)")
+-   [prop\_cola](Prop_cola_%28entity%29 "Prop cola (entity)")
+-   [prop\_dufflebag](Prop_dufflebag_%28entity%29 "Prop dufflebag (entity)")
+-   [prop\_flashlight](Prop_flashlight_%28entity%29 "Prop flashlight (entity)")
+-   [prop\_foamcup](Prop_foamcup_%28entity%29 "Prop foamcup (entity)")
+-   [prop\_lftflashlight](Prop_lftflashlight_%28entity%29 "Prop lftflashlight (entity)")
+-   [prop\_machinegun](Prop_machinegun_%28entity%29 "Prop machinegun (entity)")
+-   [prop\_metal\_kitchen\_chair](Prop_metal_kitchen_chair_%28entity%29 "Prop metal kitchen chair (entity)")
+-   [prop\_metal\_lounge\_chair](Prop_metal_lounge_chair_%28entity%29 "Prop metal lounge chair (entity)")
+-   [prop\_pda](Prop_pda_%28entity%29 "Prop pda (entity)")
+-   [prop\_pistol](Prop_pistol_%28entity%29 "Prop pistol (entity)")
+-   [prop\_shotgun](Prop_shotgun_%28entity%29 "Prop shotgun (entity)")
+-   [prop\_soft\_desk\_chair1](Prop_soft_desk_chair1_%28entity%29 "Prop soft desk chair1 (entity)")
+-   [prop\_soft\_desk\_chair2](Prop_soft_desk_chair2_%28entity%29 "Prop soft desk chair2 (entity)")
+-   [prop\_tabletpc](Prop_tabletpc_%28entity%29 "Prop tabletpc (entity)")
+-   [prop\_wrench](Prop_wrench_%28entity%29 "Prop wrench (entity)")
+
+### R
+
+-   [recycling1\_revintro\_cam](Recycling1_revintro_cam_%28entity%29 "Recycling1 revintro cam (entity)")
+-   [recycling1\_revintro\_impact](Recycling1_revintro_impact_%28entity%29 "Recycling1 revintro impact (entity)")
+-   [recycling1\_revintro\_player](Recycling1_revintro_player_%28entity%29 "Recycling1 revintro player (entity)")
+-   [recycling1\_revintro\_player2](Recycling1_revintro_player2_%28entity%29 "Recycling1 revintro player2 (entity)")
+-   [recycling1\_revintro\_rev](Recycling1_revintro_rev_%28entity%29 "Recycling1 revintro rev (entity)")
+-   [recycling1\_skybridge](Recycling1_skybridge_%28entity%29 "Recycling1 skybridge (entity)")
+-   [recycling2\_imp1\_cin](Recycling2_imp1_cin_%28entity%29 "Recycling2 imp1 cin (entity)")
+-   [recycling2\_imp2\_cin](Recycling2_imp2_cin_%28entity%29 "Recycling2 imp2 cin (entity)")
+-   [recycling2\_imp3\_cin](Recycling2_imp3_cin_%28entity%29 "Recycling2 imp3 cin (entity)")
+-   [recycling2\_mancintro\_cam](Recycling2_mancintro_cam_%28entity%29 "Recycling2 mancintro cam (entity)")
+-   [recycling2\_mancintro\_manc](Recycling2_mancintro_manc_%28entity%29 "Recycling2 mancintro manc (entity)")
+-   [recycling2\_mancintro\_pipes](Recycling2_mancintro_pipes_%28entity%29 "Recycling2 mancintro pipes (entity)")
+-   [recycling2\_mancintro\_player](Recycling2_mancintro_player_%28entity%29 "Recycling2 mancintro player (entity)")
+-   [recycling2\_video\_betruger](Recycling2_video_betruger_%28entity%29 "Recycling2 video betruger (entity)")
+-   [recycling2\_video\_cam](Recycling2_video_cam_%28entity%29 "Recycling2 video cam (entity)")
+
+### S
+
+-   [seeker\_light1](Seeker_light1_%28entity%29 "Seeker light1 (entity)")
+-   [seeker\_light2](Seeker_light2_%28entity%29 "Seeker light2 (entity)")
+-   [site3\_floor](Site3_floor_%28entity%29 "Site3 floor (entity)")
+-   [site3\_hellknight](Site3_hellknight_%28entity%29 "Site3 hellknight (entity)")
+-   [site3\_roq\_cam](Site3_roq_cam_%28entity%29 "Site3 roq cam (entity)")
+-   [site3\_sci](Site3_sci_%28entity%29 "Site3 sci (entity)")
+-   [sound\_d3dm5\_generator](Sound_d3dm5_generator_%28entity%29 "Sound d3dm5 generator (entity)")
+-   [sound\_d3dm5\_wind](Sound_d3dm5_wind_%28entity%29 "Sound d3dm5 wind (entity)")
+-   [sound\_fragchamber\_secretSteam](Sound_fragchamber_secretSteam_%28entity%29 "Sound fragchamber secretSteam (entity)")
+-   [space\_cam](Space_cam_%28entity%29 "Space cam (entity)")
+-   [space\_planet](Space_planet_%28entity%29 "Space planet (entity)")
+-   [space\_ship](Space_ship_%28entity%29 "Space ship (entity)")
+-   [space\_stars](Space_stars_%28entity%29 "Space stars (entity)")
+-   [speaker](Speaker_%28entity%29 "Speaker (entity)")
+-   [ss\_cgw\_cam](Ss_cgw_cam_%28entity%29 "Ss cgw cam (entity)")
+-   [ss\_cgw\_gibs](Ss_cgw_gibs_%28entity%29 "Ss cgw gibs (entity)")
+-   [ss\_cgw\_jump](Ss_cgw_jump_%28entity%29 "Ss cgw jump (entity)")
+-   [ss\_cgw\_zsci](Ss_cgw_zsci_%28entity%29 "Ss cgw zsci (entity)")
+-   [ss\_cgw\_zsci2](Ss_cgw_zsci2_%28entity%29 "Ss cgw zsci2 (entity)")
+-   [ss\_ew\_cam](Ss_ew_cam_%28entity%29 "Ss ew cam (entity)")
+-   [ss\_ew\_fat](Ss_ew_fat_%28entity%29 "Ss ew fat (entity)")
+-   [ss\_ew\_jump](Ss_ew_jump_%28entity%29 "Ss ew jump (entity)")
+-   [ss\_ew\_maint](Ss_ew_maint_%28entity%29 "Ss ew maint (entity)")
+-   [ss\_gameprocamera](Ss_gameprocamera_%28entity%29 "Ss gameprocamera (entity)")
+-   [ss\_hellknight](Ss_hellknight_%28entity%29 "Ss hellknight (entity)")
+-   [ss\_hero\_cam](Ss_hero_cam_%28entity%29 "Ss hero cam (entity)")
+-   [ss\_hero\_player](Ss_hero_player_%28entity%29 "Ss hero player (entity)")
+-   [ss\_hero\_player\_chainsaw](Ss_hero_player_chainsaw_%28entity%29 "Ss hero player chainsaw (entity)")
+-   [ss\_hero\_player\_machinegun](Ss_hero_player_machinegun_%28entity%29 "Ss hero player machinegun (entity)")
+-   [ss\_hero\_player\_pistol](Ss_hero_player_pistol_%28entity%29 "Ss hero player pistol (entity)")
+-   [ss\_hero\_player\_shotgun](Ss_hero_player_shotgun_%28entity%29 "Ss hero player shotgun (entity)")
+-   [ss\_hero\_player\_shotgun2](Ss_hero_player_shotgun2_%28entity%29 "Ss hero player shotgun2 (entity)")
+-   [ss\_hk\_cam](Ss_hk_cam_%28entity%29 "Ss hk cam (entity)")
+-   [ss\_hk\_gamepro](Ss_hk_gamepro_%28entity%29 "Ss hk gamepro (entity)")
+-   [ss\_imp\_gamepro](Ss_imp_gamepro_%28entity%29 "Ss imp gamepro (entity)")
+-   [ss\_pcg\_cam](Ss_pcg_cam_%28entity%29 "Ss pcg cam (entity)")
+-   [ss\_pcg\_hk](Ss_pcg_hk_%28entity%29 "Ss pcg hk (entity)")
+-   [ss\_pcg\_player](Ss_pcg_player_%28entity%29 "Ss pcg player (entity)")
+-   [ss\_trite](Ss_trite_%28entity%29 "Ss trite (entity)")
+-   [ss\_trite2](Ss_trite2_%28entity%29 "Ss trite2 (entity)")
+-   [ss\_trite3](Ss_trite3_%28entity%29 "Ss trite3 (entity)")
+-   [ss\_trite4](Ss_trite4_%28entity%29 "Ss trite4 (entity)")
+
+### T
+
+-   [target\_FadeSoundClass](Target_FadeSoundClass_%28entity%29 "Target FadeSoundClass (entity)")
+-   [target\_ai\_followalternatepath1](Target_ai_followalternatepath1_%28entity%29 "Target ai followalternatepath1 (entity)")
+-   [target\_ai\_followalternatepath2](Target_ai_followalternatepath2_%28entity%29 "Target ai followalternatepath2 (entity)")
+-   [target\_ai\_followalternatepath3](Target_ai_followalternatepath3_%28entity%29 "Target ai followalternatepath3 (entity)")
+-   [target\_callobjectfunction](Target_callobjectfunction_%28entity%29 "Target callobjectfunction (entity)")
+-   [target\_enableStamina](Target_enableStamina_%28entity%29 "Target enableStamina (entity)")
+-   [target\_enableweapons](Target_enableweapons_%28entity%29 "Target enableweapons (entity)")
+-   [target\_endLevel](Target_endLevel_%28entity%29 "Target endLevel (entity)")
+-   [target\_entity\_fadein](Target_entity_fadein_%28entity%29 "Target entity fadein (entity)")
+-   [target\_entity\_fadeout](Target_entity_fadeout_%28entity%29 "Target entity fadeout (entity)")
+-   [target\_entity\_setcolor](Target_entity_setcolor_%28entity%29 "Target entity setcolor (entity)")
+-   [target\_give](Target_give_%28entity%29 "Target give (entity)")
+-   [target\_giveemail](Target_giveemail_%28entity%29 "Target giveemail (entity)")
+-   [target\_givesecurity](Target_givesecurity_%28entity%29 "Target givesecurity (entity)")
+-   [target\_levelTrigger](Target_levelTrigger_%28entity%29 "Target levelTrigger (entity)")
+-   [target\_light\_fadein](Target_light_fadein_%28entity%29 "Target light fadein (entity)")
+-   [target\_light\_fadeout](Target_light_fadeout_%28entity%29 "Target light fadeout (entity)")
+-   [target\_lock](Target_lock_%28entity%29 "Target lock (entity)")
+-   [target\_npc\_talk](Target_npc_talk_%28entity%29 "Target npc talk (entity)")
+-   [target\_npc\_talk\_primary](Target_npc_talk_primary_%28entity%29 "Target npc talk primary (entity)")
+-   [target\_npc\_talk\_secondary](Target_npc_talk_secondary_%28entity%29 "Target npc talk secondary (entity)")
+-   [target\_npc\_talk\_triggered](Target_npc_talk_triggered_%28entity%29 "Target npc talk triggered (entity)")
+-   [target\_null](Target_null_%28entity%29 "Target null (entity)")
+-   [target\_primaryobjective](Target_primaryobjective_%28entity%29 "Target primaryobjective (entity)")
+-   [target\_removeweapons](Target_removeweapons_%28entity%29 "Target removeweapons (entity)")
+-   [target\_sessionCommand](Target_sessionCommand_%28entity%29 "Target sessionCommand (entity)")
+-   [target\_setfov](Target_setfov_%28entity%29 "Target setfov (entity)")
+-   [target\_setglobalparmtime](Target_setglobalparmtime_%28entity%29 "Target setglobalparmtime (entity)")
+-   [target\_setinfluence](Target_setinfluence_%28entity%29 "Target setinfluence (entity)")
+-   [target\_setkeyval](Target_setkeyval_%28entity%29 "Target setkeyval (entity)")
+-   [target\_setmodel](Target_setmodel_%28entity%29 "Target setmodel (entity)")
+-   [target\_setshaderparm](Target_setshaderparm_%28entity%29 "Target setshaderparm (entity)")
+-   [target\_setshadertime](Target_setshadertime_%28entity%29 "Target setshadertime (entity)")
+-   [target\_show](Target_show_%28entity%29 "Target show (entity)")
+-   [target\_tip](Target_tip_%28entity%29 "Target tip (entity)")
+-   [test\_labcoat\_black](Test_labcoat_black_%28entity%29 "Test labcoat black (entity)")
+-   [test\_soldier](Test_soldier_%28entity%29 "Test soldier (entity)")
+-   [text](Text_%28entity%29 "Text (entity)")
+-   [trigger\_count](Trigger_count_%28entity%29 "Trigger count (entity)")
+-   [trigger\_entityname](Trigger_entityname_%28entity%29 "Trigger entityname (entity)")
+-   [trigger\_facing](Trigger_facing_%28entity%29 "Trigger facing (entity)")
+-   [trigger\_fade](Trigger_fade_%28entity%29 "Trigger fade (entity)")
+-   [trigger\_flashlight](Trigger_flashlight_%28entity%29 "Trigger flashlight (entity)")
+-   [trigger\_guiOverlay](Trigger_guiOverlay_%28entity%29 "Trigger guiOverlay (entity)")
+-   [trigger\_hurt](Trigger_hurt_%28entity%29 "Trigger hurt (entity)")
+-   [trigger\_multiple](Trigger_multiple_%28entity%29 "Trigger multiple (entity)")
+-   [trigger\_once](Trigger_once_%28entity%29 "Trigger once (entity)")
+-   [trigger\_once\_entityname](Trigger_once_entityname_%28entity%29 "Trigger once entityname (entity)")
+-   [trigger\_presize](Trigger_presize_%28entity%29 "Trigger presize (entity)")
+-   [trigger\_relay](Trigger_relay_%28entity%29 "Trigger relay (entity)")
+-   [trigger\_timer](Trigger_timer_%28entity%29 "Trigger timer (entity)")
+-   [trigger\_touch](Trigger_touch_%28entity%29 "Trigger touch (entity)")
+
+### U
+
+-   [underground\_choke\_victim](Underground_choke_victim_%28entity%29 "Underground choke victim (entity)")
+-   [underground\_choke\_zombie](Underground_choke_zombie_%28entity%29 "Underground choke zombie (entity)")
+-   [underground\_cin\_pistol](Underground_cin_pistol_%28entity%29 "Underground cin pistol (entity)")
+-   [underground\_cin\_player](Underground_cin_player_%28entity%29 "Underground cin player (entity)")
+-   [underground\_cin\_player2](Underground_cin_player2_%28entity%29 "Underground cin player2 (entity)")
+-   [underground\_cin\_player3](Underground_cin_player3_%28entity%29 "Underground cin player3 (entity)")
+-   [underground\_crazy\_sci](Underground_crazy_sci_%28entity%29 "Underground crazy sci (entity)")
+-   [underground\_crazy\_sci\_cin](Underground_crazy_sci_cin_%28entity%29 "Underground crazy sci cin (entity)")
+-   [underground\_crazy\_zombie](Underground_crazy_zombie_%28entity%29 "Underground crazy zombie (entity)")
+-   [underground\_fatty](Underground_fatty_%28entity%29 "Underground fatty (entity)")
+-   [underground\_hallway\_skulls](Underground_hallway_skulls_%28entity%29 "Underground hallway skulls (entity)")
+-   [underground\_impcrawl\_door](Underground_impcrawl_door_%28entity%29 "Underground impcrawl door (entity)")
+-   [underground\_impintro\_cam](Underground_impintro_cam_%28entity%29 "Underground impintro cam (entity)")
+-   [underground\_impintro\_imp](Underground_impintro_imp_%28entity%29 "Underground impintro imp (entity)")
+-   [underground\_impstairs](Underground_impstairs_%28entity%29 "Underground impstairs (entity)")
+-   [underground\_invasion\_bigskull](Underground_invasion_bigskull_%28entity%29 "Underground invasion bigskull (entity)")
+-   [underground\_invasion\_cam](Underground_invasion_cam_%28entity%29 "Underground invasion cam (entity)")
+-   [underground\_invasion\_chestskull](Underground_invasion_chestskull_%28entity%29 "Underground invasion chestskull (entity)")
+-   [underground\_invasion\_labcoat](Underground_invasion_labcoat_%28entity%29 "Underground invasion labcoat (entity)")
+-   [underground\_invasion\_labzombie](Underground_invasion_labzombie_%28entity%29 "Underground invasion labzombie (entity)")
+-   [underground\_invasion\_ledge](Underground_invasion_ledge_%28entity%29 "Underground invasion ledge (entity)")
+-   [underground\_invasion\_lightattacher](Underground_invasion_lightattacher_%28entity%29 "Underground invasion lightattacher (entity)")
+-   [underground\_invasion\_littleskulls](Underground_invasion_littleskulls_%28entity%29 "Underground invasion littleskulls (entity)")
+-   [underground\_invasion\_maintzombie](Underground_invasion_maintzombie_%28entity%29 "Underground invasion maintzombie (entity)")
+-   [underground\_invasion\_pentagram](Underground_invasion_pentagram_%28entity%29 "Underground invasion pentagram (entity)")
+-   [underground\_invasion\_security](Underground_invasion_security_%28entity%29 "Underground invasion security (entity)")
+-   [underground\_invasion\_smallerskulls](Underground_invasion_smallerskulls_%28entity%29 "Underground invasion smallerskulls (entity)")
+-   [underground\_invasion\_suit](Underground_invasion_suit_%28entity%29 "Underground invasion suit (entity)")
+-   [underground\_labcoat\_young\_todd](Underground_labcoat_young_todd_%28entity%29 "Underground labcoat young todd (entity)")
+-   [underground\_maint\_asian\_eric](Underground_maint_asian_eric_%28entity%29 "Underground maint asian eric (entity)")
+-   [underground\_maint\_asian\_eric2](Underground_maint_asian_eric2_%28entity%29 "Underground maint asian eric2 (entity)")
+-   [underground\_maint\_bald\_ross](Underground_maint_bald_ross_%28entity%29 "Underground maint bald ross (entity)")
+-   [underground\_maint\_old\_charles](Underground_maint_old_charles_%28entity%29 "Underground maint old charles (entity)")
+-   [underground\_maint\_young\_daniel](Underground_maint_young_daniel_%28entity%29 "Underground maint young daniel (entity)")
+-   [underground\_mcu\_pipes](Underground_mcu_pipes_%28entity%29 "Underground mcu pipes (entity)")
+-   [underground\_platform](Underground_platform_%28entity%29 "Underground platform (entity)")
+-   [underground\_security\_helmet\_mark](Underground_security_helmet_mark_%28entity%29 "Underground security helmet mark (entity)")
+-   [underground\_tunnel\_imp](Underground_tunnel_imp_%28entity%29 "Underground tunnel imp (entity)")
+-   [underground\_window\_security](Underground_window_security_%28entity%29 "Underground window security (entity)")
+-   [underground\_zintro\_victim](Underground_zintro_victim_%28entity%29 "Underground zintro victim (entity)")
+-   [underground\_zintro\_zombie](Underground_zintro_zombie_%28entity%29 "Underground zintro zombie (entity)")
+-   [underground\_zombie\_maint\_bald](Underground_zombie_maint_bald_%28entity%29 "Underground zombie maint bald (entity)")
+-   [underground\_zsecshotgun](Underground_zsecshotgun_%28entity%29 "Underground zsecshotgun (entity)")
+
+### W
+
+-   [weapon\_bfg](Weapon_bfg_%28entity%29 "Weapon bfg (entity)")
+-   [weapon\_bfg\_mp](Weapon_bfg_mp_%28entity%29 "Weapon bfg mp (entity)")
+-   [weapon\_chaingun](Weapon_chaingun_%28entity%29 "Weapon chaingun (entity)")
+-   [weapon\_chaingun\_mp](Weapon_chaingun_mp_%28entity%29 "Weapon chaingun mp (entity)")
+-   [weapon\_chainsaw](Weapon_chainsaw_%28entity%29 "Weapon chainsaw (entity)")
+-   [weapon\_chainsaw\_mp](Weapon_chainsaw_mp_%28entity%29 "Weapon chainsaw mp (entity)")
+-   [weapon\_fists](Weapon_fists_%28entity%29 "Weapon fists (entity)")
+-   [weapon\_flashlight](Weapon_flashlight_%28entity%29 "Weapon flashlight (entity)")
+-   [weapon\_handgrenade](Weapon_handgrenade_%28entity%29 "Weapon handgrenade (entity)")
+-   [weapon\_handgrenade\_mp](Weapon_handgrenade_mp_%28entity%29 "Weapon handgrenade mp (entity)")
+-   [weapon\_machinegun](Weapon_machinegun_%28entity%29 "Weapon machinegun (entity)")
+-   [weapon\_machinegun\_mp](Weapon_machinegun_mp_%28entity%29 "Weapon machinegun mp (entity)")
+-   [weapon\_pda](Weapon_pda_%28entity%29 "Weapon pda (entity)")
+-   [weapon\_pistol](Weapon_pistol_%28entity%29 "Weapon pistol (entity)")
+-   [weapon\_pistol\_mp](Weapon_pistol_mp_%28entity%29 "Weapon pistol mp (entity)")
+-   [weapon\_plasmagun](Weapon_plasmagun_%28entity%29 "Weapon plasmagun (entity)")
+-   [weapon\_plasmagun\_mp](Weapon_plasmagun_mp_%28entity%29 "Weapon plasmagun mp (entity)")
+-   [weapon\_rocketlauncher](Weapon_rocketlauncher_%28entity%29 "Weapon rocketlauncher (entity)")
+-   [weapon\_rocketlauncher\_mp](Weapon_rocketlauncher_mp_%28entity%29 "Weapon rocketlauncher mp (entity)")
+-   [weapon\_shotgun](Weapon_shotgun_%28entity%29 "Weapon shotgun (entity)")
+-   [weapon\_shotgun\_mp](Weapon_shotgun_mp_%28entity%29 "Weapon shotgun mp (entity)")
+-   [weapon\_soulcube](Weapon_soulcube_%28entity%29 "Weapon soulcube (entity)")
+-   [worldspawn](Worldspawn_%28entity%29 "Worldspawn (entity)")
+-   [wraith\_spawneffect](Wraith_spawneffect_%28entity%29 "Wraith spawneffect (entity)")
+
+### Z
+
+-   [zombie\_default](Zombie_default_%28entity%29 "Zombie default (entity)")
+

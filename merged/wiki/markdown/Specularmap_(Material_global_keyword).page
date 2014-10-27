@@ -1,0 +1,31 @@
+Description
+-----------
+
+Creates a [specular map](Texturing "Texturing") stage in a material
+shader.
+
+Usage
+-----
+
+In the global section of your material shader type...
+
+    specularmap [map]
+
+Parameters
+----------
+
+-   [map] - the relative path and file name from base to the specified
+    specular map image.
+
+Notes
+-----
+
+This keyword is shorthand for...
+
+    {
+     blend specularmap
+     map [map]
+    }
+
+\
+

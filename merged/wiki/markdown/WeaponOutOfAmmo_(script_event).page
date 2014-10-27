@@ -1,0 +1,42 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Disables the ability of the weapon to fire.
+
+Usage
+-----
+
+*void* weaponOutOfAmmo()
+
+Parameters
+----------
+
+This event does not accept parameters.
+
+Examples
+--------
+
+    if ( !ammoInClip() ) {
+            playCycle( ANIMCHANNEL_ALL, "idle_empty" );
+            weaponOutOfAmmo();
+        } else {
+            playCycle( ANIMCHANNEL_ALL, "idle" );
+            weaponReady();
+        }
+
+Notes
+-----
+
+This script event is present in every weapon script, specifically the
+if/then statement depicted in the example.
+
+This script event does not return any values.
+
+\
+

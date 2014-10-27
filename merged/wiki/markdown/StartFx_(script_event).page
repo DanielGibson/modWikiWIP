@@ -1,0 +1,34 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Starts an FX on this entity.
+
+Usage
+-----
+
+*void* startFx( *string* **fx** )
+
+Parameters
+----------
+
+-   [fx] - The fx to apply to this entity.
+
+Examples
+--------
+
+     
+    $my_entity.startFx("fx/bigteleporter4");
+
+Notes
+-----
+
+This script event does not return any values.
+
+\
+

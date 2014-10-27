@@ -1,0 +1,43 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Line drawing for debug visualization.
+
+Usage
+-----
+
+*void* debugCircle( *vector* **color** , *vector* **origin** , *vector*
+**dir** , *float* **radius** , *float* **numSteps** , *float*
+**lifetime** )
+
+Parameters
+----------
+
+-   [color] - The color to draw the circle.
+-   [origin] - The center of the circle.
+-   [dir] - The direction of the circle.
+-   [radius] - The size of the circle.
+-   [numSteps] - The number of iterations.
+-   [lifetime] - The duration to display the circle.
+
+Examples
+--------
+
+     
+    sys.debugCircle('1 0 0 ', '45 84 21', '45 21 78', 10, 2, 1);
+
+Notes
+-----
+
+This script event does not return any values.
+
+Lifetime of 0 == 1 frame.
+
+\
+

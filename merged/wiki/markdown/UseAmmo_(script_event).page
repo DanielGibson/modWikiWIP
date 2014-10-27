@@ -1,0 +1,34 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Removes the specified amount of ammo from the player's inventory.
+
+Usage
+-----
+
+*void* useAmmo( *value'* )
+
+Parameters
+----------
+
+-   [value] - The amount of ammo to consume.
+
+Examples
+--------
+
+     
+    useAmmo( 1 );
+
+Notes
+-----
+
+This script event does not return any values.
+
+\
+

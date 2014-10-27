@@ -1,0 +1,36 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Checks if an entity has a specific function in it's associated script
+object.
+
+Usage
+-----
+
+*boolean* hasFunction( *string* **functionName** )
+
+Parameters
+----------
+
+-   [functionName] - The name of the function to check for.
+
+Examples
+--------
+
+    boolean doesFire = $my_entity.hasFunction("fire");
+
+Notes
+-----
+
+Also see
+[callFunction](CallFunction_%28script_event%29 "CallFunction (script event)")
+.
+
+\
+

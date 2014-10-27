@@ -1,0 +1,41 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Initiates a rotation about the given axis by decreasing the current
+angle towards the given angle. // Uses the current speed/time and
+acceleration and deceleration settings.
+
+Usage
+-----
+
+void rotateDownTo( float axis, float angle )
+
+Parameters
+----------
+
+[axis] - The Axis to rotate around in float format. 0 (zero) = X, 1 = Y
+& 2 = Z
+
+[angle] = angle in degrees to rotate to
+
+Examples
+--------
+
+     $light_02_rot.rotateDownTo(0, -70);
+
+Notes
+-----
+
+Same usage as
+[rotateUpTo](RotateUpTo_%28script_event%29 "RotateUpTo (script event)")
+except it of increasing the current angle to get to the destination, it
+decreases the angle.
+
+\
+

@@ -1,0 +1,35 @@
+Description
+-----------
+
+The **translate** keyword translates a stage by the given offset.
+
+Usage
+-----
+
+    translate [x], [y]
+
+Parameters
+----------
+
+-   [x] = The x offset
+-   [y] = The y offset
+
+Example
+-------
+
+Scroll a stage at a constant rate
+
+    {
+       translate  time, time
+       map     textures/custom/foo.tga
+    }
+
+Notes
+-----
+
+The
+[scroll](Scroll_%28Material_stage_keyword%29 "Scroll (Material stage keyword)")
+keyword is an alias for this keyword.
+
+\
+

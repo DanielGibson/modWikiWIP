@@ -1,0 +1,42 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Retrieves the value of a specific spawn arg.
+
+Usage
+-----
+
+*string* getKey( *string* **key** )
+
+Parameters
+----------
+
+-   [key] - The spawn argument to return the value of.
+
+Examples
+--------
+
+     
+    void double_monster_gravity (entity ent_mon_this){
+    string mon_class;
+     
+        mon_class=ent_mon_this.getKey("className");
+        //more code here
+        sys.spawn(mon_class);
+     
+    }
+
+Notes
+-----
+
+This script event returns the value of the specified spawn argument as a
+string.
+
+\
+

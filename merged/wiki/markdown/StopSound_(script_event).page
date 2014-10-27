@@ -1,0 +1,35 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Stops a specific sound shader on the channel.
+
+Usage
+-----
+
+*void* stopSound( *float* **channel** , *float* **netSync** )
+
+Parameters
+----------
+
+-   [channel] - The channel to stop sound on.
+-   [netSync] - Whether this stop occurs across the network or not.
+
+Examples
+--------
+
+     
+    $my_entity.stopSound(1,1);
+
+Notes
+-----
+
+This script event does not return any values.
+
+\
+

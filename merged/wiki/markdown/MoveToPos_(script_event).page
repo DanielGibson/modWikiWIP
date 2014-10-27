@@ -1,0 +1,34 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Moves this entity to the specified XYZ coordinates within a level.
+
+Usage
+-----
+
+*void* moveToPos( *vector* **coord** )
+
+Parameters
+----------
+
+-   [coord] - a vector that describes the XYZ coordinates to move to.
+
+Examples
+--------
+
+     
+    $my_entity.moveToPos( '300 -144 90' );
+
+Notes
+-----
+
+This script event does not return any values.
+
+\
+

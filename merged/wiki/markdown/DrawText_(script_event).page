@@ -1,0 +1,44 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Text drawing for debugging. align can be 0-left, 1-center, 2-right.
+
+Usage
+-----
+
+*void* drawText( *string* **text** , *vector* **origin** , *float*
+**scale** , *vector* **color** , *float* **align** , *float*
+**lifetime** )
+
+Parameters
+----------
+
+-   [text] - The text to draw.
+-   [origin] - The point in space to draw the text.
+-   [scale] - The size to draw the text.
+-   [color] - The color to draw the text.
+-   [align] - The alignment of the text.
+    -   0 - left
+    -   1 - center
+    -   2 - right
+-   [lifetime] - The duration to display the text.
+
+Examples
+--------
+
+     
+    sys.drawText("Yeah. I can see you right behind me making corrections.", '0 5 45', 5, '1 1 1', 1, 1);
+
+Notes
+-----
+
+This script event does not return any values.
+
+\
+

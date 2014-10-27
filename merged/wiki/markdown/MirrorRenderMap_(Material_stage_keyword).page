@@ -1,0 +1,38 @@
+Description
+-----------
+
+The **mirrorRenderMap** keyword defines a buffer in which a reflection
+is rendered into.
+
+Usage
+-----
+
+    mirrorRenderMap
+
+Parameters
+----------
+
+-   [width] = The width of the buffer in pixels
+-   [height] = The height of the buffer in pixels
+
+Example
+-------
+
+Renders a map with a dimension of 128 by 128...
+
+    {
+       mirrorRenderMap   128 128
+    }
+
+Notes
+-----
+
+The results produced by this keyword often times require some
+manipulation via the
+[translate](Translate_%28Material_stage_keyword%29 "Translate (Material stage keyword)")
+and
+[scale](Scale_%28Material_stage_keyword%29 "Scale (Material stage keyword)")
+keywords in order to be useful.
+
+\
+

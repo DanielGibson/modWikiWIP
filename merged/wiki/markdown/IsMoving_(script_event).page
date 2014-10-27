@@ -1,0 +1,34 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Returns true if a mover is moving
+
+Usage
+-----
+
+*float* isMoving( )
+
+Parameters
+----------
+
+None.
+
+Examples
+--------
+
+    if( $mymover.isMoving() )
+        $mymover.stopMoving();
+
+Notes
+-----
+
+None.
+
+\
+

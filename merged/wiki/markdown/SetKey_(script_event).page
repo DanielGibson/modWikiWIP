@@ -1,0 +1,40 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Sets a key on this entity's spawn args.
+
+Usage
+-----
+
+*void* setKey( *string* **key** , *string* **value** )
+
+Parameters
+----------
+
+-   [key] - The key to set the value of.
+-   [value] - The value to set the key to.
+
+Examples
+--------
+
+     
+    $my_entity.setKey("kung", "fu");
+
+Notes
+-----
+
+This script event does not return any values.
+
+Note that most spawn args are evaluated when this entity spawns in, so
+this will not change the entity's behavior in most cases. This is
+chiefly for saving data the script needs in an entity for later
+retrieval.
+
+\
+

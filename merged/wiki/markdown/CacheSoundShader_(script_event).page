@@ -1,0 +1,35 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Ensure the specified sound shader is loaded by the system. Prevents
+cache hits when playing sound shaders.
+
+Usage
+-----
+
+*void* cacheSoundShader( *string* **shaderName** )
+
+Parameters
+----------
+
+-   [shaderName] - The name of the sound shader to cache.
+
+Examples
+--------
+
+     
+    sys.cacheSoundShader ("broken_plat_2_5s");
+
+Notes
+-----
+
+This script event does not return any values.
+
+\
+

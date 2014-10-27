@@ -1,0 +1,35 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Returns a right vector for the given Euler angles
+
+Usage
+-----
+
+*vector* angToRight( *vector* **angles** )
+
+Parameters
+----------
+
+-   [angles] - A vector who's components correspond with heading, pitch,
+    and bank.
+
+Examples
+--------
+
+     
+    rtVec = sys.angToRight('45 10 54');
+
+Notes
+-----
+
+This script event returns a right vector.
+
+\
+

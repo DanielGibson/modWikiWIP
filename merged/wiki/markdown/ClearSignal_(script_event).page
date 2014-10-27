@@ -1,0 +1,34 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Disables the callback function on the specified signal.
+
+Usage
+-----
+
+*void* clearSignal( *float* **signalNum** )
+
+Parameters
+----------
+
+-   [signalNum] - The number of the signal to disable callback.
+
+Examples
+--------
+
+     
+    $my_entity.clearSignal(1);
+
+Notes
+-----
+
+This script event does not return any values.
+
+\
+

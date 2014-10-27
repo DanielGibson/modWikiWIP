@@ -1,0 +1,43 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Returns view control to the player entity.
+
+Usage
+-----
+
+*void* firstPerson()
+
+Parameters
+----------
+
+This script event does not accept parameters.
+
+Examples
+--------
+
+     
+    void cam_imp_start_1(){
+     
+        sys.setCamera($func_cameraview_imp_1); //set view to the camera bound to an imp
+        sys.wait(4); //use this view for 4 seconds
+        sys.firstPerson(); //return to player's first person view
+     
+    }
+
+Notes
+-----
+
+This script event does not return any values.
+
+This is an excellent way to revert to first person view after using an
+alternate perspective, such as a camera view.
+
+\
+

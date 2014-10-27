@@ -1,0 +1,34 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Retrieves the floating point value of a specific spawn arg.
+
+Usage
+-----
+
+*float* getFloatKey( *string* **key** )
+
+Parameters
+----------
+
+-   [key] - The spawn argument to return the value of.
+
+Examples
+--------
+
+     
+    $my_entity.getFloatKey("blink_min");
+
+Notes
+-----
+
+This script event returns the value of a spawn argument as a float.
+
+\
+

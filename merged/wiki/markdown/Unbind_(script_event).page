@@ -1,0 +1,34 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Detaches this entity from its master.
+
+Usage
+-----
+
+*void* unbind()
+
+Parameters
+----------
+
+This script event does accept parameters.
+
+Examples
+--------
+
+     
+    $bound_entity.unbind();
+
+Notes
+-----
+
+This script event does not return any values.
+
+\
+

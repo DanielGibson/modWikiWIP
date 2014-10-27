@@ -1,0 +1,42 @@
+<div align="left"
+style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
+
+![](/images/c/cb/D3square_bg.png) The information on this page is
+specific to [Doom 3](Doom_3 "Doom 3") .
+
+</div>
+
+------------------------------------------------------------------------
+
+Description
+-----------
+
+The mask\_backright keyword only allows the sound from the shader to be
+played through the rear right surround sound speaker in a 5.1 setup.
+
+Usage
+-----
+
+    mask_backright
+
+Example
+-------
+
+    ship_engine_rumble
+    {
+        mindistance 100
+        maxdistance 1000
+        volume 10
+        looping
+        mask_backright
+        shakes .1
+        sound/last_stand/loop_rumble_backright_b.wav
+    }
+
+Notes
+-----
+
+When this is in use, sound only comes from that channel when 5.1
+surround is used. If you use 2 channel (stereo) sound the channel will
+be muted and this sound will not be played.
+

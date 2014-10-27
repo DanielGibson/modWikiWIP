@@ -1,0 +1,37 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Returns the length of time between game frames.
+
+Usage
+-----
+
+*float* getFrameTime()
+
+Parameters
+----------
+
+This script event does not accept parameters.
+
+Examples
+--------
+
+     
+    frmTime = sys.getFrameTime();
+
+Notes
+-----
+
+This script event returns the length of time between game frames as a
+float.
+
+This is not related to renderer frame rate.
+
+\
+

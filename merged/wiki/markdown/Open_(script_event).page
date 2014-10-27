@@ -1,0 +1,43 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Opens the door.
+
+Usage
+-----
+
+void open( )
+
+Parameters
+----------
+
+-   tba
+
+Examples
+--------
+
+    // Opens or closes a door depending on it's current state ...
+     
+    void doorToggle(ent door)
+    {
+            if (door.isOpen())
+            {
+                    door.close();
+            } else  {
+                    door.open();
+            }
+    }
+
+Notes
+-----
+
+tba
+
+\
+

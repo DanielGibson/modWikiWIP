@@ -1,0 +1,34 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Tells a func\_camera\_anim to start playing its
+[MD5Anim](MD5ANIM_%28file_format%29 "MD5ANIM (file format)") file.
+
+Usage
+-----
+
+*void* start()
+
+Parameters
+----------
+
+None.
+
+Examples
+--------
+
+    $mycamera.start();
+
+Notes
+-----
+
+This script event does not return any values.
+
+\
+

@@ -1,0 +1,102 @@
+<div align="left"
+style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
+
+![](/images/f/f9/Etqwsquare_bg.png) The information on this page is
+specific to [Enemy Territory: Quake
+Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .
+
+</div>
+
+------------------------------------------------------------------------
+
+Description
+-----------
+
+Enables a debug draw of bot actions within a limited distance from
+viewer.
+
+Usage
+-----
+
+At the console type...
+
+    bot_drawactions [bool]
+
+Parameters
+----------
+
+-   [bool] - 1 on, 0 off.
+
+Flags
+-----
+
+  --------------------------------------------------------------------------
+  Flag                     Enabled                  Description
+  ------------------------ ------------------------ ------------------------
+  CVAR\_ALL                                         all flags
+
+  CVAR\_BOOL               X                        variable is a boolean
+
+  CVAR\_INTEGER                                     variable is an integer
+
+  CVAR\_FLOAT                                       variable is a float
+
+  CVAR\_SYSTEM                                      system variable
+
+  CVAR\_RENDERER                                    renderer variable
+
+  CVAR\_SOUND                                       sound variable
+
+  CVAR\_GUI                                         gui variable
+
+  CVAR\_GAME               X                        game variable
+
+  CVAR\_TOOL                                        tool variable
+
+  CVAR\_USERINFO                                    sent to servers,
+                                                    available to menu
+
+  CVAR\_SERVERINFO                                  sent from servers,
+                                                    available to menu
+
+  CVAR\_NETWORKSYNC                                 cvar is synced from the
+                                                    server to clients
+
+  CVAR\_STATIC             X                        statically declared, not
+                                                    user created
+
+  CVAR\_CHEAT              X                        variable is considered a
+                                                    cheat
+
+  CVAR\_NOCHEAT                                     variable is not
+                                                    considered a cheat
+
+  CVAR\_INIT                                        can only be set from the
+                                                    command-line
+
+  CVAR\_ROM                                         display only, cannot be
+                                                    set by user at all
+
+  CVAR\_ARCHIVE                                     set to cause it to be
+                                                    saved to a config file
+
+  CVAR\_MODIFIED                                    set when the variable is
+                                                    modified
+  --------------------------------------------------------------------------
+
+Notes
+-----
+
+The blue circle represents the radius of the bot action, the debug text
+shows the values of the action.
+
+The actions displayed may be further filtered with:
+
+-   [bot\_drawActionNumber](Bot_drawActionNumber_%28cvar%29 "Bot drawActionNumber (cvar)")
+-   [bot\_drawActionWithClasses](Bot_drawActionWithClasses_%28cvar%29 "Bot drawActionWithClasses (cvar)")
+-   [bot\_drawActiveActionsOnly](Bot_drawActiveActionsOnly_%28cvar%29 "Bot drawActiveActionsOnly (cvar)")
+-   [bot\_drawActionGroupNum](Bot_drawActionGroupNum_%28cvar%29 "Bot drawActionGroupNum (cvar)")
+-   [bot\_drawActionVehicleType](Bot_drawActionVehicleType_%28cvar%29 "Bot drawActionVehicleType (cvar)")
+
+\
+

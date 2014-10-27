@@ -1,0 +1,35 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Returns the cross product of the two vectors.
+
+Usage
+-----
+
+*vector* CrossProduct( *vector* **vec1** , *vector* **vec2** )
+
+Parameters
+----------
+
+-   [vec1] - The first of two vectors to multiply.
+-   [vec1] - The second of two vectors to multiply.
+
+Examples
+--------
+
+     
+    crsVec = sys.CrossProduct('120 54 21', '66 54 87');
+
+Notes
+-----
+
+None.
+
+\
+

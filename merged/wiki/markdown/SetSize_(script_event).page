@@ -1,0 +1,37 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Sets the size of this entity's bounding box.
+
+Usage
+-----
+
+*void* setSize( *vector* **min** , *vector* **max** )
+
+Parameters
+----------
+
+-   [min] - The new coordinates for the minimum corner of this entity's
+    bounding box.
+-   [max] - The new coordinates for the maximum corner of this entity's
+    bounding box.
+
+Examples
+--------
+
+     
+    $my_entity.setSize('10 12 45','51 84 62');
+
+Notes
+-----
+
+This script event does not return any values.
+
+\
+

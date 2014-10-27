@@ -1,0 +1,59 @@
+<div align="left"
+style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
+
+![](/images/f/f9/Etqwsquare_bg.png) The information on this page is
+specific to [Enemy Territory: Quake
+Wars](Enemy_Territory:_Quake_Wars "Enemy Territory: Quake Wars") .
+
+</div>
+
+------------------------------------------------------------------------
+
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type
+[idEntity](IdEntity_%28class%29 "IdEntity (class)") . Has spawn class
+specific implementation.
+
+Description
+-----------
+
+Returns the script object of the entity's team, or
+[null](%24null_entity_%28scripting%29 "$null entity (scripting)") if
+none.
+
+Usage
+-----
+
+*string* getGameTeam()
+
+Parameters
+----------
+
+This event does not accept parameters.
+
+Examples
+--------
+
+    if ( someEntity.getGameTeam() == teamStrogg ) {
+        sys.println( "Makron is feeling peckish, harvest more humans!" );
+    }
+
+Notes
+-----
+
+Returns object pointer of team. Named object pointers for teams are
+**gdfTeam** and **stroggTeam** for comparison.
+
+The following [spawn classes](Spawn_class "Spawn class") can have their
+team set: **idActor** , **idItem** , **idProjectile** , **idPlayer** ,
+**sdScriptEntity** .
+
+Has counterpart
+[setGameTeam](SetGameTeam_%28script_event%29 "SetGameTeam (script event)")
+.
+
+\
+

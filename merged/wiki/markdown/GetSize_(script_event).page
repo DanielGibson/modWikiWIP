@@ -1,0 +1,34 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Gets the size of this entity's bounding box.
+
+Usage
+-----
+
+*vector* getSize()
+
+Parameters
+----------
+
+This script event does not accept parameters.
+
+Examples
+--------
+
+     
+    sizeBB = $my_entity.getSize();
+
+Notes
+-----
+
+This script returns the size of this entity's bounding box as a vector.
+
+\
+

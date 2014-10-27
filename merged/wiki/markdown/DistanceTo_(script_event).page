@@ -1,0 +1,35 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Returns the distance of this entity to another entity.
+
+Usage
+-----
+
+*float* distanceTo( *entity* **other** )
+
+Parameters
+----------
+
+-   [other] - The entity to trace the distance to.
+
+Examples
+--------
+
+     
+    distance = $startObject.distanceTo($goalObject);
+
+Notes
+-----
+
+This script event returns the distance between the start and goal object
+as a float.
+
+\
+

@@ -1,0 +1,45 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Returns the name of this entity.
+
+Usage
+-----
+
+*string* getName()
+
+Parameters
+----------
+
+This script event does not accept parameters.
+
+Examples
+--------
+
+     
+    void remix_monster_gravity (entity ent_mon_this){
+    string mon_class;
+    string mon_name_new;
+     
+        mon_name_new=ent_mon_this.getName();
+        //more code here
+        mon_name_new=sys.strLeft(mon_name_new,mon_name_len-1)+"r";
+        //more code here
+        sys.spawn(mon_class);
+     
+    }
+
+Notes
+-----
+
+This script returns the value of this entity's name spawn argument as a
+string.
+
+\
+

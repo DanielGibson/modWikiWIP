@@ -1,0 +1,39 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Sets shader parms Parm0, Parm1, Parm2, and Parm3 (red, green, blue, and
+alpha respectively).
+
+Usage
+-----
+
+*void* setShaderParms( *float* **parm0** , *float* **parm1** , *float*
+**parm2** , *float* **parm3** )
+
+Parameters
+----------
+
+-   [parm0] - The value to assign to the red shader parm.
+-   [parm1] - The value to assign to the green shader parm.
+-   [parm2] - The value to assign to the blue shader parm.
+-   [parm3] - The value to assign to the alpha shader parm.
+
+Examples
+--------
+
+     
+    $my_entity.setShaderParms(0.5,0.4,0.5,1);
+
+Notes
+-----
+
+This script event does not return any values.
+
+\
+

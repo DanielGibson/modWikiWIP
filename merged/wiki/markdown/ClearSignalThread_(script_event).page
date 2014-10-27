@@ -1,0 +1,36 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Clears the script callback function set for when the given signal is
+raised on the given entity.
+
+Usage
+-----
+
+*void* clearSignalThread( *float* **signalNum** , *entity* **ent** )
+
+Parameters
+----------
+
+-   [signalNum] - The signal to clear.
+-   [ent] - The entity to clear these signals from.
+
+Examples
+--------
+
+     
+    sys.clearSignalThread(1, door2a);
+
+Notes
+-----
+
+This script event does not return any values.
+
+\
+

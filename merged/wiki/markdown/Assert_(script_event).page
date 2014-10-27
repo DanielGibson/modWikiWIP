@@ -1,0 +1,35 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Breaks if the condition is zero in debug builds.
+
+Usage
+-----
+
+*void* assert( *float* **condition** )
+
+Parameters
+----------
+
+-   [condition] - value to evaluate to determine if a break is
+    nessecary.
+
+Examples
+--------
+
+     
+    sys.assert(count);
+
+Notes
+-----
+
+This script event does not return any values.
+
+\
+

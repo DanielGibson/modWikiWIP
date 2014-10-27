@@ -1,0 +1,40 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type
+[idThread](Thread_%28scripting%29 "Thread (scripting)") , accessible via
+[sys](Scripting_basics#sys "Scripting basics") identifier.
+
+Description
+-----------
+
+Suspends execution of the current thread for the given number of
+seconds.
+
+Usage
+-----
+
+*[void](Data_types#void "Data types")* wait(
+*[float](Data_types#float "Data types")* **time** )
+
+Parameters
+----------
+
+-   [time] - The duration in seconds to suspend execution.
+
+Examples
+--------
+
+     
+    sys.wait(5);
+
+Notes
+-----
+
+**time** parameter values less than one game frame are not recommended.
+See [threads](Thread_%28scripting%29 "Thread (scripting)") for more
+information.
+
+\
+

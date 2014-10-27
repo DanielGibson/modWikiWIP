@@ -1,0 +1,35 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Retrieves the integer value of a specific spawn arg.
+
+Usage
+-----
+
+*float* getIntKey( *string* **key** )
+
+Parameters
+----------
+
+-   [key] - The spawn argument to return the value of.
+
+Examples
+--------
+
+     
+    $my_entity.getIntKey("pain_threshold");
+
+Notes
+-----
+
+This script event returns the value of the specified spawn argument as
+an integer.
+
+\
+

@@ -1,0 +1,36 @@
+Game class
+----------
+
+This event operates on an instance of the [game
+class](Game_class "Game class") type {{{gameclass}}}
+
+Description
+-----------
+
+Causes this entity to activate all it's targets. Similar to how a
+trigger activates entities.
+
+Usage
+-----
+
+*void* activateTargets( *entity* **activator** )
+
+Parameters
+----------
+
+-   [activator] - The entity that caused the action (usually the
+    player).
+
+Examples
+--------
+
+     
+    $my_entity.activateTargets($player1);
+
+Notes
+-----
+
+This script event does not return any values.
+
+\
+

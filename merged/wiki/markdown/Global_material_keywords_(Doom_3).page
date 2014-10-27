@@ -1,0 +1,87 @@
+Global keywords used in material shaders.
+
+Existing keywords as of D3 version 1.3.1302 (1.3):
+
+General Keywords
+----------------
+
+-   [alphazeroclamp](Alphazeroclamp_%28Material_global_keyword%29 "Alphazeroclamp (Material global keyword)")
+-   [backsided](BackSided_%28Material_global_keyword%29 "BackSided (Material global keyword)")
+-   [bumpmap](Bumpmap_%28Material_global_keyword%29 "Bumpmap (Material global keyword)")
+-   [clamp](Clamp_%28Material_global_keyword%29 "Clamp (Material global keyword)")
+-   [DECAL\_MACRO](DECAL_MACRO_%28Material_global_keyword%29 "DECAL MACRO (Material global keyword)")
+-   [decalInfo](DecalInfo_%28Material_global_keyword%29 "DecalInfo (Material global keyword)")
+-   [deform](Deform_%28Material_global_keyword%29 "Deform (Material global keyword)")
+-   [description](Description_%28Material_global_keyword%29 "Description (Material global keyword)")
+-   [diffusemap](Diffusemap_%28Material_global_keyword%29 "Diffusemap (Material global keyword)")
+-   [forceOpaque](ForceOpaque_%28Material_global_keyword%29 "ForceOpaque (Material global keyword)")
+-   [forceOverlays](ForceOverlays_%28Material_global_keyword%29 "ForceOverlays (Material global keyword)")
+-   [forceShadows](ForceShadows_%28Material_global_keyword%29 "ForceShadows (Material global keyword)")
+-   [guisurf](Guisurf_%28Material_global_keyword%29 "Guisurf (Material global keyword)")
+-   [mirror](Mirror_%28Material_global_keyword%29 "Mirror (Material global keyword)")
+-   [noFog](NoFog_%28Material_global_keyword%29 "NoFog (Material global keyword)")
+-   [noOverlays](NoOverlays_%28Material_global_keyword%29 "NoOverlays (Material global keyword)")
+-   [noSelfShadow](NoSelfShadow_%28Material_global_keyword%29 "NoSelfShadow (Material global keyword)")
+-   [noShadows](NoShadows_%28Material_global_keyword%29 "NoShadows (Material global keyword)")
+-   [polygonOffset](PolygonOffset_%28Material_global_keyword%29 "PolygonOffset (Material global keyword)")
+-   [qer\_editorimage](Qer_editorimage_%28Material_global_keyword%29 "Qer editorimage (Material global keyword)")
+-   [renderbump](Renderbump_%28Material_global_keyword%29 "Renderbump (Material global keyword)")
+-   [sort](Sort_%28Material_global_keyword%29 "Sort (Material global keyword)")
+-   [spectrum](Spectrum_%28Material_global_keyword%29 "Spectrum (Material global keyword)")
+-   [specularmap](Specularmap_%28Material_global_keyword%29 "Specularmap (Material global keyword)")
+-   [translucent](Translucent_%28Material_global_keyword%29 "Translucent (Material global keyword)")
+-   [twoSided](TwoSided_%28Material_global_keyword%29 "TwoSided (Material global keyword)")
+-   [unsmoothedTangents](UnsmoothedTangents_%28Material_global_keyword%29 "UnsmoothedTangents (Material global keyword)")
+-   [zeroclamp](Zeroclamp_%28Material_global_keyword%29 "Zeroclamp (Material global keyword)")
+
+Light Keywords
+--------------
+
+-   [ambientLight](AmbientLight_%28Material_global_keyword%29 "AmbientLight (Material global keyword)")
+-   [blendLight](BlendLight_%28Material_global_keyword%29 "BlendLight (Material global keyword)")
+-   [fogLight](FogLight_%28Material_global_keyword%29 "FogLight (Material global keyword)")
+-   [lightFalloffImage](LightFalloffImage_%28Material_global_keyword%29 "LightFalloffImage (Material global keyword)")
+-   [noPortalFog](NoPortalFog_%28Material_global_keyword%29 "NoPortalFog (Material global keyword)")
+
+Surface Parameters
+------------------
+
+-   [aasobstacle](Aasobstacle_%28Material_global_keyword%29 "Aasobstacle (Material global keyword)")
+-   [aassolid](Aassolid_%28Material_global_keyword%29 "Aassolid (Material global keyword)")
+-   [areaportal](Areaportal_%28Material_global_keyword%29 "Areaportal (Material global keyword)")
+-   [blood](Blood_%28Material_global_keyword%29 "Blood (Material global keyword)")
+-   [cardboard](Cardboard_%28Material_global_keyword%29 "Cardboard (Material global keyword)")
+-   [collision](Collision_%28Material_global_keyword%29 "Collision (Material global keyword)")
+-   [discrete](Discrete_%28Material_global_keyword%29 "Discrete (Material global keyword)")
+-   [flashlight\_trigger](Flashlight_trigger_%28Material_global_keyword%29 "Flashlight trigger (Material global keyword)")
+-   [flesh](Flesh_%28Material_global_keyword%29 "Flesh (Material global keyword)")
+-   [glass](Glass_%28Material_global_keyword%29 "Glass (Material global keyword)")
+-   [ikclip](Ikclip_%28Material_global_keyword%29 "Ikclip (Material global keyword)")
+-   [ladder](Ladder_%28Material_global_keyword%29 "Ladder (Material global keyword)")
+-   [liquid](Liquid_%28Material_global_keyword%29 "Liquid (Material global keyword)")
+-   [metal](Metal_%28Material_global_keyword%29 "Metal (Material global keyword)")
+-   [monsterclip](Monsterclip_%28Material_global_keyword%29 "Monsterclip (Material global keyword)")
+-   [moveableclip](Moveableclip_%28Material_global_keyword%29 "Moveableclip (Material global keyword)")
+-   [nodamage](Nodamage_%28Material_global_keyword%29 "Nodamage (Material global keyword)")
+-   [noFragment](NoFragment_%28Material_global_keyword%29 "NoFragment (Material global keyword)")
+-   [noimpact](Noimpact_%28Material_global_keyword%29 "Noimpact (Material global keyword)")
+-   [nonsolid](Nonsolid_%28Material_global_keyword%29 "Nonsolid (Material global keyword)")
+-   [nosteps](Nosteps_%28Material_global_keyword%29 "Nosteps (Material global keyword)")
+-   [nullnormal](Nullnormal_%28Material_global_keyword%29 "Nullnormal (Material global keyword)")
+-   [plastic](Plastic_%28Material_global_keyword%29 "Plastic (Material global keyword)")
+-   [playerclip](Playerclip_%28Material_global_keyword%29 "Playerclip (Material global keyword)")
+-   [qer\_nocarve](Qer_nocarve_%28Material_global_keyword%29 "Qer nocarve (Material global keyword)")
+-   [ricochet](Ricochet_%28Material_global_keyword%29 "Ricochet (Material global keyword)")
+-   [slick](Slick_%28Material_global_keyword%29 "Slick (Material global keyword)")
+-   [solid](Solid_%28Material_global_keyword%29 "Solid (Material global keyword)")
+-   [stone](Stone_%28Material_global_keyword%29 "Stone (Material global keyword)")
+-   [surfacetype10](Surfacetype10_%28Material_global_keyword%29 "Surfacetype10 (Material global keyword)")
+-   [surfacetype11](Surfacetype11_%28Material_global_keyword%29 "Surfacetype11 (Material global keyword)")
+-   [surfacetype12](Surfacetype12_%28Material_global_keyword%29 "Surfacetype12 (Material global keyword)")
+-   [surfacetype13](Surfacetype13_%28Material_global_keyword%29 "Surfacetype13 (Material global keyword)")
+-   [surfacetype14](Surfacetype14_%28Material_global_keyword%29 "Surfacetype14 (Material global keyword)")
+-   [surfacetype15](Surfacetype15_%28Material_global_keyword%29 "Surfacetype15 (Material global keyword)")
+-   [trigger](Trigger_%28Material_global_keyword%29 "Trigger (Material global keyword)")
+-   [water](Water_%28Material_global_keyword%29 "Water (Material global keyword)")
+-   [wood](Wood_%28Material_global_keyword%29 "Wood (Material global keyword)")
+
