@@ -1,338 +1,342 @@
- <a name="Rendering">
- </a>
- <h2>
-  Rendering
- </h2>
- <p>
-  Doom 3 uses the OpenGL API to render graphics to the screen. Each frame is stored in what is called a frame buffer. Each polygon in view is rendered to the frame buffer one at a time, stage by stage, pixel by pixel.
- </p>
- <a name="Layers">
- </a>
- <h2>
-  Layers
- </h2>
- <p>
-  OpenGL blend modes explain to the renderer how two graphic layers, a source and destination layer, are to be mixed together.
- </p>
- <p>
-  The source layer is usually the RGB color data in a texture image file. This texture is gathered from the material shader applied to the current polygon. The actual image used in the source layer is generally defined through use of the map keyword.
- </p>
- <p>
-  The destination layer is the color data currently existing in the frame buffer.
- </p>
- <a name="The_Blend_Function">
- </a>
- <h2>
-  The Blend Function
- </h2>
- <p>
-  Each layer is essentially broken down into pixels and each pixel in the source layer is combined with the corresponding pixel in the destination layer using a mathmatical formula. This formula is the blend function.
- </p>
- <p>
-  The formula reads as follows:
- </p>
- <pre>[source * (srcBlend)] + [destination * (dstBlend)]
+<html>
+ <body>
+  <a name="Rendering">
+  </a>
+  <h2>
+   Rendering
+  </h2>
+  <p>
+   Doom 3 uses the OpenGL API to render graphics to the screen. Each frame is stored in what is called a frame buffer. Each polygon in view is rendered to the frame buffer one at a time, stage by stage, pixel by pixel.
+  </p>
+  <a name="Layers">
+  </a>
+  <h2>
+   Layers
+  </h2>
+  <p>
+   OpenGL blend modes explain to the renderer how two graphic layers, a source and destination layer, are to be mixed together.
+  </p>
+  <p>
+   The source layer is usually the RGB color data in a texture image file. This texture is gathered from the material shader applied to the current polygon. The actual image used in the source layer is generally defined through use of the map keyword.
+  </p>
+  <p>
+   The destination layer is the color data currently existing in the frame buffer.
+  </p>
+  <a name="The_Blend_Function">
+  </a>
+  <h2>
+   The Blend Function
+  </h2>
+  <p>
+   Each layer is essentially broken down into pixels and each pixel in the source layer is combined with the corresponding pixel in the destination layer using a mathmatical formula. This formula is the blend function.
+  </p>
+  <p>
+   The formula reads as follows:
+  </p>
+  <pre>[source * (srcBlend)] + [destination * (dstBlend)]
 </pre>
- <p>
-  The blend keyword defines both the source blend and destination blend through the use of aliases however you are not limited to using aliases.
- </p>
- <p>
-  Both the source blend and destination blend can be defined separately like so...
- </p>
- <pre>blend [srcBlend], [dstBlend]
+  <p>
+   The blend keyword defines both the source blend and destination blend through the use of aliases however you are not limited to using aliases.
+  </p>
+  <p>
+   Both the source blend and destination blend can be defined separately like so...
+  </p>
+  <pre>blend [srcBlend], [dstBlend]
 </pre>
- <a name="Source_Blend_.28srcBlend.29">
- </a>
- <h2>
-  Source Blend (srcBlend)
- </h2>
- <p>
-  The following values are valid for the source blend part of the equation.
- </p>
- <table border="1" style="width: 800px; text-align: center">
-  <tr style="background:#AA0000; color:white; font-weight: bold">
-   <td>
-    Alias
-   </td>
-   <td>
-    Value
-   </td>
-   <td>
-    Description
-   </td>
-  </tr>
-  <tr>
-   <td>
-    gl_one
-   </td>
-   <td>
-    1
-   </td>
-   <td>
-    This is the value 1. When multiplied by the source, the value stays the same. The value of the color information does not change.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    gl_zero
-   </td>
-   <td>
-    0
-   </td>
-   <td>
-    This is the value 0. When multiplied by the source, all RGB data in the source becomes zero (essentially black).
-   </td>
-  </tr>
-  <tr>
-   <td>
-    gl_dst_color
-   </td>
-   <td>
-    destination
-   </td>
-   <td>
-    This is the value of color data currently in the destination (frame buffer). The value of that information depends on the information supplied by previous stages.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    gl_one_minus_dst_color
-   </td>
-   <td>
-    1 - destination
-   </td>
-   <td>
-    This is nearly the same as GL_DST_COLOR except that the value for each component color is inverted by subtracting it from one. (i.e. R = 1.0 - DST.R, G = 1.0 - DST.G, B = 1.0 - DST.B, etc.)
-   </td>
-  </tr>
-  <tr>
-   <td>
-    gl_src_alpha
-   </td>
-   <td>
-    source alpha
-   </td>
-   <td>
-    The TGA file being used for the source data must have an alpha channel in addition to its RGB channels (for a total of four channels). The alpha channel is an 8-bit black and white only channel. An entirely white alpha channel will not darken the source.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    gl_one_minus_src_alpha
-   </td>
-   <td>
-    1 - source alpha
-   </td>
-   <td>
-    This is the same as GL_SRC_ALPHA except that the value in the alpha channel is inverted by subtracting it from one. (i.e. A=1.0 - SRC.A)
-   </td>
-  </tr>
- </table>
- <a name="Destination_Blend_.28dstBlend.29">
- </a>
- <h2>
-  Destination Blend (dstBlend)
- </h2>
- <p>
-  The following values are valid for the destination blend part of the equation.
- </p>
- <table border="1" style="width: 800px; text-align: center">
-  <tr style="background:#AA0000; color:white; font-weight: bold">
-   <td>
-    Alias
-   </td>
-   <td>
-    Value
-   </td>
-   <td>
-    Description
-   </td>
-  </tr>
-  <tr>
-   <td>
-    gl_one
-   </td>
-   <td>
-    1
-   </td>
-   <td>
-    This is the value 1. When multiplied by the destination, the value stays the same the value of the color information does not change.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    gl_zero
-   </td>
-   <td>
-    0
-   </td>
-   <td>
-    This is the value 0. When multiplied by the destination, all RGB data in the destination becomes zero (essentially black).
-   </td>
-  </tr>
-  <tr>
-   <td>
-    gl_src_color
-   </td>
-   <td>
-    source
-   </td>
-   <td>
-    This is the value of color data currently in the source (which is the texture being manipulated here).
-   </td>
-  </tr>
-  <tr>
-   <td>
-    gl_one_minus_src_color
-   </td>
-   <td>
-    1 - source
-   </td>
-   <td>
-    This is the value of color data currently in source, but subtracted from one (i.e. inverted).
-   </td>
-  </tr>
-  <tr>
-   <td>
-    gl_src_alpha
-   </td>
-   <td>
-    source alpha
-   </td>
-   <td>
-    The TGA file being used for the source data must have an alpha channel in addition to its RGB channels (four a total of four channels). The alpha channel is an 8-bit black and white only channel. An entirely white alpha channel will not darken the source.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    gl_one_minus_src_alpha
-   </td>
-   <td>
-    1 - source alpha
-   </td>
-   <td>
-    This is the same as GL_SRC_ALPHA except that the value in the alpha channel is inverted by subtracting it from one. (i.e. A=1.0 - SRC.A).
-   </td>
-  </tr>
- </table>
- <a name="Blend_Aliases">
- </a>
- <h2>
-  Blend Aliases
- </h2>
- <p>
-  The following parameters for the keyword blend are aliases for a specific set of source and destination values...
- </p>
- <table border="1" style="width: 800px; text-align: center">
-  <tr style="background:#AA0000; color:white; font-weight: bold">
-   <td>
-    Alias
-   </td>
-   <td>
-    Source
-   </td>
-   <td>
-    Destination
-   </td>
-  </tr>
-  <tr>
-   <td>
-    add
-   </td>
-   <td>
-    gl_one
-   </td>
-   <td>
-    gl_one
-   </td>
-  </tr>
-  <tr>
-   <td>
-    blend
-   </td>
-   <td>
-    gl_src_alpha
-   </td>
-   <td>
-    gl_one_minus_src_alpha
-   </td>
-  </tr>
-  <tr>
-   <td>
-    filter
-   </td>
-   <td>
-    gl_dst_color
-   </td>
-   <td>
-    gl_zero
-   </td>
-  </tr>
-  <tr>
-   <td>
-    modulate
-   </td>
-   <td>
-    gl_dst_color
-   </td>
-   <td>
-    gl_zero
-   </td>
-  </tr>
-  <tr>
-   <td>
-    none
-   </td>
-   <td>
-    gl_zero
-   </td>
-   <td>
-    gl_one
-   </td>
-  </tr>
- </table>
- <a name="Computing_a_Result">
- </a>
- <h2>
-  Computing a Result
- </h2>
- <p>
-  Rather than think of the entire texture as a whole and how the blend function computes a result, it maybe easier to think of the red, green, blue, and alpha values that correspond to a single pixel in the source and destination layers, because that is essentially what the computer is processing... one pixel of each layer at a time.
- </p>
- <p>
-  So, let's say the blend mode is add. That's ...
- </p>
- <pre>blend gl_one, gl_one
+  <a name="Source_Blend_.28srcBlend.29">
+  </a>
+  <h2>
+   Source Blend (srcBlend)
+  </h2>
+  <p>
+   The following values are valid for the source blend part of the equation.
+  </p>
+  <table border="1" style="width: 800px; text-align: center">
+   <tr style="background:#AA0000; color:white; font-weight: bold">
+    <td>
+     Alias
+    </td>
+    <td>
+     Value
+    </td>
+    <td>
+     Description
+    </td>
+   </tr>
+   <tr>
+    <td>
+     gl_one
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     This is the value 1. When multiplied by the source, the value stays the same. The value of the color information does not change.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     gl_zero
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     This is the value 0. When multiplied by the source, all RGB data in the source becomes zero (essentially black).
+    </td>
+   </tr>
+   <tr>
+    <td>
+     gl_dst_color
+    </td>
+    <td>
+     destination
+    </td>
+    <td>
+     This is the value of color data currently in the destination (frame buffer). The value of that information depends on the information supplied by previous stages.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     gl_one_minus_dst_color
+    </td>
+    <td>
+     1 - destination
+    </td>
+    <td>
+     This is nearly the same as GL_DST_COLOR except that the value for each component color is inverted by subtracting it from one. (i.e. R = 1.0 - DST.R, G = 1.0 - DST.G, B = 1.0 - DST.B, etc.)
+    </td>
+   </tr>
+   <tr>
+    <td>
+     gl_src_alpha
+    </td>
+    <td>
+     source alpha
+    </td>
+    <td>
+     The TGA file being used for the source data must have an alpha channel in addition to its RGB channels (for a total of four channels). The alpha channel is an 8-bit black and white only channel. An entirely white alpha channel will not darken the source.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     gl_one_minus_src_alpha
+    </td>
+    <td>
+     1 - source alpha
+    </td>
+    <td>
+     This is the same as GL_SRC_ALPHA except that the value in the alpha channel is inverted by subtracting it from one. (i.e. A=1.0 - SRC.A)
+    </td>
+   </tr>
+  </table>
+  <a name="Destination_Blend_.28dstBlend.29">
+  </a>
+  <h2>
+   Destination Blend (dstBlend)
+  </h2>
+  <p>
+   The following values are valid for the destination blend part of the equation.
+  </p>
+  <table border="1" style="width: 800px; text-align: center">
+   <tr style="background:#AA0000; color:white; font-weight: bold">
+    <td>
+     Alias
+    </td>
+    <td>
+     Value
+    </td>
+    <td>
+     Description
+    </td>
+   </tr>
+   <tr>
+    <td>
+     gl_one
+    </td>
+    <td>
+     1
+    </td>
+    <td>
+     This is the value 1. When multiplied by the destination, the value stays the same the value of the color information does not change.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     gl_zero
+    </td>
+    <td>
+     0
+    </td>
+    <td>
+     This is the value 0. When multiplied by the destination, all RGB data in the destination becomes zero (essentially black).
+    </td>
+   </tr>
+   <tr>
+    <td>
+     gl_src_color
+    </td>
+    <td>
+     source
+    </td>
+    <td>
+     This is the value of color data currently in the source (which is the texture being manipulated here).
+    </td>
+   </tr>
+   <tr>
+    <td>
+     gl_one_minus_src_color
+    </td>
+    <td>
+     1 - source
+    </td>
+    <td>
+     This is the value of color data currently in source, but subtracted from one (i.e. inverted).
+    </td>
+   </tr>
+   <tr>
+    <td>
+     gl_src_alpha
+    </td>
+    <td>
+     source alpha
+    </td>
+    <td>
+     The TGA file being used for the source data must have an alpha channel in addition to its RGB channels (four a total of four channels). The alpha channel is an 8-bit black and white only channel. An entirely white alpha channel will not darken the source.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     gl_one_minus_src_alpha
+    </td>
+    <td>
+     1 - source alpha
+    </td>
+    <td>
+     This is the same as GL_SRC_ALPHA except that the value in the alpha channel is inverted by subtracting it from one. (i.e. A=1.0 - SRC.A).
+    </td>
+   </tr>
+  </table>
+  <a name="Blend_Aliases">
+  </a>
+  <h2>
+   Blend Aliases
+  </h2>
+  <p>
+   The following parameters for the keyword blend are aliases for a specific set of source and destination values...
+  </p>
+  <table border="1" style="width: 800px; text-align: center">
+   <tr style="background:#AA0000; color:white; font-weight: bold">
+    <td>
+     Alias
+    </td>
+    <td>
+     Source
+    </td>
+    <td>
+     Destination
+    </td>
+   </tr>
+   <tr>
+    <td>
+     add
+    </td>
+    <td>
+     gl_one
+    </td>
+    <td>
+     gl_one
+    </td>
+   </tr>
+   <tr>
+    <td>
+     blend
+    </td>
+    <td>
+     gl_src_alpha
+    </td>
+    <td>
+     gl_one_minus_src_alpha
+    </td>
+   </tr>
+   <tr>
+    <td>
+     filter
+    </td>
+    <td>
+     gl_dst_color
+    </td>
+    <td>
+     gl_zero
+    </td>
+   </tr>
+   <tr>
+    <td>
+     modulate
+    </td>
+    <td>
+     gl_dst_color
+    </td>
+    <td>
+     gl_zero
+    </td>
+   </tr>
+   <tr>
+    <td>
+     none
+    </td>
+    <td>
+     gl_zero
+    </td>
+    <td>
+     gl_one
+    </td>
+   </tr>
+  </table>
+  <a name="Computing_a_Result">
+  </a>
+  <h2>
+   Computing a Result
+  </h2>
+  <p>
+   Rather than think of the entire texture as a whole and how the blend function computes a result, it maybe easier to think of the red, green, blue, and alpha values that correspond to a single pixel in the source and destination layers, because that is essentially what the computer is processing... one pixel of each layer at a time.
+  </p>
+  <p>
+   So, let's say the blend mode is add. That's ...
+  </p>
+  <pre>blend gl_one, gl_one
 </pre>
- <p>
-  And these blends are plugged into the blend function like so...
- </p>
- <pre>[source * (gl_one)] + [destination * (gl_one)]
+  <p>
+   And these blends are plugged into the blend function like so...
+  </p>
+  <pre>[source * (gl_one)] + [destination * (gl_one)]
 </pre>
- <p>
-  Because gl_one equals 1 the formula can be simplified like so...
- </p>
- <pre>[source * 1] + [destination * 1]
+  <p>
+   Because gl_one equals 1 the formula can be simplified like so...
+  </p>
+  <pre>[source * 1] + [destination * 1]
 </pre>
- <p>
-  Now, let's say that two coorisponding pixels from the source and destination layers are being plugged into the function where the source pixel is white and the destination pixel is black.
- </p>
- <p>
-  Each pixel contains a red, green, blue, and alpha channel. Each channel is computed as a separate value.
- </p>
- <pre>[1,1,1,0 * 1)] + [0,0,0,0, * 1]
+  <p>
+   Now, let's say that two coorisponding pixels from the source and destination layers are being plugged into the function where the source pixel is white and the destination pixel is black.
+  </p>
+  <p>
+   Each pixel contains a red, green, blue, and alpha channel. Each channel is computed as a separate value.
+  </p>
+  <pre>[1,1,1,0 * 1)] + [0,0,0,0, * 1]
 </pre>
- <p>
-  This then becomes...
- </p>
- <pre>[1,1,1,0] + [0,0,0,0]
+  <p>
+   This then becomes...
+  </p>
+  <pre>[1,1,1,0] + [0,0,0,0]
 </pre>
- <p>
-  Which then equates to ...
- </p>
- <pre>[1,1,1,0]
+  <p>
+   Which then equates to ...
+  </p>
+  <pre>[1,1,1,0]
 </pre>
- <p>
-  And that means the result is a white pixel.
- </p>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:1189-0!1!0!0!!en!2 and timestamp 20121204173539 -->
+  <p>
+   And that means the result is a white pixel.
+  </p>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:1189-0!1!0!0!!en!2 and timestamp 20121204173539 -->
+ </body>
+</html>

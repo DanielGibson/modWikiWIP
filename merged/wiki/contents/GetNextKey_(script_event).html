@@ -1,92 +1,96 @@
- <a name="Game_class">
- </a>
- <h2>
-  Game class
- </h2>
- <p>
-  This event operates on an instance of the
-  <a href="Game_class" title="Game class">
-   game class
+<html>
+ <body>
+  <a name="Game_class">
   </a>
-  type {{{gameclass}}}
- </p>
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  Searches for the name of a spawn arg that matches the prefix.
- </p>
- <a name="Usage">
- </a>
- <h2>
-  Usage
- </h2>
- <p>
-  <i>
-   string
-  </i>
-  getNextKey(
-  <i>
-   string
-  </i>
-  <b>
-   prefix
-  </b>
-  ,
-  <i>
-   string
-  </i>
-  <b>
-   lastMatch
-  </b>
-  )
- </p>
- <a name="Parameters">
- </a>
- <h2>
-  Parameters
- </h2>
- <ul>
-  <li>
-   [prefix] - The prefix string to search for.
-  </li>
-  <li>
-   [lastMatch] - The last matching value returned.
-  </li>
- </ul>
- <a name="Examples">
- </a>
- <h2>
-  Examples
- </h2>
- <pre> 
+  <h2>
+   Game class
+  </h2>
+  <p>
+   This event operates on an instance of the
+   <a href="Game_class" title="Game class">
+    game class
+   </a>
+   type {{{gameclass}}}
+  </p>
+  <a name="Description">
+  </a>
+  <h2>
+   Description
+  </h2>
+  <p>
+   Searches for the name of a spawn arg that matches the prefix.
+  </p>
+  <a name="Usage">
+  </a>
+  <h2>
+   Usage
+  </h2>
+  <p>
+   <i>
+    string
+   </i>
+   getNextKey(
+   <i>
+    string
+   </i>
+   <b>
+    prefix
+   </b>
+   ,
+   <i>
+    string
+   </i>
+   <b>
+    lastMatch
+   </b>
+   )
+  </p>
+  <a name="Parameters">
+  </a>
+  <h2>
+   Parameters
+  </h2>
+  <ul>
+   <li>
+    [prefix] - The prefix string to search for.
+   </li>
+   <li>
+    [lastMatch] - The last matching value returned.
+   </li>
+  </ul>
+  <a name="Examples">
+  </a>
+  <h2>
+   Examples
+  </h2>
+  <pre> 
 <span style="color: #339900;">// ???</span></pre>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
- <p>
-  This script event returns the name of a spawn arument that matches the prefix as a string.
- </p>
- <p>
-  Passing "attack_target" as the prefix, matches "attack_target1", "attack_targetx", "attack_target_enemy", etc.
- </p>
- <p>
-  The returned string is the name of the key which can then be passed into functions like getKey() to lookup the value of that spawn arg.
- </p>
- <p>
-  This is usefull for when you have multiple values to look up, like when you target multiple objects.
- </p>
- <p>
-  To find the next matching key, pass in the previous result and the next key returned will be the first one that matches after the previous result. Pass in "" to get the first match. Returns "" when no
+  <a name="Notes">
+  </a>
+  <h2>
+   Notes
+  </h2>
+  <p>
+   This script event returns the name of a spawn arument that matches the prefix as a string.
+  </p>
+  <p>
+   Passing "attack_target" as the prefix, matches "attack_target1", "attack_targetx", "attack_target_enemy", etc.
+  </p>
+  <p>
+   The returned string is the name of the key which can then be passed into functions like getKey() to lookup the value of that spawn arg.
+  </p>
+  <p>
+   This is usefull for when you have multiple values to look up, like when you target multiple objects.
+  </p>
+  <p>
+   To find the next matching key, pass in the previous result and the next key returned will be the first one that matches after the previous result. Pass in "" to get the first match. Returns "" when no
 more keys match.
- </p>
- <p>
-  Note to coders: this is the same as MatchPrefix in the game code.
- </p>
- <p>
-  <br/>
- </p>
+  </p>
+  <p>
+   Note to coders: this is the same as MatchPrefix in the game code.
+  </p>
+  <p>
+   <br/>
+  </p>
+ </body>
+</html>

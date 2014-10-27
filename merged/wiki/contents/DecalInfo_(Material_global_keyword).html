@@ -1,72 +1,76 @@
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  Used in the materials for decal sprites to set how long the decal stays and how it should fade out. (An example of decal sprites are bullet marks.)
- </p>
- <a name="Usage">
- </a>
- <h2>
-  Usage
- </h2>
- <p>
-  In the global section of your material shader type...
- </p>
- <pre>decalInfo &lt;stay_length&gt; &lt;fade_length&gt; [&lt;start_rgba&gt; &lt;end_rgba&gt;]
-</pre>
- <a name="Parameters">
- </a>
- <h2>
-  Parameters
- </h2>
- <dl>
-  <dt>
-   stay_length
-  </dt>
-  <dd>
-   The amount of seconds the decal should stay before starting to fade.
-  </dd>
-  <dt>
-   fade_length
-  </dt>
-  <dd>
-   The amount of seconds it takes for the decal to fade away.
-  </dd>
-  <dt>
-   start_rgba
-  </dt>
-  <dd>
-   RGBA colouring the decal will use when spawned.
-  </dd>
-  <dt>
-   end_rgba
-  </dt>
-  <dd>
-   the RGBA colouring the decal will fade to.
-  </dd>
- </dl>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
- <p>
-  The RGBA colours used in start_rgba will be used for stay_length seconds, after that it will fade to end_rgba within fade_length seconds.
- </p>
- <p>
-  The RGBA values are written between parentheses and consist of 4 values. The values are seperated by spaces. (See
-  <a href="Rgba_%28Material_stage_keyword%29" title="Rgba (Material stage keyword)">
-   rgba
+<html>
+ <body>
+  <a name="Description">
   </a>
-  .)
- </p>
- <p>
-  Example: (opaque white and transparent black)
- </p>
- <pre> (1 1 1 1) (0 0 0 0)
+  <h2>
+   Description
+  </h2>
+  <p>
+   Used in the materials for decal sprites to set how long the decal stays and how it should fade out. (An example of decal sprites are bullet marks.)
+  </p>
+  <a name="Usage">
+  </a>
+  <h2>
+   Usage
+  </h2>
+  <p>
+   In the global section of your material shader type...
+  </p>
+  <pre>decalInfo &lt;stay_length&gt; &lt;fade_length&gt; [&lt;start_rgba&gt; &lt;end_rgba&gt;]
 </pre>
- <p>
-  <br/>
- </p>
+  <a name="Parameters">
+  </a>
+  <h2>
+   Parameters
+  </h2>
+  <dl>
+   <dt>
+    stay_length
+   </dt>
+   <dd>
+    The amount of seconds the decal should stay before starting to fade.
+   </dd>
+   <dt>
+    fade_length
+   </dt>
+   <dd>
+    The amount of seconds it takes for the decal to fade away.
+   </dd>
+   <dt>
+    start_rgba
+   </dt>
+   <dd>
+    RGBA colouring the decal will use when spawned.
+   </dd>
+   <dt>
+    end_rgba
+   </dt>
+   <dd>
+    the RGBA colouring the decal will fade to.
+   </dd>
+  </dl>
+  <a name="Notes">
+  </a>
+  <h2>
+   Notes
+  </h2>
+  <p>
+   The RGBA colours used in start_rgba will be used for stay_length seconds, after that it will fade to end_rgba within fade_length seconds.
+  </p>
+  <p>
+   The RGBA values are written between parentheses and consist of 4 values. The values are seperated by spaces. (See
+   <a href="Rgba_%28Material_stage_keyword%29" title="Rgba (Material stage keyword)">
+    rgba
+   </a>
+   .)
+  </p>
+  <p>
+   Example: (opaque white and transparent black)
+  </p>
+  <pre> (1 1 1 1) (0 0 0 0)
+</pre>
+  <p>
+   <br/>
+  </p>
+ </body>
+</html>

@@ -1,18 +1,20 @@
- <a name="idAI::PathToGoal">
- </a>
- <h2>
-  <a href="Src/game/ai/AI.cpp_%28source_file%29" title="Src/game/ai/AI.cpp (source file)">
-   idAI
+<html>
+ <body>
+  <a name="idAI::PathToGoal">
   </a>
-  ::PathToGoal
- </h2>
- <p>
-  PathToGoal acts as a functional gateway for the idAI component to communicate with the AAS system. Any of the MoveToSomething methods eventually use PathToGoal which will, given a starting area and position, and goal area and position, fill a path passed to it if one is available. It returns a bool indicating if a path was successfully found.
- </p>
- <p>
-  It starts out like:
- </p>
- <pre> 
+  <h2>
+   <a href="Src/game/ai/AI.cpp_%28source_file%29" title="Src/game/ai/AI.cpp (source file)">
+    idAI
+   </a>
+   ::PathToGoal
+  </h2>
+  <p>
+   PathToGoal acts as a functional gateway for the idAI component to communicate with the AAS system. Any of the MoveToSomething methods eventually use PathToGoal which will, given a starting area and position, and goal area and position, fill a path passed to it if one is available. It returns a bool indicating if a path was successfully found.
+  </p>
+  <p>
+   It starts out like:
+  </p>
+  <pre> 
 <span style="color: #339900; font-style: italic;">/*
 =====================
 idAI::PathToGoal
@@ -25,41 +27,43 @@ idAI::PathToGoal
 	<span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span> !aas <span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
 		<span style="color: #0000ff;">return</span> <span style="color: #0000ff;">false</span>;
 	<span style="color: #000000;">}</span></pre>
- <p>
-  org here will represent our starting point, our origin. goal will be where we want to go.
- </p>
- <p>
-  a quick check for aas, if we don’t have aas, you don’t get a path, return false to caller.
- </p>
- <pre> 
+  <p>
+   org here will represent our starting point, our origin. goal will be where we want to go.
+  </p>
+  <p>
+   a quick check for aas, if we don’t have aas, you don’t get a path, return false to caller.
+  </p>
+  <pre> 
 org = origin;
 aas-&gt;PushPointIntoAreaNum<span style="color: #000000;">(</span> areaNum, org <span style="color: #000000;">)</span>;
 <span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span> !areaNum <span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
 	<span style="color: #0000ff;">return</span> <span style="color: #0000ff;">false</span>;
 <span style="color: #000000;">}</span></pre>
- <p>
-  The point behind this snippet is to set up our starting point and ensure that the org is actually in the area we say it is for the call to WalkPathToGoal. If you pass in an areaNum  that is less than 0 you will get false returned
- </p>
- <pre> 
+  <p>
+   The point behind this snippet is to set up our starting point and ensure that the org is actually in the area we say it is for the call to WalkPathToGoal. If you pass in an areaNum  that is less than 0 you will get false returned
+  </p>
+  <pre> 
 goal = goalOrigin;
 aas-&gt;PushPointIntoAreaNum<span style="color: #000000;">(</span> goalAreaNum, goal <span style="color: #000000;">)</span>;
 <span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span> !goalAreaNum <span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
 	<span style="color: #0000ff;">return</span> <span style="color: #0000ff;">false</span>;
 <span style="color: #000000;">}</span></pre>
- <p>
-  Same thing, but for the goal position. Now that our org and goal are ensured to be in the areas specified, we check the current movement type and call into the aas system.
- </p>
- <pre> 
+  <p>
+   Same thing, but for the goal position. Now that our org and goal are ensured to be in the areas specified, we check the current movement type and call into the aas system.
+  </p>
+  <pre> 
 <span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span> move.<span style="color: #00aabb;">moveType</span> == MOVETYPE_FLY <span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
 	<span style="color: #0000ff;">return</span> aas-&gt;FlyPathToGoal<span style="color: #000000;">(</span> path, areaNum, org, goalAreaNum, goal, travelFlags <span style="color: #000000;">)</span>;
 <span style="color: #000000;">}</span> <span style="color: #0000ff;">else</span> <span style="color: #000000;">{</span>
 	<span style="color: #0000ff;">return</span> aas-&gt;WalkPathToGoal<span style="color: #000000;">(</span> path, areaNum, org, goalAreaNum, goal, travelFlags <span style="color: #000000;">)</span>;
 <span style="color: #000000;">}</span></pre>
- <p>
-  If you are interested in the AAS code have a look at
-  <a href="IdAASLocal::WalkPathToGoal" title="IdAASLocal::WalkPathToGoal">
-   idAASLocal::WalkPathToGoal
-  </a>
-  . It is where the actual paths are set up and path optimization (smoothing) happens.
- </p>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:1143-0!1!0!0!!en!2 and timestamp 20081121095906 -->
+  <p>
+   If you are interested in the AAS code have a look at
+   <a href="IdAASLocal::WalkPathToGoal" title="IdAASLocal::WalkPathToGoal">
+    idAASLocal::WalkPathToGoal
+   </a>
+   . It is where the actual paths are set up and path optimization (smoothing) happens.
+  </p>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:1143-0!1!0!0!!en!2 and timestamp 20081121095906 -->
+ </body>
+</html>

@@ -1,43 +1,45 @@
- <div class="boilerplate metadata" id="attention" style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa;">
+<html>
+ <body>
+  <div class="boilerplate metadata" id="attention" style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa;">
+   <p>
+    <b>
+     This page is in urgent need of attention because:
+     <i>
+      Cleanup
+     </i>
+    </b>
+   </p>
+   <p>
+    If you disagree with this, please explain why on
+    <a class="new" href="Talk:Adding_a_custom_keyhandler" title="Talk:Adding a custom keyhandler">
+     its talk page
+    </a>
+    .
+   </p>
+  </div>
   <p>
-   <b>
-    This page is in urgent need of attention because:
-    <i>
-     Cleanup
-    </i>
-   </b>
+   This tutorial will explain how to to create a brand new keybinding, including an option to bind it from the options menu.
+  </p>
+  <a name="Code_first.2C_bind_later">
+  </a>
+  <h2>
+   Code first, bind later
+  </h2>
+  <p>
+   First comes the SDK part.
   </p>
   <p>
-   If you disagree with this, please explain why on
-   <a class="new" href="Talk:Adding_a_custom_keyhandler" title="Talk:Adding a custom keyhandler">
-    its talk page
-   </a>
+   Open the header file
+   <i>
+    framework/UsercmdGen.h
+   </i>
+   and search for
+   <b>
+    IMPULSE_40
+   </b>
    .
   </p>
- </div>
- <p>
-  This tutorial will explain how to to create a brand new keybinding, including an option to bind it from the options menu.
- </p>
- <a name="Code_first.2C_bind_later">
- </a>
- <h2>
-  Code first, bind later
- </h2>
- <p>
-  First comes the SDK part.
- </p>
- <p>
-  Open the header file
-  <i>
-   framework/UsercmdGen.h
-  </i>
-  and search for
-  <b>
-   IMPULSE_40
-  </b>
-  .
- </p>
- <pre>
+  <pre>
 const int IMPULSE_0				= 0;			// weap 0
 const int IMPULSE_1				= 1;			// weap 1
 const int IMPULSE_2				= 2;			// weap 2
@@ -48,37 +50,37 @@ const int IMPULSE_28			= 28;			// vote yes
 const int IMPULSE_29			= 29;			// vote no
 const int IMPULSE_40			= 40;			// use vehicle
 </pre>
- <p>
-  Note that there are several impulses flagged as unused. Theoretically, we could use any of them, but a later patch may suddenly use
-  <b>
-   IMPULSE_27
-  </b>
-  for a new weapon. As there is no side effect for simply appending a new impulse, this tutorial will use number 41 to be on the safe side. Add a new entry by copy/pasting everything for
-  <b>
-   IMPULSE_40
-  </b>
-  and changing the number to 41.
+  <p>
+   Note that there are several impulses flagged as unused. Theoretically, we could use any of them, but a later patch may suddenly use
+   <b>
+    IMPULSE_27
+   </b>
+   for a new weapon. As there is no side effect for simply appending a new impulse, this tutorial will use number 41 to be on the safe side. Add a new entry by copy/pasting everything for
+   <b>
+    IMPULSE_40
+   </b>
+   and changing the number to 41.
 Impulse numbers are sent across the network as a 6 bit (unsigned) number, giving a maximum impulse number of 63.
- </p>
- <pre>
+  </p>
+  <pre>
 const int IMPULSE_41			= 41;			// use my new code
 </pre>
- <p>
-  Now open
-  <i>
-   Game/player.cpp
-  </i>
-  and look for
-  <b>
-   idPlayer::PerformImpulse
-  </b>
-  . Add a new switch-case for
-  <b>
-   IMPULSE_41
-  </b>
-  at the end of the switch structure and place your code in there.
- </p>
- <pre>
+  <p>
+   Now open
+   <i>
+    Game/player.cpp
+   </i>
+   and look for
+   <b>
+    idPlayer::PerformImpulse
+   </b>
+   . Add a new switch-case for
+   <b>
+    IMPULSE_41
+   </b>
+   at the end of the switch structure and place your code in there.
+  </p>
+  <pre>
 case IMPULSE_40: {
 			UseVehicle();
 			break;
@@ -90,61 +92,63 @@ case IMPULSE_41: {
 		}
 
 </pre>
- <p>
-  That's it. Your new impulse should now work. Just start the game, open the console and type: (Change the key to whatever you want)
- </p>
- <pre>bind P _impulse41</pre>
- <p>
-  <b>
-   Note
-  </b>
-  : If you rename your function for some reason, don't forget to reassign the key. Otherwise your new function will not be bound because the the key still refers to the old function.
- </p>
- <a name="Menu_work">
- </a>
- <h2>
-  Menu work
- </h2>
- <p>
-  A new option needs to be added to
-  <i>
-   mainmenu.gui
-  </i>
-  so that it will show up in the options menu. Here we will add a USE impulse key which can be used to interact with items other than shooting at it using the attack button.
- </p>
- <p>
-  To achieve this, do the following:
- </p>
- <p>
-  Load
-  <i>
-   guis/mainmenu.gui
-  </i>
-  and find an empty slot. As an exmaple I will add my new keybinding to the Attack/Look menu entry. There are three empty slots in there so we can use them for our own purpose.
+  <p>
+   That's it. Your new impulse should now work. Just start the game, open the console and type: (Change the key to whatever you want)
+  </p>
+  <pre>bind P _impulse41</pre>
+  <p>
+   <b>
+    Note
+   </b>
+   : If you rename your function for some reason, don't forget to reassign the key. Otherwise your new function will not be bound because the the key still refers to the old function.
+  </p>
+  <a name="Menu_work">
+  </a>
+  <h2>
+   Menu work
+  </h2>
+  <p>
+   A new option needs to be added to
+   <i>
+    mainmenu.gui
+   </i>
+   so that it will show up in the options menu. Here we will add a USE impulse key which can be used to interact with items other than shooting at it using the attack button.
+  </p>
+  <p>
+   To achieve this, do the following:
+  </p>
+  <p>
+   Load
+   <i>
+    guis/mainmenu.gui
+   </i>
+   and find an empty slot. As an exmaple I will add my new keybinding to the Attack/Look menu entry. There are three empty slots in there so we can use them for our own purpose.
 The last entry there is sprint. Now go to the editor and search for //SPRINT. Scroll down a few lines and you will find a line //FILLER. This is the first slot that is empty.
- </p>
- <p>
-  To make it look as the others you must change the colorsettings from
- </p>
- <pre>matcolor 0, 0, 0, 0.2
+  </p>
+  <p>
+   To make it look as the others you must change the colorsettings from
+  </p>
+  <pre>matcolor 0, 0, 0, 0.2
 </pre>
- <p>
-  to
- </p>
- <pre>matcolor 0, 0, 0, 1
+  <p>
+   to
+  </p>
+  <pre>matcolor 0, 0, 0, 1
 </pre>
- <p>
-  Now scroll up again to the previous entry (SPRINT) and copy the lines beginning with windowDef CA10Title until the end of the second block that follows (bindDef CA10Primary) at the end of your filler definition. Dont forget to change the numbers CA10 to CA11 in our case. I don't know if it will create problems if you don't but I didn't test it and it makes it cleaner. Smile
- </p>
- <p>
-  Now when you look at your CA11Title section you can find an entry 'text "#str_04066"' there. This string references a stringtable in strings/english.lang. With def files you can easily copy the file in your own mod directory, rename it and it is still loaded. This doesn't seem to be the case for this strings, so you should copy the entire file in your mod directory, where you, of course, created also a strings directory. Load this file into your editor and go to the end of it. Now add a new string with a new number like that '"#str_10000" "Use"'.
- </p>
- <p>
-  The last thing you have to do is to define the function that should be called when pressing that key. Go to the CA11Primary section and replace the bind command with your own function 'bind "_impulse41"'. impulse41 is not used.
- </p>
- <p>
-  When you fire up Doom3 now, you can open the options dialog look at ATTACK/LOOK and you should already see the new keybinding there and you can define which key should be bound to that function. Of course it will not do anything because we didn't write the code yet, but it is arelady saved to the DoomConfig.cfg file and will be persistant when you reload your mod.
- </p>
- <p>
-  and you even have an entry in the options menu so that the player can select one of his own choice. Smile
- </p>
+  <p>
+   Now scroll up again to the previous entry (SPRINT) and copy the lines beginning with windowDef CA10Title until the end of the second block that follows (bindDef CA10Primary) at the end of your filler definition. Dont forget to change the numbers CA10 to CA11 in our case. I don't know if it will create problems if you don't but I didn't test it and it makes it cleaner. Smile
+  </p>
+  <p>
+   Now when you look at your CA11Title section you can find an entry 'text "#str_04066"' there. This string references a stringtable in strings/english.lang. With def files you can easily copy the file in your own mod directory, rename it and it is still loaded. This doesn't seem to be the case for this strings, so you should copy the entire file in your mod directory, where you, of course, created also a strings directory. Load this file into your editor and go to the end of it. Now add a new string with a new number like that '"#str_10000" "Use"'.
+  </p>
+  <p>
+   The last thing you have to do is to define the function that should be called when pressing that key. Go to the CA11Primary section and replace the bind command with your own function 'bind "_impulse41"'. impulse41 is not used.
+  </p>
+  <p>
+   When you fire up Doom3 now, you can open the options dialog look at ATTACK/LOOK and you should already see the new keybinding there and you can define which key should be bound to that function. Of course it will not do anything because we didn't write the code yet, but it is arelady saved to the DoomConfig.cfg file and will be persistant when you reload your mod.
+  </p>
+  <p>
+   and you even have an entry in the options menu so that the player can select one of his own choice. Smile
+  </p>
+ </body>
+</html>

@@ -1,90 +1,92 @@
- <a name="Overview">
- </a>
- <h2>
-  Overview
- </h2>
- <p>
-  The MAP file is an ASCII text type of files used by
-  <a href="DoomEdit" title="DoomEdit">
-   DoomEdit
+<html>
+ <body>
+  <a name="Overview">
   </a>
-  to store individual game levels. This file has all the static geometry and entities. Before a level can be played it has to be compiled. See the
-  <a href="Mapping" title="Mapping">
-   mapping
+  <h2>
+   Overview
+  </h2>
+  <p>
+   The MAP file is an ASCII text type of files used by
+   <a href="DoomEdit" title="DoomEdit">
+    DoomEdit
+   </a>
+   to store individual game levels. This file has all the static geometry and entities. Before a level can be played it has to be compiled. See the
+   <a href="Mapping" title="Mapping">
+    mapping
+   </a>
+   section for more information on handling map files.
+  </p>
+  <a name="Map_Format_Syntax">
   </a>
-  section for more information on handling map files.
- </p>
- <a name="Map_Format_Syntax">
- </a>
- <h2>
-  Map Format Syntax
- </h2>
- <p>
-  Generally, MAPs consist of entities. Some are called 'brushwork entities' for the obvious fact that they contain brush definitions.
- </p>
- <a name="Comments">
- </a>
- <h3>
-  Comments
- </h3>
- <p>
-  The MAP file format supports in-line comments. Comment blocks are not supported.
- </p>
- <p>
-  To start a comment, place two forward slashes. ( '//' ) Everything behind these markers is ignored.
- </p>
- <a name="Header">
- </a>
- <h3>
-  Header
- </h3>
- <p>
-  The first non-empty/non-comment line contains the header, which currently consists of nothing more than the version.
- </p>
- <p>
-  For Doom 3, the header is:
- </p>
- <pre>Version 2
+  <h2>
+   Map Format Syntax
+  </h2>
+  <p>
+   Generally, MAPs consist of entities. Some are called 'brushwork entities' for the obvious fact that they contain brush definitions.
+  </p>
+  <a name="Comments">
+  </a>
+  <h3>
+   Comments
+  </h3>
+  <p>
+   The MAP file format supports in-line comments. Comment blocks are not supported.
+  </p>
+  <p>
+   To start a comment, place two forward slashes. ( '//' ) Everything behind these markers is ignored.
+  </p>
+  <a name="Header">
+  </a>
+  <h3>
+   Header
+  </h3>
+  <p>
+   The first non-empty/non-comment line contains the header, which currently consists of nothing more than the version.
+  </p>
+  <p>
+   For Doom 3, the header is:
+  </p>
+  <pre>Version 2
 </pre>
- <a name="Entities">
- </a>
- <h3>
-  Entities
- </h3>
- <p>
-  An entity definition starts by a curly open brace, ( '{' ) and runs on till a matching curly closing brace is found. ( '}' )
- </p>
- <p>
-  The next lines contain the entity's key/value pairs. First comes the name, then the value. Both are enclosed in double quotes, with a space in between.
- </p>
- <p>
-  After those keys and values, one or more brush definitions may follow.
- </p>
- <p>
-  <b>
-   Note:
-  </b>
-  An entity should at least have a "spawnclass" key, otherwise unpredictable behaviour might occur.
- </p>
- <p>
-  <b>
-   Note:
-  </b>
-  The first entity should have a "spawnclass" key with value "worldspawn". Brush definitions which don't need to be in a seperate entity should be placed in this entity. There can only be
-  <b>
-   one
-  </b>
-  entity with this spawnclass in a whole MAP file.
- </p>
- <a name="Brush_definition">
- </a>
- <h4>
-  Brush definition
- </h4>
- <p>
-  A brush definition starts and ends with curly braces, just like entities do.
- </p>
- <pre>
+  <a name="Entities">
+  </a>
+  <h3>
+   Entities
+  </h3>
+  <p>
+   An entity definition starts by a curly open brace, ( '{' ) and runs on till a matching curly closing brace is found. ( '}' )
+  </p>
+  <p>
+   The next lines contain the entity's key/value pairs. First comes the name, then the value. Both are enclosed in double quotes, with a space in between.
+  </p>
+  <p>
+   After those keys and values, one or more brush definitions may follow.
+  </p>
+  <p>
+   <b>
+    Note:
+   </b>
+   An entity should at least have a "spawnclass" key, otherwise unpredictable behaviour might occur.
+  </p>
+  <p>
+   <b>
+    Note:
+   </b>
+   The first entity should have a "spawnclass" key with value "worldspawn". Brush definitions which don't need to be in a seperate entity should be placed in this entity. There can only be
+   <b>
+    one
+   </b>
+   entity with this spawnclass in a whole MAP file.
+  </p>
+  <a name="Brush_definition">
+  </a>
+  <h4>
+   Brush definition
+  </h4>
+  <p>
+   A brush definition starts and ends with curly braces, just like entities do.
+  </p>
+  <pre>
 // brush x
 {
 type
@@ -93,96 +95,96 @@ type
 
 }
 }</pre>
- <p>
-  <br/>
-  Before each brush definition is mostly a comment line with the brush number, although this is not required as it is used by the editor only.
- </p>
- <p>
-  The first line of the brush definition specifies the type of brush. In Doom 3, this is currently
-  <b>
-   brushDef3
-  </b>
-  for brush volumes or
-  <b>
-   patchDef2
-  </b>
-  for patches.
- </p>
- <p>
-  <br/>
-  After the type, the actual data follows - once more bounded by curly braces.
- </p>
- <a name="Brush_Volume_definition">
- </a>
- <h5>
-  Brush Volume definition
- </h5>
- <p>
-  A brush volume is a convex primitive defined by infinite planes. Because of this, it must have at least four sides although it usually has six.
- </p>
- <p>
-  The data consists of multiple lines, one for each plane defining the volume:
- </p>
- <pre>(plane equation) ( ( xxscale xyscale xoffset ) ( yxscale yyscale yoffset ) ) "<a href="Material_%28decl%29" title="Material (decl)">material</a>" ?
-</pre>
- <p>
-  The 4 numbers forming the plane equation are nothing more than the normal vector of the plane and it's Euclidean (shortest) distance to the origin.
- </p>
- <p>
-  The next 6 numbers are used to store the texture mapping. Each group of 3 numbers is actually a row in a 3x3 matrix where the bottom row is always '0 0 1'. In the code, it is referred to as a "texture matrix". Such a matrix is commonly used in geometry to transform a 2D coordinate vector (with the Z value set to 1) to another coordinate system.
- </p>
- <p>
-  At the place of the question mark, extra numbers may or may not show up. It is unknown what they do, though it could be a mistake of the editor or some obscure feature. (More proof is needed to verify their use.)
- </p>
- <a name="Patch_definition">
- </a>
- <h5>
-  Patch definition
- </h5>
- <p>
-  The patches used in the id Tech 4 engine are Bezier surfaces. These surfaces are defined by both
-  <i>
-   data points
-  </i>
-  and
-  <i>
-   control points
-  </i>
-  . Data points are points which are always part of the surface and thus influence the surface directly. Control points merely "attract" the surface towards them but offers a finer control in this way. The exact theory used for these surfaces is explained on sites dealing with Bezier mathematics, see
-  <a href="MAP_%28file_format%29#External_links" title="">
-   External links
+  <p>
+   <br/>
+   Before each brush definition is mostly a comment line with the brush number, although this is not required as it is used by the editor only.
+  </p>
+  <p>
+   The first line of the brush definition specifies the type of brush. In Doom 3, this is currently
+   <b>
+    brushDef3
+   </b>
+   for brush volumes or
+   <b>
+    patchDef2
+   </b>
+   for patches.
+  </p>
+  <p>
+   <br/>
+   After the type, the actual data follows - once more bounded by curly braces.
+  </p>
+  <a name="Brush_Volume_definition">
   </a>
-  for more info.
- </p>
- <p>
-  The data for a patch definition consists of several things. First are these two lines:
- </p>
- <pre> "<a href="Material_%28decl%29" title="Material (decl)">material</a>"
+  <h5>
+   Brush Volume definition
+  </h5>
+  <p>
+   A brush volume is a convex primitive defined by infinite planes. Because of this, it must have at least four sides although it usually has six.
+  </p>
+  <p>
+   The data consists of multiple lines, one for each plane defining the volume:
+  </p>
+  <pre>(plane equation) ( ( xxscale xyscale xoffset ) ( yxscale yyscale yoffset ) ) "<a href="Material_%28decl%29" title="Material (decl)">material</a>" ?
+</pre>
+  <p>
+   The 4 numbers forming the plane equation are nothing more than the normal vector of the plane and it's Euclidean (shortest) distance to the origin.
+  </p>
+  <p>
+   The next 6 numbers are used to store the texture mapping. Each group of 3 numbers is actually a row in a 3x3 matrix where the bottom row is always '0 0 1'. In the code, it is referred to as a "texture matrix". Such a matrix is commonly used in geometry to transform a 2D coordinate vector (with the Z value set to 1) to another coordinate system.
+  </p>
+  <p>
+   At the place of the question mark, extra numbers may or may not show up. It is unknown what they do, though it could be a mistake of the editor or some obscure feature. (More proof is needed to verify their use.)
+  </p>
+  <a name="Patch_definition">
+  </a>
+  <h5>
+   Patch definition
+  </h5>
+  <p>
+   The patches used in the id Tech 4 engine are Bezier surfaces. These surfaces are defined by both
+   <i>
+    data points
+   </i>
+   and
+   <i>
+    control points
+   </i>
+   . Data points are points which are always part of the surface and thus influence the surface directly. Control points merely "attract" the surface towards them but offers a finer control in this way. The exact theory used for these surfaces is explained on sites dealing with Bezier mathematics, see
+   <a href="MAP_%28file_format%29#External_links" title="">
+    External links
+   </a>
+   for more info.
+  </p>
+  <p>
+   The data for a patch definition consists of several things. First are these two lines:
+  </p>
+  <pre> "<a href="Material_%28decl%29" title="Material (decl)">material</a>"
  ( xoffset yoffset rotation xscale yscale )
 </pre>
- <p>
-  The first line specifies the material to apply to it, and the second specifies the texture settings with 5 those numbers.
- </p>
- <p>
-  After that follows a matrix of points to define the control grid. The first and last line consist of an opening respectively closing brace. The rows are bounded with braces as well.
- </p>
- <p>
-  For a 3 x 3 patch: (4 data points, 5 control points)
- </p>
- <pre>(
+  <p>
+   The first line specifies the material to apply to it, and the second specifies the texture settings with 5 those numbers.
+  </p>
+  <p>
+   After that follows a matrix of points to define the control grid. The first and last line consist of an opening respectively closing brace. The rows are bounded with braces as well.
+  </p>
+  <p>
+   For a 3 x 3 patch: (4 data points, 5 control points)
+  </p>
+  <pre>(
 ( ( x1 y1 z1 u1 v1 ) ( x2 y2 z2 u2 v2 ) ( x3 y3 z3 u3 v3 ) )
 ( ( x4 y4 z4 u4 v4 ) ( x5 y5 z5 u5 v5 ) ( x6 y6 z6 u6 v6 ) )
 ( ( x7 y7 z7 u7 v7 ) ( x8 y8 z8 u8 v8 ) ( x9 y9 z9 u9 v9 ) )
 )</pre>
- <p>
-  Each point has 5 coordinates where the first 3 are the 3D coordinates, the last 2 are the Bezier "blossom" coordinates. (Again, check the theory.)
- </p>
- <a name="Complete_Example">
- </a>
- <h2>
-  Complete Example
- </h2>
- <pre>
+  <p>
+   Each point has 5 coordinates where the first 3 are the 3D coordinates, the last 2 are the Bezier "blossom" coordinates. (Again, check the theory.)
+  </p>
+  <a name="Complete_Example">
+  </a>
+  <h2>
+   Complete Example
+  </h2>
+  <pre>
 Version 2
 // entity 0
 {
@@ -214,48 +216,50 @@ brushDef3
 }
 }
 }</pre>
- <a name="External_Links">
- </a>
- <h2>
-  External Links
- </h2>
- <ul>
-  <li>
-   <a class="external text" href="https://web.archive.org/web/20091212230433/http://quark.planetquake.gamespy.com/infobase/src.topics.face.html#bp" title="http://quark.planetquake.gamespy.com/infobase/src.topics.face.html#bp">
-    Quark Documentation on Brush Face Formats
-   </a>
-  </li>
-  <li>
-   <a class="external text" href="https://web.archive.org/web/20091212230433/http://quark.planetquake.gamespy.com/infobase/src.pas.bezier.html#quadmath" title="http://quark.planetquake.gamespy.com/infobase/src.pas.bezier.html#quadmath">
-    Quark Documentation on Bezier Patches
-   </a>
-  </li>
-  <li>
-   <a class="external text" href="https://web.archive.org/web/20091212230433/http://www.doom3world.org/phpbb2/viewtopic.php?t=11101" title="http://www.doom3world.org/phpbb2/viewtopic.php?t=11101">
-    Doom3World: Texture matrix
-   </a>
-  </li>
-  <li>
-   <a class="external text" href="https://web.archive.org/web/20091212230433/http://www.doom3world.org/phpbb2/viewtopic.php?t=13639" title="http://www.doom3world.org/phpbb2/viewtopic.php?t=13639">
-    Doom3World: brush format in the .map file
-   </a>
-   (Experimental research on the plane equations)
-  </li>
-  <li>
-   <a class="external text" href="https://web.archive.org/web/20091212230433/http://www.doom3world.org/phpbb2/viewtopic.php?t=16228" title="http://www.doom3world.org/phpbb2/viewtopic.php?t=16228">
-    .map Doom3World: Format texture specification.
-   </a>
-   (Research on the texture specification)
-  </li>
-  <li>
-   <b>
-    (Needs more links to some references/introduction on Bezier mathematics.)
-   </b>
-   Consult
-   <a class="external text" href="http://www.google.com/" title="http://www.google.com">
-    Google
-   </a>
-   for now.
-  </li>
- </ul>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:1111-0!1!0!0!!en!2 and timestamp 20091212153501 -->
+  <a name="External_Links">
+  </a>
+  <h2>
+   External Links
+  </h2>
+  <ul>
+   <li>
+    <a class="external text" href="https://web.archive.org/web/20091212230433/http://quark.planetquake.gamespy.com/infobase/src.topics.face.html#bp" title="http://quark.planetquake.gamespy.com/infobase/src.topics.face.html#bp">
+     Quark Documentation on Brush Face Formats
+    </a>
+   </li>
+   <li>
+    <a class="external text" href="https://web.archive.org/web/20091212230433/http://quark.planetquake.gamespy.com/infobase/src.pas.bezier.html#quadmath" title="http://quark.planetquake.gamespy.com/infobase/src.pas.bezier.html#quadmath">
+     Quark Documentation on Bezier Patches
+    </a>
+   </li>
+   <li>
+    <a class="external text" href="https://web.archive.org/web/20091212230433/http://www.doom3world.org/phpbb2/viewtopic.php?t=11101" title="http://www.doom3world.org/phpbb2/viewtopic.php?t=11101">
+     Doom3World: Texture matrix
+    </a>
+   </li>
+   <li>
+    <a class="external text" href="https://web.archive.org/web/20091212230433/http://www.doom3world.org/phpbb2/viewtopic.php?t=13639" title="http://www.doom3world.org/phpbb2/viewtopic.php?t=13639">
+     Doom3World: brush format in the .map file
+    </a>
+    (Experimental research on the plane equations)
+   </li>
+   <li>
+    <a class="external text" href="https://web.archive.org/web/20091212230433/http://www.doom3world.org/phpbb2/viewtopic.php?t=16228" title="http://www.doom3world.org/phpbb2/viewtopic.php?t=16228">
+     .map Doom3World: Format texture specification.
+    </a>
+    (Research on the texture specification)
+   </li>
+   <li>
+    <b>
+     (Needs more links to some references/introduction on Bezier mathematics.)
+    </b>
+    Consult
+    <a class="external text" href="http://www.google.com/" title="http://www.google.com">
+     Google
+    </a>
+    for now.
+   </li>
+  </ul>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:1111-0!1!0!0!!en!2 and timestamp 20091212153501 -->
+ </body>
+</html>

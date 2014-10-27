@@ -1,18 +1,20 @@
- <a name="idAI::PointReachableAreaNum">
- </a>
- <h2>
-  <a href="Src/game/ai/AI.cpp_%28source_file%29" title="Src/game/ai/AI.cpp (source file)">
-   idAI
+<html>
+ <body>
+  <a name="idAI::PointReachableAreaNum">
   </a>
-  ::PointReachableAreaNum
- </h2>
- <p>
-  This method is a wrapper around what eventually leads to an engine call of the same name. it will do some prep work setting up and idBounds and travel flags and call into
-  <a class="new" href="IdAASLocal::PointReachableAreaNum" title="IdAASLocal::PointReachableAreaNum">
-   idAASLocal::PointReachableAreaNum
-  </a>
- </p>
- <pre> 
+  <h2>
+   <a href="Src/game/ai/AI.cpp_%28source_file%29" title="Src/game/ai/AI.cpp (source file)">
+    idAI
+   </a>
+   ::PointReachableAreaNum
+  </h2>
+  <p>
+   This method is a wrapper around what eventually leads to an engine call of the same name. it will do some prep work setting up and idBounds and travel flags and call into
+   <a class="new" href="IdAASLocal::PointReachableAreaNum" title="IdAASLocal::PointReachableAreaNum">
+    idAASLocal::PointReachableAreaNum
+   </a>
+  </p>
+  <pre> 
 <span style="color: #339900; font-style: italic;">/*
 =====================
 idAI::PointReachableAreaNum
@@ -41,14 +43,16 @@ idAI::PointReachableAreaNum
  
 	<span style="color: #0000ff;">return</span> areaNum;
 <span style="color: #000000;">}</span></pre>
- <p>
-  Here is what brian at iddevnet had to say about PointReachableAreaNum
- </p>
- <p>
-  <cite>
-   It returns the closest reachable area to the specified point. 
+  <p>
+   Here is what brian at iddevnet had to say about PointReachableAreaNum
+  </p>
+  <p>
+   <cite>
+    It returns the closest reachable area to the specified point. 
 If the point is in a reachable area already, it just returns that point, 
 otherwise (for example if the given point is outside the world or inside some geometry) 
 it will scan the bounding box given searching for reachable areas.
-  </cite>
- </p>
+   </cite>
+  </p>
+ </body>
+</html>

@@ -1,262 +1,266 @@
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  forces undying state
- </p>
- <a name="Usage">
- </a>
- <h2>
-  Usage
- </h2>
- <p>
-  At the console type...
- </p>
- <pre>g_forceUndying [BOOLEAN]
+<html>
+ <body>
+  <a name="Description">
+  </a>
+  <h2>
+   Description
+  </h2>
+  <p>
+   forces undying state
+  </p>
+  <a name="Usage">
+  </a>
+  <h2>
+   Usage
+  </h2>
+  <p>
+   At the console type...
+  </p>
+  <pre>g_forceUndying [BOOLEAN]
 </pre>
- <a name="Parameters">
- </a>
- <h2>
-  Parameters
- </h2>
- <ul>
-  <li>
-   [BOOLEAN] - Unknown value in boolean format.
-  </li>
- </ul>
- <a name="Flags">
- </a>
- <h2>
-  Flags
- </h2>
- <table class="mwstyle">
-  <tr>
-   <th>
-    Flag
-   </th>
-   <th>
-    Enabled
-   </th>
-   <th>
-    Description
-   </th>
-  </tr>
-  <tr>
-   <td>
-    CVAR_ALL
-   </td>
-   <td>
-   </td>
-   <td>
-    all flags
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_BOOL
-   </td>
-   <td>
-    X
-   </td>
-   <td>
-    variable is a boolean
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_INTEGER
-   </td>
-   <td>
-   </td>
-   <td>
-    variable is an integer
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_FLOAT
-   </td>
-   <td>
-   </td>
-   <td>
-    variable is a float
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_SYSTEM
-   </td>
-   <td>
-   </td>
-   <td>
-    system variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_RENDERER
-   </td>
-   <td>
-   </td>
-   <td>
-    renderer variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_SOUND
-   </td>
-   <td>
-   </td>
-   <td>
-    sound variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_GUI
-   </td>
-   <td>
-   </td>
-   <td>
-    gui variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_GAME
-   </td>
-   <td>
-    X
-   </td>
-   <td>
-    game variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_TOOL
-   </td>
-   <td>
-   </td>
-   <td>
-    tool variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_USERINFO
-   </td>
-   <td>
-   </td>
-   <td>
-    sent to servers, available to menu
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_SERVERINFO
-   </td>
-   <td>
-   </td>
-   <td>
-    sent from servers, available to menu
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_NETWORKSYNC
-   </td>
-   <td>
-   </td>
-   <td>
-    cvar is synced from the server to clients
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_STATIC
-   </td>
-   <td>
-    X
-   </td>
-   <td>
-    statically declared, not user created
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_CHEAT
-   </td>
-   <td>
-    X
-   </td>
-   <td>
-    variable is considered a cheat
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_NOCHEAT
-   </td>
-   <td>
-   </td>
-   <td>
-    variable is not considered a cheat
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_INIT
-   </td>
-   <td>
-   </td>
-   <td>
-    can only be set from the command-line
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_ROM
-   </td>
-   <td>
-   </td>
-   <td>
-    display only, cannot be set by user at all
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_ARCHIVE
-   </td>
-   <td>
-   </td>
-   <td>
-    set to cause it to be saved to a config file
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_MODIFIED
-   </td>
-   <td>
-    X
-   </td>
-   <td>
-    set when the variable is modified
-   </td>
-  </tr>
- </table>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
- <p>
-  Not available.
- </p>
- <p>
-  <br/>
- </p>
+  <a name="Parameters">
+  </a>
+  <h2>
+   Parameters
+  </h2>
+  <ul>
+   <li>
+    [BOOLEAN] - Unknown value in boolean format.
+   </li>
+  </ul>
+  <a name="Flags">
+  </a>
+  <h2>
+   Flags
+  </h2>
+  <table class="mwstyle">
+   <tr>
+    <th>
+     Flag
+    </th>
+    <th>
+     Enabled
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     CVAR_ALL
+    </td>
+    <td>
+    </td>
+    <td>
+     all flags
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_BOOL
+    </td>
+    <td>
+     X
+    </td>
+    <td>
+     variable is a boolean
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_INTEGER
+    </td>
+    <td>
+    </td>
+    <td>
+     variable is an integer
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_FLOAT
+    </td>
+    <td>
+    </td>
+    <td>
+     variable is a float
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_SYSTEM
+    </td>
+    <td>
+    </td>
+    <td>
+     system variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_RENDERER
+    </td>
+    <td>
+    </td>
+    <td>
+     renderer variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_SOUND
+    </td>
+    <td>
+    </td>
+    <td>
+     sound variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_GUI
+    </td>
+    <td>
+    </td>
+    <td>
+     gui variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_GAME
+    </td>
+    <td>
+     X
+    </td>
+    <td>
+     game variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_TOOL
+    </td>
+    <td>
+    </td>
+    <td>
+     tool variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_USERINFO
+    </td>
+    <td>
+    </td>
+    <td>
+     sent to servers, available to menu
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_SERVERINFO
+    </td>
+    <td>
+    </td>
+    <td>
+     sent from servers, available to menu
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_NETWORKSYNC
+    </td>
+    <td>
+    </td>
+    <td>
+     cvar is synced from the server to clients
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_STATIC
+    </td>
+    <td>
+     X
+    </td>
+    <td>
+     statically declared, not user created
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_CHEAT
+    </td>
+    <td>
+     X
+    </td>
+    <td>
+     variable is considered a cheat
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_NOCHEAT
+    </td>
+    <td>
+    </td>
+    <td>
+     variable is not considered a cheat
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_INIT
+    </td>
+    <td>
+    </td>
+    <td>
+     can only be set from the command-line
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_ROM
+    </td>
+    <td>
+    </td>
+    <td>
+     display only, cannot be set by user at all
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_ARCHIVE
+    </td>
+    <td>
+    </td>
+    <td>
+     set to cause it to be saved to a config file
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_MODIFIED
+    </td>
+    <td>
+     X
+    </td>
+    <td>
+     set when the variable is modified
+    </td>
+   </tr>
+  </table>
+  <a name="Notes">
+  </a>
+  <h2>
+   Notes
+  </h2>
+  <p>
+   Not available.
+  </p>
+  <p>
+   <br/>
+  </p>
+ </body>
+</html>

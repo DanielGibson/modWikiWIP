@@ -1,765 +1,769 @@
- <a name="Material_shaders">
- </a>
- <h2>
-  Material shaders
- </h2>
- <p>
-  In older games, a single image qualified as a texture and all that was required was that you simply drop the corresponding image into a specific folder. The general concept in the
-  <a href="Id_Tech_4" title="Id Tech 4">
-   id Tech 4
+<html>
+ <body>
+  <a name="Material_shaders">
   </a>
-  family is to use
-  <a href="Material_%28decl%29" title="Material (decl)">
-   material shaders
-  </a>
-  which in turn use multiple
-  <a href="Images" title="Images">
-   images
-  </a>
-  , each representing a different property of a surface. This makes texturing more work than it was in the past, but it also gives much more power and flexibility to the developers.
- </p>
- <p>
-  Check the following links to learn more about the syntax of material files for
-  <a href="Doom_3" title="Doom 3">
-   Doom 3
-  </a>
-  . This will help you understand and write them:
- </p>
- <dl>
-  <dt>
+  <h2>
+   Material shaders
+  </h2>
+  <p>
+   In older games, a single image qualified as a texture and all that was required was that you simply drop the corresponding image into a specific folder. The general concept in the
+   <a href="Id_Tech_4" title="Id Tech 4">
+    id Tech 4
+   </a>
+   family is to use
    <a href="Material_%28decl%29" title="Material (decl)">
-    Material declarations
+    material shaders
    </a>
-  </dt>
-  <dd>
-   The basic syntax of material shaders is explained here.
-  </dd>
-  <dt>
-   <a href="Global_material_keywords_%28Doom_3%29" title="Global material keywords (Doom 3)">
-    Global keywords
+   which in turn use multiple
+   <a href="Images" title="Images">
+    images
    </a>
-  </dt>
-  <dd>
-   Global keywords used in material shaders are indexed in this article.
-  </dd>
-  <dt>
-   <a href="Stage_material_keywords_%28Doom_3%29" title="Stage material keywords (Doom 3)">
-    Stage keywords
+   , each representing a different property of a surface. This makes texturing more work than it was in the past, but it also gives much more power and flexibility to the developers.
+  </p>
+  <p>
+   Check the following links to learn more about the syntax of material files for
+   <a href="Doom_3" title="Doom 3">
+    Doom 3
    </a>
-  </dt>
-  <dd>
-   Stage specific material shader keywords are listed in this article.
-  </dd>
- </dl>
- <div>
-  <a class="image" href="Image:Q4square_25.png" title="Image:Q4square_25.png">
-   <img alt="Image:Q4square_25.png" height="25" longdesc="/wiki/Image:Q4square_25.png" src="/w/images/e/e8/Q4square_25.png" width="25"/>
+   . This will help you understand and write them:
+  </p>
+  <dl>
+   <dt>
+    <a href="Material_%28decl%29" title="Material (decl)">
+     Material declarations
+    </a>
+   </dt>
+   <dd>
+    The basic syntax of material shaders is explained here.
+   </dd>
+   <dt>
+    <a href="Global_material_keywords_%28Doom_3%29" title="Global material keywords (Doom 3)">
+     Global keywords
+    </a>
+   </dt>
+   <dd>
+    Global keywords used in material shaders are indexed in this article.
+   </dd>
+   <dt>
+    <a href="Stage_material_keywords_%28Doom_3%29" title="Stage material keywords (Doom 3)">
+     Stage keywords
+    </a>
+   </dt>
+   <dd>
+    Stage specific material shader keywords are listed in this article.
+   </dd>
+  </dl>
+  <div>
+   <a class="image" href="Image:Q4square_25.png" title="Image:Q4square_25.png">
+    <img alt="Image:Q4square_25.png" height="25" longdesc="/wiki/Image:Q4square_25.png" src="/w/images/e/e8/Q4square_25.png" width="25"/>
+   </a>
+   <b>
+    Note:
+   </b>
+   Quake 4 only:
+   <dl>
+    <dd>
+     <i>
+      You can also use
+      <a href="Guide_%28decl%29" title="Guide (decl)">
+       guides
+      </a>
+      to simplify writing many materials that behave the same way.
+     </i>
+    </dd>
+   </dl>
+  </div>
+  <a name="Diffuse_maps">
   </a>
-  <b>
-   Note:
-  </b>
-  Quake 4 only:
+  <h2>
+   Diffuse maps
+  </h2>
+  <div class="thumb tright">
+   <div style="width:182px;">
+    <a class="internal" href="Image:Diffuse_example.jpg" title="An example diffuse map">
+     <img alt="An example diffuse map" height="180" longdesc="/wiki/Image:Diffuse_example.jpg" src="/w/images/thumb/6/64/Diffuse_example.jpg/180px-Diffuse_example.jpg" width="180"/>
+    </a>
+    <div class="thumbcaption">
+     <div class="magnify" style="float:right">
+      <a class="internal" href="Image:Diffuse_example.jpg" title="Enlarge">
+       <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+      </a>
+     </div>
+     An example diffuse map
+    </div>
+   </div>
+  </div>
+  <p>
+   Diffuse maps in Doom 3 represent the diffuse reflection and color of a surface. In other words they define the color and intensity of light reflected back when it strikes a surface.
+  </p>
+  <p>
+   The goal when creating a diffuse map is to draw a color map and darken areas where light would be absorbed. For instance, the cracks in a brick wall absorb more light than they reflect back.
+  </p>
+  <p>
+   The example to the right demonstrates this as the bricks themselves are a greyish value and the cracks between them almost black.
+  </p>
+  <p>
+   No surface reflects light back at the same intensity it's recieved. In that respect, it's a good idea to darken your diffuse maps appropriately. Generally, the smoother a surface is the less light is diffused and the brighter your diffuse map can be.
+  </p>
+  <p>
+   Diffuse maps are added to material shaders by use of the
+   <a href="Diffusemap_%28Material_global_keyword%29" title="Diffusemap (Material global keyword)">
+    Diffusemap
+   </a>
+   keyword or the
+   <a href="Blend_%28Material_stage_keyword%29" title="Blend (Material stage keyword)">
+    Blend
+   </a>
+   keyword with the "diffusemap" parameter. As convention it's recommended that you add "_d" to the end of the texture's filename.
+  </p>
+  <a name="Bump_maps">
+  </a>
+  <h2>
+   Bump maps
+  </h2>
+  <p>
+   Bump mapping adds an illusion of depth and texture to images. It doesn't actually alter geometry but rather affects the shading over a surface. There are two different kinds of bump maps useable in the id Tech 4 engine: Normal and height maps.
+  </p>
+  <a name="Normal_maps">
+  </a>
+  <h3>
+   Normal maps
+  </h3>
+  <div class="thumb tright">
+   <div style="width:182px;">
+    <a class="internal" href="Image:Normal_example.jpg" title="An example normal map">
+     <img alt="An example normal map" height="180" longdesc="/wiki/Image:Normal_example.jpg" src="/w/images/thumb/a/a2/Normal_example.jpg/180px-Normal_example.jpg" width="180"/>
+    </a>
+    <div class="thumbcaption">
+     <div class="magnify" style="float:right">
+      <a class="internal" href="Image:Normal_example.jpg" title="Enlarge">
+       <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+      </a>
+     </div>
+     An example normal map
+    </div>
+   </div>
+  </div>
+  <p>
+   Normal maps define the slope or normals of a surface. In other words, they alter the direction a surface appears to be facing.
+  </p>
+  <p>
+   The normal for each pixel is defined by storing spacial X,Y,Z transformation data in the R,G,B channels. The example to the right demonstrates this.
+  </p>
+  <p>
+   There are two methods to create normal maps.
+  </p>
+  <ul>
+   <li>
+    Render a normal map from 3D geometry
+   </li>
+   <li>
+    Convert a height map into a normal map
+   </li>
+  </ul>
+  <p>
+   There are links to tools for use with both methods at the bottom of this page.
+  </p>
+  <div class="thumb tright">
+   <div style="width:182px;">
+    <a class="internal" href="Image:Invnorm.png" title="Inverting the green channel of a normal map.">
+     <img alt="Inverting the green channel of a normal map." height="113" longdesc="/wiki/Image:Invnorm.png" src="/w/images/thumb/b/b0/Invnorm.png/180px-Invnorm.png" width="180"/>
+    </a>
+    <div class="thumbcaption">
+     <div class="magnify" style="float:right">
+      <a class="internal" href="Image:Invnorm.png" title="Enlarge">
+       <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+      </a>
+     </div>
+     Inverting the green channel of a normal map.
+    </div>
+   </div>
+  </div>
+  <p>
+   Depending on the tool used to render normal maps, you may need to invert the green channel of the resulting image in order for your normal map to render properly in game. When viewing the green channel of the image, it should appear as if it's being illuminated from the bottom.
+  </p>
+  <p>
+   Normal bump maps are added to material shaders by use of the
+   <a href="Bumpmap_%28Material_global_keyword%29" title="Bumpmap (Material global keyword)">
+    Bumpmap
+   </a>
+   keyword or the
+   <a href="Blend_%28Material_stage_keyword%29" title="Blend (Material stage keyword)">
+    Blend
+   </a>
+   keyword with the "bumpmap" parameter. As convention it's recommended that you add "_local" to the end of the texture's filename.
+  </p>
+  <div style="clear:both">
+  </div>
+  <a name="Height_maps">
+  </a>
+  <h3>
+   Height maps
+  </h3>
+  <div class="thumb tright">
+   <div style="width:182px;">
+    <a class="internal" href="Image:Height_example.jpg" title="An example height map">
+     <img alt="An example height map" height="180" longdesc="/wiki/Image:Height_example.jpg" src="/w/images/thumb/4/41/Height_example.jpg/180px-Height_example.jpg" width="180"/>
+    </a>
+    <div class="thumbcaption">
+     <div class="magnify" style="float:right">
+      <a class="internal" href="Image:Height_example.jpg" title="Enlarge">
+       <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+      </a>
+     </div>
+     An example height map
+    </div>
+   </div>
+  </div>
+  <p>
+   Height maps are greyscale images that define the height of the indivdual pixels of a surface. They adjust the visual depth of a texture.
+  </p>
+  <p>
+   The height of each pixel is defined by the brightness of the image. A white pixel is as high, a black pixel is as low as it gets. grey levels in between represent different heights.
+  </p>
+  <p>
+   Heightmaps are usually painted in an image manipulation program. There is usually no need to render those. Note that height maps are converted to normalmaps by the id Tech 4 engine when loaded. The use of height maps is only to allow for an easier workflow.
+  </p>
+  <p>
+   Height bump maps are added to a material by use of the
+   <a href="Heightmap_%28Image_program_function%29" title="Heightmap (Image program function)">
+    Heightmap
+   </a>
+   function. As convention it's recommended that you add "_h" to the end of the texture's filename.
+   <a class="external text" href="http://www.styling24.net/" title="http://www.styling24.net/">
+    find your style
+   </a>
+  </p>
+  <div style="clear:both">
+  </div>
+  <a name="Normal_maps_vs._height_maps">
+  </a>
+  <h3>
+   Normal maps vs. height maps
+  </h3>
+  <p>
+   The id Tech 4 engine is able to combine both a normal map and a height map into one combined bump map.
+  </p>
+  <p>
+   Usually this is done when it's more practical to paint fine details into a height map than it is to model the same details and render them into the corresponding normal map.
+  </p>
+  <p>
+   Normal and height bump maps can be combined in a material by using
+   <a href="Addnormals_%28Image_program_function%29" title="Addnormals (Image program function)">
+    Addnormals
+   </a>
+   function.
+  </p>
+  <p>
+   It should be noted however, that height maps by default do not visually displace a surface in id Tech 4 engine based games. They only serve as a means to compute surface normals for use with dynamic lighting.
+  </p>
+  <p>
+   What this means is that essentially, a height map is converted into a normal map. And because the only way to compute slope when dealing with height is to compare each pixel value to that of it's neighbors, a height map can never be as detailed as a normal map of the same resolution.
+  </p>
+  <p>
+   More evidence to back up this claim is that height maps do not make efficient use of multiple color channels as a height map saved in RGB color space is still black and white. Because the data in each color channel is redundant, you are limited to only 256 levels of intensity.
+  </p>
+  <p>
+   Compare this to normal maps where each channel can be unique and it's clear that normal maps are more efficient at defining slope.
+  </p>
+  <a name="Specular_maps">
+  </a>
+  <h2>
+   Specular maps
+  </h2>
+  <div class="thumb tright">
+   <div style="width:182px;">
+    <a class="internal" href="Image:Specular_example.jpg" title="An example specular map">
+     <img alt="An example specular map" height="180" longdesc="/wiki/Image:Specular_example.jpg" src="/w/images/thumb/d/dc/Specular_example.jpg/180px-Specular_example.jpg" width="180"/>
+    </a>
+    <div class="thumbcaption">
+     <div class="magnify" style="float:right">
+      <a class="internal" href="Image:Specular_example.jpg" title="Enlarge">
+       <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+      </a>
+     </div>
+     An example specular map
+    </div>
+   </div>
+  </div>
+  <p>
+   Specular maps in Doom 3 represent the specular intensity and color of highlights on a surface. In other words they define the "shinyness" and color of specular reflections.
+  </p>
+  <p>
+   The brighter a specular map is, the more shine is applied to the final material.
+  </p>
+  <p>
+   The goal when creating a specular map is to fill the image with a solid value to represent the general specularity of the surface and then darken areas where weathering would occur.
+  </p>
+  <p>
+   The example at right has a mistake; the face of a brick would recieve less wear and tear than the edges and should therefore be more specular. Note that the cracks themselves have little to no specularity at all.
+  </p>
+  <p>
+   Color applied to a specular map tints the color of highlights. Bricks are made out of a sand like material and as such would reflect slightly variable tints. This too is present in the example to the right.
+  </p>
+  <p>
+   Specular maps are added to material shaders by use of the
+   <a href="Specularmap_%28Material_global_keyword%29" title="Specularmap (Material global keyword)">
+    Specularmap keyword
+   </a>
+   or the
+   <a href="Blend_%28Material_stage_keyword%29" title="Blend (Material stage keyword)">
+    Blend
+   </a>
+   keyword with the "specularmap" parameter. As convention it's recommended that you add "_s" to the end of the texture's filename.
+  </p>
+  <p>
+   Bump maps can be modified into a good starting point for a specular map.  See
+   <a href="Start_a_Specular_map_with_a_Normal_map" title="Start a Specular map with a Normal map">
+    Start a Specular map with a Normal map
+   </a>
+   .
+  </p>
+  <a name="Hit_maps">
+  </a>
+  <h2>
+   <span align="absbottom">
+    <a class="image" href="Image:Q4square_25.png" title="Q4">
+     <img alt="Q4" height="25" longdesc="/wiki/Image:Q4square_25.png" src="/w/images/e/e8/Q4square_25.png" width="25"/>
+    </a>
+    Hit maps
+   </span>
+  </h2>
   <dl>
    <dd>
     <i>
-     You can also use
-     <a href="Guide_%28decl%29" title="Guide (decl)">
-      guides
+     The information in this section is specific to
+     <a href="Quake_4" title="Quake 4">
+      Quake 4
      </a>
-     to simplify writing many materials that behave the same way.
+     .
     </i>
    </dd>
   </dl>
- </div>
- <a name="Diffuse_maps">
- </a>
- <h2>
-  Diffuse maps
- </h2>
- <div class="thumb tright">
-  <div style="width:182px;">
-   <a class="internal" href="Image:Diffuse_example.jpg" title="An example diffuse map">
-    <img alt="An example diffuse map" height="180" longdesc="/wiki/Image:Diffuse_example.jpg" src="/w/images/thumb/6/64/Diffuse_example.jpg/180px-Diffuse_example.jpg" width="180"/>
+  <p>
+   Hit maps are special images mainly used for animated models. These are made up of simple patches of color that follow the RGB values given in a
+   <a href="Materialtype_%28decl%29" title="Materialtype (decl)">
+    materialtype
    </a>
-   <div class="thumbcaption">
-    <div class="magnify" style="float:right">
-     <a class="internal" href="Image:Diffuse_example.jpg" title="Enlarge">
-      <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
-     </a>
-    </div>
-    An example diffuse map
-   </div>
-  </div>
- </div>
- <p>
-  Diffuse maps in Doom 3 represent the diffuse reflection and color of a surface. In other words they define the color and intensity of light reflected back when it strikes a surface.
- </p>
- <p>
-  The goal when creating a diffuse map is to draw a color map and darken areas where light would be absorbed. For instance, the cracks in a brick wall absorb more light than they reflect back.
- </p>
- <p>
-  The example to the right demonstrates this as the bricks themselves are a greyish value and the cracks between them almost black.
- </p>
- <p>
-  No surface reflects light back at the same intensity it's recieved. In that respect, it's a good idea to darken your diffuse maps appropriately. Generally, the smoother a surface is the less light is diffused and the brighter your diffuse map can be.
- </p>
- <p>
-  Diffuse maps are added to material shaders by use of the
-  <a href="Diffusemap_%28Material_global_keyword%29" title="Diffusemap (Material global keyword)">
-   Diffusemap
-  </a>
-  keyword or the
-  <a href="Blend_%28Material_stage_keyword%29" title="Blend (Material stage keyword)">
-   Blend
-  </a>
-  keyword with the "diffusemap" parameter. As convention it's recommended that you add "_d" to the end of the texture's filename.
- </p>
- <a name="Bump_maps">
- </a>
- <h2>
-  Bump maps
- </h2>
- <p>
-  Bump mapping adds an illusion of depth and texture to images. It doesn't actually alter geometry but rather affects the shading over a surface. There are two different kinds of bump maps useable in the id Tech 4 engine: Normal and height maps.
- </p>
- <a name="Normal_maps">
- </a>
- <h3>
-  Normal maps
- </h3>
- <div class="thumb tright">
-  <div style="width:182px;">
-   <a class="internal" href="Image:Normal_example.jpg" title="An example normal map">
-    <img alt="An example normal map" height="180" longdesc="/wiki/Image:Normal_example.jpg" src="/w/images/thumb/a/a2/Normal_example.jpg/180px-Normal_example.jpg" width="180"/>
+   . When an area of the model is hit a different impact effect is played depending on the hit map color of the area hit. Usually smaller resolution hitmaps are used compared to regular skins as detail does not need to be as high as the diffuse or normal map.
+  </p>
+  <p>
+   Hit maps are added to material shaders by use of the
+   <a class="new" href="MaterialImage_%28Material_global_keyword%29" title="MaterialImage (Material global keyword)">
+    materialImage
    </a>
-   <div class="thumbcaption">
-    <div class="magnify" style="float:right">
-     <a class="internal" href="Image:Normal_example.jpg" title="Enlarge">
-      <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
-     </a>
-    </div>
-    An example normal map
-   </div>
-  </div>
- </div>
- <p>
-  Normal maps define the slope or normals of a surface. In other words, they alter the direction a surface appears to be facing.
- </p>
- <p>
-  The normal for each pixel is defined by storing spacial X,Y,Z transformation data in the R,G,B channels. The example to the right demonstrates this.
- </p>
- <p>
-  There are two methods to create normal maps.
- </p>
- <ul>
-  <li>
-   Render a normal map from 3D geometry
-  </li>
-  <li>
-   Convert a height map into a normal map
-  </li>
- </ul>
- <p>
-  There are links to tools for use with both methods at the bottom of this page.
- </p>
- <div class="thumb tright">
-  <div style="width:182px;">
-   <a class="internal" href="Image:Invnorm.png" title="Inverting the green channel of a normal map.">
-    <img alt="Inverting the green channel of a normal map." height="113" longdesc="/wiki/Image:Invnorm.png" src="/w/images/thumb/b/b0/Invnorm.png/180px-Invnorm.png" width="180"/>
+   keyword. As convention it's recommended that you add "_hit" to the end of the texture's filename.
+  </p>
+  <a name="Sky_and_reflective_maps">
+  </a>
+  <h2>
+   Sky and reflective maps
+  </h2>
+  <p>
+   Both sky and reflective materials make use of
+   <a href="Cube_maps" title="Cube maps">
+    cube maps
    </a>
-   <div class="thumbcaption">
-    <div class="magnify" style="float:right">
-     <a class="internal" href="Image:Invnorm.png" title="Enlarge">
-      <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
-     </a>
-    </div>
-    Inverting the green channel of a normal map.
-   </div>
-  </div>
- </div>
- <p>
-  Depending on the tool used to render normal maps, you may need to invert the green channel of the resulting image in order for your normal map to render properly in game. When viewing the green channel of the image, it should appear as if it's being illuminated from the bottom.
- </p>
- <p>
-  Normal bump maps are added to material shaders by use of the
-  <a href="Bumpmap_%28Material_global_keyword%29" title="Bumpmap (Material global keyword)">
-   Bumpmap
+   (also known as environment maps).
+  </p>
+  <p>
+   The Doom 3:ROE expansion pack and Quake 4 add sky portal functionality to the engine which does away with the need to use cube maps for sky materials.
+  </p>
+  <a name="Seamless_Textures">
   </a>
-  keyword or the
-  <a href="Blend_%28Material_stage_keyword%29" title="Blend (Material stage keyword)">
-   Blend
-  </a>
-  keyword with the "bumpmap" parameter. As convention it's recommended that you add "_local" to the end of the texture's filename.
- </p>
- <div style="clear:both">
- </div>
- <a name="Height_maps">
- </a>
- <h3>
-  Height maps
- </h3>
- <div class="thumb tright">
-  <div style="width:182px;">
-   <a class="internal" href="Image:Height_example.jpg" title="An example height map">
-    <img alt="An example height map" height="180" longdesc="/wiki/Image:Height_example.jpg" src="/w/images/thumb/4/41/Height_example.jpg/180px-Height_example.jpg" width="180"/>
-   </a>
-   <div class="thumbcaption">
-    <div class="magnify" style="float:right">
-     <a class="internal" href="Image:Height_example.jpg" title="Enlarge">
-      <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
-     </a>
-    </div>
-    An example height map
-   </div>
-  </div>
- </div>
- <p>
-  Height maps are greyscale images that define the height of the indivdual pixels of a surface. They adjust the visual depth of a texture.
- </p>
- <p>
-  The height of each pixel is defined by the brightness of the image. A white pixel is as high, a black pixel is as low as it gets. grey levels in between represent different heights.
- </p>
- <p>
-  Heightmaps are usually painted in an image manipulation program. There is usually no need to render those. Note that height maps are converted to normalmaps by the id Tech 4 engine when loaded. The use of height maps is only to allow for an easier workflow.
- </p>
- <p>
-  Height bump maps are added to a material by use of the
-  <a href="Heightmap_%28Image_program_function%29" title="Heightmap (Image program function)">
-   Heightmap
-  </a>
-  function. As convention it's recommended that you add "_h" to the end of the texture's filename.
-  <a class="external text" href="http://www.styling24.net/" title="http://www.styling24.net/">
-   find your style
-  </a>
- </p>
- <div style="clear:both">
- </div>
- <a name="Normal_maps_vs._height_maps">
- </a>
- <h3>
-  Normal maps vs. height maps
- </h3>
- <p>
-  The id Tech 4 engine is able to combine both a normal map and a height map into one combined bump map.
- </p>
- <p>
-  Usually this is done when it's more practical to paint fine details into a height map than it is to model the same details and render them into the corresponding normal map.
- </p>
- <p>
-  Normal and height bump maps can be combined in a material by using
-  <a href="Addnormals_%28Image_program_function%29" title="Addnormals (Image program function)">
-   Addnormals
-  </a>
-  function.
- </p>
- <p>
-  It should be noted however, that height maps by default do not visually displace a surface in id Tech 4 engine based games. They only serve as a means to compute surface normals for use with dynamic lighting.
- </p>
- <p>
-  What this means is that essentially, a height map is converted into a normal map. And because the only way to compute slope when dealing with height is to compare each pixel value to that of it's neighbors, a height map can never be as detailed as a normal map of the same resolution.
- </p>
- <p>
-  More evidence to back up this claim is that height maps do not make efficient use of multiple color channels as a height map saved in RGB color space is still black and white. Because the data in each color channel is redundant, you are limited to only 256 levels of intensity.
- </p>
- <p>
-  Compare this to normal maps where each channel can be unique and it's clear that normal maps are more efficient at defining slope.
- </p>
- <a name="Specular_maps">
- </a>
- <h2>
-  Specular maps
- </h2>
- <div class="thumb tright">
-  <div style="width:182px;">
-   <a class="internal" href="Image:Specular_example.jpg" title="An example specular map">
-    <img alt="An example specular map" height="180" longdesc="/wiki/Image:Specular_example.jpg" src="/w/images/thumb/d/dc/Specular_example.jpg/180px-Specular_example.jpg" width="180"/>
-   </a>
-   <div class="thumbcaption">
-    <div class="magnify" style="float:right">
-     <a class="internal" href="Image:Specular_example.jpg" title="Enlarge">
-      <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
-     </a>
-    </div>
-    An example specular map
-   </div>
-  </div>
- </div>
- <p>
-  Specular maps in Doom 3 represent the specular intensity and color of highlights on a surface. In other words they define the "shinyness" and color of specular reflections.
- </p>
- <p>
-  The brighter a specular map is, the more shine is applied to the final material.
- </p>
- <p>
-  The goal when creating a specular map is to fill the image with a solid value to represent the general specularity of the surface and then darken areas where weathering would occur.
- </p>
- <p>
-  The example at right has a mistake; the face of a brick would recieve less wear and tear than the edges and should therefore be more specular. Note that the cracks themselves have little to no specularity at all.
- </p>
- <p>
-  Color applied to a specular map tints the color of highlights. Bricks are made out of a sand like material and as such would reflect slightly variable tints. This too is present in the example to the right.
- </p>
- <p>
-  Specular maps are added to material shaders by use of the
-  <a href="Specularmap_%28Material_global_keyword%29" title="Specularmap (Material global keyword)">
-   Specularmap keyword
-  </a>
-  or the
-  <a href="Blend_%28Material_stage_keyword%29" title="Blend (Material stage keyword)">
-   Blend
-  </a>
-  keyword with the "specularmap" parameter. As convention it's recommended that you add "_s" to the end of the texture's filename.
- </p>
- <p>
-  Bump maps can be modified into a good starting point for a specular map.  See
-  <a href="Start_a_Specular_map_with_a_Normal_map" title="Start a Specular map with a Normal map">
-   Start a Specular map with a Normal map
-  </a>
-  .
- </p>
- <a name="Hit_maps">
- </a>
- <h2>
-  <span align="absbottom">
-   <a class="image" href="Image:Q4square_25.png" title="Q4">
-    <img alt="Q4" height="25" longdesc="/wiki/Image:Q4square_25.png" src="/w/images/e/e8/Q4square_25.png" width="25"/>
-   </a>
-   Hit maps
-  </span>
- </h2>
- <dl>
-  <dd>
-   <i>
-    The information in this section is specific to
-    <a href="Quake_4" title="Quake 4">
-     Quake 4
+  <h2>
+   Seamless Textures
+  </h2>
+  <div style="float:right;width:450px;">
+   <div style="position:relative;left:40px;">
+    <a class="image" href="Image:Diffuse_example.jpg" title="">
+     <img alt="" height="200" longdesc="/wiki/Image:Diffuse_example.jpg" src="/w/images/thumb/6/64/Diffuse_example.jpg/200px-Diffuse_example.jpg" width="200"/>
     </a>
-    .
-   </i>
-  </dd>
- </dl>
- <p>
-  Hit maps are special images mainly used for animated models. These are made up of simple patches of color that follow the RGB values given in a
-  <a href="Materialtype_%28decl%29" title="Materialtype (decl)">
-   materialtype
-  </a>
-  . When an area of the model is hit a different impact effect is played depending on the hit map color of the area hit. Usually smaller resolution hitmaps are used compared to regular skins as detail does not need to be as high as the diffuse or normal map.
- </p>
- <p>
-  Hit maps are added to material shaders by use of the
-  <a class="new" href="MaterialImage_%28Material_global_keyword%29" title="MaterialImage (Material global keyword)">
-   materialImage
-  </a>
-  keyword. As convention it's recommended that you add "_hit" to the end of the texture's filename.
- </p>
- <a name="Sky_and_reflective_maps">
- </a>
- <h2>
-  Sky and reflective maps
- </h2>
- <p>
-  Both sky and reflective materials make use of
-  <a href="Cube_maps" title="Cube maps">
-   cube maps
-  </a>
-  (also known as environment maps).
- </p>
- <p>
-  The Doom 3:ROE expansion pack and Quake 4 add sky portal functionality to the engine which does away with the need to use cube maps for sky materials.
- </p>
- <a name="Seamless_Textures">
- </a>
- <h2>
-  Seamless Textures
- </h2>
- <div style="float:right;width:450px;">
-  <div style="position:relative;left:40px;">
-   <a class="image" href="Image:Diffuse_example.jpg" title="">
-    <img alt="" height="200" longdesc="/wiki/Image:Diffuse_example.jpg" src="/w/images/thumb/6/64/Diffuse_example.jpg/200px-Diffuse_example.jpg" width="200"/>
-   </a>
-   <a class="image" href="Image:Diffuse_example.jpg" title="">
-    <img alt="" height="200" longdesc="/wiki/Image:Diffuse_example.jpg" src="/w/images/thumb/6/64/Diffuse_example.jpg/200px-Diffuse_example.jpg" width="200"/>
-   </a>
+    <a class="image" href="Image:Diffuse_example.jpg" title="">
+     <img alt="" height="200" longdesc="/wiki/Image:Diffuse_example.jpg" src="/w/images/thumb/6/64/Diffuse_example.jpg/200px-Diffuse_example.jpg" width="200"/>
+    </a>
+   </div>
   </div>
- </div>
- <p>
-  Most level textures are designed to be placed next to each other without any visual discrepancies.  Many ceiling, wall, and floor textures are designed in this manner, so a long area can have this texture applied, without forcing the mapper to stretch and reduce the quality of the texture.
- </p>
- <p>
-  The example on the right shows how textures will tile horizontally when designed properly.  Two copies of the above image are placed side-by-side, and the bricks line up.
- </p>
- <p>
-  This texture can also be tiled vertically.  The edges of the texture at the top finish each brick, and the edges at the bottom do not finish the brick.  When placed on top of each other, the alternating pattern is not disrupted, and no visual break occurs.
- </p>
- <p>
-  This effect can be achieved using the offset tool in either
-  <a class="external text" href="http://www.gimp.org/" title="http://www.gimp.org">
-   The GIMP
-  </a>
-  or in
-  <a class="external text" href="http://www.adobe.com/products/photoshop/" title="http://www.adobe.com/products/photoshop/">
-   Adobe Photoshop
-  </a>
-  .  Other image manipulation suites may offer other similar tools, please refer to the documentation with your package to find such a feature.
- </p>
- <p>
-  See
-  <a href="Texturing#Creating_Seamless_Textures" title="Texturing">
-   Creating Seamless Textures
-  </a>
-  for several tutorials on how to use this tool to create seamless textures, as well as links to several plugins that perform the transformation automatically.
- </p>
- <a name="Supported_image_formats">
- </a>
- <h2>
-  Supported image formats
- </h2>
- <p>
-  The Doom 3 engine supports the following image formats:
- </p>
- <ul>
-  <li>
-   <a href="TGA_%28file_format%29" title="TGA (file format)">
-    TGA
+  <p>
+   Most level textures are designed to be placed next to each other without any visual discrepancies.  Many ceiling, wall, and floor textures are designed in this manner, so a long area can have this texture applied, without forcing the mapper to stretch and reduce the quality of the texture.
+  </p>
+  <p>
+   The example on the right shows how textures will tile horizontally when designed properly.  Two copies of the above image are placed side-by-side, and the bricks line up.
+  </p>
+  <p>
+   This texture can also be tiled vertically.  The edges of the texture at the top finish each brick, and the edges at the bottom do not finish the brick.  When placed on top of each other, the alternating pattern is not disrupted, and no visual break occurs.
+  </p>
+  <p>
+   This effect can be achieved using the offset tool in either
+   <a class="external text" href="http://www.gimp.org/" title="http://www.gimp.org">
+    The GIMP
    </a>
-  </li>
-  <li>
-   <a href="DDS_%28file_format%29" title="DDS (file format)">
-    DDS
+   or in
+   <a class="external text" href="http://www.adobe.com/products/photoshop/" title="http://www.adobe.com/products/photoshop/">
+    Adobe Photoshop
    </a>
-  </li>
-  <li>
-   <a href="JPG_%28file_format%29" title="JPG (file format)">
-    JPG
+   .  Other image manipulation suites may offer other similar tools, please refer to the documentation with your package to find such a feature.
+  </p>
+  <p>
+   See
+   <a href="Texturing#Creating_Seamless_Textures" title="Texturing">
+    Creating Seamless Textures
    </a>
-  </li>
- </ul>
- <p>
-  Details on each format and it's quirks can be found by following the links above.
- </p>
- <a name="Dynamic_Internal_Images">
- </a>
- <h2>
-  Dynamic Internal Images
- </h2>
- <p>
-  The engine has a set of internal image maps that are used for various special purposes. These images can be reference in material shaders and they can also be applied to surfaces as if they were materials in their own right.
- </p>
- <p>
-  The names and purposes of these images are...
- </p>
- <ul>
-  <li>
-   _black - A pure black image map.
-  </li>
-  <li>
-   _cubicLight - ???
-  </li>
-  <li>
-   _currentRender - The current rendered image on screen. Used primarily as the input for fragment programs.
-  </li>
-  <li>
-   _default - ???
-  </li>
-  <li>
-   _flat - A flat normal map.
-  </li>
-  <li>
-   _fog - The internal fog image.
-  </li>
-  <li>
-   _noFalloff - ??? Used as the light falloff image for lights with no falloff.
-  </li>
-  <li>
-   _pointLight1 - ???
-  </li>
-  <li>
-   _pointLight2 - ???
-  </li>
-  <li>
-   _pointLight3 - ???
-  </li>
-  <li>
-   _quadratic - ???
-  </li>
-  <li>
-   _scratch - An image buffer. Used primarily when rendering mirrors.
-  </li>
-  <li>
-   _spotlight - ???
-  </li>
-  <li>
-   _white - A pure white image map.
-  </li>
- </ul>
- <a name="Compressed_and_uncompressed">
- </a>
- <h2>
-  Compressed and uncompressed
- </h2>
- <p>
-  If you look at the vanilla texture assets, you'll notice that Doom 3 has TGA and DDS versions of each image in the game. The TGA files are used when running in high or ultra quality mode (in high quality, the diffuse maps use the compressed DDS files, but the normal maps use the uncompressed TGA files). In all other modes only DDS files are used.
- </p>
- <p>
-  If no corresponding DDS file exists, Doom 3 generates one for use this session, this run-time compression means that while you can run in a lower quality than
-  <a href="Quality_settings" title="Quality settings">
-   ultra
+   for several tutorials on how to use this tool to create seamless textures, as well as links to several plugins that perform the transformation automatically.
+  </p>
+  <a name="Supported_image_formats">
   </a>
-  , you won't actually have any DDS files to distribute. It's recommended therefore that you create your own DDS files as relying on Doom 3's automatic generation slows down loading significantly.
- </p>
- <p>
-  You can bypass the DDS files and load the TGA files directly by setting
-  <a href="Image_usePrecompressedTextures_%28cvar%29" title="Image usePrecompressedTextures (cvar)">
-   image_usePrecompressedTextures
+  <h2>
+   Supported image formats
+  </h2>
+  <p>
+   The Doom 3 engine supports the following image formats:
+  </p>
+  <ul>
+   <li>
+    <a href="TGA_%28file_format%29" title="TGA (file format)">
+     TGA
+    </a>
+   </li>
+   <li>
+    <a href="DDS_%28file_format%29" title="DDS (file format)">
+     DDS
+    </a>
+   </li>
+   <li>
+    <a href="JPG_%28file_format%29" title="JPG (file format)">
+     JPG
+    </a>
+   </li>
+  </ul>
+  <p>
+   Details on each format and it's quirks can be found by following the links above.
+  </p>
+  <a name="Dynamic_Internal_Images">
   </a>
-  to 0. The images will still be compressed dynamically at load time, but since you'll be forcing the game to use the TGA files the results of changes to the images will be immediately apparent. You can bypass compression by setting
-  <a href="Image_useCompression_%28cvar%29" title="Image useCompression (cvar)">
-   image_useCompression
+  <h2>
+   Dynamic Internal Images
+  </h2>
+  <p>
+   The engine has a set of internal image maps that are used for various special purposes. These images can be reference in material shaders and they can also be applied to surfaces as if they were materials in their own right.
+  </p>
+  <p>
+   The names and purposes of these images are...
+  </p>
+  <ul>
+   <li>
+    _black - A pure black image map.
+   </li>
+   <li>
+    _cubicLight - ???
+   </li>
+   <li>
+    _currentRender - The current rendered image on screen. Used primarily as the input for fragment programs.
+   </li>
+   <li>
+    _default - ???
+   </li>
+   <li>
+    _flat - A flat normal map.
+   </li>
+   <li>
+    _fog - The internal fog image.
+   </li>
+   <li>
+    _noFalloff - ??? Used as the light falloff image for lights with no falloff.
+   </li>
+   <li>
+    _pointLight1 - ???
+   </li>
+   <li>
+    _pointLight2 - ???
+   </li>
+   <li>
+    _pointLight3 - ???
+   </li>
+   <li>
+    _quadratic - ???
+   </li>
+   <li>
+    _scratch - An image buffer. Used primarily when rendering mirrors.
+   </li>
+   <li>
+    _spotlight - ???
+   </li>
+   <li>
+    _white - A pure white image map.
+   </li>
+  </ul>
+  <a name="Compressed_and_uncompressed">
   </a>
-  and
-  <a href="Image_useNormalCompression_%28cvar%29" title="Image useNormalCompression (cvar)">
-   image_useNormalCompression
-  </a>
-  to 0.
- </p>
- <p>
-  The DDS files used in Doom 3 were created with the following settings:
- </p>
- <ul>
-  <li>
-   Normal Maps: "RXGB +red 0.0 +green 0.5 +blue 0.5";
-  </li>
-  <li>
-   Specular: "DXT1";
-  </li>
-  <li>
-   Diffuse (no alpha): "DXT1";
-  </li>
-  <li>
-   Diffuse (w/ alpha): "DXT3";
-  </li>
- </ul>
- <p>
-  You can use the following command line arguments with ATI's The Compressonator:
- </p>
- <pre>thecompressonator -convert "normal.tga" "normal.dds" RXGB +red 0.0 +green 0.5 +blue 0.5 -mipmaps 
+  <h2>
+   Compressed and uncompressed
+  </h2>
+  <p>
+   If you look at the vanilla texture assets, you'll notice that Doom 3 has TGA and DDS versions of each image in the game. The TGA files are used when running in high or ultra quality mode (in high quality, the diffuse maps use the compressed DDS files, but the normal maps use the uncompressed TGA files). In all other modes only DDS files are used.
+  </p>
+  <p>
+   If no corresponding DDS file exists, Doom 3 generates one for use this session, this run-time compression means that while you can run in a lower quality than
+   <a href="Quality_settings" title="Quality settings">
+    ultra
+   </a>
+   , you won't actually have any DDS files to distribute. It's recommended therefore that you create your own DDS files as relying on Doom 3's automatic generation slows down loading significantly.
+  </p>
+  <p>
+   You can bypass the DDS files and load the TGA files directly by setting
+   <a href="Image_usePrecompressedTextures_%28cvar%29" title="Image usePrecompressedTextures (cvar)">
+    image_usePrecompressedTextures
+   </a>
+   to 0. The images will still be compressed dynamically at load time, but since you'll be forcing the game to use the TGA files the results of changes to the images will be immediately apparent. You can bypass compression by setting
+   <a href="Image_useCompression_%28cvar%29" title="Image useCompression (cvar)">
+    image_useCompression
+   </a>
+   and
+   <a href="Image_useNormalCompression_%28cvar%29" title="Image useNormalCompression (cvar)">
+    image_useNormalCompression
+   </a>
+   to 0.
+  </p>
+  <p>
+   The DDS files used in Doom 3 were created with the following settings:
+  </p>
+  <ul>
+   <li>
+    Normal Maps: "RXGB +red 0.0 +green 0.5 +blue 0.5";
+   </li>
+   <li>
+    Specular: "DXT1";
+   </li>
+   <li>
+    Diffuse (no alpha): "DXT1";
+   </li>
+   <li>
+    Diffuse (w/ alpha): "DXT3";
+   </li>
+  </ul>
+  <p>
+   You can use the following command line arguments with ATI's The Compressonator:
+  </p>
+  <pre>thecompressonator -convert "normal.tga" "normal.dds" RXGB +red 0.0 +green 0.5 +blue 0.5 -mipmaps 
 thecompressonator -convert "specular.tga" "specular.dds" DXT1 -mipmaps 
 thecompressonator -convert "diffuse.tga" "diffuse.dds" DXT1 -mipmaps 
 thecompressonator -convert "diffuse.tga" "diffuse.dds" DXT3 -mipmaps
 </pre>
- <a name="Compression_Notes">
- </a>
- <h3>
-  Compression Notes
- </h3>
- <p>
-  See the
-  <a href="Modding" title="Modding">
-   modding
+  <a name="Compression_Notes">
   </a>
-  page for how to automatically compress all your assets for distribution.
- </p>
- <p>
-  DDS files, and their MIP Maps, can be edited.  See
-  <a href="Editing_MIP_Maps" title="Editing MIP Maps">
-   Editing MIP Maps
+  <h3>
+   Compression Notes
+  </h3>
+  <p>
+   See the
+   <a href="Modding" title="Modding">
+    modding
+   </a>
+   page for how to automatically compress all your assets for distribution.
+  </p>
+  <p>
+   DDS files, and their MIP Maps, can be edited.  See
+   <a href="Editing_MIP_Maps" title="Editing MIP Maps">
+    Editing MIP Maps
+   </a>
+   .
+  </p>
+  <p>
+   If one is not using ATI's The Compressonator, local maps can be prepared for compression manually.  Simply copy the red channel to the alpha channel.  Then delete the old red channel (to save space).  The advantage to interpriting local maps in this manner, we can presume, is due to the alpha channel's higher quality.  In DXT5 each 4x4 (16) pixel block is encoded with 64 bits of RGB color data, and 64 bits of alpha data. Since a local map primarily consists of only 2 channels (horizontal, usually red, and vertical, usually green), we're effectively splitting the two channels evenly across the compression scheme.
+  </p>
+  <a name="See_also">
   </a>
-  .
- </p>
- <p>
-  If one is not using ATI's The Compressonator, local maps can be prepared for compression manually.  Simply copy the red channel to the alpha channel.  Then delete the old red channel (to save space).  The advantage to interpriting local maps in this manner, we can presume, is due to the alpha channel's higher quality.  In DXT5 each 4x4 (16) pixel block is encoded with 64 bits of RGB color data, and 64 bits of alpha data. Since a local map primarily consists of only 2 channels (horizontal, usually red, and vertical, usually green), we're effectively splitting the two channels evenly across the compression scheme.
- </p>
- <a name="See_also">
- </a>
- <h2>
-  See also
- </h2>
- <a name="General_image_editing_applications">
- </a>
- <h3>
-  General image editing applications
- </h3>
- <ul>
-  <li>
-   <a class="external text" href="http://www.adobe.com/" title="http://www.adobe.com/">
-    Adobe Photoshop
-   </a>
-  </li>
-  <li>
-   <a class="external text" href="https://web.archive.org/web/20121205044302/http://www.jasc.com/" title="http://www.jasc.com/">
-    Corel Paint Shop Pro
-   </a>
-  </li>
-  <li>
-   <a class="external text" href="http://www.gimp.org/" title="http://www.gimp.org/">
-    The Gimp
-   </a>
-  </li>
- </ul>
- <a name="Seamless_texture_creation_tools">
- </a>
- <h3>
-  Seamless texture creation tools
- </h3>
- <ul>
-  <li>
-   <a class="external text" href="http://www.logarithmic.net/pfh/resynthesizer" title="http://www.logarithmic.net/pfh/resynthesizer">
-    The Resynthesizer - GIMP Plugin
-   </a>
-  </li>
-  <li>
-   <a class="external text" href="http://www.filterforge.com/" title="http://www.filterforge.com/">
-    Filter Forge - Photoshop Plugin
-   </a>
-  </li>
-  <li>
-   <a class="external text" href="http://www.mapzoneeditor.com/" title="http://www.mapzoneeditor.com/">
-    Map Zone
-   </a>
-  </li>
-  <li>
-   <a class="external text" href="http://www.i-tex.de/" title="http://www.i-tex.de/">
-    Texture Maker
-   </a>
-  </li>
-  <li>
-   <a class="external text" href="http://www.spiralgraphics.biz/gen2tour/index.htm" title="http://www.spiralgraphics.biz/gen2tour/index.htm">
-    Genetica
-   </a>
-  </li>
-  <li>
-   <a class="external text" href="http://www.darksim.com/" title="http://www.darksim.com/">
-    DarkTree
-   </a>
-  </li>
-  <li>
-   <a class="external text" href="http://www.fxgen.org/" title="http://www.fxgen.org/">
-    FxGen
-   </a>
-  </li>
- </ul>
- <a name="Height_and_normal_maps">
- </a>
- <h3>
-  Height and normal maps
- </h3>
- <ul>
-  <li>
-   <a class="external text" href="http://www.philipk.net/ndo.html" title="http://www.philipk.net/ndo.html">
-    nDo
-   </a>
-  </li>
-  <li>
-   <a class="external text" href="http://www.crazybump.com/" title="http://www.crazybump.com/">
-    CrazyBump
-   </a>
-  </li>
-  <li>
-   <a class="external text" href="http://developer.nvidia.com/object/photoshop_dds_plugins.html" title="http://developer.nvidia.com/object/photoshop_dds_plugins.html">
-    Nvidia Normal Map Filter - Photoshop Plugin
-   </a>
-   -
-   <a href="NvidaNormalMapFilter_%28tool_overview%29" title="NvidaNormalMapFilter (tool overview)">
-    Overview
-   </a>
-  </li>
-  <li>
-   <a class="external text" href="https://web.archive.org/web/20121205044302/http://nifelheim.dyndns.org/%7ecocidius/" title="http://nifelheim.dyndns.org/%7ecocidius/">
-    GIMP DDS &amp; Normal Map Plugins
-   </a>
-  </li>
-  <li>
-   <a class="external text" href="http://charles.hollemeersch.net/njob" title="http://charles.hollemeersch.net/njob">
-    Njob
-   </a>
-  </li>
- </ul>
- <a name="Renderbump">
- </a>
- <h4>
-  Renderbump
- </h4>
- <ul>
-  <li>
-   <a href="Renderbump_%28console_command%29" title="Renderbump (console command)">
-    renderbump
-   </a>
-  </li>
-  <li>
-   <a href="RenderbumpFlat_%28console_command%29" title="RenderbumpFlat (console command)">
-    renderbumpFlat
-   </a>
-  </li>
-  <li>
-   <a class="external text" href="https://web.archive.org/web/20121205044302/http://engineering.soclab.bth.se/tools/177.aspx" title="http://engineering.soclab.bth.se/tools/177.aspx">
-    ORB (Open Render Bump)
-   </a>
-  </li>
-  <li>
-   <a class="external text" href="https://web.archive.org/web/20121205044302/http://developer.nvidia.com/object/melody_home.html" title="http://developer.nvidia.com/object/melody_home.html">
-    NVidia Melody
-   </a>
-  </li>
-  <li>
-   <a class="external text" href="https://web.archive.org/web/20121205044302/http://www.santyesprogramadorynografista.net/projects.aspx" title="http://www.santyesprogramadorynografista.net/projects.aspx">
-    xNormal
-   </a>
-  </li>
- </ul>
- <a name="DDS_format">
- </a>
- <h3>
-  DDS format
- </h3>
- <ul>
-  <li>
-   <a class="external text" href="http://developer.nvidia.com/object/dds_thumbnail_viewer.html" title="http://developer.nvidia.com/object/dds_thumbnail_viewer.html">
-    Nvidia DDS Thumbnail Viewer
-   </a>
-  </li>
-  <li>
-   <a class="external text" href="http://www.ati.com/developer/compressonator.html" title="http://www.ati.com/developer/compressonator.html">
-    ATI Compressonator
-   </a>
-  </li>
- </ul>
- <a name="Cube_maps">
- </a>
- <h3>
-  Cube maps
- </h3>
- <ul>
-  <li>
-   <a class="external text" href="http://www.skypaint.com/" title="http://www.skypaint.com/">
-    SkyPaint
-   </a>
-  </li>
-  <li>
-   <a class="external text" href="http://www.planetside.co.uk/terragen/" title="http://www.planetside.co.uk/terragen/">
-    Terragen
-   </a>
-  </li>
- </ul>
- <a name="Texture_resources">
- </a>
- <h3>
-  Texture resources
- </h3>
- <ul>
-  <li>
-   <a class="external text" href="http://www.aztextures.com/" title="http://www.aztextures.com/">
-    A-Z Textures
-   </a>
-  </li>
-  <li>
-   <a class="external text" href="https://web.archive.org/web/20121205044302/http://textures.z7server.com/" title="http://textures.z7server.com/">
-    Textures Library
-   </a>
-  </li>
-  <li>
-   <a class="external text" href="http://www.cgtextures.com/" title="http://www.cgtextures.com/">
-    CG Textures
-   </a>
-  </li>
- </ul>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:961-0!1!0!0!!en!2 and timestamp 20121204142949 -->
+  <h2>
+   See also
+  </h2>
+  <a name="General_image_editing_applications">
+  </a>
+  <h3>
+   General image editing applications
+  </h3>
+  <ul>
+   <li>
+    <a class="external text" href="http://www.adobe.com/" title="http://www.adobe.com/">
+     Adobe Photoshop
+    </a>
+   </li>
+   <li>
+    <a class="external text" href="https://web.archive.org/web/20121205044302/http://www.jasc.com/" title="http://www.jasc.com/">
+     Corel Paint Shop Pro
+    </a>
+   </li>
+   <li>
+    <a class="external text" href="http://www.gimp.org/" title="http://www.gimp.org/">
+     The Gimp
+    </a>
+   </li>
+  </ul>
+  <a name="Seamless_texture_creation_tools">
+  </a>
+  <h3>
+   Seamless texture creation tools
+  </h3>
+  <ul>
+   <li>
+    <a class="external text" href="http://www.logarithmic.net/pfh/resynthesizer" title="http://www.logarithmic.net/pfh/resynthesizer">
+     The Resynthesizer - GIMP Plugin
+    </a>
+   </li>
+   <li>
+    <a class="external text" href="http://www.filterforge.com/" title="http://www.filterforge.com/">
+     Filter Forge - Photoshop Plugin
+    </a>
+   </li>
+   <li>
+    <a class="external text" href="http://www.mapzoneeditor.com/" title="http://www.mapzoneeditor.com/">
+     Map Zone
+    </a>
+   </li>
+   <li>
+    <a class="external text" href="http://www.i-tex.de/" title="http://www.i-tex.de/">
+     Texture Maker
+    </a>
+   </li>
+   <li>
+    <a class="external text" href="http://www.spiralgraphics.biz/gen2tour/index.htm" title="http://www.spiralgraphics.biz/gen2tour/index.htm">
+     Genetica
+    </a>
+   </li>
+   <li>
+    <a class="external text" href="http://www.darksim.com/" title="http://www.darksim.com/">
+     DarkTree
+    </a>
+   </li>
+   <li>
+    <a class="external text" href="http://www.fxgen.org/" title="http://www.fxgen.org/">
+     FxGen
+    </a>
+   </li>
+  </ul>
+  <a name="Height_and_normal_maps">
+  </a>
+  <h3>
+   Height and normal maps
+  </h3>
+  <ul>
+   <li>
+    <a class="external text" href="http://www.philipk.net/ndo.html" title="http://www.philipk.net/ndo.html">
+     nDo
+    </a>
+   </li>
+   <li>
+    <a class="external text" href="http://www.crazybump.com/" title="http://www.crazybump.com/">
+     CrazyBump
+    </a>
+   </li>
+   <li>
+    <a class="external text" href="http://developer.nvidia.com/object/photoshop_dds_plugins.html" title="http://developer.nvidia.com/object/photoshop_dds_plugins.html">
+     Nvidia Normal Map Filter - Photoshop Plugin
+    </a>
+    -
+    <a href="NvidaNormalMapFilter_%28tool_overview%29" title="NvidaNormalMapFilter (tool overview)">
+     Overview
+    </a>
+   </li>
+   <li>
+    <a class="external text" href="https://web.archive.org/web/20121205044302/http://nifelheim.dyndns.org/%7ecocidius/" title="http://nifelheim.dyndns.org/%7ecocidius/">
+     GIMP DDS &amp; Normal Map Plugins
+    </a>
+   </li>
+   <li>
+    <a class="external text" href="http://charles.hollemeersch.net/njob" title="http://charles.hollemeersch.net/njob">
+     Njob
+    </a>
+   </li>
+  </ul>
+  <a name="Renderbump">
+  </a>
+  <h4>
+   Renderbump
+  </h4>
+  <ul>
+   <li>
+    <a href="Renderbump_%28console_command%29" title="Renderbump (console command)">
+     renderbump
+    </a>
+   </li>
+   <li>
+    <a href="RenderbumpFlat_%28console_command%29" title="RenderbumpFlat (console command)">
+     renderbumpFlat
+    </a>
+   </li>
+   <li>
+    <a class="external text" href="https://web.archive.org/web/20121205044302/http://engineering.soclab.bth.se/tools/177.aspx" title="http://engineering.soclab.bth.se/tools/177.aspx">
+     ORB (Open Render Bump)
+    </a>
+   </li>
+   <li>
+    <a class="external text" href="https://web.archive.org/web/20121205044302/http://developer.nvidia.com/object/melody_home.html" title="http://developer.nvidia.com/object/melody_home.html">
+     NVidia Melody
+    </a>
+   </li>
+   <li>
+    <a class="external text" href="https://web.archive.org/web/20121205044302/http://www.santyesprogramadorynografista.net/projects.aspx" title="http://www.santyesprogramadorynografista.net/projects.aspx">
+     xNormal
+    </a>
+   </li>
+  </ul>
+  <a name="DDS_format">
+  </a>
+  <h3>
+   DDS format
+  </h3>
+  <ul>
+   <li>
+    <a class="external text" href="http://developer.nvidia.com/object/dds_thumbnail_viewer.html" title="http://developer.nvidia.com/object/dds_thumbnail_viewer.html">
+     Nvidia DDS Thumbnail Viewer
+    </a>
+   </li>
+   <li>
+    <a class="external text" href="http://www.ati.com/developer/compressonator.html" title="http://www.ati.com/developer/compressonator.html">
+     ATI Compressonator
+    </a>
+   </li>
+  </ul>
+  <a name="Cube_maps">
+  </a>
+  <h3>
+   Cube maps
+  </h3>
+  <ul>
+   <li>
+    <a class="external text" href="http://www.skypaint.com/" title="http://www.skypaint.com/">
+     SkyPaint
+    </a>
+   </li>
+   <li>
+    <a class="external text" href="http://www.planetside.co.uk/terragen/" title="http://www.planetside.co.uk/terragen/">
+     Terragen
+    </a>
+   </li>
+  </ul>
+  <a name="Texture_resources">
+  </a>
+  <h3>
+   Texture resources
+  </h3>
+  <ul>
+   <li>
+    <a class="external text" href="http://www.aztextures.com/" title="http://www.aztextures.com/">
+     A-Z Textures
+    </a>
+   </li>
+   <li>
+    <a class="external text" href="https://web.archive.org/web/20121205044302/http://textures.z7server.com/" title="http://textures.z7server.com/">
+     Textures Library
+    </a>
+   </li>
+   <li>
+    <a class="external text" href="http://www.cgtextures.com/" title="http://www.cgtextures.com/">
+     CG Textures
+    </a>
+   </li>
+  </ul>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:961-0!1!0!0!!en!2 and timestamp 20121204142949 -->
+ </body>
+</html>

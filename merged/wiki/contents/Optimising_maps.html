@@ -1,235 +1,239 @@
- <p>
-  The process of
-  <b>
-   map optimisation
-  </b>
-  ensures that a given map will play as fast and smoothly as possible on a wide range of hardware. Optimisation techniques are used both throughout the map design process and as a final stage prior to release. A map that is not optimised may perform slowly, cause unwanted visual artifacts, or even crash the game (or PC) in some extreme circumstances.
- </p>
- <a name="Useful_Cvars">
- </a>
- <h2>
-  Useful Cvars
- </h2>
- <p>
-  To test a
-  <a href="Mapping" title="Mapping">
-   map
-  </a>
-  and gauge the performance there are several
-  <a href="Console" title="Console">
-   CVars
-  </a>
-  that can be set or toggled to give you visual information about you map. You can type the
-  <a href="Bind_%28console_command%29" title="Bind (console command)">
-   bind
-  </a>
-  console command at the console or set it in your "
-  <a href="CFG_%28file_format%29" title="CFG (file format)">
-   autoexec.cfg
-  </a>
-  " file to make it a semi-permanent feature. For all CVars with multiple settings (instead of just on/off) you can use the
-  <a href="Toggle_%28console_command%29" title="Toggle (console command)">
-   toggle
-  </a>
-  console command, for instance:
- </p>
- <pre>bind m toggle "<a href="R_showTris_%28cvar%29" title="R showTris (cvar)">r_showTris</a> 0 1 2 3"
-</pre>
- <p>
-  In general, the
-  <a href="Com_showFPS_%28cvar%29" title="Com showFPS (cvar)">
-   com_showFps
-  </a>
-  allows you to keep tabs on the framerate of the current scene. It's not very useful to determining hardware bottlenecks though.
- </p>
- <p>
-  After you've finished your map and are exclusively optimising the level it may pay off to
-  <a href="RecordDemo_%28console_command%29" title="RecordDemo (console command)">
-   record
-  </a>
-  a .
-  <a href="DEMO_%28file_format%29" title="DEMO (file format)">
-   DEMO
-  </a>
-  of you playing through and then benchmark it with the
-  <a href="TimeDemo_%28console_command%29" title="TimeDemo (console command)">
-   timeDemo
-  </a>
-  function. This way you can more quickly and accurately see which parts need to be optimised.
- </p>
- <a name="Visportals">
- </a>
- <h2>
-  Visportals
- </h2>
- <p>
-  By far the most important part in optimizing your maps is the correct usage of
-  <a href="Visportal" title="Visportal">
-   visportals
-  </a>
-  , which tells the engine how to split up your map for rendering. If portals are not used properly, the engine may be rendering vast amounts of geometry which is not visible to the player, with an obviously devastating impact on performance.
- </p>
- <p>
-  <b>
-   Maps must be designed from the start with portalisation in mind; attempting to retrofit portals into an existing map is a recipe for frustration.
-  </b>
-  Portalisation works best when a map is constructed in a "tunnel network" fashion, without excessive sightlines or large open areas with high polycounts.
- </p>
- <a name="Shadows">
- </a>
- <h2>
-  Shadows
- </h2>
- <p>
-  By default, all brushes, models and patches cast shadows in the Doom 3 engine. For every shadow-casting object the engine must do several things: calculate the silhouette and extrude the shadowvolume (CPU-intensive), render the back of the shadow volume (GPU render pass) then render the front of the shadow volume (GPU render pass). This process must be repeated for every light for which this object casts a shadow.
- </p>
- <p>
-  These extra render passes and shadowvolume calculations have a significantly detrimental effect on performance if sufficiently complex shadows are present in a scene. For this reason, eliminating unnecessary shadows is an important part of making smooth-running maps.
- </p>
- <ol>
-  <li>
-   Consider which lights need to cast shadows: ambient or "fill-in" lights almost never need to be shadowcasters. Large, level-encompassing shadowcasting "moonlights" are particularly bad, and should be avoided if at all possible.
-  </li>
-  <li>
-   Turn off shadows for individual models by using setting the "noshadows" key to "1". Although objects cast shadows by default, in many mapping situations there is no significant visual problem with turning them off. Level geometry constructed with brushes or patches can have shadows turned off by converting the structure into a
+<html>
+ <body>
+  <p>
+   The process of
    <b>
-    func_static
+    map optimisation
    </b>
-   and setting the option as for a model.
-  </li>
-  <li>
-   Make liberal use of the
-   <b>
-    <a href="R_showShadows_%28cvar%29" title="R showShadows (cvar)">
-     r_showShadows
-    </a>
-   </b>
-   and
-   <b>
-    <a href="R_showShadowCount_%28cvar%29" title="R showShadowCount (cvar)">
-     r_showShadowCount
-    </a>
-   </b>
-   CVARs during playtesting.
-   <b>
-    r_showShadowCount
-   </b>
-   colour-codes surfaces in much the same way as
-   <b>
-    r_showLightCount
-   </b>
-   -- if the screen turns white, there are far too many shadows in view.
-  </li>
-  <li>
-   When designing a complex model, consider setting the model's main texture to non-shadowcasting (with the
-   <b>
-    noShadow
-   </b>
-   material keyword) and adding a separate, simpler "shadow mesh" to the model textured with "textures/common/shadow" or a similar shadowcasting texture. This means that the geometry used to calculate shadows is much simpler than the rendered visual model, which can improve performance without severely impacting the appearance.
-  </li>
-  <li>
-   Animated lights or shadowvolumes are much slower than those cast by static models in a static lightsource, since the animated geometry cannot make use of the precomputed shadowvolumes added to the .proc file by the map compiler.
-  </li>
- </ol>
- <a name="Lighting">
- </a>
- <h2>
-  Lighting
- </h2>
- <p>
-  The
-  <a href="R_showLightCount_%28cvar%29" title="R showLightCount (cvar)">
-   r_showLightCount
+   ensures that a given map will play as fast and smoothly as possible on a wide range of hardware. Optimisation techniques are used both throughout the map design process and as a final stage prior to release. A map that is not optimised may perform slowly, cause unwanted visual artifacts, or even crash the game (or PC) in some extreme circumstances.
+  </p>
+  <a name="Useful_Cvars">
   </a>
-  CVar allows you to check how many lights are hitting each polygon. You can even make it a bindable toggle so that you can switch from disabled, to number of lights, to number of lights plus overdraw rate.
- </p>
- <p>
-  When viewing with
-  <b>
-   r_showLightCount,
-  </b>
-  surfaces in the game (and DoomEdit, although the editor colours are inaccurate) display a colour, representing the number of lights hitting a surface: black for none, red for 1, through green, blue, cyan, magenta and white for 6 or more. Large surfaces which excessive light-counts may cause a performance impact depending on their screen area, and in some cases it may improve performance to split the surfaces up along the light's volumes so that each surface is being hit by as few different light sources as possible.
- </p>
- <p>
-  A word of warning: many of the beginner tutorials on Doom3World and other sites make a big issue out of light counts, giving the impression that massive performance drops will occur if a single surface ever has more than 3 lights hitting it, and suggesting that mappers spend large amounts of time carving brushes to reduce light counts.
-  <b>
-   This is not accurate
-  </b>
-  . On modern hardware, lightcounts are not the main performance bottleneck and carving a surface in order to reduce its lightcount from 4 to 3 is likely to achieve absolutely nothing. Well-designed portalling and reduced shadow counts are
-  <b>
-   far
-  </b>
-  more important for performance, and time should be spent in these areas rather than carving brushes.
- </p>
- <p>
-  Note that the above warning applies specifically to brush carving; reducing the number of
-  <i>
-   actual lights
-  </i>
-  can still be beneficial, particularly if this reduces shadow counts as well.
- </p>
- <p>
-  It can also be helpful to set both r_showTris and
-  <a href="R_showLightScissors_%28cvar%29" title="R showLightScissors (cvar)">
-   r_showLightScissors
-  </a>
-  to "1" along with r_showLightCount. You could use the following:
- </p>
- <pre>bind l "toggle r_showLightCount 0 1; toggle r_showTris 0 1;toggle r_showLightScissors 0 1"
-</pre>
- <p>
-  If you make use of
-  <a href="Patch" title="Patch">
-   patches
-  </a>
-  then make sure surfaces behind them (which are not seen by the player) have the "caulk" material. Being single-sided meshes, they never block light so this will prevent the engine from having to waste time calculating per-pixel lighting on those the unseen surfaces.
- </p>
- <a name="Geometry">
- </a>
- <h2>
-  Geometry
- </h2>
- <p>
-  The r_showTris CVar is helpful for gauging the amount of geometry being processed but it's more commonly used to acertain how your
-  <a href="Visportal" title="Visportal">
-   visportals
-  </a>
-  are affecting performance. You should combine it with the following CVars:
- </p>
- <pre>bind p "toggle r_showTris 0 2;toggle <a href="R_useScissor_%28cvar%29" title="R useScissor (cvar)">r_useScissor</a> 1 0;toggle <a href="R_showPortals_%28cvar%29" title="R showPortals (cvar)">r_showPortals</a> 0 1"
-</pre>
- <p>
-  See also the
-  <a href="Models_vs_brushes" title="Models vs brushes">
-   models vs brushes
-  </a>
-  section.
- </p>
- <a name="Textures">
- </a>
- <h2>
-  Textures
- </h2>
- <p>
-  You can use the
-  <a href="ListImages_%28console_command%29" title="ListImages (console command)">
-   listImages
-  </a>
-  console command to check how the texture memory utilization of your map compares to the official maps. Make sure you test at each of the
-  <a href="Quality_settings" title="Quality settings">
-   quality settings
-  </a>
-  .
- </p>
- <a name="See_also">
- </a>
- <h2>
-  See also
- </h2>
- <ul>
-  <li>
-   <a class="external text" href="http://www.iddevnet.com/quake4/LevelEditor_Performance" title="http://www.iddevnet.com/quake4/LevelEditor_Performance">
-    iddevnet page on optimizing Q4 maps
+  <h2>
+   Useful Cvars
+  </h2>
+  <p>
+   To test a
+   <a href="Mapping" title="Mapping">
+    map
    </a>
-  </li>
- </ul>
+   and gauge the performance there are several
+   <a href="Console" title="Console">
+    CVars
+   </a>
+   that can be set or toggled to give you visual information about you map. You can type the
+   <a href="Bind_%28console_command%29" title="Bind (console command)">
+    bind
+   </a>
+   console command at the console or set it in your "
+   <a href="CFG_%28file_format%29" title="CFG (file format)">
+    autoexec.cfg
+   </a>
+   " file to make it a semi-permanent feature. For all CVars with multiple settings (instead of just on/off) you can use the
+   <a href="Toggle_%28console_command%29" title="Toggle (console command)">
+    toggle
+   </a>
+   console command, for instance:
+  </p>
+  <pre>bind m toggle "<a href="R_showTris_%28cvar%29" title="R showTris (cvar)">r_showTris</a> 0 1 2 3"
+</pre>
+  <p>
+   In general, the
+   <a href="Com_showFPS_%28cvar%29" title="Com showFPS (cvar)">
+    com_showFps
+   </a>
+   allows you to keep tabs on the framerate of the current scene. It's not very useful to determining hardware bottlenecks though.
+  </p>
+  <p>
+   After you've finished your map and are exclusively optimising the level it may pay off to
+   <a href="RecordDemo_%28console_command%29" title="RecordDemo (console command)">
+    record
+   </a>
+   a .
+   <a href="DEMO_%28file_format%29" title="DEMO (file format)">
+    DEMO
+   </a>
+   of you playing through and then benchmark it with the
+   <a href="TimeDemo_%28console_command%29" title="TimeDemo (console command)">
+    timeDemo
+   </a>
+   function. This way you can more quickly and accurately see which parts need to be optimised.
+  </p>
+  <a name="Visportals">
+  </a>
+  <h2>
+   Visportals
+  </h2>
+  <p>
+   By far the most important part in optimizing your maps is the correct usage of
+   <a href="Visportal" title="Visportal">
+    visportals
+   </a>
+   , which tells the engine how to split up your map for rendering. If portals are not used properly, the engine may be rendering vast amounts of geometry which is not visible to the player, with an obviously devastating impact on performance.
+  </p>
+  <p>
+   <b>
+    Maps must be designed from the start with portalisation in mind; attempting to retrofit portals into an existing map is a recipe for frustration.
+   </b>
+   Portalisation works best when a map is constructed in a "tunnel network" fashion, without excessive sightlines or large open areas with high polycounts.
+  </p>
+  <a name="Shadows">
+  </a>
+  <h2>
+   Shadows
+  </h2>
+  <p>
+   By default, all brushes, models and patches cast shadows in the Doom 3 engine. For every shadow-casting object the engine must do several things: calculate the silhouette and extrude the shadowvolume (CPU-intensive), render the back of the shadow volume (GPU render pass) then render the front of the shadow volume (GPU render pass). This process must be repeated for every light for which this object casts a shadow.
+  </p>
+  <p>
+   These extra render passes and shadowvolume calculations have a significantly detrimental effect on performance if sufficiently complex shadows are present in a scene. For this reason, eliminating unnecessary shadows is an important part of making smooth-running maps.
+  </p>
+  <ol>
+   <li>
+    Consider which lights need to cast shadows: ambient or "fill-in" lights almost never need to be shadowcasters. Large, level-encompassing shadowcasting "moonlights" are particularly bad, and should be avoided if at all possible.
+   </li>
+   <li>
+    Turn off shadows for individual models by using setting the "noshadows" key to "1". Although objects cast shadows by default, in many mapping situations there is no significant visual problem with turning them off. Level geometry constructed with brushes or patches can have shadows turned off by converting the structure into a
+    <b>
+     func_static
+    </b>
+    and setting the option as for a model.
+   </li>
+   <li>
+    Make liberal use of the
+    <b>
+     <a href="R_showShadows_%28cvar%29" title="R showShadows (cvar)">
+      r_showShadows
+     </a>
+    </b>
+    and
+    <b>
+     <a href="R_showShadowCount_%28cvar%29" title="R showShadowCount (cvar)">
+      r_showShadowCount
+     </a>
+    </b>
+    CVARs during playtesting.
+    <b>
+     r_showShadowCount
+    </b>
+    colour-codes surfaces in much the same way as
+    <b>
+     r_showLightCount
+    </b>
+    -- if the screen turns white, there are far too many shadows in view.
+   </li>
+   <li>
+    When designing a complex model, consider setting the model's main texture to non-shadowcasting (with the
+    <b>
+     noShadow
+    </b>
+    material keyword) and adding a separate, simpler "shadow mesh" to the model textured with "textures/common/shadow" or a similar shadowcasting texture. This means that the geometry used to calculate shadows is much simpler than the rendered visual model, which can improve performance without severely impacting the appearance.
+   </li>
+   <li>
+    Animated lights or shadowvolumes are much slower than those cast by static models in a static lightsource, since the animated geometry cannot make use of the precomputed shadowvolumes added to the .proc file by the map compiler.
+   </li>
+  </ol>
+  <a name="Lighting">
+  </a>
+  <h2>
+   Lighting
+  </h2>
+  <p>
+   The
+   <a href="R_showLightCount_%28cvar%29" title="R showLightCount (cvar)">
+    r_showLightCount
+   </a>
+   CVar allows you to check how many lights are hitting each polygon. You can even make it a bindable toggle so that you can switch from disabled, to number of lights, to number of lights plus overdraw rate.
+  </p>
+  <p>
+   When viewing with
+   <b>
+    r_showLightCount,
+   </b>
+   surfaces in the game (and DoomEdit, although the editor colours are inaccurate) display a colour, representing the number of lights hitting a surface: black for none, red for 1, through green, blue, cyan, magenta and white for 6 or more. Large surfaces which excessive light-counts may cause a performance impact depending on their screen area, and in some cases it may improve performance to split the surfaces up along the light's volumes so that each surface is being hit by as few different light sources as possible.
+  </p>
+  <p>
+   A word of warning: many of the beginner tutorials on Doom3World and other sites make a big issue out of light counts, giving the impression that massive performance drops will occur if a single surface ever has more than 3 lights hitting it, and suggesting that mappers spend large amounts of time carving brushes to reduce light counts.
+   <b>
+    This is not accurate
+   </b>
+   . On modern hardware, lightcounts are not the main performance bottleneck and carving a surface in order to reduce its lightcount from 4 to 3 is likely to achieve absolutely nothing. Well-designed portalling and reduced shadow counts are
+   <b>
+    far
+   </b>
+   more important for performance, and time should be spent in these areas rather than carving brushes.
+  </p>
+  <p>
+   Note that the above warning applies specifically to brush carving; reducing the number of
+   <i>
+    actual lights
+   </i>
+   can still be beneficial, particularly if this reduces shadow counts as well.
+  </p>
+  <p>
+   It can also be helpful to set both r_showTris and
+   <a href="R_showLightScissors_%28cvar%29" title="R showLightScissors (cvar)">
+    r_showLightScissors
+   </a>
+   to "1" along with r_showLightCount. You could use the following:
+  </p>
+  <pre>bind l "toggle r_showLightCount 0 1; toggle r_showTris 0 1;toggle r_showLightScissors 0 1"
+</pre>
+  <p>
+   If you make use of
+   <a href="Patch" title="Patch">
+    patches
+   </a>
+   then make sure surfaces behind them (which are not seen by the player) have the "caulk" material. Being single-sided meshes, they never block light so this will prevent the engine from having to waste time calculating per-pixel lighting on those the unseen surfaces.
+  </p>
+  <a name="Geometry">
+  </a>
+  <h2>
+   Geometry
+  </h2>
+  <p>
+   The r_showTris CVar is helpful for gauging the amount of geometry being processed but it's more commonly used to acertain how your
+   <a href="Visportal" title="Visportal">
+    visportals
+   </a>
+   are affecting performance. You should combine it with the following CVars:
+  </p>
+  <pre>bind p "toggle r_showTris 0 2;toggle <a href="R_useScissor_%28cvar%29" title="R useScissor (cvar)">r_useScissor</a> 1 0;toggle <a href="R_showPortals_%28cvar%29" title="R showPortals (cvar)">r_showPortals</a> 0 1"
+</pre>
+  <p>
+   See also the
+   <a href="Models_vs_brushes" title="Models vs brushes">
+    models vs brushes
+   </a>
+   section.
+  </p>
+  <a name="Textures">
+  </a>
+  <h2>
+   Textures
+  </h2>
+  <p>
+   You can use the
+   <a href="ListImages_%28console_command%29" title="ListImages (console command)">
+    listImages
+   </a>
+   console command to check how the texture memory utilization of your map compares to the official maps. Make sure you test at each of the
+   <a href="Quality_settings" title="Quality settings">
+    quality settings
+   </a>
+   .
+  </p>
+  <a name="See_also">
+  </a>
+  <h2>
+   See also
+  </h2>
+  <ul>
+   <li>
+    <a class="external text" href="http://www.iddevnet.com/quake4/LevelEditor_Performance" title="http://www.iddevnet.com/quake4/LevelEditor_Performance">
+     iddevnet page on optimizing Q4 maps
+    </a>
+   </li>
+  </ul>
+ </body>
+</html>

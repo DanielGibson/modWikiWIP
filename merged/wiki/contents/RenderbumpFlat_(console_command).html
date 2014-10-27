@@ -1,71 +1,75 @@
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  This command renders a normal map from a high polygon model. The resulting normal map is intended for use on map geometry (walls, ceilings, floors, ect...).
- </p>
- <a name="Usage">
- </a>
- <h2>
-  Usage
- </h2>
- <p>
-  At the console type...
- </p>
- <pre>renderbumpFlat [-size width height] [model]
+<html>
+ <body>
+  <a name="Description">
+  </a>
+  <h2>
+   Description
+  </h2>
+  <p>
+   This command renders a normal map from a high polygon model. The resulting normal map is intended for use on map geometry (walls, ceilings, floors, ect...).
+  </p>
+  <a name="Usage">
+  </a>
+  <h2>
+   Usage
+  </h2>
+  <p>
+   At the console type...
+  </p>
+  <pre>renderbumpFlat [-size width height] [model]
 </pre>
- <a name="Parameters">
- </a>
- <h2>
-  Parameters
- </h2>
- <ul>
-  <li>
-   [width] - The width of the output image.
-  </li>
-  <li>
-   [height] - The height of the output image.
-  </li>
-  <li>
-   [model] - The model used to render the normal map.
-  </li>
- </ul>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
- <p>
-  If the image size is not specified, the default of 256 x 256 is used.
- </p>
- <p>
-  If the target resolution is larger than your current resolution, you will need to adjust the
-  <a href="R_mode_%28cvar%29" title="R mode (cvar)">
-   r_mode
+  <a name="Parameters">
   </a>
-  CVar and issue a
-  <a href="Vid_restart_%28console_command%29" title="Vid restart (console command)">
-   vid_restart
+  <h2>
+   Parameters
+  </h2>
+  <ul>
+   <li>
+    [width] - The width of the output image.
+   </li>
+   <li>
+    [height] - The height of the output image.
+   </li>
+   <li>
+    [model] - The model used to render the normal map.
+   </li>
+  </ul>
+  <a name="Notes">
   </a>
-  command to accommodate a larger image. Since this command renders in windowed mode it's important that the desktop resolution provides enough screen real estate to display the entire window.
- </p>
- <p>
-  Models must be oriented towards a specific axis in order to be captured during the render process. Details are as follows...
- </p>
- <ul>
-  <li>
-   .LWO - Negative Z Axis
-  </li>
-  <li>
-   .ASE - ???
-  </li>
- </ul>
- <p>
-  A color map is also exported. The colors are determined by the base color of each polygon. For clarification, base color does not refer to vertex colors, procedural textures or texture maps but rather the color of a polygon when no texture is applied.
- </p>
- <p>
-  <br/>
- </p>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:1294-0!1!0!0!!en!2 and timestamp 20120126041459 -->
+  <h2>
+   Notes
+  </h2>
+  <p>
+   If the image size is not specified, the default of 256 x 256 is used.
+  </p>
+  <p>
+   If the target resolution is larger than your current resolution, you will need to adjust the
+   <a href="R_mode_%28cvar%29" title="R mode (cvar)">
+    r_mode
+   </a>
+   CVar and issue a
+   <a href="Vid_restart_%28console_command%29" title="Vid restart (console command)">
+    vid_restart
+   </a>
+   command to accommodate a larger image. Since this command renders in windowed mode it's important that the desktop resolution provides enough screen real estate to display the entire window.
+  </p>
+  <p>
+   Models must be oriented towards a specific axis in order to be captured during the render process. Details are as follows...
+  </p>
+  <ul>
+   <li>
+    .LWO - Negative Z Axis
+   </li>
+   <li>
+    .ASE - ???
+   </li>
+  </ul>
+  <p>
+   A color map is also exported. The colors are determined by the base color of each polygon. For clarification, base color does not refer to vertex colors, procedural textures or texture maps but rather the color of a polygon when no texture is applied.
+  </p>
+  <p>
+   <br/>
+  </p>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:1294-0!1!0!0!!en!2 and timestamp 20120126041459 -->
+ </body>
+</html>

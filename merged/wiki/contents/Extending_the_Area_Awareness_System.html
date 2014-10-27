@@ -1,54 +1,56 @@
- <p>
-  I recently finished up some work extending the AAS compiler. I was able to add elevator and transporter capabilities to the navigation graph. I did this by adding new reachabilities between areas based on each idPlat in a map.
- </p>
- <p>
-  I have summarized the work below and included a download link for the code,
-  <b>
-   the aas code in the download is one version behind and needs to be updated.
-  </b>
- </p>
- <p>
-  The changes below could be used for adding the same ability for other AI characters in doom 3.
- </p>
- <p>
-  <b>
-   Is there any way to decrease tab indentation in code on the wiki?
-  </b>
- </p>
- <a name="Overview">
- </a>
- <h2>
-  Overview
- </h2>
- <p>
-  When doom 3 shipped it did so without support for elevators. So paths like the following resulted even though the elevator would be a better choice.
- </p>
- <div class="thumb tnone">
-  <div style="width:182px;">
-   <a class="internal" href="Image:Bot_noelevator.jpg" title="">
-    <img alt="" height="135" longdesc="/wiki/Image:Bot_noelevator.jpg" src="/w/images/thumb/b/b4/Bot_noelevator.jpg/180px-Bot_noelevator.jpg" width="180"/>
-   </a>
-   <div class="thumbcaption">
-    <div class="magnify" style="float:right">
-     <a class="internal" href="Image:Bot_noelevator.jpg" title="Enlarge">
-      <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
-     </a>
+<html>
+ <body>
+  <p>
+   I recently finished up some work extending the AAS compiler. I was able to add elevator and transporter capabilities to the navigation graph. I did this by adding new reachabilities between areas based on each idPlat in a map.
+  </p>
+  <p>
+   I have summarized the work below and included a download link for the code,
+   <b>
+    the aas code in the download is one version behind and needs to be updated.
+   </b>
+  </p>
+  <p>
+   The changes below could be used for adding the same ability for other AI characters in doom 3.
+  </p>
+  <p>
+   <b>
+    Is there any way to decrease tab indentation in code on the wiki?
+   </b>
+  </p>
+  <a name="Overview">
+  </a>
+  <h2>
+   Overview
+  </h2>
+  <p>
+   When doom 3 shipped it did so without support for elevators. So paths like the following resulted even though the elevator would be a better choice.
+  </p>
+  <div class="thumb tnone">
+   <div style="width:182px;">
+    <a class="internal" href="Image:Bot_noelevator.jpg" title="">
+     <img alt="" height="135" longdesc="/wiki/Image:Bot_noelevator.jpg" src="/w/images/thumb/b/b4/Bot_noelevator.jpg/180px-Bot_noelevator.jpg" width="180"/>
+    </a>
+    <div class="thumbcaption">
+     <div class="magnify" style="float:right">
+      <a class="internal" href="Image:Bot_noelevator.jpg" title="Enlarge">
+       <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+      </a>
+     </div>
     </div>
    </div>
   </div>
- </div>
- <p>
-  What follows is an overview of how elevators capabilities were added and some tips if you want to incorporate this capability into your mod.
- </p>
- <a name="Setup_Code">
- </a>
- <h2>
-  Setup Code
- </h2>
- <p>
-  Each time a map is loaded you will need to call the routines to add the reachabilities to the AAS system. I had to reorganize just a little bit to make the map entities load before the AAS files were loaded and processed.
- </p>
- <pre> 
+  <p>
+   What follows is an overview of how elevators capabilities were added and some tips if you want to incorporate this capability into your mod.
+  </p>
+  <a name="Setup_Code">
+  </a>
+  <h2>
+   Setup Code
+  </h2>
+  <p>
+   Each time a map is loaded you will need to call the routines to add the reachabilities to the AAS system. I had to reorganize just a little bit to make the map entities load before the AAS files were loaded and processed.
+  </p>
+  <pre> 
 <span style="color: #339900; font-style: italic;">/*
 ===================
 idGameLocal::LoadMap
@@ -72,10 +74,10 @@ playerConnectedAreas.<span style="color: #00aabb;">i</span> = -<span style="colo
  
 	<span style="color: #339900;">// clear the smoke particle free list</span>
 	smokeParticles-&gt;Init<span style="color: #000000;">(</span><span style="color: #000000;">)</span>;</pre>
- <p>
-  When the AAS files are loaded they need to have data added to them. In order to calculate that data the rest of the map needs to be loaded. Moving the AAS initialization to later in the process after MapPopulate takes care of this.
- </p>
- <pre> 
+  <p>
+   When the AAS files are loaded they need to have data added to them. In order to calculate that data the rest of the map needs to be loaded. Moving the AAS initialization to later in the process after MapPopulate takes care of this.
+  </p>
+  <pre> 
 <span style="color: #339900; font-style: italic;">/*
 ===================
 idGameLocal::InitFromNewMap
@@ -96,10 +98,10 @@ idGameLocal::InitFromNewMap
 <span style="color: #339900;">#endif</span>
  
 	mpGame.<span style="color: #00aabb;">Reset</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span>;</pre>
- <p>
-  When Init is called on each idAAS the actual work to find and add the extensions is done. For now the only file that is processed is the aas48 file. If someone wants to incorporate the player class changing code we could have bots with any model, and any AAS size. If you do this, you will need to change the check to include the appropriate extension. other modifications later may also be necessary.
- </p>
- <pre> 
+  <p>
+   When Init is called on each idAAS the actual work to find and add the extensions is done. For now the only file that is processed is the aas48 file. If someone wants to incorporate the player class changing code we could have bots with any model, and any AAS size. If you do this, you will need to change the check to include the appropriate extension. other modifications later may also be necessary.
+  </p>
+  <pre> 
 <span style="color: #339900; font-style: italic;">/*
 ============
 idAASLocal::Init
@@ -132,10 +134,10 @@ idAASLocal::Init
 	<span style="color: #000000;">}</span>
 	<span style="color: #0000ff;">return</span> <span style="color: #0000ff;">true</span>;
 <span style="color: #000000;">}</span></pre>
- <p>
-  Just for reference the botAASBuilder variable is declared in AAS_local.h as an instance of BotAASBuild, which had to get up close and personal to idAASLocal.
- </p>
- <pre> 
+  <p>
+   Just for reference the botAASBuilder variable is declared in AAS_local.h as an instance of BotAASBuild, which had to get up close and personal to idAASLocal.
+  </p>
+  <pre> 
  
 class idAASLocal : <span style="color: #0000ff;">public</span> idAAS <span style="color: #000000;">{</span>
 <span style="color: #339900;">#ifdef MOD_BOTS // cusTom3 - aas extensions</span>
@@ -148,10 +150,10 @@ class idAASLocal : <span style="color: #0000ff;">public</span> idAAS <span styl
 <span style="color: #0000ff;">private</span>:	
 	BotAASBuild *				botAASBuilder;
 <span style="color: #339900;">#endif</span></pre>
- <p>
-  The call to AddReachabilities is where it gets fun. It turns out that the engine exe and the game dll have separate heaps. So in order to extend the AAS navigation graph I had to hack around some memory allocation issues. What it amounts to is I back up the original server allocated lists and replace them with my own dll allocated list. The original list data is appended to the local list, and now we are free to add as much data as we want.
- </p>
- <pre> 
+  <p>
+   The call to AddReachabilities is where it gets fun. It turns out that the engine exe and the game dll have separate heaps. So in order to extend the AAS navigation graph I had to hack around some memory allocation issues. What it amounts to is I back up the original server allocated lists and replace them with my own dll allocated list. The original list data is appended to the local list, and now we are free to add as much data as we want.
+  </p>
+  <pre> 
 <span style="color: #339900; font-style: italic;">/*
 ============
 BotAASBuild::AddReachabilities
@@ -180,18 +182,18 @@ BotAASBuild::AddReachabilities
 	AddTransporterReachabilities<span style="color: #000000;">(</span><span style="color: #000000;">)</span>;
 	<span style="color: #339900;">//TryToAddLadders();</span>
 <span style="color: #000000;">}</span></pre>
- <a name="Adding_Elevator_Reachabilities">
- </a>
- <h2>
-  Adding Elevator Reachabilities
- </h2>
- <p>
-  The add AddElevatorReachabilies method became a MONSTER. There may be simpler implementations, but then again, this one started out simpler at one point too. I will only cover this routine at a high level, explaining some of the reasons for the design. I would suggest you read the comments and skim the code unless your are truly interested in the messy implementation.
- </p>
- <p>
-  My apologies for any formatting crapiness :( is there a way to get wiki not to indent so far???
- </p>
- <pre> 
+  <a name="Adding_Elevator_Reachabilities">
+  </a>
+  <h2>
+   Adding Elevator Reachabilities
+  </h2>
+  <p>
+   The add AddElevatorReachabilies method became a MONSTER. There may be simpler implementations, but then again, this one started out simpler at one point too. I will only cover this routine at a high level, explaining some of the reasons for the design. I would suggest you read the comments and skim the code unless your are truly interested in the messy implementation.
+  </p>
+  <p>
+   My apologies for any formatting crapiness :( is there a way to get wiki not to indent so far???
+  </p>
+  <pre> 
 <span style="color: #339900; font-style: italic;">/*
 ============
 BotAASBuild::AddElevatorReachabilities
@@ -217,13 +219,13 @@ cusTom3	- welcome to the longest, largest, monolithic beast i can ever credit my
 		<span style="color: #339900;">// that is an elevator</span>
 		<span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span> ent-&gt;IsType<span style="color: #000000;">(</span> idPlat::<span style="color: #00aabb;">Type</span> <span style="color: #000000;">)</span> <span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
 			idPlat *platform = static_cast&lt;idPlat *&gt;<span style="color: #000000;">(</span>ent<span style="color: #000000;">)</span>;</pre>
- <p>
-  This is why we needed the map populated ;)  this first part just says, find each platform in the map.
- </p>
- <p>
-  Then a bunch of variables and stuff:
- </p>
- <pre> 
+  <p>
+   This is why we needed the map populated ;)  this first part just says, find each platform in the map.
+  </p>
+  <p>
+   Then a bunch of variables and stuff:
+  </p>
+  <pre> 
 	<span style="color: #339900;">// TODO: play with how much to expand this</span>
 	idBounds bounds = model-&gt;GetAbsBounds<span style="color: #000000;">(</span><span style="color: #000000;">)</span>.<span style="color: #00aabb;">Expand</span><span style="color: #000000;">(</span> <span style="color: #0000dd;">0</span> <span style="color: #000000;">)</span>;
 		
@@ -252,13 +254,13 @@ cusTom3	- welcome to the longest, largest, monolithic beast i can ever credit my
 	<span style="color: #0000ff;">int</span> firstPortalNum, lastPortalNum;
 	firstPortalNum = lastPortalNum = <span style="color: #0000dd;">0</span>;
 	<span style="color: #0000ff;">bool</span> reachabilityCreated = <span style="color: #0000ff;">false</span>;</pre>
- <p>
-  The first thing the routine does when it finds a plat is trace up the “elevator shaft�? to see if there are any cluster portals separating the top and bottom positions of the plat. if the trace finds one, it is stored for processing later, and we continue up in search of more. If it finds more it creates reachabilities to them now.
- </p>
- <p>
-  <br/>
- </p>
- <pre> 
+  <p>
+   The first thing the routine does when it finds a plat is trace up the “elevator shaft�? to see if there are any cluster portals separating the top and bottom positions of the plat. if the trace finds one, it is stored for processing later, and we continue up in search of more. If it finds more it creates reachabilities to them now.
+  </p>
+  <p>
+   <br/>
+  </p>
+  <pre> 
 <span style="color: #339900;">// look for portals up the elevator shaft and create reachabilities </span>
 	start = bottom;
 	bottomAreaNum = aas-&gt;PointReachableAreaNum<span style="color: #000000;">(</span> start, DefaultBotBounds<span style="color: #000000;">(</span><span style="color: #000000;">)</span>, travelFlags <span style="color: #000000;">)</span>;
@@ -315,13 +317,13 @@ cusTom3	- welcome to the longest, largest, monolithic beast i can ever credit my
 		start = trace.<span style="color: #00aabb;">points</span><span style="color: #000000;">[</span>q<span style="color: #000000;">]</span>;
 	<span style="color: #000000;">}</span> <span style="color: #339900;">// end for each area </span>
  </pre>
- <p>
-  When the above code is done if there was one portal on the way up the point where it is first hit will be in firstPortal. If there were more than one (think 3 story plat) the point where the last portal found (nearest top) will be in lastPortal and a reachability will have been created between the portals. none of the portal checking code would be required if the portals were created after the reachabilies were, oh well, it was fun learning it.
- </p>
- <p>
-  Next the routine starts looking around the bottom of the platform for places to start using the plat. It looks a little like this as it searches around the bottom position of the plat:
- </p>
- <pre> 
+  <p>
+   When the above code is done if there was one portal on the way up the point where it is first hit will be in firstPortal. If there were more than one (think 3 story plat) the point where the last portal found (nearest top) will be in lastPortal and a reachability will have been created between the portals. none of the portal checking code would be required if the portals were created after the reachabilies were, oh well, it was fun learning it.
+  </p>
+  <p>
+   Next the routine starts looking around the bottom of the platform for places to start using the plat. It looks a little like this as it searches around the bottom position of the plat:
+  </p>
+  <pre> 
 <span style="color: #339900; font-style: italic;">/*
 ================
 	4-----1-----5
@@ -333,10 +335,10 @@ cusTom3	- welcome to the longest, largest, monolithic beast i can ever credit my
 	7-----3-----6
 ================
 */</span></pre>
- <p>
-  this is q3 inspired ;)
- </p>
- <pre> 
+  <p>
+   this is q3 inspired ;)
+  </p>
+  <pre> 
 <span style="color: #0000ff;">float</span> x<span style="color: #000000;">[</span><span style="color: #0000dd;">8</span><span style="color: #000000;">]</span>, y<span style="color: #000000;">[</span><span style="color: #0000dd;">8</span><span style="color: #000000;">]</span>, x_top<span style="color: #000000;">[</span><span style="color: #0000dd;">8</span><span style="color: #000000;">]</span>, y_top<span style="color: #000000;">[</span><span style="color: #0000dd;">8</span><span style="color: #000000;">]</span>;
 x<span style="color: #000000;">[</span><span style="color: #0000dd;">0</span><span style="color: #000000;">]</span> = bounds<span style="color: #000000;">[</span><span style="color: #0000dd;">0</span><span style="color: #000000;">]</span><span style="color: #000000;">[</span><span style="color: #0000dd;">0</span><span style="color: #000000;">]</span>; x<span style="color: #000000;">[</span><span style="color: #0000dd;">1</span><span style="color: #000000;">]</span> = center<span style="color: #000000;">[</span><span style="color: #0000dd;">0</span><span style="color: #000000;">]</span>; x<span style="color: #000000;">[</span><span style="color: #0000dd;">2</span><span style="color: #000000;">]</span> = bounds<span style="color: #000000;">[</span><span style="color: #0000dd;">1</span><span style="color: #000000;">]</span><span style="color: #000000;">[</span><span style="color: #0000dd;">0</span><span style="color: #000000;">]</span>; x<span style="color: #000000;">[</span><span style="color: #0000dd;">3</span><span style="color: #000000;">]</span> = center<span style="color: #000000;">[</span><span style="color: #0000dd;">0</span><span style="color: #000000;">]</span>;
 x<span style="color: #000000;">[</span><span style="color: #0000dd;">4</span><span style="color: #000000;">]</span> = bounds<span style="color: #000000;">[</span><span style="color: #0000dd;">0</span><span style="color: #000000;">]</span><span style="color: #000000;">[</span><span style="color: #0000dd;">0</span><span style="color: #000000;">]</span>; x<span style="color: #000000;">[</span><span style="color: #0000dd;">5</span><span style="color: #000000;">]</span> = bounds<span style="color: #000000;">[</span><span style="color: #0000dd;">1</span><span style="color: #000000;">]</span><span style="color: #000000;">[</span><span style="color: #0000dd;">0</span><span style="color: #000000;">]</span>; x<span style="color: #000000;">[</span><span style="color: #0000dd;">6</span><span style="color: #000000;">]</span> = bounds<span style="color: #000000;">[</span><span style="color: #0000dd;">1</span><span style="color: #000000;">]</span><span style="color: #000000;">[</span><span style="color: #0000dd;">0</span><span style="color: #000000;">]</span>; x<span style="color: #000000;">[</span><span style="color: #0000dd;">7</span><span style="color: #000000;">]</span> = bounds<span style="color: #000000;">[</span><span style="color: #0000dd;">0</span><span style="color: #000000;">]</span><span style="color: #000000;">[</span><span style="color: #0000dd;">0</span><span style="color: #000000;">]</span>;
@@ -377,10 +379,10 @@ y<span style="color: #000000;">[</span><span style="color: #0000dd;">4</span><sp
 		<span style="color: #000000;">}</span>
 		bottomClusterNum = file-&gt;areas<span style="color: #000000;">[</span>bottomAreaNum<span style="color: #000000;">]</span>.<span style="color: #00aabb;">cluster</span>;
 	<span style="color: #000000;">}</span></pre>
- <p>
-  If it finds a location that is valid to start from, it then starts trying to find a place to get to at the top. It will first search around the top just like it did around the bottom. This makes the routine favor direct reachabilities from top to bottom. On the 9th iteration it checks for a portal up the elevator shaft and creates the reachability to the portal if it is there.
- </p>
- <pre> 
+  <p>
+   If it finds a location that is valid to start from, it then starts trying to find a place to get to at the top. It will first search around the top just like it did around the bottom. This makes the routine favor direct reachabilities from top to bottom. On the 9th iteration it checks for a portal up the elevator shaft and creates the reachability to the portal if it is there.
+  </p>
+  <pre> 
 <span style="color: #339900;">//look at adjacent areas around the top of the plat make larger steps to outside the plat everytime</span>
 idBounds topBounds = bounds; 
 <span style="color: #0000ff;">for</span> <span style="color: #000000;">(</span> <span style="color: #0000ff;">int</span> n = <span style="color: #0000dd;">0</span>; n &lt; <span style="color: #0000dd;">3</span>; n++ <span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
@@ -433,10 +435,10 @@ idBounds topBounds = bounds;
 			<span style="color: #000000;">}</span>
 			<span style="color: #339900;">// couldn't find top area</span>
 			<span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span> l &gt;= <span style="color: #0000dd;">8</span> <span style="color: #000000;">)</span> <span style="color: #0000ff;">continue</span>;</pre>
- <p>
-  If it has found a valid bottom and top position vector it checks to make sure a reachability between the two makes sense, checking for things like the top and bottom being in the same area, or in different clusters, etc. if they are in different clusters the routine will look for possible portal areas along the way.
- </p>
- <pre> 
+  <p>
+   If it has found a valid bottom and top position vector it checks to make sure a reachability between the two makes sense, checking for things like the top and bottom being in the same area, or in different clusters, etc. if they are in different clusters the routine will look for possible portal areas along the way.
+  </p>
+  <pre> 
 <span style="color: #339900;">// don't create reachabilities to the same area (worthless)</span>
    	<span style="color: #0000ff;">if</span><span style="color: #000000;">(</span> bottomAreaNum == topAreaNum <span style="color: #000000;">)</span> <span style="color: #0000ff;">continue</span>;
  
@@ -516,20 +518,20 @@ idBounds topBounds = bounds;
 			<span style="color: #000000;">}</span>
 		<span style="color: #000000;">}</span>
 	<span style="color: #000000;">}</span></pre>
- <p>
-  If we got passed all that ugliness then we are ready to create a reachability.
- </p>
- <pre> 
+  <p>
+   If we got passed all that ugliness then we are ready to create a reachability.
+  </p>
+  <pre> 
 	<span style="color: #339900;">// if got to this point there is a valid to area and from area for a reachability</span>
 	CreateReachability<span style="color: #000000;">(</span> start, end, bottomAreaNum, topAreaNum, TFL_ELEVATOR <span style="color: #000000;">)</span>;
 	reachabilityCreated = <span style="color: #0000ff;">true</span>;
 	<span style="color: #339900;">//don't go any further to the outside</span>
 	n = <span style="color: #0000dd;">9999</span>;
 <span style="color: #000000;">}</span></pre>
- <p>
-  This type of pattern will continue until each spot in the bottom rotation has been checked against each spot in the top rotation, and the first and last portals have also been connected. Finally, if all the coagulation above couldn’t create something usable, one last attempt is made creating a portal that doesn’t REALLY share an edge between two clusters, but it works ;)
- </p>
- <pre> 
+  <p>
+   This type of pattern will continue until each spot in the bottom rotation has been checked against each spot in the top rotation, and the first and last portals have also been connected. Finally, if all the coagulation above couldn’t create something usable, one last attempt is made creating a portal that doesn’t REALLY share an edge between two clusters, but it works ;)
+  </p>
+  <pre> 
 	<span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span> !reachabilityCreated <span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
 		<span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span> aas_showElevators.<span style="color: #00aabb;">GetBool</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span> <span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
 			<span style="color: #339900;">// give a little warning visually ;)</span>
@@ -552,129 +554,129 @@ idBounds topBounds = bounds;
 			CreateReachability<span style="color: #000000;">(</span> bottomNeedPortal, topNeedPortal, bottomAreaNum, topAreaNum, TFL_ELEVATOR <span style="color: #000000;">)</span>; 
 		<span style="color: #000000;">}</span>
 	<span style="color: #000000;">}</span></pre>
- <p>
-  Here are some pics to help explain. let me know if they are too dark ( my old monitor sucks a$$) also,
-  <b>
-   the image policy page is empty
-  </b>
-  so I took the safe route and uploaded crappy resolution images, if we thumbnail them can we upload nicer ones?
- </p>
- <a name="Elevator_Screenshots">
- </a>
- <h2>
-  Elevator Screenshots
- </h2>
- <p>
-  This is what a plat looks like when the top and bottom are in the same cluster. Yes, there are probably too many reachabilities. I just haven’t tweaked enough.
- </p>
- <div class="thumb tnone">
-  <div style="width:182px;">
-   <a class="internal" href="Image:Plat_reachability_1.jpg" title="">
-    <img alt="" height="135" longdesc="/wiki/Image:Plat_reachability_1.jpg" src="/w/images/thumb/4/4b/Plat_reachability_1.jpg/180px-Plat_reachability_1.jpg" width="180"/>
-   </a>
-   <div class="thumbcaption">
-    <div class="magnify" style="float:right">
-     <a class="internal" href="Image:Plat_reachability_1.jpg" title="Enlarge">
-      <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
-     </a>
+  <p>
+   Here are some pics to help explain. let me know if they are too dark ( my old monitor sucks a$$) also,
+   <b>
+    the image policy page is empty
+   </b>
+   so I took the safe route and uploaded crappy resolution images, if we thumbnail them can we upload nicer ones?
+  </p>
+  <a name="Elevator_Screenshots">
+  </a>
+  <h2>
+   Elevator Screenshots
+  </h2>
+  <p>
+   This is what a plat looks like when the top and bottom are in the same cluster. Yes, there are probably too many reachabilities. I just haven’t tweaked enough.
+  </p>
+  <div class="thumb tnone">
+   <div style="width:182px;">
+    <a class="internal" href="Image:Plat_reachability_1.jpg" title="">
+     <img alt="" height="135" longdesc="/wiki/Image:Plat_reachability_1.jpg" src="/w/images/thumb/4/4b/Plat_reachability_1.jpg/180px-Plat_reachability_1.jpg" width="180"/>
+    </a>
+    <div class="thumbcaption">
+     <div class="magnify" style="float:right">
+      <a class="internal" href="Image:Plat_reachability_1.jpg" title="Enlarge">
+       <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+      </a>
+     </div>
     </div>
    </div>
   </div>
- </div>
- <p>
-  The Edge 2 turned out good, yes you also see a transporter reachability in there ;)
- </p>
- <div class="thumb tnone">
-  <div style="width:182px;">
-   <a class="internal" href="Image:Plat_reachability_2.jpg" title="">
-    <img alt="" height="135" longdesc="/wiki/Image:Plat_reachability_2.jpg" src="/w/images/thumb/5/57/Plat_reachability_2.jpg/180px-Plat_reachability_2.jpg" width="180"/>
-   </a>
-   <div class="thumbcaption">
-    <div class="magnify" style="float:right">
-     <a class="internal" href="Image:Plat_reachability_2.jpg" title="Enlarge">
-      <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
-     </a>
+  <p>
+   The Edge 2 turned out good, yes you also see a transporter reachability in there ;)
+  </p>
+  <div class="thumb tnone">
+   <div style="width:182px;">
+    <a class="internal" href="Image:Plat_reachability_2.jpg" title="">
+     <img alt="" height="135" longdesc="/wiki/Image:Plat_reachability_2.jpg" src="/w/images/thumb/5/57/Plat_reachability_2.jpg/180px-Plat_reachability_2.jpg" width="180"/>
+    </a>
+    <div class="thumbcaption">
+     <div class="magnify" style="float:right">
+      <a class="internal" href="Image:Plat_reachability_2.jpg" title="Enlarge">
+       <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+      </a>
+     </div>
     </div>
    </div>
   </div>
- </div>
- <p>
-  This one has a cluster portal up the center. It was important to make sure the reachabilities still started at the outer edge so that the AI would know they were looking to do plat navigation before they accidentally ended up on or under it.
- </p>
- <div class="thumb tnone">
-  <div style="width:182px;">
-   <a class="internal" href="Image:Plat_reachability_2_portal.jpg" title="">
-    <img alt="" height="135" longdesc="/wiki/Image:Plat_reachability_2_portal.jpg" src="/w/images/thumb/8/88/Plat_reachability_2_portal.jpg/180px-Plat_reachability_2_portal.jpg" width="180"/>
-   </a>
-   <div class="thumbcaption">
-    <div class="magnify" style="float:right">
-     <a class="internal" href="Image:Plat_reachability_2_portal.jpg" title="Enlarge">
-      <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
-     </a>
+  <p>
+   This one has a cluster portal up the center. It was important to make sure the reachabilities still started at the outer edge so that the AI would know they were looking to do plat navigation before they accidentally ended up on or under it.
+  </p>
+  <div class="thumb tnone">
+   <div style="width:182px;">
+    <a class="internal" href="Image:Plat_reachability_2_portal.jpg" title="">
+     <img alt="" height="135" longdesc="/wiki/Image:Plat_reachability_2_portal.jpg" src="/w/images/thumb/8/88/Plat_reachability_2_portal.jpg/180px-Plat_reachability_2_portal.jpg" width="180"/>
+    </a>
+    <div class="thumbcaption">
+     <div class="magnify" style="float:right">
+      <a class="internal" href="Image:Plat_reachability_2_portal.jpg" title="Enlarge">
+       <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+      </a>
+     </div>
     </div>
    </div>
   </div>
- </div>
- <p>
-  There were a couple that were stubborn…
- </p>
- <div class="thumb tnone">
-  <div style="width:182px;">
-   <a class="internal" href="Image:Plat_reachability_skinny.jpg" title="">
-    <img alt="" height="135" longdesc="/wiki/Image:Plat_reachability_skinny.jpg" src="/w/images/thumb/8/86/Plat_reachability_skinny.jpg/180px-Plat_reachability_skinny.jpg" width="180"/>
-   </a>
-   <div class="thumbcaption">
-    <div class="magnify" style="float:right">
-     <a class="internal" href="Image:Plat_reachability_skinny.jpg" title="Enlarge">
-      <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
-     </a>
+  <p>
+   There were a couple that were stubborn…
+  </p>
+  <div class="thumb tnone">
+   <div style="width:182px;">
+    <a class="internal" href="Image:Plat_reachability_skinny.jpg" title="">
+     <img alt="" height="135" longdesc="/wiki/Image:Plat_reachability_skinny.jpg" src="/w/images/thumb/8/86/Plat_reachability_skinny.jpg/180px-Plat_reachability_skinny.jpg" width="180"/>
+    </a>
+    <div class="thumbcaption">
+     <div class="magnify" style="float:right">
+      <a class="internal" href="Image:Plat_reachability_skinny.jpg" title="Enlarge">
+       <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+      </a>
+     </div>
     </div>
    </div>
   </div>
- </div>
- <p>
-  The two story plats have more than one cluster portal up the elevator shaft:
- </p>
- <div class="thumb tnone">
-  <div style="width:182px;">
-   <a class="internal" href="Image:Plat_reachability_2story.jpg" title="">
-    <img alt="" height="135" longdesc="/wiki/Image:Plat_reachability_2story.jpg" src="/w/images/thumb/a/af/Plat_reachability_2story.jpg/180px-Plat_reachability_2story.jpg" width="180"/>
-   </a>
-   <div class="thumbcaption">
-    <div class="magnify" style="float:right">
-     <a class="internal" href="Image:Plat_reachability_2story.jpg" title="Enlarge">
-      <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
-     </a>
+  <p>
+   The two story plats have more than one cluster portal up the elevator shaft:
+  </p>
+  <div class="thumb tnone">
+   <div style="width:182px;">
+    <a class="internal" href="Image:Plat_reachability_2story.jpg" title="">
+     <img alt="" height="135" longdesc="/wiki/Image:Plat_reachability_2story.jpg" src="/w/images/thumb/a/af/Plat_reachability_2story.jpg/180px-Plat_reachability_2story.jpg" width="180"/>
+    </a>
+    <div class="thumbcaption">
+     <div class="magnify" style="float:right">
+      <a class="internal" href="Image:Plat_reachability_2story.jpg" title="Enlarge">
+       <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+      </a>
+     </div>
     </div>
    </div>
   </div>
- </div>
- <p>
-  Will bots be playing CTF soon?
- </p>
- <div class="thumb tnone">
-  <div style="width:182px;">
-   <a class="internal" href="Image:Plat_hit_them_all.jpg" title="">
-    <img alt="" height="135" longdesc="/wiki/Image:Plat_hit_them_all.jpg" src="/w/images/thumb/7/72/Plat_hit_them_all.jpg/180px-Plat_hit_them_all.jpg" width="180"/>
-   </a>
-   <div class="thumbcaption">
-    <div class="magnify" style="float:right">
-     <a class="internal" href="Image:Plat_hit_them_all.jpg" title="Enlarge">
-      <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
-     </a>
+  <p>
+   Will bots be playing CTF soon?
+  </p>
+  <div class="thumb tnone">
+   <div style="width:182px;">
+    <a class="internal" href="Image:Plat_hit_them_all.jpg" title="">
+     <img alt="" height="135" longdesc="/wiki/Image:Plat_hit_them_all.jpg" src="/w/images/thumb/7/72/Plat_hit_them_all.jpg/180px-Plat_hit_them_all.jpg" width="180"/>
+    </a>
+    <div class="thumbcaption">
+     <div class="magnify" style="float:right">
+      <a class="internal" href="Image:Plat_hit_them_all.jpg" title="Enlarge">
+       <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+      </a>
+     </div>
     </div>
    </div>
   </div>
- </div>
- <a name="Adding_Transporter_Reachabilities">
- </a>
- <h2>
-  Adding Transporter Reachabilities
- </h2>
- <p>
-  Just for reference:
- </p>
- <pre> 
+  <a name="Adding_Transporter_Reachabilities">
+  </a>
+  <h2>
+   Adding Transporter Reachabilities
+  </h2>
+  <p>
+   Just for reference:
+  </p>
+  <pre> 
 <span style="color: #339900; font-style: italic;">/*
 ============
 BotAASBuild::AddTransporterReachabilities
@@ -742,15 +744,15 @@ BotAASBuild::AddTransporterReachabilities
 		<span style="color: #000000;">}</span>
 	<span style="color: #000000;">}</span>
 <span style="color: #000000;">}</span></pre>
- <a name="Helper_Routines">
- </a>
- <h2>
-  Helper Routines
- </h2>
- <p>
-  A few routines were broken out for reuse. I started reading Large Scale Software Development in C++ after implementing all of this and would probably design the component different now if i did it again.
- </p>
- <pre> 
+  <a name="Helper_Routines">
+  </a>
+  <h2>
+   Helper Routines
+  </h2>
+  <p>
+   A few routines were broken out for reuse. I started reading Large Scale Software Development in C++ after implementing all of this and would probably design the component different now if i did it again.
+  </p>
+  <pre> 
 <span style="color: #339900; font-style: italic;">/*
 ============
 BotAASBuild::CreateReachability
@@ -791,7 +793,7 @@ BotAASBuild::CreateReachability
 	<span style="color: #000000;">}</span>
 	<span style="color: #339900;">//return r;</span>
 <span style="color: #000000;">}</span></pre>
- <pre> 
+  <pre> 
 <span style="color: #339900; font-style: italic;">/*
 ============
 BotAASBuild::CreatePortal
@@ -840,15 +842,15 @@ BotAASBuild::CreatePortal
 	file-&gt;areas<span style="color: #000000;">[</span>areaNum<span style="color: #000000;">]</span>.<span style="color: #00aabb;">contents</span> |= AREACONTENTS_CLUSTERPORTAL;
 <span style="color: #000000;">}</span>
  </pre>
- <a name="Clean_Up_Code">
- </a>
- <h2>
-  Clean Up Code
- </h2>
- <p>
-  When a map unloads all the AAS file additions need to be undone before the engine tries do free the AAS data. If this isn’t done correctly you may spend hours and days reading about things like heap corruption and linking to the CRT runtime and many other things C++ :)
- </p>
- <pre> 
+  <a name="Clean_Up_Code">
+  </a>
+  <h2>
+   Clean Up Code
+  </h2>
+  <p>
+   When a map unloads all the AAS file additions need to be undone before the engine tries do free the AAS data. If this isn’t done correctly you may spend hours and days reading about things like heap corruption and linking to the CRT runtime and many other things C++ :)
+  </p>
+  <pre> 
 <span style="color: #339900; font-style: italic;">/*
 ============
 idAASLocal::Shutdown
@@ -869,10 +871,10 @@ idAASLocal::Shutdown
 		<span style="color: #0000ff;">file</span> = <span style="color: #0000ff;">NULL</span>;
 	<span style="color: #000000;">}</span>
 <span style="color: #000000;">}</span></pre>
- <p>
-  This calls into a clean up routine that puts the lists back into place, cleans up the  remainder of the new ones and unlinks all the reachabilities from the data structures.
- </p>
- <pre> 
+  <p>
+   This calls into a clean up routine that puts the lists back into place, cleans up the  remainder of the new ones and unlinks all the reachabilities from the data structures.
+  </p>
+  <pre> 
 <span style="color: #339900; font-style: italic;">/*
 ============
 BotAASBuild::FreeAAS
@@ -962,38 +964,38 @@ BotAASBuild::FreeAAS
  
 	<span style="color: #339900;">//OutputAASReachInfo( file );	</span>
 <span style="color: #000000;">}</span></pre>
- <a name="Source_Download_and_Mod_Integration">
- </a>
- <h2>
-  Source Download and Mod Integration
- </h2>
- <p>
-  The source can be downloaded from:
- </p>
- <p>
-  <a class="external free" href="http://home.comcast.net/~matkatamibakundo/bots.src.zip" title="http://home.comcast.net/~matkatamibakundo/bots.src.zip">
-   http://home.comcast.net/~matkatamibakundo/bots.src.zip
+  <a name="Source_Download_and_Mod_Integration">
   </a>
- </p>
- <p>
-  thanks to chuck at
-  <a class="external free" href="http://home.comcast.net/~chuckdoodbmx/" title="http://home.comcast.net/~chuckdoodbmx/">
-   http://home.comcast.net/~chuckdoodbmx/
-  </a>
-  for hosting ;)
- </p>
- <p>
-  To integrate this into your mod you can search for:
- </p>
- <pre> 
+  <h2>
+   Source Download and Mod Integration
+  </h2>
+  <p>
+   The source can be downloaded from:
+  </p>
+  <p>
+   <a class="external free" href="http://home.comcast.net/~matkatamibakundo/bots.src.zip" title="http://home.comcast.net/~matkatamibakundo/bots.src.zip">
+    http://home.comcast.net/~matkatamibakundo/bots.src.zip
+   </a>
+  </p>
+  <p>
+   thanks to chuck at
+   <a class="external free" href="http://home.comcast.net/~chuckdoodbmx/" title="http://home.comcast.net/~chuckdoodbmx/">
+    http://home.comcast.net/~chuckdoodbmx/
+   </a>
+   for hosting ;)
+  </p>
+  <p>
+   To integrate this into your mod you can search for:
+  </p>
+  <pre> 
 <span style="color: #339900;">#ifdef MOD_BOTS // cusTom3 - aas extensions</span></pre>
- <p>
-  Every change necessary was wrapped in with that. After you have the AAS extensions integrated you will need to code the AI logic to use the elevators. The teleporters should just work ;). Tinman has sabot using the plats and has scripted the logic necessary. You can check out his source when it is released if you need an example of how to do this.
- </p>
- <p>
-  Here are a couple of routines I knocked out to help with that effort.
- </p>
- <pre> 
+  <p>
+   Every change necessary was wrapped in with that. After you have the AAS extensions integrated you will need to code the AI logic to use the elevators. The teleporters should just work ;). Tinman has sabot using the plats and has scripted the logic necessary. You can check out his source when it is released if you need an example of how to do this.
+  </p>
+  <p>
+   Here are a couple of routines I knocked out to help with that effort.
+  </p>
+  <pre> 
 <span style="color: #339900; font-style: italic;">/*
 ================
 botAi::Event_IsUnderPlat
@@ -1081,12 +1083,14 @@ cusTom3 had this funny idea to draw a picture for the search arrays ;)
 	<span style="color: #000000;">}</span>
 	idThread::<span style="color: #00aabb;">ReturnVector</span><span style="color: #000000;">(</span> result <span style="color: #000000;">)</span>;
 <span style="color: #000000;">}</span></pre>
- <p>
-  <b>
-   Side Note:
-  </b>
-  The modifications have been made to the game-d3xp project so that bots will be able to run in vanilla d3 and roe expansion pack installs. Many modifications to the source were necessary to make the d3xp project buildable and functional without _D3XP and _CTF defined. If you would like to use these changes as well extract the zip over a clean 1.3 sdk src folder and open the bot.sln you should be good to go.
- </p>
- <p>
-  if you have any questions feel free to ask them up on d3w ;)
- </p>
+  <p>
+   <b>
+    Side Note:
+   </b>
+   The modifications have been made to the game-d3xp project so that bots will be able to run in vanilla d3 and roe expansion pack installs. Many modifications to the source were necessary to make the d3xp project buildable and functional without _D3XP and _CTF defined. If you would like to use these changes as well extract the zip over a clean 1.3 sdk src folder and open the bot.sln you should be good to go.
+  </p>
+  <p>
+   if you have any questions feel free to ask them up on d3w ;)
+  </p>
+ </body>
+</html>

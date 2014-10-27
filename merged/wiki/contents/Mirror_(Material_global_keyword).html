@@ -1,74 +1,78 @@
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  The surface acts as a mirror reflecting the world around it.
- </p>
- <a name="Usage">
- </a>
- <h2>
-  Usage
- </h2>
- <p>
-  In the global section of your material shader type...
- </p>
- <pre>mirror
-</pre>
- <a name="Parameters">
- </a>
- <h2>
-  Parameters
- </h2>
- <p>
-  Not Available.
- </p>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
- <p>
-  This turns the entire surface into a mirror (see also the
-  <a href="MirrorRenderMap_%28Material_stage_keyword%29" title="MirrorRenderMap (Material stage keyword)">
-   mirrorRenderMap
+<html>
+ <body>
+  <a name="Description">
   </a>
-  stage keyword). Mirrors have certain limitations; the following situations can provoke visual artefacts:
- </p>
- <ul>
-  <li>
-   They act as portals which mean they cannot be broken by any other surfaces whose materials have the
-   <a href="Areaportal_%28Material_global_keyword%29" title="Areaportal (Material global keyword)">
-    areaportal
+  <h2>
+   Description
+  </h2>
+  <p>
+   The surface acts as a mirror reflecting the world around it.
+  </p>
+  <a name="Usage">
+  </a>
+  <h2>
+   Usage
+  </h2>
+  <p>
+   In the global section of your material shader type...
+  </p>
+  <pre>mirror
+</pre>
+  <a name="Parameters">
+  </a>
+  <h2>
+   Parameters
+  </h2>
+  <p>
+   Not Available.
+  </p>
+  <a name="Notes">
+  </a>
+  <h2>
+   Notes
+  </h2>
+  <p>
+   This turns the entire surface into a mirror (see also the
+   <a href="MirrorRenderMap_%28Material_stage_keyword%29" title="MirrorRenderMap (Material stage keyword)">
+    mirrorRenderMap
    </a>
-   global keyword.
-  </li>
-  <li>
-   Two mirror surfaces which are within line of sight with each other.
-  </li>
-  <li>
-   Used with the
-   <a href="TwoSided_%28Material_global_keyword%29" title="TwoSided (Material global keyword)">
-    twoSided
-   </a>
-   global keyword.
-  </li>
- </ul>
- <div class="thumb tright">
-  <div style="width:377px;">
-   <a class="internal" href="Image:Mirror.png" title="By using visportals to divide a map into areas, one can prevent the space immediately behind a mirror from affecting the mirror.">
-    <img alt="By using visportals to divide a map into areas, one can prevent the space immediately behind a mirror from affecting the mirror." height="262" longdesc="/wiki/Image:Mirror.png" src="/w/images/b/b8/Mirror.png" width="375"/>
-   </a>
-   <div class="thumbcaption">
-    By using visportals to divide a map into areas, one can prevent the space immediately behind a mirror from affecting the mirror.
+   stage keyword). Mirrors have certain limitations; the following situations can provoke visual artefacts:
+  </p>
+  <ul>
+   <li>
+    They act as portals which mean they cannot be broken by any other surfaces whose materials have the
+    <a href="Areaportal_%28Material_global_keyword%29" title="Areaportal (Material global keyword)">
+     areaportal
+    </a>
+    global keyword.
+   </li>
+   <li>
+    Two mirror surfaces which are within line of sight with each other.
+   </li>
+   <li>
+    Used with the
+    <a href="TwoSided_%28Material_global_keyword%29" title="TwoSided (Material global keyword)">
+     twoSided
+    </a>
+    global keyword.
+   </li>
+  </ul>
+  <div class="thumb tright">
+   <div style="width:377px;">
+    <a class="internal" href="Image:Mirror.png" title="By using visportals to divide a map into areas, one can prevent the space immediately behind a mirror from affecting the mirror.">
+     <img alt="By using visportals to divide a map into areas, one can prevent the space immediately behind a mirror from affecting the mirror." height="262" longdesc="/wiki/Image:Mirror.png" src="/w/images/b/b8/Mirror.png" width="375"/>
+    </a>
+    <div class="thumbcaption">
+     By using visportals to divide a map into areas, one can prevent the space immediately behind a mirror from affecting the mirror.
+    </div>
    </div>
   </div>
- </div>
- <p>
-  In the image to the right, two visportals divide the space into three areas. Because of this, the space with the mirror is independant from the area behind it and thus the mirror renders correctly.
- </p>
- <p>
-  <br/>
- </p>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:1182-0!1!0!0!!en!2 and timestamp 20080719180502 -->
+  <p>
+   In the image to the right, two visportals divide the space into three areas. Because of this, the space with the mirror is independant from the area behind it and thus the mirror renders correctly.
+  </p>
+  <p>
+   <br/>
+  </p>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:1182-0!1!0!0!!en!2 and timestamp 20080719180502 -->
+ </body>
+</html>

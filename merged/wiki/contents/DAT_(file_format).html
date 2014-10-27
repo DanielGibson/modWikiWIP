@@ -1,34 +1,36 @@
- <a name="General_Information">
- </a>
- <h2>
-  General Information
- </h2>
- <p>
-  DAT files store glyph and image lookup data for use with a set of corresponding
-  <a href="TGA_%28file_format%29" title="TGA (file format)">
-   TGA
+<html>
+ <body>
+  <a name="General_Information">
   </a>
-  files. Together these files make up the bitmap fonts used in the game. But unlike most filetypes used with idTech 4, these files are binary and as such should not be edited in a text editor. They can can be found in the
-  <a href="Folder_structure_%28Doom_3%29#.2Fbase.2Ffonts" title="Folder structure (Doom 3)">
-   fonts
+  <h2>
+   General Information
+  </h2>
+  <p>
+   DAT files store glyph and image lookup data for use with a set of corresponding
+   <a href="TGA_%28file_format%29" title="TGA (file format)">
+    TGA
+   </a>
+   files. Together these files make up the bitmap fonts used in the game. But unlike most filetypes used with idTech 4, these files are binary and as such should not be edited in a text editor. They can can be found in the
+   <a href="Folder_structure_%28Doom_3%29#.2Fbase.2Ffonts" title="Folder structure (Doom 3)">
+    fonts
+   </a>
+   directory and it's subfolders.
+  </p>
+  <p>
+   The fonts consist of 256 glyphs and are rendered at three sizes, 12pt, 24pt, and 48pt with a respective DAT file for each. The TGA files are 256 by 256 with a 32 bit color depth. Traditionally the images are white in color (allowing for the color to be adjusted in post) while the glyphs are visible only in the alpha channel. Because each TGA is rendered at a fixed resolution the entire set of glyphs may span several image files.
+  </p>
+  <p>
+   This bitmap font implementation was also present in Quake 3 and other idTech 3 based games. As such, third party utilities to create bitmap fonts for idTech 3 based games can be used with idTech 4 based games as well. A few such utilities are listed below in the tools section.
+  </p>
+  <a name="File_Format">
   </a>
-  directory and it's subfolders.
- </p>
- <p>
-  The fonts consist of 256 glyphs and are rendered at three sizes, 12pt, 24pt, and 48pt with a respective DAT file for each. The TGA files are 256 by 256 with a 32 bit color depth. Traditionally the images are white in color (allowing for the color to be adjusted in post) while the glyphs are visible only in the alpha channel. Because each TGA is rendered at a fixed resolution the entire set of glyphs may span several image files.
- </p>
- <p>
-  This bitmap font implementation was also present in Quake 3 and other idTech 3 based games. As such, third party utilities to create bitmap fonts for idTech 3 based games can be used with idTech 4 based games as well. A few such utilities are listed below in the tools section.
- </p>
- <a name="File_Format">
- </a>
- <h2>
-  File Format
- </h2>
- <p>
-  The overall format of the file is best described as a memory dump of the fontInfo_t structure as defined in the Quake 3 source code. From q_shared.h ...
- </p>
- <pre>00346 #define MAX_QPATH           64
+  <h2>
+   File Format
+  </h2>
+  <p>
+   The overall format of the file is best described as a memory dump of the fontInfo_t structure as defined in the Quake 3 source code. From q_shared.h ...
+  </p>
+  <pre>00346 #define MAX_QPATH           64
 
 ...
 
@@ -46,18 +48,18 @@
 01708     char name[MAX_QPATH];
 01709 } fontInfo_t;
 </pre>
- <p>
-  You have an array consisting of 256 elements of type glyphInfo_t, followed by a float, followed by a character array 64 characters in length.
- </p>
- <a name="Glyphs">
- </a>
- <h3>
-  Glyphs
- </h3>
- <p>
-  The glyphInfo_t structure is defined ...
- </p>
- <pre>00312 typedef int     qhandle_t;
+  <p>
+   You have an array consisting of 256 elements of type glyphInfo_t, followed by a float, followed by a character array 64 characters in length.
+  </p>
+  <a name="Glyphs">
+  </a>
+  <h3>
+   Glyphs
+  </h3>
+  <p>
+   The glyphInfo_t structure is defined ...
+  </p>
+  <pre>00312 typedef int     qhandle_t;
 
 ...
 
@@ -77,49 +79,51 @@
 01701     char shaderName[32];
 01702 } glyphInfo_t;
 </pre>
- <p>
-  <br/>
-  Integers are 4 bytes. Floats are 4 bytes. The character array is 32 bytes. This makes each of the 256 blocks 80 bytes for a total of 20480 bytes.
- </p>
- <p>
-  The image name is stored in the character array shaderName. The image lookup data for each glyph consists of the four variables, s, t, s2, and t2. These are floats which when multiplied by 256 can be translated into x and y image coordinates.
- </p>
- <p>
-  The function of the remaining variables has yet to be determined. It's assumed that they pertain to rendering.
- </p>
- <a name="Tail_End">
- </a>
- <h3>
-  Tail End
- </h3>
- <p>
-  The tail end of the file consists of the float glyphScale, and the 64 character array name for a total of 68 bytes. This plus the 20480 bytes of glyph data makes for 20548 bytes which checks out with the filesize of each DAT file. The function of these variables also has yet to be determined.
- </p>
- <a name="Tools">
- </a>
- <h2>
-  Tools
- </h2>
- <ul>
-  <li>
-   <a class="external text" href="https://web.archive.org/web/20091209010324/http://www.q3f.com/q3font.html" title="http://www.q3f.com/q3font.html">
-    Q3Font
-   </a>
-   (
-   <a class="external text" href="https://web.archive.org/web/20091209010324/http://www.splashdamage.com/files/q3font_1.52.zip" title="http://www.splashdamage.com/files/q3font_1.52.zip">
-    Last Version
-   </a>
-   ) - The premiere tool used to convert
-   <a class="new" href="TTF_%28file_format%29" title="TTF (file format)">
-    .TTF
-   </a>
-   files into Quake 3/Doom 3-ready fonts. Created by Arnout 'RR2DO2' van Meer of Splash Damage.
-  </li>
-  <li>
-   <a class="external text" href="https://web.archive.org/web/20091209010324/http://members.optusnet.com.au/~g.davies/ExportFontToDoom3" title="http://members.optusnet.com.au/~g.davies/ExportFontToDoom3">
-    ExportFontToDoom3
-   </a>
-   - A new font conversion tool, specially designed for Doom 3 and with new features and fixes. Source code is also available online. Created by Grant Davies.
-  </li>
- </ul>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:8163-0!1!0!0!!en!2 and timestamp 20091208184104 -->
+  <p>
+   <br/>
+   Integers are 4 bytes. Floats are 4 bytes. The character array is 32 bytes. This makes each of the 256 blocks 80 bytes for a total of 20480 bytes.
+  </p>
+  <p>
+   The image name is stored in the character array shaderName. The image lookup data for each glyph consists of the four variables, s, t, s2, and t2. These are floats which when multiplied by 256 can be translated into x and y image coordinates.
+  </p>
+  <p>
+   The function of the remaining variables has yet to be determined. It's assumed that they pertain to rendering.
+  </p>
+  <a name="Tail_End">
+  </a>
+  <h3>
+   Tail End
+  </h3>
+  <p>
+   The tail end of the file consists of the float glyphScale, and the 64 character array name for a total of 68 bytes. This plus the 20480 bytes of glyph data makes for 20548 bytes which checks out with the filesize of each DAT file. The function of these variables also has yet to be determined.
+  </p>
+  <a name="Tools">
+  </a>
+  <h2>
+   Tools
+  </h2>
+  <ul>
+   <li>
+    <a class="external text" href="https://web.archive.org/web/20091209010324/http://www.q3f.com/q3font.html" title="http://www.q3f.com/q3font.html">
+     Q3Font
+    </a>
+    (
+    <a class="external text" href="https://web.archive.org/web/20091209010324/http://www.splashdamage.com/files/q3font_1.52.zip" title="http://www.splashdamage.com/files/q3font_1.52.zip">
+     Last Version
+    </a>
+    ) - The premiere tool used to convert
+    <a class="new" href="TTF_%28file_format%29" title="TTF (file format)">
+     .TTF
+    </a>
+    files into Quake 3/Doom 3-ready fonts. Created by Arnout 'RR2DO2' van Meer of Splash Damage.
+   </li>
+   <li>
+    <a class="external text" href="https://web.archive.org/web/20091209010324/http://members.optusnet.com.au/~g.davies/ExportFontToDoom3" title="http://members.optusnet.com.au/~g.davies/ExportFontToDoom3">
+     ExportFontToDoom3
+    </a>
+    - A new font conversion tool, specially designed for Doom 3 and with new features and fixes. Source code is also available online. Created by Grant Davies.
+   </li>
+  </ul>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:8163-0!1!0!0!!en!2 and timestamp 20091208184104 -->
+ </body>
+</html>

@@ -1,115 +1,119 @@
- <p>
-  Skins are declarations that contain a list of
-  <a href="Material_%28decl%29" title="Material (decl)">
-   material shaders
+<html>
+ <body>
+  <p>
+   Skins are declarations that contain a list of
+   <a href="Material_%28decl%29" title="Material (decl)">
+    material shaders
+   </a>
+   coupled with a set of replacement material shaders.
+  </p>
+  <p>
+   Through use of a series of skin definitions one can assign a unique material to several instances of the same model.
+  </p>
+  <p>
+   An example would be a character with 3 different colored uniforms. A series of skin declarations would allow one to change the colored uniform that the character was textured with.
+  </p>
+  <p>
+   Skins are assigned to entities through the use of a "skin" key/value pair. This key/value pair can be set in the level editor or in an entity definition.
+  </p>
+  <a name="Syntax">
   </a>
-  coupled with a set of replacement material shaders.
- </p>
- <p>
-  Through use of a series of skin definitions one can assign a unique material to several instances of the same model.
- </p>
- <p>
-  An example would be a character with 3 different colored uniforms. A series of skin declarations would allow one to change the colored uniform that the character was textured with.
- </p>
- <p>
-  Skins are assigned to entities through the use of a "skin" key/value pair. This key/value pair can be set in the level editor or in an entity definition.
- </p>
- <a name="Syntax">
- </a>
- <h2>
-  Syntax
- </h2>
- <pre>skin [name] {
+  <h2>
+   Syntax
+  </h2>
+  <pre>skin [name] {
   model [model]
   [original] [replacement]
 }
 </pre>
- <div class="thumb tright">
-  <div style="width:182px;">
-   <a class="internal" href="Image:Skin_model.png" title="The skin browser displays a matching skins folder containing skins intended for use with the selected model.">
-    <img alt="The skin browser displays a matching skins folder containing skins intended for use with the selected model." height="201" longdesc="/wiki/Image:Skin_model.png" src="/w/images/thumb/a/aa/Skin_model.png/180px-Skin_model.png" width="180"/>
-   </a>
-   <div class="thumbcaption">
-    <div class="magnify" style="float:right">
-     <a class="internal" href="Image:Skin_model.png" title="Enlarge">
-      <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
-     </a>
+  <div class="thumb tright">
+   <div style="width:182px;">
+    <a class="internal" href="Image:Skin_model.png" title="The skin browser displays a matching skins folder containing skins intended for use with the selected model.">
+     <img alt="The skin browser displays a matching skins folder containing skins intended for use with the selected model." height="201" longdesc="/wiki/Image:Skin_model.png" src="/w/images/thumb/a/aa/Skin_model.png/180px-Skin_model.png" width="180"/>
+    </a>
+    <div class="thumbcaption">
+     <div class="magnify" style="float:right">
+      <a class="internal" href="Image:Skin_model.png" title="Enlarge">
+       <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+      </a>
+     </div>
+     The skin browser displays a matching skins folder containing skins intended for use with the selected model.
     </div>
-    The skin browser displays a matching skins folder containing skins intended for use with the selected model.
    </div>
   </div>
- </div>
- <p>
-  Skin declarations are started with a header which consists of the keyword
-  <i>
-   skin
-  </i>
-  followed by the location then
-  <i>
-   name
-  </i>
-  of the skin in the editor.
- </p>
- <p>
-  They are then followed by the body of the declaration which is enclosed in curly brackets, { and }.
- </p>
- <p>
-  An optional
-  <i>
-   model
-  </i>
-  keyword can be included in the declaration. This keyword defines what model the skin is intended to be used with.
- </p>
- <p>
-  When the model is defined, the skin will appear in the
-  <i>
-   matching skins
-  </i>
-  folder when selecting a skin in the level editor (See image).
- </p>
- <p>
-  The remainder of the skin declaration consists of a series of lines which define the name of the
-  <i>
-   original
-  </i>
-  material shader followed by the
-  <i>
-   replacement
-  </i>
-  material shader.
- </p>
- <p>
-  The original material of an object can found out by placing the object in your map then going in game and opening the console. Then type
-  <a href="R_showSurfaceInfo_%28cvar%29" title="R showSurfaceInfo (cvar)">
-   r_showSurfaceInfo
-  </a>
-  1 and look at the object. The top line will give you the model location and the second line will give you the material name in the editor.
- </p>
- <p>
-  <br/>
-  An example for a monster's skin declaration that uses two separate materials on its model:
- </p>
- <pre>skin skins/monsters/my_monster_with_green_skin
+  <p>
+   Skin declarations are started with a header which consists of the keyword
+   <i>
+    skin
+   </i>
+   followed by the location then
+   <i>
+    name
+   </i>
+   of the skin in the editor.
+  </p>
+  <p>
+   They are then followed by the body of the declaration which is enclosed in curly brackets, { and }.
+  </p>
+  <p>
+   An optional
+   <i>
+    model
+   </i>
+   keyword can be included in the declaration. This keyword defines what model the skin is intended to be used with.
+  </p>
+  <p>
+   When the model is defined, the skin will appear in the
+   <i>
+    matching skins
+   </i>
+   folder when selecting a skin in the level editor (See image).
+  </p>
+  <p>
+   The remainder of the skin declaration consists of a series of lines which define the name of the
+   <i>
+    original
+   </i>
+   material shader followed by the
+   <i>
+    replacement
+   </i>
+   material shader.
+  </p>
+  <p>
+   The original material of an object can found out by placing the object in your map then going in game and opening the console. Then type
+   <a href="R_showSurfaceInfo_%28cvar%29" title="R showSurfaceInfo (cvar)">
+    r_showSurfaceInfo
+   </a>
+   1 and look at the object. The top line will give you the model location and the second line will give you the material name in the editor.
+  </p>
+  <p>
+   <br/>
+   An example for a monster's skin declaration that uses two separate materials on its model:
+  </p>
+  <pre>skin skins/monsters/my_monster_with_green_skin
 {
   models/monsters/my_monster/my_monster_default_body models/monsters/my_monster/my_monster_green_body
   models/monsters/my_monster/my_monster_default_head models/monsters/my_monster/my_monster_green_head
 }
 </pre>
- <p>
-  If there are any other materials referenced by the model file (for example the monster's glowing eyes that use their own material), that don't appear in the skin definition, then they are not changed.
- </p>
- <p>
-  Skins are also used to make parts of a model invisible, by replacing a material with the "nodraw" material (textures/common/nodraw). This is often used if multiple weapons are attached to a model, and only one weapon should be visible at a time.
- </p>
- <p>
-  Skin declarations usually live in .
-  <a href="SKIN_%28file_format%29" title="SKIN (file format)">
-   SKIN
-  </a>
-  files in the
-  <a href="Skins_%28folder%29" title="Skins (folder)">
-   skins
-  </a>
-  folder in your Doom 3 base folder.
- </p>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:1122-0!1!0!0!!en!2 and timestamp 20111219121810 -->
+  <p>
+   If there are any other materials referenced by the model file (for example the monster's glowing eyes that use their own material), that don't appear in the skin definition, then they are not changed.
+  </p>
+  <p>
+   Skins are also used to make parts of a model invisible, by replacing a material with the "nodraw" material (textures/common/nodraw). This is often used if multiple weapons are attached to a model, and only one weapon should be visible at a time.
+  </p>
+  <p>
+   Skin declarations usually live in .
+   <a href="SKIN_%28file_format%29" title="SKIN (file format)">
+    SKIN
+   </a>
+   files in the
+   <a href="Skins_%28folder%29" title="Skins (folder)">
+    skins
+   </a>
+   folder in your Doom 3 base folder.
+  </p>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:1122-0!1!0!0!!en!2 and timestamp 20111219121810 -->
+ </body>
+</html>

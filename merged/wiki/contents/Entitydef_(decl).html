@@ -1,107 +1,109 @@
- <p>
-  Entity definitions are simply a list of key/value pairs or spawn arguments.
- </p>
- <p>
-  When the engine
-  <a class="new" href="Spawn" title="Spawn">
-   spawns
+<html>
+ <body>
+  <p>
+   Entity definitions are simply a list of key/value pairs or spawn arguments.
+  </p>
+  <p>
+   When the engine
+   <a class="new" href="Spawn" title="Spawn">
+    spawns
+   </a>
+   an
+   <a href="Entity" title="Entity">
+    entity
+   </a>
+   , the entityDef is looked up to build the
+   <a href="SpawnArgs" title="SpawnArgs">
+    spawnArgs
+   </a>
+   dictionary of the
+   <a href="Spawn_class" title="Spawn class">
+    spawn class
+   </a>
+   .
+  </p>
+  <p>
+   So entityDefs conceptually define the default attributes of an entity - in combination with the key/value pairs for the
+   <a class="new" href="Map_entity" title="Map entity">
+    map entity
+   </a>
+   set in the level editor.
+  </p>
+  <a name="Syntax">
   </a>
-  an
-  <a href="Entity" title="Entity">
-   entity
-  </a>
-  , the entityDef is looked up to build the
-  <a href="SpawnArgs" title="SpawnArgs">
-   spawnArgs
-  </a>
-  dictionary of the
-  <a href="Spawn_class" title="Spawn class">
-   spawn class
-  </a>
-  .
- </p>
- <p>
-  So entityDefs conceptually define the default attributes of an entity - in combination with the key/value pairs for the
-  <a class="new" href="Map_entity" title="Map entity">
-   map entity
-  </a>
-  set in the level editor.
- </p>
- <a name="Syntax">
- </a>
- <h2>
-  Syntax
- </h2>
- <pre>entityDef [entitydeftype] {
+  <h2>
+   Syntax
+  </h2>
+  <pre>entityDef [entitydeftype] {
 	[key_1]	[value_1]
 	[key_2]	[value_2]
 	[key_3]	[value_3]
 	...
 }
 </pre>
- <p>
-  Entity definitions begin with a header which consists of the keyword "entityDef" followed by the name of the entityDef type.
- </p>
- <p>
-  The header is followed by the body of the declaration which is enclosed in curly brackets.
- </p>
- <p>
-  The body is composed of a series of keys and values. Keys and values are enclosed by quotation marks.
- </p>
- <a name="Important_Key.2FValues">
- </a>
- <h2>
-  Important Key/Values
- </h2>
- <p>
-  While most of the key/value pairs are just data to be used by the entity spawn class, script object or level script there are a few that should be mentioned.
- </p>
- <p>
-  <code>
-   "inherit" [entitydef type]
-  </code>
- </p>
- <p>
-  The "inherit" key/value pair can be used in any entity definition. It's purpose is to instruct the engine to inherit key/value pairs from the specified entityDef type to reduce redundancy.
- </p>
- <p>
-  <code>
-   "spawnclass" [spawn class type]
-  </code>
- </p>
- <p>
-  The spawnclass key/value pair defines the
-  <a href="Spawn_class" title="Spawn class">
-   spawn class
+  <p>
+   Entity definitions begin with a header which consists of the keyword "entityDef" followed by the name of the entityDef type.
+  </p>
+  <p>
+   The header is followed by the body of the declaration which is enclosed in curly brackets.
+  </p>
+  <p>
+   The body is composed of a series of keys and values. Keys and values are enclosed by quotation marks.
+  </p>
+  <a name="Important_Key.2FValues">
   </a>
-  type of this entity.
+  <h2>
+   Important Key/Values
+  </h2>
+  <p>
+   While most of the key/value pairs are just data to be used by the entity spawn class, script object or level script there are a few that should be mentioned.
+  </p>
+  <p>
+   <code>
+    "inherit" [entitydef type]
+   </code>
+  </p>
+  <p>
+   The "inherit" key/value pair can be used in any entity definition. It's purpose is to instruct the engine to inherit key/value pairs from the specified entityDef type to reduce redundancy.
+  </p>
+  <p>
+   <code>
+    "spawnclass" [spawn class type]
+   </code>
+  </p>
+  <p>
+   The spawnclass key/value pair defines the
+   <a href="Spawn_class" title="Spawn class">
+    spawn class
+   </a>
+   type of this entity.
 An entity will fail to spawn if it doesn't have a spawnclass key/value set via an entityDef or
-  <a class="new" href="Map_entity" title="Map entity">
-   map entity
+   <a class="new" href="Map_entity" title="Map entity">
+    map entity
+   </a>
+   .
+  </p>
+  <p>
+   <code>
+    "scriptobject" [script object type]
+   </code>
+  </p>
+  <p>
+   The "scriptobject" key/value pair key/value pair is used to assign a
+   <a href="Script_object" title="Script object">
+    script object
+   </a>
+   type to this entity type to control its behavior.
+  </p>
+  <a name="Inheritance_and_Spawn_Classes_Example">
   </a>
-  .
- </p>
- <p>
-  <code>
-   "scriptobject" [script object type]
-  </code>
- </p>
- <p>
-  The "scriptobject" key/value pair key/value pair is used to assign a
-  <a href="Script_object" title="Script object">
-   script object
-  </a>
-  type to this entity type to control its behavior.
- </p>
- <a name="Inheritance_and_Spawn_Classes_Example">
- </a>
- <h2>
-  Inheritance and Spawn Classes Example
- </h2>
- <p>
-  Using a paraphrased snippet from the monster_zombie_fat entity definition in Doom 3:
- </p>
- <pre>entityDef monster_zombie_fat {
+  <h2>
+   Inheritance and Spawn Classes Example
+  </h2>
+  <p>
+   Using a paraphrased snippet from the monster_zombie_fat entity definition in Doom 3:
+  </p>
+  <pre>entityDef monster_zombie_fat {
 	"inherit"		"zombie_default"
 	"scriptobject"		"monster_zombie"
 	"size"			"48 48 68"
@@ -115,23 +117,23 @@ An entity will fail to spawn if it doesn't have a spawnclass key/value set via a
 	...
 }
 </pre>
- <p>
-  Here, the inherit value means is that when the monster_zombie_fat is looked up it will be combined with the key/value pairs defined in zombie_default.
- </p>
- <p>
-  By looking at zombie_default we can see the key/value pairs that are inherited:
- </p>
- <pre>entityDef zombie_default {
+  <p>
+   Here, the inherit value means is that when the monster_zombie_fat is looked up it will be combined with the key/value pairs defined in zombie_default.
+  </p>
+  <p>
+   By looking at zombie_default we can see the key/value pairs that are inherited:
+  </p>
+  <pre>entityDef zombie_default {
 	"inherit"		"monster_default"
 	"blink_min"		"2.0s"
 	"blink_max"		"8.0"
 	...
 }
 </pre>
- <p>
-  Notice that this entity definition also inherits key/value pairs from another entityDef, in this case from monster_default:
- </p>
- <pre>entityDef monster_default {
+  <p>
+   Notice that this entity definition also inherits key/value pairs from another entityDef, in this case from monster_default:
+  </p>
+  <pre>entityDef monster_default {
 	"editor_color"		"1 .5 0"
 	"editor_mins"		"-24 -24 0"
 	"editor_maxs"		"24 24 64"
@@ -142,27 +144,27 @@ An entity will fail to spawn if it doesn't have a spawnclass key/value set via a
 	...
 }
 </pre>
- <p>
-  And at this point the inheritance stops because there is no other "inherit" key/value pair. However, there is a "spawnclass" key/value pair. 
+  <p>
+   And at this point the inheritance stops because there is no other "inherit" key/value pair. However, there is a "spawnclass" key/value pair. 
 In this example the
-  <a href="Spawn_class" title="Spawn class">
-   spawn class
+   <a href="Spawn_class" title="Spawn class">
+    spawn class
+   </a>
+   idAI.
+  </p>
+  <a name="Script_Objects_Example">
   </a>
-  idAI.
- </p>
- <a name="Script_Objects_Example">
- </a>
- <h2>
-  Script Objects Example
- </h2>
- <p>
-  In this example, the scriptobject key/value is defining what AI
-  <a href="Script_object" title="Script object">
-   script object
-  </a>
-  type to use to control this entity.
- </p>
- <pre>entityDef monster_zombie_fat {
+  <h2>
+   Script Objects Example
+  </h2>
+  <p>
+   In this example, the scriptobject key/value is defining what AI
+   <a href="Script_object" title="Script object">
+    script object
+   </a>
+   type to use to control this entity.
+  </p>
+  <pre>entityDef monster_zombie_fat {
 	"inherit"		"zombie_default"
 	"scriptobject"		"monster_zombie"
 	"size"			"48 48 68"
@@ -176,16 +178,18 @@ In this example the
 	...
 }
 </pre>
- <a name="Practical_Example">
- </a>
- <h2>
-  Practical Example
- </h2>
- <p>
-  If you wanted to create a new type of monster_zombie_fat with a health value of 200 you simply create a new entity definition that inherits from monster_zombie_fat and set a new health key/value pair...
- </p>
- <pre>entityDef monster_zombie_fat_200 {
+  <a name="Practical_Example">
+  </a>
+  <h2>
+   Practical Example
+  </h2>
+  <p>
+   If you wanted to create a new type of monster_zombie_fat with a health value of 200 you simply create a new entity definition that inherits from monster_zombie_fat and set a new health key/value pair...
+  </p>
+  <pre>entityDef monster_zombie_fat_200 {
 	"inherit"		"monster_zombie_fat"
 	"health"		"200"
 }
 </pre>
+ </body>
+</html>

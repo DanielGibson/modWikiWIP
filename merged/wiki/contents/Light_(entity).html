@@ -1,219 +1,223 @@
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  The light entity is used to create point lights, spot lights, projected lights, ambient lights, or otherwise fog.
- </p>
- <a name="Spawn_Arguments">
- </a>
- <h2>
-  Spawn Arguments
- </h2>
- <p>
-  The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
-  <br/>
- </p>
- <table class="listtable">
-  <tr>
-   <th>
-    KEY
-   </th>
-   <th>
-    DESCRIPTION
-   </th>
-  </tr>
-  <tr>
-   <td>
-    texture
-   </td>
-   <td>
-    The light/fog/ambient shader to use.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    color
-   </td>
-   <td>
-    The color to use.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    shaderParm3
-   </td>
-   <td>
-    The value to assign shaderParm 3.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    shaderParm4
-   </td>
-   <td>
-    The value to assign shaderParm 4.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    shaderParm5
-   </td>
-   <td>
-    The value to assign shaderParm 5.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    shaderParm6
-   </td>
-   <td>
-    The value to assign shaderParm 6.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    shaderParm7
-   </td>
-   <td>
-    The value to assign shaderParm 7.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    count
-   </td>
-   <td>
-    How many times this light must be triggered to toggle.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    break
-   </td>
-   <td>
-    Break the light when triggered.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    model
-   </td>
-   <td>
-    The model to use.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    broken
-   </td>
-   <td>
-    The model to use when the light is broken.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    hideModelOnBreak
-   </td>
-   <td>
-    Hide the model when it is broken.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    health
-   </td>
-   <td>
-    The amount of damage the light can sustain. A health of 0 is nonbreakable.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    target
-   </td>
-   <td>
-    The entit(y/ies) to trip if activated.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    levels
-   </td>
-   <td>
-    The number of times a light must be triggered until it turns off.  Each time it's brightness is reduced.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    start_off
-   </td>
-   <td>
-    The light will start in an off state.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    snd_broken
-   </td>
-   <td>
-    The sound shader to use when broken.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    mtr_broken
-   </td>
-   <td>
-    The material shader to use when broken.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    color_demonic
-   </td>
-   <td>
-    The color to use if in demonic mode.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    mat_demonic
-   </td>
-   <td>
-    The material shader to use if in demonic mode.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    leave_demonic_mat
-   </td>
-   <td>
-    The material shader defined in mat_demonic stays active when the effect expires.
-   </td>
-  </tr>
- </table>
- <a name="Inheritance">
- </a>
- <h2>
-  Inheritance
- </h2>
- <p>
-  This entity is derived from the following entities:
- </p>
- <ul>
-  <li>
-   Light (idLight)
-  </li>
- </ul>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
- <p>
-  Bear in mind a few of the above keys can be modified in realtime with the 'Light Editor', which is defaulted to J on the keyboard.
- </p>
- <p>
-  A function was added to the light entity in Q4Edit, that allows users to drag out the light radius with the mouse, as opposed to having to manually type in dimensions into the light editor.
- </p>
+<html>
+ <body>
+  <a name="Description">
+  </a>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The light entity is used to create point lights, spot lights, projected lights, ambient lights, or otherwise fog.
+  </p>
+  <a name="Spawn_Arguments">
+  </a>
+  <h2>
+   Spawn Arguments
+  </h2>
+  <p>
+   The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+   <br/>
+  </p>
+  <table class="listtable">
+   <tr>
+    <th>
+     KEY
+    </th>
+    <th>
+     DESCRIPTION
+    </th>
+   </tr>
+   <tr>
+    <td>
+     texture
+    </td>
+    <td>
+     The light/fog/ambient shader to use.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     color
+    </td>
+    <td>
+     The color to use.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     shaderParm3
+    </td>
+    <td>
+     The value to assign shaderParm 3.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     shaderParm4
+    </td>
+    <td>
+     The value to assign shaderParm 4.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     shaderParm5
+    </td>
+    <td>
+     The value to assign shaderParm 5.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     shaderParm6
+    </td>
+    <td>
+     The value to assign shaderParm 6.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     shaderParm7
+    </td>
+    <td>
+     The value to assign shaderParm 7.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     count
+    </td>
+    <td>
+     How many times this light must be triggered to toggle.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     break
+    </td>
+    <td>
+     Break the light when triggered.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     model
+    </td>
+    <td>
+     The model to use.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     broken
+    </td>
+    <td>
+     The model to use when the light is broken.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     hideModelOnBreak
+    </td>
+    <td>
+     Hide the model when it is broken.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     health
+    </td>
+    <td>
+     The amount of damage the light can sustain. A health of 0 is nonbreakable.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     target
+    </td>
+    <td>
+     The entit(y/ies) to trip if activated.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     levels
+    </td>
+    <td>
+     The number of times a light must be triggered until it turns off.  Each time it's brightness is reduced.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     start_off
+    </td>
+    <td>
+     The light will start in an off state.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     snd_broken
+    </td>
+    <td>
+     The sound shader to use when broken.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     mtr_broken
+    </td>
+    <td>
+     The material shader to use when broken.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     color_demonic
+    </td>
+    <td>
+     The color to use if in demonic mode.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     mat_demonic
+    </td>
+    <td>
+     The material shader to use if in demonic mode.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     leave_demonic_mat
+    </td>
+    <td>
+     The material shader defined in mat_demonic stays active when the effect expires.
+    </td>
+   </tr>
+  </table>
+  <a name="Inheritance">
+  </a>
+  <h2>
+   Inheritance
+  </h2>
+  <p>
+   This entity is derived from the following entities:
+  </p>
+  <ul>
+   <li>
+    Light (idLight)
+   </li>
+  </ul>
+  <a name="Notes">
+  </a>
+  <h2>
+   Notes
+  </h2>
+  <p>
+   Bear in mind a few of the above keys can be modified in realtime with the 'Light Editor', which is defaulted to J on the keyboard.
+  </p>
+  <p>
+   A function was added to the light entity in Q4Edit, that allows users to drag out the light radius with the mouse, as opposed to having to manually type in dimensions into the light editor.
+  </p>
+ </body>
+</html>

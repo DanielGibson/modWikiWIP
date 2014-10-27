@@ -1,310 +1,314 @@
- <div class="boilerplate metadata" id="stub">
-  <i>
-   This article is a
-   <a class="external text" href="http://en.wikipedia.org/wiki/Perfect_stub_article" title="http://en.wikipedia.org/wiki/Perfect_stub_article">
-    stub
-   </a>
-   . You can help us by
-   <span class="plainlinks">
-    <a class="external text" href="PROC_%28file_format%29" title="http://www.modwiki.net/w/index.php?title=PROC_%28file_format%29&amp;action=edit">
-     expanding it
+<html>
+ <body>
+  <div class="boilerplate metadata" id="stub">
+   <i>
+    This article is a
+    <a class="external text" href="http://en.wikipedia.org/wiki/Perfect_stub_article" title="http://en.wikipedia.org/wiki/Perfect_stub_article">
+     stub
     </a>
-   </span>
-   .
-  </i>
- </div>
- <a name="General_Information">
- </a>
- <h2>
-  General Information
- </h2>
- <p>
-  The .proc contains all the pre-processed geometry in the map. It stores all the visible triangles, batched up in to surfaces. It also stores all the portal information, and any precalculated shadow volumes (if a light doesn't move, and a brush doesn't move, the shadow volume can be precalculated).
- </p>
- <a name="File_Format">
- </a>
- <h2>
-  File Format
- </h2>
- <a name="Models">
- </a>
- <h3>
-  Models
- </h3>
- <p>
-  A model represents a object in the world (level), or a part of the world itself. Every model consists of 1-n surfaces, which containing information about the geometrical representation of the model.
+    . You can help us by
+    <span class="plainlinks">
+     <a class="external text" href="PROC_%28file_format%29" title="http://www.modwiki.net/w/index.php?title=PROC_%28file_format%29&amp;action=edit">
+      expanding it
+     </a>
+    </span>
+    .
+   </i>
+  </div>
+  <a name="General_Information">
+  </a>
+  <h2>
+   General Information
+  </h2>
+  <p>
+   The .proc contains all the pre-processed geometry in the map. It stores all the visible triangles, batched up in to surfaces. It also stores all the portal information, and any precalculated shadow volumes (if a light doesn't move, and a brush doesn't move, the shadow volume can be precalculated).
+  </p>
+  <a name="File_Format">
+  </a>
+  <h2>
+   File Format
+  </h2>
+  <a name="Models">
+  </a>
+  <h3>
+   Models
+  </h3>
+  <p>
+   A model represents a object in the world (level), or a part of the world itself. Every model consists of 1-n surfaces, which containing information about the geometrical representation of the model.
 Every model section starts with the keyword
-  <i>
-   model
-  </i>
-  , directly followed by an opening curly brace. The model information itself is located in this braced section.
- </p>
- <p>
-  <code>
-  </code>
- </p>
- <pre>model { &lt;name&gt; &lt;number of surfaces&gt;
+   <i>
+    model
+   </i>
+   , directly followed by an opening curly brace. The model information itself is located in this braced section.
+  </p>
+  <p>
+   <code>
+   </code>
+  </p>
+  <pre>model { &lt;name&gt; &lt;number of surfaces&gt;
 &lt;surface 0&gt;
 &lt;surface 1&gt;
 ...
 &lt;surface n&gt;
 }
 </pre>
- <p>
- </p>
- <p>
-  The value of
-  <i>
-   name
-  </i>
-  is the name of the model. All
-  <i>
-   name
-  </i>
-  attributes are stored as quoted string literals.
- </p>
- <p>
-  <i>
-   Number of surfaces
-  </i>
-  is an integer which indicates how many surfaces the model actually has.
- </p>
- <p>
-  The
-  <i>
-   surface
-  </i>
-  information are located within a (curly) braced section. Every surface contains information about the material used by this surface, the number of vertices and the number of indices.
- </p>
- <p>
-  <code>
-  </code>
- </p>
- <pre>{ &lt;material&gt; &lt;number of vertices&gt; &lt;number if indices&gt;
+  <p>
+  </p>
+  <p>
+   The value of
+   <i>
+    name
+   </i>
+   is the name of the model. All
+   <i>
+    name
+   </i>
+   attributes are stored as quoted string literals.
+  </p>
+  <p>
+   <i>
+    Number of surfaces
+   </i>
+   is an integer which indicates how many surfaces the model actually has.
+  </p>
+  <p>
+   The
+   <i>
+    surface
+   </i>
+   information are located within a (curly) braced section. Every surface contains information about the material used by this surface, the number of vertices and the number of indices.
+  </p>
+  <p>
+   <code>
+   </code>
+  </p>
+  <pre>{ &lt;material&gt; &lt;number of vertices&gt; &lt;number if indices&gt;
 &lt;vertex 1&gt; &lt;vertex 2&gt; ... &lt;vertex n&gt;
 &lt;index 1&gt; &lt;index 2&gt; ... &lt;index n&gt;
 }
 </pre>
- <p>
- </p>
- <p>
-  The name of the material the surface uses is stored in the
-  <i>
-   material
-  </i>
-  value. The value refers to a material script and is stored as a quoted string literal.
- </p>
- <p>
-  The value of
-  <i>
-   number of vertices' is an integer which indicates the actual number of vertices for this surface.
-  </i>
- </p>
- <p>
-  The value of
-  <i>
-   number of indices
-  </i>
-  is an integer which indicates the actual number of indices for this surface.
- </p>
- <p>
-  A
-  <i>
-   vertex
-  </i>
-  contains information about the position, the u/v-coordinates and the vertex normal. All this information are written within two parentheses.
- </p>
- <p>
-  <code>
-  </code>
- </p>
- <pre>( x y z u v nx ny nz )
+  <p>
+  </p>
+  <p>
+   The name of the material the surface uses is stored in the
+   <i>
+    material
+   </i>
+   value. The value refers to a material script and is stored as a quoted string literal.
+  </p>
+  <p>
+   The value of
+   <i>
+    number of vertices' is an integer which indicates the actual number of vertices for this surface.
+   </i>
+  </p>
+  <p>
+   The value of
+   <i>
+    number of indices
+   </i>
+   is an integer which indicates the actual number of indices for this surface.
+  </p>
+  <p>
+   A
+   <i>
+    vertex
+   </i>
+   contains information about the position, the u/v-coordinates and the vertex normal. All this information are written within two parentheses.
+  </p>
+  <p>
+   <code>
+   </code>
+  </p>
+  <pre>( x y z u v nx ny nz )
 </pre>
- <p>
- </p>
- <p>
-  The values x, y and z defines the translation of the vertex in the world coordinate system. The values of u and v are the texture coordinates, used for mapping the texturemaps onto this surface. Nx, ny and nz are representing the vertex normal. All of this values are stored as double precision floating point values.
- </p>
- <p>
-  An
-  <i>
-   index
-  </i>
-  is simply an unsigned integer. Every index indicates a vertex in the surface's vertex list. Since all vertexdata is rendered as a list of triangles three indices build a triangle.
- </p>
- <a name="Areas">
- </a>
- <h3>
-  Areas
- </h3>
- <p>
-  Areas are special models, indicated by the name (_areaN; i.e. _area0 for the first area in the list). Each level is split into a list of convex parts, whereas each part is one area.
- </p>
- <a name="Portals">
- </a>
- <h3>
-  Portals
- </h3>
- <p>
-  A portal is the connection between two areas. Portals can be used for occlusion culling (which means every part of the level, which is not in the field of view, will be rejected, for the sake of rendering speed). Another benefit of portals is, that each pair of area can be connected through a portal, even if the areas are not spatially next to each other.
+  <p>
+  </p>
+  <p>
+   The values x, y and z defines the translation of the vertex in the world coordinate system. The values of u and v are the texture coordinates, used for mapping the texturemaps onto this surface. Nx, ny and nz are representing the vertex normal. All of this values are stored as double precision floating point values.
+  </p>
+  <p>
+   An
+   <i>
+    index
+   </i>
+   is simply an unsigned integer. Every index indicates a vertex in the surface's vertex list. Since all vertexdata is rendered as a list of triangles three indices build a triangle.
+  </p>
+  <a name="Areas">
+  </a>
+  <h3>
+   Areas
+  </h3>
+  <p>
+   Areas are special models, indicated by the name (_areaN; i.e. _area0 for the first area in the list). Each level is split into a list of convex parts, whereas each part is one area.
+  </p>
+  <a name="Portals">
+  </a>
+  <h3>
+   Portals
+  </h3>
+  <p>
+   A portal is the connection between two areas. Portals can be used for occlusion culling (which means every part of the level, which is not in the field of view, will be rejected, for the sake of rendering speed). Another benefit of portals is, that each pair of area can be connected through a portal, even if the areas are not spatially next to each other.
 The portal list is indicated through the keyword
-  <i>
-   interAreaPortals
-  </i>
-  followed by a braced section which includes the portal informations.
- </p>
- <p>
-  <code>
-  </code>
- </p>
- <pre>interAreaPortals { &lt;number of areas&gt; &lt;number of portals&gt;
+   <i>
+    interAreaPortals
+   </i>
+   followed by a braced section which includes the portal informations.
+  </p>
+  <p>
+   <code>
+   </code>
+  </p>
+  <pre>interAreaPortals { &lt;number of areas&gt; &lt;number of portals&gt;
 &lt;inter area portal 0&gt;
 &lt;inter area portal 1&gt;
 ...
 &lt;inter area portal n&gt;
 }
 </pre>
- <p>
- </p>
- <p>
-  The value
-  <i>
-   number of areas
-  </i>
-  is an integer which indicates the number of areas the level consists of. For each integer 0 to
-  <i>
-   n
-  </i>
-  must be a according model.
- </p>
- <p>
-  The value of
-  <i>
-   number of portals
-  </i>
-  is an integer which indicates the number of portals.
- </p>
- <p>
-  A
-  <i>
-   inter area portal
-  </i>
-  consists of a number of points and the information of the linked areas.
- </p>
- <p>
-  <code>
-  </code>
- </p>
- <pre>&lt;number of vertices&gt; &lt;positive side area&gt; &lt;negative side area&gt; &lt;point 0&gt; &lt;point 1&gt; ... &lt;point n&gt;
+  <p>
+  </p>
+  <p>
+   The value
+   <i>
+    number of areas
+   </i>
+   is an integer which indicates the number of areas the level consists of. For each integer 0 to
+   <i>
+    n
+   </i>
+   must be a according model.
+  </p>
+  <p>
+   The value of
+   <i>
+    number of portals
+   </i>
+   is an integer which indicates the number of portals.
+  </p>
+  <p>
+   A
+   <i>
+    inter area portal
+   </i>
+   consists of a number of points and the information of the linked areas.
+  </p>
+  <p>
+   <code>
+   </code>
+  </p>
+  <pre>&lt;number of vertices&gt; &lt;positive side area&gt; &lt;negative side area&gt; &lt;point 0&gt; &lt;point 1&gt; ... &lt;point n&gt;
 </pre>
- <p>
- </p>
- <p>
-  <i>
-   Number of vertices
-  </i>
-  is an integer indicating the number of actual points for this portal.
- </p>
- <p>
-  <i>
-   Positive- and negative side area
-  </i>
-  are integers indicating the indices of the linked areas. The values points to the world's area list.
- </p>
- <p>
-  A
-  <i>
-   point
-  </i>
-  consits of three values which represents the point's position in world space. The values are double precision floating point values and are stored between two parentheses:
- </p>
- <p>
-  <code>
-  </code>
- </p>
- <pre>( x y z )
+  <p>
+  </p>
+  <p>
+   <i>
+    Number of vertices
+   </i>
+   is an integer indicating the number of actual points for this portal.
+  </p>
+  <p>
+   <i>
+    Positive- and negative side area
+   </i>
+   are integers indicating the indices of the linked areas. The values points to the world's area list.
+  </p>
+  <p>
+   A
+   <i>
+    point
+   </i>
+   consits of three values which represents the point's position in world space. The values are double precision floating point values and are stored between two parentheses:
+  </p>
+  <p>
+   <code>
+   </code>
+  </p>
+  <pre>( x y z )
 </pre>
- <p>
- </p>
- <a name="Nodes">
- </a>
- <h3>
-  Nodes
- </h3>
- <p>
-  Each level stores a list of nodes which are represented in a tree structure. Each node contains information about its splitting plane and two indices which points to either a child node or an area. The node section is lead in by the keyword
-  <i>
-   nodes
-  </i>
-  followed by a braced section containing the node informations.
- </p>
- <p>
-  <code>
-  </code>
- </p>
- <pre>nodes { &lt;number of nodes&gt;
+  <p>
+  </p>
+  <a name="Nodes">
+  </a>
+  <h3>
+   Nodes
+  </h3>
+  <p>
+   Each level stores a list of nodes which are represented in a tree structure. Each node contains information about its splitting plane and two indices which points to either a child node or an area. The node section is lead in by the keyword
+   <i>
+    nodes
+   </i>
+   followed by a braced section containing the node informations.
+  </p>
+  <p>
+   <code>
+   </code>
+  </p>
+  <pre>nodes { &lt;number of nodes&gt;
 &lt;node 0&gt;
 &lt;node 1&gt;
 ...
 &lt;node n&gt;
 }
 </pre>
- <p>
- </p>
- <p>
-  The value of
-  <i>
-   number of nodes
-  </i>
-  is an integer indicating the number of nodes in the BSP tree.
- </p>
- <p>
-  A
-  <i>
-   node
-  </i>
-  contains information about its splitting plane and two indices pointing to either the two child nodes or an area.
- </p>
- <p>
-  <code>
-  </code>
- </p>
- <pre>( nx ny nz d ) &lt;positive child&gt; &lt;negativechild&gt;
+  <p>
+  </p>
+  <p>
+   The value of
+   <i>
+    number of nodes
+   </i>
+   is an integer indicating the number of nodes in the BSP tree.
+  </p>
+  <p>
+   A
+   <i>
+    node
+   </i>
+   contains information about its splitting plane and two indices pointing to either the two child nodes or an area.
+  </p>
+  <p>
+   <code>
+   </code>
+  </p>
+  <pre>( nx ny nz d ) &lt;positive child&gt; &lt;negativechild&gt;
 </pre>
- <p>
- </p>
- <p>
-  The values of
-  <i>
-   nx
-  </i>
-  ,
-  <i>
-   ny
-  </i>
-  and
-  <i>
-   nz
-  </i>
-  representing the plane normal of the splitting plane. The value of
-  <i>
-   d
-  </i>
-  is the distance of the plane. Each of this values is stored as double precision floating point value.
- </p>
- <p>
-  <i>
-   Positive-, negative child
-  </i>
-  are integers indexing the child nodes in the tree branch. There are three cases: If an index is positive the index points to another node in the node list. If the index is zero it indicated a solid, opaque area. Is the index negative the index points to an area-model, which means the node is a leaf in the tree. In the last case, the actual index is compted as (-1-index).
- </p>
- <a name="Shadow_Volumes">
- </a>
- <h3>
-  Shadow Volumes
- </h3>
- <a name="Rendering_Details">
- </a>
- <h2>
-  Rendering Details
- </h2>
+  <p>
+  </p>
+  <p>
+   The values of
+   <i>
+    nx
+   </i>
+   ,
+   <i>
+    ny
+   </i>
+   and
+   <i>
+    nz
+   </i>
+   representing the plane normal of the splitting plane. The value of
+   <i>
+    d
+   </i>
+   is the distance of the plane. Each of this values is stored as double precision floating point value.
+  </p>
+  <p>
+   <i>
+    Positive-, negative child
+   </i>
+   are integers indexing the child nodes in the tree branch. There are three cases: If an index is positive the index points to another node in the node list. If the index is zero it indicated a solid, opaque area. Is the index negative the index points to an area-model, which means the node is a leaf in the tree. In the last case, the actual index is compted as (-1-index).
+  </p>
+  <a name="Shadow_Volumes">
+  </a>
+  <h3>
+   Shadow Volumes
+  </h3>
+  <a name="Rendering_Details">
+  </a>
+  <h2>
+   Rendering Details
+  </h2>
+ </body>
+</html>

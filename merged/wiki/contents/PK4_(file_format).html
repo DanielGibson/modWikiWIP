@@ -1,104 +1,108 @@
- <p>
-  Ideally, every asset used by the idTech 4 engine is stored in a .PK4 file (also known as a "pack" or "pak" file). Pack files are just normal
-  <a href="ZIP_%28file_format%29" title="ZIP (file format)">
-   .ZIP
+<html>
+ <body>
+  <p>
+   Ideally, every asset used by the idTech 4 engine is stored in a .PK4 file (also known as a "pack" or "pak" file). Pack files are just normal
+   <a href="ZIP_%28file_format%29" title="ZIP (file format)">
+    .ZIP
+   </a>
+   files with the .PK4 extension - you can use
+   <a class="external text" href="http://www.win-rar.com/" title="http://www.win-rar.com">
+    WinRar
+   </a>
+   ,
+   <a class="external text" href="http://www.winzip.com/" title="http://www.winzip.com">
+    Winzip
+   </a>
+   ,
+   <a class="external text" href="http://www.7-zip.org/" title="http://www.7-zip.org/">
+    7-Zip
+   </a>
+   or a similar utility to browse or create new .PK4 files. An even easier alternative might be
+   <a href="Pk4scape" title="Pk4scape">
+    Pk4scape
+   </a>
+   , which handles all things for the user.
+  </p>
+  <div>
+   <a class="image" href="Image:Rtcw2square_25.png" title="Image:Rtcw2square_25.png">
+    <img alt="Image:Rtcw2square_25.png" height="25" longdesc="/wiki/Image:Rtcw2square_25.png" src="/w/images/9/97/Rtcw2square_25.png" width="25"/>
+   </a>
+   <b>
+    Note:
+   </b>
+   Wolfenstein only:
+   <dl>
+    <dd>
+     <i>
+      The PK4 files used in the single player component have a modified header which prevents them from being opened by a standard archive program with the exception of WinRar which seems capable of "repairing" these files.
+     </i>
+    </dd>
+   </dl>
+  </div>
+  <p>
+   If you have more than one pack file or assets in a mix of pack files and individual files here is the expected behavior of the engine:
+  </p>
+  <ol>
+   <li>
+    Assets inside pack files that come later in alphabetical order override assets with the same name in Pack files that come earlier.
+   </li>
+   <li>
+    Assets as individual files override assets inside pack files.
+   </li>
+   <li>
+    Assets in pack files or modfolders override assets with the same name in the base folder
+   </li>
+  </ol>
+  <a name="Compression">
   </a>
-  files with the .PK4 extension - you can use
-  <a class="external text" href="http://www.win-rar.com/" title="http://www.win-rar.com">
-   WinRar
-  </a>
-  ,
-  <a class="external text" href="http://www.winzip.com/" title="http://www.winzip.com">
-   Winzip
-  </a>
-  ,
-  <a class="external text" href="http://www.7-zip.org/" title="http://www.7-zip.org/">
-   7-Zip
-  </a>
-  or a similar utility to browse or create new .PK4 files. An even easier alternative might be
-  <a href="Pk4scape" title="Pk4scape">
-   Pk4scape
-  </a>
-  , which handles all things for the user.
- </p>
- <div>
-  <a class="image" href="Image:Rtcw2square_25.png" title="Image:Rtcw2square_25.png">
-   <img alt="Image:Rtcw2square_25.png" height="25" longdesc="/wiki/Image:Rtcw2square_25.png" src="/w/images/9/97/Rtcw2square_25.png" width="25"/>
-  </a>
-  <b>
-   Note:
-  </b>
-  Wolfenstein only:
-  <dl>
-   <dd>
-    <i>
-     The PK4 files used in the single player component have a modified header which prevents them from being opened by a standard archive program with the exception of WinRar which seems capable of "repairing" these files.
-    </i>
-   </dd>
-  </dl>
- </div>
- <p>
-  If you have more than one pack file or assets in a mix of pack files and individual files here is the expected behavior of the engine:
- </p>
- <ol>
-  <li>
-   Assets inside pack files that come later in alphabetical order override assets with the same name in Pack files that come earlier.
-  </li>
-  <li>
-   Assets as individual files override assets inside pack files.
-  </li>
-  <li>
-   Assets in pack files or modfolders override assets with the same name in the base folder
-  </li>
- </ol>
- <a name="Compression">
- </a>
- <h2>
-  Compression
- </h2>
- <p>
-  As renamed .ZIP files, .PK4 can have compressed files inside but also uncompressed ones by using the
-  <i>
-   store
-  </i>
-  option in the .ZIP format. The pack files that come with Doom 3 and the Doom 3: Resurrection of Evil expansion feature compression. Although compressed pack files increase loading times, this penalty is small while the filesize difference is significant: Doom 3's assets are 3.6Gb uncompressed, and only 1.44Gb in their original .PK4 form.
- </p>
- <a name="Achieving_Better_Compression_For_Distribution">
- </a>
- <h4>
-  Achieving Better Compression For Distribution
- </h4>
- <p>
-  Even if you use the maximum compression possible in .PK4 files it will never rival the compression ratios possible by
-  <a class="external text" href="http://www.win-rar.com/" title="http://www.win-rar.com">
-   WinRar
-  </a>
-  for instance. However the following will:
- </p>
- <ol>
-  <li>
-   Create your .PK4 files with the
+  <h2>
+   Compression
+  </h2>
+  <p>
+   As renamed .ZIP files, .PK4 can have compressed files inside but also uncompressed ones by using the
    <i>
     store
    </i>
-   compression factor.
-  </li>
-  <li>
-   RAR all your .PK4 files with maximum compression. (You may want to create a SFX archive, instead of straight .RAR so people won't have to download WinRar to open it; which can also double as an installer for your mod.)
-  </li>
- </ol>
- <p>
-  You should now be able to distribute a much smaller file than if you had used max compression for the .PK4 files. However, once installed your files will be as large as if not in a .PK4 file because they are uncompressed thanks to the
-  <i>
-   store
-  </i>
-  option.
- </p>
- <p>
-  On a side note:
-  <a class="external text" href="http://www.7-zip.org/" title="http://www.7-zip.org/">
-   7zip
+   option in the .ZIP format. The pack files that come with Doom 3 and the Doom 3: Resurrection of Evil expansion feature compression. Although compressed pack files increase loading times, this penalty is small while the filesize difference is significant: Doom 3's assets are 3.6Gb uncompressed, and only 1.44Gb in their original .PK4 form.
+  </p>
+  <a name="Achieving_Better_Compression_For_Distribution">
   </a>
-  s compression ratio is even better, but not as wide-spread as the WinRar format.
- </p>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:1063-0!1!0!0!!en!2 and timestamp 20121204142904 -->
+  <h4>
+   Achieving Better Compression For Distribution
+  </h4>
+  <p>
+   Even if you use the maximum compression possible in .PK4 files it will never rival the compression ratios possible by
+   <a class="external text" href="http://www.win-rar.com/" title="http://www.win-rar.com">
+    WinRar
+   </a>
+   for instance. However the following will:
+  </p>
+  <ol>
+   <li>
+    Create your .PK4 files with the
+    <i>
+     store
+    </i>
+    compression factor.
+   </li>
+   <li>
+    RAR all your .PK4 files with maximum compression. (You may want to create a SFX archive, instead of straight .RAR so people won't have to download WinRar to open it; which can also double as an installer for your mod.)
+   </li>
+  </ol>
+  <p>
+   You should now be able to distribute a much smaller file than if you had used max compression for the .PK4 files. However, once installed your files will be as large as if not in a .PK4 file because they are uncompressed thanks to the
+   <i>
+    store
+   </i>
+   option.
+  </p>
+  <p>
+   On a side note:
+   <a class="external text" href="http://www.7-zip.org/" title="http://www.7-zip.org/">
+    7zip
+   </a>
+   s compression ratio is even better, but not as wide-spread as the WinRar format.
+  </p>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:1063-0!1!0!0!!en!2 and timestamp 20121204142904 -->
+ </body>
+</html>

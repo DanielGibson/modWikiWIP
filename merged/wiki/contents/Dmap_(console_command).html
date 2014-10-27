@@ -1,185 +1,189 @@
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  This command compiles a level so it can be played.
- </p>
- <a name="Usage">
- </a>
- <h2>
-  Usage
- </h2>
- <p>
-  At the console type...
- </p>
- <pre>dmap [Option] [Filename]
+<html>
+ <body>
+  <a name="Description">
+  </a>
+  <h2>
+   Description
+  </h2>
+  <p>
+   This command compiles a level so it can be played.
+  </p>
+  <a name="Usage">
+  </a>
+  <h2>
+   Usage
+  </h2>
+  <p>
+   At the console type...
+  </p>
+  <pre>dmap [Option] [Filename]
 </pre>
- <a name="Parameters">
- </a>
- <h2>
-  Parameters
- </h2>
- <ul>
-  <li>
-   [Option] - Optional compilation filter.
-   <ul>
-    <li>
-     editorOutput - Converts messages to the
-     <a href="DoomEdit" title="DoomEdit">
-      DoomEdit
-     </a>
-     output window.
-    </li>
-    <li>
-     draw - Not functional.
-    </li>
-    <li>
-     <a href="LightCarve" title="LightCarve">
-      lightCarve
-     </a>
-     - Split polygons along light volume edges.
-    </li>
-    <li>
-     glView - Not functional.
-    </li>
-    <li>
-     noAAS - Doesn't create
-     <a href="AAS_%28file_format%29" title="AAS (file format)">
-      AAS
-     </a>
-     files.
-    </li>
-    <li>
-     noCarve - Doesn't cut any surfaces as if they had the
-     <a href="NoFragment_%28Material_global_keyword%29" title="NoFragment (Material global keyword)">
-      noFragment
-     </a>
-     global keyword.
-    </li>
-    <li>
-     noClipSides - Doesn't clip overlaping solid brushes.
-    </li>
-    <li>
-     noCM - Doesn't create
-     <a href="CM_%28file_format%29" title="CM (file format)">
-      collision map
-     </a>
-     .
-    </li>
-    <li>
-     noCurves - Makes curves invisible but their collision model is still generated.
-    </li>
-    <li>
-     noFlood - Skips the flooding of the level allowing it to have leaks.
-    </li>
-    <li>
-     noLightCarve - Doesn't split polygons based on light volume edges. Default behaviour.
-    </li>
-    <li>
-     noModels - Not functional.
-    </li>
-    <li>
-     noOpt - Doesn't merge/remove redundant polygons.
-    </li>
-    <li>
-     noTJunc - Doesn't create T-Junctions and also auto-forces noOpt.
-    </li>
-    <li>
-     v - Shows additional information whilst compiling.
-    </li>
-    <li>
-     verboseEntities - Shows additional information on entities like removal of degenerate polygons.
-    </li>
-    <li>
-     shadowOpt [int] - Sets the static shadow computation optimisation type.
-     <ul>
-      <li>
-       0 - No optimization.
-      </li>
-      <li>
-       1 - SO_MERGE_SURFACES. Default behaviour.
-      </li>
-      <li>
-       2 - SO_CULL_OCCLUDED.
-      </li>
-      <li>
-       3 - SO_CLIP_OCCLUDERS.
-      </li>
-      <li>
-       4 - SO_CLIP_SILS.
-      </li>
-      <li>
-       5 - SO_SIL_OPTIMIZE.
-      </li>
-     </ul>
-    </li>
-   </ul>
-  </li>
- </ul>
- <pre>dmap shadowopt 3 &lt;mapname&gt;
+  <a name="Parameters">
+  </a>
+  <h2>
+   Parameters
+  </h2>
+  <ul>
+   <li>
+    [Option] - Optional compilation filter.
+    <ul>
+     <li>
+      editorOutput - Converts messages to the
+      <a href="DoomEdit" title="DoomEdit">
+       DoomEdit
+      </a>
+      output window.
+     </li>
+     <li>
+      draw - Not functional.
+     </li>
+     <li>
+      <a href="LightCarve" title="LightCarve">
+       lightCarve
+      </a>
+      - Split polygons along light volume edges.
+     </li>
+     <li>
+      glView - Not functional.
+     </li>
+     <li>
+      noAAS - Doesn't create
+      <a href="AAS_%28file_format%29" title="AAS (file format)">
+       AAS
+      </a>
+      files.
+     </li>
+     <li>
+      noCarve - Doesn't cut any surfaces as if they had the
+      <a href="NoFragment_%28Material_global_keyword%29" title="NoFragment (Material global keyword)">
+       noFragment
+      </a>
+      global keyword.
+     </li>
+     <li>
+      noClipSides - Doesn't clip overlaping solid brushes.
+     </li>
+     <li>
+      noCM - Doesn't create
+      <a href="CM_%28file_format%29" title="CM (file format)">
+       collision map
+      </a>
+      .
+     </li>
+     <li>
+      noCurves - Makes curves invisible but their collision model is still generated.
+     </li>
+     <li>
+      noFlood - Skips the flooding of the level allowing it to have leaks.
+     </li>
+     <li>
+      noLightCarve - Doesn't split polygons based on light volume edges. Default behaviour.
+     </li>
+     <li>
+      noModels - Not functional.
+     </li>
+     <li>
+      noOpt - Doesn't merge/remove redundant polygons.
+     </li>
+     <li>
+      noTJunc - Doesn't create T-Junctions and also auto-forces noOpt.
+     </li>
+     <li>
+      v - Shows additional information whilst compiling.
+     </li>
+     <li>
+      verboseEntities - Shows additional information on entities like removal of degenerate polygons.
+     </li>
+     <li>
+      shadowOpt [int] - Sets the static shadow computation optimisation type.
+      <ul>
+       <li>
+        0 - No optimization.
+       </li>
+       <li>
+        1 - SO_MERGE_SURFACES. Default behaviour.
+       </li>
+       <li>
+        2 - SO_CULL_OCCLUDED.
+       </li>
+       <li>
+        3 - SO_CLIP_OCCLUDERS.
+       </li>
+       <li>
+        4 - SO_CLIP_SILS.
+       </li>
+       <li>
+        5 - SO_SIL_OPTIMIZE.
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+  </ul>
+  <pre>dmap shadowopt 3 &lt;mapname&gt;
 </pre>
- <ul>
-  <li>
-   [Filename] - Name of .
-   <a href="MAP_%28file_format%29" title="MAP (file format)">
-    MAP
+  <ul>
+   <li>
+    [Filename] - Name of .
+    <a href="MAP_%28file_format%29" title="MAP (file format)">
+     MAP
+    </a>
+    file (without the extension). If your map is in a subfolder of the /
+    <a href="Maps_%28folder%29" title="Maps (folder)">
+     maps
+    </a>
+    directory you will need to include the relative path to it, for instance:
+   </li>
+  </ul>
+  <pre>dmap &lt;subfolder&gt;/&lt;mapname&gt;
+</pre>
+  <a name="Notes">
+  </a>
+  <h2>
+   Notes
+  </h2>
+  <p>
+   This command will take a .MAP file and generate a .
+   <a href="CM_%28file_format%29" title="CM (file format)">
+    CM
    </a>
-   file (without the extension). If your map is in a subfolder of the /
+   , .
+   <a href="PROC_%28file_format%29" title="PROC (file format)">
+    PROC
+   </a>
+   and sometimes one or more .
+   <a href="AAS_%28file_format%29" title="AAS (file format)">
+    AAS
+   </a>
+   files. See also the
    <a href="Maps_%28folder%29" title="Maps (folder)">
-    maps
+    map formats
    </a>
-   directory you will need to include the relative path to it, for instance:
-  </li>
- </ul>
- <pre>dmap &lt;subfolder&gt;/&lt;mapname&gt;
-</pre>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
- <p>
-  This command will take a .MAP file and generate a .
-  <a href="CM_%28file_format%29" title="CM (file format)">
-   CM
-  </a>
-  , .
-  <a href="PROC_%28file_format%29" title="PROC (file format)">
-   PROC
-  </a>
-  and sometimes one or more .
-  <a href="AAS_%28file_format%29" title="AAS (file format)">
-   AAS
-  </a>
-  files. See also the
-  <a href="Maps_%28folder%29" title="Maps (folder)">
-   map formats
-  </a>
-  page and the
-  <a href="Testmap_%28console_command%29" title="Testmap (console command)">
-   testmap
-  </a>
-  console command.
- </p>
- <p>
-  <br/>
- </p>
- <div>
-  <a class="image" href="Image:Q4square_25.png" title="Image:Q4square_25.png">
-   <img alt="Image:Q4square_25.png" height="25" longdesc="/wiki/Image:Q4square_25.png" src="/w/images/e/e8/Q4square_25.png" width="25"/>
-  </a>
-  <b>
-   Note:
-  </b>
-  Quake 4 only:
-  <dl>
-   <dd>
-    <i>
-     This command does not function under the Linux build of Quake 4.
-    </i>
-   </dd>
-  </dl>
- </div>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:1092-0!1!0!0!!en!2 and timestamp 20121022134218 -->
+   page and the
+   <a href="Testmap_%28console_command%29" title="Testmap (console command)">
+    testmap
+   </a>
+   console command.
+  </p>
+  <p>
+   <br/>
+  </p>
+  <div>
+   <a class="image" href="Image:Q4square_25.png" title="Image:Q4square_25.png">
+    <img alt="Image:Q4square_25.png" height="25" longdesc="/wiki/Image:Q4square_25.png" src="/w/images/e/e8/Q4square_25.png" width="25"/>
+   </a>
+   <b>
+    Note:
+   </b>
+   Quake 4 only:
+   <dl>
+    <dd>
+     <i>
+      This command does not function under the Linux build of Quake 4.
+     </i>
+    </dd>
+   </dl>
+  </div>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:1092-0!1!0!0!!en!2 and timestamp 20121022134218 -->
+ </body>
+</html>

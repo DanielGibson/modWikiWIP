@@ -1,21 +1,25 @@
- <p>
-  Traditionally, APIs such as OpenGL and Direct3D have worked in such a way that you feed it all of the data that makes up your world (vertices, triangles, etc.), and it has a predefined method of how these are put together to create the scene you see on your screen. They had certain parameters that you could set to customize this for your needs, but you could never redefine the core logic. This is called a fixed function pipeline.
- </p>
- <p>
-  Vertex and fragment programs let you do just that. You can use one of these programs to create your own logic for the API to use to transform the input data supplied by the engine into the pixels you see on your screen - a programmable pipeline. Doom 3 does this through .
-  <a href="VFP_%28file_format%29" title="VFP (file format)">
-   VFP
-  </a>
-  files, located in the /
-  <a href="Glprogs_%28folder%29" title="Glprogs (folder)">
-   glprogs
-  </a>
-  folder of your .
-  <a href="PK4_%28file_format%29" title="PK4 (file format)">
-   PK4
-  </a>
-  or mod folder.
- </p>
- <p>
-  Unfortunately, due to the requirements of the OpenGL extensions used for vertex and fragment programs (GL_ARB_vertex_program and GL_ARB_fragment_program), use of VFP files requires a minimum of a DirectX 9 class video card (ATi Radeon 9500/nVidia GeForce 5200 or better). Anyone running your mod with a card that does not meet these requirements will not see these effects.
- </p>
+<html>
+ <body>
+  <p>
+   Traditionally, APIs such as OpenGL and Direct3D have worked in such a way that you feed it all of the data that makes up your world (vertices, triangles, etc.), and it has a predefined method of how these are put together to create the scene you see on your screen. They had certain parameters that you could set to customize this for your needs, but you could never redefine the core logic. This is called a fixed function pipeline.
+  </p>
+  <p>
+   Vertex and fragment programs let you do just that. You can use one of these programs to create your own logic for the API to use to transform the input data supplied by the engine into the pixels you see on your screen - a programmable pipeline. Doom 3 does this through .
+   <a href="VFP_%28file_format%29" title="VFP (file format)">
+    VFP
+   </a>
+   files, located in the /
+   <a href="Glprogs_%28folder%29" title="Glprogs (folder)">
+    glprogs
+   </a>
+   folder of your .
+   <a href="PK4_%28file_format%29" title="PK4 (file format)">
+    PK4
+   </a>
+   or mod folder.
+  </p>
+  <p>
+   Unfortunately, due to the requirements of the OpenGL extensions used for vertex and fragment programs (GL_ARB_vertex_program and GL_ARB_fragment_program), use of VFP files requires a minimum of a DirectX 9 class video card (ATi Radeon 9500/nVidia GeForce 5200 or better). Anyone running your mod with a card that does not meet these requirements will not see these effects.
+  </p>
+ </body>
+</html>

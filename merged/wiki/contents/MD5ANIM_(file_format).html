@@ -1,259 +1,263 @@
- <p>
-  <br/>
- </p>
- <a name="Overview">
- </a>
- <h2>
-  Overview
- </h2>
- <p>
-  MD5Anim files are ascii (plain text) files that contain skeletal animation data. They are part of the .
-  <a href="MD5_%28file_format%29" title="MD5 (file format)">
-   MD5
+<html>
+ <body>
+  <p>
+   <br/>
+  </p>
+  <a name="Overview">
   </a>
-  format system. The other MD5 formats are:
- </p>
- <dl>
-  <dt>
-   .
-   <a href="MD5MESH_%28file_format%29" title="MD5MESH (file format)">
-    MD5MESH
+  <h2>
+   Overview
+  </h2>
+  <p>
+   MD5Anim files are ascii (plain text) files that contain skeletal animation data. They are part of the .
+   <a href="MD5_%28file_format%29" title="MD5 (file format)">
+    MD5
    </a>
-  </dt>
-  <dd>
-   Low resolution polygonal mesh exported from a 3D application.
-  </dd>
-  <dt>
-   .
-   <a href="MD5CAMERA_%28file_format%29" title="MD5CAMERA (file format)">
-    MD5CAMERA
-   </a>
-  </dt>
-  <dd>
-   Animated cameras for use in cutscenes.
-  </dd>
- </dl>
- <a name="Model_Format_Syntax">
- </a>
- <h2>
-  Model Format Syntax
- </h2>
- <a name="MD5_Header">
- </a>
- <h3>
-  MD5 Header
- </h3>
- <p>
-  All MD5 format files start with the MD5 header, regardless the specific filetype. The header is the first section in the file and is as such...
- </p>
- <pre>MD5Version &lt;integer&gt;
+   format system. The other MD5 formats are:
+  </p>
+  <dl>
+   <dt>
+    .
+    <a href="MD5MESH_%28file_format%29" title="MD5MESH (file format)">
+     MD5MESH
+    </a>
+   </dt>
+   <dd>
+    Low resolution polygonal mesh exported from a 3D application.
+   </dd>
+   <dt>
+    .
+    <a href="MD5CAMERA_%28file_format%29" title="MD5CAMERA (file format)">
+     MD5CAMERA
+    </a>
+   </dt>
+   <dd>
+    Animated cameras for use in cutscenes.
+   </dd>
+  </dl>
+  <a name="Model_Format_Syntax">
+  </a>
+  <h2>
+   Model Format Syntax
+  </h2>
+  <a name="MD5_Header">
+  </a>
+  <h3>
+   MD5 Header
+  </h3>
+  <p>
+   All MD5 format files start with the MD5 header, regardless the specific filetype. The header is the first section in the file and is as such...
+  </p>
+  <pre>MD5Version &lt;integer&gt;
 commandline "&lt;string&gt;"
 </pre>
- <ul>
-  <li>
-   MD5Version - An integer that defines the current MD5 specification version. This should always read 10.
-  </li>
-  <li>
-   commandline - A string that contains the command line parameters passed to the
-   <a href="Exportmodels_%28console_command%29" title="Exportmodels (console command)">
-    exportmodels
-   </a>
-   console command.
-  </li>
- </ul>
- <a name="Filetype_Specific_Parameters">
- </a>
- <h3>
-  Filetype Specific Parameters
- </h3>
- <p>
-  This section contains filetype specifc parameters. The filetype specific parameters make up the second section in the file.
- </p>
- <p>
-  In the case of MD5Anim the filetype specific parameters are as such...
- </p>
- <pre>numFrames &lt;integer&gt;
+  <ul>
+   <li>
+    MD5Version - An integer that defines the current MD5 specification version. This should always read 10.
+   </li>
+   <li>
+    commandline - A string that contains the command line parameters passed to the
+    <a href="Exportmodels_%28console_command%29" title="Exportmodels (console command)">
+     exportmodels
+    </a>
+    console command.
+   </li>
+  </ul>
+  <a name="Filetype_Specific_Parameters">
+  </a>
+  <h3>
+   Filetype Specific Parameters
+  </h3>
+  <p>
+   This section contains filetype specifc parameters. The filetype specific parameters make up the second section in the file.
+  </p>
+  <p>
+   In the case of MD5Anim the filetype specific parameters are as such...
+  </p>
+  <pre>numFrames &lt;integer&gt;
 numJoints &lt;integer&gt;
 frameRate &lt;integer&gt;
 numAnimatedComponents &lt;integer&gt;
 </pre>
- <ul>
-  <li>
-   numFrames - The total number of frames in the animation.
-  </li>
-  <li>
-   numJoints - The number of joints in the model.
-  </li>
-  <li>
-   frameRate - The rate of playback in frames per second.
-  </li>
-  <li>
-   numAnimatedComponents - The number of animated components.
-  </li>
- </ul>
- <a name="Ordered_Lists">
- </a>
- <h3>
-  Ordered Lists
- </h3>
- <p>
-  The third section in the file contains ordered lists. These lists contain data relevant to the type declared.
- </p>
- <pre>&lt;string&gt; {
+  <ul>
+   <li>
+    numFrames - The total number of frames in the animation.
+   </li>
+   <li>
+    numJoints - The number of joints in the model.
+   </li>
+   <li>
+    frameRate - The rate of playback in frames per second.
+   </li>
+   <li>
+    numAnimatedComponents - The number of animated components.
+   </li>
+  </ul>
+  <a name="Ordered_Lists">
+  </a>
+  <h3>
+   Ordered Lists
+  </h3>
+  <p>
+   The third section in the file contains ordered lists. These lists contain data relevant to the type declared.
+  </p>
+  <pre>&lt;string&gt; {
         [element 1]
         [element 2]
         [element 3]
         ... ect ...
 }
 </pre>
- <p>
-  First, the type of list is declared (&lt;string&gt;). Then the body of the list is contained within curly brackets.
- </p>
- <p>
-  The list is constructed of a series of elements each on a new line. The number of elements varies depending on type.
- </p>
- <p>
-  In the case of MD5Anim there are three basic ordered lists followed by an ordered list for every frame in the animation.
- </p>
- <a name="Hierarchy">
- </a>
- <h4>
-  Hierarchy
- </h4>
- <p>
-  Each element of the hierarchy ordered list is structured like so ...
- </p>
- <pre>"[boneName]"   [parentIndex] [numComp] [frameIndex] // [parentName] ( [tX] [tY] [tZ] [qX] [qY] [qZ] )
+  <p>
+   First, the type of list is declared (&lt;string&gt;). Then the body of the list is contained within curly brackets.
+  </p>
+  <p>
+   The list is constructed of a series of elements each on a new line. The number of elements varies depending on type.
+  </p>
+  <p>
+   In the case of MD5Anim there are three basic ordered lists followed by an ordered list for every frame in the animation.
+  </p>
+  <a name="Hierarchy">
+  </a>
+  <h4>
+   Hierarchy
+  </h4>
+  <p>
+   Each element of the hierarchy ordered list is structured like so ...
+  </p>
+  <pre>"[boneName]"   [parentIndex] [numComp] [frameIndex] // [parentName] ( [tX] [tY] [tZ] [qX] [qY] [qZ] )
 </pre>
- <ul>
-  <li>
-   boneName - The name of this bone.
-  </li>
-  <li>
-   parentIndex - The index of this bone's parent.
-  </li>
-  <li>
-   numComp - a flag that defines what components are keyframed.
-  </li>
-  <li>
-   frameIndex - index into the frame data, pointing to the first animated component of this bone
-  </li>
-  <li>
-   parentName - The name of the parent bone
-  </li>
-  <li>
-   [tX] - Optional placeholder just to provide a visual of what components are animated
-  </li>
-  <li>
-   [tY] - Optional placeholder just to provide a visual of what components are animated
-  </li>
-  <li>
-   [tZ] - Optional placeholder just to provide a visual of what components are animated
-  </li>
-  <li>
-   [qX] - Optional placeholder just to provide a visual of what components are animated
-  </li>
-  <li>
-   [qY] - Optional placeholder just to provide a visual of what components are animated
-  </li>
-  <li>
-   [qZ] - Optional placeholder just to provide a visual of what components are animated
-  </li>
- </ul>
- <a name="Bounds">
- </a>
- <h4>
-  Bounds
- </h4>
- <p>
-  There is one line for each frame of the animation that holds the bounding box information at that frame.
- </p>
- <pre>( [minX] [minY] [minZ] ) ( [maxX] [maxY] [maxZ] )
+  <ul>
+   <li>
+    boneName - The name of this bone.
+   </li>
+   <li>
+    parentIndex - The index of this bone's parent.
+   </li>
+   <li>
+    numComp - a flag that defines what components are keyframed.
+   </li>
+   <li>
+    frameIndex - index into the frame data, pointing to the first animated component of this bone
+   </li>
+   <li>
+    parentName - The name of the parent bone
+   </li>
+   <li>
+    [tX] - Optional placeholder just to provide a visual of what components are animated
+   </li>
+   <li>
+    [tY] - Optional placeholder just to provide a visual of what components are animated
+   </li>
+   <li>
+    [tZ] - Optional placeholder just to provide a visual of what components are animated
+   </li>
+   <li>
+    [qX] - Optional placeholder just to provide a visual of what components are animated
+   </li>
+   <li>
+    [qY] - Optional placeholder just to provide a visual of what components are animated
+   </li>
+   <li>
+    [qZ] - Optional placeholder just to provide a visual of what components are animated
+   </li>
+  </ul>
+  <a name="Bounds">
+  </a>
+  <h4>
+   Bounds
+  </h4>
+  <p>
+   There is one line for each frame of the animation that holds the bounding box information at that frame.
+  </p>
+  <pre>( [minX] [minY] [minZ] ) ( [maxX] [maxY] [maxZ] )
 </pre>
- <ul>
-  <li>
-   minX - The X component of the frames's minimum bounding box XYZ position.
-  </li>
-  <li>
-   minY - The Y component of the frames's minimum bounding box XYZ position.
-  </li>
-  <li>
-   minZ - The Z component of the frames's minimum bounding box XYZ position.
-  </li>
-  <li>
-   maxX - The X component of the frames's maximum bounding box XYZ position.
-  </li>
-  <li>
-   maxY - The Y component of the frames's maximum bounding box XYZ position.
-  </li>
-  <li>
-   maxZ - The Z component of the frames's maximum bounding box XYZ position.
-  </li>
- </ul>
- <a name="Baseframe">
- </a>
- <h4>
-  Baseframe
- </h4>
- <p>
-  Each bone's position and orientation for the baseframe is listed here.
- </p>
- <pre>( [xPos] [yPos] [zPos] ) ( [xOrient] [yOrient] [zOrient] )
+  <ul>
+   <li>
+    minX - The X component of the frames's minimum bounding box XYZ position.
+   </li>
+   <li>
+    minY - The Y component of the frames's minimum bounding box XYZ position.
+   </li>
+   <li>
+    minZ - The Z component of the frames's minimum bounding box XYZ position.
+   </li>
+   <li>
+    maxX - The X component of the frames's maximum bounding box XYZ position.
+   </li>
+   <li>
+    maxY - The Y component of the frames's maximum bounding box XYZ position.
+   </li>
+   <li>
+    maxZ - The Z component of the frames's maximum bounding box XYZ position.
+   </li>
+  </ul>
+  <a name="Baseframe">
+  </a>
+  <h4>
+   Baseframe
+  </h4>
+  <p>
+   Each bone's position and orientation for the baseframe is listed here.
+  </p>
+  <pre>( [xPos] [yPos] [zPos] ) ( [xOrient] [yOrient] [zOrient] )
 </pre>
- <ul>
-  <li>
-   xPos - The X component of this bone's XYZ position relative to parent bone's position.
-  </li>
-  <li>
-   yPos - The Y component of this bone's XYZ position relative to parent bone's position.
-  </li>
-  <li>
-   zPos - The Z component of this bone's XYZ position relative to parent bone's position.
-  </li>
-  <li>
-   xOrient - The X component of this bone's XYZ orentation quaternion.
-  </li>
-  <li>
-   yOrient - The Y component of this bone's XYZ orentation quaternion.
-  </li>
-  <li>
-   zOrient - The Z component of this bone's XYZ orentation quaternion.
-  </li>
- </ul>
- <p>
-  Note for coders: it is not usually possible to create and render a skeleton using only the baseframe data. Without first applying the animated components to it from a frame (see below) the skeleton will not usually resemble the model when rendered.
- </p>
- <a name="Frame_0.2C1.2C2.2C_ect...">
- </a>
- <h4>
-  Frame 0,1,2, ect...
- </h4>
- <p>
-  For each frame the animated components' values are listed. Values that are not animated have the same value as their baseframe value, over the whole animation time.
- </p>
- <p>
-  Each of these 6 numbers is optional, lines don't necessarily have to list 6 values. The "numModComponents" value of a joint flags which components are listed here.
- </p>
- <pre>[xPos] [yPos] [zPos] [xOrient] [yOrient] [zOrient]
+  <ul>
+   <li>
+    xPos - The X component of this bone's XYZ position relative to parent bone's position.
+   </li>
+   <li>
+    yPos - The Y component of this bone's XYZ position relative to parent bone's position.
+   </li>
+   <li>
+    zPos - The Z component of this bone's XYZ position relative to parent bone's position.
+   </li>
+   <li>
+    xOrient - The X component of this bone's XYZ orentation quaternion.
+   </li>
+   <li>
+    yOrient - The Y component of this bone's XYZ orentation quaternion.
+   </li>
+   <li>
+    zOrient - The Z component of this bone's XYZ orentation quaternion.
+   </li>
+  </ul>
+  <p>
+   Note for coders: it is not usually possible to create and render a skeleton using only the baseframe data. Without first applying the animated components to it from a frame (see below) the skeleton will not usually resemble the model when rendered.
+  </p>
+  <a name="Frame_0.2C1.2C2.2C_ect...">
+  </a>
+  <h4>
+   Frame 0,1,2, ect...
+  </h4>
+  <p>
+   For each frame the animated components' values are listed. Values that are not animated have the same value as their baseframe value, over the whole animation time.
+  </p>
+  <p>
+   Each of these 6 numbers is optional, lines don't necessarily have to list 6 values. The "numModComponents" value of a joint flags which components are listed here.
+  </p>
+  <pre>[xPos] [yPos] [zPos] [xOrient] [yOrient] [zOrient]
 </pre>
- <ul>
-  <li>
-   xPos - The X component of this bone's XYZ position in relation to the baseframe.
-  </li>
-  <li>
-   yPos - The Y component of this bone's XYZ position in relation to the baseframe.
-  </li>
-  <li>
-   zPos - The Z component of this bone's XYZ position in relation to the baseframe.
-  </li>
-  <li>
-   xOrient - The X component of this bone's XYZ orentation quaternion in relation to the baseframe.
-  </li>
-  <li>
-   yOrient - The Y component of this bone's XYZ orentation quaternion in relation to the baseframe.
-  </li>
-  <li>
-   zOrient - The Z component of this bone's XYZ orentation quaternion in relation to the baseframe.
-  </li>
- </ul>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:1216-0!1!0!0!!en!2 and timestamp 20121205190021 -->
+  <ul>
+   <li>
+    xPos - The X component of this bone's XYZ position in relation to the baseframe.
+   </li>
+   <li>
+    yPos - The Y component of this bone's XYZ position in relation to the baseframe.
+   </li>
+   <li>
+    zPos - The Z component of this bone's XYZ position in relation to the baseframe.
+   </li>
+   <li>
+    xOrient - The X component of this bone's XYZ orentation quaternion in relation to the baseframe.
+   </li>
+   <li>
+    yOrient - The Y component of this bone's XYZ orentation quaternion in relation to the baseframe.
+   </li>
+   <li>
+    zOrient - The Z component of this bone's XYZ orentation quaternion in relation to the baseframe.
+   </li>
+  </ul>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:1216-0!1!0!0!!en!2 and timestamp 20121205190021 -->
+ </body>
+</html>

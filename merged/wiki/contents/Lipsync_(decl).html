@@ -1,12 +1,14 @@
- <p>
-  LipSync declarations define the associated visemes to use in order for a character to convincingly speak the given text.
- </p>
- <a name="Syntax">
- </a>
- <h2>
-  Syntax
- </h2>
- <pre>lipSync [lipSync Name]
+<html>
+ <body>
+  <p>
+   LipSync declarations define the associated visemes to use in order for a character to convincingly speak the given text.
+  </p>
+  <a name="Syntax">
+  </a>
+  <h2>
+   Syntax
+  </h2>
+  <pre>lipSync [lipSync Name]
 {
    description	[description]
    text		[text]
@@ -16,110 +18,112 @@
    ...
 }
 </pre>
- <p>
-  The first line begins with the text "lipSync" which defines this declaration to be of the lipSync type. This is followed by the name of the declaration.
- </p>
- <p>
-  The declaration is then opened with an opening bracket and closed with a closing bracket.
- </p>
- <p>
-  Inside the declaration is a series of fields and values. All values are strings enclosed in quotation marks.
- </p>
- <ul>
-  <li>
-   [description] - The spoken text.
-  </li>
-  <li>
-   [text] - This field is in the form of a string reference. The value resolves to the translation of the spoken text as gathered from the coorisponding
-   <a href="LANG_%28file_format%29" title="LANG (file format)">
-    language file
-   </a>
-   .
-  </li>
-  <li>
-   [visemes] - Two values are assigned to this field...
-   <ul>
-    <li>
-     [lang] - The language for which the viseme data applies.
-    </li>
-    <li>
-     [data] - The actual viseme data.
-    </li>
-   </ul>
-  </li>
- </ul>
- <a name="Visemes">
- </a>
- <h2>
-  Visemes
- </h2>
- <p>
-  According to wikipedia a viseme is...
- </p>
- <pre>A viseme is a facial position that articulates a certain sound in speech. A viseme is the visual      
+  <p>
+   The first line begins with the text "lipSync" which defines this declaration to be of the lipSync type. This is followed by the name of the declaration.
+  </p>
+  <p>
+   The declaration is then opened with an opening bracket and closed with a closing bracket.
+  </p>
+  <p>
+   Inside the declaration is a series of fields and values. All values are strings enclosed in quotation marks.
+  </p>
+  <ul>
+   <li>
+    [description] - The spoken text.
+   </li>
+   <li>
+    [text] - This field is in the form of a string reference. The value resolves to the translation of the spoken text as gathered from the coorisponding
+    <a href="LANG_%28file_format%29" title="LANG (file format)">
+     language file
+    </a>
+    .
+   </li>
+   <li>
+    [visemes] - Two values are assigned to this field...
+    <ul>
+     <li>
+      [lang] - The language for which the viseme data applies.
+     </li>
+     <li>
+      [data] - The actual viseme data.
+     </li>
+    </ul>
+   </li>
+  </ul>
+  <a name="Visemes">
+  </a>
+  <h2>
+   Visemes
+  </h2>
+  <p>
+   According to wikipedia a viseme is...
+  </p>
+  <pre>A viseme is a facial position that articulates a certain sound in speech. A viseme is the visual      
 equivalent of a phoneme or unit of sound in spoken language. Using visemes, the hearing-impaired can
 view sounds visually - effectively, "lip-reading" the entire human face. In computer animation,
 visemes can be used as intermediate poses to give the illusion of speaking.
 </pre>
- <p>
-  So in the case of Quake 4, the data field of a visemes line is comprised of a series of visemes. Each of which describes to the engine the state of the face of a character much like key frames in an animation. When these visemes are applied to a character in sequence it gives the apperance that the character's facial movements are in sync with a given sound.
- </p>
- <a name="Visemes_Syntax">
- </a>
- <h3>
-  Visemes Syntax
- </h3>
- <p>
-  As an example taken directly from Quake 4 source files, the viseme data for "On my way, sir." looks like so...
- </p>
- <pre>"x12n &lt;On&gt; AA22z n3u &lt;my&gt; m3q AY3q &lt;way&gt; w8r EY7q x5g &lt;sir&gt; s3k ER17x x12o "
+  <p>
+   So in the case of Quake 4, the data field of a visemes line is comprised of a series of visemes. Each of which describes to the engine the state of the face of a character much like key frames in an animation. When these visemes are applied to a character in sequence it gives the apperance that the character's facial movements are in sync with a given sound.
+  </p>
+  <a name="Visemes_Syntax">
+  </a>
+  <h3>
+   Visemes Syntax
+  </h3>
+  <p>
+   As an example taken directly from Quake 4 source files, the viseme data for "On my way, sir." looks like so...
+  </p>
+  <pre>"x12n &lt;On&gt; AA22z n3u &lt;my&gt; m3q AY3q &lt;way&gt; w8r EY7q x5g &lt;sir&gt; s3k ER17x x12o "
 </pre>
- <p>
-  Some things to note...
- </p>
- <ul>
-  <li>
-   The use of &lt;&gt; to enclose words. These are markers to indicate comments. They are not interpreted by the engine. Their sole purpose is to make it easier for the end user to read.
-  </li>
-  <li>
-   The use of phonemes as listed on
-   <a class="external text" href="https://web.archive.org/web/20100521043500/http://www.annosoft.com/phoneset.htm" title="http://www.annosoft.com/phoneset.htm">
-    Annosoft's Phoneme Codes Webpage
-   </a>
-  </li>
-  <li>
-   The use of a number directly following each phoneme. This defines the duration of a given phoneme. It's currently unknown what unit of measure this is in. It could be frames, milliseconds, samples, ect...
-  </li>
-  <li>
-   The use of a single lowercase letter directly following the duration. This defines the intensity of the phoneme for mouth movement, where a would be the lowest value and z would be the highest value.
-  </li>
-  <li>
-   The use of spaces to separate both viseme groups and comments.
-  </li>
- </ul>
- <p>
-  It is also possible to cue facial expressions by including the following modifiers in the visemes data field...
- </p>
- <ul>
-  <li>
-   {furrow}
-  </li>
-  <li>
-   {idle}
-  </li>
-  <li>
-   {confused}
-  </li>
-  <li>
-   {puzzled}
-  </li>
-  <li>
-   {scared}
-  </li>
-  <li>
-   {happy}
-  </li>
-  <li>
-   {pain}
-  </li>
- </ul>
+  <p>
+   Some things to note...
+  </p>
+  <ul>
+   <li>
+    The use of &lt;&gt; to enclose words. These are markers to indicate comments. They are not interpreted by the engine. Their sole purpose is to make it easier for the end user to read.
+   </li>
+   <li>
+    The use of phonemes as listed on
+    <a class="external text" href="https://web.archive.org/web/20100521043500/http://www.annosoft.com/phoneset.htm" title="http://www.annosoft.com/phoneset.htm">
+     Annosoft's Phoneme Codes Webpage
+    </a>
+   </li>
+   <li>
+    The use of a number directly following each phoneme. This defines the duration of a given phoneme. It's currently unknown what unit of measure this is in. It could be frames, milliseconds, samples, ect...
+   </li>
+   <li>
+    The use of a single lowercase letter directly following the duration. This defines the intensity of the phoneme for mouth movement, where a would be the lowest value and z would be the highest value.
+   </li>
+   <li>
+    The use of spaces to separate both viseme groups and comments.
+   </li>
+  </ul>
+  <p>
+   It is also possible to cue facial expressions by including the following modifiers in the visemes data field...
+  </p>
+  <ul>
+   <li>
+    {furrow}
+   </li>
+   <li>
+    {idle}
+   </li>
+   <li>
+    {confused}
+   </li>
+   <li>
+    {puzzled}
+   </li>
+   <li>
+    {scared}
+   </li>
+   <li>
+    {happy}
+   </li>
+   <li>
+    {pain}
+   </li>
+  </ul>
+ </body>
+</html>

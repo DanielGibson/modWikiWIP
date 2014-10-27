@@ -1,47 +1,49 @@
- <a name="Game_class">
- </a>
- <h2>
-  Game class
- </h2>
- <p>
-  This event operates on an instance of the
-  <a href="Game_class" title="Game class">
-   game class
+<html>
+ <body>
+  <a name="Game_class">
   </a>
-  type {{{gameclass}}}
- </p>
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  Returns the button state from the current user command.
- </p>
- <a name="Usage">
- </a>
- <h2>
-  Usage
- </h2>
- <p>
-  float  getButtons( )
- </p>
- <a name="Parameters">
- </a>
- <h2>
-  Parameters
- </h2>
- <ul>
-  <li>
-   tba
-  </li>
- </ul>
- <a name="Examples">
- </a>
- <h2>
-  Examples
- </h2>
- <pre><span style="color: #0000ff;">float</span>	userbuttons,
+  <h2>
+   Game class
+  </h2>
+  <p>
+   This event operates on an instance of the
+   <a href="Game_class" title="Game class">
+    game class
+   </a>
+   type {{{gameclass}}}
+  </p>
+  <a name="Description">
+  </a>
+  <h2>
+   Description
+  </h2>
+  <p>
+   Returns the button state from the current user command.
+  </p>
+  <a name="Usage">
+  </a>
+  <h2>
+   Usage
+  </h2>
+  <p>
+   float  getButtons( )
+  </p>
+  <a name="Parameters">
+  </a>
+  <h2>
+   Parameters
+  </h2>
+  <ul>
+   <li>
+    tba
+   </li>
+  </ul>
+  <a name="Examples">
+  </a>
+  <h2>
+   Examples
+  </h2>
+  <pre><span style="color: #0000ff;">float</span>	userbuttons,
 	btn0,
 	btn1,
 	btn2,
@@ -86,15 +88,15 @@ btn7 = <span style="color: #0000dd;">128</span> &amp; userbuttons;
 <span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span>btn7<span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
 	<span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">println</span><span style="color: #000000;">(</span><span style="color: #666666;">"Button 7 was pressed."</span><span style="color: #000000;">)</span>;
 <span style="color: #000000;">}</span></pre>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
- <p>
-  The value returned bares relation to the status of eight possible buttons as  defined in the SDK under UsercmdGen.h...
- </p>
- <pre>// usercmd_t-&gt;button bits
+  <a name="Notes">
+  </a>
+  <h2>
+   Notes
+  </h2>
+  <p>
+   The value returned bares relation to the status of eight possible buttons as  defined in the SDK under UsercmdGen.h...
+  </p>
+  <pre>// usercmd_t-&gt;button bits
 const int BUTTON_ATTACK			= BIT(0);
 const int BUTTON_RUN			= BIT(1);
 const int BUTTON_ZOOM			= BIT(2);
@@ -104,12 +106,14 @@ const int BUTTON_5				= BIT(5);
 const int BUTTON_6				= BIT(6);
 const int BUTTON_7				= BIT(7);
 </pre>
- <p>
-  Each button's status is stored as a single bit in a eight bit binary number. Each button is represented by either a 1 or 0 which corresponds with either an on or off state. The resulting binary number therefore represents the status of each button.
- </p>
- <p>
-  The example above depicts a way to determine which buttons are being pressed via getButtons.
- </p>
- <p>
-  <br/>
- </p>
+  <p>
+   Each button's status is stored as a single bit in a eight bit binary number. Each button is represented by either a 1 or 0 which corresponds with either an on or off state. The resulting binary number therefore represents the status of each button.
+  </p>
+  <p>
+   The example above depicts a way to determine which buttons are being pressed via getButtons.
+  </p>
+  <p>
+   <br/>
+  </p>
+ </body>
+</html>

@@ -1,339 +1,343 @@
- <a name="Cube_Maps_and_Their_Use">
- </a>
- <h2>
-  Cube Maps and Their Use
- </h2>
- <div class="thumb tleft">
-  <div style="width:182px;">
-   <a class="internal" href="Image:Cubemap_example.png" title="Example of all six sides of the cubemap laid out in their positions as seen by the engine">
-    <img alt="Example of all six sides of the cubemap laid out in their positions as seen by the engine" height="135" longdesc="/wiki/Image:Cubemap_example.png" src="/w/images/thumb/3/37/Cubemap_example.png/180px-Cubemap_example.png" width="180"/>
-   </a>
-   <div class="thumbcaption">
-    <div class="magnify" style="float:right">
-     <a class="internal" href="Image:Cubemap_example.png" title="Enlarge">
-      <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
-     </a>
-    </div>
-    Example of all six sides of the cubemap laid out in their positions as seen by the engine
-   </div>
-  </div>
- </div>
- <div class="thumb tright">
-  <div style="width:182px;">
-   <a class="internal" href="Image:Cubemap_example_2.png" title="Example of all six sides of the cubemap laid out in their positions as seen by the engine">
-    <img alt="Example of all six sides of the cubemap laid out in their positions as seen by the engine" height="135" longdesc="/wiki/Image:Cubemap_example_2.png" src="/w/images/thumb/0/06/Cubemap_example_2.png/180px-Cubemap_example_2.png" width="180"/>
-   </a>
-   <div class="thumbcaption">
-    <div class="magnify" style="float:right">
-     <a class="internal" href="Image:Cubemap_example_2.png" title="Enlarge">
-      <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
-     </a>
-    </div>
-    Example of all six sides of the cubemap laid out in their positions as seen by the engine
-   </div>
-  </div>
- </div>
- <p>
-  Cube maps (also known as environment maps) are comprised of a series of six images that correspond to the sides of a cube.
- </p>
- <p>
-  The purpose of which is to capture a 360 degree view of the player's surroundings so that in game you can...
- </p>
- <ul>
-  <li>
-   fake the appearance of a sky or surrounding environment
-  </li>
-  <li>
-   fake the appearance of environmental reflections
-  </li>
- </ul>
- <p>
-  <br style="clear:both"/>
- </p>
- <a name="Storage_and_Naming_Conventions">
- </a>
- <h2>
-  Storage and Naming Conventions
- </h2>
- <p>
-  Cube map images are stored in the
-  <a href="Env_%28folder%29" title="Env (folder)">
-   env
+<html>
+ <body>
+  <a name="Cube_Maps_and_Their_Use">
   </a>
-  folder.
- </p>
- <p>
-  Cube map images are named as follows...
- </p>
- <pre>[basename]_[direction].tga
+  <h2>
+   Cube Maps and Their Use
+  </h2>
+  <div class="thumb tleft">
+   <div style="width:182px;">
+    <a class="internal" href="Image:Cubemap_example.png" title="Example of all six sides of the cubemap laid out in their positions as seen by the engine">
+     <img alt="Example of all six sides of the cubemap laid out in their positions as seen by the engine" height="135" longdesc="/wiki/Image:Cubemap_example.png" src="/w/images/thumb/3/37/Cubemap_example.png/180px-Cubemap_example.png" width="180"/>
+    </a>
+    <div class="thumbcaption">
+     <div class="magnify" style="float:right">
+      <a class="internal" href="Image:Cubemap_example.png" title="Enlarge">
+       <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+      </a>
+     </div>
+     Example of all six sides of the cubemap laid out in their positions as seen by the engine
+    </div>
+   </div>
+  </div>
+  <div class="thumb tright">
+   <div style="width:182px;">
+    <a class="internal" href="Image:Cubemap_example_2.png" title="Example of all six sides of the cubemap laid out in their positions as seen by the engine">
+     <img alt="Example of all six sides of the cubemap laid out in their positions as seen by the engine" height="135" longdesc="/wiki/Image:Cubemap_example_2.png" src="/w/images/thumb/0/06/Cubemap_example_2.png/180px-Cubemap_example_2.png" width="180"/>
+    </a>
+    <div class="thumbcaption">
+     <div class="magnify" style="float:right">
+      <a class="internal" href="Image:Cubemap_example_2.png" title="Enlarge">
+       <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+      </a>
+     </div>
+     Example of all six sides of the cubemap laid out in their positions as seen by the engine
+    </div>
+   </div>
+  </div>
+  <p>
+   Cube maps (also known as environment maps) are comprised of a series of six images that correspond to the sides of a cube.
+  </p>
+  <p>
+   The purpose of which is to capture a 360 degree view of the player's surroundings so that in game you can...
+  </p>
+  <ul>
+   <li>
+    fake the appearance of a sky or surrounding environment
+   </li>
+   <li>
+    fake the appearance of environmental reflections
+   </li>
+  </ul>
+  <p>
+   <br style="clear:both"/>
+  </p>
+  <a name="Storage_and_Naming_Conventions">
+  </a>
+  <h2>
+   Storage and Naming Conventions
+  </h2>
+  <p>
+   Cube map images are stored in the
+   <a href="Env_%28folder%29" title="Env (folder)">
+    env
+   </a>
+   folder.
+  </p>
+  <p>
+   Cube map images are named as follows...
+  </p>
+  <pre>[basename]_[direction].tga
 </pre>
- <p>
-  Where the
-  <i>
-   basename
-  </i>
-  is the name you will use to reference the cube map in your
-  <a href="Material_%28decl%29" title="Material (decl)">
-   material shader
+  <p>
+   Where the
+   <i>
+    basename
+   </i>
+   is the name you will use to reference the cube map in your
+   <a href="Material_%28decl%29" title="Material (decl)">
+    material shader
+   </a>
+   , and the
+   <i>
+    direction
+   </i>
+   is the orientation of the camera.
+  </p>
+  <p>
+   The direction suffix can vary depending on what purpose you plan to use your cube map.
+  </p>
+  <table border="1" cellpadding="0" cellspacing="0" style="width:75%">
+   <tr style="background:#AA0000; color:white">
+    <th>
+     SKY
+    </th>
+    <th>
+     REFLECTION
+    </th>
+   </tr>
+   <tr align="center">
+    <td>
+     [basename]_up.tga
+    </td>
+    <td>
+     [basename]_py.tga
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     [basename]_down.tga
+    </td>
+    <td>
+     [basename]_ny.tga
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     [basename]_left.tga
+    </td>
+    <td>
+     [basename]_nx.tga
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     [basename]_right.tga
+    </td>
+    <td>
+     [basename]_px.tga
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     [basename]_forward.tga
+    </td>
+    <td>
+     [basename]_pz.tga
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     [basename]_back.tga
+    </td>
+    <td>
+     [basename]_nz.tga
+    </td>
+   </tr>
+  </table>
+  <p>
+   <br/>
+  </p>
+  <a name="Capturing_Images_to_Create_New_Cube_Maps">
   </a>
-  , and the
-  <i>
-   direction
-  </i>
-  is the orientation of the camera.
- </p>
- <p>
-  The direction suffix can vary depending on what purpose you plan to use your cube map.
- </p>
- <table border="1" cellpadding="0" cellspacing="0" style="width:75%">
-  <tr style="background:#AA0000; color:white">
-   <th>
-    SKY
-   </th>
-   <th>
-    REFLECTION
-   </th>
-  </tr>
-  <tr align="center">
-   <td>
-    [basename]_up.tga
-   </td>
-   <td>
-    [basename]_py.tga
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    [basename]_down.tga
-   </td>
-   <td>
-    [basename]_ny.tga
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    [basename]_left.tga
-   </td>
-   <td>
-    [basename]_nx.tga
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    [basename]_right.tga
-   </td>
-   <td>
-    [basename]_px.tga
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    [basename]_forward.tga
-   </td>
-   <td>
-    [basename]_pz.tga
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    [basename]_back.tga
-   </td>
-   <td>
-    [basename]_nz.tga
-   </td>
-  </tr>
- </table>
- <p>
-  <br/>
- </p>
- <a name="Capturing_Images_to_Create_New_Cube_Maps">
- </a>
- <h2>
-  Capturing Images to Create New Cube Maps
- </h2>
- <p>
-  Images can be captured from any application that provides you with the following controls...
- </p>
- <ul>
-  <li>
-   The ability to set the camera's position to a fixed point.
-  </li>
-  <li>
-   The ability to set the camera's rotation, on all three axises, in 90 degree increments, with precision.
-  </li>
-  <li>
-   The ability to set the camera's field of view to 90 degrees.
-  </li>
- </ul>
- <p>
-  From that point, all you need to do is capture six images where in each case the camera is oriented in a different cardinal direction (up, down, left, right, back, and forward).
- </p>
- <p>
-  The examples posted at the top of this page depict the correct orientation for each image if they were layed out side by side.
- </p>
- <p>
-  The console command
-  <a href="Envshot_%28console_command%29" title="Envshot (console command)">
-   envshot
+  <h2>
+   Capturing Images to Create New Cube Maps
+  </h2>
+  <p>
+   Images can be captured from any application that provides you with the following controls...
+  </p>
+  <ul>
+   <li>
+    The ability to set the camera's position to a fixed point.
+   </li>
+   <li>
+    The ability to set the camera's rotation, on all three axises, in 90 degree increments, with precision.
+   </li>
+   <li>
+    The ability to set the camera's field of view to 90 degrees.
+   </li>
+  </ul>
+  <p>
+   From that point, all you need to do is capture six images where in each case the camera is oriented in a different cardinal direction (up, down, left, right, back, and forward).
+  </p>
+  <p>
+   The examples posted at the top of this page depict the correct orientation for each image if they were layed out side by side.
+  </p>
+  <p>
+   The console command
+   <a href="Envshot_%28console_command%29" title="Envshot (console command)">
+    envshot
+   </a>
+   can capture the six needed images from within the game.
+  </p>
+  <a name="Editing_Images">
   </a>
-  can capture the six needed images from within the game.
- </p>
- <a name="Editing_Images">
- </a>
- <h2>
-  Editing Images
- </h2>
- <p>
-  Some post editing may be nessicary depending on what field of view options were available and if the orientation of each image is correct.
- </p>
- <a name="Correcting_Rectangular_Images">
- </a>
- <h3>
-  Correcting Rectangular Images
- </h3>
- <p>
-  If the field of view for your camera was 90 degrees both vertically and horizontally, the resulting captures would be square.
- </p>
- <p>
-  However, not all software allows for the adjustment of horizontal and vertical field of view in which case you'll end up with rectangular captures because the screenshot captures more data lengthwise than heightwise or vice versa.
- </p>
- <p>
-  So long as the dimension in which you were permitted to adjust the field of view corrisponds with the smaller measurment across your image (height or width), then it should be possible to crop the image from the center and remove overlapping image data.
- </p>
- <p>
-  For example, if the height of your image is captured at a field of view of 90 and the width is larger than the height, then you can safely crop the sides from the center of the image.
- </p>
- <a name="Correcting_Disoriented_Images">
- </a>
- <h3>
-  Correcting Disoriented Images
- </h3>
- <p>
-  Sometimes the rotational adjustments in an application do not cater well to the orientation expected in Doom 3 to make a proper cube map.
- </p>
- <p>
-  This means that occasionally it may be nessicary to rotate several of your images in 90 degree increments so when layed out they match like the example above.
- </p>
- <a name="Rearranging_Cube_Map_Faces">
- </a>
- <h3>
-  Rearranging Cube Map Faces
- </h3>
- <p>
-  Sometimes it is necessary to rearrange cube map faces for use with different export and editing tools. This often involves changing the naming convention of files and correcting the orientation of the images.
- </p>
- <p>
-  Some common corrections from application to application are documented below...
- </p>
- <table border="1" cellpadding="0" cellspacing="0" style="width:75%">
-  <tr style="background:#AA0000; color:white">
-   <th>
-    Doom 3
-   </th>
-   <th>
-    Quake 2
-   </th>
-  </tr>
-  <tr align="center">
-   <td>
-    _up
-    <b>
-     or
-    </b>
-    _py
-   </td>
-   <td>
-    _up
-    <b>
-     and
-    </b>
-    rotate 90 CW
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    _down
-    <b>
-     or
-    </b>
-    _ny
-   </td>
-   <td>
-    _dn
-    <b>
-     and
-    </b>
-    rotate 90 CCW
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    _left
-    <b>
-     or
-    </b>
-    _nx
-   </td>
-   <td>
-    _lf
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    _right
-    <b>
-     or
-    </b>
-    _px
-   </td>
-   <td>
-    _rt
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    _forward
-    <b>
-     or
-    </b>
-    _pz
-   </td>
-   <td>
-    _ft
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    _back
-    <b>
-     or
-    </b>
-    _nz
-   </td>
-   <td>
-    _bk
-   </td>
-  </tr>
- </table>
- <a name="Fixing_Seams_or_Drawing_a_Cube_Map_from_Scratch">
- </a>
- <h2>
-  Fixing Seams or Drawing a Cube Map from Scratch
- </h2>
- <p>
-  It is possible to edit a cubemap as a single entity instead of working with the individual images by using a program called
-  <a class="external text" href="http://www.skypaint.com/" title="http://www.skypaint.com/">
-   SkyPaint
+  <h2>
+   Editing Images
+  </h2>
+  <p>
+   Some post editing may be nessicary depending on what field of view options were available and if the orientation of each image is correct.
+  </p>
+  <a name="Correcting_Rectangular_Images">
   </a>
-  .
- </p>
- <p>
-  The program is designed to work as a front end to any image editing application.
- </p>
- <p>
-  It works by allowing you to select a portion of your cube map by positioning a viewport in 3D and then sending this view to your image editing application.
- </p>
- <p>
-  Once you've finished with your manipulation of the image, you send it back to SkyPaint and the program sorts out what pixels corrispond to what image in the cube map.
- </p>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:1097-0!1!0!0!!en!2 and timestamp 20121116101159 -->
+  <h3>
+   Correcting Rectangular Images
+  </h3>
+  <p>
+   If the field of view for your camera was 90 degrees both vertically and horizontally, the resulting captures would be square.
+  </p>
+  <p>
+   However, not all software allows for the adjustment of horizontal and vertical field of view in which case you'll end up with rectangular captures because the screenshot captures more data lengthwise than heightwise or vice versa.
+  </p>
+  <p>
+   So long as the dimension in which you were permitted to adjust the field of view corrisponds with the smaller measurment across your image (height or width), then it should be possible to crop the image from the center and remove overlapping image data.
+  </p>
+  <p>
+   For example, if the height of your image is captured at a field of view of 90 and the width is larger than the height, then you can safely crop the sides from the center of the image.
+  </p>
+  <a name="Correcting_Disoriented_Images">
+  </a>
+  <h3>
+   Correcting Disoriented Images
+  </h3>
+  <p>
+   Sometimes the rotational adjustments in an application do not cater well to the orientation expected in Doom 3 to make a proper cube map.
+  </p>
+  <p>
+   This means that occasionally it may be nessicary to rotate several of your images in 90 degree increments so when layed out they match like the example above.
+  </p>
+  <a name="Rearranging_Cube_Map_Faces">
+  </a>
+  <h3>
+   Rearranging Cube Map Faces
+  </h3>
+  <p>
+   Sometimes it is necessary to rearrange cube map faces for use with different export and editing tools. This often involves changing the naming convention of files and correcting the orientation of the images.
+  </p>
+  <p>
+   Some common corrections from application to application are documented below...
+  </p>
+  <table border="1" cellpadding="0" cellspacing="0" style="width:75%">
+   <tr style="background:#AA0000; color:white">
+    <th>
+     Doom 3
+    </th>
+    <th>
+     Quake 2
+    </th>
+   </tr>
+   <tr align="center">
+    <td>
+     _up
+     <b>
+      or
+     </b>
+     _py
+    </td>
+    <td>
+     _up
+     <b>
+      and
+     </b>
+     rotate 90 CW
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     _down
+     <b>
+      or
+     </b>
+     _ny
+    </td>
+    <td>
+     _dn
+     <b>
+      and
+     </b>
+     rotate 90 CCW
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     _left
+     <b>
+      or
+     </b>
+     _nx
+    </td>
+    <td>
+     _lf
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     _right
+     <b>
+      or
+     </b>
+     _px
+    </td>
+    <td>
+     _rt
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     _forward
+     <b>
+      or
+     </b>
+     _pz
+    </td>
+    <td>
+     _ft
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     _back
+     <b>
+      or
+     </b>
+     _nz
+    </td>
+    <td>
+     _bk
+    </td>
+   </tr>
+  </table>
+  <a name="Fixing_Seams_or_Drawing_a_Cube_Map_from_Scratch">
+  </a>
+  <h2>
+   Fixing Seams or Drawing a Cube Map from Scratch
+  </h2>
+  <p>
+   It is possible to edit a cubemap as a single entity instead of working with the individual images by using a program called
+   <a class="external text" href="http://www.skypaint.com/" title="http://www.skypaint.com/">
+    SkyPaint
+   </a>
+   .
+  </p>
+  <p>
+   The program is designed to work as a front end to any image editing application.
+  </p>
+  <p>
+   It works by allowing you to select a portion of your cube map by positioning a viewport in 3D and then sending this view to your image editing application.
+  </p>
+  <p>
+   Once you've finished with your manipulation of the image, you send it back to SkyPaint and the program sorts out what pixels corrispond to what image in the cube map.
+  </p>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:1097-0!1!0!0!!en!2 and timestamp 20121116101159 -->
+ </body>
+</html>

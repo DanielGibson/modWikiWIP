@@ -1,88 +1,92 @@
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  The
-  <i>
-   <b>
-    highquality
-   </b>
-  </i>
-  or
-  <i>
-   <b>
-    uncompressed
-   </b>
-  </i>
-  stage keywords cause the game to render the associated stage without using
-  <a href="Texturing#Compressed_and_Uncompressed" title="Texturing">
-   texture compression
+<html>
+ <body>
+  <a name="Description">
   </a>
-  in Medium or High quality modes. Without this keyword, the map would be compressed according to the defaults for the selected quality mode. (Medium quality mode compresses bumpmaps and diffusemaps, where High quality mode only compresses bumpmaps.)
- </p>
- <a name="Usage">
- </a>
- <h2>
-  Usage
- </h2>
- <pre>highquality
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <i>
+    <b>
+     highquality
+    </b>
+   </i>
+   or
+   <i>
+    <b>
+     uncompressed
+    </b>
+   </i>
+   stage keywords cause the game to render the associated stage without using
+   <a href="Texturing#Compressed_and_Uncompressed" title="Texturing">
+    texture compression
+   </a>
+   in Medium or High quality modes. Without this keyword, the map would be compressed according to the defaults for the selected quality mode. (Medium quality mode compresses bumpmaps and diffusemaps, where High quality mode only compresses bumpmaps.)
+  </p>
+  <a name="Usage">
+  </a>
+  <h2>
+   Usage
+  </h2>
+  <pre>highquality
 </pre>
- <pre>uncompressed
+  <pre>uncompressed
 </pre>
- <a name="Parameters">
- </a>
- <h2>
-  Parameters
- </h2>
- <p>
-  None.
- </p>
- <a name="Example">
- </a>
- <h2>
-  Example
- </h2>
- <p>
-  Forces the diffusemap stage to high quality:
- </p>
- <pre>{
+  <a name="Parameters">
+  </a>
+  <h2>
+   Parameters
+  </h2>
+  <p>
+   None.
+  </p>
+  <a name="Example">
+  </a>
+  <h2>
+   Example
+  </h2>
+  <p>
+   Forces the diffusemap stage to high quality:
+  </p>
+  <pre>{
   blend diffusemap
   map textures/path/to/image.tga
   highquality
 }
 </pre>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
- <p>
-  This keyword is useful for
-  <a href="Cube_maps" title="Cube maps">
-   sky
+  <a name="Notes">
   </a>
-  textures which can look very ugly when compressed.
- </p>
- <p>
-  This keyword has no effect in Low quality mode, and the
-  <a href="ForceHighQuality_%28Material_stage_keyword%29" title="ForceHighQuality (Material stage keyword)">
-   forceHighQuality
-  </a>
-  keyword must be used instead.
- </p>
- <p>
-  If the
-  <a href="Image_ignoreHighQuality_%28cvar%29" title="Image ignoreHighQuality (cvar)">
-   image_ignoreHighQuality
-  </a>
-  <a href="Console" title="Console">
-   CVar
-  </a>
-  is set to 1, this keyword will be ignored.
- </p>
- <p>
-  <br/>
- </p>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:1238-0!1!0!0!!en!2 and timestamp 20080724185915 -->
+  <h2>
+   Notes
+  </h2>
+  <p>
+   This keyword is useful for
+   <a href="Cube_maps" title="Cube maps">
+    sky
+   </a>
+   textures which can look very ugly when compressed.
+  </p>
+  <p>
+   This keyword has no effect in Low quality mode, and the
+   <a href="ForceHighQuality_%28Material_stage_keyword%29" title="ForceHighQuality (Material stage keyword)">
+    forceHighQuality
+   </a>
+   keyword must be used instead.
+  </p>
+  <p>
+   If the
+   <a href="Image_ignoreHighQuality_%28cvar%29" title="Image ignoreHighQuality (cvar)">
+    image_ignoreHighQuality
+   </a>
+   <a href="Console" title="Console">
+    CVar
+   </a>
+   is set to 1, this keyword will be ignored.
+  </p>
+  <p>
+   <br/>
+  </p>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:1238-0!1!0!0!!en!2 and timestamp 20080724185915 -->
+ </body>
+</html>

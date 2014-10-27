@@ -1,76 +1,80 @@
- <a name="Game_class">
- </a>
- <h2>
-  Game class
- </h2>
- <p>
-  This event operates on an instance of the
-  <a href="Game_class" title="Game class">
-   game class
+<html>
+ <body>
+  <a name="Game_class">
   </a>
-  type {{{gameclass}}}
- </p>
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  Enables/disables the muzzle flash of a weapon entity.
- </p>
- <a name="Usage">
- </a>
- <h2>
-  Usage
- </h2>
- <p>
-  void  flashlight(  float enable )
- </p>
- <a name="Parameters">
- </a>
- <h2>
-  Parameters
- </h2>
- <ul>
-  <li>
-   1 or true - enable
-  </li>
-  <li>
-   0 or otherwise false - disable
-  </li>
- </ul>
- <a name="Examples">
- </a>
- <h2>
-  Examples
- </h2>
- <pre> none</pre>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
- <p>
-  In the case of
-  <a href="Weapon_flashlight_%28entity%29" title="Weapon flashlight (entity)">
-   weapon_flashlight
+  <h2>
+   Game class
+  </h2>
+  <p>
+   This event operates on an instance of the
+   <a href="Game_class" title="Game class">
+    game class
+   </a>
+   type {{{gameclass}}}
+  </p>
+  <a name="Description">
   </a>
-  , the "mtr_flashShader" key/value pair is set to "lights/flashlight5". The reason for this is clear if you understand how the flashlight works.
- </p>
- <p>
-  Essentially it's using the muzzle flash light inherent to all weapons as the flashlight's bulb. And since the
-  <a href="Material_%28decl%29" title="Material (decl)">
-   material shader
+  <h2>
+   Description
+  </h2>
+  <p>
+   Enables/disables the muzzle flash of a weapon entity.
+  </p>
+  <a name="Usage">
   </a>
-  used doesn't make use of shader parms or time to determine the light's duration as is done with other weapons, a script event (this event) is needed to toggle the light on and off.
- </p>
- <p>
-  The key point being that this event is useless unless you intend to toggle muzzle flashes off or give other weapons flashlights in which case you'll need to edit the weapon's
-  <a href="Entitydef_%28decl%29" title="Entitydef (decl)">
-   entity declaration
+  <h2>
+   Usage
+  </h2>
+  <p>
+   void  flashlight(  float enable )
+  </p>
+  <a name="Parameters">
   </a>
-  and more specifically the "mtr_flashShader" key/value pair.
- </p>
- <p>
-  <br/>
- </p>
+  <h2>
+   Parameters
+  </h2>
+  <ul>
+   <li>
+    1 or true - enable
+   </li>
+   <li>
+    0 or otherwise false - disable
+   </li>
+  </ul>
+  <a name="Examples">
+  </a>
+  <h2>
+   Examples
+  </h2>
+  <pre> none</pre>
+  <a name="Notes">
+  </a>
+  <h2>
+   Notes
+  </h2>
+  <p>
+   In the case of
+   <a href="Weapon_flashlight_%28entity%29" title="Weapon flashlight (entity)">
+    weapon_flashlight
+   </a>
+   , the "mtr_flashShader" key/value pair is set to "lights/flashlight5". The reason for this is clear if you understand how the flashlight works.
+  </p>
+  <p>
+   Essentially it's using the muzzle flash light inherent to all weapons as the flashlight's bulb. And since the
+   <a href="Material_%28decl%29" title="Material (decl)">
+    material shader
+   </a>
+   used doesn't make use of shader parms or time to determine the light's duration as is done with other weapons, a script event (this event) is needed to toggle the light on and off.
+  </p>
+  <p>
+   The key point being that this event is useless unless you intend to toggle muzzle flashes off or give other weapons flashlights in which case you'll need to edit the weapon's
+   <a href="Entitydef_%28decl%29" title="Entitydef (decl)">
+    entity declaration
+   </a>
+   and more specifically the "mtr_flashShader" key/value pair.
+  </p>
+  <p>
+   <br/>
+  </p>
+ </body>
+</html>

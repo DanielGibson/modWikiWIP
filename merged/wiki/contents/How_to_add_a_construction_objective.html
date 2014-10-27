@@ -1,76 +1,78 @@
- <div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-  <a class="image" href="Image:Etqwsquare_bg.png" title="Image:Etqwsquare_bg.png">
-   <img alt="Image:Etqwsquare_bg.png" height="50" longdesc="/wiki/Image:Etqwsquare_bg.png" src="/w/images/f/f9/Etqwsquare_bg.png" width="50"/>
+<html>
+ <body>
+  <div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
+   <a class="image" href="Image:Etqwsquare_bg.png" title="Image:Etqwsquare_bg.png">
+    <img alt="Image:Etqwsquare_bg.png" height="50" longdesc="/wiki/Image:Etqwsquare_bg.png" src="/w/images/f/f9/Etqwsquare_bg.png" width="50"/>
+   </a>
+   The information on this page is specific to
+   <a href="Enemy_Territory:_Quake_Wars" title="Enemy Territory: Quake Wars">
+    Enemy Territory: Quake Wars
+   </a>
+   .
+  </div>
+  <hr/>
+  <p>
+   This tutorial should let you have a bare bones map with a GDF construction objective. The objective will be to construct a wall. Completing it will end the map.
+  </p>
+  <p>
+   <b>
+    Important Notes:
+   </b>
+  </p>
+  <ul>
+   <li>
+    Since everyone's setup is different &lt;savepath&gt; means the path that you give the SDK launcher.
+   </li>
+   <li>
+    Replace &lt;yourmap&gt; where it's mentioned below with the name of the map you're making. Think of a single word like "valley", "quarry", etc. CAPITALISATION MATTERS!
+   </li>
+  </ul>
+  <a name="Setup">
   </a>
-  The information on this page is specific to
-  <a href="Enemy_Territory:_Quake_Wars" title="Enemy Territory: Quake Wars">
-   Enemy Territory: Quake Wars
+  <h2>
+   Setup
+  </h2>
+  <p>
+   Firstly, create the following folders:
+  </p>
+  <ul>
+   <li>
+    &lt;savepath&gt;/base/mapinfo
+   </li>
+   <li>
+    &lt;savepath&gt;/base/script/maps/&lt;yourmap&gt;
+   </li>
+   <li>
+    &lt;savepath&gt;/base/maps/&lt;yourmap&gt;
+   </li>
+  </ul>
+  <p>
+   Secondly, create the following files (you can use Notepad but make sure you set the file extension correctly):
+  </p>
+  <ul>
+   <li>
+    &lt;savepath&gt;/base/pakmeta.conf
+   </li>
+   <li>
+    &lt;savepath&gt;/base/mapinfo/&lt;yourmap&gt;.md
+   </li>
+   <li>
+    &lt;savepath&gt;/base/script/maps/&lt;yourmap&gt;.script
+   </li>
+  </ul>
+  <a name="Files">
   </a>
-  .
- </div>
- <hr/>
- <p>
-  This tutorial should let you have a bare bones map with a GDF construction objective. The objective will be to construct a wall. Completing it will end the map.
- </p>
- <p>
-  <b>
-   Important Notes:
-  </b>
- </p>
- <ul>
-  <li>
-   Since everyone's setup is different &lt;savepath&gt; means the path that you give the SDK launcher.
-  </li>
-  <li>
-   Replace &lt;yourmap&gt; where it's mentioned below with the name of the map you're making. Think of a single word like "valley", "quarry", etc. CAPITALISATION MATTERS!
-  </li>
- </ul>
- <a name="Setup">
- </a>
- <h2>
-  Setup
- </h2>
- <p>
-  Firstly, create the following folders:
- </p>
- <ul>
-  <li>
-   &lt;savepath&gt;/base/mapinfo
-  </li>
-  <li>
-   &lt;savepath&gt;/base/script/maps/&lt;yourmap&gt;
-  </li>
-  <li>
-   &lt;savepath&gt;/base/maps/&lt;yourmap&gt;
-  </li>
- </ul>
- <p>
-  Secondly, create the following files (you can use Notepad but make sure you set the file extension correctly):
- </p>
- <ul>
-  <li>
-   &lt;savepath&gt;/base/pakmeta.conf
-  </li>
-  <li>
-   &lt;savepath&gt;/base/mapinfo/&lt;yourmap&gt;.md
-  </li>
-  <li>
-   &lt;savepath&gt;/base/script/maps/&lt;yourmap&gt;.script
-  </li>
- </ul>
- <a name="Files">
- </a>
- <h2>
-  Files
- </h2>
- <p>
-  In the
-  <b>
-   pakmeta.conf
-  </b>
-  you need to paste the following:
- </p>
- <pre>// Map Data
+  <h2>
+   Files
+  </h2>
+  <p>
+   In the
+   <b>
+    pakmeta.conf
+   </b>
+   you need to paste the following:
+  </p>
+  <pre>// Map Data
 
 mapMetaData maps/&lt;yourmap&gt;/&lt;yourmap&gt; {
 	"pretty_name"			"&lt;whateveryourwant&gt;"
@@ -80,14 +82,14 @@ mapMetaData maps/&lt;yourmap&gt;/&lt;yourmap&gt; {
 	"show_in_browser"		"1"	
 }
 </pre>
- <p>
-  In the
-  <b>
-   &lt;yourmap&gt;.md
-  </b>
-  file paste the following:
- </p>
- <pre>#include &lt;mapinfo/mapinfo.include&gt;
+  <p>
+   In the
+   <b>
+    &lt;yourmap&gt;.md
+   </b>
+   file paste the following:
+  </p>
+  <pre>#include &lt;mapinfo/mapinfo.include&gt;
 
 mapInfoDef &lt;yourmap&gt; {
 	_default_mapinfo( "&lt;yourmap&gt;" )
@@ -107,95 +109,95 @@ mapInfoDef &lt;yourmap&gt; {
 	}
 }
 </pre>
- <p>
-  Create a text file called '
-  <i>
-   map.script
-  </i>
-  in your
-  <i>
-   &lt;savepath&gt;/base/script/
-  </i>
-  location. Edit it, and add the following line:
- </p>
- <pre>#include "script/maps/&lt;yourmap&gt;.script"
+  <p>
+   Create a text file called '
+   <i>
+    map.script
+   </i>
+   in your
+   <i>
+    &lt;savepath&gt;/base/script/
+   </i>
+   location. Edit it, and add the following line:
+  </p>
+  <pre>#include "script/maps/&lt;yourmap&gt;.script"
 </pre>
- <a name="The_map">
- </a>
- <h2>
-  The map
- </h2>
- <p>
-  Okay, time to build the map. Start the SDK Launcher, and set editWorld to begin. Create an empty caulk box as shown in
-  <a class="external text" href="https://web.archive.org/web/20120407174556/http://community.enemyterritory.com/forums/showthread.php?t=17917" title="http://community.enemyterritory.com/forums/showthread.php?t=17917">
-   "|this
+  <a name="The_map">
   </a>
-  tutorial. I suggest a size of 2048 x 2048 x 2048. Press Esc to deselect everything.
- </p>
- <p>
-  Now repeat it with a box with a size of 512 x 512 x 512 and add an atmosphere as shown
-  <a class="external autonumber" href="http://wiki.splashdamage.com/index.php/Adding_an_atmosphere|here" title="http://wiki.splashdamage.com/index.php/Adding_an_atmosphere|here">
-   [1]
-  </a>
-  . Basically, you'll have two areas in the map, the outside which is the big box and the inside which is the smaller box. The box face which you applied the "outside_portal" texture acts as a gateway between the two areas. You'll now have visible explosions, etc. Press Esc to deselect everything.
- </p>
- <p>
-  Now place an "info_team_spawn_gdf" somewhere inside the big box. This is where the GDF will spawn. Now let's add a simple construct objective for the GDF to build. Press Esc to deselect everything.
- </p>
- <p>
-  Firstly add a "constructible_materials_gdf" entity onto your big box somewhere. With it selected, press N which will take you into the Properties Editor. Change the name to "construct_materials" and add the following key/value pairs:
- </p>
- <pre>constructed   wall
+  <h2>
+   The map
+  </h2>
+  <p>
+   Okay, time to build the map. Start the SDK Launcher, and set editWorld to begin. Create an empty caulk box as shown in
+   <a class="external text" href="https://web.archive.org/web/20120407174556/http://community.enemyterritory.com/forums/showthread.php?t=17917" title="http://community.enemyterritory.com/forums/showthread.php?t=17917">
+    "|this
+   </a>
+   tutorial. I suggest a size of 2048 x 2048 x 2048. Press Esc to deselect everything.
+  </p>
+  <p>
+   Now repeat it with a box with a size of 512 x 512 x 512 and add an atmosphere as shown
+   <a class="external autonumber" href="http://wiki.splashdamage.com/index.php/Adding_an_atmosphere|here" title="http://wiki.splashdamage.com/index.php/Adding_an_atmosphere|here">
+    [1]
+   </a>
+   . Basically, you'll have two areas in the map, the outside which is the big box and the inside which is the smaller box. The box face which you applied the "outside_portal" texture acts as a gateway between the two areas. You'll now have visible explosions, etc. Press Esc to deselect everything.
+  </p>
+  <p>
+   Now place an "info_team_spawn_gdf" somewhere inside the big box. This is where the GDF will spawn. Now let's add a simple construct objective for the GDF to build. Press Esc to deselect everything.
+  </p>
+  <p>
+   Firstly add a "constructible_materials_gdf" entity onto your big box somewhere. With it selected, press N which will take you into the Properties Editor. Change the name to "construct_materials" and add the following key/value pairs:
+  </p>
+  <pre>constructed   wall
 construction   wall_temp
 objective_index   0
 object_name   maps/generic/bridge
 task_name   maps/valley/task_bridge
 </pre>
- <p>
-  You can also add sounds text and whatnot but for this bare-bones map this will be sufficient. Press Esc to deselect everything.
- </p>
- <p>
-  Now add another brush, say a 256 x 16 x 128 wall-like brush. With it selected, right click and select "constructible &gt; constructible_base_etqwmap" and press N. Change its name to "wall" so that will be referenced by the constructions materials entity we edited previously. Press Esc to deselect everything.
- </p>
- <p>
-  Repeat the above but now name it "wall_temp".
- </p>
- <p>
-  In the Properties Editor select the "worldspawn" entity and add the following key/value pair:
- </p>
- <pre>script_construct_entity   construct_materials
+  <p>
+   You can also add sounds text and whatnot but for this bare-bones map this will be sufficient. Press Esc to deselect everything.
+  </p>
+  <p>
+   Now add another brush, say a 256 x 16 x 128 wall-like brush. With it selected, right click and select "constructible &gt; constructible_base_etqwmap" and press N. Change its name to "wall" so that will be referenced by the constructions materials entity we edited previously. Press Esc to deselect everything.
+  </p>
+  <p>
+   Repeat the above but now name it "wall_temp".
+  </p>
+  <p>
+   In the Properties Editor select the "worldspawn" entity and add the following key/value pair:
+  </p>
+  <pre>script_construct_entity   construct_materials
 </pre>
- <p>
-  Now save the map to
-  <i>
-   &lt;savepath&gt;/base/maps/&lt;yourmap&gt;/
-  </i>
-  <b>
-   &lt;yourmap&gt;.world
-  </b>
-  and then compile it (Compile &gt; Normal).
- </p>
- <a name="The_script">
- </a>
- <h2>
-  The script
- </h2>
- <p>
-  Let's now edit our
-  <i>
-   &lt;savepath&gt;/base/script/maps/
-  </i>
-  <b>
-   &lt;yourmap&gt;.script
-  </b>
-  file we had created at the start. I'm going to break this into sections so they're easier to follow but if you're not really that interested in the why just paste everything in order and find/replace &lt;yourmap&gt; there.
- </p>
- <pre>#define OBJECTIVE_&lt;yourmap_inCAPS&gt;_BUILD_WALL	0
+  <p>
+   Now save the map to
+   <i>
+    &lt;savepath&gt;/base/maps/&lt;yourmap&gt;/
+   </i>
+   <b>
+    &lt;yourmap&gt;.world
+   </b>
+   and then compile it (Compile &gt; Normal).
+  </p>
+  <a name="The_script">
+  </a>
+  <h2>
+   The script
+  </h2>
+  <p>
+   Let's now edit our
+   <i>
+    &lt;savepath&gt;/base/script/maps/
+   </i>
+   <b>
+    &lt;yourmap&gt;.script
+   </b>
+   file we had created at the start. I'm going to break this into sections so they're easier to follow but if you're not really that interested in the why just paste everything in order and find/replace &lt;yourmap&gt; there.
+  </p>
+  <pre>#define OBJECTIVE_&lt;yourmap_inCAPS&gt;_BUILD_WALL	0
 </pre>
- <p>
-  This will define the first objective (numbered 0) and assign it a name so it can be easily retrieved without having to know whether its the first or last objective. In our case we only have one objective so this is mainly for future maps.
- </p>
- <pre>object mapObject_&lt;yourmap&gt; : mapObject_Default {
+  <p>
+   This will define the first objective (numbered 0) and assign it a name so it can be easily retrieved without having to know whether its the first or last objective. In our case we only have one objective so this is mainly for future maps.
+  </p>
+  <pre>object mapObject_&lt;yourmap&gt; : mapObject_Default {
 	void		InitObjectives();
 	void		CompleteObjective( float index, entity p );
 	void		StartFirstObjective();
@@ -208,17 +210,17 @@ task_name   maps/valley/task_bridge
 	entity	wallConstruction;
 }
 </pre>
- <p>
-  This piece of code lets the game know that your map has a couple of properties and custom methods that you're going to be using. Of interest here are the "OnWallBuilt()" and wallConstruction. The first is an "event" which will be fired once the construction objective (our wall) is built. The later is a temporary entity that will reference our map construction entity.
- </p>
- <pre>mapObject_Base &lt;yourmap&gt;_MapScript() {
+  <p>
+   This piece of code lets the game know that your map has a couple of properties and custom methods that you're going to be using. Of interest here are the "OnWallBuilt()" and wallConstruction. The first is an "event" which will be fired once the construction objective (our wall) is built. The later is a temporary entity that will reference our map construction entity.
+  </p>
+  <pre>mapObject_Base &lt;yourmap&gt;_MapScript() {
 	return new mapObject_&lt;yourmap&gt;;
 }
 </pre>
- <p>
-  This block is used internally to generate a new map script.
- </p>
- <pre>void mapObject_&lt;yourmap&gt;::InitObjectives() {
+  <p>
+   This block is used internally to generate a new map script.
+  </p>
+  <pre>void mapObject_&lt;yourmap&gt;::InitObjectives() {
 	gameRules.setWinningTeam( stroggTeam );
 	gdfTeam.SetRespawnWait( 20 );
 	stroggTeam.SetRespawnWait( 20 );
@@ -234,13 +236,13 @@ task_name   maps/valley/task_bridge
 	objManager.setNextObjective( stroggTeam, mainObjectiveIndex );
 }
 </pre>
- <p>
-  This piece of code initialises the objective system. The first four lines tell the game which team is defending, and sets up the spawn timers. Now this is important: the "wallConstruction" variable that we declared right at the top of the script will be assigned the value that you gave the key/value pair of the worldspawn. So when the game runs "wallConstruction" will become the same as the "constructible_materials_gdf" entity we placed on the map.
- </p>
- <p>
-  Then the script fetches the objective number and sets it as the next objective for both teams. Meanwhile it also starts the first objective. Which is what the next block shows:
- </p>
- <pre>void mapObject_&lt;yourmap&gt;::StartFirstObjective() {
+  <p>
+   This piece of code initialises the objective system. The first four lines tell the game which team is defending, and sets up the spawn timers. Now this is important: the "wallConstruction" variable that we declared right at the top of the script will be assigned the value that you gave the key/value pair of the worldspawn. So when the game runs "wallConstruction" will become the same as the "constructible_materials_gdf" entity we placed on the map.
+  </p>
+  <p>
+   Then the script fetches the objective number and sets it as the next objective for both teams. Meanwhile it also starts the first objective. Which is what the next block shows:
+  </p>
+  <pre>void mapObject_&lt;yourmap&gt;::StartFirstObjective() {
 	sys.wait( 5.f );
 
 	objManager.SetObjectiveEntity( wallConstruction, mainObjectiveIndex );
@@ -250,10 +252,10 @@ task_name   maps/valley/task_bridge
 	wallConstruction.vStartObjective();
 }
 </pre>
- <p>
-  Firstly the game will wait a bit and then set our wallConstruction entity as the first objective and say it has an index of 0. It will create the first mission (those missions on the top left of the screen), etc.
- </p>
- <pre>void mapObject_&lt;yourmap&gt;::CompleteObjective( float index, entity p ) {
+  <p>
+   Firstly the game will wait a bit and then set our wallConstruction entity as the first objective and say it has an index of 0. It will create the first mission (those missions on the top left of the screen), etc.
+  </p>
+  <pre>void mapObject_&lt;yourmap&gt;::CompleteObjective( float index, entity p ) {
 	if ( index == OBJECTIVE_&lt;yourmap_inCAPS&gt;_BUILD_WALL ) {
 		OnWallBuilt();
 	}
@@ -267,10 +269,10 @@ handle mapObject_&lt;yourmap&gt;::GetObjectiveMessage( float index ) {
 	return g_locStr_BadObjective;
 }
 </pre>
- <p>
-  The first block will fire off the "OnWallBuilt" event we declared earlier, the second is just for printing some text so don't worry about that one.
- </p>
- <pre>void mapObject_&lt;yourmap&gt;::OnWallBuilt() {
+  <p>
+   The first block will fire off the "OnWallBuilt" event we declared earlier, the second is just for printing some text so don't worry about that one.
+  </p>
+  <pre>void mapObject_&lt;yourmap&gt;::OnWallBuilt() {
 	StopTimedMission();
 	wallConstruction.vCompleteMission();
 
@@ -282,43 +284,45 @@ handle mapObject_&lt;yourmap&gt;::GetObjectiveMessage( float index ) {
 	wallConstruction.vCompleteMission();
 }
 </pre>
- <p>
-  Okay, this is the event that's fired when the wall is constructed. This is our only objective so after this we complete missions, objectives, set which team won the map and end the game. But what if the GDF can't construct this in the time limit?
- </p>
- <pre>void mapObject_&lt;yourmap&gt;::OnTimeLimitHit() {
+  <p>
+   Okay, this is the event that's fired when the wall is constructed. This is our only objective so after this we complete missions, objectives, set which team won the map and end the game. But what if the GDF can't construct this in the time limit?
+  </p>
+  <pre>void mapObject_&lt;yourmap&gt;::OnTimeLimitHit() {
 	FinishTimedMission();
 	objManager.SetObjectiveEntity( $null_entity, -1 );
 
 	gameRules.endGame();
 }
 </pre>
- <p>
-  Since in this map the Strogg are defending they automatically win so no need to set the winning team (as we had already set it near the top). The other lines simply clean up the objectives a bit (setting them to nothing).
- </p>
- <p>
-  <b>
-   With the SDK Launcher
-  </b>
-  , start the game, bring down the console and type: "
-  <a href="Devmap_%28console_command%29" title="Devmap (console command)">
-   devmap
-  </a>
-  &lt;yourmap&gt;/&lt;yourmap&gt;" and press Enter.
- </p>
- In certain situations, the game will not load the map but print out the following error:
- <pre>spawn map denied: unknown campaign 'yourmap'</pre>
- <p>
-  In that case, type "seta
-  <a href="Si_rules_%28cvar%29" title="Si rules (cvar)">
-   si_rules
-  </a>
-  sdGameRulesObjective" and press &lt;Enter&gt; before trying devmap again. This will switch the game type from
-  <i>
-   campaign
-  </i>
-  mode to
-  <i>
-   objective
-  </i>
-  mode.
- </p>
+  <p>
+   Since in this map the Strogg are defending they automatically win so no need to set the winning team (as we had already set it near the top). The other lines simply clean up the objectives a bit (setting them to nothing).
+  </p>
+  <p>
+   <b>
+    With the SDK Launcher
+   </b>
+   , start the game, bring down the console and type: "
+   <a href="Devmap_%28console_command%29" title="Devmap (console command)">
+    devmap
+   </a>
+   &lt;yourmap&gt;/&lt;yourmap&gt;" and press Enter.
+  </p>
+  In certain situations, the game will not load the map but print out the following error:
+  <pre>spawn map denied: unknown campaign 'yourmap'</pre>
+  <p>
+   In that case, type "seta
+   <a href="Si_rules_%28cvar%29" title="Si rules (cvar)">
+    si_rules
+   </a>
+   sdGameRulesObjective" and press &lt;Enter&gt; before trying devmap again. This will switch the game type from
+   <i>
+    campaign
+   </i>
+   mode to
+   <i>
+    objective
+   </i>
+   mode.
+  </p>
+ </body>
+</html>

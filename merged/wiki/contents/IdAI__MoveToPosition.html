@@ -1,22 +1,24 @@
- <a name="bool_idAI::MoveToPosition.28_const_idVec3_.26pos_.29">
- </a>
- <h2>
-  bool
-  <a href="Src/game/ai/AI.cpp_%28source_file%29" title="Src/game/ai/AI.cpp (source file)">
-   idAI
+<html>
+ <body>
+  <a name="bool_idAI::MoveToPosition.28_const_idVec3_.26pos_.29">
   </a>
-  ::MoveToPosition( const idVec3 &amp;pos )
- </h2>
- <p>
-  One would call MoveToPosition if they have decided on a place to go, and want to get there.
- </p>
- <p>
-  MoveToPosition will return a Boolean value indicating that it was able to set up state that will successfully get us to the position. The end result of calling MoveToPosition is that the AI’s move state is updated to reflect the type of movement desired and destination to get to.
- </p>
- <p>
-  It starts out like:
- </p>
- <pre> 
+  <h2>
+   bool
+   <a href="Src/game/ai/AI.cpp_%28source_file%29" title="Src/game/ai/AI.cpp (source file)">
+    idAI
+   </a>
+   ::MoveToPosition( const idVec3 &amp;pos )
+  </h2>
+  <p>
+   One would call MoveToPosition if they have decided on a place to go, and want to get there.
+  </p>
+  <p>
+   MoveToPosition will return a Boolean value indicating that it was able to set up state that will successfully get us to the position. The end result of calling MoveToPosition is that the AI’s move state is updated to reflect the type of movement desired and destination to get to.
+  </p>
+  <p>
+   It starts out like:
+  </p>
+  <pre> 
 <span style="color: #339900; font-style: italic;">/*
 =====================
 idAI::MoveToPosition
@@ -28,86 +30,86 @@ idAI::MoveToPosition
 	<span style="color: #0000ff;">int</span>			areaNum;
 	aasPath_t	path;
  </pre>
- <p>
-  org will be our “original‿ goal position to get to.  areaNum will be an index to an area.
- </p>
- <p>
-  <i>
-   <b>
-    If you are not familiar with what an area is, read the q3 bot paper, it will be worth it. At least chapter 6.
-   </b>
-  </i>
- </p>
- <p>
-  path really isn’t used in MoveToPosition, but is a required parameter to PathToGoal and so is declared here an passed in to be filled.
- </p>
- <pre> 
+  <p>
+   org will be our “original‿ goal position to get to.  areaNum will be an index to an area.
+  </p>
+  <p>
+   <i>
+    <b>
+     If you are not familiar with what an area is, read the q3 bot paper, it will be worth it. At least chapter 6.
+    </b>
+   </i>
+  </p>
+  <p>
+   path really isn’t used in MoveToPosition, but is a required parameter to PathToGoal and so is declared here an passed in to be filled.
+  </p>
+  <pre> 
 <span style="color: #339900;">// if i have reached the position mentioned, set status and exit</span>
 	<span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span> ReachedPos<span style="color: #000000;">(</span> pos, move.<span style="color: #00aabb;">moveCommand</span> <span style="color: #000000;">)</span> <span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
 		StopMove<span style="color: #000000;">(</span> MOVE_STATUS_DONE <span style="color: #000000;">)</span>;
 		<span style="color: #0000ff;">return</span> <span style="color: #0000ff;">true</span>;
 	<span style="color: #000000;">}</span></pre>
- <p>
-  So first check to see if the AI has reached the postion passed in by the caller. ReachedPos uses a few different ways to check if the position has been reached, so pass moveCommand in to help it choose the best way to check. If the position has been reached, set the status to MOVE_STATUS_DONE and return true to let the caller know we have MovedToPosition ;)
- </p>
- <pre> 
+  <p>
+   So first check to see if the AI has reached the postion passed in by the caller. ReachedPos uses a few different ways to check if the position has been reached, so pass moveCommand in to help it choose the best way to check. If the position has been reached, set the status to MOVE_STATUS_DONE and return true to let the caller know we have MovedToPosition ;)
+  </p>
+  <pre> 
 org = pos;
 move.<span style="color: #00aabb;">toAreaNum</span> = <span style="color: #0000dd;">0</span>;
 <span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span> aas <span style="color: #000000;">)</span> <span style="color: #000000;">{</span></pre>
- <p>
-  Some quick initialization and a check to see if the Area Awareness System is ready and off we go, but to where?
- </p>
- <pre> 
+  <p>
+   Some quick initialization and a check to see if the Area Awareness System is ready and off we go, but to where?
+  </p>
+  <pre> 
  
 move.<span style="color: #00aabb;">toAreaNum</span> = PointReachableAreaNum<span style="color: #000000;">(</span> org <span style="color: #000000;">)</span>;</pre>
- <p>
-  move is an  idMoveState, it is used to keep track of what’s up with navigation, later in idAI::Think it will be checked to set up an actual direction to move to. toAreaNum is the area number we want to go to
-  <a href="IdAI::PointReachableAreaNum" title="IdAI::PointReachableAreaNum">
-   idAI::PointReachableAreaNum
-  </a>
-  will make sure that there is a point that the AI can reach and return the area number of that point.
- </p>
- <pre> 
+  <p>
+   move is an  idMoveState, it is used to keep track of what’s up with navigation, later in idAI::Think it will be checked to set up an actual direction to move to. toAreaNum is the area number we want to go to
+   <a href="IdAI::PointReachableAreaNum" title="IdAI::PointReachableAreaNum">
+    idAI::PointReachableAreaNum
+   </a>
+   will make sure that there is a point that the AI can reach and return the area number of that point.
+  </p>
+  <pre> 
 	aas-&gt;PushPointIntoAreaNum<span style="color: #000000;">(</span> move.<span style="color: #00aabb;">toAreaNum</span>, org <span style="color: #000000;">)</span>;</pre>
- <p>
-  Go to
-  <a href="IdAI::PushPointIntoAreaNum" title="IdAI::PushPointIntoAreaNum">
-   idAI::PushPointIntoAreaNum
-  </a>
-  for brian’s input on PushPointIntoAreaNum.
- </p>
- <p>
-  So we have a valid goal area number and position. We need to know whether we can get there from where we are, but where are we?
- </p>
- <pre> 
+  <p>
+   Go to
+   <a href="IdAI::PushPointIntoAreaNum" title="IdAI::PushPointIntoAreaNum">
+    idAI::PushPointIntoAreaNum
+   </a>
+   for brian’s input on PushPointIntoAreaNum.
+  </p>
+  <p>
+   So we have a valid goal area number and position. We need to know whether we can get there from where we are, but where are we?
+  </p>
+  <pre> 
 	areaNum = PointReachableAreaNum<span style="color: #000000;">(</span> physicsObj.<span style="color: #00aabb;">GetOrigin</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span> <span style="color: #000000;">)</span>;</pre>
- <p>
-  Given an origin and a destination vector and their corresponding area numbers, PathToGoal will return true if there is a path. Notice if there isn’t a valid path the move state is set to MOVE_STATUS_DEST_UNREACHABLE and false is returned to indicate the AI can not MoveToPosition.
- </p>
- <pre>		
+  <p>
+   Given an origin and a destination vector and their corresponding area numbers, PathToGoal will return true if there is a path. Notice if there isn’t a valid path the move state is set to MOVE_STATUS_DEST_UNREACHABLE and false is returned to indicate the AI can not MoveToPosition.
+  </p>
+  <pre>		
 	<span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span> !PathToGoal<span style="color: #000000;">(</span> path, areaNum, physicsObj.<span style="color: #00aabb;">GetOrigin</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span>, move.<span style="color: #00aabb;">toAreaNum</span>, org <span style="color: #000000;">)</span> <span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
 		StopMove<span style="color: #000000;">(</span> MOVE_STATUS_DEST_UNREACHABLE <span style="color: #000000;">)</span>;
 		AI_DEST_UNREACHABLE = <span style="color: #0000ff;">true</span>;
 		<span style="color: #0000ff;">return</span> <span style="color: #0000ff;">false</span>;
 	<span style="color: #000000;">}</span>
 <span style="color: #000000;">}</span></pre>
- <p>
-  Next check if move.toAreaNum was set. It could be 0 here if there was no aas, or if aas couldn’t find a reachable area and returned 0. if it wasn’t set, we check to see if we can find a direction to wander around in. NewWanderDir will return true if it found a direction and will set up some state to check later.
- </p>
- <pre> 
+  <p>
+   Next check if move.toAreaNum was set. It could be 0 here if there was no aas, or if aas couldn’t find a reachable area and returned 0. if it wasn’t set, we check to see if we can find a direction to wander around in. NewWanderDir will return true if it found a direction and will set up some state to check later.
+  </p>
+  <pre> 
 <span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span> !move.<span style="color: #00aabb;">toAreaNum</span> &amp;&amp; !NewWanderDir<span style="color: #000000;">(</span> org <span style="color: #000000;">)</span> <span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
 	StopMove<span style="color: #000000;">(</span> MOVE_STATUS_DEST_UNREACHABLE <span style="color: #000000;">)</span>;
 	AI_DEST_UNREACHABLE = <span style="color: #0000ff;">true</span>;
 	<span style="color: #0000ff;">return</span> <span style="color: #0000ff;">false</span>;
 <span style="color: #000000;">}</span></pre>
- <p>
-  <br/>
-  If the aas system and NewWanderDir fail to find somewhere to go set the move state to MOVE_STATUS_DEST_UNREACHABLE and return false.
- </p>
- <p>
-  If one of them worked, set up some success state in move and return true. Notice that status is set to MOVE_STATUS_MOVING and AI_MOVE_DONE is false.
- </p>
- <pre> 
+  <p>
+   <br/>
+   If the aas system and NewWanderDir fail to find somewhere to go set the move state to MOVE_STATUS_DEST_UNREACHABLE and return false.
+  </p>
+  <p>
+   If one of them worked, set up some success state in move and return true. Notice that status is set to MOVE_STATUS_MOVING and AI_MOVE_DONE is false.
+  </p>
+  <pre> 
 	<span style="color: #339900;">// path is good or NewWanderDir worked - set up state for later</span>
 	move.<span style="color: #00aabb;">moveDest</span>		= org;
 	move.<span style="color: #00aabb;">goalEntity</span>		= <span style="color: #0000ff;">NULL</span>;
@@ -121,13 +123,13 @@ move.<span style="color: #00aabb;">toAreaNum</span> = PointReachableAreaNum<span
  
 	<span style="color: #0000ff;">return</span> <span style="color: #0000ff;">true</span>;
 <span style="color: #000000;">}</span></pre>
- <p>
-  Lets finish up this with a few details about how these MoveFunctions are called. There are a few different methods in idAI that are high level movement methods. These include MoveToPosition, MoveToEntity, MoveToEnemy, and MoveToCover
- </p>
- <p>
-  MoveToPosition is called a couple of different ways from scripts. While looking at the scripts notice how states that are set in MoveToPosition are checked here to determine what to do next.
- </p>
- <pre> 
+  <p>
+   Lets finish up this with a few details about how these MoveFunctions are called. There are a few different methods in idAI that are high level movement methods. These include MoveToPosition, MoveToEntity, MoveToEnemy, and MoveToCover
+  </p>
+  <p>
+   MoveToPosition is called a couple of different ways from scripts. While looking at the scripts notice how states that are set in MoveToPosition are checked here to determine what to do next.
+  </p>
+  <pre> 
 <span style="color: #339900; font-style: italic;">/*
 =====================
 char_sentry::state_GetCloser
@@ -159,10 +161,10 @@ char_sentry::state_GetCloser
 		waitFrame<span style="color: #000000;">(</span><span style="color: #000000;">)</span>;
 	<span style="color: #000000;">}</span>
 <span style="color: #000000;">}</span></pre>
- <p>
-  This script calls it each frame, seems expensive, wonder if it is necessary? would it still work if it were every N frames?  Something to test anyway, anything to save cpu cycles…
- </p>
- <pre> 
+  <p>
+   This script calls it each frame, seems expensive, wonder if it is necessary? would it still work if it were every N frames?  Something to test anyway, anything to save cpu cycles…
+  </p>
+  <pre> 
 <span style="color: #339900; font-style: italic;">/*
 =====================
 monster_hunter_berserk::combat_berserk_charge
@@ -294,12 +296,14 @@ monster_hunter_berserk::combat_berserk_charge
 	
 	animState<span style="color: #000000;">(</span> ANIMCHANNEL_TORSO, <span style="color: #666666;">"Torso_Idle"</span>, <span style="color: #0000dd;">4</span><span style="color: #000000;">)</span>;
 <span style="color: #000000;">}</span></pre>
- <p>
-  Notice how this script calls it once, then follows it with a while:
- </p>
- <pre> 
+  <p>
+   Notice how this script calls it once, then follows it with a while:
+  </p>
+  <pre> 
 <span style="color: #0000ff;">while</span><span style="color: #000000;">(</span> !AI_HIT_ENEMY &amp;&amp; !AI_MOVE_DONE &amp;&amp; !AI_BLOCKED &amp;&amp; <span style="color: #000000;">(</span> sys.<span style="color: #00aabb;">getTime</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span> &lt; endtime <span style="color: #000000;">)</span> <span style="color: #000000;">)</span> <span style="color: #000000;">{</span></pre>
- <p>
-  This seems more appropriate calling in to get the path once, then using the path until you have a reason to change it. Even if you wanted to update the goal position very frequently every frame seems like overkill?
- </p>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:1141-0!1!0!0!!en!2 and timestamp 20081121101435 -->
+  <p>
+   This seems more appropriate calling in to get the path once, then using the path until you have a reason to change it. Even if you wanted to update the goal position very frequently every frame seems like overkill?
+  </p>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:1141-0!1!0!0!!en!2 and timestamp 20081121101435 -->
+ </body>
+</html>

@@ -1,162 +1,164 @@
- <div class="boilerplate metadata" id="attention" style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa;">
+<html>
+ <body>
+  <div class="boilerplate metadata" id="attention" style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa;">
+   <p>
+    <b>
+     This page is in urgent need of attention because:
+     <i>
+      this page contains unfinished sections
+     </i>
+    </b>
+   </p>
+   <p>
+    If you disagree with this, please explain why on
+    <a class="new" href="Talk:Table_%28decl%29" title="Talk:Table (decl)">
+     its talk page
+    </a>
+    .
+   </p>
+  </div>
   <p>
-   <b>
-    This page is in urgent need of attention because:
-    <i>
-     this page contains unfinished sections
-    </i>
-   </b>
-  </p>
-  <p>
-   If you disagree with this, please explain why on
-   <a class="new" href="Talk:Table_%28decl%29" title="Talk:Table (decl)">
-    its talk page
+   A table declaration is nothing more than a definition of a list of values bound to a name. They are mostly used to iterate a list of common values in
+   <a href="Material_%28decl%29" title="Material (decl)">
+    materials
    </a>
-   .
+   or
+   <a href="GUI_scripting" title="GUI scripting">
+    GUI scripts
+   </a>
+   . A key example would be lights that fade in and out or strobe in a clear pattern.
   </p>
- </div>
- <p>
-  A table declaration is nothing more than a definition of a list of values bound to a name. They are mostly used to iterate a list of common values in
-  <a href="Material_%28decl%29" title="Material (decl)">
-   materials
+  <a name="Declaration">
   </a>
-  or
-  <a href="GUI_scripting" title="GUI scripting">
-   GUI scripts
-  </a>
-  . A key example would be lights that fade in and out or strobe in a clear pattern.
- </p>
- <a name="Declaration">
- </a>
- <h2>
-  Declaration
- </h2>
- <p>
-  Declaring a table is fairly simple when you look at the syntax.
- </p>
- <pre>
+  <h2>
+   Declaration
+  </h2>
+  <p>
+   Declaring a table is fairly simple when you look at the syntax.
+  </p>
+  <pre>
 table &lt;tablename&gt; { [snap] [clamp] { &lt;data&gt;, &lt;data&gt;, ... } }
 </pre>
- <p>
-  The
-  <b>
-   snap
-  </b>
-  and
-  <b>
-   clamp
-  </b>
-  parameters are optional btu can be used together. They are explained in detail in the rest of this article. The
-  <b>
-   data
-  </b>
-  consists of single
-  <a href="Data_types#float" title="Data types">
-   float
+  <p>
+   The
+   <b>
+    snap
+   </b>
+   and
+   <b>
+    clamp
+   </b>
+   parameters are optional btu can be used together. They are explained in detail in the rest of this article. The
+   <b>
+    data
+   </b>
+   consists of single
+   <a href="Data_types#float" title="Data types">
+    float
+   </a>
+   values.
+  </p>
+  <a name="Using_a_table">
   </a>
-  values.
- </p>
- <a name="Using_a_table">
- </a>
- <h2>
-  Using a table
- </h2>
- <p>
-  Square bracket operators are used to get a certain value out of a table. The indexes of the elements start from 0.
- </p>
- <pre>tablename [ &lt;expression&gt; ]</pre>
- <p>
-  The expression between brackets can result in an integer or floating point number. You can use the
-  <a href="SCRIPT_%28file_format%29#Simple_Operators" title="SCRIPT (file format)">
-   simple script operators
+  <h2>
+   Using a table
+  </h2>
+  <p>
+   Square bracket operators are used to get a certain value out of a table. The indexes of the elements start from 0.
+  </p>
+  <pre>tablename [ &lt;expression&gt; ]</pre>
+  <p>
+   The expression between brackets can result in an integer or floating point number. You can use the
+   <a href="SCRIPT_%28file_format%29#Simple_Operators" title="SCRIPT (file format)">
+    simple script operators
+   </a>
+   *, %, + and - as well, next to the following predefined variables:
+  </p>
+  <ul>
+   <li>
+    time: a floating point value which increases continually as the map progresses.
+   </li>
+   <li>
+    parm0 - parm11: parameters which can be set from script, game code or the map editor.
+   </li>
+   <li>
+    global0 - global7: Unused, although they exist.
+   </li>
+   <li>
+    sound: represents the amplitude of the sound the assigned entity generates. Used for pulsing materials synchronized with the sound.
+   </li>
+  </ul>
+  <p>
+   The expression does not need to result in a real index in the table. If you index an item which does not exist, the game will always return something. The exact behavior is defined by the mentioned
+   <b>
+    snap
+   </b>
+   and
+   <b>
+    clamp
+   </b>
+   parameters.
+  </p>
+  <a name="Snap_parameter">
   </a>
-  *, %, + and - as well, next to the following predefined variables:
- </p>
- <ul>
-  <li>
-   time: a floating point value which increases continually as the map progresses.
-  </li>
-  <li>
-   parm0 - parm11: parameters which can be set from script, game code or the map editor.
-  </li>
-  <li>
-   global0 - global7: Unused, although they exist.
-  </li>
-  <li>
-   sound: represents the amplitude of the sound the assigned entity generates. Used for pulsing materials synchronized with the sound.
-  </li>
- </ul>
- <p>
-  The expression does not need to result in a real index in the table. If you index an item which does not exist, the game will always return something. The exact behavior is defined by the mentioned
-  <b>
-   snap
-  </b>
-  and
-  <b>
-   clamp
-  </b>
-  parameters.
- </p>
- <a name="Snap_parameter">
- </a>
- <h3>
-  Snap parameter
- </h3>
- <p>
-  If the
-  <b>
-   snap
-  </b>
-  parameter is added, requesting data by the use of a floating point number will always return the item with the nearest index. If the parameter is not set, the game will interpolate between two values.
- </p>
- <p>
-  Let us define two tables:
- </p>
- <pre>table squarewave { snap { 0, 1} }
+  <h3>
+   Snap parameter
+  </h3>
+  <p>
+   If the
+   <b>
+    snap
+   </b>
+   parameter is added, requesting data by the use of a floating point number will always return the item with the nearest index. If the parameter is not set, the game will interpolate between two values.
+  </p>
+  <p>
+   Let us define two tables:
+  </p>
+  <pre>table squarewave { snap { 0, 1} }
 table linearwave { { 0, 1 } }</pre>
- <p>
-  Now requesting
-  <b>
-   squarewave [ 0.6 ]
-  </b>
-  will return 1, whereas
-  <b>
-   linearwave [ 0.6 ]
-  </b>
-  will return 0.6 because the game interpolates between 1 and 0.
- </p>
- <p>
-  Similarly,
-  <b>
-   squareWave [ 0.3 ]
-  </b>
-  will return 0 and
-  <b>
-   linearWave [ 0.3 ]
-  </b>
-  will return - you guessed it - 0.3.
- </p>
- <a name="Clamp_parameter">
- </a>
- <h3>
-  Clamp parameter
- </h3>
- <p>
-  If the
-  <b>
-   clamp
-  </b>
-  parameter is added, requesting an index which is less than 0 or higher than the highest index in the table will return the first, respectively last element from the table. If the parameter is not set, the table will wrap around.
- </p>
- <a name="Use_in_materials">
- </a>
- <h2>
-  Use in materials
- </h2>
- <p>
-  Given the above definitions, we can define a material that uses the current time, combined with the linear table, to fade an overlay image in and out
- </p>
- <pre>
+  <p>
+   Now requesting
+   <b>
+    squarewave [ 0.6 ]
+   </b>
+   will return 1, whereas
+   <b>
+    linearwave [ 0.6 ]
+   </b>
+   will return 0.6 because the game interpolates between 1 and 0.
+  </p>
+  <p>
+   Similarly,
+   <b>
+    squareWave [ 0.3 ]
+   </b>
+   will return 0 and
+   <b>
+    linearWave [ 0.3 ]
+   </b>
+   will return - you guessed it - 0.3.
+  </p>
+  <a name="Clamp_parameter">
+  </a>
+  <h3>
+   Clamp parameter
+  </h3>
+  <p>
+   If the
+   <b>
+    clamp
+   </b>
+   parameter is added, requesting an index which is less than 0 or higher than the highest index in the table will return the first, respectively last element from the table. If the parameter is not set, the table will wrap around.
+  </p>
+  <a name="Use_in_materials">
+  </a>
+  <h2>
+   Use in materials
+  </h2>
+  <p>
+   Given the above definitions, we can define a material that uses the current time, combined with the linear table, to fade an overlay image in and out
+  </p>
+  <pre>
 table linearwave {{ 0, 1 }}
 
 textures/my_textures/fade_in_out
@@ -173,53 +175,55 @@ textures/my_textures/fade_in_out
 }
 
 </pre>
- <a name="Use_in_GUI_scripts">
- </a>
- <h2>
-  Use in GUI scripts
- </h2>
- <div class="boilerplate metadata" id="stub">
-  <i>
-   This article is a
-   <a class="external text" href="http://en.wikipedia.org/wiki/Perfect_stub_article" title="http://en.wikipedia.org/wiki/Perfect_stub_article">
-    stub
-   </a>
-   . You can help us by
-   <span class="plainlinks">
-    <a class="external text" href="Table_%28decl%29" title="http://www.modwiki.net/w/index.php?title=Table_%28decl%29&amp;action=edit">
-     expanding it
+  <a name="Use_in_GUI_scripts">
+  </a>
+  <h2>
+   Use in GUI scripts
+  </h2>
+  <div class="boilerplate metadata" id="stub">
+   <i>
+    This article is a
+    <a class="external text" href="http://en.wikipedia.org/wiki/Perfect_stub_article" title="http://en.wikipedia.org/wiki/Perfect_stub_article">
+     stub
     </a>
-   </span>
-   .
-  </i>
- </div>
- <ul>
-  <li>
-   Needs some GUI examples. See external links.
-  </li>
- </ul>
- <p>
-  <br/>
- </p>
- <a name="External_links">
- </a>
- <h2>
-  External links
- </h2>
- <ul>
-  <li>
-   <a class="external free" href="http://iddevnet.com/doom3/materials.php" title="http://iddevnet.com/doom3/materials.php">
-    http://iddevnet.com/doom3/materials.php
-   </a>
-  </li>
-  <li>
-   <a class="external free" href="https://web.archive.org/web/20100521044004/http://www.doom3world.org/phpbb2/viewtopic.php?p=178424" title="http://www.doom3world.org/phpbb2/viewtopic.php?p=178424">
-    http://www.doom3world.org/phpbb2/viewtopic.php?p=178424
-   </a>
-  </li>
-  <li>
-   <a class="external free" href="https://web.archive.org/web/20100521044004/http://www.doom3world.org/phpbb2/viewtopic.php?t=973" title="http://www.doom3world.org/phpbb2/viewtopic.php?t=973">
-    http://www.doom3world.org/phpbb2/viewtopic.php?t=973
-   </a>
-  </li>
- </ul>
+    . You can help us by
+    <span class="plainlinks">
+     <a class="external text" href="Table_%28decl%29" title="http://www.modwiki.net/w/index.php?title=Table_%28decl%29&amp;action=edit">
+      expanding it
+     </a>
+    </span>
+    .
+   </i>
+  </div>
+  <ul>
+   <li>
+    Needs some GUI examples. See external links.
+   </li>
+  </ul>
+  <p>
+   <br/>
+  </p>
+  <a name="External_links">
+  </a>
+  <h2>
+   External links
+  </h2>
+  <ul>
+   <li>
+    <a class="external free" href="http://iddevnet.com/doom3/materials.php" title="http://iddevnet.com/doom3/materials.php">
+     http://iddevnet.com/doom3/materials.php
+    </a>
+   </li>
+   <li>
+    <a class="external free" href="https://web.archive.org/web/20100521044004/http://www.doom3world.org/phpbb2/viewtopic.php?p=178424" title="http://www.doom3world.org/phpbb2/viewtopic.php?p=178424">
+     http://www.doom3world.org/phpbb2/viewtopic.php?p=178424
+    </a>
+   </li>
+   <li>
+    <a class="external free" href="https://web.archive.org/web/20100521044004/http://www.doom3world.org/phpbb2/viewtopic.php?t=973" title="http://www.doom3world.org/phpbb2/viewtopic.php?t=973">
+     http://www.doom3world.org/phpbb2/viewtopic.php?t=973
+    </a>
+   </li>
+  </ul>
+ </body>
+</html>

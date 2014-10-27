@@ -1,12 +1,14 @@
- <p>
-  Export declarations defining a group of files and the arguments to use during conversion from Maya Binary to MD5 format. Essentially you are defining a batch of files and parameters to process.
- </p>
- <a name="Syntax">
- </a>
- <h2>
-  Syntax
- </h2>
- <pre>export  [name] {
+<html>
+ <body>
+  <p>
+   Export declarations defining a group of files and the arguments to use during conversion from Maya Binary to MD5 format. Essentially you are defining a batch of files and parameters to process.
+  </p>
+  <a name="Syntax">
+  </a>
+  <h2>
+   Syntax
+  </h2>
+  <pre>export  [name] {
   options     [arguments]
   addoptions  [arguments]
   mesh        [file]   [arguments]
@@ -15,480 +17,482 @@
   ...
 }
 </pre>
- <p>
-  Export declarations begin with a header which consists of the keyword "export" followed by the name of the batch. This name can referenced when using the exportModels command to restrict the conversion process to the specified files.
- </p>
- <p>
-  The header is followed by the body of the declaration which is enclosed in curly brackets.
- </p>
- <p>
-  The body is composed of a series of keywords and their parameters.
- </p>
- <a name="Keywords">
- </a>
- <h2>
-  Keywords
- </h2>
- <dl>
-  <dt>
-   options
-  </dt>
-  <dd>
-   Defines the default options that will be used for all future export actions. Each iteration of this keyword overides the effects of previous instances.
-  </dd>
-  <dd>
-   <pre>options [parms]</pre>
-   <ul>
-    <li>
-     [parms] - a single parameter or a list of the parameters from the following section.
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   addoptions
-  </dt>
-  <dd>
-   Appends a default option to the current set of default options. This keyword functions in the same way as the options keyword with the exception that it does not override any settings that are not explictly redefined.
-  </dd>
-  <dd>
-   <pre>addoptions [parms]</pre>
-   <ul>
-    <li>
-     [parms] - a single parameter or a list of the parameters from the following section.
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   mesh
-  </dt>
-  <dd>
-   Exports an MD5mesh from a .mb file. Any options specified here will be appended to the previously specified options.
-  </dd>
-  <dd>
-   <pre>mesh [filename] [parms]</pre>
-   <ul>
-    <li>
-     [filename] - The name of the maya binary file.
-    </li>
-    <li>
-     [parms] - a single parameter or a list of the parameters to apply from the following section.
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   anim
-  </dt>
-  <dd>
-   Exports an MD5anim from a .mb file. Any options specified here will be appended to the previously specified options.
-  </dd>
-  <dd>
-   <pre>anim [filename] [parms]</pre>
-   <ul>
-    <li>
-     [filename] - The name of the maya binary file.
-    </li>
-    <li>
-     [parms] - a single parameter or a list of the parameters to apply from the following section.
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   camera
-  </dt>
-  <dd>
-   Exports an MD5camera from a .mb file. Any options specified here will be appended to the previously specified options.
-  </dd>
-  <dd>
-   <pre>camera [filename] [parms]</pre>
-   <ul>
-    <li>
-     [filename] - The name of the maya binary file.
-    </li>
-    <li>
-     [parms] - a single parameter or a list of the parameters to apply from the following section.
-    </li>
-   </ul>
-  </dd>
- </dl>
- <a name="Parameters">
- </a>
- <h2>
-  Parameters
- </h2>
- <dl>
-  <dt>
-   -force
-  </dt>
-  <dd>
-   Ignored
-  </dd>
- </dl>
- <dl>
-  <dt>
-   -game
-  </dt>
-  <dd>
-   Specify the mod name, which is where the relative paths are defined from. This should get set automatically in 1.2
-  </dd>
-  <dd>
-   <pre>-game [name]</pre>
-   <ul>
-    <li>
-     [name] - The name of the working mod folder
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   -rename
-  </dt>
-  <dd>
-   Rename a joint
-  </dd>
-  <dd>
-   <pre>-rename [joint name] [new name]</pre>
-   <ul>
-    <li>
-     [joint name] - The name of the joint in Maya.
-    </li>
-    <li>
-     [new name] - The name you would like to assign this joint in the MD5mesh.
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   -prefix
-  </dt>
-  <dd>
-   A string used to filter a scene so that only objects with a matching prefix are exported.
-  </dd>
-  <dd>
-   <pre>-prefix [prefix]</pre>
-   <ul>
-    <li>
-     [prefix] - The string to match objects against.
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   -parent
-  </dt>
-  <dd>
-   Reparent a joint
-  </dd>
-  <dd>
-   <pre>-parent [joint name] [new parent]</pre>
-   <ul>
-    <li>
-     [joint name] - The name of the joint to parent.
-    </li>
-    <li>
-     [new parent] - The name of the joint to parent to.
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   -sourcedir
-  </dt>
-  <dd>
-   Defines the source directory where the exporter will search for files.
-  </dd>
-  <dd>
-   <pre>-sourcedir [directory]</pre>
-   <ul>
-    <li>
-     [directory] - The directory to be used
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   -destdir
-  </dt>
-  <dd>
-   Defines the destination directory where the exporter will save files.
-  </dd>
-  <dd>
-   <pre>-destdir [directory]</pre>
-   <ul>
-    <li>
-     [directory] - The directory to be used
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   -dest
-  </dt>
-  <dd>
-   Defines the name to assign to the file currently being exported
-  </dd>
-  <dd>
-   <pre>-dest [filename]</pre>
-   <ul>
-    <li>
-     [filename] - The filename to be used
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   -range
-  </dt>
-  <dd>
-   The range of frames to export from the timeline
-  </dd>
-  <dd>
-   <pre>-range [start frame] [end frame]</pre>
-   <ul>
-    <li>
-     [start frame] - The starting frame
-    </li>
-    <li>
-     [end frame] - The ending frame
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   -cycleStart
-  </dt>
-  <dd>
-   Shift the cycle to start on a different frame. For example, say frame 1 has the left foot forward and frame 10 has the right foot forward. If you would like your cycle to start with right foot forward you would use "-cycleStart 10" and it will shift the cycle forward 10 frames.
-  </dd>
-  <dd>
-   <pre>-cycleStart [shift]</pre>
-   <ul>
-    <li>
-     [shift] - The number of frames to shift the sequence
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   -scale
-  </dt>
-  <dd>
-   Scale your character up or down from the origin during export. For example, "-scale 2" will double the size of the character.
-  </dd>
-  <dd>
-   <pre>-scale [scalar]</pre>
-   <ul>
-    <li>
-     [scalar] - The scale multiplier (similar to percent where 1 = 100%, 2 = 200%, 0.5 = 50%)
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   -align
-  </dt>
-  <dd>
-   Will align your animation to a certain bone.
-  </dd>
-  <dd>
-   <pre>-align [joint name]</pre>
-   <ul>
-    <li>
-     [joint name] - The name of the joint to align to
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   -rotate
-  </dt>
-  <dd>
-   Changes the orientation of your animation along the Z axis (up/down).
-  </dd>
-  <dd>
-   <pre>-rotate [yaw]</pre>
-   <ul>
-    <li>
-     [yaw] - The angle to rotate the animation in degrees
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   -nomesh
-  </dt>
-  <dd>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   -clearorigin
-  </dt>
-  <dd>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   -clearoriginaxis
-  </dt>
-  <dd>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   -ignorescale
-  </dt>
-  <dd>
-   Ignore any scales you may have on some bones.
-  </dd>
- </dl>
- <dl>
-  <dt>
-   -xyzprecision
-  </dt>
-  <dd>
-   This setting adjusts the threshold for translational sensitivity. By default the exporter will try and compress down the animations getting rid of tiny movements. By lowering the threshold the resulting animation mimicks the original more closely.
-  </dd>
-  <dd>
-   <pre>-xyzprecision [precision]</pre>
-   <ul>
-    <li>
-     [precision] - The cutoff threshold
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   -quatprecision
-  </dt>
-  <dd>
-   This setting adjusts the threshold for rotational sensitivity. By default the exporter will try and compress down the animations getting rid of tiny movements. By lowering the threshold the resulting animation mimicks the original more closely.
-  </dd>
-  <dd>
-   <pre>-quatprecision [precision]</pre>
-   <ul>
-    <li>
-     [precision] - The cutoff threshold
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   -jointthreshold
-  </dt>
-  <dd>
-   This setting adjusts the threshold for joint weight or the amount of influence a bone has over surrounding vertices. By default the exporter will try and compress down the animations getting rid of tiny movements. By lowering the threshold the resulting animation mimicks the original more closely.
-  </dd>
-  <dd>
-   <pre>-jointthreshold [weight]</pre>
-   <ul>
-    <li>
-     [weight] - The cutoff threshold
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   -skipmesh
-  </dt>
-  <dd>
-   Allows you to skip certain models during export (can only be used by itself)
-  </dd>
-  <dd>
-   <pre>-skipmesh [name]</pre>
-   <ul>
-    <li>
-     [name] - The name of the mesh
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   -keepmesh
-  </dt>
-  <dd>
-   Allows you to keep only a certain model during export (can only be used by itself)
-  </dd>
-  <dd>
-   <pre>-keepmesh [name]</pre>
-   <ul>
-    <li>
-     [name] - The name of the mesh
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   -jointgroup
-  </dt>
-  <dd>
-   Defines a group of joints for reference with the group keyword
-  </dd>
-  <dd>
-   <pre>-jointgroup [name] [joint1] [joint2]...[jointX]</pre>
-   <ul>
-    <li>
-     [name] - The name to assign to the group
-    </li>
-    <li>
-     [joint1],[joint2],[jointX] - The joints contained in the group
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   -group
-  </dt>
-  <dd>
-   Define a group to export (these don't affect the hierarchy)
-  </dd>
-  <dd>
-   <pre>-group [name]</pre>
-   <ul>
-    <li>
-     [name] - The name of a group
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   -keep
-  </dt>
-  <dd>
-   Define a joint that should be exported irrespective of whether it's used by a mesh or not
-  </dd>
-  <dd>
-   <pre>-keep [name]</pre>
-   <ul>
-    <li>
-     [name] - The name of a joint
-    </li>
-   </ul>
-  </dd>
- </dl>
+  <p>
+   Export declarations begin with a header which consists of the keyword "export" followed by the name of the batch. This name can referenced when using the exportModels command to restrict the conversion process to the specified files.
+  </p>
+  <p>
+   The header is followed by the body of the declaration which is enclosed in curly brackets.
+  </p>
+  <p>
+   The body is composed of a series of keywords and their parameters.
+  </p>
+  <a name="Keywords">
+  </a>
+  <h2>
+   Keywords
+  </h2>
+  <dl>
+   <dt>
+    options
+   </dt>
+   <dd>
+    Defines the default options that will be used for all future export actions. Each iteration of this keyword overides the effects of previous instances.
+   </dd>
+   <dd>
+    <pre>options [parms]</pre>
+    <ul>
+     <li>
+      [parms] - a single parameter or a list of the parameters from the following section.
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    addoptions
+   </dt>
+   <dd>
+    Appends a default option to the current set of default options. This keyword functions in the same way as the options keyword with the exception that it does not override any settings that are not explictly redefined.
+   </dd>
+   <dd>
+    <pre>addoptions [parms]</pre>
+    <ul>
+     <li>
+      [parms] - a single parameter or a list of the parameters from the following section.
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    mesh
+   </dt>
+   <dd>
+    Exports an MD5mesh from a .mb file. Any options specified here will be appended to the previously specified options.
+   </dd>
+   <dd>
+    <pre>mesh [filename] [parms]</pre>
+    <ul>
+     <li>
+      [filename] - The name of the maya binary file.
+     </li>
+     <li>
+      [parms] - a single parameter or a list of the parameters to apply from the following section.
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    anim
+   </dt>
+   <dd>
+    Exports an MD5anim from a .mb file. Any options specified here will be appended to the previously specified options.
+   </dd>
+   <dd>
+    <pre>anim [filename] [parms]</pre>
+    <ul>
+     <li>
+      [filename] - The name of the maya binary file.
+     </li>
+     <li>
+      [parms] - a single parameter or a list of the parameters to apply from the following section.
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    camera
+   </dt>
+   <dd>
+    Exports an MD5camera from a .mb file. Any options specified here will be appended to the previously specified options.
+   </dd>
+   <dd>
+    <pre>camera [filename] [parms]</pre>
+    <ul>
+     <li>
+      [filename] - The name of the maya binary file.
+     </li>
+     <li>
+      [parms] - a single parameter or a list of the parameters to apply from the following section.
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <a name="Parameters">
+  </a>
+  <h2>
+   Parameters
+  </h2>
+  <dl>
+   <dt>
+    -force
+   </dt>
+   <dd>
+    Ignored
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    -game
+   </dt>
+   <dd>
+    Specify the mod name, which is where the relative paths are defined from. This should get set automatically in 1.2
+   </dd>
+   <dd>
+    <pre>-game [name]</pre>
+    <ul>
+     <li>
+      [name] - The name of the working mod folder
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    -rename
+   </dt>
+   <dd>
+    Rename a joint
+   </dd>
+   <dd>
+    <pre>-rename [joint name] [new name]</pre>
+    <ul>
+     <li>
+      [joint name] - The name of the joint in Maya.
+     </li>
+     <li>
+      [new name] - The name you would like to assign this joint in the MD5mesh.
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    -prefix
+   </dt>
+   <dd>
+    A string used to filter a scene so that only objects with a matching prefix are exported.
+   </dd>
+   <dd>
+    <pre>-prefix [prefix]</pre>
+    <ul>
+     <li>
+      [prefix] - The string to match objects against.
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    -parent
+   </dt>
+   <dd>
+    Reparent a joint
+   </dd>
+   <dd>
+    <pre>-parent [joint name] [new parent]</pre>
+    <ul>
+     <li>
+      [joint name] - The name of the joint to parent.
+     </li>
+     <li>
+      [new parent] - The name of the joint to parent to.
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    -sourcedir
+   </dt>
+   <dd>
+    Defines the source directory where the exporter will search for files.
+   </dd>
+   <dd>
+    <pre>-sourcedir [directory]</pre>
+    <ul>
+     <li>
+      [directory] - The directory to be used
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    -destdir
+   </dt>
+   <dd>
+    Defines the destination directory where the exporter will save files.
+   </dd>
+   <dd>
+    <pre>-destdir [directory]</pre>
+    <ul>
+     <li>
+      [directory] - The directory to be used
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    -dest
+   </dt>
+   <dd>
+    Defines the name to assign to the file currently being exported
+   </dd>
+   <dd>
+    <pre>-dest [filename]</pre>
+    <ul>
+     <li>
+      [filename] - The filename to be used
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    -range
+   </dt>
+   <dd>
+    The range of frames to export from the timeline
+   </dd>
+   <dd>
+    <pre>-range [start frame] [end frame]</pre>
+    <ul>
+     <li>
+      [start frame] - The starting frame
+     </li>
+     <li>
+      [end frame] - The ending frame
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    -cycleStart
+   </dt>
+   <dd>
+    Shift the cycle to start on a different frame. For example, say frame 1 has the left foot forward and frame 10 has the right foot forward. If you would like your cycle to start with right foot forward you would use "-cycleStart 10" and it will shift the cycle forward 10 frames.
+   </dd>
+   <dd>
+    <pre>-cycleStart [shift]</pre>
+    <ul>
+     <li>
+      [shift] - The number of frames to shift the sequence
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    -scale
+   </dt>
+   <dd>
+    Scale your character up or down from the origin during export. For example, "-scale 2" will double the size of the character.
+   </dd>
+   <dd>
+    <pre>-scale [scalar]</pre>
+    <ul>
+     <li>
+      [scalar] - The scale multiplier (similar to percent where 1 = 100%, 2 = 200%, 0.5 = 50%)
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    -align
+   </dt>
+   <dd>
+    Will align your animation to a certain bone.
+   </dd>
+   <dd>
+    <pre>-align [joint name]</pre>
+    <ul>
+     <li>
+      [joint name] - The name of the joint to align to
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    -rotate
+   </dt>
+   <dd>
+    Changes the orientation of your animation along the Z axis (up/down).
+   </dd>
+   <dd>
+    <pre>-rotate [yaw]</pre>
+    <ul>
+     <li>
+      [yaw] - The angle to rotate the animation in degrees
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    -nomesh
+   </dt>
+   <dd>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    -clearorigin
+   </dt>
+   <dd>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    -clearoriginaxis
+   </dt>
+   <dd>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    -ignorescale
+   </dt>
+   <dd>
+    Ignore any scales you may have on some bones.
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    -xyzprecision
+   </dt>
+   <dd>
+    This setting adjusts the threshold for translational sensitivity. By default the exporter will try and compress down the animations getting rid of tiny movements. By lowering the threshold the resulting animation mimicks the original more closely.
+   </dd>
+   <dd>
+    <pre>-xyzprecision [precision]</pre>
+    <ul>
+     <li>
+      [precision] - The cutoff threshold
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    -quatprecision
+   </dt>
+   <dd>
+    This setting adjusts the threshold for rotational sensitivity. By default the exporter will try and compress down the animations getting rid of tiny movements. By lowering the threshold the resulting animation mimicks the original more closely.
+   </dd>
+   <dd>
+    <pre>-quatprecision [precision]</pre>
+    <ul>
+     <li>
+      [precision] - The cutoff threshold
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    -jointthreshold
+   </dt>
+   <dd>
+    This setting adjusts the threshold for joint weight or the amount of influence a bone has over surrounding vertices. By default the exporter will try and compress down the animations getting rid of tiny movements. By lowering the threshold the resulting animation mimicks the original more closely.
+   </dd>
+   <dd>
+    <pre>-jointthreshold [weight]</pre>
+    <ul>
+     <li>
+      [weight] - The cutoff threshold
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    -skipmesh
+   </dt>
+   <dd>
+    Allows you to skip certain models during export (can only be used by itself)
+   </dd>
+   <dd>
+    <pre>-skipmesh [name]</pre>
+    <ul>
+     <li>
+      [name] - The name of the mesh
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    -keepmesh
+   </dt>
+   <dd>
+    Allows you to keep only a certain model during export (can only be used by itself)
+   </dd>
+   <dd>
+    <pre>-keepmesh [name]</pre>
+    <ul>
+     <li>
+      [name] - The name of the mesh
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    -jointgroup
+   </dt>
+   <dd>
+    Defines a group of joints for reference with the group keyword
+   </dd>
+   <dd>
+    <pre>-jointgroup [name] [joint1] [joint2]...[jointX]</pre>
+    <ul>
+     <li>
+      [name] - The name to assign to the group
+     </li>
+     <li>
+      [joint1],[joint2],[jointX] - The joints contained in the group
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    -group
+   </dt>
+   <dd>
+    Define a group to export (these don't affect the hierarchy)
+   </dd>
+   <dd>
+    <pre>-group [name]</pre>
+    <ul>
+     <li>
+      [name] - The name of a group
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    -keep
+   </dt>
+   <dd>
+    Define a joint that should be exported irrespective of whether it's used by a mesh or not
+   </dd>
+   <dd>
+    <pre>-keep [name]</pre>
+    <ul>
+     <li>
+      [name] - The name of a joint
+     </li>
+    </ul>
+   </dd>
+  </dl>
+ </body>
+</html>

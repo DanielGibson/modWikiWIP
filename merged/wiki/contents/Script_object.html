@@ -1,181 +1,183 @@
- <p>
-  A script object is a way of organizing variables and functions that are related to an
-  <a href="Entity" title="Entity">
-   entity
+<html>
+ <body>
+  <p>
+   A script object is a way of organizing variables and functions that are related to an
+   <a href="Entity" title="Entity">
+    entity
+   </a>
+   . It is analogous to a class in object orientated programming terms.
+  </p>
+  <p>
+   It's uses are wide ranging from weapons and AI, to extending existing entities.
+  </p>
+  <p>
+   While an entities'
+   <a href="Spawn_class" title="Spawn class">
+    spawn class
+   </a>
+   strongly defines run time behavior, script objects are generally used to create variation on run time behavior within that framework.
+  </p>
+  <p>
+   The spawn class sets up and runs a script object if the key/value pair "scriptobject" is set to a valid object type on the entities
+   <a href="SpawnArgs" title="SpawnArgs">
+    spawnArgs
+   </a>
+   .
+  </p>
+  <a name="Working_on_objects">
   </a>
-  . It is analogous to a class in object orientated programming terms.
- </p>
- <p>
-  It's uses are wide ranging from weapons and AI, to extending existing entities.
- </p>
- <p>
-  While an entities'
-  <a href="Spawn_class" title="Spawn class">
-   spawn class
-  </a>
-  strongly defines run time behavior, script objects are generally used to create variation on run time behavior within that framework.
- </p>
- <p>
-  The spawn class sets up and runs a script object if the key/value pair "scriptobject" is set to a valid object type on the entities
-  <a href="SpawnArgs" title="SpawnArgs">
-   spawnArgs
-  </a>
-  .
- </p>
- <a name="Working_on_objects">
- </a>
- <h2>
-  Working on objects
- </h2>
- <p>
-  In order to call a function of a script object a valid object reference must be set up.
- </p>
- <p>
-  Example:
- </p>
- <pre>monster_base myMonster; 
+  <h2>
+   Working on objects
+  </h2>
+  <p>
+   In order to call a function of a script object a valid object reference must be set up.
+  </p>
+  <p>
+   Example:
+  </p>
+  <pre>monster_base myMonster; 
 myMonster = <span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">getEntity</span><span style="color: #000000;">(</span><span style="color: #666666;">"monster_sam"</span><span style="color: #000000;">)</span>; /
 myMonster.<span style="color: #ff0000;">wake_on_trigger</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span>;</pre>
- <p>
-  Line 1 declares and object reference of monster_base type. The script compiler will issue an
-  <a class="new" href="Error" title="Error">
-   error
-  </a>
-  if there is no script object of that type.
- </p>
- <p>
-  Line 2 sets the reference to an entity. For the sake of this example we are assuming the entity "monster_sam" is an entity running a script object of they type monster_base, or one that inherits from monster_base.
- </p>
- <p>
-  An object reference will be set to
-  <a href="%24null_entity_%28scripting%29" title="$null entity (scripting)">
-   $null_entity
-  </a>
-  if the entity you are trying to set the variable to does not have a object of that type.
- </p>
- <p>
-  Line 3 calls the object function wake_on_trigger(), which we know is a function defined in the script object monster_base. 
+  <p>
+   Line 1 declares and object reference of monster_base type. The script compiler will issue an
+   <a class="new" href="Error" title="Error">
+    error
+   </a>
+   if there is no script object of that type.
+  </p>
+  <p>
+   Line 2 sets the reference to an entity. For the sake of this example we are assuming the entity "monster_sam" is an entity running a script object of they type monster_base, or one that inherits from monster_base.
+  </p>
+  <p>
+   An object reference will be set to
+   <a href="%24null_entity_%28scripting%29" title="$null entity (scripting)">
+    $null_entity
+   </a>
+   if the entity you are trying to set the variable to does not have a object of that type.
+  </p>
+  <p>
+   Line 3 calls the object function wake_on_trigger(), which we know is a function defined in the script object monster_base. 
 If the function was not declared in the script object the script interpreter would issue a
-  <a class="new" href="Warning" title="Warning">
-   warning
+   <a class="new" href="Warning" title="Warning">
+    warning
+   </a>
+   . TODO: find exact error/warning messages.
+  </p>
+  <a name="Declaration">
   </a>
-  . TODO: find exact error/warning messages.
- </p>
- <a name="Declaration">
- </a>
- <h2>
-  Declaration
- </h2>
- <p>
-  Syntax:
- </p>
- <pre><span style="color: #0000ff;">object</span> <span style="color: #000000;">[</span>script <span style="color: #0000ff;">object</span> type<span style="color: #000000;">]</span> : <span style="color: #000000;">[</span>base script <span style="color: #0000ff;">object</span> type<span style="color: #000000;">]</span> <span style="color: #000000;">{</span>
+  <h2>
+   Declaration
+  </h2>
+  <p>
+   Syntax:
+  </p>
+  <pre><span style="color: #0000ff;">object</span> <span style="color: #000000;">[</span>script <span style="color: #0000ff;">object</span> type<span style="color: #000000;">]</span> : <span style="color: #000000;">[</span>base script <span style="color: #0000ff;">object</span> type<span style="color: #000000;">]</span> <span style="color: #000000;">{</span>
     <span style="color: #000000;">[</span>function declaration<span style="color: #000000;">]</span>
  
     <span style="color: #000000;">[</span>variable declaration<span style="color: #000000;">]</span>
     ...
 <span style="color: #000000;">}</span></pre>
- <a name="Function_Definition">
- </a>
- <h2>
-  Function Definition
- </h2>
- <p>
-  Syntax:
- </p>
- <pre><span style="color: #000000;">[</span>return type<span style="color: #000000;">]</span> <span style="color: #000000;">[</span>script <span style="color: #0000ff;">object</span> type<span style="color: #000000;">]</span>::<span style="color: #000000;">[</span>function name<span style="color: #000000;">]</span><span style="color: #000000;">(</span><span style="color: #000000;">[</span>parameters<span style="color: #000000;">]</span><span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
+  <a name="Function_Definition">
+  </a>
+  <h2>
+   Function Definition
+  </h2>
+  <p>
+   Syntax:
+  </p>
+  <pre><span style="color: #000000;">[</span>return type<span style="color: #000000;">]</span> <span style="color: #000000;">[</span>script <span style="color: #0000ff;">object</span> type<span style="color: #000000;">]</span>::<span style="color: #000000;">[</span>function name<span style="color: #000000;">]</span><span style="color: #000000;">(</span><span style="color: #000000;">[</span>parameters<span style="color: #000000;">]</span><span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
    ...
 <span style="color: #000000;">}</span></pre>
- <ul>
-  <li>
-   [script object type] - The name of the object type. Must be unique within compiled script
-  </li>
-  <li>
-   [base script object type] - The object type to inherit from.
-  </li>
-  <li>
-   Function declarations - declared in the normal way. Referred to as an object function. See
-   <a href="Scripting_basics#Functions_or_Methods" title="Scripting basics">
-    Scripting basics#Functions or Methods
+  <ul>
+   <li>
+    [script object type] - The name of the object type. Must be unique within compiled script
+   </li>
+   <li>
+    [base script object type] - The object type to inherit from.
+   </li>
+   <li>
+    Function declarations - declared in the normal way. Referred to as an object function. See
+    <a href="Scripting_basics#Functions_or_Methods" title="Scripting basics">
+     Scripting basics#Functions or Methods
+    </a>
+   </li>
+   <li>
+    Variable declarations - declared in the normal way. Referred to as a object variable. See
+    <a href="Scripting_basics#Variables" title="Scripting basics">
+     Scripting basics#Variables
+    </a>
+   </li>
+  </ul>
+  <a name="Important_functions">
+  </a>
+  <h2>
+   Important functions
+  </h2>
+  <p>
+   A number of functions are called by the entitys
+   <a href="Spawn_class" title="Spawn class">
+    spawn class
    </a>
-  </li>
-  <li>
-   Variable declarations - declared in the normal way. Referred to as a object variable. See
-   <a href="Scripting_basics#Variables" title="Scripting basics">
-    Scripting basics#Variables
+   .
+  </p>
+  <pre>init<span style="color: #000000;">(</span><span style="color: #000000;">)</span></pre>
+  <p>
+   The script object constructor. A
+   <a href="Thread_%28scripting%29" title="Thread (scripting)">
+    thread
    </a>
-  </li>
- </ul>
- <a name="Important_functions">
- </a>
- <h2>
-  Important functions
- </h2>
- <p>
-  A number of functions are called by the entitys
-  <a href="Spawn_class" title="Spawn class">
-   spawn class
+   is created by the spawn class to run the init() script function at the end of the Spawn() function.
+  </p>
+  <p>
+   Use to set up initial state of the script object variables.
+  </p>
+  <p>
+   <b>
+    Note
+   </b>
+   : There is a bug in the scripting system where the init() function won't be able to call any functions of that object unless at least one variable is declared, or if the function in question is called through
+   <a class="new" href="Self_%28scripting%29" title="Self (scripting)">
+    self
+   </a>
+   .callFunction([function]);
+  </p>
+  <pre>destroy<span style="color: #000000;">(</span><span style="color: #000000;">)</span></pre>
+  <p>
+   Destructor. Called early on in the spawn class destructor when the entity is removed.
+  </p>
+  <p>
+   Use to clean up anything that the script object was managing, such as created threads and entities.
+  </p>
+  <a name="Example">
   </a>
-  .
- </p>
- <pre>init<span style="color: #000000;">(</span><span style="color: #000000;">)</span></pre>
- <p>
-  The script object constructor. A
-  <a href="Thread_%28scripting%29" title="Thread (scripting)">
-   thread
+  <h2>
+   Example
+  </h2>
+  <p>
+   For this example the script object makes a light fade in and out for the life time of the entity. The time for the various stages is set up to be configurable via
+   <a href="SpawnArgs" title="SpawnArgs">
+    spawnArgs
+   </a>
+   .
+  </p>
+  <p>
+   It's a simple script, but we've tried to cram in as much important script object coding aspects as possible.
+  </p>
+  <a name="Script">
   </a>
-  is created by the spawn class to run the init() script function at the end of the Spawn() function.
- </p>
- <p>
-  Use to set up initial state of the script object variables.
- </p>
- <p>
-  <b>
-   Note
-  </b>
-  : There is a bug in the scripting system where the init() function won't be able to call any functions of that object unless at least one variable is declared, or if the function in question is called through
-  <a class="new" href="Self_%28scripting%29" title="Self (scripting)">
-   self
-  </a>
-  .callFunction([function]);
- </p>
- <pre>destroy<span style="color: #000000;">(</span><span style="color: #000000;">)</span></pre>
- <p>
-  Destructor. Called early on in the spawn class destructor when the entity is removed.
- </p>
- <p>
-  Use to clean up anything that the script object was managing, such as created threads and entities.
- </p>
- <a name="Example">
- </a>
- <h2>
-  Example
- </h2>
- <p>
-  For this example the script object makes a light fade in and out for the life time of the entity. The time for the various stages is set up to be configurable via
-  <a href="SpawnArgs" title="SpawnArgs">
-   spawnArgs
-  </a>
-  .
- </p>
- <p>
-  It's a simple script, but we've tried to cram in as much important script object coding aspects as possible.
- </p>
- <a name="Script">
- </a>
- <h3>
-  Script
- </h3>
- <p>
-  You'll see the currently broken note links to the example in the script, just look at the name of the link and find the note after the script.
- </p>
- <p>
-  TODO: find out if there is a way to escape wiki nonwikifying links in script/code tags.
- </p>
- <p>
-  To simplify things conceptually while working on a script we can think of the script object as being an entity that is running a script object of this type.
- </p>
- <pre> 
+  <h3>
+   Script
+  </h3>
+  <p>
+   You'll see the currently broken note links to the example in the script, just look at the name of the link and find the note after the script.
+  </p>
+  <p>
+   TODO: find out if there is a way to escape wiki nonwikifying links in script/code tags.
+  </p>
+  <p>
+   To simplify things conceptually while working on a script we can think of the script object as being an entity that is running a script object of this type.
+  </p>
+  <pre> 
 <span style="color: #339900; font-style: italic;">/***********************************************************************
  
 light_strobe
@@ -261,218 +263,220 @@ light_strobe::main
 <span style="color: #000000;">}</span>
  
 <span style="color: #339900;">// EOF</span></pre>
- <a name="Entity_set_up">
- </a>
- <h3>
-  Entity set up
- </h3>
- <p>
-  Put script in scripts folder and include in main script.
- </p>
- <p>
-  Set up on a light entity with the following key/value pairs:
- </p>
- <pre><span style="color: #666666;">"scriptobject"</span> <span style="color: #666666;">"light_strobe"</span>
+  <a name="Entity_set_up">
+  </a>
+  <h3>
+   Entity set up
+  </h3>
+  <p>
+   Put script in scripts folder and include in main script.
+  </p>
+  <p>
+   Set up on a light entity with the following key/value pairs:
+  </p>
+  <pre><span style="color: #666666;">"scriptobject"</span> <span style="color: #666666;">"light_strobe"</span>
  
 <span style="color: #666666;">"delay_time"</span> <span style="color: #666666;">"2"</span>
  
 <span style="color: #666666;">"fade_in_time"</span> <span style="color: #666666;">"3"</span>
  
 <span style="color: #666666;">"fade_out_time"</span> <span style="color: #666666;">"1"</span></pre>
- <p>
-  Note: While you could just add these keys to the
-  <a class="new" href="Map_entity" title="Map entity">
-   map entity
+  <p>
+   Note: While you could just add these keys to the
+   <a class="new" href="Map_entity" title="Map entity">
+    map entity
+   </a>
+   , setting up an
+   <a class="new" href="EntityDef_%28decl%29" title="EntityDef (decl)">
+    entityDef
+   </a>
+   for a spawn class/script object combination is the best way to set defaults for spawnArgs.
+  </p>
+  <a name="Example_Notes">
   </a>
-  , setting up an
-  <a class="new" href="EntityDef_%28decl%29" title="EntityDef (decl)">
-   entityDef
+  <h2>
+   Example Notes
+  </h2>
+  <a name="declare">
   </a>
-  for a spawn class/script object combination is the best way to set defaults for spawnArgs.
- </p>
- <a name="Example_Notes">
- </a>
- <h2>
-  Example Notes
- </h2>
- <a name="declare">
- </a>
- <h3>
-  declare
- </h3>
- <p>
-  Here we are declaring our script object type to be called light_strobe. object types must be unique, a search through the script files shows there isn't any existing script object type called light_strobe.
- </p>
- <a name="debug_print">
- </a>
- <h3>
-  debug print
- </h3>
- <p>
-  Just to give an idea of what is going on while working on the script. The text will be shown in the console. Prefixing the game time is often handy to get an idea of the flow of the script.
- </p>
- <a name="type_check">
- </a>
- <h3>
-  type check
- </h3>
- <p>
-  Since we will be using
-  <a href="Script_events" title="Script events">
-   script events
+  <h3>
+   declare
+  </h3>
+  <p>
+   Here we are declaring our script object type to be called light_strobe. object types must be unique, a search through the script files shows there isn't any existing script object type called light_strobe.
+  </p>
+  <a name="debug_print">
   </a>
-  (event calls to the
-  <a href="Spawn_class" title="Spawn class">
-   spawn class
+  <h3>
+   debug print
+  </h3>
+  <p>
+   Just to give an idea of what is going on while working on the script. The text will be shown in the console. Prefixing the game time is often handy to get an idea of the flow of the script.
+  </p>
+  <a name="type_check">
   </a>
-  ) specific to an idLight spawn class we are doing some simple type checking to see if the entity this script object is running on is the right type.
- </p>
- <p>
-  <a href="GetKey_%28script_event%29" title="GetKey (script event)">
-   getKey
+  <h3>
+   type check
+  </h3>
+  <p>
+   Since we will be using
+   <a href="Script_events" title="Script events">
+    script events
+   </a>
+   (event calls to the
+   <a href="Spawn_class" title="Spawn class">
+    spawn class
+   </a>
+   ) specific to an idLight spawn class we are doing some simple type checking to see if the entity this script object is running on is the right type.
+  </p>
+  <p>
+   <a href="GetKey_%28script_event%29" title="GetKey (script event)">
+    getKey
+   </a>
+   is an event defined in the
+   <a class="new" href="Base_spawn_class" title="Base spawn class">
+    base spawn class
+   </a>
+   <a href="IdEntity_%28class%29" title="IdEntity (class)">
+    idEntity
+   </a>
+   , so all spawn classes inherit it.
+  </p>
+  <p>
+   "spawnclass" is the key for the value in the
+   <a href="SpawnArgs" title="SpawnArgs">
+    spawnArgs
+   </a>
+   dictionary that declares the spawn class.
+  </p>
+  <p>
+   This is the only way to check for spawn class type in script, since there is only one general reference type entity and object references types are only of script object type.
+  </p>
+  <p>
+   Note: since spawnArgs is a dictionary, accessing it is not as fast as operations on other data types, plus we are also doing a string comparing which is also an operation slower than operation on other data types, so this kind of type checking while useful, isn't something that should be done per frame.
+  </p>
+  <a name="warning">
   </a>
-  is an event defined in the
-  <a class="new" href="Base_spawn_class" title="Base spawn class">
-   base spawn class
+  <h3>
+   warning
+  </h3>
+  <p>
+   We can decide how severe to be about this, here we are issuing a warning which will show in the console, if we wanted to be more strict we could call an Error to halt the game.
+  </p>
+  <a name="type_check_return">
   </a>
-  <a href="IdEntity_%28class%29" title="IdEntity (class)">
-   idEntity
+  <h3>
+   type check return
+  </h3>
+  <p>
+   Stop script object from continuing further. This won't prevent function calls on this script object, but in this case execution will stop before our run time logic starts.
+  </p>
+  <a name="spawnargs_performance">
   </a>
-  , so all spawn classes inherit it.
- </p>
- <p>
-  "spawnclass" is the key for the value in the
-  <a href="SpawnArgs" title="SpawnArgs">
-   spawnArgs
+  <h3>
+   spawnargs performance
+  </h3>
+  <p>
+   As previously noted, variables are faster than
+   <a href="SpawnArgs" title="SpawnArgs">
+    spawnArgs
+   </a>
+   access, so setting up variables with values from spawnArgs so they can be used later is a good idea.
+  </p>
+  <a name="run-time_function">
   </a>
-  dictionary that declares the spawn class.
- </p>
- <p>
-  This is the only way to check for spawn class type in script, since there is only one general reference type entity and object references types are only of script object type.
- </p>
- <p>
-  Note: since spawnArgs is a dictionary, accessing it is not as fast as operations on other data types, plus we are also doing a string comparing which is also an operation slower than operation on other data types, so this kind of type checking while useful, isn't something that should be done per frame.
- </p>
- <a name="warning">
- </a>
- <h3>
-  warning
- </h3>
- <p>
-  We can decide how severe to be about this, here we are issuing a warning which will show in the console, if we wanted to be more strict we could call an Error to halt the game.
- </p>
- <a name="type_check_return">
- </a>
- <h3>
-  type check return
- </h3>
- <p>
-  Stop script object from continuing further. This won't prevent function calls on this script object, but in this case execution will stop before our run time logic starts.
- </p>
- <a name="spawnargs_performance">
- </a>
- <h3>
-  spawnargs performance
- </h3>
- <p>
-  As previously noted, variables are faster than
-  <a href="SpawnArgs" title="SpawnArgs">
-   spawnArgs
+  <h3>
+   run-time function
+  </h3>
+  <p>
+   The base spawn class calls init() on start up, after init() is finished executing the script
+   <a href="Thread_%28scripting%29" title="Thread (scripting)">
+    thread
+   </a>
+   is considered 'done'. The only code run on the object from that point would be from:
+  </p>
+  <p>
+   The spawn class calling a specific script function.
+  </p>
+  <p>
+   Another script
+   <a href="Thread_%28scripting%29" title="Thread (scripting)">
+    thread
+   </a>
+   calling a specific function.
+  </p>
+  <p>
+   In this object we are using a function called 'main' to do run time logic, so it must be the last operation before init() exits.
+  </p>
+  <a name="run_time_loop">
   </a>
-  access, so setting up variables with values from spawnArgs so they can be used later is a good idea.
- </p>
- <a name="run-time_function">
- </a>
- <h3>
-  run-time function
- </h3>
- <p>
-  The base spawn class calls init() on start up, after init() is finished executing the script
-  <a href="Thread_%28scripting%29" title="Thread (scripting)">
-   thread
+  <h3>
+   run time loop
+  </h3>
+  <p>
+   Here we are trapping the function execution in a while loop, so the function doesn't exit and we can keep our run time code running.
+  </p>
+  <p>
+   Once run time script object behavior gets to a certain point of complexity it's better to plan a
+   <a href="Finite_State_Machine_%28scripting%29" title="Finite State Machine (scripting)">
+    Finite State Machine
+   </a>
+   .
+  </p>
+  <a name="ETQW_event">
   </a>
-  is considered 'done'. The only code run on the object from that point would be from:
- </p>
- <p>
-  The spawn class calling a specific script function.
- </p>
- <p>
-  Another script
-  <a href="Thread_%28scripting%29" title="Thread (scripting)">
-   thread
+  <h3>
+   ETQW event
+  </h3>
+  <div>
+   <a class="image" href="Image:Etqwsquare_25.png" title="Image:Etqwsquare_25.png">
+    <img alt="Image:Etqwsquare_25.png" height="25" longdesc="/wiki/Image:Etqwsquare_25.png" src="/w/images/7/7e/Etqwsquare_25.png" width="25"/>
+   </a>
+   <b>
+    Note:
+   </b>
+   Enemy Territory: Quake Wars only:
+   <dl>
+    <dd>
+     <i>
+      (Enemy Territory: Quake Wars does not have fadeIn and fadeOut events on the spawn class idLight, there are turnOn and turnOff events but as the names suggest, they do not fade over time.)
+     </i>
+    </dd>
+   </dl>
+  </div>
+  <a name="functions_on_self">
   </a>
-  calling a specific function.
- </p>
- <p>
-  In this object we are using a function called 'main' to do run time logic, so it must be the last operation before init() exits.
- </p>
- <a name="run_time_loop">
- </a>
- <h3>
-  run time loop
- </h3>
- <p>
-  Here we are trapping the function execution in a while loop, so the function doesn't exit and we can keep our run time code running.
- </p>
- <p>
-  Once run time script object behavior gets to a certain point of complexity it's better to plan a
-  <a href="Finite_State_Machine_%28scripting%29" title="Finite State Machine (scripting)">
-   Finite State Machine
+  <h3>
+   functions on self
+  </h3>
+  <p>
+   All function calls without a specific entity reference will be checked to see if it's a function declared in the script object, or a script event on the the spawn class.
+  </p>
+  <p>
+   There is an equivalent way to call functions on the current entity that some prefer -
+   <a class="new" href="Self_%28scripting%29" title="Self (scripting)">
+    self
+   </a>
+   .[function].
+  </p>
+  <p>
+   fadeOut is an event defined in the spawn class idLight, if this script object were to run on an entity of a different spawn class it would produce a warning. At least it would if it ever got to this point, but the spawn class type check in init() prevents that.
+  </p>
+  <a name="waiting">
   </a>
-  .
- </p>
- <a name="ETQW_event">
- </a>
- <h3>
-  ETQW event
- </h3>
- <div>
-  <a class="image" href="Image:Etqwsquare_25.png" title="Image:Etqwsquare_25.png">
-   <img alt="Image:Etqwsquare_25.png" height="25" longdesc="/wiki/Image:Etqwsquare_25.png" src="/w/images/7/7e/Etqwsquare_25.png" width="25"/>
-  </a>
-  <b>
-   Note:
-  </b>
-  Enemy Territory: Quake Wars only:
-  <dl>
-   <dd>
-    <i>
-     (Enemy Territory: Quake Wars does not have fadeIn and fadeOut events on the spawn class idLight, there are turnOn and turnOff events but as the names suggest, they do not fade over time.)
-    </i>
-   </dd>
-  </dl>
- </div>
- <a name="functions_on_self">
- </a>
- <h3>
-  functions on self
- </h3>
- <p>
-  All function calls without a specific entity reference will be checked to see if it's a function declared in the script object, or a script event on the the spawn class.
- </p>
- <p>
-  There is an equivalent way to call functions on the current entity that some prefer -
-  <a class="new" href="Self_%28scripting%29" title="Self (scripting)">
-   self
-  </a>
-  .[function].
- </p>
- <p>
-  fadeOut is an event defined in the spawn class idLight, if this script object were to run on an entity of a different spawn class it would produce a warning. At least it would if it ever got to this point, but the spawn class type check in init() prevents that.
- </p>
- <a name="waiting">
- </a>
- <h3>
-  waiting
- </h3>
- <p>
-  Since we have trapped the function in a loop, at some point of execution we have to let the thread
-  <a href="Thread_%28scripting%29#wait" title="Thread (scripting)">
-   wait
-  </a>
-  , otherwise the thread would continue indefinitely, preventing the rest of the game from continuing to run.
- </p>
- <p>
-  If we wanted code to be run per frame the only wait in our code would be a waitFrame() here at the end of the loop.
- </p>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:8142-0!1!0!0!!en!2 and timestamp 20121114224211 -->
+  <h3>
+   waiting
+  </h3>
+  <p>
+   Since we have trapped the function in a loop, at some point of execution we have to let the thread
+   <a href="Thread_%28scripting%29#wait" title="Thread (scripting)">
+    wait
+   </a>
+   , otherwise the thread would continue indefinitely, preventing the rest of the game from continuing to run.
+  </p>
+  <p>
+   If we wanted code to be run per frame the only wait in our code would be a waitFrame() here at the end of the loop.
+  </p>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:8142-0!1!0!0!!en!2 and timestamp 20121114224211 -->
+ </body>
+</html>

@@ -1,304 +1,308 @@
- <div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-  <a class="image" href="Image:Etqwsquare_bg.png" title="Image:Etqwsquare_bg.png">
-   <img alt="Image:Etqwsquare_bg.png" height="50" longdesc="/wiki/Image:Etqwsquare_bg.png" src="/w/images/f/f9/Etqwsquare_bg.png" width="50"/>
+<html>
+ <body>
+  <div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
+   <a class="image" href="Image:Etqwsquare_bg.png" title="Image:Etqwsquare_bg.png">
+    <img alt="Image:Etqwsquare_bg.png" height="50" longdesc="/wiki/Image:Etqwsquare_bg.png" src="/w/images/f/f9/Etqwsquare_bg.png" width="50"/>
+   </a>
+   The information on this page is specific to
+   <a href="Enemy_Territory:_Quake_Wars" title="Enemy Territory: Quake Wars">
+    Enemy Territory: Quake Wars
+   </a>
+   .
+  </div>
+  <hr/>
+  <a name="Description">
   </a>
-  The information on this page is specific to
-  <a href="Enemy_Territory:_Quake_Wars" title="Enemy Territory: Quake Wars">
-   Enemy Territory: Quake Wars
+  <h2>
+   Description
+  </h2>
+  <p>
+   Enable the game to use a multi-threaded renderer backend.
+  </p>
+  <a name="Usage">
   </a>
-  .
- </div>
- <hr/>
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  Enable the game to use a multi-threaded renderer backend.
- </p>
- <a name="Usage">
- </a>
- <h2>
-  Usage
- </h2>
- <p>
-  At the console type...
- </p>
- <pre>r_useThreadedRenderer [int]
+  <h2>
+   Usage
+  </h2>
+  <p>
+   At the console type...
+  </p>
+  <pre>r_useThreadedRenderer [int]
 </pre>
- <a name="Parameters">
- </a>
- <h2>
-  Parameters
- </h2>
- <ul>
-  <li>
-   [int]
-   <ul>
-    <li>
-     0 - Disable multi-threading in the renderer.
-    </li>
-    <li>
-     1 - Enables multi-threading in the renderer but locked to game frames (debugging).
-    </li>
-    <li>
-     2 - Enables multi-threading in the renderer unlocked from game frames.
-    </li>
-   </ul>
-  </li>
- </ul>
- <a name="Flags">
- </a>
- <h2>
-  Flags
- </h2>
- <table class="mwstyle">
-  <tr>
-   <th>
-    Flag
-   </th>
-   <th>
-    Enabled
-   </th>
-   <th>
-    Description
-   </th>
-  </tr>
-  <tr>
-   <td>
-    CVAR_ALL
-   </td>
-   <td>
-   </td>
-   <td>
-    all flags
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_BOOL
-   </td>
-   <td>
-   </td>
-   <td>
-    variable is a boolean
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_INTEGER
-   </td>
-   <td>
-    X
-   </td>
-   <td>
-    variable is an integer
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_FLOAT
-   </td>
-   <td>
-   </td>
-   <td>
-    variable is a float
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_SYSTEM
-   </td>
-   <td>
-   </td>
-   <td>
-    system variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_RENDERER
-   </td>
-   <td>
-    X
-   </td>
-   <td>
-    renderer variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_SOUND
-   </td>
-   <td>
-   </td>
-   <td>
-    sound variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_GUI
-   </td>
-   <td>
-   </td>
-   <td>
-    gui variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_GAME
-   </td>
-   <td>
-   </td>
-   <td>
-    game variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_TOOL
-   </td>
-   <td>
-   </td>
-   <td>
-    tool variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_USERINFO
-   </td>
-   <td>
-   </td>
-   <td>
-    sent to servers, available to menu
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_SERVERINFO
-   </td>
-   <td>
-   </td>
-   <td>
-    sent from servers, available to menu
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_NETWORKSYNC
-   </td>
-   <td>
-   </td>
-   <td>
-    cvar is synced from the server to clients
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_STATIC
-   </td>
-   <td>
-   </td>
-   <td>
-    statically declared, not user created
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_CHEAT
-   </td>
-   <td>
-   </td>
-   <td>
-    variable is considered a cheat
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_NOCHEAT
-   </td>
-   <td>
-   </td>
-   <td>
-    variable is not considered a cheat
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_INIT
-   </td>
-   <td>
-   </td>
-   <td>
-    can only be set from the command-line
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_ROM
-   </td>
-   <td>
-   </td>
-   <td>
-    display only, cannot be set by user at all
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_ARCHIVE
-   </td>
-   <td>
-    X
-   </td>
-   <td>
-    set to cause it to be saved to a config file
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_MODIFIED
-   </td>
-   <td>
-    X
-   </td>
-   <td>
-    set when the variable is modified
-   </td>
-  </tr>
- </table>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
- <p>
-  This CVar was added on
-  <a href="Id_Tech_4" title="Id Tech 4">
-   version 1.2 of ETQW
+  <a name="Parameters">
   </a>
-  . Caution:
- </p>
- <ul>
-  <li>
-   This CVar should only be changed before a game is started.
-  </li>
-  <li>
-   This CVar should only be changed if you have a CPU with dual cores or better.
-  </li>
-  <li>
-   This CVar should not be set to "1" as that was only used for debugging.
-  </li>
-  <li>
-   This CVar should be set to "0" when running any mod tools or editors.
-  </li>
-  <li>
-   Setting this CVar to anything other than "0" may cause screenshots to be corrupted.
-  </li>
- </ul>
- <p>
-  <br/>
- </p>
+  <h2>
+   Parameters
+  </h2>
+  <ul>
+   <li>
+    [int]
+    <ul>
+     <li>
+      0 - Disable multi-threading in the renderer.
+     </li>
+     <li>
+      1 - Enables multi-threading in the renderer but locked to game frames (debugging).
+     </li>
+     <li>
+      2 - Enables multi-threading in the renderer unlocked from game frames.
+     </li>
+    </ul>
+   </li>
+  </ul>
+  <a name="Flags">
+  </a>
+  <h2>
+   Flags
+  </h2>
+  <table class="mwstyle">
+   <tr>
+    <th>
+     Flag
+    </th>
+    <th>
+     Enabled
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     CVAR_ALL
+    </td>
+    <td>
+    </td>
+    <td>
+     all flags
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_BOOL
+    </td>
+    <td>
+    </td>
+    <td>
+     variable is a boolean
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_INTEGER
+    </td>
+    <td>
+     X
+    </td>
+    <td>
+     variable is an integer
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_FLOAT
+    </td>
+    <td>
+    </td>
+    <td>
+     variable is a float
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_SYSTEM
+    </td>
+    <td>
+    </td>
+    <td>
+     system variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_RENDERER
+    </td>
+    <td>
+     X
+    </td>
+    <td>
+     renderer variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_SOUND
+    </td>
+    <td>
+    </td>
+    <td>
+     sound variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_GUI
+    </td>
+    <td>
+    </td>
+    <td>
+     gui variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_GAME
+    </td>
+    <td>
+    </td>
+    <td>
+     game variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_TOOL
+    </td>
+    <td>
+    </td>
+    <td>
+     tool variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_USERINFO
+    </td>
+    <td>
+    </td>
+    <td>
+     sent to servers, available to menu
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_SERVERINFO
+    </td>
+    <td>
+    </td>
+    <td>
+     sent from servers, available to menu
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_NETWORKSYNC
+    </td>
+    <td>
+    </td>
+    <td>
+     cvar is synced from the server to clients
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_STATIC
+    </td>
+    <td>
+    </td>
+    <td>
+     statically declared, not user created
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_CHEAT
+    </td>
+    <td>
+    </td>
+    <td>
+     variable is considered a cheat
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_NOCHEAT
+    </td>
+    <td>
+    </td>
+    <td>
+     variable is not considered a cheat
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_INIT
+    </td>
+    <td>
+    </td>
+    <td>
+     can only be set from the command-line
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_ROM
+    </td>
+    <td>
+    </td>
+    <td>
+     display only, cannot be set by user at all
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_ARCHIVE
+    </td>
+    <td>
+     X
+    </td>
+    <td>
+     set to cause it to be saved to a config file
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_MODIFIED
+    </td>
+    <td>
+     X
+    </td>
+    <td>
+     set when the variable is modified
+    </td>
+   </tr>
+  </table>
+  <a name="Notes">
+  </a>
+  <h2>
+   Notes
+  </h2>
+  <p>
+   This CVar was added on
+   <a href="Id_Tech_4" title="Id Tech 4">
+    version 1.2 of ETQW
+   </a>
+   . Caution:
+  </p>
+  <ul>
+   <li>
+    This CVar should only be changed before a game is started.
+   </li>
+   <li>
+    This CVar should only be changed if you have a CPU with dual cores or better.
+   </li>
+   <li>
+    This CVar should not be set to "1" as that was only used for debugging.
+   </li>
+   <li>
+    This CVar should be set to "0" when running any mod tools or editors.
+   </li>
+   <li>
+    Setting this CVar to anything other than "0" may cause screenshots to be corrupted.
+   </li>
+  </ul>
+  <p>
+   <br/>
+  </p>
+ </body>
+</html>

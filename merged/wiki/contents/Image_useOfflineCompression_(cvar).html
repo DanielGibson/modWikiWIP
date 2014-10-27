@@ -1,294 +1,298 @@
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  Enables writing a batch file for offline compression of .
-  <a href="DDS_%28file_format%29" title="DDS (file format)">
-   DDS
+<html>
+ <body>
+  <a name="Description">
   </a>
-  and .
-  <a href="OGG_%28file_format%29" title="OGG (file format)">
-   OGG
+  <h2>
+   Description
+  </h2>
+  <p>
+   Enables writing a batch file for offline compression of .
+   <a href="DDS_%28file_format%29" title="DDS (file format)">
+    DDS
+   </a>
+   and .
+   <a href="OGG_%28file_format%29" title="OGG (file format)">
+    OGG
+   </a>
+   files.
+  </p>
+  <a name="Usage">
   </a>
-  files.
- </p>
- <a name="Usage">
- </a>
- <h2>
-  Usage
- </h2>
- <p>
-  At the console type...
- </p>
- <pre>image_useOfflineCompression [Boolean]
+  <h2>
+   Usage
+  </h2>
+  <p>
+   At the console type...
+  </p>
+  <pre>image_useOfflineCompression [Boolean]
 </pre>
- <a name="Parameters">
- </a>
- <h2>
-  Parameters
- </h2>
- <ul>
-  <li>
-   [Boolean]
-   <ul>
-    <li>
-     0 - Doesn't write the batch file.
-    </li>
-    <li>
-     1 - Allows writing the batch file.
-    </li>
-   </ul>
-  </li>
- </ul>
- <a name="Flags">
- </a>
- <h2>
-  Flags
- </h2>
- <table class="mwstyle">
-  <tr>
-   <th>
-    Flag
-   </th>
-   <th>
-    Enabled
-   </th>
-   <th>
-    Description
-   </th>
-  </tr>
-  <tr>
-   <td>
-    CVAR_ALL
-   </td>
-   <td>
-   </td>
-   <td>
-    all flags
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_BOOL
-   </td>
-   <td>
-    X
-   </td>
-   <td>
-    variable is a boolean
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_INTEGER
-   </td>
-   <td>
-   </td>
-   <td>
-    variable is an integer
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_FLOAT
-   </td>
-   <td>
-   </td>
-   <td>
-    variable is a float
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_SYSTEM
-   </td>
-   <td>
-   </td>
-   <td>
-    system variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_RENDERER
-   </td>
-   <td>
-    X
-   </td>
-   <td>
-    renderer variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_SOUND
-   </td>
-   <td>
-   </td>
-   <td>
-    sound variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_GUI
-   </td>
-   <td>
-   </td>
-   <td>
-    gui variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_GAME
-   </td>
-   <td>
-   </td>
-   <td>
-    game variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_TOOL
-   </td>
-   <td>
-   </td>
-   <td>
-    tool variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_USERINFO
-   </td>
-   <td>
-   </td>
-   <td>
-    sent to servers, available to menu
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_SERVERINFO
-   </td>
-   <td>
-   </td>
-   <td>
-    sent from servers, available to menu
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_NETWORKSYNC
-   </td>
-   <td>
-   </td>
-   <td>
-    cvar is synced from the server to clients
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_STATIC
-   </td>
-   <td>
-    X
-   </td>
-   <td>
-    statically declared, not user created
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_CHEAT
-   </td>
-   <td>
-    X
-   </td>
-   <td>
-    variable is considered a cheat
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_NOCHEAT
-   </td>
-   <td>
-   </td>
-   <td>
-    variable is not considered a cheat
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_INIT
-   </td>
-   <td>
-   </td>
-   <td>
-    can only be set from the command-line
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_ROM
-   </td>
-   <td>
-   </td>
-   <td>
-    display only, cannot be set by user at all
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_ARCHIVE
-   </td>
-   <td>
-   </td>
-   <td>
-    set to cause it to be saved to a config file
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_MODIFIED
-   </td>
-   <td>
-    X
-   </td>
-   <td>
-    set when the variable is modified
-   </td>
-  </tr>
- </table>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
- <p>
-  This CVar by itself is not very useful and has to be used with the
-  <a href="Com_makingBuild_%28cvar%29" title="Com makingBuild (cvar)">
-   com_makingBuild
+  <a name="Parameters">
   </a>
-  CVar and the
-  <a class="new" href="Startbuild_%28console_command%29" title="Startbuild (console command)">
-   startbuild
+  <h2>
+   Parameters
+  </h2>
+  <ul>
+   <li>
+    [Boolean]
+    <ul>
+     <li>
+      0 - Doesn't write the batch file.
+     </li>
+     <li>
+      1 - Allows writing the batch file.
+     </li>
+    </ul>
+   </li>
+  </ul>
+  <a name="Flags">
   </a>
-  and
-  <a href="Map_%28console_command%29" title="Map (console command)">
-   map
+  <h2>
+   Flags
+  </h2>
+  <table class="mwstyle">
+   <tr>
+    <th>
+     Flag
+    </th>
+    <th>
+     Enabled
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     CVAR_ALL
+    </td>
+    <td>
+    </td>
+    <td>
+     all flags
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_BOOL
+    </td>
+    <td>
+     X
+    </td>
+    <td>
+     variable is a boolean
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_INTEGER
+    </td>
+    <td>
+    </td>
+    <td>
+     variable is an integer
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_FLOAT
+    </td>
+    <td>
+    </td>
+    <td>
+     variable is a float
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_SYSTEM
+    </td>
+    <td>
+    </td>
+    <td>
+     system variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_RENDERER
+    </td>
+    <td>
+     X
+    </td>
+    <td>
+     renderer variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_SOUND
+    </td>
+    <td>
+    </td>
+    <td>
+     sound variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_GUI
+    </td>
+    <td>
+    </td>
+    <td>
+     gui variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_GAME
+    </td>
+    <td>
+    </td>
+    <td>
+     game variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_TOOL
+    </td>
+    <td>
+    </td>
+    <td>
+     tool variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_USERINFO
+    </td>
+    <td>
+    </td>
+    <td>
+     sent to servers, available to menu
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_SERVERINFO
+    </td>
+    <td>
+    </td>
+    <td>
+     sent from servers, available to menu
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_NETWORKSYNC
+    </td>
+    <td>
+    </td>
+    <td>
+     cvar is synced from the server to clients
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_STATIC
+    </td>
+    <td>
+     X
+    </td>
+    <td>
+     statically declared, not user created
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_CHEAT
+    </td>
+    <td>
+     X
+    </td>
+    <td>
+     variable is considered a cheat
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_NOCHEAT
+    </td>
+    <td>
+    </td>
+    <td>
+     variable is not considered a cheat
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_INIT
+    </td>
+    <td>
+    </td>
+    <td>
+     can only be set from the command-line
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_ROM
+    </td>
+    <td>
+    </td>
+    <td>
+     display only, cannot be set by user at all
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_ARCHIVE
+    </td>
+    <td>
+    </td>
+    <td>
+     set to cause it to be saved to a config file
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_MODIFIED
+    </td>
+    <td>
+     X
+    </td>
+    <td>
+     set when the variable is modified
+    </td>
+   </tr>
+  </table>
+  <a name="Notes">
   </a>
-  console commands. See the
-  <a href="Modding" title="Modding">
-   modding
-  </a>
-  page for a wholesome use of this CVar.
- </p>
- <p>
-  <br/>
- </p>
+  <h2>
+   Notes
+  </h2>
+  <p>
+   This CVar by itself is not very useful and has to be used with the
+   <a href="Com_makingBuild_%28cvar%29" title="Com makingBuild (cvar)">
+    com_makingBuild
+   </a>
+   CVar and the
+   <a class="new" href="Startbuild_%28console_command%29" title="Startbuild (console command)">
+    startbuild
+   </a>
+   and
+   <a href="Map_%28console_command%29" title="Map (console command)">
+    map
+   </a>
+   console commands. See the
+   <a href="Modding" title="Modding">
+    modding
+   </a>
+   page for a wholesome use of this CVar.
+  </p>
+  <p>
+   <br/>
+  </p>
+ </body>
+</html>

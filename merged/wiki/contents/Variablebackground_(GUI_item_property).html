@@ -1,36 +1,40 @@
- <p>
-  This may be needed when the
-  <a href="Background_%28GUI_item_property%29" title="Background (GUI item property)">
-   background property
+<html>
+ <body>
+  <p>
+   This may be needed when the
+   <a href="Background_%28GUI_item_property%29" title="Background (GUI item property)">
+    background property
+   </a>
+   uses a variable instead of a constant value, but it does not appear to be a real property.  Variable-based
+   <a href="Background_%28GUI_item_property%29" title="Background (GUI item property)">
+    background properties
+   </a>
+   do function without this property, but the texture referred to draws absolutely-last, even drawing on top of the GUI cursor.  This property would appear to be a workaround, but it does not appear to function, and is not referenced on iddevnet.com.
+  </p>
+  <a name="Syntax">
   </a>
-  uses a variable instead of a constant value, but it does not appear to be a real property.  Variable-based
-  <a href="Background_%28GUI_item_property%29" title="Background (GUI item property)">
-   background properties
+  <h2>
+   Syntax
+  </h2>
+  <pre>variablebackground <i>flag</i>
+</pre>
+  <a name="Default_value">
   </a>
-  do function without this property, but the texture referred to draws absolutely-last, even drawing on top of the GUI cursor.  This property would appear to be a workaround, but it does not appear to function, and is not referenced on iddevnet.com.
- </p>
- <a name="Syntax">
- </a>
- <h2>
-  Syntax
- </h2>
- <pre>variablebackground <i>flag</i>
+  <h2>
+   Default value
+  </h2>
+  <pre>0
 </pre>
- <a name="Default_value">
- </a>
- <h2>
-  Default value
- </h2>
- <pre>0
-</pre>
- <a name="Example.28s.29">
- </a>
- <h2>
-  Example(s)
- </h2>
- <pre>background		"gui::itemicon"
+  <a name="Example.28s.29">
+  </a>
+  <h2>
+   Example(s)
+  </h2>
+  <pre>background		"gui::itemicon"
 variablebackground 	1
 </pre>
- <p>
-  <br/>
- </p>
+  <p>
+   <br/>
+  </p>
+ </body>
+</html>

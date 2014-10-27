@@ -1,445 +1,449 @@
- <p>
-  Script files define a sequence of events grouped into 1 or more blocks. They are used in
-  <a href="Scripting#Different_fields" title="Scripting">
-   different fields
-  </a>
-  like eg. level scripting or GUI actions.
+<html>
+ <body>
+  <p>
+   Script files define a sequence of events grouped into 1 or more blocks. They are used in
+   <a href="Scripting#Different_fields" title="Scripting">
+    different fields
+   </a>
+   like eg. level scripting or GUI actions.
 Scripts use a custom language with a syntax similar to C++ and are stored in plain-text ASCII files.
- </p>
- <a name="Syntax">
- </a>
- <h2>
-  Syntax
- </h2>
- <p>
-  The following should be a quick reference for scripting constructs. If you are new, read
-  <a href="Scripting_basics" title="Scripting basics">
-   Scripting basics
+  </p>
+  <a name="Syntax">
   </a>
-  for more text and examples.
- </p>
- <a name="General_Syntax">
- </a>
- <h3>
-  General Syntax
- </h3>
- <p>
-  The following is a list of special characters and general syntax information.
- </p>
- <dl>
-  <dt>
-   ;
-  </dt>
-  <dd>
-   Follows all commands. More than one command may exist on a single line. Informs the engine that the following is the end of a command.
-  </dd>
- </dl>
- <dl>
-  <dt>
-   //
-  </dt>
-  <dd>
-   Single line comment. Declares the text from this point to the end of the line a comment and is not executed. Can also be used to null out a line of code for debugging.
-  </dd>
- </dl>
- <dl>
-  <dt>
-   /* and */
-  </dt>
-  <dd>
-   Comment. Declares the text from /* to */ a comment and the text contained therein is not executed. Can also be used to null out a portion of code for debugging.
-  </dd>
- </dl>
- <dl>
-  <dt>
-   { and }
-  </dt>
-  <dd>
-   Script block. These show the start and end points of a group of commands. See the more complex structures further down.
-  </dd>
- </dl>
- <dl>
-  <dt>
-   ( and )
-  </dt>
-  <dd>
-   Group. Used to fix operator precedence or grouping conditional expressions.
-  </dd>
- </dl>
- <dl>
-  <dt>
-   $
-  </dt>
-  <dd>
-   Precedes all direct entity references. Informs the engine that the following is an entity reference. See
-   <a href="Scripting_basics#Entities" title="Scripting basics">
-    basic scripting with entities
+  <h2>
+   Syntax
+  </h2>
+  <p>
+   The following should be a quick reference for scripting constructs. If you are new, read
+   <a href="Scripting_basics" title="Scripting basics">
+    Scripting basics
    </a>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   .
-  </dt>
-  <dd>
-   Precedes a
-   <a href="Script_events" title="Script events">
-    script event
-   </a>
-   or
-   <a href="Script_object" title="Script object">
-    script object
-   </a>
-   function. Informs the engine that the following function-like call is a script event or object function.
-  </dd>
- </dl>
- <a name="Operators">
- </a>
- <h3>
-  Operators
- </h3>
- <a name="Simple_Operators">
- </a>
- <h4>
-  Simple Operators
- </h4>
- <dl>
-  <dt>
-   =
-  </dt>
-  <dd>
-   Assignment
-  </dd>
-  <dt>
-   +
-  </dt>
-  <dd>
-   Add
-  </dd>
-  <dt>
-   -
-  </dt>
-  <dd>
-   Subtract
-  </dd>
-  <dt>
-   *
-  </dt>
-  <dd>
-   Multiply
-  </dd>
-  <dt>
-   /
-  </dt>
-  <dd>
-   Divide
-  </dd>
-  <dt>
-   %
-  </dt>
-  <dd>
-   Modulo / Remainder
-  </dd>
-  <dt>
-   ++
-  </dt>
-  <dd>
-   Add 1 / Increment
-  </dd>
-  <dt>
-   --
-  </dt>
-  <dd>
-   Subtract 1 / Decrement
-  </dd>
- </dl>
- <a name="Conditional_Operators">
- </a>
- <h4>
-  Conditional Operators
- </h4>
- <dl>
-  <dt>
-   ==
-  </dt>
-  <dd>
-   Equals
-  </dd>
-  <dt>
-   &gt;=
-  </dt>
-  <dd>
-   Greater or Equal
-  </dd>
-  <dt>
-   &lt;=
-  </dt>
-  <dd>
-   Lesser or Equal
-  </dd>
-  <dt>
-   &amp;&amp;
-  </dt>
-  <dd>
-   And
-  </dd>
-  <dt>
-   ||
-  </dt>
-  <dd>
-   Or
-  </dd>
-  <dt>
-   !
-  </dt>
-  <dd>
-   Not
-  </dd>
- </dl>
- <a name="Bit_Operators">
- </a>
- <h4>
-  Bit Operators
- </h4>
- <dl>
-  <dt>
-   &amp;
-  </dt>
-  <dd>
-   Bitwise And
-  </dd>
-  <dt>
-   |
-  </dt>
-  <dd>
-   Bitwise Or
-  </dd>
-  <dt>
-   ~
-  </dt>
-  <dd>
-   Bitwise XOr (?)
-  </dd>
- </dl>
- <a name="Special_Assignment_Operators">
- </a>
- <h4>
-  Special Assignment Operators
- </h4>
- <dl>
-  <dt>
-   +=
-  </dt>
-  <dd>
-   Add and Assign
-  </dd>
-  <dt>
-   -=
-  </dt>
-  <dd>
-   Subtract and Assign
-  </dd>
-  <dt>
-   *=
-  </dt>
-  <dd>
-   Multiply and Assign
-  </dd>
-  <dt>
-   /=
-  </dt>
-  <dd>
-   Divide and Assign
-  </dd>
-  <dt>
-   %=
-  </dt>
-  <dd>
-   Calculate Remainder and Assign
-  </dd>
-  <dt>
-   &amp;=
-  </dt>
-  <dd>
-   Bitwise And and Assign
-  </dd>
-  <dt>
-   |=
-  </dt>
-  <dd>
-   Bitwise Or and Assign
-  </dd>
- </dl>
- <a name="Conditional_Structures">
- </a>
- <h3>
-  Conditional Structures
- </h3>
- <dl>
-  <dt>
-   if ( &lt;condition&gt; ) {
-  </dt>
-  <dt>
-   }
-  </dt>
-  <dd>
-   Checks if the condition is true, if so it executes the code block between { and } after the condition.
-  </dd>
- </dl>
- <dl>
-  <dt>
-   if ( &lt;condition&gt; ) {
-  </dt>
-  <dt>
-   } else {
-  </dt>
-  <dt>
-   }
-  </dt>
-  <dd>
-   Check if the condition is true, if so execute the code block just behind the condition. If not, execute the code block after the else keyword.
-  </dd>
- </dl>
- <a name="Loop_Structures">
- </a>
- <h3>
-  Loop Structures
- </h3>
- <dl>
-  <dt>
-   while ( &lt;condition&gt; ) {
-  </dt>
-  <dt>
-   }
-  </dt>
-  <dd>
-   Execute the code block behind the condition for as long as the condition is true.
-  </dd>
- </dl>
- <dl>
-  <dt>
-   for ( [start code]; [condition]; [loop code] ) {
-  </dt>
-  <dt>
-   }
-  </dt>
-  <dd>
-   When the structure is entered, the [start code] will be executed. Then the condition will be checked. At the end of the code block, the [loop code] is executed. After this, the condition is checked again and the loop will go on for as long as the condition is true.
-  </dd>
- </dl>
- <a name="Code_grouping">
- </a>
- <h3>
-  Code grouping
- </h3>
- <dl>
-  <dt>
-   &lt;return type&gt; &lt;function name&gt; ( [variable list] ) {
-  </dt>
-  <dt>
-   }
-  </dt>
-  <dd>
-   Function structure. Used to group commands which need to be called more than once. The variable list is separated with commas can be empty. A return type is required, use
-   <a href="Data_types#void" title="Data types">
-    void
-   </a>
-   if nothing is returned.
-  </dd>
- </dl>
- <dl>
-  <dt>
-   object &lt;object name&gt; [
-  </dt>
-  <dd>
-   &lt;base object&gt;] {
-  </dd>
-  <dt>
-   }
-  </dt>
-  <dd>
-   Object structure. Used to describe the behavior of an entity. It can inherit from other object definitions. See
-   <a href="Script_object" title="Script object">
-    script object
-   </a>
-   for more information.
-  </dd>
- </dl>
- <dl>
-  <dt>
-   namespace &lt;name&gt; {
-  </dt>
-  <dt>
-   }
-  </dt>
-  <dd>
-   Namespace group. All variable and function names are then isolated from the global namespace. Used to avoid conflicts when
-   <a href="SCRIPT_%28file_format%29#Include" title="">
-    including
-   </a>
-   more then 1 script.
-  </dd>
- </dl>
- <a name="Special">
- </a>
- <h3>
-  Special
- </h3>
- <p>
-  These are various statements which no real relation.
- </p>
- <dl>
-  <dt>
-   #define &lt;constant name&gt; &lt;value&gt;
-  </dt>
-  <dd>
-   Defines a read-only global value. The name is mostly written uppercase.
-  </dd>
- </dl>
- <dl>
-  <dt>
-   #ifdef &lt;constant name&gt;
-  </dt>
-  <dt>
-   #endif
-  </dt>
-  <dd>
-   Conditional inclusion block. The contents will only be parsed if the constant is defined using #define.
-  </dd>
- </dl>
- <dl>
-  <dt>
-   #ifndef &lt;constant name&gt;
-  </dt>
-  <dt>
-   #endif
-  </dt>
-  <dd>
-   Conditional inclusion block. The contents will only be parsed if the constant is
-   <i>
-    not
-   </i>
-   defined.
-  </dd>
- </dl>
- <dl>
-  <dt>
-   #include "&lt;name of script file&gt;"
-  </dt>
-  <dd>
-   Will define all global variables and functions used in the specified script file. Mostly reserved for scripts which need functions from other scripts to increase code reuse.
-  </dd>
- </dl>
- <a name="Editing_tools">
- </a>
- <h2>
-  Editing tools
- </h2>
- <p>
-  Since scripts are plain-text files, a simple
-  <a href="Text_editor" title="Text editor">
-   text editor
+   for more text and examples.
+  </p>
+  <a name="General_Syntax">
   </a>
-  can be used to edit or create scripts.
- </p>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:3355-0!1!0!0!!en!2 and timestamp 20120406102231 -->
+  <h3>
+   General Syntax
+  </h3>
+  <p>
+   The following is a list of special characters and general syntax information.
+  </p>
+  <dl>
+   <dt>
+    ;
+   </dt>
+   <dd>
+    Follows all commands. More than one command may exist on a single line. Informs the engine that the following is the end of a command.
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    //
+   </dt>
+   <dd>
+    Single line comment. Declares the text from this point to the end of the line a comment and is not executed. Can also be used to null out a line of code for debugging.
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    /* and */
+   </dt>
+   <dd>
+    Comment. Declares the text from /* to */ a comment and the text contained therein is not executed. Can also be used to null out a portion of code for debugging.
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    { and }
+   </dt>
+   <dd>
+    Script block. These show the start and end points of a group of commands. See the more complex structures further down.
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    ( and )
+   </dt>
+   <dd>
+    Group. Used to fix operator precedence or grouping conditional expressions.
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    $
+   </dt>
+   <dd>
+    Precedes all direct entity references. Informs the engine that the following is an entity reference. See
+    <a href="Scripting_basics#Entities" title="Scripting basics">
+     basic scripting with entities
+    </a>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    .
+   </dt>
+   <dd>
+    Precedes a
+    <a href="Script_events" title="Script events">
+     script event
+    </a>
+    or
+    <a href="Script_object" title="Script object">
+     script object
+    </a>
+    function. Informs the engine that the following function-like call is a script event or object function.
+   </dd>
+  </dl>
+  <a name="Operators">
+  </a>
+  <h3>
+   Operators
+  </h3>
+  <a name="Simple_Operators">
+  </a>
+  <h4>
+   Simple Operators
+  </h4>
+  <dl>
+   <dt>
+    =
+   </dt>
+   <dd>
+    Assignment
+   </dd>
+   <dt>
+    +
+   </dt>
+   <dd>
+    Add
+   </dd>
+   <dt>
+    -
+   </dt>
+   <dd>
+    Subtract
+   </dd>
+   <dt>
+    *
+   </dt>
+   <dd>
+    Multiply
+   </dd>
+   <dt>
+    /
+   </dt>
+   <dd>
+    Divide
+   </dd>
+   <dt>
+    %
+   </dt>
+   <dd>
+    Modulo / Remainder
+   </dd>
+   <dt>
+    ++
+   </dt>
+   <dd>
+    Add 1 / Increment
+   </dd>
+   <dt>
+    --
+   </dt>
+   <dd>
+    Subtract 1 / Decrement
+   </dd>
+  </dl>
+  <a name="Conditional_Operators">
+  </a>
+  <h4>
+   Conditional Operators
+  </h4>
+  <dl>
+   <dt>
+    ==
+   </dt>
+   <dd>
+    Equals
+   </dd>
+   <dt>
+    &gt;=
+   </dt>
+   <dd>
+    Greater or Equal
+   </dd>
+   <dt>
+    &lt;=
+   </dt>
+   <dd>
+    Lesser or Equal
+   </dd>
+   <dt>
+    &amp;&amp;
+   </dt>
+   <dd>
+    And
+   </dd>
+   <dt>
+    ||
+   </dt>
+   <dd>
+    Or
+   </dd>
+   <dt>
+    !
+   </dt>
+   <dd>
+    Not
+   </dd>
+  </dl>
+  <a name="Bit_Operators">
+  </a>
+  <h4>
+   Bit Operators
+  </h4>
+  <dl>
+   <dt>
+    &amp;
+   </dt>
+   <dd>
+    Bitwise And
+   </dd>
+   <dt>
+    |
+   </dt>
+   <dd>
+    Bitwise Or
+   </dd>
+   <dt>
+    ~
+   </dt>
+   <dd>
+    Bitwise XOr (?)
+   </dd>
+  </dl>
+  <a name="Special_Assignment_Operators">
+  </a>
+  <h4>
+   Special Assignment Operators
+  </h4>
+  <dl>
+   <dt>
+    +=
+   </dt>
+   <dd>
+    Add and Assign
+   </dd>
+   <dt>
+    -=
+   </dt>
+   <dd>
+    Subtract and Assign
+   </dd>
+   <dt>
+    *=
+   </dt>
+   <dd>
+    Multiply and Assign
+   </dd>
+   <dt>
+    /=
+   </dt>
+   <dd>
+    Divide and Assign
+   </dd>
+   <dt>
+    %=
+   </dt>
+   <dd>
+    Calculate Remainder and Assign
+   </dd>
+   <dt>
+    &amp;=
+   </dt>
+   <dd>
+    Bitwise And and Assign
+   </dd>
+   <dt>
+    |=
+   </dt>
+   <dd>
+    Bitwise Or and Assign
+   </dd>
+  </dl>
+  <a name="Conditional_Structures">
+  </a>
+  <h3>
+   Conditional Structures
+  </h3>
+  <dl>
+   <dt>
+    if ( &lt;condition&gt; ) {
+   </dt>
+   <dt>
+    }
+   </dt>
+   <dd>
+    Checks if the condition is true, if so it executes the code block between { and } after the condition.
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    if ( &lt;condition&gt; ) {
+   </dt>
+   <dt>
+    } else {
+   </dt>
+   <dt>
+    }
+   </dt>
+   <dd>
+    Check if the condition is true, if so execute the code block just behind the condition. If not, execute the code block after the else keyword.
+   </dd>
+  </dl>
+  <a name="Loop_Structures">
+  </a>
+  <h3>
+   Loop Structures
+  </h3>
+  <dl>
+   <dt>
+    while ( &lt;condition&gt; ) {
+   </dt>
+   <dt>
+    }
+   </dt>
+   <dd>
+    Execute the code block behind the condition for as long as the condition is true.
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    for ( [start code]; [condition]; [loop code] ) {
+   </dt>
+   <dt>
+    }
+   </dt>
+   <dd>
+    When the structure is entered, the [start code] will be executed. Then the condition will be checked. At the end of the code block, the [loop code] is executed. After this, the condition is checked again and the loop will go on for as long as the condition is true.
+   </dd>
+  </dl>
+  <a name="Code_grouping">
+  </a>
+  <h3>
+   Code grouping
+  </h3>
+  <dl>
+   <dt>
+    &lt;return type&gt; &lt;function name&gt; ( [variable list] ) {
+   </dt>
+   <dt>
+    }
+   </dt>
+   <dd>
+    Function structure. Used to group commands which need to be called more than once. The variable list is separated with commas can be empty. A return type is required, use
+    <a href="Data_types#void" title="Data types">
+     void
+    </a>
+    if nothing is returned.
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    object &lt;object name&gt; [
+   </dt>
+   <dd>
+    &lt;base object&gt;] {
+   </dd>
+   <dt>
+    }
+   </dt>
+   <dd>
+    Object structure. Used to describe the behavior of an entity. It can inherit from other object definitions. See
+    <a href="Script_object" title="Script object">
+     script object
+    </a>
+    for more information.
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    namespace &lt;name&gt; {
+   </dt>
+   <dt>
+    }
+   </dt>
+   <dd>
+    Namespace group. All variable and function names are then isolated from the global namespace. Used to avoid conflicts when
+    <a href="SCRIPT_%28file_format%29#Include" title="">
+     including
+    </a>
+    more then 1 script.
+   </dd>
+  </dl>
+  <a name="Special">
+  </a>
+  <h3>
+   Special
+  </h3>
+  <p>
+   These are various statements which no real relation.
+  </p>
+  <dl>
+   <dt>
+    #define &lt;constant name&gt; &lt;value&gt;
+   </dt>
+   <dd>
+    Defines a read-only global value. The name is mostly written uppercase.
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    #ifdef &lt;constant name&gt;
+   </dt>
+   <dt>
+    #endif
+   </dt>
+   <dd>
+    Conditional inclusion block. The contents will only be parsed if the constant is defined using #define.
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    #ifndef &lt;constant name&gt;
+   </dt>
+   <dt>
+    #endif
+   </dt>
+   <dd>
+    Conditional inclusion block. The contents will only be parsed if the constant is
+    <i>
+     not
+    </i>
+    defined.
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    #include "&lt;name of script file&gt;"
+   </dt>
+   <dd>
+    Will define all global variables and functions used in the specified script file. Mostly reserved for scripts which need functions from other scripts to increase code reuse.
+   </dd>
+  </dl>
+  <a name="Editing_tools">
+  </a>
+  <h2>
+   Editing tools
+  </h2>
+  <p>
+   Since scripts are plain-text files, a simple
+   <a href="Text_editor" title="Text editor">
+    text editor
+   </a>
+   can be used to edit or create scripts.
+  </p>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:3355-0!1!0!0!!en!2 and timestamp 20120406102231 -->
+ </body>
+</html>

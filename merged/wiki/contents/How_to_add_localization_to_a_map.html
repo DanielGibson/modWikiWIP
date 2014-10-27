@@ -1,66 +1,70 @@
- <div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-  <a class="image" href="Image:Etqwsquare_bg.png" title="Image:Etqwsquare_bg.png">
-   <img alt="Image:Etqwsquare_bg.png" height="50" longdesc="/wiki/Image:Etqwsquare_bg.png" src="/w/images/f/f9/Etqwsquare_bg.png" width="50"/>
-  </a>
-  The information on this page is specific to
-  <a href="Enemy_Territory:_Quake_Wars" title="Enemy Territory: Quake Wars">
-   Enemy Territory: Quake Wars
-  </a>
-  .
- </div>
- <hr/>
- <p>
-  Any text you may want to show up in-game has to be available for translation. The exception thus far is the "Pretty Name" in your pakmeta.conf; probably because this should be viewed as a proper noun that shouldn't be translated. Anyway, in our &lt;savepath&gt;/base/mapinfo/&lt;yourmap&gt;.md we had these three lines:
- </p>
- <pre>"mapLocation"	"maps/&lt;yourmap&gt;/location"
+<html>
+ <body>
+  <div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
+   <a class="image" href="Image:Etqwsquare_bg.png" title="Image:Etqwsquare_bg.png">
+    <img alt="Image:Etqwsquare_bg.png" height="50" longdesc="/wiki/Image:Etqwsquare_bg.png" src="/w/images/f/f9/Etqwsquare_bg.png" width="50"/>
+   </a>
+   The information on this page is specific to
+   <a href="Enemy_Territory:_Quake_Wars" title="Enemy Territory: Quake Wars">
+    Enemy Territory: Quake Wars
+   </a>
+   .
+  </div>
+  <hr/>
+  <p>
+   Any text you may want to show up in-game has to be available for translation. The exception thus far is the "Pretty Name" in your pakmeta.conf; probably because this should be viewed as a proper noun that shouldn't be translated. Anyway, in our &lt;savepath&gt;/base/mapinfo/&lt;yourmap&gt;.md we had these three lines:
+  </p>
+  <pre>"mapLocation"	"maps/&lt;yourmap&gt;/location"
 "mapBriefing"	"maps/&lt;yourmap&gt;/briefing"
 "campaignDescription"	"maps/&lt;yourmap&gt;/campaign"
 </pre>
- <p>
-  These are text strings used in the loading screen (and lobby menu) for your map. The first describes the physical location like "New Jersey, United States of America" or whatever. The second is an overview of the objectives and the last is a name for your campaign.
- </p>
- <p>
-  Like in all text that we may want to show the user, to add these pieces of text we need two things: a) A name for the string reference. b) The contents of the string to be referenced. String references are stored in &lt;savepath&gt;/base/localization/locstr/ while the strings themselves are stored in &lt;savepath&gt;/base/localization/english/. These two files have to be created with an editor that can output UTF-8 encoded files.
- </p>
- <a name="String_references">
- </a>
- <h2>
-  String references
- </h2>
- <ol>
-  <li>
-   Create a file in &lt;savepath&gt;/base/localization/locstr/maps/&lt;yourmap&gt;.locstr
-  </li>
-  <li>
-   Paste the following into this file:
-  </li>
- </ol>
- <pre>locString maps/&lt;yourmap&gt;/location { text "#str_&lt;yourmap&gt;_000" }
+  <p>
+   These are text strings used in the loading screen (and lobby menu) for your map. The first describes the physical location like "New Jersey, United States of America" or whatever. The second is an overview of the objectives and the last is a name for your campaign.
+  </p>
+  <p>
+   Like in all text that we may want to show the user, to add these pieces of text we need two things: a) A name for the string reference. b) The contents of the string to be referenced. String references are stored in &lt;savepath&gt;/base/localization/locstr/ while the strings themselves are stored in &lt;savepath&gt;/base/localization/english/. These two files have to be created with an editor that can output UTF-8 encoded files.
+  </p>
+  <a name="String_references">
+  </a>
+  <h2>
+   String references
+  </h2>
+  <ol>
+   <li>
+    Create a file in &lt;savepath&gt;/base/localization/locstr/maps/&lt;yourmap&gt;.locstr
+   </li>
+   <li>
+    Paste the following into this file:
+   </li>
+  </ol>
+  <pre>locString maps/&lt;yourmap&gt;/location { text "#str_&lt;yourmap&gt;_000" }
 locString maps/&lt;yourmap&gt;/briefing { text "#str_&lt;yourmap&gt;_001" }
 locString maps/&lt;yourmap&gt;/campaign { text "#str_&lt;yourmap&gt;_002" }
 </pre>
- <p>
-  On each of those lines we first tell the game we're defining a localization string, then we give the name of the localized string, then inside the curly brackets we reference the string proper. All strings are required to start with #str_ but anything beyond that is fair game. We'll use &lt;yourmap&gt; and then a number which should give you a fairly unique alphanumeric reference that shouldn't clash with any existing string. Also, 1000 string references should be more than enough for one map.
- </p>
- <a name="Strings">
- </a>
- <h2>
-  Strings
- </h2>
- <ol>
-  <li>
-   Create a file in &lt;savepath&gt;/base/localization/english/strings/&lt;yourmap&gt;.lang
-  </li>
-  <li>
-   Paste the following into this file:
-  </li>
- </ol>
- <pre>{
+  <p>
+   On each of those lines we first tell the game we're defining a localization string, then we give the name of the localized string, then inside the curly brackets we reference the string proper. All strings are required to start with #str_ but anything beyond that is fair game. We'll use &lt;yourmap&gt; and then a number which should give you a fairly unique alphanumeric reference that shouldn't clash with any existing string. Also, 1000 string references should be more than enough for one map.
+  </p>
+  <a name="Strings">
+  </a>
+  <h2>
+   Strings
+  </h2>
+  <ol>
+   <li>
+    Create a file in &lt;savepath&gt;/base/localization/english/strings/&lt;yourmap&gt;.lang
+   </li>
+   <li>
+    Paste the following into this file:
+   </li>
+  </ol>
+  <pre>{
 "#str_&lt;yourmap&gt;_000" "Middle of the Pacific, Earth"
 "#str_&lt;yourmap&gt;_001" "GDF have construct a wall."
 "#str_&lt;yourmap&gt;_002" "Oceania"
 }
 </pre>
- <p>
-  This is fairly simple. First we give the same string reference we had definined and then we put the text proper. Now load &lt;yourmap&gt; and you should be able to see this text in the loading screen.
- </p>
+  <p>
+   This is fairly simple. First we give the same string reference we had definined and then we put the text proper. Now load &lt;yourmap&gt; and you should be able to see this text in the loading screen.
+  </p>
+ </body>
+</html>

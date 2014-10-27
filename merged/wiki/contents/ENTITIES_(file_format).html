@@ -1,90 +1,94 @@
- <div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-  <a class="image" href="Image:Etqwsquare_bg.png" title="Image:Etqwsquare_bg.png">
-   <img alt="Image:Etqwsquare_bg.png" height="50" longdesc="/wiki/Image:Etqwsquare_bg.png" src="/w/images/f/f9/Etqwsquare_bg.png" width="50"/>
+<html>
+ <body>
+  <div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
+   <a class="image" href="Image:Etqwsquare_bg.png" title="Image:Etqwsquare_bg.png">
+    <img alt="Image:Etqwsquare_bg.png" height="50" longdesc="/wiki/Image:Etqwsquare_bg.png" src="/w/images/f/f9/Etqwsquare_bg.png" width="50"/>
+   </a>
+   The information on this page is specific to
+   <a href="Enemy_Territory:_Quake_Wars" title="Enemy Territory: Quake Wars">
+    Enemy Territory: Quake Wars
+   </a>
+   .
+  </div>
+  <hr/>
+  <a name="Overview">
   </a>
-  The information on this page is specific to
-  <a href="Enemy_Territory:_Quake_Wars" title="Enemy Territory: Quake Wars">
-   Enemy Territory: Quake Wars
-  </a>
-  .
- </div>
- <hr/>
- <a name="Overview">
- </a>
- <h2>
-  Overview
- </h2>
- <p>
-  Read while loading the level, contains
-  <a class="new" href="Map_entity_dictionary" title="Map entity dictionary">
-   map entity dictionary
-  </a>
-  for each entity in ASCII text.
+  <h2>
+   Overview
+  </h2>
+  <p>
+   Read while loading the level, contains
+   <a class="new" href="Map_entity_dictionary" title="Map entity dictionary">
+    map entity dictionary
+   </a>
+   for each entity in ASCII text.
 Similar to the
-  <a href="MAP_%28file_format%29" title="MAP (file format)">
-   MAP
+   <a href="MAP_%28file_format%29" title="MAP (file format)">
+    MAP
+   </a>
+   format, minus the brush and patch definitions.
+  </p>
+  <a name="Map_Format_Syntax">
   </a>
-  format, minus the brush and patch definitions.
- </p>
- <a name="Map_Format_Syntax">
- </a>
- <h2>
-  Map Format Syntax
- </h2>
- <p>
-  Generally, ENTITIESs consist of entities.
- </p>
- <a name="Comments">
- </a>
- <h3>
-  Comments
- </h3>
- <p>
-  The ENTITIES file format supports in-line comments.
- </p>
- <p>
-  To start a comment, place two forward slashes. ( '//' ) Everything behind these markers is ignored.
- </p>
- <a name="Header">
- </a>
- <h3>
-  Header
- </h3>
- <p>
-  The first non-empty/non-comment line contains the header, which currently consists of nothing more than the version.
- </p>
- <p>
-  For Enemy Territory, the header is:
- </p>
- <pre>Version 1
+  <h2>
+   Map Format Syntax
+  </h2>
+  <p>
+   Generally, ENTITIESs consist of entities.
+  </p>
+  <a name="Comments">
+  </a>
+  <h3>
+   Comments
+  </h3>
+  <p>
+   The ENTITIES file format supports in-line comments.
+  </p>
+  <p>
+   To start a comment, place two forward slashes. ( '//' ) Everything behind these markers is ignored.
+  </p>
+  <a name="Header">
+  </a>
+  <h3>
+   Header
+  </h3>
+  <p>
+   The first non-empty/non-comment line contains the header, which currently consists of nothing more than the version.
+  </p>
+  <p>
+   For Enemy Territory, the header is:
+  </p>
+  <pre>Version 1
 </pre>
- <a name="Entities">
- </a>
- <h3>
-  Entities
- </h3>
- <p>
-  An entity definition starts by a curly open brace, ( '{' ) and runs on till a matching curly closing brace is found. ( '}' )
- </p>
- <p>
-  The next lines contain the entity's key/value pairs. First comes the name, then the value. Both are enclosed in double quotes, with a space in between.
- </p>
- <p>
-  After those keys and values, one or more brush definitions may follow.
- </p>
- <p>
-  <b>
-   Note:
-  </b>
-  An entity should at least have a "spawnclass" key, otherwise unpredictable behaviour might occur.
- </p>
- <p>
-  <b>
-   Note:
-  </b>
-  The first entity should have a "spawnclass" key with value "worldspawn". There can only be
-  <b>
-   one
-  </b>
-  entity with this spawnclass in a whole ENTITIES file.
- </p>
+  <a name="Entities">
+  </a>
+  <h3>
+   Entities
+  </h3>
+  <p>
+   An entity definition starts by a curly open brace, ( '{' ) and runs on till a matching curly closing brace is found. ( '}' )
+  </p>
+  <p>
+   The next lines contain the entity's key/value pairs. First comes the name, then the value. Both are enclosed in double quotes, with a space in between.
+  </p>
+  <p>
+   After those keys and values, one or more brush definitions may follow.
+  </p>
+  <p>
+   <b>
+    Note:
+   </b>
+   An entity should at least have a "spawnclass" key, otherwise unpredictable behaviour might occur.
+  </p>
+  <p>
+   <b>
+    Note:
+   </b>
+   The first entity should have a "spawnclass" key with value "worldspawn". There can only be
+   <b>
+    one
+   </b>
+   entity with this spawnclass in a whole ENTITIES file.
+  </p>
+ </body>
+</html>

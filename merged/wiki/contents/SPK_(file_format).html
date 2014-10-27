@@ -1,139 +1,143 @@
- <div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-  <a class="image" href="Image:Rtcw2square_bg.png" title="Image:Rtcw2square_bg.png">
-   <img alt="Image:Rtcw2square_bg.png" height="50" longdesc="/wiki/Image:Rtcw2square_bg.png" src="/w/images/5/5d/Rtcw2square_bg.png" width="50"/>
+<html>
+ <body>
+  <div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
+   <a class="image" href="Image:Rtcw2square_bg.png" title="Image:Rtcw2square_bg.png">
+    <img alt="Image:Rtcw2square_bg.png" height="50" longdesc="/wiki/Image:Rtcw2square_bg.png" src="/w/images/5/5d/Rtcw2square_bg.png" width="50"/>
+   </a>
+   The information on this page is specific to
+   <a href="Wolfenstein" title="Wolfenstein">
+    Wolfenstein
+   </a>
+   .
+  </div>
+  <hr/>
+  <p>
+   SPK is a Stream pack, an archive for game assets used by the Streamtech stream loader.
+  </p>
+  <a name="Technical_details">
   </a>
-  The information on this page is specific to
-  <a href="Wolfenstein" title="Wolfenstein">
-   Wolfenstein
-  </a>
-  .
- </div>
- <hr/>
- <p>
-  SPK is a Stream pack, an archive for game assets used by the Streamtech stream loader.
- </p>
- <a name="Technical_details">
- </a>
- <h2>
-  Technical details
- </h2>
- <p>
-  File starts with a magic number (4 bytes), then come 1-n chunks.
- </p>
- <p>
-  Each chunk consists of a magic number referring to the format (4 bytes), the uncompressed size (4 bytes), the compressed size (4 bytes) and then a zlib-compressed block (sizes only refer to this block).
- </p>
- <p>
-  each block (uncompressed) contains a file table and then the files:
+  <h2>
+   Technical details
+  </h2>
+  <p>
+   File starts with a magic number (4 bytes), then come 1-n chunks.
+  </p>
+  <p>
+   Each chunk consists of a magic number referring to the format (4 bytes), the uncompressed size (4 bytes), the compressed size (4 bytes) and then a zlib-compressed block (sizes only refer to this block).
+  </p>
+  <p>
+   each block (uncompressed) contains a file table and then the files:
 the file table contains a bunch of 0-terminated strings (path + filename) and after each string 2x the size of the corresponding file (2x 4 bytes)
- </p>
- <p>
-  The files themselves are always aligned to 4-byte boundaries, the padding bytes are somehow not always 0, for unknown reason.
- </p>
- <p>
-  The extensions will be unverified until the SDK release.
- </p>
- <a name="Magic_Number_.7C_Format_.7C_Extension">
- </a>
- <h2>
-  Magic Number | Format | Extension
- </h2>
- <ul>
-  <li>
-   AASS | aas28 |
-   <a href="AAS_%28file_format%29" title="AAS (file format)">
-    AAS
-   </a>
-  </li>
- </ul>
- <ul>
-  <li>
-   BRAI | brain |
-   <a class="new" href="BRAIN_%28file_format%29" title="BRAIN (file format)">
-    BRAIN
-   </a>
-  </li>
- </ul>
- <ul>
-  <li>
-   DECL | decls |
-   <a href="DECLS_%28file_format%29" title="DECLS (file format)">
-    DECLS
-   </a>
-  </li>
- </ul>
- <ul>
-  <li>
-   ENTS | emap | Binary entities
-  </li>
- </ul>
- <ul>
-  <li>
-   HKXA | hkxa |
-  </li>
- </ul>
- <ul>
-  <li>
-   HKXR | hkxr |
-  </li>
- </ul>
- <ul>
-  <li>
-   HKXS | hkxs |
-  </li>
- </ul>
- <ul>
-  <li>
-   MODL | md5r | MD5R
-  </li>
- </ul>
- <ul>
-  <li>
-   PBBF | MD5RBin | MD5RBin
-  </li>
- </ul>
- <ul>
-  <li>
-   PROC | proc | MD5RProc
-  </li>
- </ul>
- <ul>
-  <li>
-   SGFX | gfx | Scaleform GFX
-  </li>
- </ul>
- <ul>
-  <li>
-   SKEL | skel |
-  </li>
- </ul>
- <ul>
-  <li>
-   SNDS | mp3 | MP3
-  </li>
- </ul>
- <ul>
-  <li>
-   TXTR | DDS |
-   <a href="DDS_%28file_format%29" title="DDS (file format)">
-    DDS
-   </a>
-  </li>
- </ul>
- <ul>
-  <li>
-   VIDO | bik | Bink Video
-  </li>
- </ul>
- <a name="Tools">
- </a>
- <h2>
-  Tools
- </h2>
- <p>
-  Unpacker with source code:
-  <a class="external free" href="https://web.archive.org/web/20090928064241/http://www.daedalus-tools.mx.tc/" title="http://www.daedalus-tools.mx.tc/">
-   http://www.daedalus-tools.mx.tc/
+  </p>
+  <p>
+   The files themselves are always aligned to 4-byte boundaries, the padding bytes are somehow not always 0, for unknown reason.
+  </p>
+  <p>
+   The extensions will be unverified until the SDK release.
+  </p>
+  <a name="Magic_Number_.7C_Format_.7C_Extension">
   </a>
- </p>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:8726-0!1!0!0!!en!2 and timestamp 20090928021048 -->
+  <h2>
+   Magic Number | Format | Extension
+  </h2>
+  <ul>
+   <li>
+    AASS | aas28 |
+    <a href="AAS_%28file_format%29" title="AAS (file format)">
+     AAS
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    BRAI | brain |
+    <a class="new" href="BRAIN_%28file_format%29" title="BRAIN (file format)">
+     BRAIN
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    DECL | decls |
+    <a href="DECLS_%28file_format%29" title="DECLS (file format)">
+     DECLS
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    ENTS | emap | Binary entities
+   </li>
+  </ul>
+  <ul>
+   <li>
+    HKXA | hkxa |
+   </li>
+  </ul>
+  <ul>
+   <li>
+    HKXR | hkxr |
+   </li>
+  </ul>
+  <ul>
+   <li>
+    HKXS | hkxs |
+   </li>
+  </ul>
+  <ul>
+   <li>
+    MODL | md5r | MD5R
+   </li>
+  </ul>
+  <ul>
+   <li>
+    PBBF | MD5RBin | MD5RBin
+   </li>
+  </ul>
+  <ul>
+   <li>
+    PROC | proc | MD5RProc
+   </li>
+  </ul>
+  <ul>
+   <li>
+    SGFX | gfx | Scaleform GFX
+   </li>
+  </ul>
+  <ul>
+   <li>
+    SKEL | skel |
+   </li>
+  </ul>
+  <ul>
+   <li>
+    SNDS | mp3 | MP3
+   </li>
+  </ul>
+  <ul>
+   <li>
+    TXTR | DDS |
+    <a href="DDS_%28file_format%29" title="DDS (file format)">
+     DDS
+    </a>
+   </li>
+  </ul>
+  <ul>
+   <li>
+    VIDO | bik | Bink Video
+   </li>
+  </ul>
+  <a name="Tools">
+  </a>
+  <h2>
+   Tools
+  </h2>
+  <p>
+   Unpacker with source code:
+   <a class="external free" href="https://web.archive.org/web/20090928064241/http://www.daedalus-tools.mx.tc/" title="http://www.daedalus-tools.mx.tc/">
+    http://www.daedalus-tools.mx.tc/
+   </a>
+  </p>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:8726-0!1!0!0!!en!2 and timestamp 20090928021048 -->
+ </body>
+</html>

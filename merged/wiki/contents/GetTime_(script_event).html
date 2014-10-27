@@ -1,60 +1,64 @@
- <a name="Game_class">
- </a>
- <h2>
-  Game class
- </h2>
- <p>
-  This event operates on an instance of the
-  <a href="Game_class" title="Game class">
-   game class
+<html>
+ <body>
+  <a name="Game_class">
   </a>
-  type {{{gameclass}}}
- </p>
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  Returns the current time in seconds since the game was initialized.
- </p>
- <a name="Usage">
- </a>
- <h2>
-  Usage
- </h2>
- <p>
-  <i>
-   float
-  </i>
-  getTime()
- </p>
- <a name="Parameters">
- </a>
- <h2>
-  Parameters
- </h2>
- <p>
-  This script event does not accept parameters.
- </p>
- <a name="Examples">
- </a>
- <h2>
-  Examples
- </h2>
- <pre> 
+  <h2>
+   Game class
+  </h2>
+  <p>
+   This event operates on an instance of the
+   <a href="Game_class" title="Game class">
+    game class
+   </a>
+   type {{{gameclass}}}
+  </p>
+  <a name="Description">
+  </a>
+  <h2>
+   Description
+  </h2>
+  <p>
+   Returns the current time in seconds since the game was initialized.
+  </p>
+  <a name="Usage">
+  </a>
+  <h2>
+   Usage
+  </h2>
+  <p>
+   <i>
+    float
+   </i>
+   getTime()
+  </p>
+  <a name="Parameters">
+  </a>
+  <h2>
+   Parameters
+  </h2>
+  <p>
+   This script event does not accept parameters.
+  </p>
+  <a name="Examples">
+  </a>
+  <h2>
+   Examples
+  </h2>
+  <pre> 
 <span style="color: #0000ff;">void</span> weapon_pistol::Fire<span style="color: #000000;">(</span><span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
         <span style="color: #0000ff;">float</span> ammoClip;
  
         next_attack = <span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">getTime</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span> + PISTOL_FIRERATE;</pre>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
- <p>
-  This is a system event and must be invoked using the sys object.
- </p>
- <p>
-  <br/>
- </p>
+  <a name="Notes">
+  </a>
+  <h2>
+   Notes
+  </h2>
+  <p>
+   This is a system event and must be invoked using the sys object.
+  </p>
+  <p>
+   <br/>
+  </p>
+ </body>
+</html>

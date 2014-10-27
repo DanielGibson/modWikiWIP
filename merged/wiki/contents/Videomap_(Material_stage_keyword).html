@@ -1,95 +1,99 @@
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  This keyword instructs a stage to use a video stream in the place of an image map. This keyword is useful for animated textures.
- </p>
- <a name="Usage">
- </a>
- <h2>
-  Usage
- </h2>
- <pre>videoMap [loop] [video]
+<html>
+ <body>
+  <a name="Description">
+  </a>
+  <h2>
+   Description
+  </h2>
+  <p>
+   This keyword instructs a stage to use a video stream in the place of an image map. This keyword is useful for animated textures.
+  </p>
+  <a name="Usage">
+  </a>
+  <h2>
+   Usage
+  </h2>
+  <pre>videoMap [loop] [video]
 </pre>
- <a name="Parameters">
- </a>
- <h2>
-  Parameters
- </h2>
- <ul>
-  <li>
-   [loop] - This parameter is optional and determines whether the specified video "loops".
-  </li>
-  <li>
-   [video] - the path and filename of the video.
-  </li>
- </ul>
- <a name="Example">
- </a>
- <h2>
-  Example
- </h2>
- <p>
-  {
- </p>
- <pre>   blend add
+  <a name="Parameters">
+  </a>
+  <h2>
+   Parameters
+  </h2>
+  <ul>
+   <li>
+    [loop] - This parameter is optional and determines whether the specified video "loops".
+   </li>
+   <li>
+    [video] - the path and filename of the video.
+   </li>
+  </ul>
+  <a name="Example">
+  </a>
+  <h2>
+   Example
+  </h2>
+  <p>
+   {
+  </p>
+  <pre>   blend add
    texgen skybox
    videoMap loop video/mysky.roq
 }
 </pre>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
- <p>
-  Video must be in
-  <a href="ROQ_%28file_format%29" title="ROQ (file format)">
-   RoQ
+  <a name="Notes">
   </a>
-  format.
- </p>
- <p>
-  This keyword can be used for
-  <a href="Cube_maps" title="Cube maps">
-   cube maps
-  </a>
-  however you must meet the following requirements...
- </p>
- <ul>
-  <li>
-   The video can be no larger than 256x1536 pixels.
-  </li>
-  <li>
-   Each of the 6 sides of the cubemap are stacked from top to bottom like so...
-   <ul>
-    <li>
-     PX
-    </li>
-    <li>
-     NX
-    </li>
-    <li>
-     PY
-    </li>
-    <li>
-     NY
-    </li>
-    <li>
-     PZ
-    </li>
-    <li>
-     NZ
-    </li>
-   </ul>
-  </li>
-  <li>
-   The PX and NX sides must be rotated so the orientation is the same as if it were a cubemap.
-  </li>
- </ul>
- <p>
-  <br/>
- </p>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:1672-0!1!0!0!!en!2 and timestamp 20080704170805 -->
+  <h2>
+   Notes
+  </h2>
+  <p>
+   Video must be in
+   <a href="ROQ_%28file_format%29" title="ROQ (file format)">
+    RoQ
+   </a>
+   format.
+  </p>
+  <p>
+   This keyword can be used for
+   <a href="Cube_maps" title="Cube maps">
+    cube maps
+   </a>
+   however you must meet the following requirements...
+  </p>
+  <ul>
+   <li>
+    The video can be no larger than 256x1536 pixels.
+   </li>
+   <li>
+    Each of the 6 sides of the cubemap are stacked from top to bottom like so...
+    <ul>
+     <li>
+      PX
+     </li>
+     <li>
+      NX
+     </li>
+     <li>
+      PY
+     </li>
+     <li>
+      NY
+     </li>
+     <li>
+      PZ
+     </li>
+     <li>
+      NZ
+     </li>
+    </ul>
+   </li>
+   <li>
+    The PX and NX sides must be rotated so the orientation is the same as if it were a cubemap.
+   </li>
+  </ul>
+  <p>
+   <br/>
+  </p>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:1672-0!1!0!0!!en!2 and timestamp 20080704170805 -->
+ </body>
+</html>

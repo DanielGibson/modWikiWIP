@@ -1,197 +1,201 @@
- <p>
-  In the id Tech 4 engine,
-  <a href="GUIs" title="GUIs">
-   GUIs
+<html>
+ <body>
+  <p>
+   In the id Tech 4 engine,
+   <a href="GUIs" title="GUIs">
+    GUIs
+   </a>
+   (
+   <b>
+    G
+   </b>
+   raphical
+   <b>
+    U
+   </b>
+   ser
+   <b>
+    I
+   </b>
+   nterfaces) are used for many things.  GUIs can open doors, toggle map scripts, and interact with the player and the world around them.  They are also used for the Main Menu and for the player's HUD (Heads-Up Display)
+  </p>
+  <p>
+   Below is a list of the important GUIs included with Doom 3, found in the
+   <i>
+    guis
+   </i>
+   folder:
+  </p>
+  <a name="chat.GUI">
   </a>
-  (
-  <b>
-   G
-  </b>
-  raphical
-  <b>
-   U
-  </b>
-  ser
-  <b>
-   I
-  </b>
-  nterfaces) are used for many things.  GUIs can open doors, toggle map scripts, and interact with the player and the world around them.  They are also used for the Main Menu and for the player's HUD (Heads-Up Display)
- </p>
- <p>
-  Below is a list of the important GUIs included with Doom 3, found in the
-  <i>
-   guis
-  </i>
-  folder:
- </p>
- <a name="chat.GUI">
- </a>
- <h3>
-  chat.GUI
- </h3>
- <p>
-  This GUI only displays chat messages that have been received.  It maintains a history of four messages using 4 variables,
-  <b>
-   gui::gui_alpha1
-  </b>
-  ,
-  <b>
-   gui::gui_alpha2
-  </b>
-  , etc.
- </p>
- <a name="credits.GUI">
- </a>
- <h3>
-  credits.GUI
- </h3>
- <p>
-  The credits for Doom 3, displayed upon beating the game or viewing the credits.  Just an animation really.
- </p>
- <a name="cursor.GUI">
- </a>
- <h3>
-  cursor.GUI
- </h3>
- <p>
-  This GUI is the player's crosshair.  The bulk of this file is the code necessary to switch between a combat crosshair and an NPC-talk crosshair.  Uses
-  <b>
-   gui::talkcursor
-  </b>
-  and
-  <b>
-   gui::combatcursor
-  </b>
- </p>
- <a name="gameover.GUI">
- </a>
- <h3>
-  gameover.GUI
- </h3>
- <p>
-  This seems to be linked to EndLevel.  Not sure if this is even used.
- </p>
- <a name="hud.GUI">
- </a>
- <h3>
-  <a href="Guis/hud.GUI" title="Guis/hud.GUI">
-   hud.GUI
+  <h3>
+   chat.GUI
+  </h3>
+  <p>
+   This GUI only displays chat messages that have been received.  It maintains a history of four messages using 4 variables,
+   <b>
+    gui::gui_alpha1
+   </b>
+   ,
+   <b>
+    gui::gui_alpha2
+   </b>
+   , etc.
+  </p>
+  <a name="credits.GUI">
   </a>
- </h3>
- <p>
-  The entire HUD is coded into this GUI.  Many player variables are used by the HUD to display necessary information.
- </p>
- <a name="intro.GUI">
- </a>
- <h3>
-  intro.GUI
- </h3>
- <p>
-  The introduction to the singleplayer game in Doom 3.  Uses the .ROQ files introid and introloop.  Nothing more than an ROQ holder and animation control.
- </p>
- <a name="mainmenu.GUI">
- </a>
- <h3>
-  mainmenu.GUI
- </h3>
- <p>
-  The main menu for Doom 3.  Easily the biggest GUI file included with the retail game.  Weighing in at almost 700kb, this hefty file probably contains more animation than any other GUI in the game.  Various choiceDefs are used to enable/disable options like Automatic Reload, Automatic Weapon Switch, Resolution, Shadows, Bumpmaps.  Several listDefs are used as well to show things like saved games, mods, and multiplayer servers.  (these listDefs are generated in the engine, not the game code)
- </p>
- <p>
-  The mainmenu is a great example of having different menus interact with each other.  It uses floats defined in Desktop to determine what window is open, and play the corresponding animations (there is a Savegame to Options animation, for example, that is triggered when you select options from the savegame menu)
- </p>
- <p>
-  The mainmenu also shows how animations can be plugged into dummy windowDefs.  Many many windowDefs with the prefix "Anim" are used in the mainmenu.  They are not visible and do not react to any events.  They are usually marked with "notime" "1" and have animation in their onTime.  Calling resetTime on these dummy windows will play their animation.  Clever one id.
- </p>
- <a name="mphud.GUI">
- </a>
- <h3>
-  mphud.GUI
- </h3>
- <p>
-  Almost identical to hud.GUI, but with a few key differences.  Things that are singleplayer-only (air meter for example) are not present.  Naturally, the removal of these elements makes a big difference in filesize.  Most co-op mods have added in all or most of the functionality from hud.GUI to mphud.GUI, which is not as hard as one would believe.
- </p>
- <a name="mpmain.GUI">
- </a>
- <h3>
-  mpmain.GUI
- </h3>
- <p>
-  The GUI that appears when escape is pressed during a multiplayer game.  Contains submenus for configuring controls/options, and also the vote menu.
- </p>
- <a name="mpmsgmode.GUI">
- </a>
- <h3>
-  mpmsgmode.GUI
- </h3>
- <p>
-  The GUI that allows a player to type in a message.
- </p>
- <a name="msg.GUI">
- </a>
- <h3>
-  msg.GUI
- </h3>
- <p>
-  CD-key entry?  Not sure what this one is.
- </p>
- <a name="netmenu.GUI">
- </a>
- <h3>
-  netmenu.GUI
- </h3>
- <p>
-  Status window while connecting to a server
- </p>
- <a name="pda.GUI">
- </a>
- <h3>
-  pda.GUI
- </h3>
- <p>
-  One of the more complex GUIs in the game.  Uses many listDefs (generated in the game code) to display all emails, videos, audio logs, etc.
- </p>
- <p>
-  Not quite as animated as other GUIs, and worth a look.
- </p>
- <a name="restart.GUI">
- </a>
- <h3>
-  restart.GUI
- </h3>
- <p>
-  When a player dies, this menu will be displayed.  Restart level, load game, and quit to menu are the default options, but more could be added (This could be changed to statistics menu for example)
- </p>
- <a name="scoreboard.GUI">
- </a>
- <h3>
-  scoreboard.GUI
- </h3>
- <p>
-  Obviously enough, the scoreboard for multiplayer games.
- </p>
- <a name="spectate.GUI">
- </a>
- <h3>
-  spectate.GUI
- </h3>
- <p>
-  The GUI displayed when a player is spectating, as opposed to the HUD.  This will show what player is being spectated.
- </p>
- <a name="takenotes.GUI">
- </a>
- <h3>
-  takenotes.GUI
- </h3>
- <p>
-  Dev GUI?
- </p>
- <a name="takenotes2.GUI">
- </a>
- <h3>
-  takenotes2.GUI
- </h3>
- <p>
-  Dev GUI?
- </p>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:1287-0!1!0!0!!en!2 and timestamp 20120311223456 -->
+  <h3>
+   credits.GUI
+  </h3>
+  <p>
+   The credits for Doom 3, displayed upon beating the game or viewing the credits.  Just an animation really.
+  </p>
+  <a name="cursor.GUI">
+  </a>
+  <h3>
+   cursor.GUI
+  </h3>
+  <p>
+   This GUI is the player's crosshair.  The bulk of this file is the code necessary to switch between a combat crosshair and an NPC-talk crosshair.  Uses
+   <b>
+    gui::talkcursor
+   </b>
+   and
+   <b>
+    gui::combatcursor
+   </b>
+  </p>
+  <a name="gameover.GUI">
+  </a>
+  <h3>
+   gameover.GUI
+  </h3>
+  <p>
+   This seems to be linked to EndLevel.  Not sure if this is even used.
+  </p>
+  <a name="hud.GUI">
+  </a>
+  <h3>
+   <a href="Guis/hud.GUI" title="Guis/hud.GUI">
+    hud.GUI
+   </a>
+  </h3>
+  <p>
+   The entire HUD is coded into this GUI.  Many player variables are used by the HUD to display necessary information.
+  </p>
+  <a name="intro.GUI">
+  </a>
+  <h3>
+   intro.GUI
+  </h3>
+  <p>
+   The introduction to the singleplayer game in Doom 3.  Uses the .ROQ files introid and introloop.  Nothing more than an ROQ holder and animation control.
+  </p>
+  <a name="mainmenu.GUI">
+  </a>
+  <h3>
+   mainmenu.GUI
+  </h3>
+  <p>
+   The main menu for Doom 3.  Easily the biggest GUI file included with the retail game.  Weighing in at almost 700kb, this hefty file probably contains more animation than any other GUI in the game.  Various choiceDefs are used to enable/disable options like Automatic Reload, Automatic Weapon Switch, Resolution, Shadows, Bumpmaps.  Several listDefs are used as well to show things like saved games, mods, and multiplayer servers.  (these listDefs are generated in the engine, not the game code)
+  </p>
+  <p>
+   The mainmenu is a great example of having different menus interact with each other.  It uses floats defined in Desktop to determine what window is open, and play the corresponding animations (there is a Savegame to Options animation, for example, that is triggered when you select options from the savegame menu)
+  </p>
+  <p>
+   The mainmenu also shows how animations can be plugged into dummy windowDefs.  Many many windowDefs with the prefix "Anim" are used in the mainmenu.  They are not visible and do not react to any events.  They are usually marked with "notime" "1" and have animation in their onTime.  Calling resetTime on these dummy windows will play their animation.  Clever one id.
+  </p>
+  <a name="mphud.GUI">
+  </a>
+  <h3>
+   mphud.GUI
+  </h3>
+  <p>
+   Almost identical to hud.GUI, but with a few key differences.  Things that are singleplayer-only (air meter for example) are not present.  Naturally, the removal of these elements makes a big difference in filesize.  Most co-op mods have added in all or most of the functionality from hud.GUI to mphud.GUI, which is not as hard as one would believe.
+  </p>
+  <a name="mpmain.GUI">
+  </a>
+  <h3>
+   mpmain.GUI
+  </h3>
+  <p>
+   The GUI that appears when escape is pressed during a multiplayer game.  Contains submenus for configuring controls/options, and also the vote menu.
+  </p>
+  <a name="mpmsgmode.GUI">
+  </a>
+  <h3>
+   mpmsgmode.GUI
+  </h3>
+  <p>
+   The GUI that allows a player to type in a message.
+  </p>
+  <a name="msg.GUI">
+  </a>
+  <h3>
+   msg.GUI
+  </h3>
+  <p>
+   CD-key entry?  Not sure what this one is.
+  </p>
+  <a name="netmenu.GUI">
+  </a>
+  <h3>
+   netmenu.GUI
+  </h3>
+  <p>
+   Status window while connecting to a server
+  </p>
+  <a name="pda.GUI">
+  </a>
+  <h3>
+   pda.GUI
+  </h3>
+  <p>
+   One of the more complex GUIs in the game.  Uses many listDefs (generated in the game code) to display all emails, videos, audio logs, etc.
+  </p>
+  <p>
+   Not quite as animated as other GUIs, and worth a look.
+  </p>
+  <a name="restart.GUI">
+  </a>
+  <h3>
+   restart.GUI
+  </h3>
+  <p>
+   When a player dies, this menu will be displayed.  Restart level, load game, and quit to menu are the default options, but more could be added (This could be changed to statistics menu for example)
+  </p>
+  <a name="scoreboard.GUI">
+  </a>
+  <h3>
+   scoreboard.GUI
+  </h3>
+  <p>
+   Obviously enough, the scoreboard for multiplayer games.
+  </p>
+  <a name="spectate.GUI">
+  </a>
+  <h3>
+   spectate.GUI
+  </h3>
+  <p>
+   The GUI displayed when a player is spectating, as opposed to the HUD.  This will show what player is being spectated.
+  </p>
+  <a name="takenotes.GUI">
+  </a>
+  <h3>
+   takenotes.GUI
+  </h3>
+  <p>
+   Dev GUI?
+  </p>
+  <a name="takenotes2.GUI">
+  </a>
+  <h3>
+   takenotes2.GUI
+  </h3>
+  <p>
+   Dev GUI?
+  </p>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:1287-0!1!0!0!!en!2 and timestamp 20120311223456 -->
+ </body>
+</html>

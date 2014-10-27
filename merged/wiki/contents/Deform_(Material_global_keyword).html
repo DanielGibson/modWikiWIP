@@ -1,134 +1,138 @@
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  The
-  <b>
-   deform
-  </b>
-  keyword applies the specified type of deformation to a material shader.
- </p>
- <a name="Usage">
- </a>
- <h2>
-  Usage
- </h2>
- <p>
-  In the global section of your material shader type...
- </p>
- <pre>deform &lt;type&gt; [&lt;parameters&gt;]
-</pre>
- <a name="Parameters">
- </a>
- <h2>
-  Parameters
- </h2>
- <ul>
-  <li>
-   &lt;type&gt; - The deformation type to be used.
-  </li>
-  <li>
-   &lt;parameters&gt; - The exact definition varies depending on the type of deform.
-  </li>
- </ul>
- <a name="Types">
- </a>
- <h3>
-  Types
- </h3>
- <dl>
-  <dt>
-   eyeBall
-  </dt>
-  <dd>
-   Used for eyeball materials on NPCs to allow for pupils to move along with whatever the NPC is looking at.
-  </dd>
-  <dt>
-   expand &lt;amount&gt;
-  </dt>
-  <dd>
-   Expand the surface along it's normals.
-  </dd>
-  <dt>
-   flare &lt;size&gt;
-  </dt>
-  <dd>
-   Used for light flares which are seen as bloom-like areas around light fixtures.
-  </dd>
-  <dt>
-   move &lt;amount&gt;
-  </dt>
-  <dd>
-   Moves the surfaces along it's X axis.
-  </dd>
-  <dd>
-   Example:
-   <pre>deform <span style="color: #0000ff;">move</span> <span style="color: #000000;">(</span><span style="color: #0000ff;">time</span> * <span style="color: #0000dd;">1</span><span style="color: #000000;">)</span></pre>
-  </dd>
-  <dt>
-   particle &lt;particleDecl&gt;
-  </dt>
-  <dd>
-   Emit the specified particles from the surface.
-  </dd>
-  <dt>
-   particle2 &lt;particleDecl&gt;
-  </dt>
-  <dd>
-   It will emit particles like
-   <b>
-    particle
-   </b>
-   while ignoring the surface area. As a result, small surfaces emit as much particles as large surfaces.
-  </dd>
-  <dt>
-   sprite
-  </dt>
-  <dd>
-   Causes any surface to which this material is applied to behave as a sprite in that it always faces the player.
-  </dd>
-  <dt>
-   tube
-  </dt>
-  <dd>
-   Causes the surface to appear bent around a tube.
-  </dd>
-  <dt>
-   turbulent &lt;table&gt; &lt;range&gt; &lt;timeoffset&gt; &lt;domain&gt;
-  </dt>
-  <dd>
-   Causes wave-like distortion based on the given table.
-  </dd>
-  <dd>
-   Example:
-   <pre>deform turbulent sinTable <span style="color: #0000dd;">0</span>.<span style="color: #0000dd;">05</span> <span style="color: #000000;">(</span><span style="color: #0000ff;">time</span> * <span style="color: #0000dd;">1</span><span style="color: #000000;">)</span> <span style="color: #0000dd;">10</span></pre>
-  </dd>
- </dl>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
- <p>
-  Any material shaders that make use of the deform keyword coupled with flare, sprite, tube, eyeball, cannot be illuminated by lights because these types of deforms are rendered in a separate pass.
- </p>
- <p>
-  The examples,
-  <b>
-   move
-  </b>
-  and
-  <b>
-   expand
-  </b>
-  types were taken from the
-  <a class="external text" href="http://iddevnet.com/doom3/materials.php" title="http://iddevnet.com/doom3/materials.php">
-   id.sdk: Tables &amp; Materials
+<html>
+ <body>
+  <a name="Description">
   </a>
-  page.
- </p>
- <p>
-  <br/>
- </p>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <b>
+    deform
+   </b>
+   keyword applies the specified type of deformation to a material shader.
+  </p>
+  <a name="Usage">
+  </a>
+  <h2>
+   Usage
+  </h2>
+  <p>
+   In the global section of your material shader type...
+  </p>
+  <pre>deform &lt;type&gt; [&lt;parameters&gt;]
+</pre>
+  <a name="Parameters">
+  </a>
+  <h2>
+   Parameters
+  </h2>
+  <ul>
+   <li>
+    &lt;type&gt; - The deformation type to be used.
+   </li>
+   <li>
+    &lt;parameters&gt; - The exact definition varies depending on the type of deform.
+   </li>
+  </ul>
+  <a name="Types">
+  </a>
+  <h3>
+   Types
+  </h3>
+  <dl>
+   <dt>
+    eyeBall
+   </dt>
+   <dd>
+    Used for eyeball materials on NPCs to allow for pupils to move along with whatever the NPC is looking at.
+   </dd>
+   <dt>
+    expand &lt;amount&gt;
+   </dt>
+   <dd>
+    Expand the surface along it's normals.
+   </dd>
+   <dt>
+    flare &lt;size&gt;
+   </dt>
+   <dd>
+    Used for light flares which are seen as bloom-like areas around light fixtures.
+   </dd>
+   <dt>
+    move &lt;amount&gt;
+   </dt>
+   <dd>
+    Moves the surfaces along it's X axis.
+   </dd>
+   <dd>
+    Example:
+    <pre>deform <span style="color: #0000ff;">move</span> <span style="color: #000000;">(</span><span style="color: #0000ff;">time</span> * <span style="color: #0000dd;">1</span><span style="color: #000000;">)</span></pre>
+   </dd>
+   <dt>
+    particle &lt;particleDecl&gt;
+   </dt>
+   <dd>
+    Emit the specified particles from the surface.
+   </dd>
+   <dt>
+    particle2 &lt;particleDecl&gt;
+   </dt>
+   <dd>
+    It will emit particles like
+    <b>
+     particle
+    </b>
+    while ignoring the surface area. As a result, small surfaces emit as much particles as large surfaces.
+   </dd>
+   <dt>
+    sprite
+   </dt>
+   <dd>
+    Causes any surface to which this material is applied to behave as a sprite in that it always faces the player.
+   </dd>
+   <dt>
+    tube
+   </dt>
+   <dd>
+    Causes the surface to appear bent around a tube.
+   </dd>
+   <dt>
+    turbulent &lt;table&gt; &lt;range&gt; &lt;timeoffset&gt; &lt;domain&gt;
+   </dt>
+   <dd>
+    Causes wave-like distortion based on the given table.
+   </dd>
+   <dd>
+    Example:
+    <pre>deform turbulent sinTable <span style="color: #0000dd;">0</span>.<span style="color: #0000dd;">05</span> <span style="color: #000000;">(</span><span style="color: #0000ff;">time</span> * <span style="color: #0000dd;">1</span><span style="color: #000000;">)</span> <span style="color: #0000dd;">10</span></pre>
+   </dd>
+  </dl>
+  <a name="Notes">
+  </a>
+  <h2>
+   Notes
+  </h2>
+  <p>
+   Any material shaders that make use of the deform keyword coupled with flare, sprite, tube, eyeball, cannot be illuminated by lights because these types of deforms are rendered in a separate pass.
+  </p>
+  <p>
+   The examples,
+   <b>
+    move
+   </b>
+   and
+   <b>
+    expand
+   </b>
+   types were taken from the
+   <a class="external text" href="http://iddevnet.com/doom3/materials.php" title="http://iddevnet.com/doom3/materials.php">
+    id.sdk: Tables &amp; Materials
+   </a>
+   page.
+  </p>
+  <p>
+   <br/>
+  </p>
+ </body>
+</html>

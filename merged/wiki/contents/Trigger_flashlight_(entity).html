@@ -1,137 +1,141 @@
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  The trigger_flashlight entity is used to activate targeted entities or call a script function. In this case, the trigger is tripped by shining the flashlight on it.
- </p>
- <a name="Spawn_Arguments">
- </a>
- <h2>
-  Spawn Arguments
- </h2>
- <p>
-  The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
-  <br/>
- </p>
- <table class="listtable">
-  <tr>
-   <th>
-    KEY
-   </th>
-   <th>
-    DESCRIPTION
-   </th>
-  </tr>
-  <tr>
-   <td>
-    wait
-   </td>
-   <td>
-    The duration in seconds before a trigger is reset, thereby allowing it to be tripped again. '-1' can be used to prevent the trigger from reseting, hence making it a single use trigger.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    random
-   </td>
-   <td>
-    A random value between 0 and the number specified here is added to the duration specified by the 'wait' key/value pair.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    delay
-   </td>
-   <td>
-    The duration in seconds before a trigger activates it's targets when tripped.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    random_delay
-   </td>
-   <td>
-    A random value between 0 and the number specified here is added to the duration specified by the 'delay' key/value pair.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    call
-   </td>
-   <td>
-    The script function to call when tripped.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    requires
-   </td>
-   <td>
-    An item required to be in the player's inventory before this trigger can be tripped.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    removeItem
-   </td>
-   <td>
-    Whether the item specified by the 'requires' key/value pair should be removed once the trigger has been tripped.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    anyTouch
-   </td>
-   <td>
-    Any entity can trip the trigger via touch.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    noTouch
-   </td>
-   <td>
-    The trigger cannot be tripped via touch. It must be triggered externally, either by another trigger or by a script.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    triggerFirst
-   </td>
-   <td>
-    The trigger must be activated before it can be tripped.
-   </td>
-  </tr>
-  <tr>
-   <td>
-    noClient
-   </td>
-   <td>
-    The trigger cannot be tripped by players.
-   </td>
-  </tr>
- </table>
- <a name="Inheritance">
- </a>
- <h2>
-  Inheritance
- </h2>
- <p>
-  This entity is derived from the following entities:
- </p>
- <ul>
-  <li>
-   trigger_flashlight (idTrigger_Multi)
-  </li>
- </ul>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
- <p>
-  Not Available
- </p>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:3795-0!1!0!0!!en!2 and timestamp 20091215114005 -->
+<html>
+ <body>
+  <a name="Description">
+  </a>
+  <h2>
+   Description
+  </h2>
+  <p>
+   The trigger_flashlight entity is used to activate targeted entities or call a script function. In this case, the trigger is tripped by shining the flashlight on it.
+  </p>
+  <a name="Spawn_Arguments">
+  </a>
+  <h2>
+   Spawn Arguments
+  </h2>
+  <p>
+   The following is a list of key/value pairs, also known as spawn arguments, that function with this entity.
+   <br/>
+  </p>
+  <table class="listtable">
+   <tr>
+    <th>
+     KEY
+    </th>
+    <th>
+     DESCRIPTION
+    </th>
+   </tr>
+   <tr>
+    <td>
+     wait
+    </td>
+    <td>
+     The duration in seconds before a trigger is reset, thereby allowing it to be tripped again. '-1' can be used to prevent the trigger from reseting, hence making it a single use trigger.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     random
+    </td>
+    <td>
+     A random value between 0 and the number specified here is added to the duration specified by the 'wait' key/value pair.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     delay
+    </td>
+    <td>
+     The duration in seconds before a trigger activates it's targets when tripped.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     random_delay
+    </td>
+    <td>
+     A random value between 0 and the number specified here is added to the duration specified by the 'delay' key/value pair.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     call
+    </td>
+    <td>
+     The script function to call when tripped.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     requires
+    </td>
+    <td>
+     An item required to be in the player's inventory before this trigger can be tripped.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     removeItem
+    </td>
+    <td>
+     Whether the item specified by the 'requires' key/value pair should be removed once the trigger has been tripped.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     anyTouch
+    </td>
+    <td>
+     Any entity can trip the trigger via touch.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     noTouch
+    </td>
+    <td>
+     The trigger cannot be tripped via touch. It must be triggered externally, either by another trigger or by a script.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     triggerFirst
+    </td>
+    <td>
+     The trigger must be activated before it can be tripped.
+    </td>
+   </tr>
+   <tr>
+    <td>
+     noClient
+    </td>
+    <td>
+     The trigger cannot be tripped by players.
+    </td>
+   </tr>
+  </table>
+  <a name="Inheritance">
+  </a>
+  <h2>
+   Inheritance
+  </h2>
+  <p>
+   This entity is derived from the following entities:
+  </p>
+  <ul>
+   <li>
+    trigger_flashlight (idTrigger_Multi)
+   </li>
+  </ul>
+  <a name="Notes">
+  </a>
+  <h2>
+   Notes
+  </h2>
+  <p>
+   Not Available
+  </p>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:3795-0!1!0!0!!en!2 and timestamp 20091215114005 -->
+ </body>
+</html>

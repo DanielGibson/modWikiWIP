@@ -1,66 +1,70 @@
- <a name="Game_class">
- </a>
- <h2>
-  Game class
- </h2>
- <p>
-  This event operates on an instance of the
-  <a href="Game_class" title="Game class">
-   game class
+<html>
+ <body>
+  <a name="Game_class">
   </a>
-  type {{{gameclass}}}
- </p>
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  Specifies the duration an object takes to decelerate down from its maximum speed to 0.
- </p>
- <a name="Usage">
- </a>
- <h2>
-  Usage
- </h2>
- <p>
-  <i>
-   void
-  </i>
-  decelTime(
-  <i>
-   float
-  </i>
-  <b>
-   time
-  </b>
-  )
- </p>
- <a name="Parameters">
- </a>
- <h2>
-  Parameters
- </h2>
- <ul>
-  <li>
-   [time] - Duration of the deceleration in seconds.
-  </li>
- </ul>
- <a name="Examples">
- </a>
- <h2>
-  Examples
- </h2>
- <pre> 
+  <h2>
+   Game class
+  </h2>
+  <p>
+   This event operates on an instance of the
+   <a href="Game_class" title="Game class">
+    game class
+   </a>
+   type {{{gameclass}}}
+  </p>
+  <a name="Description">
+  </a>
+  <h2>
+   Description
+  </h2>
+  <p>
+   Specifies the duration an object takes to decelerate down from its maximum speed to 0.
+  </p>
+  <a name="Usage">
+  </a>
+  <h2>
+   Usage
+  </h2>
+  <p>
+   <i>
+    void
+   </i>
+   decelTime(
+   <i>
+    float
+   </i>
+   <b>
+    time
+   </b>
+   )
+  </p>
+  <a name="Parameters">
+  </a>
+  <h2>
+   Parameters
+  </h2>
+  <ul>
+   <li>
+    [time] - Duration of the deceleration in seconds.
+   </li>
+  </ul>
+  <a name="Examples">
+  </a>
+  <h2>
+   Examples
+  </h2>
+  <pre> 
 <span style="color: #000055;">$my_entity</span>.<span style="color: #ff0000;">decelTime</span><span style="color: #000000;">(</span><span style="color: #0000dd;">3</span><span style="color: #000000;">)</span>;</pre>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
- <p>
-  This script event does not return any values. In the example above it will cause the entity to take 3 seconds to decelerate from its maximum speed. An entity's decelTime should not be higher than the entity's time. Logically, you can't take 4 seconds to decelerate, when the time for an object is only 2 seconds long.
- </p>
- <p>
-  <br/>
- </p>
+  <a name="Notes">
+  </a>
+  <h2>
+   Notes
+  </h2>
+  <p>
+   This script event does not return any values. In the example above it will cause the entity to take 3 seconds to decelerate from its maximum speed. An entity's decelTime should not be higher than the entity's time. Logically, you can't take 4 seconds to decelerate, when the time for an object is only 2 seconds long.
+  </p>
+  <p>
+   <br/>
+  </p>
+ </body>
+</html>

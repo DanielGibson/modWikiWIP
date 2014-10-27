@@ -1,79 +1,83 @@
- <a name="Game_class">
- </a>
- <h2>
-  Game class
- </h2>
- <p>
-  This event operates on an instance of the
-  <a href="Game_class" title="Game class">
-   game class
+<html>
+ <body>
+  <a name="Game_class">
   </a>
-  type {{{gameclass}}}
- </p>
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  Copies the spawn args from an entity.
- </p>
- <a name="Usage">
- </a>
- <h2>
-  Usage
- </h2>
- <p>
-  <i>
-   void
-  </i>
-  copySpawnArgs(
-  <i>
-   entity
-  </i>
-  <b>
-   ent
-  </b>
-  )
- </p>
- <a name="Parameters">
- </a>
- <h2>
-  Parameters
- </h2>
- <ul>
-  <li>
-   [ent] - The entity to copy spawn arguments from.
-  </li>
- </ul>
- <a name="Examples">
- </a>
- <h2>
-  Examples
- </h2>
- <pre> 
+  <h2>
+   Game class
+  </h2>
+  <p>
+   This event operates on an instance of the
+   <a href="Game_class" title="Game class">
+    game class
+   </a>
+   type {{{gameclass}}}
+  </p>
+  <a name="Description">
+  </a>
+  <h2>
+   Description
+  </h2>
+  <p>
+   Copies the spawn args from an entity.
+  </p>
+  <a name="Usage">
+  </a>
+  <h2>
+   Usage
+  </h2>
+  <p>
+   <i>
+    void
+   </i>
+   copySpawnArgs(
+   <i>
+    entity
+   </i>
+   <b>
+    ent
+   </b>
+   )
+  </p>
+  <a name="Parameters">
+  </a>
+  <h2>
+   Parameters
+  </h2>
+  <ul>
+   <li>
+    [ent] - The entity to copy spawn arguments from.
+   </li>
+  </ul>
+  <a name="Examples">
+  </a>
+  <h2>
+   Examples
+  </h2>
+  <pre> 
 <span style="color: #0000ff;">void</span> reverse_monster_gravity <span style="color: #000000;">(</span><span style="color: #0000ff;">entity</span> ent_mon_this<span style="color: #000000;">)</span><span style="color: #000000;">{</span>
  
     <span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">copySpawnArgs</span><span style="color: #000000;">(</span>ent_mon_this<span style="color: #000000;">)</span>; <span style="color: #339900;">//copy the entity's spawn arguments</span>
     <span style="color: #339900;">//more code here</span>
  
 <span style="color: #000000;">}</span></pre>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
- <p>
-  This script event does not return any values.
- </p>
- <p>
-  After using copySpawnArgs, you may need to use
-  <a href="SetSpawnArg_%28script_event%29" title="SetSpawnArg (script event)">
-   setSpawnArg
+  <a name="Notes">
   </a>
-  to set explicitly those spawn args which need to be changed.
- </p>
- <p>
-  <br/>
- </p>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:1648-0!1!0!0!!en!2 and timestamp 20091211082942 -->
+  <h2>
+   Notes
+  </h2>
+  <p>
+   This script event does not return any values.
+  </p>
+  <p>
+   After using copySpawnArgs, you may need to use
+   <a href="SetSpawnArg_%28script_event%29" title="SetSpawnArg (script event)">
+    setSpawnArg
+   </a>
+   to set explicitly those spawn args which need to be changed.
+  </p>
+  <p>
+   <br/>
+  </p>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:1648-0!1!0!0!!en!2 and timestamp 20091211082942 -->
+ </body>
+</html>

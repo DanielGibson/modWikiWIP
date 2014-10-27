@@ -1,94 +1,98 @@
- <div class="boilerplate metadata" id="attention" style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa;">
+<html>
+ <body>
+  <div class="boilerplate metadata" id="attention" style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa;">
+   <p>
+    <b>
+     This page is in urgent need of attention because:
+     <i>
+      The information presented in this article is incomplete.
+     </i>
+    </b>
+   </p>
+   <p>
+    If you disagree with this, please explain why on
+    <a href="Talk:WeaponState_%28script_event%29" title="Talk:WeaponState (script event)">
+     its talk page
+    </a>
+    .
+   </p>
+  </div>
+  <a name="Game_class">
+  </a>
+  <h2>
+   Game class
+  </h2>
   <p>
-   <b>
-    This page is in urgent need of attention because:
-    <i>
-     The information presented in this article is incomplete.
-    </i>
-   </b>
+   This event operates on an instance of the
+   <a href="Game_class" title="Game class">
+    game class
+   </a>
+   type idWeapon
   </p>
+  <a name="Description">
+  </a>
+  <h2>
+   Description
+  </h2>
   <p>
-   If you disagree with this, please explain why on
-   <a href="Talk:WeaponState_%28script_event%29" title="Talk:WeaponState (script event)">
-    its talk page
+   Set the state of the
+   <a href="Script_object" title="Script object">
+    script objects
+   </a>
+   <a href="Finite_State_Machine_%28scripting%29" title="Finite State Machine (scripting)">
+    Finite State Machine
    </a>
    .
   </p>
- </div>
- <a name="Game_class">
- </a>
- <h2>
-  Game class
- </h2>
- <p>
-  This event operates on an instance of the
-  <a href="Game_class" title="Game class">
-   game class
+  <a name="Usage">
   </a>
-  type idWeapon
- </p>
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  Set the state of the
-  <a href="Script_object" title="Script object">
-   script objects
+  <h2>
+   Usage
+  </h2>
+  <p>
+   <i>
+    void
+   </i>
+   weaponState(
+   <i>
+    string
+   </i>
+   <b>
+    stateFunction
+   </b>
+   ,
+   <i>
+    float
+   </i>
+   <b>
+    blendFrames
+   </b>
+   )
+  </p>
+  <a name="Parameters">
   </a>
-  <a href="Finite_State_Machine_%28scripting%29" title="Finite State Machine (scripting)">
-   Finite State Machine
+  <h2>
+   Parameters
+  </h2>
+  <ul>
+   <li>
+    [stateFunction] - Name of the state to set. This is simply the name of a function in the script object.
+   </li>
+   <li>
+    [blendFrames] - Frames of animation to blend over state change.
+   </li>
+  </ul>
+  <a name="Examples">
   </a>
-  .
- </p>
- <a name="Usage">
- </a>
- <h2>
-  Usage
- </h2>
- <p>
-  <i>
-   void
-  </i>
-  weaponState(
-  <i>
-   string
-  </i>
-  <b>
-   stateFunction
-  </b>
-  ,
-  <i>
-   float
-  </i>
-  <b>
-   blendFrames
-  </b>
-  )
- </p>
- <a name="Parameters">
- </a>
- <h2>
-  Parameters
- </h2>
- <ul>
-  <li>
-   [stateFunction] - Name of the state to set. This is simply the name of a function in the script object.
-  </li>
-  <li>
-   [blendFrames] - Frames of animation to blend over state change.
-  </li>
- </ul>
- <a name="Examples">
- </a>
- <h2>
-  Examples
- </h2>
- <pre><span style="color: #0000ff;">weaponState</span><span style="color: #000000;">(</span> <span style="color: #666666;">"Idle"</span>, PLASMAGUN_FIRE_TO_IDLE <span style="color: #000000;">)</span>
+  <h2>
+   Examples
+  </h2>
+  <pre><span style="color: #0000ff;">weaponState</span><span style="color: #000000;">(</span> <span style="color: #666666;">"Idle"</span>, PLASMAGUN_FIRE_TO_IDLE <span style="color: #000000;">)</span>
 <span style="color: #0000ff;">weaponState</span><span style="color: #000000;">(</span> <span style="color: #666666;">"Raise"</span>, <span style="color: #0000dd;">0</span> <span style="color: #000000;">)</span></pre>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
+  <a name="Notes">
+  </a>
+  <h2>
+   Notes
+  </h2>
+ </body>
+</html>

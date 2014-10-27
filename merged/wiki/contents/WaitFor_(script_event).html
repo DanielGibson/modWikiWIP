@@ -1,146 +1,150 @@
- <a name="Game_class">
- </a>
- <h2>
-  Game class
- </h2>
- <p>
-  This event operates on an instance of the
-  <a href="Game_class" title="Game class">
-   game class
+<html>
+ <body>
+  <a name="Game_class">
   </a>
-  type
-  <a href="Thread_%28scripting%29" title="Thread (scripting)">
-   idThread
-  </a>
-  , accessible via
-  <a href="Scripting_basics#sys" title="Scripting basics">
-   sys
-  </a>
-  identifier.
- </p>
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  Waits for entity to complete it's move.
- </p>
- <a name="Usage">
- </a>
- <h2>
-  Usage
- </h2>
- <p>
-  <i>
-   <a href="Data_types#void" title="Data types">
-    void
+  <h2>
+   Game class
+  </h2>
+  <p>
+   This event operates on an instance of the
+   <a href="Game_class" title="Game class">
+    game class
    </a>
-  </i>
-  waitFor(
-  <i>
-   <a href="Data_types#entity" title="Data types">
-    entity
+   type
+   <a href="Thread_%28scripting%29" title="Thread (scripting)">
+    idThread
    </a>
-  </i>
-  <b>
-   mover
-  </b>
-  )
- </p>
- <a name="Parameters">
- </a>
- <h2>
-  Parameters
- </h2>
- <p>
-  [mover] - entity to wait for.
- </p>
- <p>
-  Parameter only supports entities of following
-  <a href="Spawn_class" title="Spawn class">
-   spawn classes
+   , accessible via
+   <a href="Scripting_basics#sys" title="Scripting basics">
+    sys
+   </a>
+   identifier.
+  </p>
+  <a name="Description">
   </a>
-  :
- </p>
- <p>
-  <a class="image" href="Image:D3square_25.png" title="Image:D3square_25.png">
-   <img alt="Image:D3square_25.png" height="25" longdesc="/wiki/Image:D3square_25.png" src="/w/images/2/23/D3square_25.png" width="25"/>
+  <h2>
+   Description
+  </h2>
+  <p>
+   Waits for entity to complete it's move.
+  </p>
+  <a name="Usage">
   </a>
-  Doom 3:
-  <a class="new" href="IdCameraAnim_%28class%29" title="IdCameraAnim (class)">
-   idCameraAnim
+  <h2>
+   Usage
+  </h2>
+  <p>
+   <i>
+    <a href="Data_types#void" title="Data types">
+     void
+    </a>
+   </i>
+   waitFor(
+   <i>
+    <a href="Data_types#entity" title="Data types">
+     entity
+    </a>
+   </i>
+   <b>
+    mover
+   </b>
+   )
+  </p>
+  <a name="Parameters">
   </a>
-  ,
-  <a class="new" href="IdMover_%28class%29" title="IdMover (class)">
-   idMover
+  <h2>
+   Parameters
+  </h2>
+  <p>
+   [mover] - entity to wait for.
+  </p>
+  <p>
+   Parameter only supports entities of following
+   <a href="Spawn_class" title="Spawn class">
+    spawn classes
+   </a>
+   :
+  </p>
+  <p>
+   <a class="image" href="Image:D3square_25.png" title="Image:D3square_25.png">
+    <img alt="Image:D3square_25.png" height="25" longdesc="/wiki/Image:D3square_25.png" src="/w/images/2/23/D3square_25.png" width="25"/>
+   </a>
+   Doom 3:
+   <a class="new" href="IdCameraAnim_%28class%29" title="IdCameraAnim (class)">
+    idCameraAnim
+   </a>
+   ,
+   <a class="new" href="IdMover_%28class%29" title="IdMover (class)">
+    idMover
+   </a>
+   ,
+   <a class="new" href="IdMover_Binary_%28class%29" title="IdMover Binary (class)">
+    idMover_Binary
+   </a>
+   .
+  </p>
+  <p>
+   <a class="image" href="Image:Q4square_25.png" title="Image:Q4square_25.png">
+    <img alt="Image:Q4square_25.png" height="25" longdesc="/wiki/Image:Q4square_25.png" src="/w/images/e/e8/Q4square_25.png" width="25"/>
+   </a>
+   Quake 4:
+   <a class="new" href="IdCameraAnim_%28class%29" title="IdCameraAnim (class)">
+    idCameraAnim
+   </a>
+   ,
+   <a class="new" href="IdMover_%28class%29" title="IdMover (class)">
+    idMover
+   </a>
+   ,
+   <a class="new" href="IdMover_Binary_%28class%29" title="IdMover Binary (class)">
+    idMover_Binary
+   </a>
+   ,
+   <a class="new" href="RvSplineMover_%28class%29" title="RvSplineMover (class)">
+    rvSplineMover
+   </a>
+  </p>
+  <a name="Examples">
   </a>
-  ,
-  <a class="new" href="IdMover_Binary_%28class%29" title="IdMover Binary (class)">
-   idMover_Binary
-  </a>
-  .
- </p>
- <p>
-  <a class="image" href="Image:Q4square_25.png" title="Image:Q4square_25.png">
-   <img alt="Image:Q4square_25.png" height="25" longdesc="/wiki/Image:Q4square_25.png" src="/w/images/e/e8/Q4square_25.png" width="25"/>
-  </a>
-  Quake 4:
-  <a class="new" href="IdCameraAnim_%28class%29" title="IdCameraAnim (class)">
-   idCameraAnim
-  </a>
-  ,
-  <a class="new" href="IdMover_%28class%29" title="IdMover (class)">
-   idMover
-  </a>
-  ,
-  <a class="new" href="IdMover_Binary_%28class%29" title="IdMover Binary (class)">
-   idMover_Binary
-  </a>
-  ,
-  <a class="new" href="RvSplineMover_%28class%29" title="RvSplineMover (class)">
-   rvSplineMover
-  </a>
- </p>
- <a name="Examples">
- </a>
- <h2>
-  Examples
- </h2>
- <pre><span style="color: #000055;">$mymover</span>.<span style="color: #ff0000;">move</span><span style="color: #000000;">(</span> UP, <span style="color: #0000dd;">100</span><span style="color: #000000;">)</span>;
+  <h2>
+   Examples
+  </h2>
+  <pre><span style="color: #000055;">$mymover</span>.<span style="color: #ff0000;">move</span><span style="color: #000000;">(</span> UP, <span style="color: #0000dd;">100</span><span style="color: #000000;">)</span>;
  
 <span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">waitFor</span><span style="color: #000000;">(</span> <span style="color: #000055;">$mymover</span> <span style="color: #000000;">)</span>;
  
 <span style="color: #000055;">$mymover</span>.<span style="color: #ff0000;">move</span><span style="color: #000000;">(</span> DOWN, <span style="color: #0000dd;">100</span><span style="color: #000000;">)</span>;</pre>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
- <div>
-  <a class="image" href="Image:Etqwsquare_25.png" title="Image:Etqwsquare_25.png">
-   <img alt="Image:Etqwsquare_25.png" height="25" longdesc="/wiki/Image:Etqwsquare_25.png" src="/w/images/7/7e/Etqwsquare_25.png" width="25"/>
+  <a name="Notes">
   </a>
-  <b>
-   Note:
-  </b>
-  Enemy Territory: Quake Wars only:
-  <dl>
-   <dd>
-    <i>
-     (This event does not apply)
-    </i>
-   </dd>
-  </dl>
- </div>
- <p>
-  See
-  <a href="Thread_%28scripting%29" title="Thread (scripting)">
-   threads
-  </a>
-  for more information.
- </p>
- <p>
-  <br/>
- </p>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:2458-0!1!0!0!!en!2 and timestamp 20091227080513 -->
+  <h2>
+   Notes
+  </h2>
+  <div>
+   <a class="image" href="Image:Etqwsquare_25.png" title="Image:Etqwsquare_25.png">
+    <img alt="Image:Etqwsquare_25.png" height="25" longdesc="/wiki/Image:Etqwsquare_25.png" src="/w/images/7/7e/Etqwsquare_25.png" width="25"/>
+   </a>
+   <b>
+    Note:
+   </b>
+   Enemy Territory: Quake Wars only:
+   <dl>
+    <dd>
+     <i>
+      (This event does not apply)
+     </i>
+    </dd>
+   </dl>
+  </div>
+  <p>
+   See
+   <a href="Thread_%28scripting%29" title="Thread (scripting)">
+    threads
+   </a>
+   for more information.
+  </p>
+  <p>
+   <br/>
+  </p>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:2458-0!1!0!0!!en!2 and timestamp 20091227080513 -->
+ </body>
+</html>

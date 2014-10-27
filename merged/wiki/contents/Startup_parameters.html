@@ -1,380 +1,384 @@
- <p>
-  Startup parameters are remnants of the time that an OS consisted of nothing more then a console. A command was then started by giving it's name and optionally some parameters to change the command's behavior. (Take DOS as an example, or even a modern Linux terminal.) All games built on the
-  <a href="Id_Tech_4" title="Id Tech 4">
-   id Tech 4
+<html>
+ <body>
+  <p>
+   Startup parameters are remnants of the time that an OS consisted of nothing more then a console. A command was then started by giving it's name and optionally some parameters to change the command's behavior. (Take DOS as an example, or even a modern Linux terminal.) All games built on the
+   <a href="Id_Tech_4" title="Id Tech 4">
+    id Tech 4
+   </a>
+   engine allow you to start them with parameters as well to get a specific behaviour.
+  </p>
+  <a name="Shortcuts">
   </a>
-  engine allow you to start them with parameters as well to get a specific behaviour.
- </p>
- <a name="Shortcuts">
- </a>
- <h2>
-  Shortcuts
- </h2>
- <p>
-  Probably, you don't want to use a system console to launch a Doom 3 game every time you need it. It works, but you would need to start the console, go to the game's folder and type the command with all it's parameters. Imagine you would need to do that every time you want to play... This is where shortcuts come in. Shortcuts save the location of the command and it's startup parameters.
- </p>
- <a name="Windows">
- </a>
- <h3>
-  Windows
- </h3>
- <p>
-  You start by creating a shortcut to the game .exe file. A few ways to do it:
- </p>
- <ul>
-  <li>
-   Right click in the desired location and choose New -&gt; Shortcut. Complete the wizard
-  </li>
-  <li>
-   Copy the game's .exe, then right click where you want your shortcut to be. Select "Paste Shortcut"
-  </li>
-  <li>
-   Drag the game's .exe with your right mouse button to the desired location, then release and choose "Create Shortcuts Here".
-  </li>
- </ul>
- <p>
-  After this, right click on the shortcut. Select properties. The field to be edited is the "Target:" field. For Doom 3, it would look like:
- </p>
- <pre> "c:\program files\doom3\doom3.exe"
+  <h2>
+   Shortcuts
+  </h2>
+  <p>
+   Probably, you don't want to use a system console to launch a Doom 3 game every time you need it. It works, but you would need to start the console, go to the game's folder and type the command with all it's parameters. Imagine you would need to do that every time you want to play... This is where shortcuts come in. Shortcuts save the location of the command and it's startup parameters.
+  </p>
+  <a name="Windows">
+  </a>
+  <h3>
+   Windows
+  </h3>
+  <p>
+   You start by creating a shortcut to the game .exe file. A few ways to do it:
+  </p>
+  <ul>
+   <li>
+    Right click in the desired location and choose New -&gt; Shortcut. Complete the wizard
+   </li>
+   <li>
+    Copy the game's .exe, then right click where you want your shortcut to be. Select "Paste Shortcut"
+   </li>
+   <li>
+    Drag the game's .exe with your right mouse button to the desired location, then release and choose "Create Shortcuts Here".
+   </li>
+  </ul>
+  <p>
+   After this, right click on the shortcut. Select properties. The field to be edited is the "Target:" field. For Doom 3, it would look like:
+  </p>
+  <pre> "c:\program files\doom3\doom3.exe"
 </pre>
- <p>
-  To add a startup parameter, click in the target field and add:
- </p>
- <pre>+set r_fullscreen 0
+  <p>
+   To add a startup parameter, click in the target field and add:
+  </p>
+  <pre>+set r_fullscreen 0
 </pre>
- <p>
-  After that, the whole target field should contain:
- </p>
- <pre> "c:\program files\doom3\doom3.exe" +set r_fullscreen 0
+  <p>
+   After that, the whole target field should contain:
+  </p>
+  <pre> "c:\program files\doom3\doom3.exe" +set r_fullscreen 0
 </pre>
- <p>
-  If you are more familiar with windows you can also write a .bat file to run the game with your parameters.
- </p>
- <a name="Linux">
- </a>
- <h3>
-  Linux
- </h3>
- <p>
-  By default, Linux does not support shortcuts. The only way to solve this is by making a script. However, newer window managers might support shortcuts. Scripting will always work, but it is worth it to check your window manager's documentation. A few step-by-step procedures are listed below for common window managers.
- </p>
- <a name="Linux_Scripting">
- </a>
- <h4>
-  Linux Scripting
- </h4>
- <p>
-  Lots of things are done through scripts. This can range from scripts which start all background processes when you start your Linux install, to commands which you can use like regular commands on your command line.
- </p>
- <p>
-  A basic script consists of nothing more then a list of commands to be executed by your shell. (Which does all the command line tasks)
- </p>
- <p>
-  To create one, open up your favourite editor. Here's is an example of what it should look like:
- </p>
- <pre> #!/bin/sh
+  <p>
+   If you are more familiar with windows you can also write a .bat file to run the game with your parameters.
+  </p>
+  <a name="Linux">
+  </a>
+  <h3>
+   Linux
+  </h3>
+  <p>
+   By default, Linux does not support shortcuts. The only way to solve this is by making a script. However, newer window managers might support shortcuts. Scripting will always work, but it is worth it to check your window manager's documentation. A few step-by-step procedures are listed below for common window managers.
+  </p>
+  <a name="Linux_Scripting">
+  </a>
+  <h4>
+   Linux Scripting
+  </h4>
+  <p>
+   Lots of things are done through scripts. This can range from scripts which start all background processes when you start your Linux install, to commands which you can use like regular commands on your command line.
+  </p>
+  <p>
+   A basic script consists of nothing more then a list of commands to be executed by your shell. (Which does all the command line tasks)
+  </p>
+  <p>
+   To create one, open up your favourite editor. Here's is an example of what it should look like:
+  </p>
+  <pre> #!/bin/sh
  cd /opt/doom3/
  exec ./doom3 +set r_fullscreen 0
 </pre>
- <p>
-  Now save it. The name does not matter, as long as you remember it.
- </p>
- <p>
-  You can already use this script to start the game with the specified parameters. For example, if the script above was saved in a file called
-  <i>
-   d3windowed.sh
-  </i>
-  , it would be started by typing this in a shell:
- </p>
- <pre> sh d3windowed.sh
+  <p>
+   Now save it. The name does not matter, as long as you remember it.
+  </p>
+  <p>
+   You can already use this script to start the game with the specified parameters. For example, if the script above was saved in a file called
+   <i>
+    d3windowed.sh
+   </i>
+   , it would be started by typing this in a shell:
+  </p>
+  <pre> sh d3windowed.sh
 </pre>
- <p>
-  It just works. In case the 'sh' part is even too much, you can make the script file executable on itself. To do this, issue this command:
- </p>
- <pre> chmod ug+x d3windowed.sh
+  <p>
+   It just works. In case the 'sh' part is even too much, you can make the script file executable on itself. To do this, issue this command:
+  </p>
+  <pre> chmod ug+x d3windowed.sh
 </pre>
- <p>
-  This command marks the script as executable for the file's owner (Here the user who created it) and members of the file's group. (Most of the time it's the creator's primary group)
- </p>
- <p>
-  From now on, you can start the script by typing:
- </p>
- <pre> ./d3windowed.sh
+  <p>
+   This command marks the script as executable for the file's owner (Here the user who created it) and members of the file's group. (Most of the time it's the creator's primary group)
+  </p>
+  <p>
+   From now on, you can start the script by typing:
+  </p>
+  <pre> ./d3windowed.sh
 </pre>
- <a name="What_is_a_valid_startup_parameter">
- </a>
- <h2>
-  What is a valid startup parameter
- </h2>
- <p>
-  You can use any
-  <a href="Console#Console_commands" title="Console">
-   in-game console command
+  <a name="What_is_a_valid_startup_parameter">
   </a>
-  as a startup parameter. This is useful if you always want that command to execute when you start a game. To make a valid startup parameter, prefix the command with '+'. If you want to use a
-  <a href="Console#Cvar" title="Console">
-   console variable
+  <h2>
+   What is a valid startup parameter
+  </h2>
+  <p>
+   You can use any
+   <a href="Console#Console_commands" title="Console">
+    in-game console command
+   </a>
+   as a startup parameter. This is useful if you always want that command to execute when you start a game. To make a valid startup parameter, prefix the command with '+'. If you want to use a
+   <a href="Console#Cvar" title="Console">
+    console variable
+   </a>
+   as a startup parameter you need to prefix it with the
+   <a href="Set_%28console_command%29" title="Set (console command)">
+    Set
+   </a>
+   command. Some CVars don't require it but this way you can be sure they will all work correctly.
+  </p>
+  <a name="Common_uses">
   </a>
-  as a startup parameter you need to prefix it with the
-  <a href="Set_%28console_command%29" title="Set (console command)">
-   Set
+  <h2>
+   Common uses
+  </h2>
+  <a name="Launching_the_game_in_windowed_mode">
   </a>
-  command. Some CVars don't require it but this way you can be sure they will all work correctly.
- </p>
- <a name="Common_uses">
- </a>
- <h2>
-  Common uses
- </h2>
- <a name="Launching_the_game_in_windowed_mode">
- </a>
- <h3>
-  Launching the game in windowed mode
- </h3>
- <pre>"d:\doom3\doom3.exe" +set r_fullscreen 0
+  <h3>
+   Launching the game in windowed mode
+  </h3>
+  <pre>"d:\doom3\doom3.exe" +set r_fullscreen 0
 </pre>
- <p>
-  This makes the game run in windowed mode (ie not full-screen) so you can keep applications running on the background, and play in the foreground. It may also be a good idea to add +vid_restart to ensure that the game does open in windowed mode. Great for keeping your favourite IM client or IRC app open in the background.
- </p>
- <a name="Launching_the_editor">
- </a>
- <h3>
-  Launching the editor
- </h3>
- <pre>"d:\doom3\doom3.exe" +set r_mode 3 +set r_fullscreen 0 +seta r_brightness 0 +seta r_gamma 0 +vid_restart +editor
-</pre>
- <p>
-  This sets the Doom 3 game resolution to 640x480 (r_mode 3), makes it run in windowed mode (not full-screen), sets the brightness and gamma to 0, reloads the rendering engine and loads the map editor. Useful if you play the game at a lower resolution and want to use the editor at your normal desktop resolution.
- </p>
- <a name="Launching_the_game_to_connect_to_a_server_that_is_running_a_mod">
- </a>
- <h3>
-  Launching the game to connect to a server that is running a mod
- </h3>
- <pre>"d:\doom3\doom3.exe" +set fs_game MODNAME +connect 123.123.123.123:28004
-</pre>
- <p>
-  This starts the game running the mod in the directory "MODNAME", and then connects to the server at 123.123.123.123:28004
- </p>
- <a name="Launching_the_game_with_a_different_path_to_save_data">
- </a>
- <h3>
-  Launching the game with a different path to save data
- </h3>
- <pre>d:\etqw\etqw.exe +set fs_userpath "d:\etqwdata" +set fs_savepath "d:\etqwdata" +set fs_devpath "d:\etqwdata"
-</pre>
- <div>
-  <a class="image" href="Image:Etqwsquare_25.png" title="Image:Etqwsquare_25.png">
-   <img alt="Image:Etqwsquare_25.png" height="25" longdesc="/wiki/Image:Etqwsquare_25.png" src="/w/images/7/7e/Etqwsquare_25.png" width="25"/>
+  <p>
+   This makes the game run in windowed mode (ie not full-screen) so you can keep applications running on the background, and play in the foreground. It may also be a good idea to add +vid_restart to ensure that the game does open in windowed mode. Great for keeping your favourite IM client or IRC app open in the background.
+  </p>
+  <a name="Launching_the_editor">
   </a>
-  <b>
-   Note:
-  </b>
-  Enemy Territory: Quake Wars only:
+  <h3>
+   Launching the editor
+  </h3>
+  <pre>"d:\doom3\doom3.exe" +set r_mode 3 +set r_fullscreen 0 +seta r_brightness 0 +seta r_gamma 0 +vid_restart +editor
+</pre>
+  <p>
+   This sets the Doom 3 game resolution to 640x480 (r_mode 3), makes it run in windowed mode (not full-screen), sets the brightness and gamma to 0, reloads the rendering engine and loads the map editor. Useful if you play the game at a lower resolution and want to use the editor at your normal desktop resolution.
+  </p>
+  <a name="Launching_the_game_to_connect_to_a_server_that_is_running_a_mod">
+  </a>
+  <h3>
+   Launching the game to connect to a server that is running a mod
+  </h3>
+  <pre>"d:\doom3\doom3.exe" +set fs_game MODNAME +connect 123.123.123.123:28004
+</pre>
+  <p>
+   This starts the game running the mod in the directory "MODNAME", and then connects to the server at 123.123.123.123:28004
+  </p>
+  <a name="Launching_the_game_with_a_different_path_to_save_data">
+  </a>
+  <h3>
+   Launching the game with a different path to save data
+  </h3>
+  <pre>d:\etqw\etqw.exe +set fs_userpath "d:\etqwdata" +set fs_savepath "d:\etqwdata" +set fs_devpath "d:\etqwdata"
+</pre>
+  <div>
+   <a class="image" href="Image:Etqwsquare_25.png" title="Image:Etqwsquare_25.png">
+    <img alt="Image:Etqwsquare_25.png" height="25" longdesc="/wiki/Image:Etqwsquare_25.png" src="/w/images/7/7e/Etqwsquare_25.png" width="25"/>
+   </a>
+   <b>
+    Note:
+   </b>
+   Enemy Territory: Quake Wars only:
+   <dl>
+    <dd>
+     <i>
+      This will tell the game to save all screenshots, demos, config files, etc. into the same, custom, directory.
+     </i>
+    </dd>
+   </dl>
+  </div>
+  <p>
+   <br/>
+  </p>
+  <a name="Most_Frequent_Parameters">
+  </a>
+  <h2>
+   Most Frequent Parameters
+  </h2>
+  <a name="Commands">
+  </a>
+  <h3>
+   Commands
+  </h3>
   <dl>
+   <dt>
+    connect
+   </dt>
    <dd>
-    <i>
-     This will tell the game to save all screenshots, demos, config files, etc. into the same, custom, directory.
-    </i>
+    Connects to the given server. The server is specified as hostname:port - eg "connect 123.123.123.123:28004". If the :port is ommitted, the default for the game is assumed.
+   </dd>
+   <dt>
+    editor
+   </dt>
+   <dd>
+    opens the built in
+    <a href="Map_editor" title="Map editor">
+     Map editor
+    </a>
+    upon launch. Also see
+    <a href="Mapping" title="Mapping">
+     mapping
+    </a>
+    .
+   </dd>
+   <dt>
+    editAFs
+   </dt>
+   <dd>
+    opens the
+    <a class="new" href="Articulated_Figure_Editor" title="Articulated Figure Editor">
+     Articulated Figure Editor
+    </a>
+   </dd>
+   <dt>
+    editDecls
+   </dt>
+   <dd>
+    opens the
+    <a class="new" href="Declaration_Browser" title="Declaration Browser">
+     Declaration Browser
+    </a>
+   </dd>
+   <dt>
+    editFX
+   </dt>
+   <dd>
+    opens the
+    <a class="new" href="FX_Editor" title="FX Editor">
+     FX Editor
+    </a>
+   </dd>
+   <dt>
+    editGUIs
+   </dt>
+   <dd>
+    opens the
+    <a class="new" href="GUI_Editor" title="GUI Editor">
+     GUI Editor
+    </a>
+   </dd>
+   <dt>
+    editLights
+   </dt>
+   <dd>
+    opens the
+    <a class="new" href="Light_Editor" title="Light Editor">
+     Light Editor
+    </a>
+    and can also be opened from the
+    <a href="Map_editor" title="Map editor">
+     Map editor
+    </a>
+    by pressing "j" on your keyboard
+   </dd>
+   <dt>
+    editPDAs
+   </dt>
+   <dd>
+    opens the
+    <a class="new" href="PDA_Editor" title="PDA Editor">
+     PDA Editor
+    </a>
+   </dd>
+   <dt>
+    editPlaybacks
+   </dt>
+   <dd>
+    opens the
+    <a class="new" href="Playback_Editor" title="Playback Editor">
+     Playback Editor
+    </a>
+   </dd>
+   <dt>
+    editReverb
+   </dt>
+   <dd>
+    opens the
+    <a class="new" href="Reverb_Editor" title="Reverb Editor">
+     Reverb Editor
+    </a>
+   </dd>
+   <dt>
+    editScripts
+   </dt>
+   <dd>
+    opens the
+    <a class="new" href="Script_Editor" title="Script Editor">
+     Script Editor
+    </a>
+   </dd>
+   <dt>
+    editSounds
+   </dt>
+   <dd>
+    opens the
+    <a class="new" href="Sound_Editor" title="Sound Editor">
+     Sound Editor
+    </a>
+   </dd>
+   <dt>
+    disconnect
+   </dt>
+   <dd>
+    causes the game to skip the introductory videos when starting.
    </dd>
   </dl>
- </div>
- <p>
-  <br/>
- </p>
- <a name="Most_Frequent_Parameters">
- </a>
- <h2>
-  Most Frequent Parameters
- </h2>
- <a name="Commands">
- </a>
- <h3>
-  Commands
- </h3>
- <dl>
-  <dt>
-   connect
-  </dt>
-  <dd>
-   Connects to the given server. The server is specified as hostname:port - eg "connect 123.123.123.123:28004". If the :port is ommitted, the default for the game is assumed.
-  </dd>
-  <dt>
-   editor
-  </dt>
-  <dd>
-   opens the built in
-   <a href="Map_editor" title="Map editor">
-    Map editor
-   </a>
-   upon launch. Also see
-   <a href="Mapping" title="Mapping">
-    mapping
-   </a>
-   .
-  </dd>
-  <dt>
-   editAFs
-  </dt>
-  <dd>
-   opens the
-   <a class="new" href="Articulated_Figure_Editor" title="Articulated Figure Editor">
-    Articulated Figure Editor
-   </a>
-  </dd>
-  <dt>
-   editDecls
-  </dt>
-  <dd>
-   opens the
-   <a class="new" href="Declaration_Browser" title="Declaration Browser">
-    Declaration Browser
-   </a>
-  </dd>
-  <dt>
-   editFX
-  </dt>
-  <dd>
-   opens the
-   <a class="new" href="FX_Editor" title="FX Editor">
-    FX Editor
-   </a>
-  </dd>
-  <dt>
-   editGUIs
-  </dt>
-  <dd>
-   opens the
-   <a class="new" href="GUI_Editor" title="GUI Editor">
-    GUI Editor
-   </a>
-  </dd>
-  <dt>
-   editLights
-  </dt>
-  <dd>
-   opens the
-   <a class="new" href="Light_Editor" title="Light Editor">
-    Light Editor
-   </a>
-   and can also be opened from the
-   <a href="Map_editor" title="Map editor">
-    Map editor
-   </a>
-   by pressing "j" on your keyboard
-  </dd>
-  <dt>
-   editPDAs
-  </dt>
-  <dd>
-   opens the
-   <a class="new" href="PDA_Editor" title="PDA Editor">
-    PDA Editor
-   </a>
-  </dd>
-  <dt>
-   editPlaybacks
-  </dt>
-  <dd>
-   opens the
-   <a class="new" href="Playback_Editor" title="Playback Editor">
-    Playback Editor
-   </a>
-  </dd>
-  <dt>
-   editReverb
-  </dt>
-  <dd>
-   opens the
-   <a class="new" href="Reverb_Editor" title="Reverb Editor">
-    Reverb Editor
-   </a>
-  </dd>
-  <dt>
-   editScripts
-  </dt>
-  <dd>
-   opens the
-   <a class="new" href="Script_Editor" title="Script Editor">
-    Script Editor
-   </a>
-  </dd>
-  <dt>
-   editSounds
-  </dt>
-  <dd>
-   opens the
-   <a class="new" href="Sound_Editor" title="Sound Editor">
-    Sound Editor
-   </a>
-  </dd>
-  <dt>
-   disconnect
-  </dt>
-  <dd>
-   causes the game to skip the introductory videos when starting.
-  </dd>
- </dl>
- <a name="CVars">
- </a>
- <h3>
-  CVars
- </h3>
- <dl>
-  <dt>
-   <a href="Com_allowConsole_%28cvar%29" title="Com allowConsole (cvar)">
-    com_allowconsole
-   </a>
-  </dt>
-  <dd>
-   Sets if the easy console key is used.
-  </dd>
-  <dt>
-   <a href="Fs_game_%28cvar%29" title="Fs game (cvar)">
-    fs_game
-   </a>
-  </dt>
-  <dd>
-   Used to load a different mod on startup.
-  </dd>
-  <dt>
-   <a href="Fs_game_base_%28cvar%29" title="Fs game base (cvar)">
-    fs_game_base
-   </a>
-  </dt>
-  <dd>
-   Adds a second folder to be loaded prior to the modfolder. Useful when modding a missionpack. More info here:
-   <a class="external autonumber" href="https://web.archive.org/web/20120102134924/http://zerowing.idsoftware.com/linux/doom/fs_game_base" title="http://zerowing.idsoftware.com/linux/doom/fs_game_base">
-    [1]
-   </a>
-  </dd>
-  <dt>
-   <a href="Net_allowCheats_%28cvar%29" title="Net allowCheats (cvar)">
-    net_allowcheats
-   </a>
-  </dt>
-  <dd>
-   Used to enable cheats.
-  </dd>
-  <dt>
-   <a href="R_fullscreen_%28cvar%29" title="R fullscreen (cvar)">
-    r_fullscreen
-   </a>
-  </dt>
-  <dd>
-   This will make the game run in fullscreen or in windowed mode. Mostly in combanation with some command.
-  </dd>
-  <dt>
-   <a href="R_multiSamples_%28cvar%29" title="R multiSamples (cvar)">
-    r_multisamples
-   </a>
-  </dt>
-  <dd>
-   Enables
-   <a href="Antialiasing" title="Antialiasing">
-    antialiasing
-   </a>
-   and sets the number of passes.
-  </dd>
- </dl>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:2550-0!1!0!0!!en!2 and timestamp 20120102091448 -->
+  <a name="CVars">
+  </a>
+  <h3>
+   CVars
+  </h3>
+  <dl>
+   <dt>
+    <a href="Com_allowConsole_%28cvar%29" title="Com allowConsole (cvar)">
+     com_allowconsole
+    </a>
+   </dt>
+   <dd>
+    Sets if the easy console key is used.
+   </dd>
+   <dt>
+    <a href="Fs_game_%28cvar%29" title="Fs game (cvar)">
+     fs_game
+    </a>
+   </dt>
+   <dd>
+    Used to load a different mod on startup.
+   </dd>
+   <dt>
+    <a href="Fs_game_base_%28cvar%29" title="Fs game base (cvar)">
+     fs_game_base
+    </a>
+   </dt>
+   <dd>
+    Adds a second folder to be loaded prior to the modfolder. Useful when modding a missionpack. More info here:
+    <a class="external autonumber" href="https://web.archive.org/web/20120102134924/http://zerowing.idsoftware.com/linux/doom/fs_game_base" title="http://zerowing.idsoftware.com/linux/doom/fs_game_base">
+     [1]
+    </a>
+   </dd>
+   <dt>
+    <a href="Net_allowCheats_%28cvar%29" title="Net allowCheats (cvar)">
+     net_allowcheats
+    </a>
+   </dt>
+   <dd>
+    Used to enable cheats.
+   </dd>
+   <dt>
+    <a href="R_fullscreen_%28cvar%29" title="R fullscreen (cvar)">
+     r_fullscreen
+    </a>
+   </dt>
+   <dd>
+    This will make the game run in fullscreen or in windowed mode. Mostly in combanation with some command.
+   </dd>
+   <dt>
+    <a href="R_multiSamples_%28cvar%29" title="R multiSamples (cvar)">
+     r_multisamples
+    </a>
+   </dt>
+   <dd>
+    Enables
+    <a href="Antialiasing" title="Antialiasing">
+     antialiasing
+    </a>
+    and sets the number of passes.
+   </dd>
+  </dl>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:2550-0!1!0!0!!en!2 and timestamp 20120102091448 -->
+ </body>
+</html>

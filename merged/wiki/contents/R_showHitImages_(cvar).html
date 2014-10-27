@@ -1,287 +1,291 @@
- <div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-  <a class="image" href="Image:Q4square_bg.png" title="Image:Q4square_bg.png">
-   <img alt="Image:Q4square_bg.png" height="50" longdesc="/wiki/Image:Q4square_bg.png" src="/w/images/6/69/Q4square_bg.png" width="50"/>
+<html>
+ <body>
+  <div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
+   <a class="image" href="Image:Q4square_bg.png" title="Image:Q4square_bg.png">
+    <img alt="Image:Q4square_bg.png" height="50" longdesc="/wiki/Image:Q4square_bg.png" src="/w/images/6/69/Q4square_bg.png" width="50"/>
+   </a>
+   The information on this page is specific to
+   <a href="Quake_4" title="Quake 4">
+    Quake 4
+   </a>
+   .
+  </div>
+  <hr/>
+  <a name="Description">
   </a>
-  The information on this page is specific to
-  <a href="Quake_4" title="Quake 4">
-   Quake 4
+  <h2>
+   Description
+  </h2>
+  <p>
+   Shows surfaces using the hit image instead of the actual texture.
+  </p>
+  <a name="Usage">
   </a>
-  .
- </div>
- <hr/>
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  Shows surfaces using the hit image instead of the actual texture.
- </p>
- <a name="Usage">
- </a>
- <h2>
-  Usage
- </h2>
- <p>
-  At the console type...
- </p>
- <pre>r_showEditorImages [flag]
+  <h2>
+   Usage
+  </h2>
+  <p>
+   At the console type...
+  </p>
+  <pre>r_showEditorImages [flag]
 </pre>
- <a name="Parameters">
- </a>
- <h2>
-  Parameters
- </h2>
- <ul>
-  <li>
-   [flag]
-   <ul>
-    <li>
-     0 - Render textures as usual.
-    </li>
-    <li>
-     1 - Add the
-     <a href="Texturing#Hit_maps" title="Texturing">
-      hit image
-     </a>
-     on top of the texture.
-    </li>
-    <li>
-     2 - Use the hit image instead.
-    </li>
-   </ul>
-  </li>
- </ul>
- <a name="Flags">
- </a>
- <h2>
-  Flags
- </h2>
- <table class="mwstyle">
-  <tr>
-   <th>
-    Flag
-   </th>
-   <th>
-    Enabled
-   </th>
-   <th>
-    Description
-   </th>
-  </tr>
-  <tr>
-   <td>
-    CVAR_ALL
-   </td>
-   <td>
-   </td>
-   <td>
-    all flags
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_BOOL
-   </td>
-   <td>
-   </td>
-   <td>
-    variable is a boolean
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_INTEGER
-   </td>
-   <td>
-   </td>
-   <td>
-    variable is an integer
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_FLOAT
-   </td>
-   <td>
-   </td>
-   <td>
-    variable is a float
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_SYSTEM
-   </td>
-   <td>
-    X
-   </td>
-   <td>
-    system variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_RENDERER
-   </td>
-   <td>
-   </td>
-   <td>
-    renderer variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_SOUND
-   </td>
-   <td>
-   </td>
-   <td>
-    sound variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_GUI
-   </td>
-   <td>
-   </td>
-   <td>
-    gui variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_GAME
-   </td>
-   <td>
-   </td>
-   <td>
-    game variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_TOOL
-   </td>
-   <td>
-   </td>
-   <td>
-    tool variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_USERINFO
-   </td>
-   <td>
-   </td>
-   <td>
-    sent to servers, available to menu
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_SERVERINFO
-   </td>
-   <td>
-   </td>
-   <td>
-    sent from servers, available to menu
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_NETWORKSYNC
-   </td>
-   <td>
-   </td>
-   <td>
-    cvar is synced from the server to clients
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_STATIC
-   </td>
-   <td>
-    X
-   </td>
-   <td>
-    statically declared, not user created
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_CHEAT
-   </td>
-   <td>
-    X
-   </td>
-   <td>
-    variable is considered a cheat
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_NOCHEAT
-   </td>
-   <td>
-   </td>
-   <td>
-    variable is not considered a cheat
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_INIT
-   </td>
-   <td>
-   </td>
-   <td>
-    can only be set from the command-line
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_ROM
-   </td>
-   <td>
-   </td>
-   <td>
-    display only, cannot be set by user at all
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_ARCHIVE
-   </td>
-   <td>
-   </td>
-   <td>
-    set to cause it to be saved to a config file
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_MODIFIED
-   </td>
-   <td>
-    X
-   </td>
-   <td>
-    set when the variable is modified
-   </td>
-  </tr>
- </table>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
- <p>
-  Not available.
- </p>
- <p>
-  <br/>
- </p>
+  <a name="Parameters">
+  </a>
+  <h2>
+   Parameters
+  </h2>
+  <ul>
+   <li>
+    [flag]
+    <ul>
+     <li>
+      0 - Render textures as usual.
+     </li>
+     <li>
+      1 - Add the
+      <a href="Texturing#Hit_maps" title="Texturing">
+       hit image
+      </a>
+      on top of the texture.
+     </li>
+     <li>
+      2 - Use the hit image instead.
+     </li>
+    </ul>
+   </li>
+  </ul>
+  <a name="Flags">
+  </a>
+  <h2>
+   Flags
+  </h2>
+  <table class="mwstyle">
+   <tr>
+    <th>
+     Flag
+    </th>
+    <th>
+     Enabled
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     CVAR_ALL
+    </td>
+    <td>
+    </td>
+    <td>
+     all flags
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_BOOL
+    </td>
+    <td>
+    </td>
+    <td>
+     variable is a boolean
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_INTEGER
+    </td>
+    <td>
+    </td>
+    <td>
+     variable is an integer
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_FLOAT
+    </td>
+    <td>
+    </td>
+    <td>
+     variable is a float
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_SYSTEM
+    </td>
+    <td>
+     X
+    </td>
+    <td>
+     system variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_RENDERER
+    </td>
+    <td>
+    </td>
+    <td>
+     renderer variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_SOUND
+    </td>
+    <td>
+    </td>
+    <td>
+     sound variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_GUI
+    </td>
+    <td>
+    </td>
+    <td>
+     gui variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_GAME
+    </td>
+    <td>
+    </td>
+    <td>
+     game variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_TOOL
+    </td>
+    <td>
+    </td>
+    <td>
+     tool variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_USERINFO
+    </td>
+    <td>
+    </td>
+    <td>
+     sent to servers, available to menu
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_SERVERINFO
+    </td>
+    <td>
+    </td>
+    <td>
+     sent from servers, available to menu
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_NETWORKSYNC
+    </td>
+    <td>
+    </td>
+    <td>
+     cvar is synced from the server to clients
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_STATIC
+    </td>
+    <td>
+     X
+    </td>
+    <td>
+     statically declared, not user created
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_CHEAT
+    </td>
+    <td>
+     X
+    </td>
+    <td>
+     variable is considered a cheat
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_NOCHEAT
+    </td>
+    <td>
+    </td>
+    <td>
+     variable is not considered a cheat
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_INIT
+    </td>
+    <td>
+    </td>
+    <td>
+     can only be set from the command-line
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_ROM
+    </td>
+    <td>
+    </td>
+    <td>
+     display only, cannot be set by user at all
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_ARCHIVE
+    </td>
+    <td>
+    </td>
+    <td>
+     set to cause it to be saved to a config file
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_MODIFIED
+    </td>
+    <td>
+     X
+    </td>
+    <td>
+     set when the variable is modified
+    </td>
+   </tr>
+  </table>
+  <a name="Notes">
+  </a>
+  <h2>
+   Notes
+  </h2>
+  <p>
+   Not available.
+  </p>
+  <p>
+   <br/>
+  </p>
+ </body>
+</html>

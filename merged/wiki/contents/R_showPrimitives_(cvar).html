@@ -1,320 +1,324 @@
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  Reports surfaces, vertex indexes, vertices and texture memory used in scene.
- </p>
- <a name="Usage">
- </a>
- <h2>
-  Usage
- </h2>
- <p>
-  At the console type...
- </p>
- <pre>r_showPrimitives [int]
+<html>
+ <body>
+  <a name="Description">
+  </a>
+  <h2>
+   Description
+  </h2>
+  <p>
+   Reports surfaces, vertex indexes, vertices and texture memory used in scene.
+  </p>
+  <a name="Usage">
+  </a>
+  <h2>
+   Usage
+  </h2>
+  <p>
+   At the console type...
+  </p>
+  <pre>r_showPrimitives [int]
 </pre>
- <a name="Parameters">
- </a>
- <h2>
-  Parameters
- </h2>
- <ul>
-  <li>
-   [int]
-   <ul>
-    <li>
-     0 - Disable.
-    </li>
-    <li>
-     1 - Display first set of information.
-    </li>
-    <li>
-     2 - Display second set of information.
-    </li>
-   </ul>
-  </li>
- </ul>
- <a name="Flags">
- </a>
- <h2>
-  Flags
- </h2>
- <table class="mwstyle">
-  <tr>
-   <th>
-    Flag
-   </th>
-   <th>
-    Enabled
-   </th>
-   <th>
-    Description
-   </th>
-  </tr>
-  <tr>
-   <td>
-    CVAR_ALL
-   </td>
-   <td>
-   </td>
-   <td>
-    all flags
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_BOOL
-   </td>
-   <td>
-   </td>
-   <td>
-    variable is a boolean
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_INTEGER
-   </td>
-   <td>
-    X
-   </td>
-   <td>
-    variable is an integer
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_FLOAT
-   </td>
-   <td>
-   </td>
-   <td>
-    variable is a float
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_SYSTEM
-   </td>
-   <td>
-   </td>
-   <td>
-    system variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_RENDERER
-   </td>
-   <td>
-    X
-   </td>
-   <td>
-    renderer variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_SOUND
-   </td>
-   <td>
-   </td>
-   <td>
-    sound variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_GUI
-   </td>
-   <td>
-   </td>
-   <td>
-    gui variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_GAME
-   </td>
-   <td>
-   </td>
-   <td>
-    game variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_TOOL
-   </td>
-   <td>
-   </td>
-   <td>
-    tool variable
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_USERINFO
-   </td>
-   <td>
-   </td>
-   <td>
-    sent to servers, available to menu
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_SERVERINFO
-   </td>
-   <td>
-   </td>
-   <td>
-    sent from servers, available to menu
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_NETWORKSYNC
-   </td>
-   <td>
-   </td>
-   <td>
-    cvar is synced from the server to clients
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_STATIC
-   </td>
-   <td>
-    X
-   </td>
-   <td>
-    statically declared, not user created
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_CHEAT
-   </td>
-   <td>
-    X
-   </td>
-   <td>
-    variable is considered a cheat
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_NOCHEAT
-   </td>
-   <td>
-   </td>
-   <td>
-    variable is not considered a cheat
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_INIT
-   </td>
-   <td>
-   </td>
-   <td>
-    can only be set from the command-line
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_ROM
-   </td>
-   <td>
-   </td>
-   <td>
-    display only, cannot be set by user at all
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_ARCHIVE
-   </td>
-   <td>
-   </td>
-   <td>
-    set to cause it to be saved to a config file
-   </td>
-  </tr>
-  <tr>
-   <td>
-    CVAR_MODIFIED
-   </td>
-   <td>
-    X
-   </td>
-   <td>
-    set when the variable is modified
-   </td>
-  </tr>
- </table>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
- <p>
-  The information displayed with "1":
- </p>
- <ul>
-  <li>
-   views - Number of drawn camera views.
-  </li>
-  <li>
-   draws - How many draw calls are sent to the GPU.
-  </li>
-  <li>
-   tris - Number of total polygons sent to the GPU.
-  </li>
-  <li>
-   shdw - Number of shadow polygons sent to the GPU.
-  </li>
-  <li>
-   vbo - Number of vertex buffers.
-  </li>
-  <li>
-   image - How much memory is being used by textures in the current scene only (it doesn't include frame buffer memory).
-  </li>
- </ul>
- <p>
-  The information displayed with "2":
- </p>
- <ul>
-  <li>
-   v - Same as views above.
-  </li>
-  <li>
-   ds - Same as draws above.
-  </li>
-  <li>
-   t - Number of polygons (after removing the number of shadow polygons) / "ambient" polygons.
-  </li>
-  <li>
-   v - Number of vertices (after removing the number of shadow vertices) / "ambient" vertices.
-  </li>
-  <li>
-   st - Number of shadow triangles only.
-  </li>
-  <li>
-   sv - Number of shadow vertices only.
-  </li>
-  <li>
-   image - Same as image above.
-  </li>
- </ul>
- <p>
-  <br/>
- </p>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:1061-0!1!0!0!!en!2 and timestamp 20100131230702 -->
+  <a name="Parameters">
+  </a>
+  <h2>
+   Parameters
+  </h2>
+  <ul>
+   <li>
+    [int]
+    <ul>
+     <li>
+      0 - Disable.
+     </li>
+     <li>
+      1 - Display first set of information.
+     </li>
+     <li>
+      2 - Display second set of information.
+     </li>
+    </ul>
+   </li>
+  </ul>
+  <a name="Flags">
+  </a>
+  <h2>
+   Flags
+  </h2>
+  <table class="mwstyle">
+   <tr>
+    <th>
+     Flag
+    </th>
+    <th>
+     Enabled
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td>
+     CVAR_ALL
+    </td>
+    <td>
+    </td>
+    <td>
+     all flags
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_BOOL
+    </td>
+    <td>
+    </td>
+    <td>
+     variable is a boolean
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_INTEGER
+    </td>
+    <td>
+     X
+    </td>
+    <td>
+     variable is an integer
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_FLOAT
+    </td>
+    <td>
+    </td>
+    <td>
+     variable is a float
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_SYSTEM
+    </td>
+    <td>
+    </td>
+    <td>
+     system variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_RENDERER
+    </td>
+    <td>
+     X
+    </td>
+    <td>
+     renderer variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_SOUND
+    </td>
+    <td>
+    </td>
+    <td>
+     sound variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_GUI
+    </td>
+    <td>
+    </td>
+    <td>
+     gui variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_GAME
+    </td>
+    <td>
+    </td>
+    <td>
+     game variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_TOOL
+    </td>
+    <td>
+    </td>
+    <td>
+     tool variable
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_USERINFO
+    </td>
+    <td>
+    </td>
+    <td>
+     sent to servers, available to menu
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_SERVERINFO
+    </td>
+    <td>
+    </td>
+    <td>
+     sent from servers, available to menu
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_NETWORKSYNC
+    </td>
+    <td>
+    </td>
+    <td>
+     cvar is synced from the server to clients
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_STATIC
+    </td>
+    <td>
+     X
+    </td>
+    <td>
+     statically declared, not user created
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_CHEAT
+    </td>
+    <td>
+     X
+    </td>
+    <td>
+     variable is considered a cheat
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_NOCHEAT
+    </td>
+    <td>
+    </td>
+    <td>
+     variable is not considered a cheat
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_INIT
+    </td>
+    <td>
+    </td>
+    <td>
+     can only be set from the command-line
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_ROM
+    </td>
+    <td>
+    </td>
+    <td>
+     display only, cannot be set by user at all
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_ARCHIVE
+    </td>
+    <td>
+    </td>
+    <td>
+     set to cause it to be saved to a config file
+    </td>
+   </tr>
+   <tr>
+    <td>
+     CVAR_MODIFIED
+    </td>
+    <td>
+     X
+    </td>
+    <td>
+     set when the variable is modified
+    </td>
+   </tr>
+  </table>
+  <a name="Notes">
+  </a>
+  <h2>
+   Notes
+  </h2>
+  <p>
+   The information displayed with "1":
+  </p>
+  <ul>
+   <li>
+    views - Number of drawn camera views.
+   </li>
+   <li>
+    draws - How many draw calls are sent to the GPU.
+   </li>
+   <li>
+    tris - Number of total polygons sent to the GPU.
+   </li>
+   <li>
+    shdw - Number of shadow polygons sent to the GPU.
+   </li>
+   <li>
+    vbo - Number of vertex buffers.
+   </li>
+   <li>
+    image - How much memory is being used by textures in the current scene only (it doesn't include frame buffer memory).
+   </li>
+  </ul>
+  <p>
+   The information displayed with "2":
+  </p>
+  <ul>
+   <li>
+    v - Same as views above.
+   </li>
+   <li>
+    ds - Same as draws above.
+   </li>
+   <li>
+    t - Number of polygons (after removing the number of shadow polygons) / "ambient" polygons.
+   </li>
+   <li>
+    v - Number of vertices (after removing the number of shadow vertices) / "ambient" vertices.
+   </li>
+   <li>
+    st - Number of shadow triangles only.
+   </li>
+   <li>
+    sv - Number of shadow vertices only.
+   </li>
+   <li>
+    image - Same as image above.
+   </li>
+  </ul>
+  <p>
+   <br/>
+  </p>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:1061-0!1!0!0!!en!2 and timestamp 20100131230702 -->
+ </body>
+</html>

@@ -1,142 +1,146 @@
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  The DirectDraw Surface graphics file format was established by Microsoft for use with the DirectX SDK. The format is specifically designed for use in real-time rendering applications, such as 3D games. It can be used to store textures, cubemaps, mipmap levels, and allows for compression. Due to the fact that most video cards natively support DXTn texture compression, use of this format can save memory on the video card.
- </p>
- <p>
-  Drivers can perform this compression on the fly thanks to the GL_ARB_texture_compression extension. Thus, it would appear the only advantage of DDS is just reduced space (meaning faster loading) without "double degradation" caused by recompressing already-compressed formats like JPEG.  However, DDS files expose this automated process to artists.  This allows the image author to correct or prevent artifacts that might occur in a completely automated compression process, or even emphasize specific parts of an image's MIP maps.
- </p>
- <a name="General_File_Format_Specifications">
- </a>
- <h2>
-  General File Format Specifications
- </h2>
- <table border="1" cellpadding="0" cellspacing="0" style="text-align: center; ">
-  <tr>
-   <th>
-    Type
-   </th>
-   <td>
-    Raster Image Format
-   </td>
-  </tr>
-  <tr>
-   <th>
-    Extension
-   </th>
-   <td>
-    *.DDS
-   </td>
-  </tr>
-  <tr>
-   <th>
-    Compression
-   </th>
-   <td>
-    None, DXTn
-   </td>
-  </tr>
-  <tr>
-   <th>
-    Color Depth
-   </th>
-   <td>
-    1- to 32-bits
-   </td>
-  </tr>
- </table>
- <a name="Engine_specific_issues">
- </a>
- <h2>
-  Engine specific issues
- </h2>
- <p>
-  Doom 3 makes use of .DDS files when running at a quality setting lower than "Ultra" in order to save texture memory (except for normal maps which only use the .DDS versions at "Medium" or below).
- </p>
- <p>
-  You can force everything to load from the TGA files by setting
-  <a href="Image_usePrecompressedTextures_%28cvar%29" title="Image usePrecompressedTextures (cvar)">
-   image_usePrecompressedTextures
+<html>
+ <body>
+  <a name="Description">
   </a>
-  to 0. The images will still get compressed dynamically at load time (which will slow down loading significantly), but it will make it so that when you change a TGA it will actually show up in game without having to regenerate the DDS files. You can also set
-  <a href="Image_useCompression_%28cvar%29" title="Image useCompression (cvar)">
-   image_useCompression
+  <h2>
+   Description
+  </h2>
+  <p>
+   The DirectDraw Surface graphics file format was established by Microsoft for use with the DirectX SDK. The format is specifically designed for use in real-time rendering applications, such as 3D games. It can be used to store textures, cubemaps, mipmap levels, and allows for compression. Due to the fact that most video cards natively support DXTn texture compression, use of this format can save memory on the video card.
+  </p>
+  <p>
+   Drivers can perform this compression on the fly thanks to the GL_ARB_texture_compression extension. Thus, it would appear the only advantage of DDS is just reduced space (meaning faster loading) without "double degradation" caused by recompressing already-compressed formats like JPEG.  However, DDS files expose this automated process to artists.  This allows the image author to correct or prevent artifacts that might occur in a completely automated compression process, or even emphasize specific parts of an image's MIP maps.
+  </p>
+  <a name="General_File_Format_Specifications">
   </a>
-  and
-  <a href="Image_useNormalCompression_%28cvar%29" title="Image useNormalCompression (cvar)">
-   image_useNormalCompression
+  <h2>
+   General File Format Specifications
+  </h2>
+  <table border="1" cellpadding="0" cellspacing="0" style="text-align: center; ">
+   <tr>
+    <th>
+     Type
+    </th>
+    <td>
+     Raster Image Format
+    </td>
+   </tr>
+   <tr>
+    <th>
+     Extension
+    </th>
+    <td>
+     *.DDS
+    </td>
+   </tr>
+   <tr>
+    <th>
+     Compression
+    </th>
+    <td>
+     None, DXTn
+    </td>
+   </tr>
+   <tr>
+    <th>
+     Color Depth
+    </th>
+    <td>
+     1- to 32-bits
+    </td>
+   </tr>
+  </table>
+  <a name="Engine_specific_issues">
   </a>
-  to 0, which will prevent them from getting compressed at load time (this is similar to running in ultra quality mode).
- </p>
- <p>
-  <i>
-   <b>
-    Notice:
-   </b>
-  </i>
-  This means that if you make changes to a texture and you are running a quality level lower than "Ultra", you will not see the changes because Doom 3 ís reading from the .DDS file.
- </p>
- <p>
-  If you don't have .DDS files for every texture you have made, Doom 3 will create them for you, but separate utilities are often used to convert a .TGA or other texture format into a .DDS format. Some of these tools are available here:
- </p>
- <ul>
-  <li>
-   <a class="external text" href="http://developer.nvidia.com/object/nv_texture_tools.html" title="http://developer.nvidia.com/object/nv_texture_tools.html">
-    nVidia Texture Tools
+  <h2>
+   Engine specific issues
+  </h2>
+  <p>
+   Doom 3 makes use of .DDS files when running at a quality setting lower than "Ultra" in order to save texture memory (except for normal maps which only use the .DDS versions at "Medium" or below).
+  </p>
+  <p>
+   You can force everything to load from the TGA files by setting
+   <a href="Image_usePrecompressedTextures_%28cvar%29" title="Image usePrecompressedTextures (cvar)">
+    image_usePrecompressedTextures
    </a>
-  </li>
-  <li>
+   to 0. The images will still get compressed dynamically at load time (which will slow down loading significantly), but it will make it so that when you change a TGA it will actually show up in game without having to regenerate the DDS files. You can also set
+   <a href="Image_useCompression_%28cvar%29" title="Image useCompression (cvar)">
+    image_useCompression
+   </a>
+   and
+   <a href="Image_useNormalCompression_%28cvar%29" title="Image useNormalCompression (cvar)">
+    image_useNormalCompression
+   </a>
+   to 0, which will prevent them from getting compressed at load time (this is similar to running in ultra quality mode).
+  </p>
+  <p>
+   <i>
+    <b>
+     Notice:
+    </b>
+   </i>
+   This means that if you make changes to a texture and you are running a quality level lower than "Ultra", you will not see the changes because Doom 3 ís reading from the .DDS file.
+  </p>
+  <p>
+   If you don't have .DDS files for every texture you have made, Doom 3 will create them for you, but separate utilities are often used to convert a .TGA or other texture format into a .DDS format. Some of these tools are available here:
+  </p>
+  <ul>
+   <li>
+    <a class="external text" href="http://developer.nvidia.com/object/nv_texture_tools.html" title="http://developer.nvidia.com/object/nv_texture_tools.html">
+     nVidia Texture Tools
+    </a>
+   </li>
+   <li>
+    <a class="external text" href="http://www.ati.com/developer/compressonator.html" title="http://www.ati.com/developer/compressonator.html">
+     ATI Compressonator
+    </a>
+   </li>
+  </ul>
+  <a name="Notes">
+  </a>
+  <h2>
+   Notes
+  </h2>
+  <p>
+   To convert an image to DDS, you can use the same tool id used: The
    <a class="external text" href="http://www.ati.com/developer/compressonator.html" title="http://www.ati.com/developer/compressonator.html">
-    ATI Compressonator
+    Compressonator
    </a>
-  </li>
- </ul>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
- <p>
-  To convert an image to DDS, you can use the same tool id used: The
-  <a class="external text" href="http://www.ati.com/developer/compressonator.html" title="http://www.ati.com/developer/compressonator.html">
-   Compressonator
-  </a>
-  from ATI.
- </p>
- <ul>
-  <li>
-   To create DDS files in Photoshop you must download the
-   <a class="external text" href="http://developer.nvidia.com/object/nv_texture_tools.html" title="http://developer.nvidia.com/object/nv_texture_tools.html">
-    Nvidia DDS plugin
+   from ATI.
+  </p>
+  <ul>
+   <li>
+    To create DDS files in Photoshop you must download the
+    <a class="external text" href="http://developer.nvidia.com/object/nv_texture_tools.html" title="http://developer.nvidia.com/object/nv_texture_tools.html">
+     Nvidia DDS plugin
+    </a>
+    .
+   </li>
+   <li>
+    To create and edit DDS files in The Gimp, you must download a
+    <a class="external text" href="https://web.archive.org/web/20121205072325/http://nifelheim.dyndns.org/~cocidius/dds/" title="http://nifelheim.dyndns.org/~cocidius/dds/">
+     DDS plugin
+    </a>
+    .
+   </li>
+  </ul>
+  <p>
+   See the
+   <a href="Texturing" title="Texturing">
+    Texturing
+   </a>
+   page for which DXTn method to use depending on the
+   <a href="Images" title="Images">
+    image
    </a>
    .
-  </li>
-  <li>
-   To create and edit DDS files in The Gimp, you must download a
-   <a class="external text" href="https://web.archive.org/web/20121205072325/http://nifelheim.dyndns.org/~cocidius/dds/" title="http://nifelheim.dyndns.org/~cocidius/dds/">
-    DDS plugin
+  </p>
+  <p>
+   A DDS file, and its MIP maps, may be edited.  See
+   <a href="Editing_MIP_Maps" title="Editing MIP Maps">
+    Editing MIP Maps
    </a>
-   .
-  </li>
- </ul>
- <p>
-  See the
-  <a href="Texturing" title="Texturing">
-   Texturing
-  </a>
-  page for which DXTn method to use depending on the
-  <a href="Images" title="Images">
-   image
-  </a>
-  .
- </p>
- <p>
-  A DDS file, and its MIP maps, may be edited.  See
-  <a href="Editing_MIP_Maps" title="Editing MIP Maps">
-   Editing MIP Maps
-  </a>
- </p>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:1018-0!1!0!0!!en!2 and timestamp 20121204112248 -->
+  </p>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:1018-0!1!0!0!!en!2 and timestamp 20121204112248 -->
+ </body>
+</html>

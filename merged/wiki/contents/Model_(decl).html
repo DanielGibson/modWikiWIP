@@ -1,15 +1,17 @@
- <p>
-  Model declarations define a model reference that associates a mesh, it's animations, and any additional settings with a given name so that they can be referenced as a group. This can prove useful. For instance, allowing you to reuse animations with different models provided they share the same skeleton.
- </p>
- <p>
-  It's generally used with animated models although there doesn't appear to be any indication that you couldn't use them with a static model as well.
- </p>
- <a name="Syntax">
- </a>
- <h2>
-  Syntax
- </h2>
- <pre>model [name] {
+<html>
+ <body>
+  <p>
+   Model declarations define a model reference that associates a mesh, it's animations, and any additional settings with a given name so that they can be referenced as a group. This can prove useful. For instance, allowing you to reuse animations with different models provided they share the same skeleton.
+  </p>
+  <p>
+   It's generally used with animated models although there doesn't appear to be any indication that you couldn't use them with a static model as well.
+  </p>
+  <a name="Syntax">
+  </a>
+  <h2>
+   Syntax
+  </h2>
+  <pre>model [name] {
    inherit [model]
    skin [skin]
    mesh [file]
@@ -24,153 +26,153 @@
    channel [name] ( [joints] )   
 }
 </pre>
- <p>
-  Model declarations begin with a header which consists of the keyword "model" followed by the name of the model.
- </p>
- <p>
-  The header is followed by the body of the declaration which is enclosed in curly brackets.
- </p>
- <p>
-  The body is composed of a series of keywords and their parameters.
- </p>
- <a name="Keywords">
- </a>
- <h2>
-  Keywords
- </h2>
- <dl>
-  <dt>
-   inherit
-  </dt>
-  <dd>
-   Causes a model declaration to inherit the properties of the specified model declaration
-  </dd>
-  <dd>
-   <pre>inherit [model]</pre>
-   <ul>
-    <li>
-     [model] - The model declaration to inherit from
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   skin
-  </dt>
-  <dd>
-   Applies a skin declaration
-  </dd>
-  <dd>
-   <pre>skin [skin]</pre>
-   <ul>
-    <li>
-     [skin] - The skin declaration to apply
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   mesh
-  </dt>
-  <dd>
-   Defines the model associated with this model declaration
-  </dd>
-  <dd>
-   <pre>mesh [file]</pre>
-   <ul>
-    <li>
-     [file] - The MD5mesh to use
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   remove
-  </dt>
-  <dd>
-   Removes the specified animation from the list of inherited animations
-  </dd>
-  <dd>
-   <pre>remove [anim]</pre>
-   <ul>
-    <li>
-     [anim] - The name of the animation to remove
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   anim
-  </dt>
-  <dd>
-   Associates an animation with this model declaration. Optionally opens a new set of curly brackets for use with frame commands.
-  </dd>
-  <dd>
-   <pre>anim [name] [file]</pre>
-   <ul>
-    <li>
-     [name] - The name to use
-    </li>
-    <li>
-     [file] - The MD5anim to use
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   offset
-  </dt>
-  <dd>
-   An offset to apply to this model
-  </dd>
-  <dd>
-   <pre>offset [xyz]</pre>
-   <ul>
-    <li>
-     [xyz] - A series of coordinates separated by commas
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   channel
-  </dt>
-  <dd>
-   Defines a group of joints so that animations can be applied to a select portions of a model
-  </dd>
-  <dd>
-   <pre>channel [name] ( [joints] )</pre>
-   <ul>
-    <li>
-     [name] - The name of the channel
-    </li>
-    <li>
-     [joints] - A list of joints
-    </li>
-   </ul>
-  </dd>
- </dl>
- <a name="Frame_Commands">
- </a>
- <h2>
-  Frame Commands
- </h2>
- <p>
-  Through the use of the anim keyword, it is possible to trigger events on a per frame basis. This is accomplished by opening a new set of curly brackets as outlined in the syntax section.
- </p>
- <p>
-  Within this unique set of curly brackets you can issue commands on a per frame basis. This allows you to play footstep sounds in sequence with a walking animation, throw fireballs in sequence with a throwing animation, ect...
- </p>
- <p>
-  To further elaborate on the proper syntax...
- </p>
- <pre>...
+  <p>
+   Model declarations begin with a header which consists of the keyword "model" followed by the name of the model.
+  </p>
+  <p>
+   The header is followed by the body of the declaration which is enclosed in curly brackets.
+  </p>
+  <p>
+   The body is composed of a series of keywords and their parameters.
+  </p>
+  <a name="Keywords">
+  </a>
+  <h2>
+   Keywords
+  </h2>
+  <dl>
+   <dt>
+    inherit
+   </dt>
+   <dd>
+    Causes a model declaration to inherit the properties of the specified model declaration
+   </dd>
+   <dd>
+    <pre>inherit [model]</pre>
+    <ul>
+     <li>
+      [model] - The model declaration to inherit from
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    skin
+   </dt>
+   <dd>
+    Applies a skin declaration
+   </dd>
+   <dd>
+    <pre>skin [skin]</pre>
+    <ul>
+     <li>
+      [skin] - The skin declaration to apply
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    mesh
+   </dt>
+   <dd>
+    Defines the model associated with this model declaration
+   </dd>
+   <dd>
+    <pre>mesh [file]</pre>
+    <ul>
+     <li>
+      [file] - The MD5mesh to use
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    remove
+   </dt>
+   <dd>
+    Removes the specified animation from the list of inherited animations
+   </dd>
+   <dd>
+    <pre>remove [anim]</pre>
+    <ul>
+     <li>
+      [anim] - The name of the animation to remove
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    anim
+   </dt>
+   <dd>
+    Associates an animation with this model declaration. Optionally opens a new set of curly brackets for use with frame commands.
+   </dd>
+   <dd>
+    <pre>anim [name] [file]</pre>
+    <ul>
+     <li>
+      [name] - The name to use
+     </li>
+     <li>
+      [file] - The MD5anim to use
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    offset
+   </dt>
+   <dd>
+    An offset to apply to this model
+   </dd>
+   <dd>
+    <pre>offset [xyz]</pre>
+    <ul>
+     <li>
+      [xyz] - A series of coordinates separated by commas
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    channel
+   </dt>
+   <dd>
+    Defines a group of joints so that animations can be applied to a select portions of a model
+   </dd>
+   <dd>
+    <pre>channel [name] ( [joints] )</pre>
+    <ul>
+     <li>
+      [name] - The name of the channel
+     </li>
+     <li>
+      [joints] - A list of joints
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <a name="Frame_Commands">
+  </a>
+  <h2>
+   Frame Commands
+  </h2>
+  <p>
+   Through the use of the anim keyword, it is possible to trigger events on a per frame basis. This is accomplished by opening a new set of curly brackets as outlined in the syntax section.
+  </p>
+  <p>
+   Within this unique set of curly brackets you can issue commands on a per frame basis. This allows you to play footstep sounds in sequence with a walking animation, throw fireballs in sequence with a throwing animation, ect...
+  </p>
+  <p>
+   To further elaborate on the proper syntax...
+  </p>
+  <pre>...
    anim [name] [file] {
       frame [number]    [command]
       frame [number]    [command]
@@ -179,501 +181,503 @@
    }
 ...
 </pre>
- <ul>
-  <li>
-   [number] - Refers to the frame number in the sequence where the command should be issued
-  </li>
-  <li>
-   [command] - A frame command and it's corresponding parameters.
-  </li>
- </ul>
- <dl>
-  <dt>
-   call
-  </dt>
-  <dd>
-   Calls the specified script function
-  </dd>
-  <dd>
-   <pre>call [function]</pre>
-   <ul>
-    <li>
-     [function] - The name of the script function to call
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   object_call
-  </dt>
-  <dd>
-   Calls the specified script function on the entity
-  </dd>
-  <dd>
-   <pre>object_call [function]</pre>
-   <ul>
-    <li>
-     [function] - The name of the entity specific script function to call
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   event
-  </dt>
-  <dd>
-   Sends the specified event to the entity
-  </dd>
-  <dd>
-   <pre>event [name] [args]</pre>
-   <ul>
-    <li>
-     [name] - The name of the coded event
-    </li>
-    <li>
-     [args] - Any arguments expected by the event
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   sound
-  </dt>
-  <dd>
-   Plays the specified sound on any available channel
-  </dd>
-  <dd>
-   <pre>sound [snd]</pre>
-   <ul>
-    <li>
-     [snd] - The sound file or shader to play
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   sound_voice
-  </dt>
-  <dd>
-   Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
-  </dd>
-  <dd>
-   <pre>sound_voice [snd]</pre>
-   <ul>
-    <li>
-     [snd] - The sound file or shader to play
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   sound_voice2
-  </dt>
-  <dd>
-   Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
-  </dd>
-  <dd>
-   <pre>sound_voice2 [snd]</pre>
-   <ul>
-    <li>
-     [snd] - The sound file or shader to play
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   sound_body
-  </dt>
-  <dd>
-   Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
-  </dd>
-  <dd>
-   <pre>sound_body [snd]</pre>
-   <ul>
-    <li>
-     [snd] - The sound file or shader to play
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   sound_body2
-  </dt>
-  <dd>
-   Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
-  </dd>
-  <dd>
-   <pre>sound_body2 [snd]</pre>
-   <ul>
-    <li>
-     [snd] - The sound file or shader to play
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   sound_body3
-  </dt>
-  <dd>
-   Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
-  </dd>
-  <dd>
-   <pre>sound_body3 [snd]</pre>
-   <ul>
-    <li>
-     [snd] - The sound file or shader to play
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   sound_weapon
-  </dt>
-  <dd>
-   Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
-  </dd>
-  <dd>
-   <pre>sound_weapon [snd]</pre>
-   <ul>
-    <li>
-     [snd] - The sound file or shader to play
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   sound_global
-  </dt>
-  <dd>
-   Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
-  </dd>
-  <dd>
-   <pre>sound_global [snd]</pre>
-   <ul>
-    <li>
-     [snd] - The sound file or shader to play
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   sound_item
-  </dt>
-  <dd>
-   Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
-  </dd>
-  <dd>
-   <pre>sound_item [snd]</pre>
-   <ul>
-    <li>
-     [snd] - The sound file or shader to play
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   sound_chatter
-  </dt>
-  <dd>
-   Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
-  </dd>
-  <dd>
-   <pre>sound_chatter [snd]</pre>
-   <ul>
-    <li>
-     [snd] - The sound file or shader to play
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   skin
-  </dt>
-  <dd>
-   Changes the model's skin
-  </dd>
-  <dd>
-   <pre>skin [skin]</pre>
-   <ul>
-    <li>
-     [skin] - The name of the skin declaration to apply
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   fx
-  </dt>
-  <dd>
-   Triggers an effect defined by the declaration
-  </dd>
-  <dd>
-   <pre>fx [name]</pre>
-   <ul>
-    <li>
-     [name] - The name of the effect to trigger
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   trigger
-  </dt>
-  <dd>
-   Triggers the level trigger
-  </dd>
-  <dd>
-   <pre>trigger [name]</pre>
-   <ul>
-    <li>
-     [name] - The name of the trigger to activate
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   recordDemo
-  </dt>
-  <dd>
-   Starts recording a demo or stops recording if blank
-  </dd>
-  <dd>
-   <pre>recordDemo [name]</pre>
-   <ul>
-    <li>
-     [name] - The name of the demo to start recording
-    </li>
-   </ul>
-  </dd>
- </dl>
- <dl>
-  <dt>
-   aviGame
-  </dt>
-  <dd>
-   Starts an aviGame. Useful for making animations to be used on video screens (such as all the talking head videos in Doom 3)
-  </dd>
-  <dd>
-   <pre>aviGame [name]</pre>
-   <ul>
-    <li>
-     [name] - The name of the image sequence to output
-    </li>
-   </ul>
-  </dd>
- </dl>
- <a name="Frame_Command_Aliases">
- </a>
- <h3>
-  Frame Command Aliases
- </h3>
- <table border="1" cellpadding="0" cellspacing="0" style="width:50%">
-  <tr style="background:#AA0000; color:white">
-   <th>
-    COMMAND
-   </th>
-   <th>
-    ALIAS
-   </th>
-  </tr>
-  <tr align="center">
-   <td>
-    triggerSmokeParticle
-   </td>
-   <td>
-    event triggerParticles
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    melee
-   </td>
-   <td>
-    event attackMelee
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    direct_damage
-   </td>
-   <td>
-    event directDamage
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    attack_begin
-   </td>
-   <td>
-    event attackBegin
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    attack_end
-   </td>
-   <td>
-    event attackEnd
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    muzzle_flash
-   </td>
-   <td>
-    event muzzleFlash
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    create_missile
-   </td>
-   <td>
-    event createMissile
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    launch_missile
-   </td>
-   <td>
-    event launchMissile
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    fire_missile_at_target
-   </td>
-   <td>
-    event fireMissileAtTarget
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    footstep
-   </td>
-   <td>
-    event footstep
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    leftfoot
-   </td>
-   <td>
-    event leftfoot
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    rightfoot
-   </td>
-   <td>
-    event rightfoot
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    jump
-   </td>
-   <td>
-    event jump
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    enableEyeFocus
-   </td>
-   <td>
-    event enableEyeFocus
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    disableEyeFocus
-   </td>
-   <td>
-    event disableEyeFocus
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    disableGravity
-   </td>
-   <td>
-    event disableGravity
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    enableGravity
-   </td>
-   <td>
-    event enableGravity
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    enableClip
-   </td>
-   <td>
-    event enableClip
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    disableClip
-   </td>
-   <td>
-    event disableClip
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    enableWalkIK
-   </td>
-   <td>
-    event enableWalkIK
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    disableWalkIK
-   </td>
-   <td>
-    event disableWalkIK
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    enableLegIK
-   </td>
-   <td>
-    event enableLegIK
-   </td>
-  </tr>
-  <tr align="center">
-   <td>
-    disableLegIK
-   </td>
-   <td>
-    event disableLegIK
-   </td>
-  </tr>
- </table>
+  <ul>
+   <li>
+    [number] - Refers to the frame number in the sequence where the command should be issued
+   </li>
+   <li>
+    [command] - A frame command and it's corresponding parameters.
+   </li>
+  </ul>
+  <dl>
+   <dt>
+    call
+   </dt>
+   <dd>
+    Calls the specified script function
+   </dd>
+   <dd>
+    <pre>call [function]</pre>
+    <ul>
+     <li>
+      [function] - The name of the script function to call
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    object_call
+   </dt>
+   <dd>
+    Calls the specified script function on the entity
+   </dd>
+   <dd>
+    <pre>object_call [function]</pre>
+    <ul>
+     <li>
+      [function] - The name of the entity specific script function to call
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    event
+   </dt>
+   <dd>
+    Sends the specified event to the entity
+   </dd>
+   <dd>
+    <pre>event [name] [args]</pre>
+    <ul>
+     <li>
+      [name] - The name of the coded event
+     </li>
+     <li>
+      [args] - Any arguments expected by the event
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    sound
+   </dt>
+   <dd>
+    Plays the specified sound on any available channel
+   </dd>
+   <dd>
+    <pre>sound [snd]</pre>
+    <ul>
+     <li>
+      [snd] - The sound file or shader to play
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    sound_voice
+   </dt>
+   <dd>
+    Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
+   </dd>
+   <dd>
+    <pre>sound_voice [snd]</pre>
+    <ul>
+     <li>
+      [snd] - The sound file or shader to play
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    sound_voice2
+   </dt>
+   <dd>
+    Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
+   </dd>
+   <dd>
+    <pre>sound_voice2 [snd]</pre>
+    <ul>
+     <li>
+      [snd] - The sound file or shader to play
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    sound_body
+   </dt>
+   <dd>
+    Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
+   </dd>
+   <dd>
+    <pre>sound_body [snd]</pre>
+    <ul>
+     <li>
+      [snd] - The sound file or shader to play
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    sound_body2
+   </dt>
+   <dd>
+    Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
+   </dd>
+   <dd>
+    <pre>sound_body2 [snd]</pre>
+    <ul>
+     <li>
+      [snd] - The sound file or shader to play
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    sound_body3
+   </dt>
+   <dd>
+    Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
+   </dd>
+   <dd>
+    <pre>sound_body3 [snd]</pre>
+    <ul>
+     <li>
+      [snd] - The sound file or shader to play
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    sound_weapon
+   </dt>
+   <dd>
+    Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
+   </dd>
+   <dd>
+    <pre>sound_weapon [snd]</pre>
+    <ul>
+     <li>
+      [snd] - The sound file or shader to play
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    sound_global
+   </dt>
+   <dd>
+    Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
+   </dd>
+   <dd>
+    <pre>sound_global [snd]</pre>
+    <ul>
+     <li>
+      [snd] - The sound file or shader to play
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    sound_item
+   </dt>
+   <dd>
+    Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
+   </dd>
+   <dd>
+    <pre>sound_item [snd]</pre>
+    <ul>
+     <li>
+      [snd] - The sound file or shader to play
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    sound_chatter
+   </dt>
+   <dd>
+    Plays the specified sound on the specified channel. If a sound is being played on the body channel, and another sound is requested to play, then the first sound is halted. Since the footstep sounds are all defined to be on the body channel, there will never be 2 footstep sounds played twice on the same entity at the same time.
+   </dd>
+   <dd>
+    <pre>sound_chatter [snd]</pre>
+    <ul>
+     <li>
+      [snd] - The sound file or shader to play
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    skin
+   </dt>
+   <dd>
+    Changes the model's skin
+   </dd>
+   <dd>
+    <pre>skin [skin]</pre>
+    <ul>
+     <li>
+      [skin] - The name of the skin declaration to apply
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    fx
+   </dt>
+   <dd>
+    Triggers an effect defined by the declaration
+   </dd>
+   <dd>
+    <pre>fx [name]</pre>
+    <ul>
+     <li>
+      [name] - The name of the effect to trigger
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    trigger
+   </dt>
+   <dd>
+    Triggers the level trigger
+   </dd>
+   <dd>
+    <pre>trigger [name]</pre>
+    <ul>
+     <li>
+      [name] - The name of the trigger to activate
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    recordDemo
+   </dt>
+   <dd>
+    Starts recording a demo or stops recording if blank
+   </dd>
+   <dd>
+    <pre>recordDemo [name]</pre>
+    <ul>
+     <li>
+      [name] - The name of the demo to start recording
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <dl>
+   <dt>
+    aviGame
+   </dt>
+   <dd>
+    Starts an aviGame. Useful for making animations to be used on video screens (such as all the talking head videos in Doom 3)
+   </dd>
+   <dd>
+    <pre>aviGame [name]</pre>
+    <ul>
+     <li>
+      [name] - The name of the image sequence to output
+     </li>
+    </ul>
+   </dd>
+  </dl>
+  <a name="Frame_Command_Aliases">
+  </a>
+  <h3>
+   Frame Command Aliases
+  </h3>
+  <table border="1" cellpadding="0" cellspacing="0" style="width:50%">
+   <tr style="background:#AA0000; color:white">
+    <th>
+     COMMAND
+    </th>
+    <th>
+     ALIAS
+    </th>
+   </tr>
+   <tr align="center">
+    <td>
+     triggerSmokeParticle
+    </td>
+    <td>
+     event triggerParticles
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     melee
+    </td>
+    <td>
+     event attackMelee
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     direct_damage
+    </td>
+    <td>
+     event directDamage
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     attack_begin
+    </td>
+    <td>
+     event attackBegin
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     attack_end
+    </td>
+    <td>
+     event attackEnd
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     muzzle_flash
+    </td>
+    <td>
+     event muzzleFlash
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     create_missile
+    </td>
+    <td>
+     event createMissile
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     launch_missile
+    </td>
+    <td>
+     event launchMissile
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     fire_missile_at_target
+    </td>
+    <td>
+     event fireMissileAtTarget
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     footstep
+    </td>
+    <td>
+     event footstep
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     leftfoot
+    </td>
+    <td>
+     event leftfoot
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     rightfoot
+    </td>
+    <td>
+     event rightfoot
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     jump
+    </td>
+    <td>
+     event jump
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     enableEyeFocus
+    </td>
+    <td>
+     event enableEyeFocus
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     disableEyeFocus
+    </td>
+    <td>
+     event disableEyeFocus
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     disableGravity
+    </td>
+    <td>
+     event disableGravity
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     enableGravity
+    </td>
+    <td>
+     event enableGravity
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     enableClip
+    </td>
+    <td>
+     event enableClip
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     disableClip
+    </td>
+    <td>
+     event disableClip
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     enableWalkIK
+    </td>
+    <td>
+     event enableWalkIK
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     disableWalkIK
+    </td>
+    <td>
+     event disableWalkIK
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     enableLegIK
+    </td>
+    <td>
+     event enableLegIK
+    </td>
+   </tr>
+   <tr align="center">
+    <td>
+     disableLegIK
+    </td>
+    <td>
+     event disableLegIK
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

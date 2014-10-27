@@ -1,169 +1,173 @@
- <a name="Overview">
- </a>
- <h2>
-  Overview
- </h2>
- <p>
-  MD5Camera files are ascii (plain text) files that contain camera path data. This data controls the position, rotation, and field of view for cinematic cameras. They are part of the .
-  <a href="MD5_%28file_format%29" title="MD5 (file format)">
-   MD5
+<html>
+ <body>
+  <a name="Overview">
   </a>
-  format system. The other MD5 formats are:
- </p>
- <dl>
-  <dt>
-   .
-   <a href="MD5MESH_%28file_format%29" title="MD5MESH (file format)">
-    MD5MESH
+  <h2>
+   Overview
+  </h2>
+  <p>
+   MD5Camera files are ascii (plain text) files that contain camera path data. This data controls the position, rotation, and field of view for cinematic cameras. They are part of the .
+   <a href="MD5_%28file_format%29" title="MD5 (file format)">
+    MD5
    </a>
-  </dt>
-  <dd>
-   Low resolution polygonal mesh exported from a 3D application.
-  </dd>
-  <dt>
-   .
-   <a href="MD5ANIM_%28file_format%29" title="MD5ANIM (file format)">
-    MD5ANIM
-   </a>
-  </dt>
-  <dd>
-   Contains animation sequence data, the positions of bones etc. during animation.
-  </dd>
- </dl>
- <a name="Model_Format_Syntax">
- </a>
- <h2>
-  Model Format Syntax
- </h2>
- <a name="MD5_Header">
- </a>
- <h3>
-  MD5 Header
- </h3>
- <p>
-  All MD5 format files start with the MD5 header, regardless the specific filetype. The header is the first section in the file and is as such...
- </p>
- <pre>MD5Version &lt;integer&gt;
+   format system. The other MD5 formats are:
+  </p>
+  <dl>
+   <dt>
+    .
+    <a href="MD5MESH_%28file_format%29" title="MD5MESH (file format)">
+     MD5MESH
+    </a>
+   </dt>
+   <dd>
+    Low resolution polygonal mesh exported from a 3D application.
+   </dd>
+   <dt>
+    .
+    <a href="MD5ANIM_%28file_format%29" title="MD5ANIM (file format)">
+     MD5ANIM
+    </a>
+   </dt>
+   <dd>
+    Contains animation sequence data, the positions of bones etc. during animation.
+   </dd>
+  </dl>
+  <a name="Model_Format_Syntax">
+  </a>
+  <h2>
+   Model Format Syntax
+  </h2>
+  <a name="MD5_Header">
+  </a>
+  <h3>
+   MD5 Header
+  </h3>
+  <p>
+   All MD5 format files start with the MD5 header, regardless the specific filetype. The header is the first section in the file and is as such...
+  </p>
+  <pre>MD5Version &lt;integer&gt;
 commandline "&lt;string&gt;"
 </pre>
- <ul>
-  <li>
-   MD5Version - An integer that defines the current MD5 specification version. This should always read 10.
-  </li>
-  <li>
-   commandline - A string that contains the command line parameters passed to the
-   <a href="Exportmodels_%28console_command%29" title="Exportmodels (console command)">
-    exportmodels
-   </a>
-   console command.
-  </li>
- </ul>
- <a name="Filetype_Specific_Parameters">
- </a>
- <h3>
-  Filetype Specific Parameters
- </h3>
- <p>
-  This section contains filetype specifc parameters. The filetype specific parameters make up the second section in the file.
- </p>
- <p>
-  In the case of MD5Camera the filetype specific parameters are as such...
- </p>
- <pre>numFrames &lt;integer&gt;
+  <ul>
+   <li>
+    MD5Version - An integer that defines the current MD5 specification version. This should always read 10.
+   </li>
+   <li>
+    commandline - A string that contains the command line parameters passed to the
+    <a href="Exportmodels_%28console_command%29" title="Exportmodels (console command)">
+     exportmodels
+    </a>
+    console command.
+   </li>
+  </ul>
+  <a name="Filetype_Specific_Parameters">
+  </a>
+  <h3>
+   Filetype Specific Parameters
+  </h3>
+  <p>
+   This section contains filetype specifc parameters. The filetype specific parameters make up the second section in the file.
+  </p>
+  <p>
+   In the case of MD5Camera the filetype specific parameters are as such...
+  </p>
+  <pre>numFrames &lt;integer&gt;
 frameRate &lt;integer&gt;
 numCuts &lt;integer&gt;
 </pre>
- <ul>
-  <li>
-   numFrames - An integer that defines the total number of frames in the animation.
-  </li>
-  <li>
-   frameRate - An integer that defines the rate of playback in frames per second.
-  </li>
-  <li>
-   numCuts - An integer that defines the number of cuts in the animation.
-  </li>
- </ul>
- <a name="Ordered_Lists">
- </a>
- <h3>
-  Ordered Lists
- </h3>
- <p>
-  The third section in the file contains ordered lists. These lists contain data relevant to the type declared.
- </p>
- <pre>&lt;string&gt; {
+  <ul>
+   <li>
+    numFrames - An integer that defines the total number of frames in the animation.
+   </li>
+   <li>
+    frameRate - An integer that defines the rate of playback in frames per second.
+   </li>
+   <li>
+    numCuts - An integer that defines the number of cuts in the animation.
+   </li>
+  </ul>
+  <a name="Ordered_Lists">
+  </a>
+  <h3>
+   Ordered Lists
+  </h3>
+  <p>
+   The third section in the file contains ordered lists. These lists contain data relevant to the type declared.
+  </p>
+  <pre>&lt;string&gt; {
         [element 1]
         [element 2]
         [element 3]
         ... ect ...
 }
 </pre>
- <p>
-  First, the type of list is declared (&lt;string&gt;). Then the body of the list is contained within curly brackets.
- </p>
- <p>
-  The list is constructed of a series of elements each on a new line. The number of elements varies depending on type.
- </p>
- <p>
-  In the case of MD5Camera there are two ordered lists.
- </p>
- <a name="Cuts">
- </a>
- <h4>
-  Cuts
- </h4>
- <p>
-  Each element of the cuts ordered list is structured like so ...
- </p>
- <pre>[frameNumber]
+  <p>
+   First, the type of list is declared (&lt;string&gt;). Then the body of the list is contained within curly brackets.
+  </p>
+  <p>
+   The list is constructed of a series of elements each on a new line. The number of elements varies depending on type.
+  </p>
+  <p>
+   In the case of MD5Camera there are two ordered lists.
+  </p>
+  <a name="Cuts">
+  </a>
+  <h4>
+   Cuts
+  </h4>
+  <p>
+   Each element of the cuts ordered list is structured like so ...
+  </p>
+  <pre>[frameNumber]
 </pre>
- <ul>
-  <li>
-   frameNumber - An integer that defines the frame where a cut takes place.
-  </li>
- </ul>
- <p>
-  The number of elements is dependant on the number of cuts.
- </p>
- <p>
-  For instance, if there are five cuts, there should be five frame indexes listed.
- </p>
- <a name="Camera">
- </a>
- <h4>
-  Camera
- </h4>
- <p>
-  Each element of the camera ordered list is structured like so ...
- </p>
- <pre>( [X Pos] [Y Pos] [Z Pos] ) ( [Orientation] ) [FOV]
+  <ul>
+   <li>
+    frameNumber - An integer that defines the frame where a cut takes place.
+   </li>
+  </ul>
+  <p>
+   The number of elements is dependant on the number of cuts.
+  </p>
+  <p>
+   For instance, if there are five cuts, there should be five frame indexes listed.
+  </p>
+  <a name="Camera">
+  </a>
+  <h4>
+   Camera
+  </h4>
+  <p>
+   Each element of the camera ordered list is structured like so ...
+  </p>
+  <pre>( [X Pos] [Y Pos] [Z Pos] ) ( [Orientation] ) [FOV]
 </pre>
- <ul>
-  <li>
-   X Pos - a floating point number that defines the position of the camera on the X axis.
-  </li>
-  <li>
-   Y Pos - a floating point number that defines the position of the camera on the Y axis.
-  </li>
-  <li>
-   Z Pos - a floating point number that defines the position of the camera on the Z axis.
-  </li>
-  <li>
-   Orientation - a rotational
-   <a class="external text" href="http://www.gamedev.net/reference/articles/article1095.asp" title="http://www.gamedev.net/reference/articles/article1095.asp">
-    quaternion
-   </a>
-   that defines the orientation of the camera. (Only the X, Y, and Z components are stored. W is calculated on the fly.)
-  </li>
-  <li>
-   FOV - a floating point number that defines the field of view of the camera.
-  </li>
- </ul>
- <p>
-  The number of elements is dependant on the number of frames.
- </p>
- <p>
-  If there are five frames total, there should be five camera keyframes listed.
- </p>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:1214-0!1!0!0!!en!2 and timestamp 20120330163949 -->
+  <ul>
+   <li>
+    X Pos - a floating point number that defines the position of the camera on the X axis.
+   </li>
+   <li>
+    Y Pos - a floating point number that defines the position of the camera on the Y axis.
+   </li>
+   <li>
+    Z Pos - a floating point number that defines the position of the camera on the Z axis.
+   </li>
+   <li>
+    Orientation - a rotational
+    <a class="external text" href="http://www.gamedev.net/reference/articles/article1095.asp" title="http://www.gamedev.net/reference/articles/article1095.asp">
+     quaternion
+    </a>
+    that defines the orientation of the camera. (Only the X, Y, and Z components are stored. W is calculated on the fly.)
+   </li>
+   <li>
+    FOV - a floating point number that defines the field of view of the camera.
+   </li>
+  </ul>
+  <p>
+   The number of elements is dependant on the number of frames.
+  </p>
+  <p>
+   If there are five frames total, there should be five camera keyframes listed.
+  </p>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:1214-0!1!0!0!!en!2 and timestamp 20120330163949 -->
+ </body>
+</html>

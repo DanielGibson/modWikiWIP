@@ -1,498 +1,502 @@
- <div class="thumb tright">
-  <div style="width:182px;">
-   <a class="internal" href="Image:Gui_hud.jpg" title="The Doom 3 HUD (click to view)">
-    <img alt="The Doom 3 HUD (click to view)" height="135" longdesc="/wiki/Image:Gui_hud.jpg" src="/w/images/thumb/9/99/Gui_hud.jpg/180px-Gui_hud.jpg" width="180"/>
-   </a>
-   <div class="thumbcaption">
-    <div class="magnify" style="float:right">
-     <a class="internal" href="Image:Gui_hud.jpg" title="Enlarge">
-      <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
-     </a>
+<html>
+ <body>
+  <div class="thumb tright">
+   <div style="width:182px;">
+    <a class="internal" href="Image:Gui_hud.jpg" title="The Doom 3 HUD (click to view)">
+     <img alt="The Doom 3 HUD (click to view)" height="135" longdesc="/wiki/Image:Gui_hud.jpg" src="/w/images/thumb/9/99/Gui_hud.jpg/180px-Gui_hud.jpg" width="180"/>
+    </a>
+    <div class="thumbcaption">
+     <div class="magnify" style="float:right">
+      <a class="internal" href="Image:Gui_hud.jpg" title="Enlarge">
+       <img alt="Enlarge" height="11" src="/w/skins/common/images/magnify-clip.png" width="15"/>
+      </a>
+     </div>
+     The Doom 3 HUD (click to view)
     </div>
-    The Doom 3 HUD (click to view)
    </div>
   </div>
- </div>
- HUD is an acronym for Heads-Up Display. It's the overlay that stands on top of the level render, showing useful information such as the player health, ammo, crosshair, etc. In the Doom 3 engine, the singleplayer HUD is a standard
- <a href="GUIs" title="GUIs">
-  GUI
- </a>
- with properties and events of its own - also one of the most complex
- <a href="GUI_scripting" title="GUI scripting">
-  GUI scripts
- </a>
- in the game.
- <a name="Additional_parameters">
- </a>
- <h2>
-  Additional parameters
- </h2>
- <p>
-  Additional parameters are like variables, accessible to each specific scope - different GUI scopes have different parameters available. These parameters can be accessed by a GUI script using the
-  <i>
-   gui::parametername
-  </i>
-  syntax - as an
-  <a href="GUI_item_properties" title="GUI item properties">
-   item property
+  HUD is an acronym for Heads-Up Display. It's the overlay that stands on top of the level render, showing useful information such as the player health, ammo, crosshair, etc. In the Doom 3 engine, the singleplayer HUD is a standard
+  <a href="GUIs" title="GUIs">
+   GUI
   </a>
-  value or by doing comparisons using the
-  <a href="If...else_%28GUI_command%29" title="If...else (GUI command)">
-   if...else
+  with properties and events of its own - also one of the most complex
+  <a href="GUI_scripting" title="GUI scripting">
+   GUI scripts
   </a>
-  command, for example.
- </p>
- <dl>
-  <dt>
-   g_showProjectilePct
-  </dt>
-  <dd>
-   Boolean; determines whether projectpct should be shown. (Not working?)
-  </dd>
-  <dt>
-   itemicon
-  </dt>
-  <dt>
-   itemtext1
-  </dt>
-  <dd>
-   String; text description of the last items the player has picked up. Eventually they scroll and fade away.
-  </dd>
-  <dt>
-   itemtext2
-  </dt>
-  <dd>
-   Same as
-   <i>
-    itemtext1
-   </i>
-   , but a different item in the queue.
-  </dd>
-  <dt>
-   itemtext3
-  </dt>
-  <dd>
-   Same as
-   <i>
-    itemtext1
-   </i>
-   , but a different item in the queue.
-  </dd>
-  <dt>
-   itemtext4
-  </dt>
-  <dd>
-   Same as
-   <i>
-    itemtext1
-   </i>
-   , but a different item in the queue.
-  </dd>
-  <dt>
-   itemtext5
-  </dt>
-  <dd>
-   Same as
-   <i>
-    itemtext1
-   </i>
-   , but a different item in the queue.
-  </dd>
-  <dt>
-   location
-  </dt>
-  <dd>
-   String; the location the player is at (shown on the bottom of the HUD).
-  </dd>
-  <dt>
-   message
-  </dt>
-  <dt>
-   newweapon
-  </dt>
-  <dd>
-   Integer; the number of the weapon that the player has recently picked up, starting at 1.
-  </dd>
-  <dt>
-   npc
-  </dt>
-  <dd>
-   String; the name of the non-player character the player currently has his crosshair at.
-  </dd>
-  <dt>
-   objectivetext
-  </dt>
-  <dt>
-   objectivetitle
-  </dt>
-  <dt>
-   pda_security
-  </dt>
-  <dd>
-   String; the security level of the new PDA that the player has picked up.
-  </dd>
-  <dt>
-   pda_text
-  </dt>
-  <dd>
-   String; name of the new PDA that the player has picked up.
-  </dd>
-  <dt>
-   player_air
-  </dt>
-  <dd>
-   Integer; the ammount of air the player has on his lungs, from 0 (dying) to 100 (standard).
-  </dd>
-  <dt>
-   player_allammo
-  </dt>
-  <dd>
-   String; displays both clip and extra ammo. (ex. Shotgun with 5 in clip and 8 extra returns "5/8").
-  </dd>
-  <dt>
-   player_ammo
-  </dt>
-  <dd>
-   Integer; the amount of ammo in the clip for the currently selected weapon.
-  </dd>
-  <dt>
-   player_ammo_empty
-  </dt>
-  <dd>
-   Boolean; 0 if current weapon still has ammo, 1 if current weapon is out of ammo.
-  </dd>
-  <dt>
-   player_armor
-  </dt>
-  <dd>
-   Integer; the amount of armor the player has, from 0 to 125.
-  </dd>
-  <dt>
-   player_clip_empty
-  </dt>
-  <dd>
-   Boolean; 0 if clip in current weapon still has ammo, 1 if clip in current weapon is empty.
-  </dd>
-  <dt>
-   player_clip_low
-  </dt>
-  <dd>
-   Boolean; 0 if clip has plenty of ammo, 1 if clip is low on ammo.
-  </dd>
-  <dt>
-   player_clips
-  </dt>
-  <dd>
-   Integer; the number of full clips remaining for the current weapon (including the current clip if it is full).
-  </dd>
-  <dt>
-   player_health
-  </dt>
-  <dd>
-   Integer; the amount of health the player has, from 0 to 100.
-  </dd>
-  <dt>
-   player_hr(heartrate)
-  </dt>
-  <dt>
-   player_nostamina
-  </dt>
-  <dd>
-   Boolean; 0 if stamina works normally, or 1 if there's no stamina limit (ie, Hell on Doom 3).
-  </dd>
-  <dt>
-   player_stamina
-  </dt>
-  <dd>
-   Integer; the amount of stamina the player has, from 0 to 100.
-  </dd>
-  <dt>
-   player_totalammo
-  </dt>
-  <dd>
-   Integer; the amount of ammo available for the current weapon (does not include ammo in clip).
-  </dd>
-  <dt>
-   projectilepct
-  </dt>
-  <dd>
-   String; Displays hit percentage. (ex. "Hit % 0.0")
-  </dd>
-  <dt>
-   s_debug
-  </dt>
-  <dt>
-   screenshot
-  </dt>
-  <dt>
-   tip
-  </dt>
-  <dt>
-   tiptitle
-  </dt>
-  <dt>
-   viewcomments
-  </dt>
-  <dt>
-   weapon0
-  </dt>
-  <dd>
-   Integer; indicates whether the player has this weapon or not (0 means he doesn't; 1 means he has it, but it's not selected; 2 means he has it and it's the selected weapon).
-  </dd>
-  <dt>
-   weapon1
-  </dt>
-  <dd>
-   The same as
-   <i>
-    weapon0
-   </i>
-   .
-  </dd>
-  <dt>
-   weapon2
-  </dt>
-  <dd>
-   The same as
-   <i>
-    weapon0
-   </i>
-   .
-  </dd>
-  <dt>
-   weapon3
-  </dt>
-  <dd>
-   The same as
-   <i>
-    weapon0
-   </i>
-   .
-  </dd>
-  <dt>
-   weapon4
-  </dt>
-  <dd>
-   The same as
-   <i>
-    weapon0
-   </i>
-   .
-  </dd>
-  <dt>
-   weapon5
-  </dt>
-  <dd>
-   The same as
-   <i>
-    weapon0
-   </i>
-   .
-  </dd>
-  <dt>
-   weapon6
-  </dt>
-  <dd>
-   The same as
-   <i>
-    weapon0
-   </i>
-   .
-  </dd>
-  <dt>
-   weapon7
-  </dt>
-  <dd>
-   The same as
-   <i>
-    weapon0
-   </i>
-   .
-  </dd>
-  <dt>
-   weapon8
-  </dt>
-  <dd>
-   The same as
-   <i>
-    weapon0
-   </i>
-   .
-  </dd>
-  <dt>
-   weapon9
-  </dt>
-  <dd>
-   The same as
-   <i>
-    weapon0
-   </i>
-   .
-  </dd>
-  <dt>
-   weapon10
-  </dt>
-  <dd>
-   The same as
-   <i>
-    weapon0
-   </i>
-   .
-  </dd>
-  <dt>
-   weapon11
-  </dt>
-  <dd>
-   The same as
-   <i>
-    weapon0
-   </i>
-   .
-  </dd>
- </dl>
- <a name="Named_events">
- </a>
- <h2>
-  Named events
- </h2>
- <p>
-  Named events are used to trigger custom events inside the GUI code. By creating
-  <a href="OnNamedEvent_%28GUI_item_event%29" title="OnNamedEvent (GUI item event)">
-   onNamedEvent
+  in the game.
+  <a name="Additional_parameters">
   </a>
-  blocks inside a GUI script, you can have a set of
-  <a href="GUI_commands" title="GUI commands">
-   GUI commands
-  </a>
-  ran when certain conditions are met. Again, each of these named events are specific to this GUI scope and aren't usually available elsewhere.
- </p>
- <dl>
-  <dt>
-   Air
-  </dt>
-  <dt>
-   HideNPC
-  </dt>
-  <dt>
-   ShowNPC
-  </dt>
-  <dt>
-   ammoPulse
-  </dt>
-  <dt>
-   armorPulse
-  </dt>
-  <dt>
-   audioLogDown
-  </dt>
-  <dt>
-   audioLogUp
-  </dt>
-  <dt>
-   closeObjective
-  </dt>
-  <dt>
-   emailPickup
-  </dt>
-  <dt>
-   healthPulse
-  </dt>
-  <dt>
-   hideViewComments
-  </dt>
-  <dt>
-   invPickup
-  </dt>
-  <dt>
-   itemPickup1
-  </dt>
-  <dt>
-   itemPickup2
-  </dt>
-  <dt>
-   itemPickup3
-  </dt>
-  <dt>
-   itemPickup4
-  </dt>
-  <dt>
-   itemPickup5
-  </dt>
-  <dt>
-   newObjective
-  </dt>
-  <dt>
-   newObjectiveComplete
-  </dt>
-  <dt>
-   newWeapon
-  </dt>
-  <dd>
-   Triggered when a new weapon is picked up (its value is stored on the
+  <h2>
+   Additional parameters
+  </h2>
+  <p>
+   Additional parameters are like variables, accessible to each specific scope - different GUI scopes have different parameters available. These parameters can be accessed by a GUI script using the
    <i>
+    gui::parametername
+   </i>
+   syntax - as an
+   <a href="GUI_item_properties" title="GUI item properties">
+    item property
+   </a>
+   value or by doing comparisons using the
+   <a href="If...else_%28GUI_command%29" title="If...else (GUI command)">
+    if...else
+   </a>
+   command, for example.
+  </p>
+  <dl>
+   <dt>
+    g_showProjectilePct
+   </dt>
+   <dd>
+    Boolean; determines whether projectpct should be shown. (Not working?)
+   </dd>
+   <dt>
+    itemicon
+   </dt>
+   <dt>
+    itemtext1
+   </dt>
+   <dd>
+    String; text description of the last items the player has picked up. Eventually they scroll and fade away.
+   </dd>
+   <dt>
+    itemtext2
+   </dt>
+   <dd>
+    Same as
+    <i>
+     itemtext1
+    </i>
+    , but a different item in the queue.
+   </dd>
+   <dt>
+    itemtext3
+   </dt>
+   <dd>
+    Same as
+    <i>
+     itemtext1
+    </i>
+    , but a different item in the queue.
+   </dd>
+   <dt>
+    itemtext4
+   </dt>
+   <dd>
+    Same as
+    <i>
+     itemtext1
+    </i>
+    , but a different item in the queue.
+   </dd>
+   <dt>
+    itemtext5
+   </dt>
+   <dd>
+    Same as
+    <i>
+     itemtext1
+    </i>
+    , but a different item in the queue.
+   </dd>
+   <dt>
+    location
+   </dt>
+   <dd>
+    String; the location the player is at (shown on the bottom of the HUD).
+   </dd>
+   <dt>
+    message
+   </dt>
+   <dt>
     newweapon
-   </i>
-   parameter).
-  </dd>
-  <dt>
-   noAir
-  </dt>
-  <dt>
-   pdaPickup
-  </dt>
-  <dt>
-   pdaPickupHide
-  </dt>
-  <dt>
-   radioChatterDown
-  </dt>
-  <dt>
-   radioChatterUp
-  </dt>
-  <dt>
-   securityPickup
-  </dt>
-  <dt>
-   showViewComments
-  </dt>
-  <dt>
-   soulCubeNotReady
-  </dt>
-  <dt>
-   soulCubeReady
-  </dt>
-  <dt>
-   tipLeftWindowUp
-  </dt>
-  <dt>
-   tipWindowDown
-  </dt>
-  <dt>
-   tipWindowUp
-  </dt>
-  <dt>
-   updateAmmo
-  </dt>
-  <dt>
-   updateArmorHealthAir
-  </dt>
-  <dd>
-   Triggered every frame.
-  </dd>
-  <dt>
-   videoPickup
-  </dt>
-  <dt>
-   videoPickupHide
-  </dt>
-  <dt>
-   weaponChange
-  </dt>
-  <dt>
-   weaponPulse
-  </dt>
-  <dt>
-   Message
-  </dt>
- </dl>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:1288-0!1!0!0!!en!2 and timestamp 20080828104858 -->
+   </dt>
+   <dd>
+    Integer; the number of the weapon that the player has recently picked up, starting at 1.
+   </dd>
+   <dt>
+    npc
+   </dt>
+   <dd>
+    String; the name of the non-player character the player currently has his crosshair at.
+   </dd>
+   <dt>
+    objectivetext
+   </dt>
+   <dt>
+    objectivetitle
+   </dt>
+   <dt>
+    pda_security
+   </dt>
+   <dd>
+    String; the security level of the new PDA that the player has picked up.
+   </dd>
+   <dt>
+    pda_text
+   </dt>
+   <dd>
+    String; name of the new PDA that the player has picked up.
+   </dd>
+   <dt>
+    player_air
+   </dt>
+   <dd>
+    Integer; the ammount of air the player has on his lungs, from 0 (dying) to 100 (standard).
+   </dd>
+   <dt>
+    player_allammo
+   </dt>
+   <dd>
+    String; displays both clip and extra ammo. (ex. Shotgun with 5 in clip and 8 extra returns "5/8").
+   </dd>
+   <dt>
+    player_ammo
+   </dt>
+   <dd>
+    Integer; the amount of ammo in the clip for the currently selected weapon.
+   </dd>
+   <dt>
+    player_ammo_empty
+   </dt>
+   <dd>
+    Boolean; 0 if current weapon still has ammo, 1 if current weapon is out of ammo.
+   </dd>
+   <dt>
+    player_armor
+   </dt>
+   <dd>
+    Integer; the amount of armor the player has, from 0 to 125.
+   </dd>
+   <dt>
+    player_clip_empty
+   </dt>
+   <dd>
+    Boolean; 0 if clip in current weapon still has ammo, 1 if clip in current weapon is empty.
+   </dd>
+   <dt>
+    player_clip_low
+   </dt>
+   <dd>
+    Boolean; 0 if clip has plenty of ammo, 1 if clip is low on ammo.
+   </dd>
+   <dt>
+    player_clips
+   </dt>
+   <dd>
+    Integer; the number of full clips remaining for the current weapon (including the current clip if it is full).
+   </dd>
+   <dt>
+    player_health
+   </dt>
+   <dd>
+    Integer; the amount of health the player has, from 0 to 100.
+   </dd>
+   <dt>
+    player_hr(heartrate)
+   </dt>
+   <dt>
+    player_nostamina
+   </dt>
+   <dd>
+    Boolean; 0 if stamina works normally, or 1 if there's no stamina limit (ie, Hell on Doom 3).
+   </dd>
+   <dt>
+    player_stamina
+   </dt>
+   <dd>
+    Integer; the amount of stamina the player has, from 0 to 100.
+   </dd>
+   <dt>
+    player_totalammo
+   </dt>
+   <dd>
+    Integer; the amount of ammo available for the current weapon (does not include ammo in clip).
+   </dd>
+   <dt>
+    projectilepct
+   </dt>
+   <dd>
+    String; Displays hit percentage. (ex. "Hit % 0.0")
+   </dd>
+   <dt>
+    s_debug
+   </dt>
+   <dt>
+    screenshot
+   </dt>
+   <dt>
+    tip
+   </dt>
+   <dt>
+    tiptitle
+   </dt>
+   <dt>
+    viewcomments
+   </dt>
+   <dt>
+    weapon0
+   </dt>
+   <dd>
+    Integer; indicates whether the player has this weapon or not (0 means he doesn't; 1 means he has it, but it's not selected; 2 means he has it and it's the selected weapon).
+   </dd>
+   <dt>
+    weapon1
+   </dt>
+   <dd>
+    The same as
+    <i>
+     weapon0
+    </i>
+    .
+   </dd>
+   <dt>
+    weapon2
+   </dt>
+   <dd>
+    The same as
+    <i>
+     weapon0
+    </i>
+    .
+   </dd>
+   <dt>
+    weapon3
+   </dt>
+   <dd>
+    The same as
+    <i>
+     weapon0
+    </i>
+    .
+   </dd>
+   <dt>
+    weapon4
+   </dt>
+   <dd>
+    The same as
+    <i>
+     weapon0
+    </i>
+    .
+   </dd>
+   <dt>
+    weapon5
+   </dt>
+   <dd>
+    The same as
+    <i>
+     weapon0
+    </i>
+    .
+   </dd>
+   <dt>
+    weapon6
+   </dt>
+   <dd>
+    The same as
+    <i>
+     weapon0
+    </i>
+    .
+   </dd>
+   <dt>
+    weapon7
+   </dt>
+   <dd>
+    The same as
+    <i>
+     weapon0
+    </i>
+    .
+   </dd>
+   <dt>
+    weapon8
+   </dt>
+   <dd>
+    The same as
+    <i>
+     weapon0
+    </i>
+    .
+   </dd>
+   <dt>
+    weapon9
+   </dt>
+   <dd>
+    The same as
+    <i>
+     weapon0
+    </i>
+    .
+   </dd>
+   <dt>
+    weapon10
+   </dt>
+   <dd>
+    The same as
+    <i>
+     weapon0
+    </i>
+    .
+   </dd>
+   <dt>
+    weapon11
+   </dt>
+   <dd>
+    The same as
+    <i>
+     weapon0
+    </i>
+    .
+   </dd>
+  </dl>
+  <a name="Named_events">
+  </a>
+  <h2>
+   Named events
+  </h2>
+  <p>
+   Named events are used to trigger custom events inside the GUI code. By creating
+   <a href="OnNamedEvent_%28GUI_item_event%29" title="OnNamedEvent (GUI item event)">
+    onNamedEvent
+   </a>
+   blocks inside a GUI script, you can have a set of
+   <a href="GUI_commands" title="GUI commands">
+    GUI commands
+   </a>
+   ran when certain conditions are met. Again, each of these named events are specific to this GUI scope and aren't usually available elsewhere.
+  </p>
+  <dl>
+   <dt>
+    Air
+   </dt>
+   <dt>
+    HideNPC
+   </dt>
+   <dt>
+    ShowNPC
+   </dt>
+   <dt>
+    ammoPulse
+   </dt>
+   <dt>
+    armorPulse
+   </dt>
+   <dt>
+    audioLogDown
+   </dt>
+   <dt>
+    audioLogUp
+   </dt>
+   <dt>
+    closeObjective
+   </dt>
+   <dt>
+    emailPickup
+   </dt>
+   <dt>
+    healthPulse
+   </dt>
+   <dt>
+    hideViewComments
+   </dt>
+   <dt>
+    invPickup
+   </dt>
+   <dt>
+    itemPickup1
+   </dt>
+   <dt>
+    itemPickup2
+   </dt>
+   <dt>
+    itemPickup3
+   </dt>
+   <dt>
+    itemPickup4
+   </dt>
+   <dt>
+    itemPickup5
+   </dt>
+   <dt>
+    newObjective
+   </dt>
+   <dt>
+    newObjectiveComplete
+   </dt>
+   <dt>
+    newWeapon
+   </dt>
+   <dd>
+    Triggered when a new weapon is picked up (its value is stored on the
+    <i>
+     newweapon
+    </i>
+    parameter).
+   </dd>
+   <dt>
+    noAir
+   </dt>
+   <dt>
+    pdaPickup
+   </dt>
+   <dt>
+    pdaPickupHide
+   </dt>
+   <dt>
+    radioChatterDown
+   </dt>
+   <dt>
+    radioChatterUp
+   </dt>
+   <dt>
+    securityPickup
+   </dt>
+   <dt>
+    showViewComments
+   </dt>
+   <dt>
+    soulCubeNotReady
+   </dt>
+   <dt>
+    soulCubeReady
+   </dt>
+   <dt>
+    tipLeftWindowUp
+   </dt>
+   <dt>
+    tipWindowDown
+   </dt>
+   <dt>
+    tipWindowUp
+   </dt>
+   <dt>
+    updateAmmo
+   </dt>
+   <dt>
+    updateArmorHealthAir
+   </dt>
+   <dd>
+    Triggered every frame.
+   </dd>
+   <dt>
+    videoPickup
+   </dt>
+   <dt>
+    videoPickupHide
+   </dt>
+   <dt>
+    weaponChange
+   </dt>
+   <dt>
+    weaponPulse
+   </dt>
+   <dt>
+    Message
+   </dt>
+  </dl>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:1288-0!1!0!0!!en!2 and timestamp 20080828104858 -->
+ </body>
+</html>

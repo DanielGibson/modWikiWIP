@@ -1,74 +1,78 @@
- <div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-  <a class="image" href="Image:Q4square_bg.png" title="Image:Q4square_bg.png">
-   <img alt="Image:Q4square_bg.png" height="50" longdesc="/wiki/Image:Q4square_bg.png" src="/w/images/6/69/Q4square_bg.png" width="50"/>
+<html>
+ <body>
+  <div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
+   <a class="image" href="Image:Q4square_bg.png" title="Image:Q4square_bg.png">
+    <img alt="Image:Q4square_bg.png" height="50" longdesc="/wiki/Image:Q4square_bg.png" src="/w/images/6/69/Q4square_bg.png" width="50"/>
+   </a>
+   The information on this page is specific to
+   <a href="Quake_4" title="Quake 4">
+    Quake 4
+   </a>
+   .
+  </div>
+  <hr/>
+  <p>
+   MaterialTypes are declarations that dictate how a particular surface that references them reacts to impacts. This special declaration replaces the more simplistic surface type global keyword system (like
+   <a href="Metal_%28Material_global_keyword%29" title="Metal (Material global keyword)">
+    metal
+   </a>
+   ,
+   <a class="new" href="Plastic_%28Material_globabl_keyword%29" title="Plastic (Material globabl keyword)">
+    plastic
+   </a>
+   or
+   <a href="Stone_%28Material_global_keyword%29" title="Stone (Material global keyword)">
+    stone
+   </a>
+   for instance) used in
+   <a href="Doom_3" title="Doom 3">
+    Doom 3
+   </a>
+   .
+  </p>
+  <a name="Syntax">
   </a>
-  The information on this page is specific to
-  <a href="Quake_4" title="Quake 4">
-   Quake 4
-  </a>
-  .
- </div>
- <hr/>
- <p>
-  MaterialTypes are declarations that dictate how a particular surface that references them reacts to impacts. This special declaration replaces the more simplistic surface type global keyword system (like
-  <a href="Metal_%28Material_global_keyword%29" title="Metal (Material global keyword)">
-   metal
-  </a>
-  ,
-  <a class="new" href="Plastic_%28Material_globabl_keyword%29" title="Plastic (Material globabl keyword)">
-   plastic
-  </a>
-  or
-  <a href="Stone_%28Material_global_keyword%29" title="Stone (Material global keyword)">
-   stone
-  </a>
-  for instance) used in
-  <a href="Doom_3" title="Doom 3">
-   Doom 3
-  </a>
-  .
- </p>
- <a name="Syntax">
- </a>
- <h2>
-  Syntax
- </h2>
- <pre>materialType [name]
+  <h2>
+   Syntax
+  </h2>
+  <pre>materialType [name]
 {
 	description	"[optional summary]"
 	rgb		[red],[green],[blue]
 }
 </pre>
- <p>
-  MaterialType declarations are started with a header which consists of the keyword materialType followed by the
-  <i>
-   name
-  </i>
-  of the type. They are then followed by the body of the declaration which is enclosed in curly brackets.
- </p>
- <p>
-  The rgb values (0 through 255) control the impact effects and sounds (if any) of the surface. The entire surface will react the same way though so if you'd like a little more control you should use a
-  <a class="new" href="MaterialImage_%28Material_global_keyword%29" title="MaterialImage (Material global keyword)">
-   MaterialImage
-  </a>
-  instead.
- </p>
- <p>
-  MaterialType declarations should be put in a .
-  <a class="new" href="MTT_%28file_format%29" title="MTT (file format)">
-   MTT
-  </a>
-  in the /
-  <a href="Materials_%28folder%29" title="Materials (folder)">
-   materials
-  </a>
-  folder. The name of the material type is then referred from inside a
-  <a href="Material_%28decl%29" title="Material (decl)">
-   material
-  </a>
-  declaration with the
-  <a class="new" href="MaterialType_%28Material_global_keyword%29" title="MaterialType (Material global keyword)">
-   materialType
-  </a>
-  global material keyword.
- </p>
+  <p>
+   MaterialType declarations are started with a header which consists of the keyword materialType followed by the
+   <i>
+    name
+   </i>
+   of the type. They are then followed by the body of the declaration which is enclosed in curly brackets.
+  </p>
+  <p>
+   The rgb values (0 through 255) control the impact effects and sounds (if any) of the surface. The entire surface will react the same way though so if you'd like a little more control you should use a
+   <a class="new" href="MaterialImage_%28Material_global_keyword%29" title="MaterialImage (Material global keyword)">
+    MaterialImage
+   </a>
+   instead.
+  </p>
+  <p>
+   MaterialType declarations should be put in a .
+   <a class="new" href="MTT_%28file_format%29" title="MTT (file format)">
+    MTT
+   </a>
+   in the /
+   <a href="Materials_%28folder%29" title="Materials (folder)">
+    materials
+   </a>
+   folder. The name of the material type is then referred from inside a
+   <a href="Material_%28decl%29" title="Material (decl)">
+    material
+   </a>
+   declaration with the
+   <a class="new" href="MaterialType_%28Material_global_keyword%29" title="MaterialType (Material global keyword)">
+    materialType
+   </a>
+   global material keyword.
+  </p>
+ </body>
+</html>

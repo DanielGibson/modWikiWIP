@@ -1,100 +1,104 @@
- <div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-  <a class="image" href="Image:Q4square_bg.png" title="Image:Q4square_bg.png">
-   <img alt="Image:Q4square_bg.png" height="50" longdesc="/wiki/Image:Q4square_bg.png" src="/w/images/6/69/Q4square_bg.png" width="50"/>
+<html>
+ <body>
+  <div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
+   <a class="image" href="Image:Q4square_bg.png" title="Image:Q4square_bg.png">
+    <img alt="Image:Q4square_bg.png" height="50" longdesc="/wiki/Image:Q4square_bg.png" src="/w/images/6/69/Q4square_bg.png" width="50"/>
+   </a>
+   The information on this page is specific to
+   <a href="Quake_4" title="Quake 4">
+    Quake 4
+   </a>
+   .
+  </div>
+  <hr/>
+  <a name="Game_class">
   </a>
-  The information on this page is specific to
-  <a href="Quake_4" title="Quake 4">
-   Quake 4
+  <h2>
+   Game class
+  </h2>
+  <p>
+   This event operates on an instance of the
+   <a href="Game_class" title="Game class">
+    game class
+   </a>
+   type {{{gameclass}}}
+  </p>
+  <a name="Description">
   </a>
-  .
- </div>
- <hr/>
- <a name="Game_class">
- </a>
- <h2>
-  Game class
- </h2>
- <p>
-  This event operates on an instance of the
-  <a href="Game_class" title="Game class">
-   game class
+  <h2>
+   Description
+  </h2>
+  <p>
+   Plays an
+   <a class="new" href="Effect_%28decl%29" title="Effect (decl)">
+    effect
+   </a>
+   on a particular location of the entity.
+  </p>
+  <a name="Usage">
   </a>
-  type {{{gameclass}}}
- </p>
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  Plays an
-  <a class="new" href="Effect_%28decl%29" title="Effect (decl)">
-   effect
+  <h2>
+   Usage
+  </h2>
+  <p>
+   <i>
+    void
+   </i>
+   playEffect(
+   <i>
+    string
+   </i>
+   <b>
+    effectName
+   </b>
+   ,
+   <i>
+    string
+   </i>
+   <b>
+    boneName
+   </b>
+   ,
+   <i>
+    float
+   </i>
+   <b>
+    loop
+   </b>
+   )
+  </p>
+  <a name="Parameters">
   </a>
-  on a particular location of the entity.
- </p>
- <a name="Usage">
- </a>
- <h2>
-  Usage
- </h2>
- <p>
-  <i>
-   void
-  </i>
-  playEffect(
-  <i>
-   string
-  </i>
-  <b>
-   effectName
-  </b>
-  ,
-  <i>
-   string
-  </i>
-  <b>
-   boneName
-  </b>
-  ,
-  <i>
-   float
-  </i>
-  <b>
-   loop
-  </b>
-  )
- </p>
- <a name="Parameters">
- </a>
- <h2>
-  Parameters
- </h2>
- <ul>
-  <li>
-   [effectName] - Name of effect to play.
-  </li>
-  <li>
-   [boneName] - Skeleton location to play the effect at.
-  </li>
-  <li>
-   [loop] - Whether to loop the effect.
-  </li>
- </ul>
- <a name="Examples">
- </a>
- <h2>
-  Examples
- </h2>
- <pre><span style="color: #000055;">$my_entity</span>.<span style="color: #ff0000;">playEffect</span><span style="color: #000000;">(</span> <span style="color: #666666;">"fire64"</span>, <span style="color: #666666;">"joint01"</span>, <span style="color: #0000dd;">1</span> <span style="color: #000000;">)</span>;</pre>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
- <p>
-  This script event does not return any values.
- </p>
- <p>
-  <br/>
- </p>
+  <h2>
+   Parameters
+  </h2>
+  <ul>
+   <li>
+    [effectName] - Name of effect to play.
+   </li>
+   <li>
+    [boneName] - Skeleton location to play the effect at.
+   </li>
+   <li>
+    [loop] - Whether to loop the effect.
+   </li>
+  </ul>
+  <a name="Examples">
+  </a>
+  <h2>
+   Examples
+  </h2>
+  <pre><span style="color: #000055;">$my_entity</span>.<span style="color: #ff0000;">playEffect</span><span style="color: #000000;">(</span> <span style="color: #666666;">"fire64"</span>, <span style="color: #666666;">"joint01"</span>, <span style="color: #0000dd;">1</span> <span style="color: #000000;">)</span>;</pre>
+  <a name="Notes">
+  </a>
+  <h2>
+   Notes
+  </h2>
+  <p>
+   This script event does not return any values.
+  </p>
+  <p>
+   <br/>
+  </p>
+ </body>
+</html>

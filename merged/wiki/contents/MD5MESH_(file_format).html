@@ -1,304 +1,308 @@
- <p>
-  <br/>
- </p>
- <a name="Overview">
- </a>
- <h2>
-  Overview
- </h2>
- <p>
-  MD5Mesh files are ascii (plain text) files that contain mesh and skeletal data. They are part of the .
-  <a href="MD5_%28file_format%29" title="MD5 (file format)">
-   MD5
+<html>
+ <body>
+  <p>
+   <br/>
+  </p>
+  <a name="Overview">
   </a>
-  format system. The other MD5 formats are:
- </p>
- <dl>
-  <dt>
-   .
-   <a href="MD5ANIM_%28file_format%29" title="MD5ANIM (file format)">
-    MD5ANIM
+  <h2>
+   Overview
+  </h2>
+  <p>
+   MD5Mesh files are ascii (plain text) files that contain mesh and skeletal data. They are part of the .
+   <a href="MD5_%28file_format%29" title="MD5 (file format)">
+    MD5
    </a>
-  </dt>
-  <dd>
-   Contains animation sequence data, the positions of bones etc. during animation.
-  </dd>
-  <dt>
-   .
-   <a href="MD5CAMERA_%28file_format%29" title="MD5CAMERA (file format)">
-    MD5CAMERA
-   </a>
-  </dt>
-  <dd>
-   Animated cameras for use in cutscenes.
-  </dd>
- </dl>
- <a name="Model_Format_Syntax">
- </a>
- <h2>
-  Model Format Syntax
- </h2>
- <a name="MD5_Header">
- </a>
- <h3>
-  MD5 Header
- </h3>
- <p>
-  All MD5 format files start with the MD5 header, regardless the specific filetype. The header is the first section in the file and is as such...
- </p>
- <pre>MD5Version &lt;integer&gt;
+   format system. The other MD5 formats are:
+  </p>
+  <dl>
+   <dt>
+    .
+    <a href="MD5ANIM_%28file_format%29" title="MD5ANIM (file format)">
+     MD5ANIM
+    </a>
+   </dt>
+   <dd>
+    Contains animation sequence data, the positions of bones etc. during animation.
+   </dd>
+   <dt>
+    .
+    <a href="MD5CAMERA_%28file_format%29" title="MD5CAMERA (file format)">
+     MD5CAMERA
+    </a>
+   </dt>
+   <dd>
+    Animated cameras for use in cutscenes.
+   </dd>
+  </dl>
+  <a name="Model_Format_Syntax">
+  </a>
+  <h2>
+   Model Format Syntax
+  </h2>
+  <a name="MD5_Header">
+  </a>
+  <h3>
+   MD5 Header
+  </h3>
+  <p>
+   All MD5 format files start with the MD5 header, regardless the specific filetype. The header is the first section in the file and is as such...
+  </p>
+  <pre>MD5Version &lt;integer&gt;
 commandline "&lt;string&gt;"
 </pre>
- <ul>
-  <li>
-   MD5Version - An integer that defines the current MD5 specification version. This should always read 10.
-  </li>
-  <li>
-   commandline - A string that contains the command line parameters passed to the
-   <a href="Exportmodels_%28console_command%29" title="Exportmodels (console command)">
-    exportmodels
-   </a>
-   console command.
-  </li>
- </ul>
- <a name="Filetype_Specific_Parameters">
- </a>
- <h3>
-  Filetype Specific Parameters
- </h3>
- <p>
-  This section contains filetype specifc parameters. The filetype specific parameters make up the second section in the file.
- </p>
- <p>
-  In the case of MD5Mesh the filetype specific parameters are as such...
- </p>
- <pre>numJoints &lt;integer&gt;
+  <ul>
+   <li>
+    MD5Version - An integer that defines the current MD5 specification version. This should always read 10.
+   </li>
+   <li>
+    commandline - A string that contains the command line parameters passed to the
+    <a href="Exportmodels_%28console_command%29" title="Exportmodels (console command)">
+     exportmodels
+    </a>
+    console command.
+   </li>
+  </ul>
+  <a name="Filetype_Specific_Parameters">
+  </a>
+  <h3>
+   Filetype Specific Parameters
+  </h3>
+  <p>
+   This section contains filetype specifc parameters. The filetype specific parameters make up the second section in the file.
+  </p>
+  <p>
+   In the case of MD5Mesh the filetype specific parameters are as such...
+  </p>
+  <pre>numJoints &lt;integer&gt;
 numMeshes &lt;integer&gt;
 </pre>
- <ul>
-  <li>
-   numJoints - An integer that defines the number of bones in the model.
-  </li>
-  <li>
-   numMeshes - An integer that defines the number of meshes in the model.
-  </li>
- </ul>
- <a name="Ordered_Lists">
- </a>
- <h3>
-  Ordered Lists
- </h3>
- <p>
-  The third section in the file contains ordered lists. These lists contain data relevant to the type declared.
- </p>
- <pre>&lt;string&gt; {
+  <ul>
+   <li>
+    numJoints - An integer that defines the number of bones in the model.
+   </li>
+   <li>
+    numMeshes - An integer that defines the number of meshes in the model.
+   </li>
+  </ul>
+  <a name="Ordered_Lists">
+  </a>
+  <h3>
+   Ordered Lists
+  </h3>
+  <p>
+   The third section in the file contains ordered lists. These lists contain data relevant to the type declared.
+  </p>
+  <pre>&lt;string&gt; {
         [element 1]
         [element 2]
         [element 3]
         ... ect ...
 }
 </pre>
- <p>
-  First, the type of list is declared (&lt;string&gt;). Then the body of the list is contained within curly brackets.
- </p>
- <p>
-  The list is constructed of a series of elements each on a new line. The number of elements varies depending on type.
- </p>
- <p>
-  In the case of MD5Mesh there are two ordered lists.
- </p>
- <a name="Joints">
- </a>
- <h4>
-  Joints
- </h4>
- <p>
-  Each element of the joints ordered list is structured like so ...
- </p>
- <pre>"[boneName]"   [parentIndex] ( [xPos] [yPos] [zPos] ) ( [xOrient] [yOrient] [zOrient] )
+  <p>
+   First, the type of list is declared (&lt;string&gt;). Then the body of the list is contained within curly brackets.
+  </p>
+  <p>
+   The list is constructed of a series of elements each on a new line. The number of elements varies depending on type.
+  </p>
+  <p>
+   In the case of MD5Mesh there are two ordered lists.
+  </p>
+  <a name="Joints">
+  </a>
+  <h4>
+   Joints
+  </h4>
+  <p>
+   Each element of the joints ordered list is structured like so ...
+  </p>
+  <pre>"[boneName]"   [parentIndex] ( [xPos] [yPos] [zPos] ) ( [xOrient] [yOrient] [zOrient] )
 </pre>
- <ul>
-  <li>
-   boneName - The name of this bone.
-  </li>
-  <li>
-   parentIndex - The index of this bone's parent.
-  </li>
-  <li>
-   xPos - The X component of this bone's XYZ position.
-  </li>
-  <li>
-   yPos - The Y component of this bone's XYZ position.
-  </li>
-  <li>
-   zPos - The Z component of this bone's XYZ position.
-  </li>
-  <li>
-   xOrient - The X component of this bone's XYZ orentation quaternion.
-  </li>
-  <li>
-   yOrient - The Y component of this bone's XYZ orentation quaternion.
-  </li>
-  <li>
-   zOrient - The Z component of this bone's XYZ orentation quaternion.
-  </li>
- </ul>
- <p>
-  The number of elements is dependant on the number of joints.
- </p>
- <p>
-  For instance, if there are five joints, there should be five joint descriptors listed.
- </p>
- <a name="Mesh">
- </a>
- <h4>
-  Mesh
- </h4>
- <p>
-  The mesh ordered list contains 3 indexed lists: vertices, triangles, and weights.
- </p>
- <pre>// meshes: [meshName]
+  <ul>
+   <li>
+    boneName - The name of this bone.
+   </li>
+   <li>
+    parentIndex - The index of this bone's parent.
+   </li>
+   <li>
+    xPos - The X component of this bone's XYZ position.
+   </li>
+   <li>
+    yPos - The Y component of this bone's XYZ position.
+   </li>
+   <li>
+    zPos - The Z component of this bone's XYZ position.
+   </li>
+   <li>
+    xOrient - The X component of this bone's XYZ orentation quaternion.
+   </li>
+   <li>
+    yOrient - The Y component of this bone's XYZ orentation quaternion.
+   </li>
+   <li>
+    zOrient - The Z component of this bone's XYZ orentation quaternion.
+   </li>
+  </ul>
+  <p>
+   The number of elements is dependant on the number of joints.
+  </p>
+  <p>
+   For instance, if there are five joints, there should be five joint descriptors listed.
+  </p>
+  <a name="Mesh">
+  </a>
+  <h4>
+   Mesh
+  </h4>
+  <p>
+   The mesh ordered list contains 3 indexed lists: vertices, triangles, and weights.
+  </p>
+  <pre>// meshes: [meshName]
 shader "[materialName]"
 </pre>
- <ul>
-  <li>
-   meshName - The name of the mesh.
-  </li>
-  <li>
-   materialName - The material shader to apply to this mesh.
-  </li>
- </ul>
- <div>
-  <a class="image" href="Image:Etqwsquare_25.png" title="Image:Etqwsquare_25.png">
-   <img alt="Image:Etqwsquare_25.png" height="25" longdesc="/wiki/Image:Etqwsquare_25.png" src="/w/images/7/7e/Etqwsquare_25.png" width="25"/>
+  <ul>
+   <li>
+    meshName - The name of the mesh.
+   </li>
+   <li>
+    materialName - The material shader to apply to this mesh.
+   </li>
+  </ul>
+  <div>
+   <a class="image" href="Image:Etqwsquare_25.png" title="Image:Etqwsquare_25.png">
+    <img alt="Image:Etqwsquare_25.png" height="25" longdesc="/wiki/Image:Etqwsquare_25.png" src="/w/images/7/7e/Etqwsquare_25.png" width="25"/>
+   </a>
+   <b>
+    Note:
+   </b>
+   Enemy Territory: Quake Wars only:
+   <dl>
+    <dd>
+     <i>
+      After the parameters, an extra ordered list follows for specifying extra flags.
+     </i>
+    </dd>
+   </dl>
+  </div>
+  <a name="Flags">
   </a>
-  <b>
-   Note:
-  </b>
-  Enemy Territory: Quake Wars only:
-  <dl>
-   <dd>
-    <i>
-     After the parameters, an extra ordered list follows for specifying extra flags.
-    </i>
-   </dd>
-  </dl>
- </div>
- <a name="Flags">
- </a>
- <h5>
-  Flags
- </h5>
- <div>
-  <a class="image" href="Image:Etqwsquare_25.png" title="Image:Etqwsquare_25.png">
-   <img alt="Image:Etqwsquare_25.png" height="25" longdesc="/wiki/Image:Etqwsquare_25.png" src="/w/images/7/7e/Etqwsquare_25.png" width="25"/>
-  </a>
-  <b>
-   Note:
-  </b>
-  Enemy Territory: Quake Wars only:
-  <dl>
-   <dd>
-    <i>
-     This type of ordered list only exists in ET:QW.
-    </i>
-   </dd>
-  </dl>
- </div>
- <p>
-  The ordered list should be defined even when empty. Each line may specify one of the following known flags:
- </p>
- <pre>noAnimate
+  <h5>
+   Flags
+  </h5>
+  <div>
+   <a class="image" href="Image:Etqwsquare_25.png" title="Image:Etqwsquare_25.png">
+    <img alt="Image:Etqwsquare_25.png" height="25" longdesc="/wiki/Image:Etqwsquare_25.png" src="/w/images/7/7e/Etqwsquare_25.png" width="25"/>
+   </a>
+   <b>
+    Note:
+   </b>
+   Enemy Territory: Quake Wars only:
+   <dl>
+    <dd>
+     <i>
+      This type of ordered list only exists in ET:QW.
+     </i>
+    </dd>
+   </dl>
+  </div>
+  <p>
+   The ordered list should be defined even when empty. Each line may specify one of the following known flags:
+  </p>
+  <pre>noAnimate
 vertexColor
 </pre>
- <a name="Vert">
- </a>
- <h5>
-  Vert
- </h5>
- <pre>numverts &lt;integer&gt;
+  <a name="Vert">
+  </a>
+  <h5>
+   Vert
+  </h5>
+  <pre>numverts &lt;integer&gt;
 vert [vertIndex] ( [texU] [texV] ) [weightIndex] [weightElem]
 </pre>
- <ul>
-  <li>
-   numverts - The number of vertices. Coorisponds to the number of elements to follow in the list.
-  </li>
-  <li>
-   vertIndex - The index of this vertex.
-  </li>
-  <li>
-   texU - The U component of the UV texture coordinates.
-  </li>
-  <li>
-   texV - The V component of the UV texture coordinates.
-  </li>
-  <li>
-   weightIndex - The index into the weight array where this vertex's first weight is located.
-  </li>
-  <li>
-   weightElem - The number of elements in the weight array that apply to this vertex.
-  </li>
- </ul>
- <a name="Tri">
- </a>
- <h5>
-  Tri
- </h5>
- <pre>numtris &lt;integer&gt;
+  <ul>
+   <li>
+    numverts - The number of vertices. Coorisponds to the number of elements to follow in the list.
+   </li>
+   <li>
+    vertIndex - The index of this vertex.
+   </li>
+   <li>
+    texU - The U component of the UV texture coordinates.
+   </li>
+   <li>
+    texV - The V component of the UV texture coordinates.
+   </li>
+   <li>
+    weightIndex - The index into the weight array where this vertex's first weight is located.
+   </li>
+   <li>
+    weightElem - The number of elements in the weight array that apply to this vertex.
+   </li>
+  </ul>
+  <a name="Tri">
+  </a>
+  <h5>
+   Tri
+  </h5>
+  <pre>numtris &lt;integer&gt;
 tri [triIndex] [vertIndex1] [vertIndex2] [vertIndex3]
 </pre>
- <ul>
-  <li>
-   numtris - The number of triangles. Corrisponds to the number of elements to follow in the list.
-  </li>
-  <li>
-   triIndex - The index of this triangle.
-  </li>
-  <li>
-   vertIndex1 - The index of the first vertex for this triangle.
-  </li>
-  <li>
-   vertIndex2 - The index of the second vertex for this triangle.
-  </li>
-  <li>
-   vertIndex3 - The index of the third vertex for this triangle.
-  </li>
- </ul>
- <a name="Weight">
- </a>
- <h5>
-  Weight
- </h5>
- <pre>numweights &lt;integer&gt;
+  <ul>
+   <li>
+    numtris - The number of triangles. Corrisponds to the number of elements to follow in the list.
+   </li>
+   <li>
+    triIndex - The index of this triangle.
+   </li>
+   <li>
+    vertIndex1 - The index of the first vertex for this triangle.
+   </li>
+   <li>
+    vertIndex2 - The index of the second vertex for this triangle.
+   </li>
+   <li>
+    vertIndex3 - The index of the third vertex for this triangle.
+   </li>
+  </ul>
+  <a name="Weight">
+  </a>
+  <h5>
+   Weight
+  </h5>
+  <pre>numweights &lt;integer&gt;
 weight [weightIndex] [jointIndex] [weightValue] ( [xPos] [yPos] [zPos] )
 </pre>
- <ul>
-  <li>
-   numweights - The number of weights. Corrisponds to the number of elements to follow in the list.
-  </li>
-  <li>
-   weightIndex - The index of this weight.
-  </li>
-  <li>
-   jointIndex - The index of the joint to which this weight applies.
-  </li>
-  <li>
-   weightValue - The value of the weight.
-  </li>
-  <li>
-   xPos - The X component of this weight's XYZ position.
-  </li>
-  <li>
-   yPos - The Y component of this weight's XYZ position.
-  </li>
-  <li>
-   zPos - The Z component of this weight's XYZ position.
-  </li>
- </ul>
- <p>
-  The number of mesh ordered lists is dependant on the number of meshes.
-  <a class="new" href="Link_title" title="Link title">
-   Link title
-  </a>
- </p>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:1215-0!1!0!0!!en!2 and timestamp 20121204172203 -->
+  <ul>
+   <li>
+    numweights - The number of weights. Corrisponds to the number of elements to follow in the list.
+   </li>
+   <li>
+    weightIndex - The index of this weight.
+   </li>
+   <li>
+    jointIndex - The index of the joint to which this weight applies.
+   </li>
+   <li>
+    weightValue - The value of the weight.
+   </li>
+   <li>
+    xPos - The X component of this weight's XYZ position.
+   </li>
+   <li>
+    yPos - The Y component of this weight's XYZ position.
+   </li>
+   <li>
+    zPos - The Z component of this weight's XYZ position.
+   </li>
+  </ul>
+  <p>
+   The number of mesh ordered lists is dependant on the number of meshes.
+   <a class="new" href="Link_title" title="Link title">
+    Link title
+   </a>
+  </p>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:1215-0!1!0!0!!en!2 and timestamp 20121204172203 -->
+ </body>
+</html>

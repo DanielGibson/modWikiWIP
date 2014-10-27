@@ -1,62 +1,66 @@
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  This command takes a snapshot of the current screen and saves it to file.
- </p>
- <a name="Usage">
- </a>
- <h2>
-  Usage
- </h2>
- <p>
-  At the console type...
- </p>
- <pre>screenshot [Width] [Height] [Samples]
+<html>
+ <body>
+  <a name="Description">
+  </a>
+  <h2>
+   Description
+  </h2>
+  <p>
+   This command takes a snapshot of the current screen and saves it to file.
+  </p>
+  <a name="Usage">
+  </a>
+  <h2>
+   Usage
+  </h2>
+  <p>
+   At the console type...
+  </p>
+  <pre>screenshot [Width] [Height] [Samples]
 </pre>
- <a name="Parameters">
- </a>
- <h2>
-  Parameters
- </h2>
- <p>
-  All the parameters are optional.
- </p>
- <ul>
-  <li>
-   [Width] - Screen size in pixels.
-  </li>
-  <li>
-   [Height] - Screen size in pixels.
-  </li>
-  <li>
-   [Samples] - Number of shots taken.
-  </li>
- </ul>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
- <p>
-  This command will generate a .
-  <a href="TGA_%28file_format%29" title="TGA (file format)">
-   TGA
+  <a name="Parameters">
   </a>
-  . The [Samples] value will provide artificial
-  <a href="Antialiasing" title="Antialiasing">
-   Antialiasing
+  <h2>
+   Parameters
+  </h2>
+  <p>
+   All the parameters are optional.
+  </p>
+  <ul>
+   <li>
+    [Width] - Screen size in pixels.
+   </li>
+   <li>
+    [Height] - Screen size in pixels.
+   </li>
+   <li>
+    [Samples] - Number of shots taken.
+   </li>
+  </ul>
+  <a name="Notes">
   </a>
-  by blending all the shots together. If you'd like to simulate soft shadows in a Doom 3 screenshot you can set the following in your
-  <a href="CFG_%28file_format%29" title="CFG (file format)">
-   autoexec.cfg
-  </a>
-  :
- </p>
- <pre>bind F11 "<a href="R_useOptimizedShadows_%28cvar%29" title="R useOptimizedShadows (cvar)">r_useOptimizedShadows</a> 0;<a href="R_lightSourceRadius_%28cvar%29" title="R lightSourceRadius (cvar)">r_lightSourceRadius</a> 5;screenshot 1024 768 64"
+  <h2>
+   Notes
+  </h2>
+  <p>
+   This command will generate a .
+   <a href="TGA_%28file_format%29" title="TGA (file format)">
+    TGA
+   </a>
+   . The [Samples] value will provide artificial
+   <a href="Antialiasing" title="Antialiasing">
+    Antialiasing
+   </a>
+   by blending all the shots together. If you'd like to simulate soft shadows in a Doom 3 screenshot you can set the following in your
+   <a href="CFG_%28file_format%29" title="CFG (file format)">
+    autoexec.cfg
+   </a>
+   :
+  </p>
+  <pre>bind F11 "<a href="R_useOptimizedShadows_%28cvar%29" title="R useOptimizedShadows (cvar)">r_useOptimizedShadows</a> 0;<a href="R_lightSourceRadius_%28cvar%29" title="R lightSourceRadius (cvar)">r_lightSourceRadius</a> 5;screenshot 1024 768 64"
 </pre>
- <p>
-  <br/>
- </p>
+  <p>
+   <br/>
+  </p>
+ </body>
+</html>

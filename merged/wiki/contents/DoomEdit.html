@@ -1,340 +1,344 @@
- <div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
-  <a class="image" href="Image:D3square_bg.png" title="Image:D3square_bg.png">
-   <img alt="Image:D3square_bg.png" height="50" longdesc="/wiki/Image:D3square_bg.png" src="/w/images/c/cb/D3square_bg.png" width="50"/>
-  </a>
-  The information on this page is specific to
-  <a href="Doom_3" title="Doom 3">
-   Doom 3
-  </a>
-  .
- </div>
- <hr/>
- <p>
-  This page describes the Doom 3 specific functionality of the built-in map editor. For general information common to all
-  <a href="Id_Tech_4" title="Id Tech 4">
-   id Tech 4
-  </a>
-  games' editors please see the
-  <a href="Map_editor" title="Map editor">
-   map editor
-  </a>
-  page. DoomEdit can be started by typing "
-  <a href="Editor_%28console_command%29" title="Editor (console command)">
-   editor
-  </a>
-  " in the
-  <a href="Console" title="Console">
-   console
-  </a>
-  or by starting Doom 3 with "+editor" in the shortcut's target command parameters. The best way to start DoomEdit is from its own shortcut:
- </p>
- <pre>d:\doom3\doom3.exe +set <a href="R_fullscreen_%28cvar%29" title="R fullscreen (cvar)">r_fullscreen</a> 0 +set <a href="R_multiSamples_%28cvar%29" title="R multiSamples (cvar)">r_multiSamples</a> 0 +editor
-</pre>
- <a name="Requirements">
- </a>
- <h2>
-  Requirements
- </h2>
- <p>
-  Despite the fact that Doom 3 runs on other platforms, DoomEdit requires Windows 2000/XP. It's recommended that DoomEdit is run on machines with better performance than the minimum system requirements of the game unless you only want to edit small maps and that you have a three-button mouse. A suggested minimum system specification for editing maps would be:
- </p>
- <ul>
-  <li>
-   2Ghz CPU or equivalent
-  </li>
-  <li>
-   512mb RAM
-  </li>
-  <li>
-   A video card capable of displaying
-   <a href="Vertex_and_fragment_programs" title="Vertex and fragment programs">
-    vertex and fragment programs
+<html>
+ <body>
+  <div align="left" style="color: black; font-size: 18px; padding: 1px; border: 0px solid #000000;">
+   <a class="image" href="Image:D3square_bg.png" title="Image:D3square_bg.png">
+    <img alt="Image:D3square_bg.png" height="50" longdesc="/wiki/Image:D3square_bg.png" src="/w/images/c/cb/D3square_bg.png" width="50"/>
    </a>
-  </li>
- </ul>
- <p>
-  <b>
-   Note:
-  </b>
-  It's recommended to have 1024MB RAM for Doom 3 v1.3, to prevent the "low on physical memory" warning.
- </p>
- <a name="Preferences">
- </a>
- <h2>
-  Preferences
- </h2>
- <p>
-  To access the preferences window go to Edit &gt; Preferences (
-  <a href="DoomEdit_hotkeys" title="DoomEdit hotkeys">
-   hotkey: TAB
-  </a>
-  )
- </p>
- <p>
-  <a class="image" href="Image:DoomEdit_Pref.png" title="The preferences window">
-   <img alt="The preferences window" height="453" longdesc="/wiki/Image:DoomEdit_Pref.png" src="/w/images/f/f1/DoomEdit_Pref.png" width="585"/>
-  </a>
- </p>
- <p>
-  Some of these options are deprecated. From the top left corner:
- </p>
- <a name="Views.2Frendering">
- </a>
- <h3>
-  Views/rendering
- </h3>
- <ul>
-  <li>
-   The four radio buttons used to select a particular editing layout but now this feature doesn't have any effect.
-  </li>
-  <li>
-   OpenGL display lists: used to speed up bezier curve rendering. This option is automatically turned on when you return to the preferences window.
-  </li>
-  <li>
-   Solid selection boxes: makes the red selection lines in the editing window solid instead of dashed lines. This option is automatically turned on when you return to the preferences window.
-  </li>
-  <li>
-   Camera slider: used to control the speed at which 3D camera moved but has no effect now.
-  </li>
-  <li>
-   Update XY views during mouse drags: turning this off will stop the blue diamond symbol, which signifies the camera position and direction, from moving along the editing window as you move the camera.
-  </li>
-  <li>
-   QE4 update model: used to provide a speed-up for software-based OpenGL renderer, obsolete.
-  </li>
-  <li>
-   Texturing quality slider: no effect.
-  </li>
-  <li>
-   Texture toolbar: Obsolete, don't turn it off or the editor will crash when you save your preferences. If this happens, deleting the editor.cfg file is your only solution.
-  </li>
-  <li>
-   Texture subset: no effect.
-  </li>
-  <li>
-   Texture scrollbar: show/hide the scrollbar in the texture inspector. You can still scroll by right-click-drag. Scrolling with the mouse wheel does not work properly and you must right-click-drag at least once for it to "kick in" (whether the scrollbar is hidden or visible).
-  </li>
- </ul>
- <a name="New_functionality">
- </a>
- <h3>
-  New functionality
- </h3>
- <ul>
-  <li>
-   Right click to drop entities: turning this off will hide the context menu that appears when you right click in an editing window.
-  </li>
-  <li>
-   Face selection: no effect.
-  </li>
-  <li>
-   Rotation inc: no effect.
-  </li>
-  <li>
-   ALT + multi-drag: when enabled this option will prevent dragging edges when you have more than one brush selected unless you press the Alt key as you drag.
-  </li>
-  <li>
-   Snap T to Grid: sets the texture nudge increments to the grid size.
-  </li>
-  <li>
-   Mouse chaser: enabling this option sets the editing window to follow when you drag something to the window's edge.
-  </li>
-  <li>
-   Patch Toolbar: this option controls whether a simplified or complex toolbar is shown.
-  </li>
-  <li>
-   Light drawing: disabling this will turn all the light symbols into cubes of the same colour (regardless of the light colour chosen) and hide the lights' area of effect.
-  </li>
-  <li>
-   Paint sizing info: allows displaying selection size info in the editing window.
-  </li>
-  <li>
-   Hi Color Textures: obsolete.
-  </li>
-  <li>
-   Startup Shaders: obsolete.
-  </li>
- </ul>
- <a name="Tool_settings">
- </a>
- <h3>
-  Tool settings
- </h3>
- <ul>
-  <li>
-   Don't clamp plane points: turns on free-form editing allow you to drag vertices without regard for grid size.
-   <b>
-    It's strongly recommended that you leave this unchecked
-   </b>
+   The information on this page is specific to
+   <a href="Doom_3" title="Doom 3">
+    Doom 3
+   </a>
    .
-  </li>
-  <li>
-   Snapshots: no effect.
-  </li>
-  <li>
-   Use +setgame to run: obsolete.
-  </li>
-  <li>
-   Use new map format: this setting
+  </div>
+  <hr/>
+  <p>
+   This page describes the Doom 3 specific functionality of the built-in map editor. For general information common to all
+   <a href="Id_Tech_4" title="Id Tech 4">
+    id Tech 4
+   </a>
+   games' editors please see the
+   <a href="Map_editor" title="Map editor">
+    map editor
+   </a>
+   page. DoomEdit can be started by typing "
+   <a href="Editor_%28console_command%29" title="Editor (console command)">
+    editor
+   </a>
+   " in the
+   <a href="Console" title="Console">
+    console
+   </a>
+   or by starting Doom 3 with "+editor" in the shortcut's target command parameters. The best way to start DoomEdit is from its own shortcut:
+  </p>
+  <pre>d:\doom3\doom3.exe +set <a href="R_fullscreen_%28cvar%29" title="R fullscreen (cvar)">r_fullscreen</a> 0 +set <a href="R_multiSamples_%28cvar%29" title="R multiSamples (cvar)">r_multiSamples</a> 0 +editor
+</pre>
+  <a name="Requirements">
+  </a>
+  <h2>
+   Requirements
+  </h2>
+  <p>
+   Despite the fact that Doom 3 runs on other platforms, DoomEdit requires Windows 2000/XP. It's recommended that DoomEdit is run on machines with better performance than the minimum system requirements of the game unless you only want to edit small maps and that you have a three-button mouse. A suggested minimum system specification for editing maps would be:
+  </p>
+  <ul>
+   <li>
+    2Ghz CPU or equivalent
+   </li>
+   <li>
+    512mb RAM
+   </li>
+   <li>
+    A video card capable of displaying
+    <a href="Vertex_and_fragment_programs" title="Vertex and fragment programs">
+     vertex and fragment programs
+    </a>
+   </li>
+  </ul>
+  <p>
    <b>
-    must
+    Note:
    </b>
-   be enabled for Doom 3 maps.
-  </li>
-  <li>
-   Run game after QBSP3...: obsolete.
-  </li>
-  <li>
-   Load last project on open: obsolete.
-  </li>
-  <li>
-   Load last map on open: self-evident.
-  </li>
-  <li>
-   Auto save every x minutes: when enabled this will make DoomEdit autosave the map every x minutes you specify. The autosave maps will be stored in C:\. Make sure the minutes setting is not set too low (5 mins or higher is recommended).
-  </li>
-  <li>
-   Status point size: allows you to resize the status bar; choose a value between 2 and 14. Although not stated, this option requires a restart to be effective. The default value is 10.
-  </li>
-  <li>
-   Undo levels: The number of steps saved into memory for redo operations; choose a value between 0 and 64. The higher the number the more memory the editor will use up.
-  </li>
-  <li>
-   Map Path: no effect.
-  </li>
- </ul>
- <a name="Troubleshooting">
- </a>
- <h2>
-  Troubleshooting
- </h2>
- <p>
-  This section describes bugs or peculiar behaviour of DoomEdit and any known solutions. Before going any further, make sure you are running the editor in
-  <a href="R_fullscreen_%28cvar%29" title="R fullscreen (cvar)">
-   windowed
+   It's recommended to have 1024MB RAM for Doom 3 v1.3, to prevent the "low on physical memory" warning.
+  </p>
+  <a name="Preferences">
   </a>
-  mode. It will fix a lot of problems like disappearing cursor and light inspector, allowing you to run at a resolution higher than in-game, etc. Also, if you find a bug not covered here you might try quitting the editor, deleting the
-  <a href="CFG_%28file_format%29" title="CFG (file format)">
-   editor.cfg
+  <h2>
+   Preferences
+  </h2>
+  <p>
+   To access the preferences window go to Edit &gt; Preferences (
+   <a href="DoomEdit_hotkeys" title="DoomEdit hotkeys">
+    hotkey: TAB
+   </a>
+   )
+  </p>
+  <p>
+   <a class="image" href="Image:DoomEdit_Pref.png" title="The preferences window">
+    <img alt="The preferences window" height="453" longdesc="/wiki/Image:DoomEdit_Pref.png" src="/w/images/f/f1/DoomEdit_Pref.png" width="585"/>
+   </a>
+  </p>
+  <p>
+   Some of these options are deprecated. From the top left corner:
+  </p>
+  <a name="Views.2Frendering">
   </a>
-  file present in the /
-  <a href="Base_%28folder%29" title="Base (folder)">
-   base (folder)
+  <h3>
+   Views/rendering
+  </h3>
+  <ul>
+   <li>
+    The four radio buttons used to select a particular editing layout but now this feature doesn't have any effect.
+   </li>
+   <li>
+    OpenGL display lists: used to speed up bezier curve rendering. This option is automatically turned on when you return to the preferences window.
+   </li>
+   <li>
+    Solid selection boxes: makes the red selection lines in the editing window solid instead of dashed lines. This option is automatically turned on when you return to the preferences window.
+   </li>
+   <li>
+    Camera slider: used to control the speed at which 3D camera moved but has no effect now.
+   </li>
+   <li>
+    Update XY views during mouse drags: turning this off will stop the blue diamond symbol, which signifies the camera position and direction, from moving along the editing window as you move the camera.
+   </li>
+   <li>
+    QE4 update model: used to provide a speed-up for software-based OpenGL renderer, obsolete.
+   </li>
+   <li>
+    Texturing quality slider: no effect.
+   </li>
+   <li>
+    Texture toolbar: Obsolete, don't turn it off or the editor will crash when you save your preferences. If this happens, deleting the editor.cfg file is your only solution.
+   </li>
+   <li>
+    Texture subset: no effect.
+   </li>
+   <li>
+    Texture scrollbar: show/hide the scrollbar in the texture inspector. You can still scroll by right-click-drag. Scrolling with the mouse wheel does not work properly and you must right-click-drag at least once for it to "kick in" (whether the scrollbar is hidden or visible).
+   </li>
+  </ul>
+  <a name="New_functionality">
   </a>
-  folder and restarting the editor. This will revert the editor to its defaults.
- </p>
- <a name="When_compiling_the_map_I_get_an_error">
- </a>
- <h3>
-  When compiling the map I get an error
- </h3>
- <p>
-  Please check the
-  <a href="Common_Mapping_Issues" title="Common Mapping Issues">
-   Common Mapping Issues
+  <h3>
+   New functionality
+  </h3>
+  <ul>
+   <li>
+    Right click to drop entities: turning this off will hide the context menu that appears when you right click in an editing window.
+   </li>
+   <li>
+    Face selection: no effect.
+   </li>
+   <li>
+    Rotation inc: no effect.
+   </li>
+   <li>
+    ALT + multi-drag: when enabled this option will prevent dragging edges when you have more than one brush selected unless you press the Alt key as you drag.
+   </li>
+   <li>
+    Snap T to Grid: sets the texture nudge increments to the grid size.
+   </li>
+   <li>
+    Mouse chaser: enabling this option sets the editing window to follow when you drag something to the window's edge.
+   </li>
+   <li>
+    Patch Toolbar: this option controls whether a simplified or complex toolbar is shown.
+   </li>
+   <li>
+    Light drawing: disabling this will turn all the light symbols into cubes of the same colour (regardless of the light colour chosen) and hide the lights' area of effect.
+   </li>
+   <li>
+    Paint sizing info: allows displaying selection size info in the editing window.
+   </li>
+   <li>
+    Hi Color Textures: obsolete.
+   </li>
+   <li>
+    Startup Shaders: obsolete.
+   </li>
+  </ul>
+  <a name="Tool_settings">
   </a>
-  page for all known compiler error messages and solutions.
- </p>
- <a name="The_toolbar_disappeared">
- </a>
- <h3>
-  The toolbar disappeared
- </h3>
- <p>
-  If you close the toolbar (accidentally or not), the only way to get it back is to edit the Windows registry (you can type "regedit" in the Start &gt; Run box) and deleting the HKEY_CURRENT_USER/Software/DoomRadiant key.
- </p>
- <a name="Grid_lines_don.27t_show_up">
- </a>
- <h3>
-  Grid lines don't show up
- </h3>
- <p>
-  Make sure
-  <a href="Antialiasing" title="Antialiasing">
-   Antialiasing
+  <h3>
+   Tool settings
+  </h3>
+  <ul>
+   <li>
+    Don't clamp plane points: turns on free-form editing allow you to drag vertices without regard for grid size.
+    <b>
+     It's strongly recommended that you leave this unchecked
+    </b>
+    .
+   </li>
+   <li>
+    Snapshots: no effect.
+   </li>
+   <li>
+    Use +setgame to run: obsolete.
+   </li>
+   <li>
+    Use new map format: this setting
+    <b>
+     must
+    </b>
+    be enabled for Doom 3 maps.
+   </li>
+   <li>
+    Run game after QBSP3...: obsolete.
+   </li>
+   <li>
+    Load last project on open: obsolete.
+   </li>
+   <li>
+    Load last map on open: self-evident.
+   </li>
+   <li>
+    Auto save every x minutes: when enabled this will make DoomEdit autosave the map every x minutes you specify. The autosave maps will be stored in C:\. Make sure the minutes setting is not set too low (5 mins or higher is recommended).
+   </li>
+   <li>
+    Status point size: allows you to resize the status bar; choose a value between 2 and 14. Although not stated, this option requires a restart to be effective. The default value is 10.
+   </li>
+   <li>
+    Undo levels: The number of steps saved into memory for redo operations; choose a value between 0 and 64. The higher the number the more memory the editor will use up.
+   </li>
+   <li>
+    Map Path: no effect.
+   </li>
+  </ul>
+  <a name="Troubleshooting">
   </a>
-  is set to
-  <i>
-   Off
-  </i>
-  or
-  <i>
-   Application controlled
-  </i>
-  in your graphics driver control panel in Windows. Also make sure the
-  <a href="R_multiSamples_%28cvar%29" title="R multiSamples (cvar)">
-   in-game AA
+  <h2>
+   Troubleshooting
+  </h2>
+  <p>
+   This section describes bugs or peculiar behaviour of DoomEdit and any known solutions. Before going any further, make sure you are running the editor in
+   <a href="R_fullscreen_%28cvar%29" title="R fullscreen (cvar)">
+    windowed
+   </a>
+   mode. It will fix a lot of problems like disappearing cursor and light inspector, allowing you to run at a resolution higher than in-game, etc. Also, if you find a bug not covered here you might try quitting the editor, deleting the
+   <a href="CFG_%28file_format%29" title="CFG (file format)">
+    editor.cfg
+   </a>
+   file present in the /
+   <a href="Base_%28folder%29" title="Base (folder)">
+    base (folder)
+   </a>
+   folder and restarting the editor. This will revert the editor to its defaults.
+  </p>
+  <a name="When_compiling_the_map_I_get_an_error">
   </a>
-  is set to off too.
- </p>
- <p>
-  If you are running Windows Vista, you will also need to diable Aero (the transparent glass effect).
- </p>
- <a name="X_doesn.27t_show_up_in_the_editor_but_does_in_the_game">
- </a>
- <h3>
-  X doesn't show up in the editor but does in the game
- </h3>
- <p>
-  Go to View &gt; Show and make sure X is selected.
- </p>
- <a name="X_doesn.27t_show_up_in_the_game_but_does_in_the_editor">
- </a>
- <h3>
-  X doesn't show up in the game but does in the editor
- </h3>
- <p>
-  Make sure it's not a func_group entity. These entities are ignored by the game. If you want to group brushes, etc. and still have them show up in the game you can use func_static. Just remember, as entities they cannot be exposed to the void.
- </p>
- <a name="There_are_many_black_textures_in_the_texture_browser">
- </a>
- <h3>
-  There are many black textures in the texture browser
- </h3>
- <p>
-  Doom 3 comes with a lot of redundant, nonfunctional material shaders. The problem is that the declarations reference image files that were not shipped with the game.
- </p>
- <p>
-  At present no level editor, including the built in editor, validates each shader to ensure the images exist. This results in a texture browser where half the textures listed are of no use.
- </p>
- <p>
-  In the case of Doom 3, there is a workaround and the same solution could be applied to other games. Check
-  <a href="Eutectic%27s_clean_paks" title="Eutectic's clean paks">
-   eutectic's clean paks
+  <h3>
+   When compiling the map I get an error
+  </h3>
+  <p>
+   Please check the
+   <a href="Common_Mapping_Issues" title="Common Mapping Issues">
+    Common Mapping Issues
+   </a>
+   page for all known compiler error messages and solutions.
+  </p>
+  <a name="The_toolbar_disappeared">
   </a>
-  for more details.
- </p>
- <a name="Unable_to_delete_the_old_.bak_file">
- </a>
- <h3>
-  Unable to delete the old .bak file
- </h3>
- <p>
-  This bug has existed since the v1.2 update and has yet to be addressed.
- </p>
- <p>
-  This error occurs when you start editing a new map, or an existing map with a new name, and attempt to save. The save operation completes successfully but there is an issue with writing, overwriting, or creating a backup.
- </p>
- <p>
-  At present, there is no known fix or workaround. But given the nature of the issue it's more an annoyance than a real problem. It doesn't prevent you from creating content and can be safely ignored.
- </p>
- <a name="Fixed_editor_problems">
- </a>
- <h2>
-  Fixed editor problems
- </h2>
- <p>
-  The following have been fixed in subsequent versions of the game. They are left here in case there are modders using older versions.
- </p>
- <a name="Physical_memory_is_over_80.25_utilized._Consider_saving_and_restarting">
- </a>
- <h3>
-  Physical memory is over 80% utilized. Consider saving and restarting
- </h3>
- <p>
-  <i>
-   Fixed since v1.3; this message now appears when you really are running out of memory.
-  </i>
-  This bug occurs when you have a lot of RAM like 2Gb. This is a bug that reverses the memory check. What this means is that the error only appears if more than 80% of your memory is free.
- </p>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:1046-0!1!0!0!!en!2 and timestamp 20120301040848 -->
+  <h3>
+   The toolbar disappeared
+  </h3>
+  <p>
+   If you close the toolbar (accidentally or not), the only way to get it back is to edit the Windows registry (you can type "regedit" in the Start &gt; Run box) and deleting the HKEY_CURRENT_USER/Software/DoomRadiant key.
+  </p>
+  <a name="Grid_lines_don.27t_show_up">
+  </a>
+  <h3>
+   Grid lines don't show up
+  </h3>
+  <p>
+   Make sure
+   <a href="Antialiasing" title="Antialiasing">
+    Antialiasing
+   </a>
+   is set to
+   <i>
+    Off
+   </i>
+   or
+   <i>
+    Application controlled
+   </i>
+   in your graphics driver control panel in Windows. Also make sure the
+   <a href="R_multiSamples_%28cvar%29" title="R multiSamples (cvar)">
+    in-game AA
+   </a>
+   is set to off too.
+  </p>
+  <p>
+   If you are running Windows Vista, you will also need to diable Aero (the transparent glass effect).
+  </p>
+  <a name="X_doesn.27t_show_up_in_the_editor_but_does_in_the_game">
+  </a>
+  <h3>
+   X doesn't show up in the editor but does in the game
+  </h3>
+  <p>
+   Go to View &gt; Show and make sure X is selected.
+  </p>
+  <a name="X_doesn.27t_show_up_in_the_game_but_does_in_the_editor">
+  </a>
+  <h3>
+   X doesn't show up in the game but does in the editor
+  </h3>
+  <p>
+   Make sure it's not a func_group entity. These entities are ignored by the game. If you want to group brushes, etc. and still have them show up in the game you can use func_static. Just remember, as entities they cannot be exposed to the void.
+  </p>
+  <a name="There_are_many_black_textures_in_the_texture_browser">
+  </a>
+  <h3>
+   There are many black textures in the texture browser
+  </h3>
+  <p>
+   Doom 3 comes with a lot of redundant, nonfunctional material shaders. The problem is that the declarations reference image files that were not shipped with the game.
+  </p>
+  <p>
+   At present no level editor, including the built in editor, validates each shader to ensure the images exist. This results in a texture browser where half the textures listed are of no use.
+  </p>
+  <p>
+   In the case of Doom 3, there is a workaround and the same solution could be applied to other games. Check
+   <a href="Eutectic%27s_clean_paks" title="Eutectic's clean paks">
+    eutectic's clean paks
+   </a>
+   for more details.
+  </p>
+  <a name="Unable_to_delete_the_old_.bak_file">
+  </a>
+  <h3>
+   Unable to delete the old .bak file
+  </h3>
+  <p>
+   This bug has existed since the v1.2 update and has yet to be addressed.
+  </p>
+  <p>
+   This error occurs when you start editing a new map, or an existing map with a new name, and attempt to save. The save operation completes successfully but there is an issue with writing, overwriting, or creating a backup.
+  </p>
+  <p>
+   At present, there is no known fix or workaround. But given the nature of the issue it's more an annoyance than a real problem. It doesn't prevent you from creating content and can be safely ignored.
+  </p>
+  <a name="Fixed_editor_problems">
+  </a>
+  <h2>
+   Fixed editor problems
+  </h2>
+  <p>
+   The following have been fixed in subsequent versions of the game. They are left here in case there are modders using older versions.
+  </p>
+  <a name="Physical_memory_is_over_80.25_utilized._Consider_saving_and_restarting">
+  </a>
+  <h3>
+   Physical memory is over 80% utilized. Consider saving and restarting
+  </h3>
+  <p>
+   <i>
+    Fixed since v1.3; this message now appears when you really are running out of memory.
+   </i>
+   This bug occurs when you have a lot of RAM like 2Gb. This is a bug that reverses the memory check. What this means is that the error only appears if more than 80% of your memory is free.
+  </p>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:1046-0!1!0!0!!en!2 and timestamp 20120301040848 -->
+ </body>
+</html>

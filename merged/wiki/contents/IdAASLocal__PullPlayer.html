@@ -1,8 +1,10 @@
- <p>
-  <br/>
-  PullPlayer is located in AAS_debug with many other aas debugging utility methods. It is used to pull the player along a walk path to a goal area. Usage: "aas_pullPlayer 30" I am personally very interested in this method because it shows how some low level code can directly manipulate the player (like bot code could)
- </p>
- <pre> 
+<html>
+ <body>
+  <p>
+   <br/>
+   PullPlayer is located in AAS_debug with many other aas debugging utility methods. It is used to pull the player along a walk path to a goal area. Usage: "aas_pullPlayer 30" I am personally very interested in this method because it shows how some low level code can directly manipulate the player (like bot code could)
+  </p>
+  <pre> 
 <span style="color: #339900; font-style: italic;">/*
 ============
 idAASLocal::PullPlayer
@@ -15,16 +17,16 @@ idAASLocal::PullPlayer
 	aasPath_t path;
 	idPlayer *player;
  </pre>
- <p>
-  areaNum will represent the area origin is in. areaCenter is the center location of the goal area. dir and vel are used to get us there.
- </p>
- <p>
-  delta is the idAngles stuff ;)  the idAngles stuff is interesting.
- </p>
- <p>
-  A bunch of guard clauses follow.
- </p>
- <pre> 
+  <p>
+   areaNum will represent the area origin is in. areaCenter is the center location of the goal area. dir and vel are used to get us there.
+  </p>
+  <p>
+   delta is the idAngles stuff ;)  the idAngles stuff is interesting.
+  </p>
+  <p>
+   A bunch of guard clauses follow.
+  </p>
+  <pre> 
  
 player = gameLocal.<span style="color: #00aabb;">GetLocalPlayer</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span>;
 <span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span> !player <span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
@@ -45,67 +47,69 @@ areaCenter = AreaCenter<span style="color: #000000;">(</span> toAreaNum <span st
 <span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span> player-&gt;GetPhysics<span style="color: #000000;">(</span><span style="color: #000000;">)</span>-&gt;GetAbsBounds<span style="color: #000000;">(</span><span style="color: #000000;">)</span>.<span style="color: #00aabb;">Expand</span><span style="color: #000000;">(</span> <span style="color: #0000dd;">8</span> <span style="color: #000000;">)</span>.<span style="color: #00aabb;">ContainsPoint</span><span style="color: #000000;">(</span> areaCenter <span style="color: #000000;">)</span> <span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
 	<span style="color: #0000ff;">return</span> <span style="color: #0000ff;">false</span>;
 <span style="color: #000000;">}</span></pre>
- <p>
-  We need a player to PullPlayer. The Player needs a physics for us to pull him. If the toAreaNum passed in isn’t valid, we can’t pull him there. Finally, if we are already to the center of the toAreaNum area we can’t be pulled there.
- </p>
- <pre> 
+  <p>
+   We need a player to PullPlayer. The Player needs a physics for us to pull him. If the toAreaNum passed in isn’t valid, we can’t pull him there. Finally, if we are already to the center of the toAreaNum area we can’t be pulled there.
+  </p>
+  <pre> 
 <span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span> WalkPathToGoal<span style="color: #000000;">(</span> path, areaNum, origin, toAreaNum, areaCenter, TFL_WALK|TFL_AIR <span style="color: #000000;">)</span> <span style="color: #000000;">)</span> <span style="color: #000000;">{</span></pre>
- <p>
-  <a href="IdAASLocal::WalkPathToGoal" title="IdAASLocal::WalkPathToGoal">
-   WalkPathToGoal
-  </a>
-  creates a walk path towards the goal area. in other words, path is passed into WalkPathToGoal by reference and set up inside if there is a path.
- </p>
- <p>
-  So, if there is a path to the goal, we start to pull the player along that path.
- </p>
- <pre> 
+  <p>
+   <a href="IdAASLocal::WalkPathToGoal" title="IdAASLocal::WalkPathToGoal">
+    WalkPathToGoal
+   </a>
+   creates a walk path towards the goal area. in other words, path is passed into WalkPathToGoal by reference and set up inside if there is a path.
+  </p>
+  <p>
+   So, if there is a path to the goal, we start to pull the player along that path.
+  </p>
+  <pre> 
 dir = path.<span style="color: #00aabb;">moveGoal</span> - origin;
 dir<span style="color: #000000;">[</span><span style="color: #0000dd;">2</span><span style="color: #000000;">]</span> *= <span style="color: #0000dd;">0</span>.5f;
 dir.<span style="color: #00aabb;">Normalize</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span>;</pre>
- <p>
-  Set dir to the vector representing the direction and distance to the moveGoal. I think the z axis is scaled in half to pull the view towards the center.  dir would be considered our desired velocity now.
- </p>
- <p>
-  this is where the code kinda forks from my books. In my
-  <a href="Programming_Game_AI_by_Example" title="Programming Game AI by Example">
-   Programming Game AI by Example
-  </a>
-  Mat next subtracts the desired velocity calculated above from the current velocity to calculate the force required to steer the entity. but instead...
- </p>
- <pre> 
+  <p>
+   Set dir to the vector representing the direction and distance to the moveGoal. I think the z axis is scaled in half to pull the view towards the center.  dir would be considered our desired velocity now.
+  </p>
+  <p>
+   this is where the code kinda forks from my books. In my
+   <a href="Programming_Game_AI_by_Example" title="Programming Game AI by Example">
+    Programming Game AI by Example
+   </a>
+   Mat next subtracts the desired velocity calculated above from the current velocity to calculate the force required to steer the entity. but instead...
+  </p>
+  <pre> 
 delta = dir.<span style="color: #00aabb;">ToAngles</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span> - player-&gt;cmdAngles - player-&gt;GetDeltaViewAngles<span style="color: #000000;">(</span><span style="color: #000000;">)</span>;
 delta.<span style="color: #00aabb;">Normalize180</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span>;
 player-&gt;SetDeltaViewAngles<span style="color: #000000;">(</span> player-&gt;GetDeltaViewAngles<span style="color: #000000;">(</span><span style="color: #000000;">)</span> + delta * <span style="color: #0000dd;">0</span>.1f <span style="color: #000000;">)</span>;</pre>
- <p>
-  dir.ToAngles returns an idAngles that would be looking toward our desired moveGoal. Anyone know of a good link that talks about Euler angle and vector conversion? anyway, subtract the cmdAngles, which represent the angles the engine is telling us the player wants to look, and the deltaViewAngles, which is any outside influencers on our view, and you get the total difference between where we are looking and where we want to look. this is delta.
- </p>
- <p>
-  delta is than Normalize180'ed.  This is to make sure that our delta values are kept within the range of -180 to 180.
- </p>
- <p>
-  anyway again, finally the DeltaViewAngles are reset to be the sum of the original deltaViewAngles and the delta we have calculated to the desired position, scaled to .1 so that the change isn't choppy.
- </p>
- <p>
-  next:
- </p>
- <pre> 
+  <p>
+   dir.ToAngles returns an idAngles that would be looking toward our desired moveGoal. Anyone know of a good link that talks about Euler angle and vector conversion? anyway, subtract the cmdAngles, which represent the angles the engine is telling us the player wants to look, and the deltaViewAngles, which is any outside influencers on our view, and you get the total difference between where we are looking and where we want to look. this is delta.
+  </p>
+  <p>
+   delta is than Normalize180'ed.  This is to make sure that our delta values are kept within the range of -180 to 180.
+  </p>
+  <p>
+   anyway again, finally the DeltaViewAngles are reset to be the sum of the original deltaViewAngles and the delta we have calculated to the desired position, scaled to .1 so that the change isn't choppy.
+  </p>
+  <p>
+   next:
+  </p>
+  <pre> 
 dir<span style="color: #000000;">[</span><span style="color: #0000dd;">2</span><span style="color: #000000;">]</span> = <span style="color: #0000dd;">0</span>.0f;
 dir.<span style="color: #00aabb;">Normalize</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span>;
 dir *= <span style="color: #0000dd;">100</span>.0f;</pre>
- <p>
-  we set up the dir vector to have no z angle, in other words, don't look up or down, and normalize it, then scale it out 100 units. we are setting it up to represent our linear velocity. The normalized dir represented our direction, the number we scale it by (in this case 100) represents our speed. (i think, lol)
- </p>
- <pre> 
+  <p>
+   we set up the dir vector to have no z angle, in other words, don't look up or down, and normalize it, then scale it out 100 units. we are setting it up to represent our linear velocity. The normalized dir represented our direction, the number we scale it by (in this case 100) represents our speed. (i think, lol)
+  </p>
+  <pre> 
 vel = physics-&gt;GetLinearVelocity<span style="color: #000000;">(</span><span style="color: #000000;">)</span>;
 dir<span style="color: #000000;">[</span><span style="color: #0000dd;">2</span><span style="color: #000000;">]</span> = vel<span style="color: #000000;">[</span><span style="color: #0000dd;">2</span><span style="color: #000000;">]</span>;
 physics-&gt;SetLinearVelocity<span style="color: #000000;">(</span> dir <span style="color: #000000;">)</span>;
 <span style="color: #0000ff;">return</span> <span style="color: #0000ff;">true</span>;</pre>
- <p>
-  <br/>
-  so in this method to automatically manipulate the player through code we do two things, we change the DeltaViewAngles and set the linear velocity of the player.
- </p>
- <p>
-  good stuff
- </p>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:1157-0!1!0!0!!en!2 and timestamp 20120229145007 -->
+  <p>
+   <br/>
+   so in this method to automatically manipulate the player through code we do two things, we change the DeltaViewAngles and set the linear velocity of the player.
+  </p>
+  <p>
+   good stuff
+  </p>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:1157-0!1!0!0!!en!2 and timestamp 20120229145007 -->
+ </body>
+</html>

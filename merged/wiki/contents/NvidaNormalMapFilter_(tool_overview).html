@@ -1,473 +1,477 @@
- <a name="Foreword">
- </a>
- <h2>
-  Foreword
- </h2>
- <p>
-  <a class="external text" href="https://web.archive.org/web/20110906153324/http://www.google.com/search?hl=en&amp;q=NVidia%20Texture%20Tools&amp;btnI=I'm+Feeling+Lucky" title="http://www.google.com/search?hl=en&amp;q=NVidia%20Texture%20Tools&amp;btnI=I'm+Feeling+Lucky">
-   Nvidia's Normal Map plugin
+<html>
+ <body>
+  <a name="Foreword">
   </a>
-  for
-  <a class="external text" href="http://www.adobe.com/" title="http://www.adobe.com/">
-   Adobe Photoshop
-  </a>
-  is primarily used to create normal maps from height maps.
- </p>
- <p>
-  However, it's also possible to normalize an existing normal map, combine a normal map with a height map, as well as export special maps.
- </p>
- <table cellpadding="0" cellspacing="0" style="margin-bottom: 0.5em; float: left; margin-right: 0.5em; padding: 0.5em 1.4em 0.8em 0; background-color: transparent;">
-  <tr>
-   <td>
-   </td>
-  </tr>
- </table>
- <a name="A_Word_About_Channels">
- </a>
- <h2>
-  A Word About Channels
- </h2>
- <p>
-  It's important to note that the plugin only uses the channels that are selected so if you need to make use of the alpha channel with the plugin you must select it in the channels pallet prior to starting the plugin.
- </p>
- <a name="General_Interface">
- </a>
- <h2>
-  General Interface
- </h2>
- <div class="thumb tright">
-  <div style="width:523px;">
-   <a class="internal" href="Image:NvidiaNormalMapPlugin.gif" title="nVidia normal map plugin interface">
-    <img alt="nVidia normal map plugin interface" height="463" longdesc="/wiki/Image:NvidiaNormalMapPlugin.gif" src="/w/images/b/ba/NvidiaNormalMapPlugin.gif" width="521"/>
+  <h2>
+   Foreword
+  </h2>
+  <p>
+   <a class="external text" href="https://web.archive.org/web/20110906153324/http://www.google.com/search?hl=en&amp;q=NVidia%20Texture%20Tools&amp;btnI=I'm+Feeling+Lucky" title="http://www.google.com/search?hl=en&amp;q=NVidia%20Texture%20Tools&amp;btnI=I'm+Feeling+Lucky">
+    Nvidia's Normal Map plugin
    </a>
-   <div class="thumbcaption">
-    nVidia normal map plugin interface
+   for
+   <a class="external text" href="http://www.adobe.com/" title="http://www.adobe.com/">
+    Adobe Photoshop
+   </a>
+   is primarily used to create normal maps from height maps.
+  </p>
+  <p>
+   However, it's also possible to normalize an existing normal map, combine a normal map with a height map, as well as export special maps.
+  </p>
+  <table cellpadding="0" cellspacing="0" style="margin-bottom: 0.5em; float: left; margin-right: 0.5em; padding: 0.5em 1.4em 0.8em 0; background-color: transparent;">
+   <tr>
+    <td>
+    </td>
+   </tr>
+  </table>
+  <a name="A_Word_About_Channels">
+  </a>
+  <h2>
+   A Word About Channels
+  </h2>
+  <p>
+   It's important to note that the plugin only uses the channels that are selected so if you need to make use of the alpha channel with the plugin you must select it in the channels pallet prior to starting the plugin.
+  </p>
+  <a name="General_Interface">
+  </a>
+  <h2>
+   General Interface
+  </h2>
+  <div class="thumb tright">
+   <div style="width:523px;">
+    <a class="internal" href="Image:NvidiaNormalMapPlugin.gif" title="nVidia normal map plugin interface">
+     <img alt="nVidia normal map plugin interface" height="463" longdesc="/wiki/Image:NvidiaNormalMapPlugin.gif" src="/w/images/b/ba/NvidiaNormalMapPlugin.gif" width="521"/>
+    </a>
+    <div class="thumbcaption">
+     nVidia normal map plugin interface
+    </div>
    </div>
   </div>
- </div>
- <p>
-  This is the plugin interface. The following sections will explain the function of each checkbox, textbox, button, and display.
- </p>
- <a name="Dynamic_Preview">
- </a>
- <h3>
-  Dynamic Preview
- </h3>
- <p>
-  The dynamic preview will display a thumbnail of the resulting normal map using the current settings.
- </p>
- <a name=".22Add_Height_to_Normal_Map.22_Checkbox">
- </a>
- <h3>
-  "Add Height to Normal Map" Checkbox
- </h3>
- <p>
-  This checkbox instructs the plugin to add the normals of a height map to an existing normal map.
- </p>
- <p>
-  However, because a normal map must use the RGB channels and you cannot specify an image other than the image in use when the plugin is initiated, you must store the height information in the alpha channel of the normal map.
- </p>
- <p>
-  So, when using this feature it's important to also select "Alpha Channel" as the height source. Note that the "Alpha Channel" radio button is disabled by default. In order to use it you must select the red, green, blue, and alpha channels in the channels pallet prior to starting the plugin.
- </p>
- <a name=".22Output_16:16.22_Checkbox">
- </a>
- <h3>
-  "Output 16:16" Checkbox
- </h3>
- <p>
-  This has been removed in the current version
- </p>
- <a name=".22Output_12:12:8.22_Checkbox">
- </a>
- <h3>
-  "Output 12:12:8" Checkbox
- </h3>
- <p>
-  This also has been removed.
- </p>
- <a name=".22Using_Multiple_Layers.22_Checkbox">
- </a>
- <h3>
-  "Using Multiple Layers" Checkbox
- </h3>
- <p>
-  By default the plugin expect you to be working with a flattened image. However, this checkbox allows you to work with multiple layers.
- </p>
- <a name=".22Signed_Output.22_Checkbox">
- </a>
- <h3>
-  "Signed Output" Checkbox
- </h3>
- <p>
-  Removed in the current version.
- </p>
- <a name=".22Swap_RGB.22_Checkbox">
- </a>
- <h3>
-  "Swap RGB" Checkbox
- </h3>
- <p>
-  By default the plugin exports normal data as follows...
- </p>
- <ul>
-  <li>
-   Red Channel - X axis
-  </li>
-  <li>
-   Green Channel - Y axis
-  </li>
-  <li>
-   Blue Channel - Z axis
-  </li>
- </ul>
- <p>
-  With this checkbox ticked however, the plugin exports normal data as follows...
- </p>
- <ul>
-  <li>
-   Red Channel - Z axis
-  </li>
-  <li>
-   Green Channel - Y axis
-  </li>
-  <li>
-   Blue Channel - X axis
-  </li>
- </ul>
- <a name="3D_Preview_Button">
- </a>
- <h3>
-  3D Preview Button
- </h3>
- <p>
-  This button brings up the 3D preview pane using the settings defined in the 3D view section.
- </p>
- <a name="Height_Generation">
- </a>
- <h2>
-  Height Generation
- </h2>
- <p>
-  This section defines every aspect of how the height map is converted into a normal map.
- </p>
- <a name=".22Wrap.22_Checkbox">
- </a>
- <h3>
-  "Wrap" Checkbox
- </h3>
- <p>
-  This checkbox enables/disables the wraping of the resulting normal map around the edges of the image. This is used for continuity when working with seamless textures.
- </p>
- <a name=".22Invert_X.22_Checkbox">
- </a>
- <h3>
-  "Invert X" Checkbox
- </h3>
- <p>
-  This checkbox enables/disables the inversion of X axis normal data.
- </p>
- <a name=".22Invert_Y.22_Checkbox">
- </a>
- <h3>
-  "Invert Y" Checkbox
- </h3>
- <p>
-  This checkbox enables/disables the inversion of Y axis normal data.
- </p>
- <a name=".22Min_Z.22_Textbox">
- </a>
- <h3>
-  "Min Z" Textbox
- </h3>
- <p>
-  This textbox envelopes the Z axis normal data to the specified value and above.
- </p>
- <a name=".22Scale.22_Textbox">
- </a>
- <h3>
-  "Scale" Textbox
- </h3>
- <p>
-  This textbox defines the strength of the height or normal map.
- </p>
- <a name="Filter_Type">
- </a>
- <h3>
-  Filter Type
- </h3>
- <p>
-  Here you select the filter used to produce the normal map.
- </p>
- <a name="4_Sample">
- </a>
- <h4>
-  4 Sample
- </h4>
- <p>
-  With this selected, 4 samples are taken from the surrounding pixels.
- </p>
- <a name="3_x_3">
- </a>
- <h4>
-  3 x 3
- </h4>
- <p>
-  With this selected, 9 samples are taken from the surrounding pixels.
- </p>
- <a name="5_x_5">
- </a>
- <h4>
-  5 x 5
- </h4>
- <p>
-  With this selected, 25 samples are taken from the surrounding pixels.
- </p>
- <a name="7_x_7">
- </a>
- <h4>
-  7 x 7
- </h4>
- <p>
-  With this selected, 49 samples are taken from the surrounding pixels.
- </p>
- <a name="9_x_9">
- </a>
- <h4>
-  9 x 9
- </h4>
- <p>
-  With this selected, 72 samples are taken from the surrounding pixels.
- </p>
- <a name="Du.2FDv">
- </a>
- <h4>
-  Du/Dv
- </h4>
- <p>
-  With this selected, the height map is converted into an environment-mapped bump map.
- </p>
- <a name="Q8W8V8U8">
- </a>
- <h4>
-  Q8W8V8U8
- </h4>
- <p>
-  With this selected, the height map is converted into a Q8W8V8U8 bump map.
- </p>
- <a name="3D_Preview_Options">
- </a>
- <h2>
-  3D Preview Options
- </h2>
- <p>
-  This section defines the settings used in the 3D preview pane.
- </p>
- <a name="Decal_Texture">
- </a>
- <h3>
-  Decal Texture
- </h3>
- <p>
-  This button allows you to select the color map to apply the resulting normal map to in the 3D preview pane.
- </p>
- <a name=".22Use_Decal_Texture.22_Checkbox">
- </a>
- <h3>
-  "Use Decal Texture" Checkbox
- </h3>
- <p>
-  This checkbox enables/disables the use of a color map in the 3D preview pane.
- </p>
- <a name=".22Brigten_Decal.22_Checkbox">
- </a>
- <h3>
-  "Brigten Decal" Checkbox
- </h3>
- <p>
-  ???
- </p>
- <a name=".22Animate_Light.22_Checkbox">
- </a>
- <h3>
-  "Animate Light" Checkbox
- </h3>
- <p>
-  This checkbox enables/disables the use of an animated light in the 3D preview pane.
- </p>
- <a name="Height_Source">
- </a>
- <h2>
-  Height Source
- </h2>
- <p>
-  This section determines the source of the height map to convert.
- </p>
- <a name="Alpha_Channel">
- </a>
- <h3>
-  Alpha Channel
- </h3>
- <p>
-  When selceted, the plugin gathers height map data from the alpha channel.
- </p>
- <p>
-  Remember, the plugin only recogizes the channels selected from the channels pallet prior to starting the plugin. If you do not have the alpha channel selected this option will be disabled.
- </p>
- <a name="Average_RGB">
- </a>
- <h3>
-  Average RGB
- </h3>
- <p>
-  When selected, the plugin gathers height map data from an average of the red, green, and blue channels.
- </p>
- <a name="Alternate_Conversions">
- </a>
- <h2>
-  Alternate Conversions
- </h2>
- <a name="Biased_RGB">
- </a>
- <h3>
-  Biased RGB
- </h3>
- <p>
-  When selected, the plugin subtracts the average color of the image from each texel.
- </p>
- <a name="Red">
- </a>
- <h3>
-  Red
- </h3>
- <p>
-  By default the plugin exports normal data as follows...
- </p>
- <ul>
-  <li>
-   Red Channel - X axis
-  </li>
-  <li>
-   Green Channel - Y axis
-  </li>
-  <li>
-   Blue Channel - Z axis
-  </li>
- </ul>
- <p>
-  With this checkbox ticked, the plugin should export Z axis normal data in the red channel. However, it doesn't appear to work.
- </p>
- <a name="Green">
- </a>
- <h3>
-  Green
- </h3>
- <p>
-  By default the plugin exports normal data as follows...
- </p>
- <ul>
-  <li>
-   Red Channel - X axis
-  </li>
-  <li>
-   Green Channel - Y axis
-  </li>
-  <li>
-   Blue Channel - Z axis
-  </li>
- </ul>
- <p>
-  With this checkbox ticked, the plugin should export Z axis normal data in the green channel. However, it doesn't appear to work.
- </p>
- <a name="Blue">
- </a>
- <h3>
-  Blue
- </h3>
- <p>
-  By default the plugin exports normal data as follows...
- </p>
- <ul>
-  <li>
-   Red Channel - X axis
-  </li>
-  <li>
-   Green Channel - Y axis
-  </li>
-  <li>
-   Blue Channel - Z axis
-  </li>
- </ul>
- <p>
-  With this checkbox ticked, the plugin should export Z axis normal data in the blue channel. However, it doesn't matter because the result would be the same.
- </p>
- <a name="Max_.28R.2CG.2CB.29">
- </a>
- <h3>
-  Max (R,G,B)
- </h3>
- <p>
-  When selected, the plugin uses the maximum value from the red, green, and blue, channels as opposed to averaging them.
- </p>
- <a name="Colorspace">
- </a>
- <h3>
-  Colorspace
- </h3>
- <p>
-  Color space - Height = 1.0 - [(1.0 - r) * (1.0 - g) * (1.0 - b)]
- </p>
- <p>
-  Invert all the colors, multiply them together and invert the result. This was an artist request.
- </p>
- <a name="Normalize_Only">
- </a>
- <h3>
-  Normalize Only
- </h3>
- <p>
-  When selected, the plugin normalizes the color of each texel to make an hand edited normal map compliant.
- </p>
- <a name="Convert_to_Height">
- </a>
- <h3>
-  Convert to Height
- </h3>
- <p>
-  When selected, the plugin converts a normal map to a height map. This should be working correctly in version 8.0 or later.
- </p>
- <a name="Alpha_Field">
- </a>
- <h2>
-  Alpha Field
- </h2>
- <p>
-  Settings in this section determine what to output to the alpha channel if it exists.
- </p>
- <a name="Unchanged">
- </a>
- <h3>
-  Unchanged
- </h3>
- <p>
-  When selected, the alpha channel is left unchanged.
- </p>
- <a name="Set_to_0.0">
- </a>
- <h3>
-  Set to 0.0
- </h3>
- <p>
-  When selected, the alpha channel is filled with black.
- </p>
- <a name="Set_to_1.1">
- </a>
- <h3>
-  Set to 1.1
- </h3>
- <p>
-  When selected, the alpha channel is filled with white.
- </p>
- <p>
-  <br/>
- </p>
+  <p>
+   This is the plugin interface. The following sections will explain the function of each checkbox, textbox, button, and display.
+  </p>
+  <a name="Dynamic_Preview">
+  </a>
+  <h3>
+   Dynamic Preview
+  </h3>
+  <p>
+   The dynamic preview will display a thumbnail of the resulting normal map using the current settings.
+  </p>
+  <a name=".22Add_Height_to_Normal_Map.22_Checkbox">
+  </a>
+  <h3>
+   "Add Height to Normal Map" Checkbox
+  </h3>
+  <p>
+   This checkbox instructs the plugin to add the normals of a height map to an existing normal map.
+  </p>
+  <p>
+   However, because a normal map must use the RGB channels and you cannot specify an image other than the image in use when the plugin is initiated, you must store the height information in the alpha channel of the normal map.
+  </p>
+  <p>
+   So, when using this feature it's important to also select "Alpha Channel" as the height source. Note that the "Alpha Channel" radio button is disabled by default. In order to use it you must select the red, green, blue, and alpha channels in the channels pallet prior to starting the plugin.
+  </p>
+  <a name=".22Output_16:16.22_Checkbox">
+  </a>
+  <h3>
+   "Output 16:16" Checkbox
+  </h3>
+  <p>
+   This has been removed in the current version
+  </p>
+  <a name=".22Output_12:12:8.22_Checkbox">
+  </a>
+  <h3>
+   "Output 12:12:8" Checkbox
+  </h3>
+  <p>
+   This also has been removed.
+  </p>
+  <a name=".22Using_Multiple_Layers.22_Checkbox">
+  </a>
+  <h3>
+   "Using Multiple Layers" Checkbox
+  </h3>
+  <p>
+   By default the plugin expect you to be working with a flattened image. However, this checkbox allows you to work with multiple layers.
+  </p>
+  <a name=".22Signed_Output.22_Checkbox">
+  </a>
+  <h3>
+   "Signed Output" Checkbox
+  </h3>
+  <p>
+   Removed in the current version.
+  </p>
+  <a name=".22Swap_RGB.22_Checkbox">
+  </a>
+  <h3>
+   "Swap RGB" Checkbox
+  </h3>
+  <p>
+   By default the plugin exports normal data as follows...
+  </p>
+  <ul>
+   <li>
+    Red Channel - X axis
+   </li>
+   <li>
+    Green Channel - Y axis
+   </li>
+   <li>
+    Blue Channel - Z axis
+   </li>
+  </ul>
+  <p>
+   With this checkbox ticked however, the plugin exports normal data as follows...
+  </p>
+  <ul>
+   <li>
+    Red Channel - Z axis
+   </li>
+   <li>
+    Green Channel - Y axis
+   </li>
+   <li>
+    Blue Channel - X axis
+   </li>
+  </ul>
+  <a name="3D_Preview_Button">
+  </a>
+  <h3>
+   3D Preview Button
+  </h3>
+  <p>
+   This button brings up the 3D preview pane using the settings defined in the 3D view section.
+  </p>
+  <a name="Height_Generation">
+  </a>
+  <h2>
+   Height Generation
+  </h2>
+  <p>
+   This section defines every aspect of how the height map is converted into a normal map.
+  </p>
+  <a name=".22Wrap.22_Checkbox">
+  </a>
+  <h3>
+   "Wrap" Checkbox
+  </h3>
+  <p>
+   This checkbox enables/disables the wraping of the resulting normal map around the edges of the image. This is used for continuity when working with seamless textures.
+  </p>
+  <a name=".22Invert_X.22_Checkbox">
+  </a>
+  <h3>
+   "Invert X" Checkbox
+  </h3>
+  <p>
+   This checkbox enables/disables the inversion of X axis normal data.
+  </p>
+  <a name=".22Invert_Y.22_Checkbox">
+  </a>
+  <h3>
+   "Invert Y" Checkbox
+  </h3>
+  <p>
+   This checkbox enables/disables the inversion of Y axis normal data.
+  </p>
+  <a name=".22Min_Z.22_Textbox">
+  </a>
+  <h3>
+   "Min Z" Textbox
+  </h3>
+  <p>
+   This textbox envelopes the Z axis normal data to the specified value and above.
+  </p>
+  <a name=".22Scale.22_Textbox">
+  </a>
+  <h3>
+   "Scale" Textbox
+  </h3>
+  <p>
+   This textbox defines the strength of the height or normal map.
+  </p>
+  <a name="Filter_Type">
+  </a>
+  <h3>
+   Filter Type
+  </h3>
+  <p>
+   Here you select the filter used to produce the normal map.
+  </p>
+  <a name="4_Sample">
+  </a>
+  <h4>
+   4 Sample
+  </h4>
+  <p>
+   With this selected, 4 samples are taken from the surrounding pixels.
+  </p>
+  <a name="3_x_3">
+  </a>
+  <h4>
+   3 x 3
+  </h4>
+  <p>
+   With this selected, 9 samples are taken from the surrounding pixels.
+  </p>
+  <a name="5_x_5">
+  </a>
+  <h4>
+   5 x 5
+  </h4>
+  <p>
+   With this selected, 25 samples are taken from the surrounding pixels.
+  </p>
+  <a name="7_x_7">
+  </a>
+  <h4>
+   7 x 7
+  </h4>
+  <p>
+   With this selected, 49 samples are taken from the surrounding pixels.
+  </p>
+  <a name="9_x_9">
+  </a>
+  <h4>
+   9 x 9
+  </h4>
+  <p>
+   With this selected, 72 samples are taken from the surrounding pixels.
+  </p>
+  <a name="Du.2FDv">
+  </a>
+  <h4>
+   Du/Dv
+  </h4>
+  <p>
+   With this selected, the height map is converted into an environment-mapped bump map.
+  </p>
+  <a name="Q8W8V8U8">
+  </a>
+  <h4>
+   Q8W8V8U8
+  </h4>
+  <p>
+   With this selected, the height map is converted into a Q8W8V8U8 bump map.
+  </p>
+  <a name="3D_Preview_Options">
+  </a>
+  <h2>
+   3D Preview Options
+  </h2>
+  <p>
+   This section defines the settings used in the 3D preview pane.
+  </p>
+  <a name="Decal_Texture">
+  </a>
+  <h3>
+   Decal Texture
+  </h3>
+  <p>
+   This button allows you to select the color map to apply the resulting normal map to in the 3D preview pane.
+  </p>
+  <a name=".22Use_Decal_Texture.22_Checkbox">
+  </a>
+  <h3>
+   "Use Decal Texture" Checkbox
+  </h3>
+  <p>
+   This checkbox enables/disables the use of a color map in the 3D preview pane.
+  </p>
+  <a name=".22Brigten_Decal.22_Checkbox">
+  </a>
+  <h3>
+   "Brigten Decal" Checkbox
+  </h3>
+  <p>
+   ???
+  </p>
+  <a name=".22Animate_Light.22_Checkbox">
+  </a>
+  <h3>
+   "Animate Light" Checkbox
+  </h3>
+  <p>
+   This checkbox enables/disables the use of an animated light in the 3D preview pane.
+  </p>
+  <a name="Height_Source">
+  </a>
+  <h2>
+   Height Source
+  </h2>
+  <p>
+   This section determines the source of the height map to convert.
+  </p>
+  <a name="Alpha_Channel">
+  </a>
+  <h3>
+   Alpha Channel
+  </h3>
+  <p>
+   When selceted, the plugin gathers height map data from the alpha channel.
+  </p>
+  <p>
+   Remember, the plugin only recogizes the channels selected from the channels pallet prior to starting the plugin. If you do not have the alpha channel selected this option will be disabled.
+  </p>
+  <a name="Average_RGB">
+  </a>
+  <h3>
+   Average RGB
+  </h3>
+  <p>
+   When selected, the plugin gathers height map data from an average of the red, green, and blue channels.
+  </p>
+  <a name="Alternate_Conversions">
+  </a>
+  <h2>
+   Alternate Conversions
+  </h2>
+  <a name="Biased_RGB">
+  </a>
+  <h3>
+   Biased RGB
+  </h3>
+  <p>
+   When selected, the plugin subtracts the average color of the image from each texel.
+  </p>
+  <a name="Red">
+  </a>
+  <h3>
+   Red
+  </h3>
+  <p>
+   By default the plugin exports normal data as follows...
+  </p>
+  <ul>
+   <li>
+    Red Channel - X axis
+   </li>
+   <li>
+    Green Channel - Y axis
+   </li>
+   <li>
+    Blue Channel - Z axis
+   </li>
+  </ul>
+  <p>
+   With this checkbox ticked, the plugin should export Z axis normal data in the red channel. However, it doesn't appear to work.
+  </p>
+  <a name="Green">
+  </a>
+  <h3>
+   Green
+  </h3>
+  <p>
+   By default the plugin exports normal data as follows...
+  </p>
+  <ul>
+   <li>
+    Red Channel - X axis
+   </li>
+   <li>
+    Green Channel - Y axis
+   </li>
+   <li>
+    Blue Channel - Z axis
+   </li>
+  </ul>
+  <p>
+   With this checkbox ticked, the plugin should export Z axis normal data in the green channel. However, it doesn't appear to work.
+  </p>
+  <a name="Blue">
+  </a>
+  <h3>
+   Blue
+  </h3>
+  <p>
+   By default the plugin exports normal data as follows...
+  </p>
+  <ul>
+   <li>
+    Red Channel - X axis
+   </li>
+   <li>
+    Green Channel - Y axis
+   </li>
+   <li>
+    Blue Channel - Z axis
+   </li>
+  </ul>
+  <p>
+   With this checkbox ticked, the plugin should export Z axis normal data in the blue channel. However, it doesn't matter because the result would be the same.
+  </p>
+  <a name="Max_.28R.2CG.2CB.29">
+  </a>
+  <h3>
+   Max (R,G,B)
+  </h3>
+  <p>
+   When selected, the plugin uses the maximum value from the red, green, and blue, channels as opposed to averaging them.
+  </p>
+  <a name="Colorspace">
+  </a>
+  <h3>
+   Colorspace
+  </h3>
+  <p>
+   Color space - Height = 1.0 - [(1.0 - r) * (1.0 - g) * (1.0 - b)]
+  </p>
+  <p>
+   Invert all the colors, multiply them together and invert the result. This was an artist request.
+  </p>
+  <a name="Normalize_Only">
+  </a>
+  <h3>
+   Normalize Only
+  </h3>
+  <p>
+   When selected, the plugin normalizes the color of each texel to make an hand edited normal map compliant.
+  </p>
+  <a name="Convert_to_Height">
+  </a>
+  <h3>
+   Convert to Height
+  </h3>
+  <p>
+   When selected, the plugin converts a normal map to a height map. This should be working correctly in version 8.0 or later.
+  </p>
+  <a name="Alpha_Field">
+  </a>
+  <h2>
+   Alpha Field
+  </h2>
+  <p>
+   Settings in this section determine what to output to the alpha channel if it exists.
+  </p>
+  <a name="Unchanged">
+  </a>
+  <h3>
+   Unchanged
+  </h3>
+  <p>
+   When selected, the alpha channel is left unchanged.
+  </p>
+  <a name="Set_to_0.0">
+  </a>
+  <h3>
+   Set to 0.0
+  </h3>
+  <p>
+   When selected, the alpha channel is filled with black.
+  </p>
+  <a name="Set_to_1.1">
+  </a>
+  <h3>
+   Set to 1.1
+  </h3>
+  <p>
+   When selected, the alpha channel is filled with white.
+  </p>
+  <p>
+   <br/>
+  </p>
+ </body>
+</html>

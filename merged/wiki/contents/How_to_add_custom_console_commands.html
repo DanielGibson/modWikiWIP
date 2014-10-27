@@ -1,63 +1,67 @@
- <a name="Introduction">
- </a>
- <h2>
-  Introduction
- </h2>
- <p>
-  This is a quick tutorial demonstrating how to add custom
-  <a href="Console" title="Console">
-   commands
+<html>
+ <body>
+  <a name="Introduction">
   </a>
-  to the console.
- </p>
- <a name="Adding_the_function_to_Doom_3">
- </a>
- <h2>
-  Adding the function to Doom 3
- </h2>
- <p>
-  Open up
-  <a class="new" href="Src/game/gamesys/SysCmds.cpp_%28source_file%29" title="Src/game/gamesys/SysCmds.cpp (source file)">
-   src/game/gamesys/SysCmds.cpp (source file)
+  <h2>
+   Introduction
+  </h2>
+  <p>
+   This is a quick tutorial demonstrating how to add custom
+   <a href="Console" title="Console">
+    commands
+   </a>
+   to the console.
+  </p>
+  <a name="Adding_the_function_to_Doom_3">
   </a>
-  .  The largest thing to note is near the bottom:
- </p>
- <pre><span style="color: #0000ff;">void</span> idGameLocal::<span style="color: #00aabb;">InitConsoleCommands</span><span style="color: #000000;">(</span> <span style="color: #0000ff;">void</span> <span style="color: #000000;">)</span> <span style="color: #000000;">{</span></pre>
- <p>
-  Inside here, there are many calls to cmdSystem-&gt;AddCommand.  Pick a line, and add one of your own.
- </p>
- <pre>cmdSystem-&gt;AddCommand<span style="color: #000000;">(</span> <span style="color: #666666;">"testcommand"</span>, Cmd_testcommand, CMD_FL_GAME, <span style="color: #666666;">"test command"</span> <span style="color: #000000;">)</span>;</pre>
- <p>
-  The parameters are as follows:
- </p>
- <pre>cmdSystem-&gt;AddCommand<span style="color: #000000;">(</span> &lt;name of command to be used in the Doom <span style="color: #0000dd;">3</span> console&gt;, &lt;the name of the C++ function to be called&gt;, &lt;Various flags&gt;, &lt;description of command&gt;</pre>
- <p>
-  The two exampled flags in the file are CMD_FL_GAME and CMD_FL_CHEAT.  Use CMD_FL_GAME for everything, and bitwise OR ( | ) it with CMD_FL_CHEAT for anything that allows the player to
-  <a class="new" href="Cheat" title="Cheat">
-   cheat
+  <h2>
+   Adding the function to Doom 3
+  </h2>
+  <p>
+   Open up
+   <a class="new" href="Src/game/gamesys/SysCmds.cpp_%28source_file%29" title="Src/game/gamesys/SysCmds.cpp (source file)">
+    src/game/gamesys/SysCmds.cpp (source file)
+   </a>
+   .  The largest thing to note is near the bottom:
+  </p>
+  <pre><span style="color: #0000ff;">void</span> idGameLocal::<span style="color: #00aabb;">InitConsoleCommands</span><span style="color: #000000;">(</span> <span style="color: #0000ff;">void</span> <span style="color: #000000;">)</span> <span style="color: #000000;">{</span></pre>
+  <p>
+   Inside here, there are many calls to cmdSystem-&gt;AddCommand.  Pick a line, and add one of your own.
+  </p>
+  <pre>cmdSystem-&gt;AddCommand<span style="color: #000000;">(</span> <span style="color: #666666;">"testcommand"</span>, Cmd_testcommand, CMD_FL_GAME, <span style="color: #666666;">"test command"</span> <span style="color: #000000;">)</span>;</pre>
+  <p>
+   The parameters are as follows:
+  </p>
+  <pre>cmdSystem-&gt;AddCommand<span style="color: #000000;">(</span> &lt;name of command to be used in the Doom <span style="color: #0000dd;">3</span> console&gt;, &lt;the name of the C++ function to be called&gt;, &lt;Various flags&gt;, &lt;description of command&gt;</pre>
+  <p>
+   The two exampled flags in the file are CMD_FL_GAME and CMD_FL_CHEAT.  Use CMD_FL_GAME for everything, and bitwise OR ( | ) it with CMD_FL_CHEAT for anything that allows the player to
+   <a class="new" href="Cheat" title="Cheat">
+    cheat
+   </a>
+   .  If anyone knows any more about these flags, please update the wiki!
+  </p>
+  <a name="Writing_the_function">
   </a>
-  .  If anyone knows any more about these flags, please update the wiki!
- </p>
- <a name="Writing_the_function">
- </a>
- <h2>
-  Writing the function
- </h2>
- <p>
-  Now, scroll up a bit, and add your own function.
- </p>
- <pre><span style="color: #0000ff;">void</span> Cmd_testcommand <span style="color: #000000;">(</span> <span style="color: #0000ff;">const</span> idCmdArgs &amp;args <span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
+  <h2>
+   Writing the function
+  </h2>
+  <p>
+   Now, scroll up a bit, and add your own function.
+  </p>
+  <pre><span style="color: #0000ff;">void</span> Cmd_testcommand <span style="color: #000000;">(</span> <span style="color: #0000ff;">const</span> idCmdArgs &amp;args <span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
  
  common-&gt;Printf<span style="color: #000000;">(</span><span style="color: #666666;">"This is an example!"</span><span style="color: #000000;">)</span>;
  
  <span style="color: #000000;">}</span></pre>
- <p>
-  Arguments to functions are counted with args.Argc() and referenced using args.Argv();
- </p>
- <pre><span style="color: #0000ff;">void</span> Cmd_testcommand <span style="color: #000000;">(</span> <span style="color: #0000ff;">const</span> idCmdArgs &amp;args<span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
+  <p>
+   Arguments to functions are counted with args.Argc() and referenced using args.Argv();
+  </p>
+  <pre><span style="color: #0000ff;">void</span> Cmd_testcommand <span style="color: #000000;">(</span> <span style="color: #0000ff;">const</span> idCmdArgs &amp;args<span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
  
  common-&gt;Printf<span style="color: #000000;">(</span>args.<span style="color: #00aabb;">Argc</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span><span style="color: #000000;">)</span>;
  common-&gt;Printf<span style="color: #000000;">(</span>args.<span style="color: #00aabb;">Argv</span><span style="color: #000000;">(</span> <span style="color: #0000dd;">1</span> <span style="color: #000000;">)</span>;
  
  <span style="color: #000000;">}</span></pre>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:1304-0!1!0!0!!en!2 and timestamp 20091213080833 -->
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:1304-0!1!0!0!!en!2 and timestamp 20091213080833 -->
+ </body>
+</html>

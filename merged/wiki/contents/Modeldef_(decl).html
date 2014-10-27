@@ -1,178 +1,180 @@
- <p>
-  Model declarations define parameters for the engine to take into account when dealing with a specific animated model.
- </p>
- <a name="Syntax">
- </a>
- <h2>
-  Syntax
- </h2>
- <pre>model [name] {
+<html>
+ <body>
+  <p>
+   Model declarations define parameters for the engine to take into account when dealing with a specific animated model.
+  </p>
+  <a name="Syntax">
+  </a>
+  <h2>
+   Syntax
+  </h2>
+  <pre>model [name] {
  [keywords]
  [animation declarations]
 }
 </pre>
- <p>
-  Model declarations begin with a header which consists of model followed by the
-  <i>
-   name
-  </i>
-  of the model declaration.
- </p>
- <p>
-  The header is followed by the body of the declaration which is enclosed in curly brackets.
- </p>
- <p>
-  The body is composed of several
-  <i>
-   keywords
-  </i>
-  and is followed by one or more
-  <i>
-   animation declarations
-  </i>
-  .
- </p>
- <a name="Keywords">
- </a>
- <h3>
-  Keywords
- </h3>
- <table class="mwstyle">
-  <tr>
-   <th>
-    Keyword &amp; Usage
-   </th>
-   <th>
-    Description
-   </th>
-  </tr>
-  <tr>
-   <td style="font-family: monospace;">
-    <b>
-     anim
-    </b>
-    <i>
-     name file [{...}]
-    </i>
-   </td>
-   <td>
-    A declarations that assigns a name to the specified md5anim and allows for the declaration of frame events enclosed in curly brackets.
-   </td>
-  </tr>
-  <tr>
-   <td style="font-family: monospace;">
-    <b>
-     channel
-    </b>
-    <i>
-     name (joints)
-    </i>
-   </td>
-   <td>
-    Defines an animation channel or isolated region of the skeleton. Channels allow a character's legs to move independently of their torso.
-   </td>
-  </tr>
-  <tr>
-   <td style="font-family: monospace;">
-    <b>
-     inherit
-    </b>
-    <i>
-     name
-    </i>
-   </td>
-   <td>
-    Inherits properties from specified model declaration.
-   </td>
-  </tr>
-  <tr>
-   <td style="font-family: monospace;">
-    <b>
-     mesh
-    </b>
-    <i>
-     file
-    </i>
-   </td>
-   <td>
-    The md5model to use.
-   </td>
-  </tr>
-  <tr>
-   <td style="font-family: monospace;">
-    <b>
-     offset
-    </b>
-    <i>
-     x, y, z
-    </i>
-   </td>
-   <td>
-    Offsets the model from it's origin.
-   </td>
-  </tr>
-  <tr>
-   <td style="font-family: monospace;">
-    <b>
-     skin
-    </b>
-    <i>
-     name
-    </i>
-   </td>
-   <td>
-    Default skin to apply. Can be overridden by entity declarations.
-   </td>
-  </tr>
-  <tr>
-   <td style="font-family: monospace;">
-    <b>
-     remove
-    </b>
-    <i>
-     name
-    </i>
-   </td>
-   <td>
-    Removes an unwanted animation inherited via the inherit keyword.
-   </td>
-  </tr>
- </table>
- <a name="Channel_Syntax">
- </a>
- <h4>
-  Channel Syntax
- </h4>
- <p>
-  Channels are defined by a list comprised of all the bones to be included in the group. Each bone can be listed individually or through the use of special characters like the astrix or minus signs, one can use the skeletal higharchy to include or exclude child bones.
- </p>
- <pre>channel torso ( *Waist )
+  <p>
+   Model declarations begin with a header which consists of model followed by the
+   <i>
+    name
+   </i>
+   of the model declaration.
+  </p>
+  <p>
+   The header is followed by the body of the declaration which is enclosed in curly brackets.
+  </p>
+  <p>
+   The body is composed of several
+   <i>
+    keywords
+   </i>
+   and is followed by one or more
+   <i>
+    animation declarations
+   </i>
+   .
+  </p>
+  <a name="Keywords">
+  </a>
+  <h3>
+   Keywords
+  </h3>
+  <table class="mwstyle">
+   <tr>
+    <th>
+     Keyword &amp; Usage
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td style="font-family: monospace;">
+     <b>
+      anim
+     </b>
+     <i>
+      name file [{...}]
+     </i>
+    </td>
+    <td>
+     A declarations that assigns a name to the specified md5anim and allows for the declaration of frame events enclosed in curly brackets.
+    </td>
+   </tr>
+   <tr>
+    <td style="font-family: monospace;">
+     <b>
+      channel
+     </b>
+     <i>
+      name (joints)
+     </i>
+    </td>
+    <td>
+     Defines an animation channel or isolated region of the skeleton. Channels allow a character's legs to move independently of their torso.
+    </td>
+   </tr>
+   <tr>
+    <td style="font-family: monospace;">
+     <b>
+      inherit
+     </b>
+     <i>
+      name
+     </i>
+    </td>
+    <td>
+     Inherits properties from specified model declaration.
+    </td>
+   </tr>
+   <tr>
+    <td style="font-family: monospace;">
+     <b>
+      mesh
+     </b>
+     <i>
+      file
+     </i>
+    </td>
+    <td>
+     The md5model to use.
+    </td>
+   </tr>
+   <tr>
+    <td style="font-family: monospace;">
+     <b>
+      offset
+     </b>
+     <i>
+      x, y, z
+     </i>
+    </td>
+    <td>
+     Offsets the model from it's origin.
+    </td>
+   </tr>
+   <tr>
+    <td style="font-family: monospace;">
+     <b>
+      skin
+     </b>
+     <i>
+      name
+     </i>
+    </td>
+    <td>
+     Default skin to apply. Can be overridden by entity declarations.
+    </td>
+   </tr>
+   <tr>
+    <td style="font-family: monospace;">
+     <b>
+      remove
+     </b>
+     <i>
+      name
+     </i>
+    </td>
+    <td>
+     Removes an unwanted animation inherited via the inherit keyword.
+    </td>
+   </tr>
+  </table>
+  <a name="Channel_Syntax">
+  </a>
+  <h4>
+   Channel Syntax
+  </h4>
+  <p>
+   Channels are defined by a list comprised of all the bones to be included in the group. Each bone can be listed individually or through the use of special characters like the astrix or minus signs, one can use the skeletal higharchy to include or exclude child bones.
+  </p>
+  <pre>channel torso ( *Waist )
 channel legs  ( *Hips Body origin ROT -*Waist)
 </pre>
- <p>
-  The asterix is believed to be inclusive of child bones. In other words, all bones parented to the waist bone are included in the group through the statment "*Waist".
- </p>
- <p>
-  The minus sign is believed to negate a single bone or group when used in conjunction with the asterix.
- </p>
- <p>
-  <b>
-   NOTE
-  </b>
-  : No formal documentation exists to confirm the syntax described here is correct.
- </p>
- <a name="Anim_Syntax">
- </a>
- <h4>
-  Anim Syntax
- </h4>
- <p>
-  The animation keyword can be used to define a name for an animation file, or as a full blown declaration, in which case one can define frame events.
- </p>
- <pre>anim af_pose  models/md5/monsters/cyberdemon/af_pose.md5anim
+  <p>
+   The asterix is believed to be inclusive of child bones. In other words, all bones parented to the waist bone are included in the group through the statment "*Waist".
+  </p>
+  <p>
+   The minus sign is believed to negate a single bone or group when used in conjunction with the asterix.
+  </p>
+  <p>
+   <b>
+    NOTE
+   </b>
+   : No formal documentation exists to confirm the syntax described here is correct.
+  </p>
+  <a name="Anim_Syntax">
+  </a>
+  <h4>
+   Anim Syntax
+  </h4>
+  <p>
+   The animation keyword can be used to define a name for an animation file, or as a full blown declaration, in which case one can define frame events.
+  </p>
+  <pre>anim af_pose  models/md5/monsters/cyberdemon/af_pose.md5anim
 anim ik_pose  models/md5/monsters/cyberdemon/ik_pose.md5anim
 </pre>
- <pre>anim stand    models/md5/monsters/cyberdemon/idle.md5anim
+  <pre>anim stand    models/md5/monsters/cyberdemon/idle.md5anim
 anim idle     models/md5/monsters/cyberdemon/idle.md5anim
 anim sight1   models/md5/monsters/cyberdemon/sight.md5anim {
   frame 16.5  sound_voice    snd_sight1
@@ -190,464 +192,466 @@ anim pain     models/md5/monsters/cyberdemon/pain_big1.md5anim {
   frame 49   sound_body  snd_footstep
 }
 </pre>
- <a name="Frame_Events">
- </a>
- <h5>
-  Frame Events
- </h5>
- <p>
-  Frame events are used to syncronize special effects, sounds, or events with animation. Frame events consist of the keyword
-  <b>
-   frame
-  </b>
-  followed by the frame number (which does not have to be a whole number), and then the frame event to call.
- </p>
- <table class="mwstyle">
-  <tr>
-   <th>
-    Event &amp; Usage
-   </th>
-   <th>
-    Description
-   </th>
-  </tr>
-  <tr>
-   <td style="font-family: monospace;">
-    <b>
-     call
-    </b>
-    <i>
-     function
-    </i>
-   </td>
-   <td>
-    Calls the specified script function.
-   </td>
-  </tr>
-  <tr>
-   <td style="font-family: monospace;">
-    <b>
-     object_call
-    </b>
-    <i>
-     function
-    </i>
-   </td>
-   <td>
-    Calls the specified script function on the entity
-   </td>
-  </tr>
-  <tr>
-   <td style="font-family: monospace;">
-    <b>
-     event
-    </b>
-    <i>
-     event [args...]
-    </i>
-   </td>
-   <td>
-    Sends the specified event to the entity
-   </td>
-  </tr>
-  <tr>
-   <td style="font-family: monospace;">
-    <b>
-     sound
-    </b>
-    <i>
-     snd
-    </i>
-   </td>
-   <td>
-    Plays the specified sound on any available channel
-   </td>
-  </tr>
-  <tr>
-   <td style="font-family: monospace;">
-    <b>
-     sound_voice
-    </b>
-    <i>
-     snd
-    </i>
-   </td>
-   <td>
-    Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
-   </td>
-  </tr>
-  <tr>
-   <td style="font-family: monospace;">
-    <b>
-     sound_voice2
-    </b>
-    <i>
-     snd
-    </i>
-   </td>
-   <td>
-    Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
-   </td>
-  </tr>
-  <tr>
-   <td style="font-family: monospace;">
-    <b>
-     sound_body
-    </b>
-    <i>
-     snd
-    </i>
-   </td>
-   <td>
-    Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
-   </td>
-  </tr>
-  <tr>
-   <td style="font-family: monospace;">
-    <b>
-     sound_body2
-    </b>
-    <i>
-     snd
-    </i>
-   </td>
-   <td>
-    Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
-   </td>
-  </tr>
-  <tr>
-   <td style="font-family: monospace;">
-    <b>
-     sound_body3
-    </b>
-    <i>
-     snd
-    </i>
-   </td>
-   <td>
-    Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
-   </td>
-  </tr>
-  <tr>
-   <td style="font-family: monospace;">
-    <b>
-     sound_weapon
-    </b>
-    <i>
-     snd
-    </i>
-   </td>
-   <td>
-    Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
-   </td>
-  </tr>
-  <tr>
-   <td style="font-family: monospace;">
-    <b>
-     sound_global
-    </b>
-    <i>
-     snd
-    </i>
-   </td>
-   <td>
-    Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
-   </td>
-  </tr>
-  <tr>
-   <td style="font-family: monospace;">
-    <b>
-     sound_item
-    </b>
-    <i>
-     snd
-    </i>
-   </td>
-   <td>
-    Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
-   </td>
-  </tr>
-  <tr>
-   <td style="font-family: monospace;">
-    <b>
-     sound_chatter
-    </b>
-    <i>
-     snd
-    </i>
-   </td>
-   <td>
-    Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
-   </td>
-  </tr>
-  <tr>
-   <td style="font-family: monospace;">
-    <b>
-     skin
-    </b>
-    <i>
-     skin
-    </i>
-   </td>
-   <td>
-    Changes the model's skin to the specified skin. This setting acts as a default for when no skin is specified in entity declarations.
-   </td>
-  </tr>
-  <tr>
-   <td style="font-family: monospace;">
-    <b>
-     fx
-    </b>
-    <i>
-     fx
-    </i>
-   </td>
-   <td>
-    Triggers the specified fx declaration.
-   </td>
-  </tr>
-  <tr>
-   <td style="font-family: monospace;">
-    <b>
-     trigger
-    </b>
-    <i>
-     name
-    </i>
-   </td>
-   <td>
-    Triggers the specified level trigger.
-   </td>
-  </tr>
-  <tr>
-   <td style="font-family: monospace;">
-    <b>
-     recordDemo
-    </b>
-    <i>
-     name
-    </i>
-   </td>
-   <td>
-    Starts recording a demo under the specified name. Stops recording if no name is specified.
-   </td>
-  </tr>
-  <tr>
-   <td style="font-family: monospace;">
-    <b>
-     aviGame
-    </b>
-    <i>
-     name
-    </i>
-   </td>
-   <td>
-    Starts recording an avi under the specified name. Useful for making animations to be used on video screens.
-   </td>
-  </tr>
- </table>
- <p>
-  The following events are aliases for hardcoded events that do not accept parameters
- </p>
- <table class="mwstyle">
-  <tr>
-   <th>
-    Event
-   </th>
-   <th>
-    Alias
-   </th>
-  </tr>
-  <tr>
-   <td>
-    triggerSmokeParticle
-   </td>
-   <td>
-    triggerParticles
-   </td>
-  </tr>
-  <tr>
-   <td>
-    melee
-   </td>
-   <td>
-    attackMelee
-   </td>
-  </tr>
-  <tr>
-   <td>
-    direct_damage
-   </td>
-   <td>
-    directDamage
-   </td>
-  </tr>
-  <tr>
-   <td>
-    attack_begin
-   </td>
-   <td>
-    attackBegin
-   </td>
-  </tr>
-  <tr>
-   <td>
-    attack_end
-   </td>
-   <td>
-    attackEnd
-   </td>
-  </tr>
-  <tr>
-   <td>
-    muzzle_flash
-   </td>
-   <td>
-    muzzleFlash
-   </td>
-  </tr>
-  <tr>
-   <td>
-    create_missile
-   </td>
-   <td>
-    createMissile
-   </td>
-  </tr>
-  <tr>
-   <td>
-    launch_missile
-   </td>
-   <td>
-    launchMissile
-   </td>
-  </tr>
-  <tr>
-   <td>
-    fire_missile_at_target
-   </td>
-   <td>
-    fireMissileAtTarget
-   </td>
-  </tr>
-  <tr>
-   <td>
-    footstep
-   </td>
-   <td>
-    footstep
-   </td>
-  </tr>
-  <tr>
-   <td>
-    leftfoot
-   </td>
-   <td>
-    leftfoot
-   </td>
-  </tr>
-  <tr>
-   <td>
-    rightfoot
-   </td>
-   <td>
-    rightfoot
-   </td>
-  </tr>
-  <tr>
-   <td>
-    jump
-   </td>
-   <td>
-    jump
-   </td>
-  </tr>
-  <tr>
-   <td>
-    enableEyeFocus
-   </td>
-   <td>
-    enableEyeFocus
-   </td>
-  </tr>
-  <tr>
-   <td>
-    disableEyeFocus
-   </td>
-   <td>
-    disableEyeFocus
-   </td>
-  </tr>
-  <tr>
-   <td>
-    disableGravity
-   </td>
-   <td>
-    disableGravity
-   </td>
-  </tr>
-  <tr>
-   <td>
-    enableGravity
-   </td>
-   <td>
-    enableGravity
-   </td>
-  </tr>
-  <tr>
-   <td>
-    enableClip
-   </td>
-   <td>
-    enableClip
-   </td>
-  </tr>
-  <tr>
-   <td>
-    disableClip
-   </td>
-   <td>
-    disableClip
-   </td>
-  </tr>
-  <tr>
-   <td>
-    enableWalkIK
-   </td>
-   <td>
-    enableWalkIK
-   </td>
-  </tr>
-  <tr>
-   <td>
-    disableWalkIK
-   </td>
-   <td>
-    disableWalkIK
-   </td>
-  </tr>
-  <tr>
-   <td>
-    enableLegIK
-   </td>
-   <td>
-    enableLegIK
-   </td>
-  </tr>
-  <tr>
-   <td>
-    disableLegIK
-   </td>
-   <td>
-    disableLegIK
-   </td>
-  </tr>
-  <tr>
-   <td>
-    prevent_idle_override
-   </td>
-   <td>
-    ???
-   </td>
-  </tr>
- </table>
+  <a name="Frame_Events">
+  </a>
+  <h5>
+   Frame Events
+  </h5>
+  <p>
+   Frame events are used to syncronize special effects, sounds, or events with animation. Frame events consist of the keyword
+   <b>
+    frame
+   </b>
+   followed by the frame number (which does not have to be a whole number), and then the frame event to call.
+  </p>
+  <table class="mwstyle">
+   <tr>
+    <th>
+     Event &amp; Usage
+    </th>
+    <th>
+     Description
+    </th>
+   </tr>
+   <tr>
+    <td style="font-family: monospace;">
+     <b>
+      call
+     </b>
+     <i>
+      function
+     </i>
+    </td>
+    <td>
+     Calls the specified script function.
+    </td>
+   </tr>
+   <tr>
+    <td style="font-family: monospace;">
+     <b>
+      object_call
+     </b>
+     <i>
+      function
+     </i>
+    </td>
+    <td>
+     Calls the specified script function on the entity
+    </td>
+   </tr>
+   <tr>
+    <td style="font-family: monospace;">
+     <b>
+      event
+     </b>
+     <i>
+      event [args...]
+     </i>
+    </td>
+    <td>
+     Sends the specified event to the entity
+    </td>
+   </tr>
+   <tr>
+    <td style="font-family: monospace;">
+     <b>
+      sound
+     </b>
+     <i>
+      snd
+     </i>
+    </td>
+    <td>
+     Plays the specified sound on any available channel
+    </td>
+   </tr>
+   <tr>
+    <td style="font-family: monospace;">
+     <b>
+      sound_voice
+     </b>
+     <i>
+      snd
+     </i>
+    </td>
+    <td>
+     Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
+    </td>
+   </tr>
+   <tr>
+    <td style="font-family: monospace;">
+     <b>
+      sound_voice2
+     </b>
+     <i>
+      snd
+     </i>
+    </td>
+    <td>
+     Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
+    </td>
+   </tr>
+   <tr>
+    <td style="font-family: monospace;">
+     <b>
+      sound_body
+     </b>
+     <i>
+      snd
+     </i>
+    </td>
+    <td>
+     Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
+    </td>
+   </tr>
+   <tr>
+    <td style="font-family: monospace;">
+     <b>
+      sound_body2
+     </b>
+     <i>
+      snd
+     </i>
+    </td>
+    <td>
+     Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
+    </td>
+   </tr>
+   <tr>
+    <td style="font-family: monospace;">
+     <b>
+      sound_body3
+     </b>
+     <i>
+      snd
+     </i>
+    </td>
+    <td>
+     Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
+    </td>
+   </tr>
+   <tr>
+    <td style="font-family: monospace;">
+     <b>
+      sound_weapon
+     </b>
+     <i>
+      snd
+     </i>
+    </td>
+    <td>
+     Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
+    </td>
+   </tr>
+   <tr>
+    <td style="font-family: monospace;">
+     <b>
+      sound_global
+     </b>
+     <i>
+      snd
+     </i>
+    </td>
+    <td>
+     Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
+    </td>
+   </tr>
+   <tr>
+    <td style="font-family: monospace;">
+     <b>
+      sound_item
+     </b>
+     <i>
+      snd
+     </i>
+    </td>
+    <td>
+     Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
+    </td>
+   </tr>
+   <tr>
+    <td style="font-family: monospace;">
+     <b>
+      sound_chatter
+     </b>
+     <i>
+      snd
+     </i>
+    </td>
+    <td>
+     Plays the specified sound on the specified channel. If the channel is busy, the currently playing sound is halted.
+    </td>
+   </tr>
+   <tr>
+    <td style="font-family: monospace;">
+     <b>
+      skin
+     </b>
+     <i>
+      skin
+     </i>
+    </td>
+    <td>
+     Changes the model's skin to the specified skin. This setting acts as a default for when no skin is specified in entity declarations.
+    </td>
+   </tr>
+   <tr>
+    <td style="font-family: monospace;">
+     <b>
+      fx
+     </b>
+     <i>
+      fx
+     </i>
+    </td>
+    <td>
+     Triggers the specified fx declaration.
+    </td>
+   </tr>
+   <tr>
+    <td style="font-family: monospace;">
+     <b>
+      trigger
+     </b>
+     <i>
+      name
+     </i>
+    </td>
+    <td>
+     Triggers the specified level trigger.
+    </td>
+   </tr>
+   <tr>
+    <td style="font-family: monospace;">
+     <b>
+      recordDemo
+     </b>
+     <i>
+      name
+     </i>
+    </td>
+    <td>
+     Starts recording a demo under the specified name. Stops recording if no name is specified.
+    </td>
+   </tr>
+   <tr>
+    <td style="font-family: monospace;">
+     <b>
+      aviGame
+     </b>
+     <i>
+      name
+     </i>
+    </td>
+    <td>
+     Starts recording an avi under the specified name. Useful for making animations to be used on video screens.
+    </td>
+   </tr>
+  </table>
+  <p>
+   The following events are aliases for hardcoded events that do not accept parameters
+  </p>
+  <table class="mwstyle">
+   <tr>
+    <th>
+     Event
+    </th>
+    <th>
+     Alias
+    </th>
+   </tr>
+   <tr>
+    <td>
+     triggerSmokeParticle
+    </td>
+    <td>
+     triggerParticles
+    </td>
+   </tr>
+   <tr>
+    <td>
+     melee
+    </td>
+    <td>
+     attackMelee
+    </td>
+   </tr>
+   <tr>
+    <td>
+     direct_damage
+    </td>
+    <td>
+     directDamage
+    </td>
+   </tr>
+   <tr>
+    <td>
+     attack_begin
+    </td>
+    <td>
+     attackBegin
+    </td>
+   </tr>
+   <tr>
+    <td>
+     attack_end
+    </td>
+    <td>
+     attackEnd
+    </td>
+   </tr>
+   <tr>
+    <td>
+     muzzle_flash
+    </td>
+    <td>
+     muzzleFlash
+    </td>
+   </tr>
+   <tr>
+    <td>
+     create_missile
+    </td>
+    <td>
+     createMissile
+    </td>
+   </tr>
+   <tr>
+    <td>
+     launch_missile
+    </td>
+    <td>
+     launchMissile
+    </td>
+   </tr>
+   <tr>
+    <td>
+     fire_missile_at_target
+    </td>
+    <td>
+     fireMissileAtTarget
+    </td>
+   </tr>
+   <tr>
+    <td>
+     footstep
+    </td>
+    <td>
+     footstep
+    </td>
+   </tr>
+   <tr>
+    <td>
+     leftfoot
+    </td>
+    <td>
+     leftfoot
+    </td>
+   </tr>
+   <tr>
+    <td>
+     rightfoot
+    </td>
+    <td>
+     rightfoot
+    </td>
+   </tr>
+   <tr>
+    <td>
+     jump
+    </td>
+    <td>
+     jump
+    </td>
+   </tr>
+   <tr>
+    <td>
+     enableEyeFocus
+    </td>
+    <td>
+     enableEyeFocus
+    </td>
+   </tr>
+   <tr>
+    <td>
+     disableEyeFocus
+    </td>
+    <td>
+     disableEyeFocus
+    </td>
+   </tr>
+   <tr>
+    <td>
+     disableGravity
+    </td>
+    <td>
+     disableGravity
+    </td>
+   </tr>
+   <tr>
+    <td>
+     enableGravity
+    </td>
+    <td>
+     enableGravity
+    </td>
+   </tr>
+   <tr>
+    <td>
+     enableClip
+    </td>
+    <td>
+     enableClip
+    </td>
+   </tr>
+   <tr>
+    <td>
+     disableClip
+    </td>
+    <td>
+     disableClip
+    </td>
+   </tr>
+   <tr>
+    <td>
+     enableWalkIK
+    </td>
+    <td>
+     enableWalkIK
+    </td>
+   </tr>
+   <tr>
+    <td>
+     disableWalkIK
+    </td>
+    <td>
+     disableWalkIK
+    </td>
+   </tr>
+   <tr>
+    <td>
+     enableLegIK
+    </td>
+    <td>
+     enableLegIK
+    </td>
+   </tr>
+   <tr>
+    <td>
+     disableLegIK
+    </td>
+    <td>
+     disableLegIK
+    </td>
+   </tr>
+   <tr>
+    <td>
+     prevent_idle_override
+    </td>
+    <td>
+     ???
+    </td>
+   </tr>
+  </table>
+ </body>
+</html>

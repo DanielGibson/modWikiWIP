@@ -1,471 +1,475 @@
- <p>
-  Properties say how the item will be drawn or work. They are defined on the script source, but can have their values changed at runtime.
- </p>
- <p>
-  Properties are featured somewhere inside each of a GUI's
-  <a href="GUI_items" title="GUI items">
-   items
-  </a>
-  , and use the following syntax:
- </p>
- <pre><i>property_name</i> <i>property_values</i>
+<html>
+ <body>
+  <p>
+   Properties say how the item will be drawn or work. They are defined on the script source, but can have their values changed at runtime.
+  </p>
+  <p>
+   Properties are featured somewhere inside each of a GUI's
+   <a href="GUI_items" title="GUI items">
+    items
+   </a>
+   , and use the following syntax:
+  </p>
+  <pre><i>property_name</i> <i>property_values</i>
 </pre>
- <p>
-  There are different value types used - as a whole, though, they're either numeric (used for integers, floats and booleans) or string (used for filenames, always between quotes). For example,
- </p>
- <pre>needsRender 	1
+  <p>
+   There are different value types used - as a whole, though, they're either numeric (used for integers, floats and booleans) or string (used for filenames, always between quotes). For example,
+  </p>
+  <pre>needsRender 	1
 background	"gui/mainmenu/star"
 </pre>
- <p>
-  Some of the properties can also have several different values (or parameters) on the same line - they're usually separated by commands. For example,
- </p>
- <pre>shear		0, 1
+  <p>
+   Some of the properties can also have several different values (or parameters) on the same line - they're usually separated by commands. For example,
+  </p>
+  <pre>shear		0, 1
 rect		0, 0, 640, 480
 matcolor	0.7, 0.7, 0.7, 0
 </pre>
- <p>
-  Also, notice that the property values aren't simply set when the GUI is shown. Instead, their initial values are updated on each frame, acting as a
-  <i>
-   live
-  </i>
-  property. This makes no difference when a property has a constant value like
-  <i>
-   10
-  </i>
-  or
-  <i>
-   "Lorem Ipsum"
-  </i>
-  , but when you are using GUI variables or parameters, the properties themselves will have their values changed when their variable or parameters change.
- </p>
- <p>
-  For example, using the
-  <i>
-   gui::name
-  </i>
-  format for GUI parameters:
- </p>
- <pre>text	"gui::chat2"
+  <p>
+   Also, notice that the property values aren't simply set when the GUI is shown. Instead, their initial values are updated on each frame, acting as a
+   <i>
+    live
+   </i>
+   property. This makes no difference when a property has a constant value like
+   <i>
+    10
+   </i>
+   or
+   <i>
+    "Lorem Ipsum"
+   </i>
+   , but when you are using GUI variables or parameters, the properties themselves will have their values changed when their variable or parameters change.
+  </p>
+  <p>
+   For example, using the
+   <i>
+    gui::name
+   </i>
+   format for GUI parameters:
+  </p>
+  <pre>text	"gui::chat2"
 </pre>
- <p>
-  Or using internal calculations:
- </p>
- <pre>matcolor	0.25, 0.45, 0.4, pdflick2 [ time * .0025 ] / 2.5
+  <p>
+   Or using internal calculations:
+  </p>
+  <pre>matcolor	0.25, 0.45, 0.4, pdflick2 [ time * .0025 ] / 2.5
 </pre>
- <p>
-  On both cases, properties will change to reflect the change on their variables or parameters over time. The list of available parameters depends on how each different GUI works, though, as most of them come from hard-coded interaction with other
-  <a href="Scripting" title="Scripting">
-   scripting
+  <p>
+   On both cases, properties will change to reflect the change on their variables or parameters over time. The list of available parameters depends on how each different GUI works, though, as most of them come from hard-coded interaction with other
+   <a href="Scripting" title="Scripting">
+    scripting
+   </a>
+   systems. Check the
+   <a href="Guis_%28folder%29" title="Guis (folder)">
+    Guis (folder)
+   </a>
+   list to see how most of Doom 3's built-in GUIs work on that aspect.
+  </p>
+  <a name="Available_item_properties">
   </a>
-  systems. Check the
-  <a href="Guis_%28folder%29" title="Guis (folder)">
-   Guis (folder)
-  </a>
-  list to see how most of Doom 3's built-in GUIs work on that aspect.
- </p>
- <a name="Available_item_properties">
- </a>
- <h2>
-  Available item properties
- </h2>
- <p>
-  The following item properties are known. Most of them apply to all kinds of
-  <a href="GUI_items" title="GUI items">
-   GUI items
-  </a>
-  , although a few of them are reserved for specific types and are noted as so. Also, due to their names, the task each of them perform is pretty much obvious.
- </p>
- <p>
-  Apparently, the GUI system makes no differentiation for uppercase and lowercase property names.
- </p>
- <p>
-  Most of the examples featured on the following documentation come straight from Doom 3.
- </p>
- <ul>
-  <li>
-   <a class="new" href="Anim_%28GUI_item_property%29" title="Anim (GUI item property)">
-    anim
-   </a>
-  </li>
-  <li>
-   <a class="new" href="AnimClass_%28GUI_item_property%29" title="AnimClass (GUI item property)">
-    animClass
-   </a>
-  </li>
-  <li>
-   <a href="Backcolor_%28GUI_item_property%29" title="Backcolor (GUI item property)">
-    backcolor
-   </a>
-  </li>
-  <li>
-   <a href="Background_%28GUI_item_property%29" title="Background (GUI item property)">
-    background
-   </a>
-  </li>
-  <li>
-   <a href="Bind_%28GUI_item_property%29" title="Bind (GUI item property)">
-    bind
-   </a>
-  </li>
-  <li>
-   <a href="Bordercolor_%28GUI_item_property%29" title="Bordercolor (GUI item property)">
-    bordercolor
-   </a>
-  </li>
-  <li>
-   <a href="Bordersize_%28GUI_item_property%29" title="Bordersize (GUI item property)">
-    bordersize
-   </a>
-  </li>
-  <li>
-   <a href="ChoiceType_%28GUI_item_property%29" title="ChoiceType (GUI item property)">
-    choiceType
-   </a>
-  </li>
-  <li>
-   <a href="Choices_%28GUI_item_property%29" title="Choices (GUI item property)">
-    choices
-   </a>
-  </li>
-  <li>
-   <a href="Comment_%28GUI_item_property%29" title="Comment (GUI item property)">
-    comment
-   </a>
-  </li>
-  <li>
-   <a href="CurrentChoice_%28GUI_item_property%29" title="CurrentChoice (GUI item property)">
-    currentChoice
-   </a>
-  </li>
-  <li>
-   <a href="Cursor_%28GUI_item_property%29" title="Cursor (GUI item property)">
-    cursor
-   </a>
-  </li>
-  <li>
-   <a href="Cursorvar_%28GUI_item_property%29" title="Cursorvar (GUI item property)">
-    cursorvar
-   </a>
-  </li>
-  <li>
-   <a href="Cvar_%28GUI_item_property%29" title="Cvar (GUI item property)">
-    cvar
-   </a>
-  </li>
-  <li>
-   <a class="new" href="CvarGroup_%28GUI_item_property%29" title="CvarGroup (GUI item property)">
-    cvarGroup
-   </a>
-  </li>
-  <li>
-   <a href="Font_%28GUI_item_property%29" title="Font (GUI item property)">
-    font
-   </a>
-  </li>
-  <li>
-   <a class="new" href="ForceScroll_%28GUI_item_property%29" title="ForceScroll (GUI item property)">
-    forceScroll
-   </a>
-  </li>
-  <li>
-   <a href="Forceaspectheight_%28GUI_item_property%29" title="Forceaspectheight (GUI item property)">
-    forceaspectheight
-   </a>
-  </li>
-  <li>
-   <a href="Forceaspectwidth_%28GUI_item_property%29" title="Forceaspectwidth (GUI item property)">
-    forceaspectwidth
-   </a>
-  </li>
-  <li>
-   <a href="Forecolor_%28GUI_item_property%29" title="Forecolor (GUI item property)">
-    forecolor
-   </a>
-  </li>
-  <li>
-   <a href="Gui_%28GUI_item_property%29" title="Gui (GUI item property)">
-    gui
-   </a>
-  </li>
-  <li>
-   <a href="High_%28GUI_item_property%29" title="High (GUI item property)">
-    high
-   </a>
-  </li>
-  <li>
-   <a class="new" href="Horizontal_%28GUI_item_property%29" title="Horizontal (GUI item property)">
-    horizontal
-   </a>
-  </li>
-  <li>
-   <a href="Invertrect_%28GUI_item_property%29" title="Invertrect (GUI item property)">
-    invertrect
-   </a>
-  </li>
-  <li>
-   <a href="LightColor_%28GUI_item_property%29" title="LightColor (GUI item property)">
-    lightColor
-   </a>
-  </li>
-  <li>
-   <a href="LightOrigin_%28GUI_item_property%29" title="LightOrigin (GUI item property)">
-    lightOrigin
-   </a>
-  </li>
-  <li>
-   <a href="ListName_%28GUI_item_property%29" title="ListName (GUI item property)">
-    listName
-   </a>
-  </li>
-  <li>
-   <a href="LiveUpdate_%28GUI_item_property%29" title="LiveUpdate (GUI item property)">
-    liveUpdate
-   </a>
-  </li>
-  <li>
-   <a href="Low_%28GUI_item_property%29" title="Low (GUI item property)">
-    low
-   </a>
-  </li>
-  <li>
-   <a href="Matcolor_%28GUI_item_property%29" title="Matcolor (GUI item property)">
-    matcolor
-   </a>
-  </li>
-  <li>
-   <a href="Matscalex_%28GUI_item_property%29" title="Matscalex (GUI item property)">
-    matscalex
-   </a>
-  </li>
-  <li>
-   <a href="Matscaley_%28GUI_item_property%29" title="Matscaley (GUI item property)">
-    matscaley
-   </a>
-  </li>
-  <li>
-   <a href="Maxchars_%28GUI_item_property%29" title="Maxchars (GUI item property)">
-    maxchars
-   </a>
-  </li>
-  <li>
-   <a href="Menugui_%28GUI_item_property%29" title="Menugui (GUI item property)">
-    menugui
-   </a>
-  </li>
-  <li>
-   <a href="Modal_%28GUI_item_property%29" title="Modal (GUI item property)">
-    modal
-   </a>
-  </li>
-  <li>
-   <a href="Model_%28GUI_item_property%29" title="Model (GUI item property)">
-    model
-   </a>
-  </li>
-  <li>
-   <a href="ModelOrigin_%28GUI_item_property%29" title="ModelOrigin (GUI item property)">
-    modelOrigin
-   </a>
-  </li>
-  <li>
-   <a href="ModelRotate_%28GUI_item_property%29" title="ModelRotate (GUI item property)">
-    modelRotate
-   </a>
-  </li>
-  <li>
-   <a href="MultipleSel_%28GUI_item_property%29" title="MultipleSel (GUI item property)">
-    multipleSel
-   </a>
-  </li>
-  <li>
-   <a class="new" href="Name_%28GUI_item_property%29" title="Name (GUI item property)">
-    name
-   </a>
-  </li>
-  <li>
-   <a class="new" href="Naturalmatscale_%28GUI_item_property%29" title="Naturalmatscale (GUI item property)">
-    naturalmatscale
-   </a>
-  </li>
-  <li>
-   <a href="NeedsRender_%28GUI_item_property%29" title="NeedsRender (GUI item property)">
-    needsRender
-   </a>
-  </li>
-  <li>
-   <a href="Noclip_%28GUI_item_property%29" title="Noclip (GUI item property)">
-    noclip
-   </a>
-  </li>
-  <li>
-   <a href="Nocursor_%28GUI_item_property%29" title="Nocursor (GUI item property)">
-    nocursor
-   </a>
-  </li>
-  <li>
-   <a href="Noevents_%28GUI_item_property%29" title="Noevents (GUI item property)">
-    noevents
-   </a>
-  </li>
-  <li>
-   <a href="Notime_%28GUI_item_property%29" title="Notime (GUI item property)">
-    notime
-   </a>
-  </li>
-  <li>
-   <a href="Nowrap_%28GUI_item_property%29" title="Nowrap (GUI item property)">
-    nowrap
-   </a>
-  </li>
-  <li>
-   <a class="new" href="Numeric_%28GUI_item_property%29" title="Numeric (GUI item property)">
-    numeric
-   </a>
-  </li>
-  <li>
-   <a class="new" href="Password_%28GUI_item_property%29" title="Password (GUI item property)">
-    password
-   </a>
-  </li>
-  <li>
-   <a class="new" href="Play_%28GUI_item_property%29" title="Play (GUI item property)">
-    play
-   </a>
-  </li>
-  <li>
-   <a href="Readonly_%28GUI_item_property%29" title="Readonly (GUI item property)">
-    readonly
-   </a>
-  </li>
-  <li>
-   <a href="Rect_%28GUI_item_property%29" title="Rect (GUI item property)">
-    rect
-   </a>
-  </li>
-  <li>
-   <a href="Rotate_%28GUI_item_property%29" title="Rotate (GUI item property)">
-    rotate
-   </a>
-  </li>
-  <li>
-   <a class="new" href="Scrollbar_%28GUI_item_property%29" title="Scrollbar (GUI item property)">
-    scrollbar
-   </a>
-  </li>
-  <li>
-   <a href="Shadow_%28GUI_item_property%29" title="Shadow (GUI item property)">
-    shadow
-   </a>
-  </li>
-  <li>
-   <a href="Shear_%28GUI_item_property%29" title="Shear (GUI item property)">
-    shear
-   </a>
-  </li>
-  <li>
-   <a class="new" href="Showcoords_%28GUI_item_property%29" title="Showcoords (GUI item property)">
-    showcoords
-   </a>
-  </li>
-  <li>
-   <a class="new" href="Showtime_%28GUI_item_property%29" title="Showtime (GUI item property)">
-    showtime
-   </a>
-  </li>
-  <li>
-   <a class="new" href="Source_%28GUI_item_property%29" title="Source (GUI item property)">
-    source
-   </a>
-  </li>
-  <li>
-   <a href="Step_%28GUI_item_property%29" title="Step (GUI item property)">
-    step
-   </a>
-  </li>
-  <li>
-   <a href="Stepsize_%28GUI_item_property%29" title="Stepsize (GUI item property)">
-    stepsize
-   </a>
-  </li>
-  <li>
-   <a href="TabAligns_%28GUI_item_property%29" title="TabAligns (GUI item property)">
-    tabAligns
-   </a>
-  </li>
-  <li>
-   <a href="TabStops_%28GUI_item_property%29" title="TabStops (GUI item property)">
-    tabStops
-   </a>
-  </li>
-  <li>
-   <a href="Text_%28GUI_item_property%29" title="Text (GUI item property)">
-    text
-   </a>
-  </li>
-  <li>
-   <a href="Textalign_%28GUI_item_property%29" title="Textalign (GUI item property)">
-    textalign
-   </a>
-  </li>
-  <li>
-   <a href="Textalignx_%28GUI_item_property%29" title="Textalignx (GUI item property)">
-    textalignx
-   </a>
-  </li>
-  <li>
-   <a href="Textaligny_%28GUI_item_property%29" title="Textaligny (GUI item property)">
-    textaligny
-   </a>
-  </li>
-  <li>
-   <a href="Textscale_%28GUI_item_property%29" title="Textscale (GUI item property)">
-    textscale
-   </a>
-  </li>
-  <li>
-   <a href="ThumbShader_%28GUI_item_property%29" title="ThumbShader (GUI item property)">
-    thumbShader
-   </a>
-  </li>
-  <li>
-   <a href="UpdateGroup_%28GUI_item_property%29" title="UpdateGroup (GUI item property)">
-    updateGroup
-   </a>
-  </li>
-  <li>
-   <a href="Values_%28GUI_item_property%29" title="Values (GUI item property)">
-    values
-   </a>
-  </li>
-  <li>
-   <a href="Variablebackground_%28GUI_item_property%29" title="Variablebackground (GUI item property)">
-    variablebackground
-   </a>
-  </li>
-  <li>
-   <a class="new" href="Vertical_%28GUI_item_property%29" title="Vertical (GUI item property)">
-    vertical
-   </a>
-  </li>
-  <li>
-   <a href="ViewOffset_%28GUI_item_property%29" title="ViewOffset (GUI item property)">
-    viewOffset
-   </a>
-  </li>
-  <li>
-   <a href="Visible_%28GUI_item_property%29" title="Visible (GUI item property)">
-    visible
-   </a>
-  </li>
-  <li>
-   <a href="Wantenter_%28GUI_item_property%29" title="Wantenter (GUI item property)">
-    wantenter
-   </a>
-  </li>
-  <li>
-   <a href="Wrap_%28GUI_item_property%29" title="Wrap (GUI item property)">
-    wrap
-   </a>
-  </li>
- </ul>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:1355-0!1!0!0!!en!2 and timestamp 20110915193842 -->
+  <h2>
+   Available item properties
+  </h2>
+  <p>
+   The following item properties are known. Most of them apply to all kinds of
+   <a href="GUI_items" title="GUI items">
+    GUI items
+   </a>
+   , although a few of them are reserved for specific types and are noted as so. Also, due to their names, the task each of them perform is pretty much obvious.
+  </p>
+  <p>
+   Apparently, the GUI system makes no differentiation for uppercase and lowercase property names.
+  </p>
+  <p>
+   Most of the examples featured on the following documentation come straight from Doom 3.
+  </p>
+  <ul>
+   <li>
+    <a class="new" href="Anim_%28GUI_item_property%29" title="Anim (GUI item property)">
+     anim
+    </a>
+   </li>
+   <li>
+    <a class="new" href="AnimClass_%28GUI_item_property%29" title="AnimClass (GUI item property)">
+     animClass
+    </a>
+   </li>
+   <li>
+    <a href="Backcolor_%28GUI_item_property%29" title="Backcolor (GUI item property)">
+     backcolor
+    </a>
+   </li>
+   <li>
+    <a href="Background_%28GUI_item_property%29" title="Background (GUI item property)">
+     background
+    </a>
+   </li>
+   <li>
+    <a href="Bind_%28GUI_item_property%29" title="Bind (GUI item property)">
+     bind
+    </a>
+   </li>
+   <li>
+    <a href="Bordercolor_%28GUI_item_property%29" title="Bordercolor (GUI item property)">
+     bordercolor
+    </a>
+   </li>
+   <li>
+    <a href="Bordersize_%28GUI_item_property%29" title="Bordersize (GUI item property)">
+     bordersize
+    </a>
+   </li>
+   <li>
+    <a href="ChoiceType_%28GUI_item_property%29" title="ChoiceType (GUI item property)">
+     choiceType
+    </a>
+   </li>
+   <li>
+    <a href="Choices_%28GUI_item_property%29" title="Choices (GUI item property)">
+     choices
+    </a>
+   </li>
+   <li>
+    <a href="Comment_%28GUI_item_property%29" title="Comment (GUI item property)">
+     comment
+    </a>
+   </li>
+   <li>
+    <a href="CurrentChoice_%28GUI_item_property%29" title="CurrentChoice (GUI item property)">
+     currentChoice
+    </a>
+   </li>
+   <li>
+    <a href="Cursor_%28GUI_item_property%29" title="Cursor (GUI item property)">
+     cursor
+    </a>
+   </li>
+   <li>
+    <a href="Cursorvar_%28GUI_item_property%29" title="Cursorvar (GUI item property)">
+     cursorvar
+    </a>
+   </li>
+   <li>
+    <a href="Cvar_%28GUI_item_property%29" title="Cvar (GUI item property)">
+     cvar
+    </a>
+   </li>
+   <li>
+    <a class="new" href="CvarGroup_%28GUI_item_property%29" title="CvarGroup (GUI item property)">
+     cvarGroup
+    </a>
+   </li>
+   <li>
+    <a href="Font_%28GUI_item_property%29" title="Font (GUI item property)">
+     font
+    </a>
+   </li>
+   <li>
+    <a class="new" href="ForceScroll_%28GUI_item_property%29" title="ForceScroll (GUI item property)">
+     forceScroll
+    </a>
+   </li>
+   <li>
+    <a href="Forceaspectheight_%28GUI_item_property%29" title="Forceaspectheight (GUI item property)">
+     forceaspectheight
+    </a>
+   </li>
+   <li>
+    <a href="Forceaspectwidth_%28GUI_item_property%29" title="Forceaspectwidth (GUI item property)">
+     forceaspectwidth
+    </a>
+   </li>
+   <li>
+    <a href="Forecolor_%28GUI_item_property%29" title="Forecolor (GUI item property)">
+     forecolor
+    </a>
+   </li>
+   <li>
+    <a href="Gui_%28GUI_item_property%29" title="Gui (GUI item property)">
+     gui
+    </a>
+   </li>
+   <li>
+    <a href="High_%28GUI_item_property%29" title="High (GUI item property)">
+     high
+    </a>
+   </li>
+   <li>
+    <a class="new" href="Horizontal_%28GUI_item_property%29" title="Horizontal (GUI item property)">
+     horizontal
+    </a>
+   </li>
+   <li>
+    <a href="Invertrect_%28GUI_item_property%29" title="Invertrect (GUI item property)">
+     invertrect
+    </a>
+   </li>
+   <li>
+    <a href="LightColor_%28GUI_item_property%29" title="LightColor (GUI item property)">
+     lightColor
+    </a>
+   </li>
+   <li>
+    <a href="LightOrigin_%28GUI_item_property%29" title="LightOrigin (GUI item property)">
+     lightOrigin
+    </a>
+   </li>
+   <li>
+    <a href="ListName_%28GUI_item_property%29" title="ListName (GUI item property)">
+     listName
+    </a>
+   </li>
+   <li>
+    <a href="LiveUpdate_%28GUI_item_property%29" title="LiveUpdate (GUI item property)">
+     liveUpdate
+    </a>
+   </li>
+   <li>
+    <a href="Low_%28GUI_item_property%29" title="Low (GUI item property)">
+     low
+    </a>
+   </li>
+   <li>
+    <a href="Matcolor_%28GUI_item_property%29" title="Matcolor (GUI item property)">
+     matcolor
+    </a>
+   </li>
+   <li>
+    <a href="Matscalex_%28GUI_item_property%29" title="Matscalex (GUI item property)">
+     matscalex
+    </a>
+   </li>
+   <li>
+    <a href="Matscaley_%28GUI_item_property%29" title="Matscaley (GUI item property)">
+     matscaley
+    </a>
+   </li>
+   <li>
+    <a href="Maxchars_%28GUI_item_property%29" title="Maxchars (GUI item property)">
+     maxchars
+    </a>
+   </li>
+   <li>
+    <a href="Menugui_%28GUI_item_property%29" title="Menugui (GUI item property)">
+     menugui
+    </a>
+   </li>
+   <li>
+    <a href="Modal_%28GUI_item_property%29" title="Modal (GUI item property)">
+     modal
+    </a>
+   </li>
+   <li>
+    <a href="Model_%28GUI_item_property%29" title="Model (GUI item property)">
+     model
+    </a>
+   </li>
+   <li>
+    <a href="ModelOrigin_%28GUI_item_property%29" title="ModelOrigin (GUI item property)">
+     modelOrigin
+    </a>
+   </li>
+   <li>
+    <a href="ModelRotate_%28GUI_item_property%29" title="ModelRotate (GUI item property)">
+     modelRotate
+    </a>
+   </li>
+   <li>
+    <a href="MultipleSel_%28GUI_item_property%29" title="MultipleSel (GUI item property)">
+     multipleSel
+    </a>
+   </li>
+   <li>
+    <a class="new" href="Name_%28GUI_item_property%29" title="Name (GUI item property)">
+     name
+    </a>
+   </li>
+   <li>
+    <a class="new" href="Naturalmatscale_%28GUI_item_property%29" title="Naturalmatscale (GUI item property)">
+     naturalmatscale
+    </a>
+   </li>
+   <li>
+    <a href="NeedsRender_%28GUI_item_property%29" title="NeedsRender (GUI item property)">
+     needsRender
+    </a>
+   </li>
+   <li>
+    <a href="Noclip_%28GUI_item_property%29" title="Noclip (GUI item property)">
+     noclip
+    </a>
+   </li>
+   <li>
+    <a href="Nocursor_%28GUI_item_property%29" title="Nocursor (GUI item property)">
+     nocursor
+    </a>
+   </li>
+   <li>
+    <a href="Noevents_%28GUI_item_property%29" title="Noevents (GUI item property)">
+     noevents
+    </a>
+   </li>
+   <li>
+    <a href="Notime_%28GUI_item_property%29" title="Notime (GUI item property)">
+     notime
+    </a>
+   </li>
+   <li>
+    <a href="Nowrap_%28GUI_item_property%29" title="Nowrap (GUI item property)">
+     nowrap
+    </a>
+   </li>
+   <li>
+    <a class="new" href="Numeric_%28GUI_item_property%29" title="Numeric (GUI item property)">
+     numeric
+    </a>
+   </li>
+   <li>
+    <a class="new" href="Password_%28GUI_item_property%29" title="Password (GUI item property)">
+     password
+    </a>
+   </li>
+   <li>
+    <a class="new" href="Play_%28GUI_item_property%29" title="Play (GUI item property)">
+     play
+    </a>
+   </li>
+   <li>
+    <a href="Readonly_%28GUI_item_property%29" title="Readonly (GUI item property)">
+     readonly
+    </a>
+   </li>
+   <li>
+    <a href="Rect_%28GUI_item_property%29" title="Rect (GUI item property)">
+     rect
+    </a>
+   </li>
+   <li>
+    <a href="Rotate_%28GUI_item_property%29" title="Rotate (GUI item property)">
+     rotate
+    </a>
+   </li>
+   <li>
+    <a class="new" href="Scrollbar_%28GUI_item_property%29" title="Scrollbar (GUI item property)">
+     scrollbar
+    </a>
+   </li>
+   <li>
+    <a href="Shadow_%28GUI_item_property%29" title="Shadow (GUI item property)">
+     shadow
+    </a>
+   </li>
+   <li>
+    <a href="Shear_%28GUI_item_property%29" title="Shear (GUI item property)">
+     shear
+    </a>
+   </li>
+   <li>
+    <a class="new" href="Showcoords_%28GUI_item_property%29" title="Showcoords (GUI item property)">
+     showcoords
+    </a>
+   </li>
+   <li>
+    <a class="new" href="Showtime_%28GUI_item_property%29" title="Showtime (GUI item property)">
+     showtime
+    </a>
+   </li>
+   <li>
+    <a class="new" href="Source_%28GUI_item_property%29" title="Source (GUI item property)">
+     source
+    </a>
+   </li>
+   <li>
+    <a href="Step_%28GUI_item_property%29" title="Step (GUI item property)">
+     step
+    </a>
+   </li>
+   <li>
+    <a href="Stepsize_%28GUI_item_property%29" title="Stepsize (GUI item property)">
+     stepsize
+    </a>
+   </li>
+   <li>
+    <a href="TabAligns_%28GUI_item_property%29" title="TabAligns (GUI item property)">
+     tabAligns
+    </a>
+   </li>
+   <li>
+    <a href="TabStops_%28GUI_item_property%29" title="TabStops (GUI item property)">
+     tabStops
+    </a>
+   </li>
+   <li>
+    <a href="Text_%28GUI_item_property%29" title="Text (GUI item property)">
+     text
+    </a>
+   </li>
+   <li>
+    <a href="Textalign_%28GUI_item_property%29" title="Textalign (GUI item property)">
+     textalign
+    </a>
+   </li>
+   <li>
+    <a href="Textalignx_%28GUI_item_property%29" title="Textalignx (GUI item property)">
+     textalignx
+    </a>
+   </li>
+   <li>
+    <a href="Textaligny_%28GUI_item_property%29" title="Textaligny (GUI item property)">
+     textaligny
+    </a>
+   </li>
+   <li>
+    <a href="Textscale_%28GUI_item_property%29" title="Textscale (GUI item property)">
+     textscale
+    </a>
+   </li>
+   <li>
+    <a href="ThumbShader_%28GUI_item_property%29" title="ThumbShader (GUI item property)">
+     thumbShader
+    </a>
+   </li>
+   <li>
+    <a href="UpdateGroup_%28GUI_item_property%29" title="UpdateGroup (GUI item property)">
+     updateGroup
+    </a>
+   </li>
+   <li>
+    <a href="Values_%28GUI_item_property%29" title="Values (GUI item property)">
+     values
+    </a>
+   </li>
+   <li>
+    <a href="Variablebackground_%28GUI_item_property%29" title="Variablebackground (GUI item property)">
+     variablebackground
+    </a>
+   </li>
+   <li>
+    <a class="new" href="Vertical_%28GUI_item_property%29" title="Vertical (GUI item property)">
+     vertical
+    </a>
+   </li>
+   <li>
+    <a href="ViewOffset_%28GUI_item_property%29" title="ViewOffset (GUI item property)">
+     viewOffset
+    </a>
+   </li>
+   <li>
+    <a href="Visible_%28GUI_item_property%29" title="Visible (GUI item property)">
+     visible
+    </a>
+   </li>
+   <li>
+    <a href="Wantenter_%28GUI_item_property%29" title="Wantenter (GUI item property)">
+     wantenter
+    </a>
+   </li>
+   <li>
+    <a href="Wrap_%28GUI_item_property%29" title="Wrap (GUI item property)">
+     wrap
+    </a>
+   </li>
+  </ul>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:1355-0!1!0!0!!en!2 and timestamp 20110915193842 -->
+ </body>
+</html>

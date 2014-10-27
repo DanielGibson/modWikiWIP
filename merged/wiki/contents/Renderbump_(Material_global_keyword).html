@@ -1,59 +1,63 @@
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  Defines the parameters for use with the
-  <a href="Renderbump_%28console_command%29" title="Renderbump (console command)">
-   renderbump
+<html>
+ <body>
+  <a name="Description">
   </a>
-  console command.
- </p>
- <a name="Usage">
- </a>
- <h2>
-  Usage
- </h2>
- <p>
-  In the global section of your material shader type...
- </p>
- <pre>renderbump [-size &lt;width&gt; &lt;height&gt;] [-aa &lt;aa_value&gt;] [-trace &lt;trace_value&gt;] [-colormap] &lt;image&gt; &lt;model&gt;
+  <h2>
+   Description
+  </h2>
+  <p>
+   Defines the parameters for use with the
+   <a href="Renderbump_%28console_command%29" title="Renderbump (console command)">
+    renderbump
+   </a>
+   console command.
+  </p>
+  <a name="Usage">
+  </a>
+  <h2>
+   Usage
+  </h2>
+  <p>
+   In the global section of your material shader type...
+  </p>
+  <pre>renderbump [-size &lt;width&gt; &lt;height&gt;] [-aa &lt;aa_value&gt;] [-trace &lt;trace_value&gt;] [-colormap] &lt;image&gt; &lt;model&gt;
 </pre>
- <a name="Parameters">
- </a>
- <h2>
-  Parameters
- </h2>
- <ul>
-  <li>
-   &lt;image&gt; - File system path to write the image(s) to, relative to base directory (e.g. "models/mapobjects/crate.tga").
-  </li>
-  <li>
-   &lt;model&gt; - The high polygon model to capture normal map data from.
-  </li>
-  <li>
-   [-size &lt;width&gt; &lt;height&gt;] - Specifies dimensions of the rendered image(s) with &lt;width&gt; and &lt;height&gt; (image dimensions should be specified in powers of two, e.g. "128").  If not specified, &lt;width&gt; and &lt;height&gt; default to 256.
-  </li>
-  <li>
-   [-aa &lt;aa_value&gt;] - The amount of antialiasing applied to the normal map (e.g. "0", "1", or "2").
-  </li>
-  <li>
-   [-trace &lt;trace_value&gt;] - The distance from the low poly geometry to begin the raytrace.  This is a normalized value, from 0.01 to 1.0.  Renderbump performance suffers as this value is increased.
-  </li>
-  <li>
-   [-colormap] - In addition to rendering a bump map, a color map will be produced corresponding to the color of the high poly geometry.  The image will be written to the file specified in &lt;image&gt; with "_color" appended to the filename (e.g. "models/mapobjects/crate_color.tga").
-  </li>
- </ul>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
- <p>
-  This command also applies smoothing to the surface of the low poly model.
- </p>
- <p>
-  <br/>
- </p>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:1296-0!1!0!0!!en!2 and timestamp 20081011054659 -->
+  <a name="Parameters">
+  </a>
+  <h2>
+   Parameters
+  </h2>
+  <ul>
+   <li>
+    &lt;image&gt; - File system path to write the image(s) to, relative to base directory (e.g. "models/mapobjects/crate.tga").
+   </li>
+   <li>
+    &lt;model&gt; - The high polygon model to capture normal map data from.
+   </li>
+   <li>
+    [-size &lt;width&gt; &lt;height&gt;] - Specifies dimensions of the rendered image(s) with &lt;width&gt; and &lt;height&gt; (image dimensions should be specified in powers of two, e.g. "128").  If not specified, &lt;width&gt; and &lt;height&gt; default to 256.
+   </li>
+   <li>
+    [-aa &lt;aa_value&gt;] - The amount of antialiasing applied to the normal map (e.g. "0", "1", or "2").
+   </li>
+   <li>
+    [-trace &lt;trace_value&gt;] - The distance from the low poly geometry to begin the raytrace.  This is a normalized value, from 0.01 to 1.0.  Renderbump performance suffers as this value is increased.
+   </li>
+   <li>
+    [-colormap] - In addition to rendering a bump map, a color map will be produced corresponding to the color of the high poly geometry.  The image will be written to the file specified in &lt;image&gt; with "_color" appended to the filename (e.g. "models/mapobjects/crate_color.tga").
+   </li>
+  </ul>
+  <a name="Notes">
+  </a>
+  <h2>
+   Notes
+  </h2>
+  <p>
+   This command also applies smoothing to the surface of the low poly model.
+  </p>
+  <p>
+   <br/>
+  </p>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:1296-0!1!0!0!!en!2 and timestamp 20081011054659 -->
+ </body>
+</html>

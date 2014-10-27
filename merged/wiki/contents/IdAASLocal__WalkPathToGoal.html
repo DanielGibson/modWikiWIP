@@ -1,32 +1,34 @@
- <div class="boilerplate metadata" id="attention" style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa;">
-  <p>
-   <b>
-    This page is in urgent need of attention because:
-    <i>
-     Unfinished
-    </i>
-   </b>
-  </p>
-  <p>
-   If you disagree with this, please explain why on
-   <a href="Talk:IdAASLocal::WalkPathToGoal" title="Talk:IdAASLocal::WalkPathToGoal">
-    its talk page
-   </a>
-   .
-  </p>
- </div>
- <a name="idAASLocal::WalkPathToGoal">
- </a>
- <h3>
-  <a href="Src/game/ai/AAS_pathing.cpp_%28source_file%29" title="Src/game/ai/AAS pathing.cpp (source file)">
-   idAASLocal
+<html>
+ <body>
+  <div class="boilerplate metadata" id="attention" style="background-color: #fee; margin: 0 1em; padding: 0 10px; border: 1px solid #aaa;">
+   <p>
+    <b>
+     This page is in urgent need of attention because:
+     <i>
+      Unfinished
+     </i>
+    </b>
+   </p>
+   <p>
+    If you disagree with this, please explain why on
+    <a href="Talk:IdAASLocal::WalkPathToGoal" title="Talk:IdAASLocal::WalkPathToGoal">
+     its talk page
+    </a>
+    .
+   </p>
+  </div>
+  <a name="idAASLocal::WalkPathToGoal">
   </a>
-  ::WalkPathToGoal
- </h3>
- <p>
-  With WalkPathToGoal we start to get into some of the AAS details and it starts to get fun ;) As far as I can tell, WalkPathToGoal is only called from PathToGoal in the 1.3 sdk. WalkPathToGoal
- </p>
- <pre> 
+  <h3>
+   <a href="Src/game/ai/AAS_pathing.cpp_%28source_file%29" title="Src/game/ai/AAS pathing.cpp (source file)">
+    idAASLocal
+   </a>
+   ::WalkPathToGoal
+  </h3>
+  <p>
+   With WalkPathToGoal we start to get into some of the AAS details and it starts to get fun ;) As far as I can tell, WalkPathToGoal is only called from PathToGoal in the 1.3 sdk. WalkPathToGoal
+  </p>
+  <pre> 
 <span style="color: #339900; font-style: italic;">/*
 ============
 idAASLocal::WalkPathToGoal
@@ -39,89 +41,89 @@ idAASLocal::WalkPathToGoal
 	<span style="color: #0000ff;">int</span> i, travelTime, curAreaNum, lastAreas<span style="color: #000000;">[</span><span style="color: #0000dd;">4</span><span style="color: #000000;">]</span>, lastAreaIndex, endAreaNum;
 	idReachability *reach;
 	idVec3 endPos;</pre>
- <p>
-  Quick description of each variable TODO:
- </p>
- <p>
-  Next the path is initialized.
- </p>
- <pre> 
+  <p>
+   Quick description of each variable TODO:
+  </p>
+  <p>
+   Next the path is initialized.
+  </p>
+  <pre> 
  
 	path.<span style="color: #00aabb;">type</span> = PATHTYPE_WALK;
 	path.<span style="color: #00aabb;">moveGoal</span> = origin;
 	path.<span style="color: #00aabb;">moveAreaNum</span> = areaNum;
 	path.<span style="color: #00aabb;">secondaryGoal</span> = origin;
 	path.<span style="color: #00aabb;">reachability</span> = <span style="color: #0000ff;">NULL</span>;</pre>
- <p>
-  The path type is set to PATHTYPE_WALK. All available options are listed below for reference.
- </p>
- <pre> 
+  <p>
+   The path type is set to PATHTYPE_WALK. All available options are listed below for reference.
+  </p>
+  <pre> 
 <span style="color: #0000ff;">enum</span> <span style="color: #000000;">{</span>
 	PATHTYPE_WALK,
 	PATHTYPE_WALKOFFLEDGE,
 	PATHTYPE_BARRIERJUMP,
 	PATHTYPE_JUMP
 <span style="color: #000000;">}</span>;</pre>
- <p>
-  If we don’t have an aas file or we are already in the goalAreaNum set the moveGoal to the goal position vector passed in and return true, there is a WalkPathToGoal.
- </p>
- <pre> 
+  <p>
+   If we don’t have an aas file or we are already in the goalAreaNum set the moveGoal to the goal position vector passed in and return true, there is a WalkPathToGoal.
+  </p>
+  <pre> 
 <span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span> <span style="color: #0000ff;">file</span> == <span style="color: #0000ff;">NULL</span> || areaNum == goalAreaNum <span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
 	path.<span style="color: #00aabb;">moveGoal</span> = goalOrigin;
 	<span style="color: #0000ff;">return</span> <span style="color: #0000ff;">true</span>;
 <span style="color: #000000;">}</span></pre>
- <p>
-  <br/>
- </p>
- <pre> 
+  <p>
+   <br/>
+  </p>
+  <pre> 
 lastAreas<span style="color: #000000;">[</span><span style="color: #0000dd;">0</span><span style="color: #000000;">]</span> = lastAreas<span style="color: #000000;">[</span><span style="color: #0000dd;">1</span><span style="color: #000000;">]</span> = lastAreas<span style="color: #000000;">[</span><span style="color: #0000dd;">2</span><span style="color: #000000;">]</span> = lastAreas<span style="color: #000000;">[</span><span style="color: #0000dd;">3</span><span style="color: #000000;">]</span> = areaNum;
 lastAreaIndex = <span style="color: #0000dd;">0</span>;
 curAreaNum = areaNum;</pre>
- <p>
-  These variables will be used while looping below, lets just take a look.
- </p>
- <pre> 
+  <p>
+   These variables will be used while looping below, lets just take a look.
+  </p>
+  <pre> 
 <span style="color: #0000ff;">for</span> <span style="color: #000000;">(</span> i = <span style="color: #0000dd;">0</span>; i &lt; maxWalkPathIterations; i++ <span style="color: #000000;">)</span> <span style="color: #000000;">{</span></pre>
- <p>
-  We are entering a pretty long for loop that is used to iteratively walk nodes in the path to perform path smoothing and optimization. maxWalkPathIterations is declared at the top of AAS_pathing, here is that declaration as well as some other ones that we will need soon.
- </p>
- <pre> 
+  <p>
+   We are entering a pretty long for loop that is used to iteratively walk nodes in the path to perform path smoothing and optimization. maxWalkPathIterations is declared at the top of AAS_pathing, here is that declaration as well as some other ones that we will need soon.
+  </p>
+  <pre> 
 <span style="color: #339900;">#define SUBSAMPLE_WALK_PATH		1</span>
  
 <span style="color: #0000ff;">const</span> <span style="color: #0000ff;">int</span>		maxWalkPathIterations		= <span style="color: #0000dd;">10</span>;
 <span style="color: #0000ff;">const</span> <span style="color: #0000ff;">float</span>		maxWalkPathDistance		= <span style="color: #0000dd;">500</span>.0f;
 <span style="color: #0000ff;">const</span> <span style="color: #0000ff;">float</span>		walkPathSampleDistance		= <span style="color: #0000dd;">8</span>.0f;</pre>
- <p>
-  So loop 10 times to return the next ten reachabilities in the path and see if we can walk directly to them.
- </p>
- <pre> 
+  <p>
+   So loop 10 times to return the next ten reachabilities in the path and see if we can walk directly to them.
+  </p>
+  <pre> 
 <span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span> !idAASLocal::<span style="color: #00aabb;">RouteToGoalArea</span><span style="color: #000000;">(</span> curAreaNum, path.<span style="color: #00aabb;">moveGoal</span>, goalAreaNum,
 		travelFlags, travelTime, &amp;reach <span style="color: #000000;">)</span> <span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
 	<span style="color: #0000ff;">break</span>;
 <span style="color: #000000;">}</span></pre>
- <p>
-  Each iteration through the loop we make a call to RouteToGoalArea. We pass in the curAreaNum which is(the area we are currently in or know we can get to) , path.moveGoal which is where we want to get to, goalAreaNum – the area that contains the moveGoal, travelFlags – flags that represent the type of travel allowed like TFL_WALK, travelTime, by reference, so that RouteToGoal can set it for us, and reach, well, its address, cause pointers to pointers to objects are fun (ok, RouteToGoal will set reach as well)
- </p>
- <p>
-  RouteToGoalArea will use the information passed to find the best route to the goal and set the reachability that gets you there as well as the travel time it should take. Because routes are cached in memory per goal area after being calculated each successive call to the routine is just a quick lookup to what was calculated on the first call to it. by calling it inside a loop we can walk up the path and smooth out movement.
- </p>
- <pre> 
+  <p>
+   Each iteration through the loop we make a call to RouteToGoalArea. We pass in the curAreaNum which is(the area we are currently in or know we can get to) , path.moveGoal which is where we want to get to, goalAreaNum – the area that contains the moveGoal, travelFlags – flags that represent the type of travel allowed like TFL_WALK, travelTime, by reference, so that RouteToGoal can set it for us, and reach, well, its address, cause pointers to pointers to objects are fun (ok, RouteToGoal will set reach as well)
+  </p>
+  <p>
+   RouteToGoalArea will use the information passed to find the best route to the goal and set the reachability that gets you there as well as the travel time it should take. Because routes are cached in memory per goal area after being calculated each successive call to the routine is just a quick lookup to what was calculated on the first call to it. by calling it inside a loop we can walk up the path and smooth out movement.
+  </p>
+  <pre> 
 <span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span> !reach <span style="color: #000000;">)</span> <span style="color: #000000;">{</span>
 	<span style="color: #0000ff;">return</span> <span style="color: #0000ff;">false</span>;
 <span style="color: #000000;">}</span></pre>
- <p>
-  At any time in the loop if RouteToGoalArea can’t give us the next reachability to get to the goal we return false indicating failure to WalkPathToGoal. If we have a reachability to the next section of the path then we continue on processing.
- </p>
- <pre> 
+  <p>
+   At any time in the loop if RouteToGoalArea can’t give us the next reachability to get to the goal we return false indicating failure to WalkPathToGoal. If we have a reachability to the next section of the path then we continue on processing.
+  </p>
+  <pre> 
 <span style="color: #339900;">// no need to check through the first area</span>
 <span style="color: #0000ff;">if</span> <span style="color: #000000;">(</span> areaNum != curAreaNum <span style="color: #000000;">)</span> <span style="color: #000000;">{</span></pre>
- <p>
-  TODO: Finish this routine up
- </p>
- <p>
-  <br/>
- </p>
- <pre> 
+  <p>
+   TODO: Finish this routine up
+  </p>
+  <p>
+   <br/>
+  </p>
+  <pre> 
  
 <span style="color: #339900;">#define SUBSAMPLE_WALK_PATH		1</span>
  
@@ -129,3 +131,5 @@ curAreaNum = areaNum;</pre>
 <span style="color: #0000ff;">const</span> <span style="color: #0000ff;">float</span>		maxWalkPathDistance		= <span style="color: #0000dd;">500</span>.0f;
 <span style="color: #0000ff;">const</span> <span style="color: #0000ff;">float</span>		walkPathSampleDistance		= <span style="color: #0000dd;">8</span>.0f; 
  </pre>
+ </body>
+</html>

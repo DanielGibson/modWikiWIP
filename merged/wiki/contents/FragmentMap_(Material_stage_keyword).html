@@ -1,48 +1,50 @@
- <a name="Description">
- </a>
- <h2>
-  Description
- </h2>
- <p>
-  The
-  <b>
-   fragmentMap
-  </b>
-  keyword instructs Doom 3 to pass the instructed image to a fragment program which must also be referenced in this stage via the
-  <a href="FragmentProgram_%28Material_stage_keyword%29" title="FragmentProgram (Material stage keyword)">
-   fragmentProgram
+<html>
+ <body>
+  <a name="Description">
   </a>
-  keyword.
- </p>
- <a name="Usage">
- </a>
- <h2>
-  Usage
- </h2>
- <pre>fragmentMap [input], [image]
+  <h2>
+   Description
+  </h2>
+  <p>
+   The
+   <b>
+    fragmentMap
+   </b>
+   keyword instructs Doom 3 to pass the instructed image to a fragment program which must also be referenced in this stage via the
+   <a href="FragmentProgram_%28Material_stage_keyword%29" title="FragmentProgram (Material stage keyword)">
+    fragmentProgram
+   </a>
+   keyword.
+  </p>
+  <a name="Usage">
+  </a>
+  <h2>
+   Usage
+  </h2>
+  <pre>fragmentMap [input], [image]
 </pre>
- <a name="Parameters">
- </a>
- <h2>
-  Parameters
- </h2>
- <ul>
-  <li>
-   [input] - The input or "slot" in which to pass the image to the fragment program.
-  </li>
-  <li>
-   [image] - The image map to pass to the fragment program.
-  </li>
- </ul>
- <a name="Example">
- </a>
- <h2>
-  Example
- </h2>
- <p>
-  distort the current frame using the normal map helmet_local.tga and heatHazeWithMaskAndVertex.vfp
- </p>
- <pre>{
+  <a name="Parameters">
+  </a>
+  <h2>
+   Parameters
+  </h2>
+  <ul>
+   <li>
+    [input] - The input or "slot" in which to pass the image to the fragment program.
+   </li>
+   <li>
+    [image] - The image map to pass to the fragment program.
+   </li>
+  </ul>
+  <a name="Example">
+  </a>
+  <h2>
+   Example
+  </h2>
+  <p>
+   distort the current frame using the normal map helmet_local.tga and heatHazeWithMaskAndVertex.vfp
+  </p>
+  <pre>{
    program                 heatHazeWithMaskAndVertex.vfp
    vertexParm              0               0                                          // texture scrolling
    vertexParm              1               10                                         // magnitude of the distortion
@@ -50,15 +52,17 @@
    fragmentMap             1               models/characters/sarge2/helmet_local.tga  // the normal map for distortion
 }
 </pre>
- <a name="Notes">
- </a>
- <h2>
-  Notes
- </h2>
- <p>
-  None.
- </p>
- <p>
-  <br/>
- </p>
- <!-- Saved in parser cache with key modwiki:pcache:idhash:3696-0!1!0!0!!en!2 and timestamp 20080704114142 -->
+  <a name="Notes">
+  </a>
+  <h2>
+   Notes
+  </h2>
+  <p>
+   None.
+  </p>
+  <p>
+   <br/>
+  </p>
+  <!-- Saved in parser cache with key modwiki:pcache:idhash:3696-0!1!0!0!!en!2 and timestamp 20080704114142 -->
+ </body>
+</html>
