@@ -23,9 +23,7 @@
    This method has the following overarching structure:
   </p>
   <p>
-   <a class="image" href="Image:Terrain_01.png" title="Image:Terrain 01.png">
-    <img alt="Image:Terrain 01.png" height="421" longdesc="/wiki/Image:Terrain_01.png" src="/w/images/d/d0/Terrain_01.png" width="610"/>
-   </a>
+   <img height="421" src="/images/d/d0/Terrain_01.png" width="610"/>
   </p>
   <p>
    This is an iterative process: you may need a couple of passes to get exactly what you want. Unfortunately, since the
@@ -89,17 +87,13 @@
    In this next screen you should move the two slider positions all the way to the right until it says “2048 x 2048 (4.0 Mpxls)” below them. For now leave all the other options intact though when you feel more comfortable you could play around with the heightfield resolution factor. The “mosaic map” option is of no use here, however, enabling “edge wrapping” will allow you to tile the terrain seamlessly. This has little value for large scale terrains, which are the purpose of this tutorial, but it may allow you to use this program to generate standard textures like dirt or rock.
   </p>
   <p>
-   <a class="image" href="Image:Terrain_02.png" title="Image:Terrain 02.png">
-    <img alt="Image:Terrain 02.png" height="355" longdesc="/wiki/Image:Terrain_02.png" src="/w/images/6/6e/Terrain_02.png" width="306"/>
-   </a>
+   <img height="355" src="/images/6/6e/Terrain_02.png" width="306"/>
   </p>
   <p>
    When using the “Design/inflate” method you get this third screen where you can tailor the terrain to your liking by tweaking the parameters defined here. They are all pretty much self-explanatory however you should raise the average altitude on the first slider and lower the frequency of lakes in the last one for best results. The “scale of features” slider is helpful when you want to create a terrain for a 3D skybox (“vast”) or interactive terrain (“tiny”). Finally, the “notes” button at the bottom provides helpful tips on your choice of default climate. Don’t be alarmed if it takes a few tries to get just the terrain you want but don’t agonise about getting it absolutely right since you’ll be able to change the landscape later on; simply make sure you have the major geographic details where you want them and don’t worry about exact steepness of a certain hill. Click “OK” when you’re satisfied.
   </p>
   <p>
-   <a class="image" href="Image:Terrain_03.png" title="Image:Terrain 03.png">
-    <img alt="Image:Terrain 03.png" height="365" longdesc="/wiki/Image:Terrain_03.png" src="/w/images/8/8f/Terrain_03.png" width="362"/>
-   </a>
+   <img height="365" src="/images/8/8f/Terrain_03.png" width="362"/>
   </p>
   <p>
    After a few seconds, you should be looking at something similar to the image below. This terrain was generated without tweaking either the average altitude or the lake frequency which, as you can attest, can lead to terrains with plenty of water bias. As we shall see later on, even if you want water in your terrain putting it here instead of the level editor has some drawbacks.
@@ -115,9 +109,7 @@
    engine. Click on “Heightfield &gt; generate map” and wait until the application finishes. These are lengthy operations that can, depending on your terrain complexity, take a couple of minutes even on fairly fast CPUs.
   </p>
   <p>
-   <a class="image" href="Image:Terrain_04.png" title="Image:Terrain 04.png">
-    <img alt="Image:Terrain 04.png" height="540" longdesc="/wiki/Image:Terrain_04.png" src="/w/images/6/60/Terrain_04.png" width="467"/>
-   </a>
+   <img height="540" src="/images/6/60/Terrain_04.png" width="467"/>
   </p>
   <p>
    Now go to the “File” menu, highlight “Export” and select “Active map…”. In the screen that appears, make sure you select “Bitmap” and that the width and height fields read “2048”; browse to where you want to save the image and click “OK”. For the purpose of this tutorial let’s name it “heightfield.bmp”. Leave the other options alone for now.
@@ -151,17 +143,13 @@
    After that, generate the next layer: the “Light map”. You’ll be asked to enter some values but you can leave all of them on default with the exception of the Sun’s position in the first screen shown below, as you’ll want to make sure the parameters here match the lighting on your level.
   </p>
   <p>
-   <a class="image" href="Image:Terrain_05.png" title="Image:Terrain 05.png">
-    <img alt="Image:Terrain 05.png" height="273" longdesc="/wiki/Image:Terrain_05.png" src="/w/images/7/75/Terrain_05.png" width="374"/>
-   </a>
+   <img height="273" src="/images/7/75/Terrain_05.png" width="374"/>
   </p>
   <p>
    When you’re done, proceed to generate the last layer we need, the “Texture map” in the Operations menu. In the single screen that appears, make sure the first three options are enabled and all the rest are disabled and click “OK”; after a few seconds you should have something similar to this:
   </p>
   <p>
-   <a class="image" href="Image:Terrain_06.jpg" title="Image:Terrain 06.jpg">
-    <img alt="Image:Terrain 06.jpg" height="540" longdesc="/wiki/Image:Terrain_06.jpg" src="/w/images/6/67/Terrain_06.jpg" width="467"/>
-   </a>
+   <img height="540" src="/images/6/67/Terrain_06.jpg" width="467"/>
   </p>
   <p>
    Export this layer as a bitmap also; we’ll name it “texturemap.bmp”. Optionally, you can save your terrain (if you haven’t already) by clicking on “File &gt; Save &gt; Save project as…” in case you may want to re-edit it later on; although that means you’ll need to re-generate all the layers and re-export the maps as described above.
@@ -175,9 +163,7 @@
    The makers of Blender, like the creators of most modelling packages, have an axe to grind against the default Windows widgets so don’t be alarmed at just how alien the application looks and behaves. This tutorial will walk you right through everything with screenshots highlighting the specific areas you need to watch for as well as common hotkey shortcuts.
   </p>
   <p>
-   <a class="image" href="Image:Terrain_07.png" title="Image:Terrain 07.png">
-    <img alt="Image:Terrain 07.png" height="361" longdesc="/wiki/Image:Terrain_07.png" src="/w/images/a/ad/Terrain_07.png" width="512"/>
-   </a>
+   <img height="361" src="/images/a/ad/Terrain_07.png" width="512"/>
   </p>
   <p>
    What you’re looking at is the main 3D window with “toolbars” at the bottom. You’re viewing a cube right in the middle of the grid from above, using the top view; the red and green arrows are the axis while the black dot to the right is a light. The tetrahedron-looking shape at the bottom right is the camera position, direction and frustrum in can you want to switch from top, side, etc. views to camera view. For now ignore everything except the cube.
@@ -186,17 +172,13 @@
    Blender has the nasty habit of inserting a cube on every new Blender file. We won’t need it so we must remove it. It’s selected by default (notice the pink contour) so deleting it is a simple matter of hitting the “Del” hotkey. You’ll get a confirmation dialogue box (see below). Either click where it says “Erase selected Object(s)” or hit “Enter”. The cube should now be gone and the toolbars at the bottom should be hidden.
   </p>
   <p>
-   <a class="image" href="Image:Terrain_08.png" title="Image:Terrain 08.png">
-    <img alt="Image:Terrain 08.png" height="246" longdesc="/wiki/Image:Terrain_08.png" src="/w/images/9/95/Terrain_08.png" width="369"/>
-   </a>
+   <img height="246" src="/images/9/95/Terrain_08.png" width="369"/>
   </p>
   <p>
    Before we do anything else though, let’s make Blender a little more similar to the level editor. Go into “View &gt; View Properties”; in the small translucent window that appears change both the spacing and divisions values to 8 by clicking directly in them and typing “8”. While you’re at it, change the “Clip Start” and “Clip End” values. Set the former to 1 and the latter to whatever size you want your terrain to be. For instance, if you’re doing a 16384 by 16384 terrain, setting 16384 here will work reasonably well. When you’re done, click the little “x” on the top left on the small window.
   </p>
   <p>
-   <a class="image" href="Image:Terrain_09.png" title="Image:Terrain 09.png">
-    <img alt="Image:Terrain 09.png" height="297" longdesc="/wiki/Image:Terrain_09.png" src="/w/images/8/82/Terrain_09.png" width="324"/>
-   </a>
+   <img height="297" src="/images/8/82/Terrain_09.png" width="324"/>
   </p>
   <a name="Adding_a_terrain">
   </a>
@@ -207,9 +189,7 @@
    Now click “Add &gt; Mesh &gt; Plane” and you should see a flat pink plane with a yellow outline. Use the mouse wheel to zoom in and out. On the bottom of your screen you should see a button called “Subdivide” as shown in the image below. Click on it until you get enough mesh complexity.
   </p>
   <p>
-   <a class="image" href="Image:Terrain_10.png" title="Image:Terrain 10.png">
-    <img alt="Image:Terrain 10.png" height="283" longdesc="/wiki/Image:Terrain_10.png" src="/w/images/d/d6/Terrain_10.png" width="428"/>
-   </a>
+   <img height="283" src="/images/d/d6/Terrain_10.png" width="428"/>
   </p>
   <p>
    You can keep tabs on how many polys your terrain has by looking at the values on the top right of the screen. The value you’re most concerned about is “Fa” or faces. The first value is how many are currently selected while the value after the hyphen is the total number of faces in your terrain. Every time you hit subdivide the number of faces quadruples. If you think you’ve gone too far you can hit Ctrl + Z to undo. The number of polygons your terrain should have depends entirely on the terrain itself, what it’s used for, etc. Obviously, interactive terrain is going to need more complexity while scenery terrain won’t. The important part to remember is that, like with textures, it’s better to start with detail and then scale back. Pre-emptive optimisation can lead to problems later on.
@@ -218,17 +198,13 @@
    Now let’s import our terrain. We do this by using the previously created “heightmap.bmp” file as a noise when we deform our plane in Blender. First things first, add a material to the scene. You can do this by clicking the button “New” shown below:
   </p>
   <p>
-   <a class="image" href="Image:Terrain_11.png" title="Image:Terrain 11.png">
-    <img alt="Image:Terrain 11.png" height="242" longdesc="/wiki/Image:Terrain_11.png" src="/w/images/0/02/Terrain_11.png" width="308"/>
-   </a>
+   <img height="242" src="/images/0/02/Terrain_11.png" width="308"/>
   </p>
   <p>
    After that, you click the little sphere button entitled “Shading” (or press F5) and then press the yellow and black brick on the centre mini-toolbar entitled “Texture buttons” (or press F6); you then press the “Add New” button to add a new image to the material you’ve created. In the “Texture Type” combo box select “Image”. Two new button areas should appear, press the “Load” button on the right.
   </p>
   <p>
-   <a class="image" href="Image:Terrain_12.png" title="Image:Terrain 12.png">
-    <img alt="Image:Terrain 12.png" height="288" longdesc="/wiki/Image:Terrain_12.png" src="/w/images/f/f6/Terrain_12.png" width="494"/>
-   </a>
+   <img height="288" src="/images/f/f6/Terrain_12.png" width="494"/>
   </p>
   <p>
    You should now be looking at something that closely resembles DOS Shell so it’s okay to feel like you’re back in the late eighties. You’ll need to navigate to the place where you kept your “heightmap.bmp” file. If you’ve been saving your progress on the desktop you need to go to C:\Documents and Settings\&lt;yourwindowsaccount&gt;\Desktop. Once you find it you need to left click on it until the filename appears on top and then right-click on it until the file is highlighted with blue. Then hit the “SELECT IMAGE” button on the right part of the screen. You should now be able to see your heightmap in the preview area below.
@@ -237,17 +213,13 @@
    Now we have to return to where we were. Press the button showing a black square with four red vertices entitled “Editing” (or press F9) and then hit the “Noise” button in the centre:
   </p>
   <p>
-   <a class="image" href="Image:Terrain_13.png" title="Image:Terrain 13.png">
-    <img alt="Image:Terrain 13.png" height="263" longdesc="/wiki/Image:Terrain_13.png" src="/w/images/6/65/Terrain_13.png" width="512"/>
-   </a>
+   <img height="263" src="/images/6/65/Terrain_13.png" width="512"/>
   </p>
   <p>
    You’ll need to keep hitting the “Noise” button until the height of the terrain reaches roughly what you want proportional to the side. To better see this you can change your perspective from “top” to “side” (or “front”). To do this, select “View &gt; Side”. Don’t worry about getting the height exactly as we’ll be changing this in a bit.
   </p>
   <p>
-   <a class="image" href="Image:Terrain_14.png" title="Image:Terrain 14.png">
-    <img alt="Image:Terrain 14.png" height="539" longdesc="/wiki/Image:Terrain_14.png" src="/w/images/3/34/Terrain_14.png" width="335"/>
-   </a>
+   <img height="539" src="/images/3/34/Terrain_14.png" width="335"/>
   </p>
   <p>
    Now it’s a good time to save your file. Go to “File &gt; Save as…” and you’ll be greeted by the same DOS Shell like look. Just find a directory, type the name of your file on the second textbox but leave the “.blend” extension and click the “Save As” button located on the right. You should always save to a different file. Throughout the rest of this tutorial we’ll be making some major changes to the mesh which might be tricky to restore and it’s important that you can go back to a previous version if you make a mistake without having to go through L3DT and EarthSculptor routine for this same terrain.
@@ -261,9 +233,7 @@
    Now that we have deformed our mesh using our heightmap we need to scale the terrain. First go into “Object Mode” as shown in the image below and then select “Object &gt; Transform Properties” from the menu that appears.
   </p>
   <p>
-   <a class="image" href="Image:Terrain_15.png" title="Image:Terrain 15.png">
-    <img alt="Image:Terrain 15.png" height="399" longdesc="/wiki/Image:Terrain_15.png" src="/w/images/0/08/Terrain_15.png" width="409"/>
-   </a>
+   <img height="399" src="/images/0/08/Terrain_15.png" width="409"/>
   </p>
   <p>
    A small translucent box should appear. The values we’re concerned here are the “DimX”, “DimY” and “DimZ” values. The first two should read “16” so replace these with the size you want your terrain model to fill in the editor in game units, for instance, if you want a 16384 x 16384 terrain then put “16384” in both “DimX” and “DimY”. You should consider clicking the “Link Scale” button beforehand though. This will let you scale height automatically but only use this if both X and Y dimensions are supposed to be equal.
@@ -280,9 +250,7 @@
    After scaling the terrain you may need to zoom out. As you can see in Blender the terrain looks very faceted because you can see every polygon. Click the “Set Smooth” button to fix this.
   </p>
   <p>
-   <a class="image" href="Image:Terrain_16.png" title="Image:Terrain 16.png">
-    <img alt="Image:Terrain 16.png" height="269" longdesc="/wiki/Image:Terrain_16.png" src="/w/images/e/e6/Terrain_16.png" width="356"/>
-   </a>
+   <img height="269" src="/images/e/e6/Terrain_16.png" width="356"/>
   </p>
   <p>
    We don’t want this to happen in the game too so we’re going to tell the terrain exporter to manually smooth the polygons over.
@@ -294,9 +262,7 @@
    When you selected Edit mode a new set of six buttons appeared under “Vertex Groups”. Click the “new” button and a new two new gray fields should appear right above it.
   </p>
   <p>
-   <a class="image" href="Image:Terrain_17.png" title="Image:Terrain 17.png">
-    <img alt="Image:Terrain 17.png" height="196" longdesc="/wiki/Image:Terrain_17.png" src="/w/images/0/03/Terrain_17.png" width="255"/>
-   </a>
+   <img height="196" src="/images/0/03/Terrain_17.png" width="255"/>
   </p>
   <p>
    The first is the name of the vertex group you just created. Change the name to “smooth.1” as indicated in the image above and hit the “Assign” button which assigns the current group to all selected vertices (which is all of our terrain in this case). If all went well you should be able to hit the “Select” and “Desel.” buttons right beneath that to toggle the selection of your terrain (faces turn yellow when selected or you just see pink dots when not selected).
@@ -319,28 +285,20 @@
    For our purposes here, UV mapping is very easy. We are simply going to “lay the texture down on the terrain” as if it were a sheet on a person laying in bed. We do this by selecting “UV Face select” mode as portrayed in the image below and you’ll note the terrain mesh turns pink. Next, we select the “UV/Image Editor” from the lowest window type button.
   </p>
   <p>
-   <a class="image" href="Image:Terrain_18.png" title="Image:Terrain 18.png">
-    <img alt="Image:Terrain 18.png" height="373" longdesc="/wiki/Image:Terrain_18.png" src="/w/images/6/65/Terrain_18.png" width="260"/>
-   </a>
-   <a class="image" href="Image:Terrain_19.png" title="Image:Terrain 19.png">
-    <img alt="Image:Terrain 19.png" height="504" longdesc="/wiki/Image:Terrain_19.png" src="/w/images/b/bb/Terrain_19.png" width="230"/>
-   </a>
+   <img height="373" src="/images/6/65/Terrain_18.png" width="260"/>
+   <img height="504" src="/images/b/bb/Terrain_19.png" width="230"/>
   </p>
   <p>
    You should now have something that resembles this:
   </p>
   <p>
-   <a class="image" href="Image:Terrain_20.png" title="Image:Terrain 20.png">
-    <img alt="Image:Terrain 20.png" height="372" longdesc="/wiki/Image:Terrain_20.png" src="/w/images/9/9f/Terrain_20.png" width="512"/>
-   </a>
+   <img height="372" src="/images/9/9f/Terrain_20.png" width="512"/>
   </p>
   <p>
    Move the mouse pointer to the 3D view area and press “U” and a floating menu called “UV Calculation” should appear. Select the “Project from View 1/1” option (or "Project from View (bounds)" depending on your version of Blender). You can now revert the lower half of the screen back to “toolbar” mode by selecting “Buttons Window”. Save again to another file.
   </p>
   <p>
-   <a class="image" href="Image:Terrain_21.png" title="Image:Terrain 21.png">
-    <img alt="Image:Terrain 21.png" height="399" longdesc="/wiki/Image:Terrain_21.png" src="/w/images/f/fb/Terrain_21.png" width="277"/>
-   </a>
+   <img height="399" src="/images/f/fb/Terrain_21.png" width="277"/>
   </p>
   <a name="Exporting_to_ASE">
   </a>
@@ -370,9 +328,7 @@
    . It’s not relevant here to know the structure of an .ASE file but the important thing is that the format lists one or more materials and then one or more 3D objects, each of which point to one material defined in the file. We only have one object, our terrain, and we also should only have one material (unless something went wrong along the way). Look at the file in Notepad and see that you have something similar to this:
   </p>
   <p>
-   <a class="image" href="Image:Terrain_22.png" title="Image:Terrain 22.png">
-    <img alt="Image:Terrain 22.png" height="585" longdesc="/wiki/Image:Terrain_22.png" src="/w/images/e/ec/Terrain_22.png" width="575"/>
-   </a>
+   <img height="585" src="/images/e/ec/Terrain_22.png" width="575"/>
   </p>
   <p>
    Right near the start you should have a block of text named “MATERIAL 0”, go to the last line highlighted in the image above, “*MATERIAL_XP_TYPE Filter” and paste the following text after that line:
@@ -402,9 +358,7 @@
    Save the file; it should now look like this:
   </p>
   <p>
-   <a class="image" href="Image:Terrain_23.png" title="Image:Terrain 23.png">
-    <img alt="Image:Terrain 23.png" height="585" longdesc="/wiki/Image:Terrain_23.png" src="/w/images/d/d0/Terrain_23.png" width="575"/>
-   </a>
+   <img height="585" src="/images/d/d0/Terrain_23.png" width="575"/>
   </p>
   <p>
    You can set the
@@ -426,9 +380,7 @@
    . Before we do that, let’s put all the textures into place.
   </p>
   <div>
-   <a class="image" href="Image:Etqwsquare_25.png" title="Image:Etqwsquare_25.png">
-    <img alt="Image:Etqwsquare_25.png" height="25" longdesc="/wiki/Image:Etqwsquare_25.png" src="/w/images/7/7e/Etqwsquare_25.png" width="25"/>
-   </a>
+   <img height="25" src="/images/7/7e/Etqwsquare_25.png" width="25"/>
    <b>
     Note:
    </b>
@@ -501,17 +453,20 @@
    While a 1024 x 1024 texture resolution is fine for 3D Skybox maps even 2048 x 2048 is not enough for interactive terrains unless they are very small. To improve the overall quality we’re going to fake a detail texture layer. We do this by filtering in a very rough looking texture that has no distinctive features because we want it to tile and tiling a texture with prominent characteristics can give away the tiling effect quite easily. For this tutorial the terrain will be using this texture:
   </p>
   <p>
-   <a class="image" href="Image:Terrain_24.jpg" title="Image:Terrain 24.jpg">
-    <img alt="Image:Terrain 24.jpg" height="512" longdesc="/wiki/Image:Terrain_24.jpg" src="/w/images/f/ff/Terrain_24.jpg" width="512"/>
-   </a>
+   <p>
+    <b>
+     Missing image:
+     <i>
+      /w/images/f/ff/Terrain_24.jpg
+     </i>
+    </b>
+   </p>
   </p>
   <p>
    All id Tech 4 engine games released so far have plenty of similar looking textures so find one that fits your own terrain textures. Below you can see a comparison screenshot of the same terrain with and without the detail layer.
   </p>
   <p>
-   <a class="image" href="Image:Terrain_25.jpg" title="Image:Terrain 25.jpg">
-    <img alt="Image:Terrain 25.jpg" height="384" longdesc="/wiki/Image:Terrain_25.jpg" src="/w/images/c/cc/Terrain_25.jpg" width="512"/>
-   </a>
+   <img height="384" src="/images/c/cc/Terrain_25.jpg" width="512"/>
   </p>
   <p>
    Finally, we add back the texture we used for the diffuse map to restore the original hue removed by the
@@ -521,9 +476,7 @@
    .
   </p>
   <div>
-   <a class="image" href="Image:Etqwsquare_25.png" title="Image:Etqwsquare_25.png">
-    <img alt="Image:Etqwsquare_25.png" height="25" longdesc="/wiki/Image:Etqwsquare_25.png" src="/w/images/7/7e/Etqwsquare_25.png" width="25"/>
-   </a>
+   <img height="25" src="/images/7/7e/Etqwsquare_25.png" width="25"/>
    <b>
     Note:
    </b>
@@ -553,9 +506,7 @@
    You should now have a fully functioning terrain in your map however there may still be some work to be done. You may want to reduce the mesh’s complexity and/or the texture resolution (for memory budget or file download reasons) or perhaps you need to have holes in the terrain to build caves, etc. for your interactive terrain. All of this is should wait until your map nears the optimisation phase and you’ve firmly decided your terrain placement, lighting conditions, etc.
   </p>
   <p>
-   <a class="image" href="Image:Terrain_27.jpg" title="Image:Terrain 27.jpg">
-    <img alt="Image:Terrain 27.jpg" height="384" longdesc="/wiki/Image:Terrain_27.jpg" src="/w/images/6/6b/Terrain_27.jpg" width="512"/>
-   </a>
+   <img height="384" src="/images/6/6b/Terrain_27.jpg" width="512"/>
   </p>
   <!-- Saved in parser cache with key modwiki:pcache:idhash:3889-0!1!0!0!!en!2 and timestamp 20121122075345 -->
  </body>
