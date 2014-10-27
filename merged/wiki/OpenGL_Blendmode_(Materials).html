@@ -10,12 +10,12 @@
 
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="keywords" content="OpenGL Blendmode (Materials)" />
-<link rel="shortcut icon" href="/web/20121205043609im_/http://www.modwiki.net/favicon.ico" />
+<link rel="shortcut icon" href="/favicon.ico" />
 <link title="Creative Commons" type="application/rdf+xml" href="/w/index.php?title=OpenGL_Blendmode_%28Materials%29&amp;action=creativecommons" rel="meta" />
 <link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
 		<title>OpenGL Blendmode (Materials) - modwiki</title>
-		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20121205043609cs_/http://www.modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
-		<link rel="stylesheet" type="text/css" media="print" href="/web/20121205043609cs_/http://www.modwiki.net/w/skins/common/commonPrint.css" />
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/w/skins/common/commonPrint.css" />
 		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
 		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
 		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
@@ -23,12 +23,12 @@
 		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
 		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
 		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
-		<script type="text/javascript" src="/web/20121205043609js_/http://www.modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
-		<script type="text/javascript" src="/web/20121205043609js_/http://www.modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<script type="text/javascript" src="/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
 		<style type="text/css">/*<![CDATA[*/
-@import "/web/20121205043609cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
-@import "/web/20121205043609cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
-@import "/web/20121205043609cs_/http://www.modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+@import "/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/w/index.php?title=-&action=raw&gen=css&maxage=18000";
 /*]]>*/</style>
 		<!-- Head Scripts -->
 			</head>
@@ -42,27 +42,27 @@
 		<div id="bodyContent">
 			<h3 id="siteSub">From modwiki</h3>
 			<div id="contentSub"></div>
-									<div id="jump-to-nav">Jump to: <a href="/web/20121205043609/http://www.modwiki.net/wiki/OpenGL_Blendmode_(Materials)#column-one">navigation</a>, <a href="/web/20121205043609/http://www.modwiki.net/wiki/OpenGL_Blendmode_(Materials)#searchInput">search</a></div>			<!-- start content -->
+									<div id="jump-to-nav">Jump to: <a href="/wiki/OpenGL_Blendmode_(Materials)#column-one">navigation</a>, <a href="/wiki/OpenGL_Blendmode_(Materials)#searchInput">search</a></div>			<!-- start content -->
 			<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
 <ul>
-<li class='toclevel-1'><a href="/web/20121205043609/http://www.modwiki.net/wiki/OpenGL_Blendmode_(Materials)#Rendering"><span class="tocnumber">1</span> <span class="toctext">Rendering</span></a></li>
-<li class='toclevel-1'><a href="/web/20121205043609/http://www.modwiki.net/wiki/OpenGL_Blendmode_(Materials)#Layers"><span class="tocnumber">2</span> <span class="toctext">Layers</span></a></li>
-<li class='toclevel-1'><a href="/web/20121205043609/http://www.modwiki.net/wiki/OpenGL_Blendmode_(Materials)#The_Blend_Function"><span class="tocnumber">3</span> <span class="toctext">The Blend Function</span></a></li>
-<li class='toclevel-1'><a href="/web/20121205043609/http://www.modwiki.net/wiki/OpenGL_Blendmode_(Materials)#Source_Blend_.28srcBlend.29"><span class="tocnumber">4</span> <span class="toctext">Source Blend (srcBlend)</span></a></li>
-<li class='toclevel-1'><a href="/web/20121205043609/http://www.modwiki.net/wiki/OpenGL_Blendmode_(Materials)#Destination_Blend_.28dstBlend.29"><span class="tocnumber">5</span> <span class="toctext">Destination Blend (dstBlend)</span></a></li>
-<li class='toclevel-1'><a href="/web/20121205043609/http://www.modwiki.net/wiki/OpenGL_Blendmode_(Materials)#Blend_Aliases"><span class="tocnumber">6</span> <span class="toctext">Blend Aliases</span></a></li>
-<li class='toclevel-1'><a href="/web/20121205043609/http://www.modwiki.net/wiki/OpenGL_Blendmode_(Materials)#Computing_a_Result"><span class="tocnumber">7</span> <span class="toctext">Computing a Result</span></a></li>
+<li class='toclevel-1'><a href="/wiki/OpenGL_Blendmode_(Materials)#Rendering"><span class="tocnumber">1</span> <span class="toctext">Rendering</span></a></li>
+<li class='toclevel-1'><a href="/wiki/OpenGL_Blendmode_(Materials)#Layers"><span class="tocnumber">2</span> <span class="toctext">Layers</span></a></li>
+<li class='toclevel-1'><a href="/wiki/OpenGL_Blendmode_(Materials)#The_Blend_Function"><span class="tocnumber">3</span> <span class="toctext">The Blend Function</span></a></li>
+<li class='toclevel-1'><a href="/wiki/OpenGL_Blendmode_(Materials)#Source_Blend_.28srcBlend.29"><span class="tocnumber">4</span> <span class="toctext">Source Blend (srcBlend)</span></a></li>
+<li class='toclevel-1'><a href="/wiki/OpenGL_Blendmode_(Materials)#Destination_Blend_.28dstBlend.29"><span class="tocnumber">5</span> <span class="toctext">Destination Blend (dstBlend)</span></a></li>
+<li class='toclevel-1'><a href="/wiki/OpenGL_Blendmode_(Materials)#Blend_Aliases"><span class="tocnumber">6</span> <span class="toctext">Blend Aliases</span></a></li>
+<li class='toclevel-1'><a href="/wiki/OpenGL_Blendmode_(Materials)#Computing_a_Result"><span class="tocnumber">7</span> <span class="toctext">Computing a Result</span></a></li>
 </ul>
 </td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
-<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121205043609/http://www.modwiki.net/w/index.php?title=OpenGL_Blendmode_%28Materials%29&amp;action=edit&amp;section=1" title="Edit section: Rendering">edit</a>]</div><a name="Rendering"></a><h2>Rendering</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/w/index.php?title=OpenGL_Blendmode_%28Materials%29&amp;action=edit&amp;section=1" title="Edit section: Rendering">edit</a>]</div><a name="Rendering"></a><h2>Rendering</h2>
 <p>Doom 3 uses the OpenGL API to render graphics to the screen. Each frame is stored in what is called a frame buffer. Each polygon in view is rendered to the frame buffer one at a time, stage by stage, pixel by pixel.
 </p>
-<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121205043609/http://www.modwiki.net/w/index.php?title=OpenGL_Blendmode_%28Materials%29&amp;action=edit&amp;section=2" title="Edit section: Layers">edit</a>]</div><a name="Layers"></a><h2>Layers</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/w/index.php?title=OpenGL_Blendmode_%28Materials%29&amp;action=edit&amp;section=2" title="Edit section: Layers">edit</a>]</div><a name="Layers"></a><h2>Layers</h2>
 <p>OpenGL blend modes explain to the renderer how two graphic layers, a source and destination layer, are to be mixed together.
 </p><p>The source layer is usually the RGB color data in a texture image file. This texture is gathered from the material shader applied to the current polygon. The actual image used in the source layer is generally defined through use of the map keyword.
 </p><p>The destination layer is the color data currently existing in the frame buffer.
 </p>
-<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121205043609/http://www.modwiki.net/w/index.php?title=OpenGL_Blendmode_%28Materials%29&amp;action=edit&amp;section=3" title="Edit section: The Blend Function">edit</a>]</div><a name="The_Blend_Function"></a><h2>The Blend Function</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/w/index.php?title=OpenGL_Blendmode_%28Materials%29&amp;action=edit&amp;section=3" title="Edit section: The Blend Function">edit</a>]</div><a name="The_Blend_Function"></a><h2>The Blend Function</h2>
 <p>Each layer is essentially broken down into pixels and each pixel in the source layer is combined with the corresponding pixel in the destination layer using a mathmatical formula. This formula is the blend function.
 </p><p>The formula reads as follows:
 </p>
@@ -73,7 +73,7 @@
 </p>
 <pre>blend [srcBlend], [dstBlend]
 </pre>
-<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121205043609/http://www.modwiki.net/w/index.php?title=OpenGL_Blendmode_%28Materials%29&amp;action=edit&amp;section=4" title="Edit section: Source Blend (srcBlend)">edit</a>]</div><a name="Source_Blend_.28srcBlend.29"></a><h2>Source Blend (srcBlend)</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/w/index.php?title=OpenGL_Blendmode_%28Materials%29&amp;action=edit&amp;section=4" title="Edit section: Source Blend (srcBlend)">edit</a>]</div><a name="Source_Blend_.28srcBlend.29"></a><h2>Source Blend (srcBlend)</h2>
 <p>The following values are valid for the source blend part of the equation.
 </p>
 <table style="width: 800px; text-align: center" border="1">
@@ -99,7 +99,7 @@
 <tr>
 <td> gl_one_minus_src_alpha </td><td> 1 - source alpha </td><td> This is the same as GL_SRC_ALPHA except that the value in the alpha channel is inverted by subtracting it from one. (i.e. A=1.0 - SRC.A)
 </td></tr></table>
-<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121205043609/http://www.modwiki.net/w/index.php?title=OpenGL_Blendmode_%28Materials%29&amp;action=edit&amp;section=5" title="Edit section: Destination Blend (dstBlend)">edit</a>]</div><a name="Destination_Blend_.28dstBlend.29"></a><h2>Destination Blend (dstBlend)</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/w/index.php?title=OpenGL_Blendmode_%28Materials%29&amp;action=edit&amp;section=5" title="Edit section: Destination Blend (dstBlend)">edit</a>]</div><a name="Destination_Blend_.28dstBlend.29"></a><h2>Destination Blend (dstBlend)</h2>
 <p>The following values are valid for the destination blend part of the equation.
 </p>
 <table style="width: 800px; text-align: center" border="1">
@@ -125,7 +125,7 @@
 <tr>
 <td> gl_one_minus_src_alpha </td><td> 1 - source alpha </td><td> This is the same as GL_SRC_ALPHA except that the value in the alpha channel is inverted by subtracting it from one. (i.e. A=1.0 - SRC.A).
 </td></tr></table>
-<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121205043609/http://www.modwiki.net/w/index.php?title=OpenGL_Blendmode_%28Materials%29&amp;action=edit&amp;section=6" title="Edit section: Blend Aliases">edit</a>]</div><a name="Blend_Aliases"></a><h2>Blend Aliases</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/w/index.php?title=OpenGL_Blendmode_%28Materials%29&amp;action=edit&amp;section=6" title="Edit section: Blend Aliases">edit</a>]</div><a name="Blend_Aliases"></a><h2>Blend Aliases</h2>
 <p>The following parameters for the keyword blend are aliases for a specific set of source and destination values...
 </p>
 <table style="width: 800px; text-align: center" border="1">
@@ -148,7 +148,7 @@
 <tr>
 <td> none </td><td> gl_zero </td><td> gl_one
 </td></tr></table>
-<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20121205043609/http://www.modwiki.net/w/index.php?title=OpenGL_Blendmode_%28Materials%29&amp;action=edit&amp;section=7" title="Edit section: Computing a Result">edit</a>]</div><a name="Computing_a_Result"></a><h2>Computing a Result</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/w/index.php?title=OpenGL_Blendmode_%28Materials%29&amp;action=edit&amp;section=7" title="Edit section: Computing a Result">edit</a>]</div><a name="Computing_a_Result"></a><h2>Computing a Result</h2>
 <p>Rather than think of the entire texture as a whole and how the blend function computes a result, it maybe easier to think of the red, green, blue, and alpha values that correspond to a single pixel in the source and destination layers, because that is essentially what the computer is processing... one pixel of each layer at a time.
 </p><p>So, let's say the blend mode is add. That's ...
 </p>
@@ -179,8 +179,8 @@
 </p>
 <!-- Saved in parser cache with key modwiki:pcache:idhash:1189-0!1!0!0!!en!2 and timestamp 20121204173539 -->
 <div class="printfooter">
-Retrieved from "<a href="/web/20121205043609/http://www.modwiki.net/wiki/OpenGL_Blendmode_%28Materials%29">http://www.modwiki.net/wiki/OpenGL_Blendmode_%28Materials%29</a>"</div>
-			<div id="catlinks"><p class='catlinks'><a href="/web/20121205043609/http://www.modwiki.net/w/index.php?title=Special:Categories&amp;article=OpenGL_Blendmode_%28Materials%29" title="Special:Categories">Category</a>: <span dir='ltr'><a href="/web/20121205043609/http://www.modwiki.net/wiki/Category:Texturing" title="Category:Texturing">Texturing</a></span><br /><hr /><a href="/web/20121205043609/http://www.modwiki.net/wiki/Category:Modwiki" title="Category:Modwiki">Modwiki</a> &gt; <a href="/web/20121205043609/http://www.modwiki.net/wiki/Category:Texturing" title="Category:Texturing">Texturing</a></p></div>			<!-- end content -->
+Retrieved from "<a href="/wiki/OpenGL_Blendmode_%28Materials%29">http://www.modwiki.net/wiki/OpenGL_Blendmode_%28Materials%29</a>"</div>
+			<div id="catlinks"><p class='catlinks'><a href="/w/index.php?title=Special:Categories&amp;article=OpenGL_Blendmode_%28Materials%29" title="Special:Categories">Category</a>: <span dir='ltr'><a href="/wiki/Category:Texturing" title="Category:Texturing">Texturing</a></span><br /><hr /><a href="/wiki/Category:Modwiki" title="Category:Modwiki">Modwiki</a> &gt; <a href="/wiki/Category:Texturing" title="Category:Texturing">Texturing</a></p></div>			<!-- end content -->
 			<div class="visualClear"></div>
 		</div>
 	</div>
@@ -189,29 +189,29 @@ Retrieved from "<a href="/web/20121205043609/http://www.modwiki.net/wiki/OpenGL_
 	<div id="p-cactions" class="portlet">
 		<h5>Views</h5>
 		<ul>
-				 <li id="ca-nstab-main" class="selected"><a href="/web/20121205043609/http://www.modwiki.net/wiki/OpenGL_Blendmode_%28Materials%29">Article</a></li>
-				 <li id="ca-talk"><a href="/web/20121205043609/http://www.modwiki.net/wiki/Talk:OpenGL_Blendmode_%28Materials%29">Discussion</a></li>
-				 <li id="ca-edit"><a href="/web/20121205043609/http://www.modwiki.net/w/index.php?title=OpenGL_Blendmode_%28Materials%29&amp;action=edit">Edit</a></li>
-				 <li id="ca-history"><a href="/web/20121205043609/http://www.modwiki.net/w/index.php?title=OpenGL_Blendmode_%28Materials%29&amp;action=history">History</a></li>
+				 <li id="ca-nstab-main" class="selected"><a href="/wiki/OpenGL_Blendmode_%28Materials%29">Article</a></li>
+				 <li id="ca-talk"><a href="/wiki/Talk:OpenGL_Blendmode_%28Materials%29">Discussion</a></li>
+				 <li id="ca-edit"><a href="/w/index.php?title=OpenGL_Blendmode_%28Materials%29&amp;action=edit">Edit</a></li>
+				 <li id="ca-history"><a href="/w/index.php?title=OpenGL_Blendmode_%28Materials%29&amp;action=history">History</a></li>
 		</ul>
 	</div>
 	<div class="portlet" id="p-personal">
 		<h5>Personal tools</h5>
 		<div class="pBody">
 			<ul>
-				<li id="pt-login"><a href="/web/20121205043609/http://www.modwiki.net/w/index.php?title=Special:Userlogin&amp;returnto=OpenGL_Blendmode_(Materials)">Log in / create account</a></li>
+				<li id="pt-login"><a href="/w/index.php?title=Special:Userlogin&amp;returnto=OpenGL_Blendmode_(Materials)">Log in / create account</a></li>
 			</ul>
 		</div>
 	</div>
 	<div class="portlet" id="p-logo">
-		<a style="background-image: url(/web/20121205043609im_/http://www.modwiki.net/wiki/upload/wiki.png);" href="/web/20121205043609/http://www.modwiki.net/wiki/Main_Page" title="Main Page"></a>
+		<a style="background-image: url(/web/20121205043609im_/http://www.modwiki.net/wiki/upload/wiki.png);" href="/wiki/Main_Page" title="Main Page"></a>
 	</div>
 	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
 		<div class='portlet' id='p-Main'>
 		<h5>Main</h5>
 		<div class='pBody'>
 			<ul>
-				<li id="n-mainpage"><a href="/web/20121205043609/http://www.modwiki.net/wiki/Main_Page">Main Page</a></li>
+				<li id="n-mainpage"><a href="/wiki/Main_Page">Main Page</a></li>
 			</ul>
 		</div>
 	</div>
@@ -219,11 +219,11 @@ Retrieved from "<a href="/web/20121205043609/http://www.modwiki.net/wiki/OpenGL_
 		<h5>id Tech 4</h5>
 		<div class='pBody'>
 			<ul>
-				<li id="n-Doom-3"><a href="/web/20121205043609/http://www.modwiki.net/wiki/Doom_3">Doom 3</a></li>
-				<li id="n-Quake-4"><a href="/web/20121205043609/http://www.modwiki.net/wiki/Quake_4">Quake 4</a></li>
-				<li id="n-Prey"><a href="/web/20121205043609/http://www.modwiki.net/wiki/Prey">Prey</a></li>
-				<li id="n-ETQW"><a href="/web/20121205043609/http://www.modwiki.net/wiki/Enemy_Territory:_Quake_Wars">ETQW</a></li>
-				<li id="n-Wolfenstein"><a href="/web/20121205043609/http://www.modwiki.net/wiki/Wolfenstein">Wolfenstein</a></li>
+				<li id="n-Doom-3"><a href="/wiki/Doom_3">Doom 3</a></li>
+				<li id="n-Quake-4"><a href="/wiki/Quake_4">Quake 4</a></li>
+				<li id="n-Prey"><a href="/wiki/Prey">Prey</a></li>
+				<li id="n-ETQW"><a href="/wiki/Enemy_Territory:_Quake_Wars">ETQW</a></li>
+				<li id="n-Wolfenstein"><a href="/wiki/Wolfenstein">Wolfenstein</a></li>
 			</ul>
 		</div>
 	</div>
@@ -231,8 +231,8 @@ Retrieved from "<a href="/web/20121205043609/http://www.modwiki.net/wiki/OpenGL_
 		<h5>id Tech 5</h5>
 		<div class='pBody'>
 			<ul>
-				<li id="n-Rage"><a href="/web/20121205043609/http://www.modwiki.net/wiki/Rage">Rage</a></li>
-				<li id="n-Doom-4"><a href="/web/20121205043609/http://www.modwiki.net/wiki/Doom_4">Doom 4</a></li>
+				<li id="n-Rage"><a href="/wiki/Rage">Rage</a></li>
+				<li id="n-Doom-4"><a href="/wiki/Doom_4">Doom 4</a></li>
 			</ul>
 		</div>
 	</div>
@@ -240,11 +240,11 @@ Retrieved from "<a href="/web/20121205043609/http://www.modwiki.net/wiki/OpenGL_
 		<h5>Quick Links</h5>
 		<div class='pBody'>
 			<ul>
-				<li id="n-Console"><a href="/web/20121205043609/http://www.modwiki.net/wiki/Console">Console</a></li>
-				<li id="n-Script-Events"><a href="/web/20121205043609/http://www.modwiki.net/wiki/Scripting">Script Events</a></li>
-				<li id="n-Material-Keywords"><a href="/web/20121205043609/http://www.modwiki.net/wiki/Material_%28decl%29">Material Keywords</a></li>
-				<li id="n-Modification-List"><a href="/web/20121205043609/http://www.modwiki.net/wiki/Modlist">Modification List</a></li>
-				<li id="n-Tutorial-List"><a href="/web/20121205043609/http://www.modwiki.net/wiki/Tutorial_list">Tutorial List</a></li>
+				<li id="n-Console"><a href="/wiki/Console">Console</a></li>
+				<li id="n-Script-Events"><a href="/wiki/Scripting">Script Events</a></li>
+				<li id="n-Material-Keywords"><a href="/wiki/Material_%28decl%29">Material Keywords</a></li>
+				<li id="n-Modification-List"><a href="/wiki/Modlist">Modification List</a></li>
+				<li id="n-Tutorial-List"><a href="/wiki/Tutorial_list">Tutorial List</a></li>
 			</ul>
 		</div>
 	</div>
@@ -252,17 +252,17 @@ Retrieved from "<a href="/web/20121205043609/http://www.modwiki.net/wiki/OpenGL_
 		<h5>Wiki</h5>
 		<div class='pBody'>
 			<ul>
-				<li id="n-Open-tasks"><a href="/web/20121205043609/http://www.modwiki.net/wiki/modwiki:Open_tasks">Open tasks</a></li>
-				<li id="n-recentchanges"><a href="/web/20121205043609/http://www.modwiki.net/wiki/Special:Recentchanges">Recent changes</a></li>
-				<li id="n-Style-guide"><a href="/web/20121205043609/http://www.modwiki.net/wiki/modwiki:Style_guide">Style guide</a></li>
-				<li id="n-help"><a href="/web/20121205043609/http://www.modwiki.net/wiki/Help:Contents">Help</a></li>
+				<li id="n-Open-tasks"><a href="/wiki/modwiki:Open_tasks">Open tasks</a></li>
+				<li id="n-recentchanges"><a href="/wiki/Special:Recentchanges">Recent changes</a></li>
+				<li id="n-Style-guide"><a href="/wiki/modwiki:Style_guide">Style guide</a></li>
+				<li id="n-help"><a href="/wiki/Help:Contents">Help</a></li>
 			</ul>
 		</div>
 	</div>
 		<div id="p-search" class="portlet">
 		<h5><label for="searchInput">Search</label></h5>
 		<div id="searchBody" class="pBody">
-			<form action="/web/20121205043609/http://www.modwiki.net/wiki/Special:Search" id="searchform"><div>
+			<form action="/wiki/Special:Search" id="searchform"><div>
 				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
 				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" />&nbsp;
 				<input type='submit' name="fulltext" class="searchButton" value="Search" />
@@ -273,24 +273,24 @@ Retrieved from "<a href="/web/20121205043609/http://www.modwiki.net/wiki/OpenGL_
 		<h5>Toolbox</h5>
 		<div class="pBody">
 			<ul>
-				<li id="t-whatlinkshere"><a href="/web/20121205043609/http://www.modwiki.net/wiki/Special:Whatlinkshere/OpenGL_Blendmode_%28Materials%29">What links here</a></li>
-				<li id="t-recentchangeslinked"><a href="/web/20121205043609/http://www.modwiki.net/wiki/Special:Recentchangeslinked/OpenGL_Blendmode_%28Materials%29">Related changes</a></li>
-<li id="t-upload"><a href="/web/20121205043609/http://www.modwiki.net/wiki/Special:Upload">Upload file</a></li>
-<li id="t-specialpages"><a href="/web/20121205043609/http://www.modwiki.net/wiki/Special:Specialpages">Special pages</a></li>
-				<li id="t-print"><a href="/web/20121205043609/http://www.modwiki.net/w/index.php?title=OpenGL_Blendmode_%28Materials%29&amp;printable=yes">Printable version</a></li>				<li id="t-permalink"><a href="/web/20121205043609/http://www.modwiki.net/w/index.php?title=OpenGL_Blendmode_%28Materials%29&amp;oldid=6442">Permanent link</a></li>			</ul>
+				<li id="t-whatlinkshere"><a href="/wiki/Special:Whatlinkshere/OpenGL_Blendmode_%28Materials%29">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/wiki/Special:Recentchangeslinked/OpenGL_Blendmode_%28Materials%29">Related changes</a></li>
+<li id="t-upload"><a href="/wiki/Special:Upload">Upload file</a></li>
+<li id="t-specialpages"><a href="/wiki/Special:Specialpages">Special pages</a></li>
+				<li id="t-print"><a href="/w/index.php?title=OpenGL_Blendmode_%28Materials%29&amp;printable=yes">Printable version</a></li>				<li id="t-permalink"><a href="/w/index.php?title=OpenGL_Blendmode_%28Materials%29&amp;oldid=6442">Permanent link</a></li>			</ul>
 		</div>
 	</div>
 		</div><!-- end of the left (by default at least) column -->
 			<div class="visualClear"></div>
 			<div id="footer">
-				<div id="f-poweredbyico"><a href="/web/20121205043609/http://www.mediawiki.org/"><img src="/web/20121205043609im_/http://www.modwiki.net/w/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>
-				<div id="f-copyrightico"><a href="/web/20121205043609/http://www.gnu.org/copyleft/fdl.html"><img src="/web/20121205043609im_/http://www.modwiki.net/w/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+				<div id="f-poweredbyico"><a href="/web/20121205043609/http://www.mediawiki.org/"><img src="/w/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="/web/20121205043609/http://www.gnu.org/copyleft/fdl.html"><img src="/w/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
 			<ul id="f-list">
 				<li id="lastmod"> This page was last modified 20:43, 22 May 2006.</li>
 				<li id="copyright">Content is available under <a href="/web/20121205043609/http://www.gnu.org/copyleft/fdl.html" class='external ' title="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.2</a>.</li>
-				<li id="privacy"><a href="/web/20121205043609/http://www.modwiki.net/wiki/modwiki:Privacy_policy" title="modwiki:Privacy policy">Privacy policy</a></li>
-				<li id="about"><a href="/web/20121205043609/http://www.modwiki.net/wiki/modwiki:About" title="modwiki:About">About modwiki</a></li>
-				<li id="disclaimer"><a href="/web/20121205043609/http://www.modwiki.net/wiki/modwiki:General_disclaimer" title="modwiki:General disclaimer">Disclaimers</a></li>
+				<li id="privacy"><a href="/wiki/modwiki:Privacy_policy" title="modwiki:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="/wiki/modwiki:About" title="modwiki:About">About modwiki</a></li>
+				<li id="disclaimer"><a href="/wiki/modwiki:General_disclaimer" title="modwiki:General disclaimer">Disclaimers</a></li>
 			</ul>
 		</div>
 	<script type="text/javascript"> if (window.runOnloadHook) runOnloadHook();</script>

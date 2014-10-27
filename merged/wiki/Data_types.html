@@ -10,12 +10,12 @@
 
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="keywords" content="Data types,$null entity (scripting),Entity,Script object,Scripting basics" />
-<link rel="shortcut icon" href="/web/20120418101203im_/http://www.modwiki.net/favicon.ico" />
+<link rel="shortcut icon" href="/favicon.ico" />
 <link title="Creative Commons" type="application/rdf+xml" href="/w/index.php?title=Data_types&amp;action=creativecommons" rel="meta" />
 <link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
 		<title>Data types - modwiki</title>
-		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20120418101203cs_/http://www.modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
-		<link rel="stylesheet" type="text/css" media="print" href="/web/20120418101203cs_/http://www.modwiki.net/w/skins/common/commonPrint.css" />
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/w/skins/common/commonPrint.css" />
 		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
 		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
 		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
@@ -23,12 +23,12 @@
 		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
 		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
 		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
-		<script type="text/javascript" src="/web/20120418101203js_/http://www.modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
-		<script type="text/javascript" src="/web/20120418101203js_/http://www.modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<script type="text/javascript" src="/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
 		<style type="text/css">/*<![CDATA[*/
-@import "/web/20120418101203cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
-@import "/web/20120418101203cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
-@import "/web/20120418101203cs_/http://www.modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+@import "/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/w/index.php?title=-&action=raw&gen=css&maxage=18000";
 /*]]>*/</style>
 		<!-- Head Scripts -->
 			</head>
@@ -42,40 +42,40 @@
 		<div id="bodyContent">
 			<h3 id="siteSub">From modwiki</h3>
 			<div id="contentSub"></div>
-									<div id="jump-to-nav">Jump to: <a href="/web/20120418101203/http://www.modwiki.net/wiki/Data_types#column-one">navigation</a>, <a href="/web/20120418101203/http://www.modwiki.net/wiki/Data_types#searchInput">search</a></div>			<!-- start content -->
+									<div id="jump-to-nav">Jump to: <a href="/wiki/Data_types#column-one">navigation</a>, <a href="/wiki/Data_types#searchInput">search</a></div>			<!-- start content -->
 			<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
 <ul>
-<li class='toclevel-1'><a href="/web/20120418101203/http://www.modwiki.net/wiki/Data_types#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
-<li class='toclevel-1'><a href="/web/20120418101203/http://www.modwiki.net/wiki/Data_types#Common_types"><span class="tocnumber">2</span> <span class="toctext">Common types</span></a>
+<li class='toclevel-1'><a href="/wiki/Data_types#Overview"><span class="tocnumber">1</span> <span class="toctext">Overview</span></a></li>
+<li class='toclevel-1'><a href="/wiki/Data_types#Common_types"><span class="tocnumber">2</span> <span class="toctext">Common types</span></a>
 <ul>
-<li class='toclevel-2'><a href="/web/20120418101203/http://www.modwiki.net/wiki/Data_types#float"><span class="tocnumber">2.1</span> <span class="toctext">float</span></a></li>
-<li class='toclevel-2'><a href="/web/20120418101203/http://www.modwiki.net/wiki/Data_types#vector"><span class="tocnumber">2.2</span> <span class="toctext">vector</span></a></li>
-<li class='toclevel-2'><a href="/web/20120418101203/http://www.modwiki.net/wiki/Data_types#entity"><span class="tocnumber">2.3</span> <span class="toctext">entity</span></a></li>
-<li class='toclevel-2'><a href="/web/20120418101203/http://www.modwiki.net/wiki/Data_types#string"><span class="tocnumber">2.4</span> <span class="toctext">string</span></a></li>
-<li class='toclevel-2'><a href="/web/20120418101203/http://www.modwiki.net/wiki/Data_types#boolean"><span class="tocnumber">2.5</span> <span class="toctext">boolean</span></a></li>
-<li class='toclevel-2'><a href="/web/20120418101203/http://www.modwiki.net/wiki/Data_types#void"><span class="tocnumber">2.6</span> <span class="toctext">void</span></a></li>
+<li class='toclevel-2'><a href="/wiki/Data_types#float"><span class="tocnumber">2.1</span> <span class="toctext">float</span></a></li>
+<li class='toclevel-2'><a href="/wiki/Data_types#vector"><span class="tocnumber">2.2</span> <span class="toctext">vector</span></a></li>
+<li class='toclevel-2'><a href="/wiki/Data_types#entity"><span class="tocnumber">2.3</span> <span class="toctext">entity</span></a></li>
+<li class='toclevel-2'><a href="/wiki/Data_types#string"><span class="tocnumber">2.4</span> <span class="toctext">string</span></a></li>
+<li class='toclevel-2'><a href="/wiki/Data_types#boolean"><span class="tocnumber">2.5</span> <span class="toctext">boolean</span></a></li>
+<li class='toclevel-2'><a href="/wiki/Data_types#void"><span class="tocnumber">2.6</span> <span class="toctext">void</span></a></li>
 </ul>
 </li>
-<li class='toclevel-1'><a href="/web/20120418101203/http://www.modwiki.net/wiki/Data_types#Special_types"><span class="tocnumber">3</span> <span class="toctext">Special types</span></a>
+<li class='toclevel-1'><a href="/wiki/Data_types#Special_types"><span class="tocnumber">3</span> <span class="toctext">Special types</span></a>
 <ul>
-<li class='toclevel-2'><a href="/web/20120418101203/http://www.modwiki.net/wiki/Data_types#object"><span class="tocnumber">3.1</span> <span class="toctext">object</span></a></li>
-<li class='toclevel-2'><a href="/web/20120418101203/http://www.modwiki.net/wiki/Data_types#.5Bobject_type.5D"><span class="tocnumber">3.2</span> <span class="toctext">[object type]</span></a></li>
+<li class='toclevel-2'><a href="/wiki/Data_types#object"><span class="tocnumber">3.1</span> <span class="toctext">object</span></a></li>
+<li class='toclevel-2'><a href="/wiki/Data_types#.5Bobject_type.5D"><span class="tocnumber">3.2</span> <span class="toctext">[object type]</span></a></li>
 </ul>
 </li>
 </ul>
 </td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
-<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20120418101203/http://www.modwiki.net/w/index.php?title=Data_types&amp;action=edit&amp;section=1" title="Edit section: Overview">edit</a>]</div><a name="Overview"></a><h2>Overview</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/w/index.php?title=Data_types&amp;action=edit&amp;section=1" title="Edit section: Overview">edit</a>]</div><a name="Overview"></a><h2>Overview</h2>
 <p>A data type specifies what type of data a variable can hold and must always be present at a variable's declaration.
 </p><p>The script parser uses this to speed up certain operations or complain about impossible operations.
-</p><p>For an introduction on declaring and using variables, see <a href="/web/20120418101203/http://www.modwiki.net/wiki/Scripting_basics#Variables" title="Scripting basics">Variables</a>.
+</p><p>For an introduction on declaring and using variables, see <a href="/wiki/Scripting_basics#Variables" title="Scripting basics">Variables</a>.
 </p>
-<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20120418101203/http://www.modwiki.net/w/index.php?title=Data_types&amp;action=edit&amp;section=2" title="Edit section: Common types">edit</a>]</div><a name="Common_types"></a><h2>Common types</h2>
-<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20120418101203/http://www.modwiki.net/w/index.php?title=Data_types&amp;action=edit&amp;section=3" title="Edit section: float">edit</a>]</div><a name="float"></a><h3>float</h3>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/w/index.php?title=Data_types&amp;action=edit&amp;section=2" title="Edit section: Common types">edit</a>]</div><a name="Common_types"></a><h2>Common types</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/w/index.php?title=Data_types&amp;action=edit&amp;section=3" title="Edit section: float">edit</a>]</div><a name="float"></a><h3>float</h3>
 <p>A float type variable can contain any number whether it's an <a href="/web/20120418101203/http://en.wikipedia.org/wiki/Integer" class='external text' title="http://en.wikipedia.org/wiki/Integer">integer</a> or a <a href="/web/20120418101203/http://en.wikipedia.org/wiki/Real_number" class='external text' title="http://en.wikipedia.org/wiki/Real_number">real number</a>.
 </p>
 <pre><span style="color: #0000ff;">float</span> my_var = <span style="color: #0000dd;">23</span>;
 <span style="color: #0000ff;">float</span> my_second_var = <span style="color: #0000dd;">0</span>.<span style="color: #0000dd;">5</span>;</pre>
-<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20120418101203/http://www.modwiki.net/w/index.php?title=Data_types&amp;action=edit&amp;section=4" title="Edit section: vector">edit</a>]</div><a name="vector"></a><h3>vector</h3>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/w/index.php?title=Data_types&amp;action=edit&amp;section=4" title="Edit section: vector">edit</a>]</div><a name="vector"></a><h3>vector</h3>
 <p>A vector type contains three float values, representing a vector. The engine uses this type to store map locations (vector from world origin to position), directions or angles.
 </p><p>When used in a normal assignment, the floats are in the order of 'X Y Z' indicating 3D space coordinates. To access one vector's axis component, append _x, _y, or _z to the variable's name. It should also be possible to use a vector's projection on 1 axis by using the same syntax.
 </p>
@@ -89,34 +89,34 @@ tempvector_x = <span style="color: #0000dd;">10</span>;
 &nbsp;</pre>
 <p><b>Note</b>: Vectors do not automatically convert to strings, and can't be set to equal floats. In these cases, the separate axis components need to be used. <a href="/web/20120418101203/http://www.iddevnet.com/quake4/ScriptVariable#vector" class='external autonumber' title="http://www.iddevnet.com/quake4/ScriptVariable#vector">[1]</a>
 </p>
-<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20120418101203/http://www.modwiki.net/w/index.php?title=Data_types&amp;action=edit&amp;section=5" title="Edit section: entity">edit</a>]</div><a name="entity"></a><h3>entity</h3>
-<p>An <a href="/web/20120418101203/http://www.modwiki.net/wiki/Entity" title="Entity">entity</a> reference. Everything in the world is an entity, so this type is used extensively. (See the info on <a href="/web/20120418101203/http://www.modwiki.net/wiki/Scripting_basics#Entities" title="Scripting basics">entities</a> in scripting basics)
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/w/index.php?title=Data_types&amp;action=edit&amp;section=5" title="Edit section: entity">edit</a>]</div><a name="entity"></a><h3>entity</h3>
+<p>An <a href="/wiki/Entity" title="Entity">entity</a> reference. Everything in the world is an entity, so this type is used extensively. (See the info on <a href="/wiki/Scripting_basics#Entities" title="Scripting basics">entities</a> in scripting basics)
 </p>
 <pre><span style="color: #0000ff;">entity</span> funcmover;
 funcmover = <span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">getEntity</span><span style="color: #000000;">&#40;</span><span style="color: #666666;">"func_mover_1"</span><span style="color: #000000;">&#41;</span>;</pre>
-<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20120418101203/http://www.modwiki.net/w/index.php?title=Data_types&amp;action=edit&amp;section=6" title="Edit section: string">edit</a>]</div><a name="string"></a><h3>string</h3>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/w/index.php?title=Data_types&amp;action=edit&amp;section=6" title="Edit section: string">edit</a>]</div><a name="string"></a><h3>string</h3>
 <p>A string type contains nothing more then text.
 </p>
 <pre><span style="color: #0000ff;">string</span> blabla = <span style="color: #666666;">"Put text here"</span>;</pre>
 <p><b>Note:</b> A string variable can be no longer than 256 characters.
 </p>
-<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20120418101203/http://www.modwiki.net/w/index.php?title=Data_types&amp;action=edit&amp;section=7" title="Edit section: boolean">edit</a>]</div><a name="boolean"></a><h3>boolean</h3>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/w/index.php?title=Data_types&amp;action=edit&amp;section=7" title="Edit section: boolean">edit</a>]</div><a name="boolean"></a><h3>boolean</h3>
 <p>A boolean type contains a state, true or false. It can't be initialized at declaration, but the un-initialized variable will return zero and be interpreted as false.
 </p>
 <pre><span style="color: #0000ff;">boolean</span> flag;
 flag = <span style="color: #0000dd;">1</span>;
 flag = <span style="color: #0000dd;">0</span>;</pre>
-<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20120418101203/http://www.modwiki.net/w/index.php?title=Data_types&amp;action=edit&amp;section=8" title="Edit section: void">edit</a>]</div><a name="void"></a><h3>void</h3>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/w/index.php?title=Data_types&amp;action=edit&amp;section=8" title="Edit section: void">edit</a>]</div><a name="void"></a><h3>void</h3>
 <p>Void basically means <i>nothing</i>.
 </p><p><b>Only to be used with functions!</b>
 </p>
-<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20120418101203/http://www.modwiki.net/w/index.php?title=Data_types&amp;action=edit&amp;section=9" title="Edit section: Special types">edit</a>]</div><a name="Special_types"></a><h2>Special types</h2>
-<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20120418101203/http://www.modwiki.net/w/index.php?title=Data_types&amp;action=edit&amp;section=10" title="Edit section: object">edit</a>]</div><a name="object"></a><h3>object</h3>
-<p>Named base type of <a href="/web/20120418101203/http://www.modwiki.net/wiki/Script_object" title="Script object">script object</a>.
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/w/index.php?title=Data_types&amp;action=edit&amp;section=9" title="Edit section: Special types">edit</a>]</div><a name="Special_types"></a><h2>Special types</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/w/index.php?title=Data_types&amp;action=edit&amp;section=10" title="Edit section: object">edit</a>]</div><a name="object"></a><h3>object</h3>
+<p>Named base type of <a href="/wiki/Script_object" title="Script object">script object</a>.
 Used for more advanced scripting techniques.
 </p>
-<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20120418101203/http://www.modwiki.net/w/index.php?title=Data_types&amp;action=edit&amp;section=11" title="Edit section: [object type]">edit</a>]</div><a name=".5Bobject_type.5D"></a><h3>[object type]</h3>
-<p>Combined entity reference and <a href="/web/20120418101203/http://www.modwiki.net/wiki/Script_object" title="Script object">script object</a> type reference. Will be set to <a href="/web/20120418101203/http://www.modwiki.net/wiki/%24null_entity_%28scripting%29" title="$null entity (scripting)">null</a> if the entity you are trying to set the reference to does not have a object of that type.
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/w/index.php?title=Data_types&amp;action=edit&amp;section=11" title="Edit section: [object type]">edit</a>]</div><a name=".5Bobject_type.5D"></a><h3>[object type]</h3>
+<p>Combined entity reference and <a href="/wiki/Script_object" title="Script object">script object</a> type reference. Will be set to <a href="/wiki/%24null_entity_%28scripting%29" title="$null entity (scripting)">null</a> if the entity you are trying to set the reference to does not have a object of that type.
 </p>
 <pre>monster_base myMonster;
 myMonster = <span style="color: #0000ff;">sys</span>.<span style="color: #ff0000;">getEntity</span><span style="color: #000000;">&#40;</span><span style="color: #666666;">"monster_sam"</span><span style="color: #000000;">&#41;</span>;
@@ -124,8 +124,8 @@ myMonster.<span style="color: #ff0000;">wake_on_trigger</span><span style="color
 
 <!-- Saved in parser cache with key modwiki:pcache:idhash:3341-0!1!0!0!!en!2 and timestamp 20120418101014 -->
 <div class="printfooter">
-Retrieved from "<a href="/web/20120418101203/http://www.modwiki.net/wiki/Data_types">http://www.modwiki.net/wiki/Data_types</a>"</div>
-			<div id="catlinks"><p class='catlinks'><a href="/web/20120418101203/http://www.modwiki.net/w/index.php?title=Special:Categories&amp;article=Data_types" title="Special:Categories">Category</a>: <span dir='ltr'><a href="/web/20120418101203/http://www.modwiki.net/wiki/Category:Scripting" title="Category:Scripting">Scripting</a></span><br /><hr /><a href="/web/20120418101203/http://www.modwiki.net/wiki/Category:Modwiki" title="Category:Modwiki">Modwiki</a> &gt; <a href="/web/20120418101203/http://www.modwiki.net/wiki/Category:Scripting" title="Category:Scripting">Scripting</a></p></div>			<!-- end content -->
+Retrieved from "<a href="/wiki/Data_types">http://www.modwiki.net/wiki/Data_types</a>"</div>
+			<div id="catlinks"><p class='catlinks'><a href="/w/index.php?title=Special:Categories&amp;article=Data_types" title="Special:Categories">Category</a>: <span dir='ltr'><a href="/wiki/Category:Scripting" title="Category:Scripting">Scripting</a></span><br /><hr /><a href="/wiki/Category:Modwiki" title="Category:Modwiki">Modwiki</a> &gt; <a href="/wiki/Category:Scripting" title="Category:Scripting">Scripting</a></p></div>			<!-- end content -->
 			<div class="visualClear"></div>
 		</div>
 	</div>
@@ -134,29 +134,29 @@ Retrieved from "<a href="/web/20120418101203/http://www.modwiki.net/wiki/Data_ty
 	<div id="p-cactions" class="portlet">
 		<h5>Views</h5>
 		<ul>
-				 <li id="ca-nstab-main" class="selected"><a href="/web/20120418101203/http://www.modwiki.net/wiki/Data_types">Article</a></li>
-				 <li id="ca-talk"><a href="/web/20120418101203/http://www.modwiki.net/wiki/Talk:Data_types">Discussion</a></li>
-				 <li id="ca-edit"><a href="/web/20120418101203/http://www.modwiki.net/w/index.php?title=Data_types&amp;action=edit">Edit</a></li>
-				 <li id="ca-history"><a href="/web/20120418101203/http://www.modwiki.net/w/index.php?title=Data_types&amp;action=history">History</a></li>
+				 <li id="ca-nstab-main" class="selected"><a href="/wiki/Data_types">Article</a></li>
+				 <li id="ca-talk"><a href="/wiki/Talk:Data_types">Discussion</a></li>
+				 <li id="ca-edit"><a href="/w/index.php?title=Data_types&amp;action=edit">Edit</a></li>
+				 <li id="ca-history"><a href="/w/index.php?title=Data_types&amp;action=history">History</a></li>
 		</ul>
 	</div>
 	<div class="portlet" id="p-personal">
 		<h5>Personal tools</h5>
 		<div class="pBody">
 			<ul>
-				<li id="pt-login"><a href="/web/20120418101203/http://www.modwiki.net/w/index.php?title=Special:Userlogin&amp;returnto=Data_types">Log in / create account</a></li>
+				<li id="pt-login"><a href="/w/index.php?title=Special:Userlogin&amp;returnto=Data_types">Log in / create account</a></li>
 			</ul>
 		</div>
 	</div>
 	<div class="portlet" id="p-logo">
-		<a style="background-image: url(/web/20120418101203im_/http://www.modwiki.net/wiki/upload/wiki.png);" href="/web/20120418101203/http://www.modwiki.net/wiki/Main_Page" title="Main Page"></a>
+		<a style="background-image: url(/web/20120418101203im_/http://www.modwiki.net/wiki/upload/wiki.png);" href="/wiki/Main_Page" title="Main Page"></a>
 	</div>
 	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
 		<div class='portlet' id='p-Main'>
 		<h5>Main</h5>
 		<div class='pBody'>
 			<ul>
-				<li id="n-mainpage"><a href="/web/20120418101203/http://www.modwiki.net/wiki/Main_Page">Main Page</a></li>
+				<li id="n-mainpage"><a href="/wiki/Main_Page">Main Page</a></li>
 			</ul>
 		</div>
 	</div>
@@ -164,11 +164,11 @@ Retrieved from "<a href="/web/20120418101203/http://www.modwiki.net/wiki/Data_ty
 		<h5>id Tech 4</h5>
 		<div class='pBody'>
 			<ul>
-				<li id="n-Doom-3"><a href="/web/20120418101203/http://www.modwiki.net/wiki/Doom_3">Doom 3</a></li>
-				<li id="n-Quake-4"><a href="/web/20120418101203/http://www.modwiki.net/wiki/Quake_4">Quake 4</a></li>
-				<li id="n-Prey"><a href="/web/20120418101203/http://www.modwiki.net/wiki/Prey">Prey</a></li>
-				<li id="n-ETQW"><a href="/web/20120418101203/http://www.modwiki.net/wiki/Enemy_Territory:_Quake_Wars">ETQW</a></li>
-				<li id="n-Wolfenstein"><a href="/web/20120418101203/http://www.modwiki.net/wiki/Wolfenstein">Wolfenstein</a></li>
+				<li id="n-Doom-3"><a href="/wiki/Doom_3">Doom 3</a></li>
+				<li id="n-Quake-4"><a href="/wiki/Quake_4">Quake 4</a></li>
+				<li id="n-Prey"><a href="/wiki/Prey">Prey</a></li>
+				<li id="n-ETQW"><a href="/wiki/Enemy_Territory:_Quake_Wars">ETQW</a></li>
+				<li id="n-Wolfenstein"><a href="/wiki/Wolfenstein">Wolfenstein</a></li>
 			</ul>
 		</div>
 	</div>
@@ -176,8 +176,8 @@ Retrieved from "<a href="/web/20120418101203/http://www.modwiki.net/wiki/Data_ty
 		<h5>id Tech 5</h5>
 		<div class='pBody'>
 			<ul>
-				<li id="n-Rage"><a href="/web/20120418101203/http://www.modwiki.net/wiki/Rage">Rage</a></li>
-				<li id="n-Doom-4"><a href="/web/20120418101203/http://www.modwiki.net/wiki/Doom_4">Doom 4</a></li>
+				<li id="n-Rage"><a href="/wiki/Rage">Rage</a></li>
+				<li id="n-Doom-4"><a href="/wiki/Doom_4">Doom 4</a></li>
 			</ul>
 		</div>
 	</div>
@@ -185,11 +185,11 @@ Retrieved from "<a href="/web/20120418101203/http://www.modwiki.net/wiki/Data_ty
 		<h5>Quick Links</h5>
 		<div class='pBody'>
 			<ul>
-				<li id="n-Console"><a href="/web/20120418101203/http://www.modwiki.net/wiki/Console">Console</a></li>
-				<li id="n-Script-Events"><a href="/web/20120418101203/http://www.modwiki.net/wiki/Scripting">Script Events</a></li>
-				<li id="n-Material-Keywords"><a href="/web/20120418101203/http://www.modwiki.net/wiki/Material_%28decl%29">Material Keywords</a></li>
-				<li id="n-Modification-List"><a href="/web/20120418101203/http://www.modwiki.net/wiki/Modlist">Modification List</a></li>
-				<li id="n-Tutorial-List"><a href="/web/20120418101203/http://www.modwiki.net/wiki/Tutorial_list">Tutorial List</a></li>
+				<li id="n-Console"><a href="/wiki/Console">Console</a></li>
+				<li id="n-Script-Events"><a href="/wiki/Scripting">Script Events</a></li>
+				<li id="n-Material-Keywords"><a href="/wiki/Material_%28decl%29">Material Keywords</a></li>
+				<li id="n-Modification-List"><a href="/wiki/Modlist">Modification List</a></li>
+				<li id="n-Tutorial-List"><a href="/wiki/Tutorial_list">Tutorial List</a></li>
 			</ul>
 		</div>
 	</div>
@@ -197,17 +197,17 @@ Retrieved from "<a href="/web/20120418101203/http://www.modwiki.net/wiki/Data_ty
 		<h5>Wiki</h5>
 		<div class='pBody'>
 			<ul>
-				<li id="n-Open-tasks"><a href="/web/20120418101203/http://www.modwiki.net/wiki/modwiki:Open_tasks">Open tasks</a></li>
-				<li id="n-recentchanges"><a href="/web/20120418101203/http://www.modwiki.net/wiki/Special:Recentchanges">Recent changes</a></li>
-				<li id="n-Style-guide"><a href="/web/20120418101203/http://www.modwiki.net/wiki/modwiki:Style_guide">Style guide</a></li>
-				<li id="n-help"><a href="/web/20120418101203/http://www.modwiki.net/wiki/Help:Contents">Help</a></li>
+				<li id="n-Open-tasks"><a href="/wiki/modwiki:Open_tasks">Open tasks</a></li>
+				<li id="n-recentchanges"><a href="/wiki/Special:Recentchanges">Recent changes</a></li>
+				<li id="n-Style-guide"><a href="/wiki/modwiki:Style_guide">Style guide</a></li>
+				<li id="n-help"><a href="/wiki/Help:Contents">Help</a></li>
 			</ul>
 		</div>
 	</div>
 		<div id="p-search" class="portlet">
 		<h5><label for="searchInput">Search</label></h5>
 		<div id="searchBody" class="pBody">
-			<form action="/web/20120418101203/http://www.modwiki.net/wiki/Special:Search" id="searchform"><div>
+			<form action="/wiki/Special:Search" id="searchform"><div>
 				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
 				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" />&nbsp;
 				<input type='submit' name="fulltext" class="searchButton" value="Search" />
@@ -218,24 +218,24 @@ Retrieved from "<a href="/web/20120418101203/http://www.modwiki.net/wiki/Data_ty
 		<h5>Toolbox</h5>
 		<div class="pBody">
 			<ul>
-				<li id="t-whatlinkshere"><a href="/web/20120418101203/http://www.modwiki.net/wiki/Special:Whatlinkshere/Data_types">What links here</a></li>
-				<li id="t-recentchangeslinked"><a href="/web/20120418101203/http://www.modwiki.net/wiki/Special:Recentchangeslinked/Data_types">Related changes</a></li>
-<li id="t-upload"><a href="/web/20120418101203/http://www.modwiki.net/wiki/Special:Upload">Upload file</a></li>
-<li id="t-specialpages"><a href="/web/20120418101203/http://www.modwiki.net/wiki/Special:Specialpages">Special pages</a></li>
-				<li id="t-print"><a href="/web/20120418101203/http://www.modwiki.net/w/index.php?title=Data_types&amp;printable=yes">Printable version</a></li>				<li id="t-permalink"><a href="/web/20120418101203/http://www.modwiki.net/w/index.php?title=Data_types&amp;oldid=12939">Permanent link</a></li>			</ul>
+				<li id="t-whatlinkshere"><a href="/wiki/Special:Whatlinkshere/Data_types">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/wiki/Special:Recentchangeslinked/Data_types">Related changes</a></li>
+<li id="t-upload"><a href="/wiki/Special:Upload">Upload file</a></li>
+<li id="t-specialpages"><a href="/wiki/Special:Specialpages">Special pages</a></li>
+				<li id="t-print"><a href="/w/index.php?title=Data_types&amp;printable=yes">Printable version</a></li>				<li id="t-permalink"><a href="/w/index.php?title=Data_types&amp;oldid=12939">Permanent link</a></li>			</ul>
 		</div>
 	</div>
 		</div><!-- end of the left (by default at least) column -->
 			<div class="visualClear"></div>
 			<div id="footer">
-				<div id="f-poweredbyico"><a href="/web/20120418101203/http://www.mediawiki.org/"><img src="/web/20120418101203im_/http://www.modwiki.net/w/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>
-				<div id="f-copyrightico"><a href="/web/20120418101203/http://www.gnu.org/copyleft/fdl.html"><img src="/web/20120418101203im_/http://www.modwiki.net/w/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+				<div id="f-poweredbyico"><a href="/web/20120418101203/http://www.mediawiki.org/"><img src="/w/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="/web/20120418101203/http://www.gnu.org/copyleft/fdl.html"><img src="/w/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
 			<ul id="f-list">
 				<li id="lastmod"> This page was last modified 18:39, 19 August 2008.</li>
 				<li id="copyright">Content is available under <a href="/web/20120418101203/http://www.gnu.org/copyleft/fdl.html" class='external ' title="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.2</a>.</li>
-				<li id="privacy"><a href="/web/20120418101203/http://www.modwiki.net/wiki/modwiki:Privacy_policy" title="modwiki:Privacy policy">Privacy policy</a></li>
-				<li id="about"><a href="/web/20120418101203/http://www.modwiki.net/wiki/modwiki:About" title="modwiki:About">About modwiki</a></li>
-				<li id="disclaimer"><a href="/web/20120418101203/http://www.modwiki.net/wiki/modwiki:General_disclaimer" title="modwiki:General disclaimer">Disclaimers</a></li>
+				<li id="privacy"><a href="/wiki/modwiki:Privacy_policy" title="modwiki:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="/wiki/modwiki:About" title="modwiki:About">About modwiki</a></li>
+				<li id="disclaimer"><a href="/wiki/modwiki:General_disclaimer" title="modwiki:General disclaimer">Disclaimers</a></li>
 			</ul>
 		</div>
 	<script type="text/javascript"> if (window.runOnloadHook) runOnloadHook();</script>
