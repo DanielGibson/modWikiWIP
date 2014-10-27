@@ -1,21 +1,20 @@
-DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
 	<head>
 
-<script type="text/javascript" src="/static/js/analytics.js" ></script>
+
+<script type="text/javascript" src="/static/js/analytics.js"></script>
 <link type="text/css" rel="stylesheet" href="/static/css/banner-styles.css"/>
-
-
 
 
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="keywords" content="Entitydef (decl),Entity,Script object,SpawnArgs,Spawn class,Map entity,Spawn" />
-<link rel="shortcut icon" href="/web/20080908013344im_/http://www.modwiki.net/favicon.ico" />
+<link rel="shortcut icon" href="/web/20100521043446im_/http://www.modwiki.net/favicon.ico" />
 <link title="Creative Commons" type="application/rdf+xml" href="/w/index.php?title=Entitydef_%28decl%29&amp;action=creativecommons" rel="meta" />
 <link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
 		<title>Entitydef (decl) - modwiki</title>
-		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20080908013344cs_/http://www.modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
-		<link rel="stylesheet" type="text/css" media="print" href="/web/20080908013344cs_/http://www.modwiki.net/w/skins/common/commonPrint.css" />
+		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "/web/20100521043446cs_/http://www.modwiki.net/w/skins/monobook/main.css?9"; /*]]>*/</style>
+		<link rel="stylesheet" type="text/css" media="print" href="/web/20100521043446cs_/http://www.modwiki.net/w/skins/common/commonPrint.css" />
 		<!--[if lt IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE50Fixes.css";</style><![endif]-->
 		<!--[if IE 5.5000]><style type="text/css">@import "/w/skins/monobook/IE55Fixes.css";</style><![endif]-->
 		<!--[if IE 6]><style type="text/css">@import "/w/skins/monobook/IE60Fixes.css";</style><![endif]-->
@@ -23,16 +22,211 @@ DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/
 		<!--[if lt IE 7]><script type="text/javascript" src="/w/skins/common/IEFixes.js"></script>
 		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
 		<script type="text/javascript">var skin = 'monobook';var stylepath = '/w/skins';</script>
-		<script type="text/javascript" src="/web/20080908013344js_/http://www.modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
-		<script type="text/javascript" src="/web/20080908013344js_/http://www.modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
+		<script type="text/javascript" src="/web/20100521043446js_/http://www.modwiki.net/w/skins/common/wikibits.js?1"><!-- wikibits js --></script>
+		<script type="text/javascript" src="/web/20100521043446js_/http://www.modwiki.net/w/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>
 		<style type="text/css">/*<![CDATA[*/
-@import "/web/20080908013344cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
-@import "/web/20080908013344cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
-@import "/web/20080908013344cs_/http://www.modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
+@import "/web/20100521043446cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Common.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20100521043446cs_/http://www.modwiki.net/w/index.php?title=MediaWiki:Monobook.css&action=raw&ctype=text/css&smaxage=18000";
+@import "/web/20100521043446cs_/http://www.modwiki.net/w/index.php?title=-&action=raw&gen=css&maxage=18000";
 /*]]>*/</style>
 		<!-- Head Scripts -->
 			</head>
 <body  class="ns-0 ltr">
+
+
+<!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<script> if (window.archive_analytics) { window.archive_analytics.values['server_name']="wwwb-app11.us.archive.org";}; </script>
+
+<script type="text/javascript" src="/static/js/disclaim-element.js" ></script>
+<script type="text/javascript" src="/static/js/graph-calc.js" ></script>
+<script type="text/javascript" src="/static/jflot/jquery.min.js" ></script>
+<script type="text/javascript">
+var __wm = (function(){
+var wbPrefix = "/web/";
+var wbCurrentUrl = "http://www.modwiki.net/wiki/Entitydef_%28decl%29";
+
+var firstYear = 1996;
+var imgWidth = 475,imgHeight = 27;
+var yearImgWidth = 25,monthImgWidth = 2;
+var displayDay = "21";
+var displayMonth = "May";
+var displayYear = "2010";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+var $D=document,$=function(n){return document.getElementById(n)};
+var trackerVal,curYear = -1,curMonth = -1;
+var yearTracker,monthTracker;
+function showTrackers(val) {
+  if (val===trackerVal) return;
+  var $ipp=$("wm-ipp");
+  var $y=$("displayYearEl"),$m=$("displayMonthEl"),$d=$("displayDayEl");
+  if (val) {
+    $ipp.className="hi";
+  } else {
+    $ipp.className="";
+    $y.innerHTML=displayYear;$m.innerHTML=displayMonth;$d.innerHTML=displayDay;
+  }
+  yearTracker.style.display=val?"inline":"none";
+  monthTracker.style.display=val?"inline":"none";
+  trackerVal = val;
+}
+function getElementX2(obj) {
+  var $e=jQuery(obj);
+  return (typeof $e=="undefined"||typeof $e.offset=="undefined")?
+    getElementX(obj):Math.round($e.offset().left);
+}
+function trackMouseMove(event,element) {
+  var eventX = getEventX(event);
+  var elementX = getElementX2(element);
+  var xOff = Math.min(Math.max(0, eventX - elementX),imgWidth);
+  var monthOff = xOff % yearImgWidth;
+
+  var year = Math.floor(xOff / yearImgWidth);
+  var monthOfYear = Math.min(11,Math.floor(monthOff / monthImgWidth));
+  // 1 extra border pixel at the left edge of the year:
+  var month = (year * 12) + monthOfYear;
+  var day = monthOff % 2==1?15:1;
+  var dateString = zeroPad(year + firstYear) + zeroPad(monthOfYear+1,2) +
+    zeroPad(day,2) + "000000";
+
+  $("displayYearEl").innerHTML=year+firstYear;
+  $("displayMonthEl").innerHTML=prettyMonths[monthOfYear];
+  // looks too jarring when it changes..
+  //$("displayDayEl").innerHTML=zeroPad(day,2);
+  var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+  $("wm-graph-anchor").href=url;
+
+  if(curYear != year) {
+    var yrOff = year * yearImgWidth;
+    yearTracker.style.left = yrOff + "px";
+    curYear = year;
+  }
+  if(curMonth != month) {
+    var mtOff = year + (month * monthImgWidth) + 1;
+    monthTracker.style.left = mtOff + "px";
+    curMonth = month;
+  }
+}
+function hideToolbar() {
+  $("wm-ipp").style.display="none";
+}
+function bootstrap() {
+  var $spk=$("wm-ipp-sparkline");
+  yearTracker=$D.createElement('div');
+  yearTracker.className='yt';
+  with(yearTracker.style){
+    display='none';width=yearImgWidth+"px";height=imgHeight+"px";
+  }
+  monthTracker=$D.createElement('div');
+  monthTracker.className='mt';
+  with(monthTracker.style){
+    display='none';width=monthImgWidth+"px";height=imgHeight+"px";
+  }
+  $spk.appendChild(yearTracker);
+  $spk.appendChild(monthTracker);
+
+  var $ipp=$("wm-ipp");
+  $ipp&&disclaimElement($ipp);
+}
+return{st:showTrackers,mv:trackMouseMove,h:hideToolbar,bt:bootstrap};
+})();
+</script>
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  min-width:800px !important;
+}
+</style>
+<div id="wm-ipp" lang="en" style="display:none;">
+
+<div style="position:fixed;left:0;top:0;width:100%!important">
+<div id="wm-ipp-inside">
+   <table style="width:100%;"><tbody><tr>
+   <td id="wm-logo">
+       <a href="/web/" title="Wayback Machine home page"><img src="/static/images/toolbar/wayback-toolbar-logo.png" alt="Wayback Machine" width="110" height="39" border="0"></a>
+   </td>
+   <td class="c">
+       <table style="margin:0 auto;"><tbody><tr>
+       <td class="u" colspan="2">
+       <form target="_top" method="get" action="/web/form-submit.jsp" name="wmtb" id="wmtb"><input type="text" name="url" id="wmtbURL" value="http://www.modwiki.net/wiki/Entitydef_%28decl%29" style="width:400px;" onfocus="this.focus();this.select();"><input type="hidden" name="type" value="replay"><input type="hidden" name="date" value="20100521043446"><input type="submit" value="Go"><span id="wm_tb_options" style="display:block;"></span></form>
+       </td>
+       <td class="n" rowspan="2">
+           <table><tbody>
+           <!-- NEXT/PREV MONTH NAV AND MONTH INDICATOR -->
+           <tr class="m">
+           	<td class="b" nowrap="nowrap">
+		
+		    <a href="/web/20091224102911/http://www.modwiki.net/wiki/Entitydef_%28decl%29" title="24 Dec 2009">DEC</a>
+		
+		</td>
+		<td class="c" id="displayMonthEl" title="You are here: 4:34:46 May 21, 2010">MAY</td>
+		<td class="f" nowrap="nowrap">
+		
+		    Jun
+		
+                </td>
+	    </tr>
+           <!-- NEXT/PREV CAPTURE NAV AND DAY OF MONTH INDICATOR -->
+           <tr class="d">
+               <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20091224102911/http://www.modwiki.net/wiki/Entitydef_%28decl%29" title="10:29:11 Dec 24, 2009"><img src="/static/images/toolbar/wm_tb_prv_on.png" alt="Previous capture" width="14" height="16" border="0" /></a>
+               
+               </td>
+               <td class="c" id="displayDayEl" style="width:34px;font-size:24px;" title="You are here: 4:34:46 May 21, 2010">21</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   <img src="/static/images/toolbar/wm_tb_nxt_off.png" alt="Next capture" width="14" height="16" border="0"/>
+               
+	       </td>
+           </tr>
+           <!-- NEXT/PREV YEAR NAV AND YEAR INDICATOR -->
+           <tr class="y">
+	       <td class="b" nowrap="nowrap">
+               
+                   <a href="/web/20080908013344/http://www.modwiki.net/wiki/Entitydef_%28decl%29" title="8 Sep 2008"><strong>2008</strong></a>
+               
+               </td>
+               <td class="c" id="displayYearEl" title="You are here: 4:34:46 May 21, 2010">2010</td>
+	       <td class="f" nowrap="nowrap">
+               
+                   2011
+               
+	       </td>
+           </tr>
+           </tbody></table>
+       </td>
+       </tr>
+       <tr>
+       <td class="s">
+           <a class="t" href="/web/20100521043446*/http://www.modwiki.net/wiki/Entitydef_%28decl%29" title="See a list of every capture for this URL">7 captures</a>
+           <div class="r" title="Timespan for captures of this URL">17 Mar 07 - 21 May 10</div>
+       </td>
+       <td class="k">
+       <a href="" id="wm-graph-anchor">
+       <div id="wm-ipp-sparkline" title="Explore captures for this URL">
+	 <img id="sparklineImgId" alt="sparklines"
+		 onmouseover="__wm.st(1)" onmouseout="__wm.st(0)"
+		 onmousemove="__wm.mv(event,this)"
+		 width="475"
+		 height="27"
+		 border="0"
+		 src="/web/jsp/graph.jsp?graphdata=475_27_1996:-1:000000000000_1997:-1:000000000000_1998:-1:000000000000_1999:-1:000000000000_2000:-1:000000000000_2001:-1:000000000000_2002:-1:000000000000_2003:-1:000000000000_2004:-1:000000000000_2005:-1:000000000000_2006:-1:000000000000_2007:-1:001000100100_2008:-1:000000001000_2009:-1:000000001001_2010:4:000010000000_2011:-1:000000000000_2012:-1:000000000000_2013:-1:000000000000_2014:-1:000000000000">
+       </div>
+       </a>
+       </td>
+       </tr></tbody></table>
+   </td>
+   <td class="r">
+       <a href="#close" onclick="__wm.h();return false;" style="background-image:url(/static/images/toolbar/wm_tb_close.png);top:5px;" title="Close the toolbar">Close</a>
+       <a href="http://faq.web.archive.org/" style="background-image:url(/static/images/toolbar/wm_tb_help.png);bottom:5px;" title="Get some help using the Wayback Machine">Help</a>
+   </td>
+   </tr></tbody></table>
+</div>
+</div>
+</div>
+<script type="text/javascript">__wm.bt();</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
 
 	<div id="globalWrapper">
 		<div id="column-content">
@@ -42,21 +236,21 @@ DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/
 		<div id="bodyContent">
 			<h3 id="siteSub">From modwiki</h3>
 			<div id="contentSub"></div>
-									<div id="jump-to-nav">Jump to: <a href="/web/20080908013344/http://www.modwiki.net/wiki/Entitydef_%28decl%29#column-one">navigation</a>, <a href="/web/20080908013344/http://www.modwiki.net/wiki/Entitydef_%28decl%29#searchInput">search</a></div>			<!-- start content -->
+									<div id="jump-to-nav">Jump to: <a href="#column-one">navigation</a>, <a href="#searchInput">search</a></div>			<!-- start content -->
 			<p>Entity definitions are simply a list of key/value pairs or spawn arguments.
-</p><p>When the engine <a href="/web/20080908013344/http://www.modwiki.net/w/index.php?title=Spawn&amp;action=edit" class="new" title="Spawn">spawns</a> an <a href="/web/20080908013344/http://www.modwiki.net/wiki/Entity" title="Entity">entity</a>, the entityDef is looked up to build the <a href="/web/20080908013344/http://www.modwiki.net/wiki/SpawnArgs" title="SpawnArgs">spawnArgs</a> dictionary of the <a href="/web/20080908013344/http://www.modwiki.net/wiki/Spawn_class" title="Spawn class">spawn class</a>.
-</p><p>So entityDefs conceptually define the default attributes of an entity - in combination with the key/value pairs for the <a href="/web/20080908013344/http://www.modwiki.net/w/index.php?title=Map_entity&amp;action=edit" class="new" title="Map entity">map entity</a> set in the level editor.
+</p><p>When the engine <a href="/web/20100521043446/http://www.modwiki.net/w/index.php?title=Spawn&amp;action=edit" class="new" title="Spawn">spawns</a> an <a href="/web/20100521043446/http://www.modwiki.net/wiki/Entity" title="Entity">entity</a>, the entityDef is looked up to build the <a href="/web/20100521043446/http://www.modwiki.net/wiki/SpawnArgs" title="SpawnArgs">spawnArgs</a> dictionary of the <a href="/web/20100521043446/http://www.modwiki.net/wiki/Spawn_class" title="Spawn class">spawn class</a>.
+</p><p>So entityDefs conceptually define the default attributes of an entity - in combination with the key/value pairs for the <a href="/web/20100521043446/http://www.modwiki.net/w/index.php?title=Map_entity&amp;action=edit" class="new" title="Map entity">map entity</a> set in the level editor.
 </p>
 <table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
 <ul>
-<li class='toclevel-1'><a href="/web/20080908013344/http://www.modwiki.net/wiki/Entitydef_%28decl%29#Syntax"><span class="tocnumber">1</span> <span class="toctext">Syntax</span></a></li>
-<li class='toclevel-1'><a href="/web/20080908013344/http://www.modwiki.net/wiki/Entitydef_%28decl%29#Important_Key.2FValues"><span class="tocnumber">2</span> <span class="toctext">Important Key/Values</span></a></li>
-<li class='toclevel-1'><a href="/web/20080908013344/http://www.modwiki.net/wiki/Entitydef_%28decl%29#Inheritance_and_Spawn_Classes_Example"><span class="tocnumber">3</span> <span class="toctext">Inheritance and Spawn Classes Example</span></a></li>
-<li class='toclevel-1'><a href="/web/20080908013344/http://www.modwiki.net/wiki/Entitydef_%28decl%29#Script_Objects_Example"><span class="tocnumber">4</span> <span class="toctext">Script Objects Example</span></a></li>
-<li class='toclevel-1'><a href="/web/20080908013344/http://www.modwiki.net/wiki/Entitydef_%28decl%29#Practical_Example"><span class="tocnumber">5</span> <span class="toctext">Practical Example</span></a></li>
+<li class='toclevel-1'><a href="#Syntax"><span class="tocnumber">1</span> <span class="toctext">Syntax</span></a></li>
+<li class='toclevel-1'><a href="#Important_Key.2FValues"><span class="tocnumber">2</span> <span class="toctext">Important Key/Values</span></a></li>
+<li class='toclevel-1'><a href="#Inheritance_and_Spawn_Classes_Example"><span class="tocnumber">3</span> <span class="toctext">Inheritance and Spawn Classes Example</span></a></li>
+<li class='toclevel-1'><a href="#Script_Objects_Example"><span class="tocnumber">4</span> <span class="toctext">Script Objects Example</span></a></li>
+<li class='toclevel-1'><a href="#Practical_Example"><span class="tocnumber">5</span> <span class="toctext">Practical Example</span></a></li>
 </ul>
 </td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
-<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080908013344/http://www.modwiki.net/w/index.php?title=Entitydef_%28decl%29&amp;action=edit&amp;section=1" title="Edit section: Syntax">edit</a>]</div><a name="Syntax"></a><h2>Syntax</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20100521043446/http://www.modwiki.net/w/index.php?title=Entitydef_%28decl%29&amp;action=edit&amp;section=1" title="Edit section: Syntax">edit</a>]</div><a name="Syntax"></a><h2>Syntax</h2>
 <pre>entityDef [entitydeftype] {
 	[key_1]	[value_1]
 	[key_2]	[value_2]
@@ -68,17 +262,17 @@ DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/
 </p><p>The header is followed by the body of the declaration which is enclosed in curly brackets.
 </p><p>The body is composed of a series of keys and values. Keys and values are enclosed by quotation marks.
 </p>
-<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080908013344/http://www.modwiki.net/w/index.php?title=Entitydef_%28decl%29&amp;action=edit&amp;section=2" title="Edit section: Important Key/Values">edit</a>]</div><a name="Important_Key.2FValues"></a><h2>Important Key/Values</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20100521043446/http://www.modwiki.net/w/index.php?title=Entitydef_%28decl%29&amp;action=edit&amp;section=2" title="Edit section: Important Key/Values">edit</a>]</div><a name="Important_Key.2FValues"></a><h2>Important Key/Values</h2>
 <p>While most of the key/value pairs are just data to be used by the entity spawn class, script object or level script there are a few that should be mentioned.
 </p><p><code>"inherit" [entitydef type]</code>
 </p><p>The "inherit" key/value pair can be used in any entity definition. It's purpose is to instruct the engine to inherit key/value pairs from the specified entityDef type to reduce redundancy.
 </p><p><code>"spawnclass" [spawn class type]</code>
-</p><p>The spawnclass key/value pair defines the <a href="/web/20080908013344/http://www.modwiki.net/wiki/Spawn_class" title="Spawn class">spawn class</a> type of this entity.
-An entity will fail to spawn if it doesn't have a spawnclass key/value set via an entityDef or <a href="/web/20080908013344/http://www.modwiki.net/w/index.php?title=Map_entity&amp;action=edit" class="new" title="Map entity">map entity</a>.
+</p><p>The spawnclass key/value pair defines the <a href="/web/20100521043446/http://www.modwiki.net/wiki/Spawn_class" title="Spawn class">spawn class</a> type of this entity.
+An entity will fail to spawn if it doesn't have a spawnclass key/value set via an entityDef or <a href="/web/20100521043446/http://www.modwiki.net/w/index.php?title=Map_entity&amp;action=edit" class="new" title="Map entity">map entity</a>.
 </p><p><code>"scriptobject" [script object type]</code>
-</p><p>The "scriptobject" key/value pair key/value pair is used to assign a <a href="/web/20080908013344/http://www.modwiki.net/wiki/Script_object" title="Script object">script object</a> type to this entity type to control its behavior.
+</p><p>The "scriptobject" key/value pair key/value pair is used to assign a <a href="/web/20100521043446/http://www.modwiki.net/wiki/Script_object" title="Script object">script object</a> type to this entity type to control its behavior.
 </p>
-<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080908013344/http://www.modwiki.net/w/index.php?title=Entitydef_%28decl%29&amp;action=edit&amp;section=3" title="Edit section: Inheritance and Spawn Classes Example">edit</a>]</div><a name="Inheritance_and_Spawn_Classes_Example"></a><h2>Inheritance and Spawn Classes Example</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20100521043446/http://www.modwiki.net/w/index.php?title=Entitydef_%28decl%29&amp;action=edit&amp;section=3" title="Edit section: Inheritance and Spawn Classes Example">edit</a>]</div><a name="Inheritance_and_Spawn_Classes_Example"></a><h2>Inheritance and Spawn Classes Example</h2>
 <p>Using a paraphrased snippet from the monster_zombie_fat entity definition in Doom 3:
 </p>
 <pre>entityDef monster_zombie_fat {
@@ -119,10 +313,10 @@ An entity will fail to spawn if it doesn't have a spawnclass key/value set via a
 }
 </pre>
 <p>And at this point the inheritance stops because there is no other "inherit" key/value pair. However, there is a "spawnclass" key/value pair. 
-In this example the <a href="/web/20080908013344/http://www.modwiki.net/wiki/Spawn_class" title="Spawn class">spawn class</a> idAI.
+In this example the <a href="/web/20100521043446/http://www.modwiki.net/wiki/Spawn_class" title="Spawn class">spawn class</a> idAI.
 </p>
-<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080908013344/http://www.modwiki.net/w/index.php?title=Entitydef_%28decl%29&amp;action=edit&amp;section=4" title="Edit section: Script Objects Example">edit</a>]</div><a name="Script_Objects_Example"></a><h2>Script Objects Example</h2>
-<p>In this example, the scriptobject key/value is defining what AI <a href="/web/20080908013344/http://www.modwiki.net/wiki/Script_object" title="Script object">script object</a> type to use to control this entity.
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20100521043446/http://www.modwiki.net/w/index.php?title=Entitydef_%28decl%29&amp;action=edit&amp;section=4" title="Edit section: Script Objects Example">edit</a>]</div><a name="Script_Objects_Example"></a><h2>Script Objects Example</h2>
+<p>In this example, the scriptobject key/value is defining what AI <a href="/web/20100521043446/http://www.modwiki.net/wiki/Script_object" title="Script object">script object</a> type to use to control this entity.
 </p>
 <pre>entityDef monster_zombie_fat {
 	"inherit"		"zombie_default"
@@ -138,7 +332,7 @@ In this example the <a href="/web/20080908013344/http://www.modwiki.net/wiki/Spa
 	...
 }
 </pre>
-<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20080908013344/http://www.modwiki.net/w/index.php?title=Entitydef_%28decl%29&amp;action=edit&amp;section=5" title="Edit section: Practical Example">edit</a>]</div><a name="Practical_Example"></a><h2>Practical Example</h2>
+<div class="editsection" style="float:right;margin-left:5px;">[<a href="/web/20100521043446/http://www.modwiki.net/w/index.php?title=Entitydef_%28decl%29&amp;action=edit&amp;section=5" title="Edit section: Practical Example">edit</a>]</div><a name="Practical_Example"></a><h2>Practical Example</h2>
 <p>If you wanted to create a new type of monster_zombie_fat with a health value of 200 you simply create a new entity definition that inherits from monster_zombie_fat and set a new health key/value pair...
 </p>
 <pre>entityDef monster_zombie_fat_200 {
@@ -146,8 +340,8 @@ In this example the <a href="/web/20080908013344/http://www.modwiki.net/wiki/Spa
 	"health"		"200"
 }
 </pre><div class="printfooter">
-Retrieved from "<a href="/web/20080908013344/http://www.modwiki.net/wiki/Entitydef_%28decl%29">http://www.modwiki.net/wiki/Entitydef_%28decl%29</a>"</div>
-			<div id="catlinks"><p class='catlinks'><a href="/web/20080908013344/http://www.modwiki.net/w/index.php?title=Special:Categories&amp;article=Entitydef_%28decl%29" title="Special:Categories">Category</a>: <span dir='ltr'><a href="/web/20080908013344/http://www.modwiki.net/wiki/Category:Declarations" title="Category:Declarations">Declarations</a></span><br /><hr /><a href="/web/20080908013344/http://www.modwiki.net/wiki/Category:Modwiki" title="Category:Modwiki">Modwiki</a> &gt; <a href="/web/20080908013344/http://www.modwiki.net/wiki/Category:Engine_reference" title="Category:Engine reference">Engine reference</a> &gt; <a href="/web/20080908013344/http://www.modwiki.net/wiki/Category:Declarations" title="Category:Declarations">Declarations</a></p></div>			<!-- end content -->
+Retrieved from "<a href="/web/20100521043446/http://www.modwiki.net/wiki/Entitydef_%28decl%29">http://www.modwiki.net/wiki/Entitydef_%28decl%29</a>"</div>
+			<div id="catlinks"><p class='catlinks'><a href="/web/20100521043446/http://www.modwiki.net/w/index.php?title=Special:Categories&amp;article=Entitydef_%28decl%29" title="Special:Categories">Category</a>: <span dir='ltr'><a href="/web/20100521043446/http://www.modwiki.net/wiki/Category:Declarations" title="Category:Declarations">Declarations</a></span><br /><hr /><a href="/web/20100521043446/http://www.modwiki.net/wiki/Category:Modwiki" title="Category:Modwiki">Modwiki</a> &gt; <a href="/web/20100521043446/http://www.modwiki.net/wiki/Category:Engine_reference" title="Category:Engine reference">Engine reference</a> &gt; <a href="/web/20100521043446/http://www.modwiki.net/wiki/Category:Declarations" title="Category:Declarations">Declarations</a></p></div>			<!-- end content -->
 			<div class="visualClear"></div>
 		</div>
 	</div>
@@ -156,29 +350,29 @@ Retrieved from "<a href="/web/20080908013344/http://www.modwiki.net/wiki/Entityd
 	<div id="p-cactions" class="portlet">
 		<h5>Views</h5>
 		<ul>
-				 <li id="ca-nstab-main" class="selected"><a href="/web/20080908013344/http://www.modwiki.net/wiki/Entitydef_%28decl%29">Article</a></li>
-				 <li id="ca-talk" class="new"><a href="/web/20080908013344/http://www.modwiki.net/w/index.php?title=Talk:Entitydef_%28decl%29&amp;action=edit">Discussion</a></li>
-				 <li id="ca-edit"><a href="/web/20080908013344/http://www.modwiki.net/w/index.php?title=Entitydef_%28decl%29&amp;action=edit">Edit</a></li>
-				 <li id="ca-history"><a href="/web/20080908013344/http://www.modwiki.net/w/index.php?title=Entitydef_%28decl%29&amp;action=history">History</a></li>
+				 <li id="ca-nstab-main" class="selected"><a href="/web/20100521043446/http://www.modwiki.net/wiki/Entitydef_%28decl%29">Article</a></li>
+				 <li id="ca-talk" class="new"><a href="/web/20100521043446/http://www.modwiki.net/w/index.php?title=Talk:Entitydef_%28decl%29&amp;action=edit">Discussion</a></li>
+				 <li id="ca-edit"><a href="/web/20100521043446/http://www.modwiki.net/w/index.php?title=Entitydef_%28decl%29&amp;action=edit">Edit</a></li>
+				 <li id="ca-history"><a href="/web/20100521043446/http://www.modwiki.net/w/index.php?title=Entitydef_%28decl%29&amp;action=history">History</a></li>
 		</ul>
 	</div>
 	<div class="portlet" id="p-personal">
 		<h5>Personal tools</h5>
 		<div class="pBody">
 			<ul>
-				<li id="pt-login"><a href="/web/20080908013344/http://www.modwiki.net/w/index.php?title=Special:Userlogin&amp;returnto=Entitydef_(decl)">Log in / create account</a></li>
+				<li id="pt-login"><a href="/web/20100521043446/http://www.modwiki.net/w/index.php?title=Special:Userlogin&amp;returnto=Entitydef_(decl)">Log in / create account</a></li>
 			</ul>
 		</div>
 	</div>
 	<div class="portlet" id="p-logo">
-		<a style="background-image: url(/web/20080908013344im_/http://www.modwiki.net/wiki/upload/wiki.png);" href="/web/20080908013344/http://www.modwiki.net/wiki/Main_Page" title="Main Page"></a>
+		<a style="background-image: url(/web/20100521043446im_/http://www.modwiki.net/wiki/upload/wiki.png);" href="/web/20100521043446/http://www.modwiki.net/wiki/Main_Page" title="Main Page"></a>
 	</div>
 	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
 		<div class='portlet' id='p-Main'>
 		<h5>Main</h5>
 		<div class='pBody'>
 			<ul>
-				<li id="n-mainpage"><a href="/web/20080908013344/http://www.modwiki.net/wiki/Main_Page">Main Page</a></li>
+				<li id="n-mainpage"><a href="/web/20100521043446/http://www.modwiki.net/wiki/Main_Page">Main Page</a></li>
 			</ul>
 		</div>
 	</div>
@@ -186,11 +380,11 @@ Retrieved from "<a href="/web/20080908013344/http://www.modwiki.net/wiki/Entityd
 		<h5>id Tech 4</h5>
 		<div class='pBody'>
 			<ul>
-				<li id="n-Doom-3"><a href="/web/20080908013344/http://www.modwiki.net/wiki/Doom_3">Doom 3</a></li>
-				<li id="n-Quake-4"><a href="/web/20080908013344/http://www.modwiki.net/wiki/Quake_4">Quake 4</a></li>
-				<li id="n-Prey"><a href="/web/20080908013344/http://www.modwiki.net/wiki/Prey">Prey</a></li>
-				<li id="n-ETQW"><a href="/web/20080908013344/http://www.modwiki.net/wiki/Enemy_Territory:_Quake_Wars">ETQW</a></li>
-				<li id="n-Wolfenstein"><a href="/web/20080908013344/http://www.modwiki.net/wiki/Wolfenstein">Wolfenstein</a></li>
+				<li id="n-Doom-3"><a href="/web/20100521043446/http://www.modwiki.net/wiki/Doom_3">Doom 3</a></li>
+				<li id="n-Quake-4"><a href="/web/20100521043446/http://www.modwiki.net/wiki/Quake_4">Quake 4</a></li>
+				<li id="n-Prey"><a href="/web/20100521043446/http://www.modwiki.net/wiki/Prey">Prey</a></li>
+				<li id="n-ETQW"><a href="/web/20100521043446/http://www.modwiki.net/wiki/Enemy_Territory:_Quake_Wars">ETQW</a></li>
+				<li id="n-Wolfenstein"><a href="/web/20100521043446/http://www.modwiki.net/wiki/Wolfenstein">Wolfenstein</a></li>
 			</ul>
 		</div>
 	</div>
@@ -198,8 +392,8 @@ Retrieved from "<a href="/web/20080908013344/http://www.modwiki.net/wiki/Entityd
 		<h5>id Tech 5</h5>
 		<div class='pBody'>
 			<ul>
-				<li id="n-Rage"><a href="/web/20080908013344/http://www.modwiki.net/wiki/Rage">Rage</a></li>
-				<li id="n-Doom-4"><a href="/web/20080908013344/http://www.modwiki.net/wiki/Doom_4">Doom 4</a></li>
+				<li id="n-Rage"><a href="/web/20100521043446/http://www.modwiki.net/wiki/Rage">Rage</a></li>
+				<li id="n-Doom-4"><a href="/web/20100521043446/http://www.modwiki.net/wiki/Doom_4">Doom 4</a></li>
 			</ul>
 		</div>
 	</div>
@@ -207,11 +401,11 @@ Retrieved from "<a href="/web/20080908013344/http://www.modwiki.net/wiki/Entityd
 		<h5>Quick Links</h5>
 		<div class='pBody'>
 			<ul>
-				<li id="n-Console"><a href="/web/20080908013344/http://www.modwiki.net/wiki/Console">Console</a></li>
-				<li id="n-Script-Events"><a href="/web/20080908013344/http://www.modwiki.net/wiki/Scripting">Script Events</a></li>
-				<li id="n-Material-Keywords"><a href="/web/20080908013344/http://www.modwiki.net/wiki/Material_%28decl%29">Material Keywords</a></li>
-				<li id="n-Modification-List"><a href="/web/20080908013344/http://www.modwiki.net/wiki/Modlist">Modification List</a></li>
-				<li id="n-Tutorial-List"><a href="/web/20080908013344/http://www.modwiki.net/wiki/Tutorial_list">Tutorial List</a></li>
+				<li id="n-Console"><a href="/web/20100521043446/http://www.modwiki.net/wiki/Console">Console</a></li>
+				<li id="n-Script-Events"><a href="/web/20100521043446/http://www.modwiki.net/wiki/Scripting">Script Events</a></li>
+				<li id="n-Material-Keywords"><a href="/web/20100521043446/http://www.modwiki.net/wiki/Material_%28decl%29">Material Keywords</a></li>
+				<li id="n-Modification-List"><a href="/web/20100521043446/http://www.modwiki.net/wiki/Modlist">Modification List</a></li>
+				<li id="n-Tutorial-List"><a href="/web/20100521043446/http://www.modwiki.net/wiki/Tutorial_list">Tutorial List</a></li>
 			</ul>
 		</div>
 	</div>
@@ -219,17 +413,17 @@ Retrieved from "<a href="/web/20080908013344/http://www.modwiki.net/wiki/Entityd
 		<h5>Wiki</h5>
 		<div class='pBody'>
 			<ul>
-				<li id="n-Open-tasks"><a href="/web/20080908013344/http://www.modwiki.net/wiki/modwiki:Open_tasks">Open tasks</a></li>
-				<li id="n-recentchanges"><a href="/web/20080908013344/http://www.modwiki.net/wiki/Special:Recentchanges">Recent changes</a></li>
-				<li id="n-Style-guide"><a href="/web/20080908013344/http://www.modwiki.net/wiki/modwiki:Style_guide">Style guide</a></li>
-				<li id="n-help"><a href="/web/20080908013344/http://www.modwiki.net/wiki/Help:Contents">Help</a></li>
+				<li id="n-Open-tasks"><a href="/web/20100521043446/http://www.modwiki.net/wiki/modwiki:Open_tasks">Open tasks</a></li>
+				<li id="n-recentchanges"><a href="/web/20100521043446/http://www.modwiki.net/wiki/Special:Recentchanges">Recent changes</a></li>
+				<li id="n-Style-guide"><a href="/web/20100521043446/http://www.modwiki.net/wiki/modwiki:Style_guide">Style guide</a></li>
+				<li id="n-help"><a href="/web/20100521043446/http://www.modwiki.net/wiki/Help:Contents">Help</a></li>
 			</ul>
 		</div>
 	</div>
 		<div id="p-search" class="portlet">
 		<h5><label for="searchInput">Search</label></h5>
 		<div id="searchBody" class="pBody">
-			<form action="/web/20080908013344/http://www.modwiki.net/wiki/Special:Search" id="searchform"><div>
+			<form action="/web/20100521043446/http://www.modwiki.net/wiki/Special:Search" id="searchform"><div>
 				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
 				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" />&nbsp;
 				<input type='submit' name="fulltext" class="searchButton" value="Search" />
@@ -240,24 +434,24 @@ Retrieved from "<a href="/web/20080908013344/http://www.modwiki.net/wiki/Entityd
 		<h5>Toolbox</h5>
 		<div class="pBody">
 			<ul>
-				<li id="t-whatlinkshere"><a href="/web/20080908013344/http://www.modwiki.net/wiki/Special:Whatlinkshere/Entitydef_%28decl%29">What links here</a></li>
-				<li id="t-recentchangeslinked"><a href="/web/20080908013344/http://www.modwiki.net/wiki/Special:Recentchangeslinked/Entitydef_%28decl%29">Related changes</a></li>
-<li id="t-upload"><a href="/web/20080908013344/http://www.modwiki.net/wiki/Special:Upload">Upload file</a></li>
-<li id="t-specialpages"><a href="/web/20080908013344/http://www.modwiki.net/wiki/Special:Specialpages">Special pages</a></li>
-				<li id="t-print"><a href="/web/20080908013344/http://www.modwiki.net/w/index.php?title=Entitydef_%28decl%29&amp;printable=yes">Printable version</a></li>				<li id="t-permalink"><a href="/web/20080908013344/http://www.modwiki.net/w/index.php?title=Entitydef_%28decl%29&amp;oldid=12389">Permanent link</a></li>			</ul>
+				<li id="t-whatlinkshere"><a href="/web/20100521043446/http://www.modwiki.net/wiki/Special:Whatlinkshere/Entitydef_%28decl%29">What links here</a></li>
+				<li id="t-recentchangeslinked"><a href="/web/20100521043446/http://www.modwiki.net/wiki/Special:Recentchangeslinked/Entitydef_%28decl%29">Related changes</a></li>
+<li id="t-upload"><a href="/web/20100521043446/http://www.modwiki.net/wiki/Special:Upload">Upload file</a></li>
+<li id="t-specialpages"><a href="/web/20100521043446/http://www.modwiki.net/wiki/Special:Specialpages">Special pages</a></li>
+				<li id="t-print"><a href="/web/20100521043446/http://www.modwiki.net/w/index.php?title=Entitydef_%28decl%29&amp;printable=yes">Printable version</a></li>				<li id="t-permalink"><a href="/web/20100521043446/http://www.modwiki.net/w/index.php?title=Entitydef_%28decl%29&amp;oldid=12389">Permanent link</a></li>			</ul>
 		</div>
 	</div>
 		</div><!-- end of the left (by default at least) column -->
 			<div class="visualClear"></div>
 			<div id="footer">
-				<div id="f-poweredbyico"><a href="/web/20080908013344/http://www.mediawiki.org/"><img src="/web/20080908013344im_/http://www.modwiki.net/w/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>
-				<div id="f-copyrightico"><a href="/web/20080908013344/http://www.gnu.org/copyleft/fdl.html"><img src="/web/20080908013344im_/http://www.modwiki.net/w/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
+				<div id="f-poweredbyico"><a href="/web/20100521043446/http://www.mediawiki.org/"><img src="/web/20100521043446im_/http://www.modwiki.net/w/skins/common/images/poweredby_mediawiki_88x31.png" alt="MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="/web/20100521043446/http://www.gnu.org/copyleft/fdl.html"><img src="/web/20100521043446im_/http://www.modwiki.net/w/skins/common/images/gnu-fdl.png" alt='GNU Free Documentation License 1.2' /></a></div>
 			<ul id="f-list">
 				<li id="lastmod"> This page was last modified 07:45, 11 March 2008.</li>
-				<li id="copyright">Content is available under <a href="/web/20080908013344/http://www.gnu.org/copyleft/fdl.html" class='external ' title="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.2</a>.</li>
-				<li id="privacy"><a href="/web/20080908013344/http://www.modwiki.net/wiki/modwiki:Privacy_policy" title="modwiki:Privacy policy">Privacy policy</a></li>
-				<li id="about"><a href="/web/20080908013344/http://www.modwiki.net/wiki/modwiki:About" title="modwiki:About">About modwiki</a></li>
-				<li id="disclaimer"><a href="/web/20080908013344/http://www.modwiki.net/wiki/modwiki:General_disclaimer" title="modwiki:General disclaimer">Disclaimers</a></li>
+				<li id="copyright">Content is available under <a href="/web/20100521043446/http://www.gnu.org/copyleft/fdl.html" class='external ' title="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.2</a>.</li>
+				<li id="privacy"><a href="/web/20100521043446/http://www.modwiki.net/wiki/modwiki:Privacy_policy" title="modwiki:Privacy policy">Privacy policy</a></li>
+				<li id="about"><a href="/web/20100521043446/http://www.modwiki.net/wiki/modwiki:About" title="modwiki:About">About modwiki</a></li>
+				<li id="disclaimer"><a href="/web/20100521043446/http://www.modwiki.net/wiki/modwiki:General_disclaimer" title="modwiki:General disclaimer">Disclaimers</a></li>
 			</ul>
 		</div>
 	<script type="text/javascript"> if (window.runOnloadHook) runOnloadHook();</script>
@@ -270,8 +464,8 @@ Retrieved from "<a href="/web/20080908013344/http://www.modwiki.net/wiki/Entityd
 
 
 <!--
-     FILE ARCHIVED ON 1:33:44 Sep 8, 2008 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 4:01:27 Oct 19, 2014.
+     FILE ARCHIVED ON 4:34:46 May 21, 2010 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 2:21:09 Oct 27, 2014.
      JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
 
      ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
